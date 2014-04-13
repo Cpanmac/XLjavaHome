@@ -1,0 +1,102 @@
+package com.xl.a;
+
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.TextArea;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.sun.rmi.rmid.ExecOptionPermission;
+import com.xl.util.FileUtil;
+
+public class 查看该目录下所有文件 {
+	private Frame f; // 可以直接继承Frame,就可以直接调用里面的方法了
+	private TextField tf; // 文本框
+	private Button but; // 按钮
+	private TextArea ta; // 是显示文本的多行区域
+
+	public static void main(String[] args) {
+		new 查看该目录下所有文件().init();
+	}
+
+	/**
+	 * 初始化控件 void
+	 */
+	public void init() {
+		f = new Frame("查看指定目录下所有的文件");
+		f.setBounds(300, 100, 600, 500);
+		f.setLayout(new FlowLayout());
+		tf = new TextField(60);// 文本长度
+		but = new Button("查看");
+		ta = new TextArea(25, 70);
+		f.add(tf);
+		f.add(but);
+		f.add(ta);
+		initEvent();
+		f.setVisible(true); // 显示
+	}
+
+	/**
+	 * 初始化事件 void
+	 */
+	private void initEvent() {
+		f.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
+
+		tf.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+					exec();
+				}
+			}
+
+		});
+
+		// 给button添加事件
+		but.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				exec();
+			}
+		});
+	}
+
+	/**
+	 * 执行
+	 */
+	public void exec() {
+		String dirPath = tf.getText().trim();
+		File dir = new File(dirPath);
+		if (dir.exists() && dir.isDirectory()) {
+			ta.setText("");// 清空以前得
+			List<File> list = new ArrayList<File>();
+			FileUtil.queryAll(list, dir);
+			if (list.size() > 300) {
+				ta.setText("该目录下文件太多了");
+				return;
+			}
+			if (list.size() == 0) {
+				ta.setText("该目录没有文件");
+			}
+			for (File f : list) {
+				ta.append(f.getAbsolutePath() + "\r\n");
+			}
+		} else {
+			ta.setText("请输入目录");
+		}
+	}
+}
