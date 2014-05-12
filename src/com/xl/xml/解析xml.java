@@ -12,13 +12,13 @@ import org.junit.Test;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 public class ½âÎöxml {
 	File file;
 
 	public void init() throws UnsupportedEncodingException {
-		file = new File(FileUtil.getCurrentPath(this), "User.xml");
+		file = new File(FileTool.getCurrentPath(this), "User.xml");
 	}
 
 	@Test

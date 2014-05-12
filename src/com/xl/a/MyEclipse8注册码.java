@@ -1,8 +1,6 @@
 package com.xl.a;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class MyEclipse8×¢²áÂë {
 	private static final String LL = "Decompiling this copyrighted software is a violation of both your license agreement and the Digital Millenium Copyright Act of 1998 (http://www.loc.gov/copyright/legislation/dmca.pdf). Under section 1204 of the DMCA, penalties range up to a $500,000 fine or up to five years imprisonment for a first offense. Think about it; pay for a license, avoid prosecution, and feel better about yourself.";// ¶¨ÒåÒ»¸öString×Ö·û´®
@@ -74,16 +72,18 @@ public class MyEclipse8×¢²áÂë {
 
 	public static void main(String[] args) {
 		try {
-			System.out.println("please input register name:");
-			BufferedReader reader = new BufferedReader(new InputStreamReader(
-					System.in));
+			// System.out.println("please input register name:");
+			// BufferedReader reader = new BufferedReader(new InputStreamReader(
+			// System.in));
 			String userId = null;
-			userId = reader.readLine();
+			// userId = reader.readLine();
+			userId = "xuli";
 			MyEclipse8×¢²áÂë myeclipsegen = new MyEclipse8×¢²áÂë();
 			String res = myeclipsegen.getSerial(userId, "20");
+			System.out.println(userId);
 			System.out.println(res); // Êä³öĞòÁĞºÅĞÅÏ¢
-		} catch (IOException ex) {
-
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 	}
 }

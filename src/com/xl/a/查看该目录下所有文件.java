@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.sun.rmi.rmid.ExecOptionPermission;
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 public class 查看该目录下所有文件 {
 	private Frame f; // 可以直接继承Frame,就可以直接调用里面的方法了
@@ -84,7 +84,7 @@ public class 查看该目录下所有文件 {
 		if (dir.exists() && dir.isDirectory()) {
 			ta.setText("");// 清空以前得
 			List<File> list = new ArrayList<File>();
-			FileUtil.queryAll(list, dir);
+			FileTool.queryAll(list, dir);
 			if (list.size() > 300) {
 				ta.setText("该目录下文件太多了");
 				return;

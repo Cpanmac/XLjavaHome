@@ -39,15 +39,15 @@ import javax.swing.filechooser.FileSystemView;
 
 import org.junit.Test;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 public class FileDemo {
 
 	@Test
 	public void test1() throws IOException {
-		File file = new File(FileUtil.getCurrentPath(this), "123.txt");
+		File file = new File(FileTool.getCurrentPath(this), "123.txt");
 		String s = "冯帅你好";
-		FileUtil.write(file, s);
+		FileTool.write(file, s);
 	}
 
 	public static void method_1() throws IOException {
@@ -138,6 +138,6 @@ public class FileDemo {
 	public void 如果目录不存在() throws IOException {
 		File file = new File(FileSystemView.getFileSystemView()
 				.getHomeDirectory(), "5/" + "a.txt");
-		FileUtil.write(file, "张三");
+		FileTool.write(file, "张三");
 	}
 }

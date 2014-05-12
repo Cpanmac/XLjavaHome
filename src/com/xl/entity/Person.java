@@ -7,7 +7,7 @@ import java.util.List;
 public class Person implements Serializable {
 	// 唯一序列化标识
 	public static final long serialVersionUID = 42L; // 值自己取名
-	//transient 该字段无法序列化，所以传输对象的时候不会传过去
+	// transient 该字段无法序列化，所以传输对象的时候不会传过去
 	transient String pas;
 	public String name = "这是name";
 	// private int password=123;
@@ -33,7 +33,7 @@ public class Person implements Serializable {
 	private static int age = 13;
 
 	public static void main(String[] args) {
-		Person p=new Person("啊是单纯");
+		Person p = new Person("啊是单纯");
 	}
 
 	public Person() {
@@ -96,5 +96,9 @@ public class Person implements Serializable {
 
 	public void paramMethod(String name, int age) {
 		System.out.println(name + age);
+	}
+
+	public void run() {
+		System.out.println("Person.run()");
 	}
 }

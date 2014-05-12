@@ -3,11 +3,12 @@ package com.xl.json;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.sf.json.JSON;
 import net.sf.json.JSONObject;
+import net.sf.json.JSONSerializer;
 
 import org.junit.Test;
 
-import com.google.gson.JsonElement;
 import com.xl.entity.User;
 
 /**
@@ -34,21 +35,15 @@ public class JsonDemo {
 		list.add(user2);
 
 		JSONObject json = JSONObject.fromObject(user);
+		System.out.println(json);
 		System.out.println(json.toString());
 
 		// ********************************************************
-//		JSON json2 = JSONSerializer.toJSON(list);
-//		System.out.println(json2.toString());
-//
-//		json2 = JSONSerializer.toJSON(new User());
-//		System.out.println(json2.toString());
+		JSON json2 = JSONSerializer.toJSON(list);
+		System.out.println(json2.toString());
+		//
+		json2 = JSONSerializer.toJSON(new User());
+		System.out.println(json2.toString());
 	}
 
-	@Test
-	public void ≤‚ ‘2() throws InstantiationException, IllegalAccessException {
-		Class clazz = JsonElement.class;
-		JsonElement je = (JsonElement) clazz.newInstance();
-		String s = je.toString();
-		System.out.println(s);
-	}
 }

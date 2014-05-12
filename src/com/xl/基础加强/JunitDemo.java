@@ -7,6 +7,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.xl.entity.Person;
+
 public class JunitDemo {
 
 	// 使用Junit测试加@Test就可以 要直接测试所有的方法就点击类名，然后run as
@@ -29,12 +31,6 @@ public class JunitDemo {
 		// Assert.assertEquals("2",p.run());
 		// 期望返回的数组是1，1. 实际的返回的数组是1，2
 		Assert.assertArrayEquals(new int[] { 1, 1 }, new int[] { 1, 2});
-	}
-
-	@Test
-	public void testEat() {
-		// Person p = new Person();
-		p.eat();
 	}
 
 	// After可以用来关闭资源

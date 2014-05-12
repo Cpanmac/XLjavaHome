@@ -11,7 +11,7 @@ import org.junit.Test;
 import com.mysql.jdbc.Driver;
 
 public class Demo1 {
-	String url = "jdbc:mysql://127.0.0.1:3306/xl"; // 访问xl数据库
+	String url = "jdbc:mysql://127.0.0.1:3306/test"; // 访问xl数据库
 	String user = "root";
 	String password = "123";
 

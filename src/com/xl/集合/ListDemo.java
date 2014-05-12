@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 public class ListDemo {
 	List<String> list = new ArrayList<String>();

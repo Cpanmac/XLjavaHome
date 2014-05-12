@@ -11,7 +11,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 import com.xl.util.StreamTool;
 
 public class 去掉android命名空间重复 {
@@ -51,7 +51,7 @@ public class 去掉android命名空间重复 {
 			InputStream is = new BufferedInputStream(new FileInputStream(f));
 			String content = StreamTool.getContent(is);
 			content = exec(content);
-			FileUtil.write(f, content);
+			FileTool.write(f, content);
 		}
 	}
 
@@ -81,7 +81,7 @@ public class 去掉android命名空间重复 {
 		// 1.要修改文件的路径
 		File file = new File(path);
 		ArrayList<File> list = new ArrayList<File>();
-		FileUtil.queryAll(list, file, "xml");
+		FileTool.queryAll(list, file, "xml");
 		getContents(list);
 		System.out.println("修改成功!");
 	}

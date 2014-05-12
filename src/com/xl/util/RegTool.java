@@ -66,8 +66,9 @@ public class RegTool {
 	public static String[] getContent(String content, String regex,
 			int... params) {
 		List<String> list = new ArrayList<String>();
-		Pattern p = Pattern.compile(regex, Pattern.MULTILINE | Pattern.DOTALL
-				| Pattern.UNICODE_CASE);
+		Pattern p = Pattern.compile(regex,// Pattern.MULTILINE | //多行模式
+				// Pattern.DOTALL | //匹配任何字符，包括换行符。
+				Pattern.UNICODE_CASE);
 		Matcher m = p.matcher(content);
 		while (m.find()) {
 			for (int i = 0; i < params.length; i++) {

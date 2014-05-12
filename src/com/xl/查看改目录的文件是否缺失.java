@@ -7,7 +7,7 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 /**
  * @Decription 怎么判断？就是查看从最小数到最大数之间是否缺失
@@ -21,7 +21,7 @@ public class 查看改目录的文件是否缺失 {
 	public static void main(String[] args) {
 		String src = "J:/java/黑马程序员毕向东";
 		List<File> fileList = new ArrayList<File>();
-		FileUtil.queryAll(fileList, new File(src));
+		FileTool.queryAll(fileList, new File(src));
 		Pattern p = Pattern.compile("(\\d{2}).+(\\d{2})");
 		p=Pattern.compile("(\\d{2}).+?");
 		Map<Integer, List<Integer>> map = new TreeMap<Integer, List<Integer>>();

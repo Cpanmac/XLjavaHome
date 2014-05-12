@@ -1,4 +1,4 @@
-package com.xl.xml;
+package com.xl.xml.dom4j;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,55 +18,26 @@ import org.dom4j.io.XMLWriter;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 //乱码产生原因:io流
 //本身是按utf-8来的
-public class DOM4J解析XML {
+/**
+ * @Decription 1.创建解析器。<br/>2.
+ * 
+ * @date 2014-5-11
+ * 
+ * @author 徐立
+ *
+ */
+public class DOM4JDemo {
 	/** 要解析的xml */
 	private File file;
 
-	@Before
-	public void init() throws UnsupportedEncodingException {
-		file = new File(FileUtil.getCurrentPath(this), "book.xml");
-	}
-
-	@Test
-	public void read() throws DocumentException {
-		SAXReader reader = new SAXReader();
-		Document document = reader.read(file);
-		// 先得根节点,不能直接按节点名得
-		Element root = document.getRootElement();
-		// Element book=root.element("书");
-		// 要得到第二本书的文本
-		Element book = (Element) root.elements("书").get(1);
-		String value = book.element("书名").getText();
-		System.out.println(value);
-		// 得到第二本书的属性值
-		value = book.element("书名").attributeValue("name");
-		System.out.println(value);
-	}
-
-	// 写:在第一本书添加一个新的售价,OutputStreamWriter
-	@Test
-	public void write() throws DocumentException, IOException {
-		SAXReader reader = new SAXReader();
-		Document document = reader.read(file);
-		Element book = document.getRootElement();
-		book.addElement("售价").setText("209元");
-
-		// OutputStreamWriter可以指定码表
-		XMLWriter writer = new XMLWriter(new OutputStreamWriter(
-				new FileOutputStream(file, true), "utf-8"));
-		// 创建格式化输出器
-		OutputFormat format = OutputFormat.createPrettyPrint();
-		format.setEncoding("gb2312");
-		// 两个编码要一致就不会出现乱码
-		writer = new XMLWriter(new OutputStreamWriter(
-				new FileOutputStream(file), "gb2312"), format);
-		writer.write(document);
-		writer.close();
-	}
+	/** 解析器 */
+	private SAXReader saxReader;
+	/** 文档对象 */
+	private Document document;
 
 	// 方法二,解决编码问题:FileOutputStream
 	@Test
@@ -126,6 +97,38 @@ public class DOM4J解析XML {
 		writer.close();
 	}
 
+	@Before
+	public void init() throws UnsupportedEncodingException, DocumentException {
+		file = new File(FileTool.getCurrentPath(this), "book.xml");
+		saxReader = new SAXReader();
+		document = saxReader.read(file);
+	}
+
+	@Test
+	public void queryAll() {
+	}
+	@Test
+	public void getEncoding(){
+		System.out.println(document.getXMLEncoding());
+		System.out.println(document.getName());
+	}
+
+	@Test
+	public void read() throws DocumentException {
+		SAXReader reader = new SAXReader();
+		Document document = reader.read(file);
+		// 先得根节点,不能直接按节点名得
+		Element root = document.getRootElement();
+		// Element book=root.element("书");
+		// 要得到第二本书的文本
+		Element book = (Element) root.elements("书").get(1);
+		String value = book.element("书名").getText();
+		System.out.println(value);
+		// 得到第二本书的属性值
+		value = book.element("书名").attributeValue("name");
+		System.out.println(value);
+	}
+
 	// 改:得到节点setText方法
 	@Test
 	public void update() throws Exception {
@@ -137,6 +140,27 @@ public class DOM4J解析XML {
 		OutputFormat format = OutputFormat.createPrettyPrint();
 		format.setEncoding("utf-8");
 		XMLWriter writer = new XMLWriter(new FileOutputStream(file), format);
+		writer.write(document);
+		writer.close();
+	}
+
+	// 写:在第一本书添加一个新的售价,OutputStreamWriter
+	@Test
+	public void write() throws DocumentException, IOException {
+		SAXReader reader = new SAXReader();
+		Document document = reader.read(file);
+		Element book = document.getRootElement();
+		book.addElement("售价").setText("209元");
+
+		// OutputStreamWriter可以指定码表
+		XMLWriter writer = new XMLWriter(new OutputStreamWriter(
+				new FileOutputStream(file, true), "utf-8"));
+		// 创建格式化输出器
+		OutputFormat format = OutputFormat.createPrettyPrint();
+		format.setEncoding("gb2312");
+		// 两个编码要一致就不会出现乱码
+		writer = new XMLWriter(new OutputStreamWriter(
+				new FileOutputStream(file), "gb2312"), format);
 		writer.write(document);
 		writer.close();
 	}

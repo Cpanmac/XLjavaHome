@@ -7,7 +7,7 @@ import java.net.URL;
 
 import org.junit.Test;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 public class URLDemo {
 	@Test
@@ -32,7 +32,7 @@ public class URLDemo {
 
 	@Test
 	public void testGetURL() throws IOException {
-		URL u = getURL(FileUtil.class, "/");
+		URL u = getURL(FileTool.class, "/");
 		System.out.println(u); // file:/D:/mywork/javaSE/bin/util/1
 		System.out.println(u.getContent()); // 如果有资源java.io.BufferedInputStream@983d95
 		System.out.println(u.getDefaultPort()); // -1

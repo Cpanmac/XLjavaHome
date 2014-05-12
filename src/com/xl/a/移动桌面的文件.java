@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 /**
  * @Decription 思路:1.获取源文件:遍历源目录下所有的文件加入集合中,缓存文件不加.dbk<br/>
@@ -80,7 +80,7 @@ public class 移动桌面的文件 {
 	 */
 	public List<File> getSrcFiles(File srcFile) {
 		ArrayList<File> list = new ArrayList<File>();
-		FileUtil.queryAll(list, srcFile);
+		FileTool.queryAll(list, srcFile);
 		return list;
 	}
 

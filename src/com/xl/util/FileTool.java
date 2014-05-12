@@ -19,7 +19,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class FileUtil {
+public class FileTool {
 	/**
 	 * 获取当前类的路径<br/>
 	 * 思路：工程路径+src+类名

@@ -1,5 +1,6 @@
 package com.xl.a;
 
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -34,11 +35,20 @@ public class DateDemo {
 	}
 
 	@Test
+	public void Ê±¼ä´Á() {
+		Timestamp t1 = new Timestamp(System.currentTimeMillis());
+		System.out.println(t1);
+		Timestamp t2 = new Timestamp(new Date().getTime());
+		System.out.println(t2);
+		System.out.println(t1 == t2);
+	}
+
+	@Test
 	public void test() {
 		Calendar c = Calendar.getInstance();
 		System.out.println(c.getTimeInMillis());
-		System.out.println(Long.toString(System.currentTimeMillis())
-				.substring(1).length());
+		System.out.println(Long.toString(System.currentTimeMillis()).substring(
+				1).length());
 		System.out.println(Long.toString(System.currentTimeMillis()).substring(
 				1));
 	}

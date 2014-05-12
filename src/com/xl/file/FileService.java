@@ -3,7 +3,7 @@ package com.xl.file;
 import java.io.File;
 import java.util.ArrayList;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 public class FileService {
 
@@ -17,7 +17,7 @@ public class FileService {
 			throw new RuntimeException("这不是目录");
 		}
 		ArrayList<File> list = new ArrayList<File>();
-		FileUtil.queryAll(list, file);
+		FileTool.queryAll(list, file);
 	}
 
 }

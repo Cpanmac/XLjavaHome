@@ -8,7 +8,7 @@ import java.io.RandomAccessFile;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 import com.xl.util.StreamTool;
 
 /**
@@ -28,7 +28,7 @@ public class 多线程下载 {
 		/** 下载文件保存路径 */
 		File file;
 		URL url = new URL(path);
-		file = new File(FileUtil.getCurrentPath(obj), "1.html");
+		file = new File(FileTool.getCurrentPath(obj), "1.html");
 
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
@@ -104,7 +104,7 @@ class DownLoadTask extends Thread {
 	public void run() {
 		try {
 			// 实现断点续传中间File以线程id命名，记录文件位置
-			File postionfile = new File(FileUtil.getCurrentPath(this),
+			File postionfile = new File(FileTool.getCurrentPath(this),
 					+threadid + ".txt");
 			URL url = new URL(urlPath);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();

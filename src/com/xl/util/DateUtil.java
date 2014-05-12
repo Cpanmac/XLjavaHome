@@ -8,4 +8,6 @@ public class DateUtil {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd:ddhhmm");
 		return sdf.format(new Date());
 	}
+	
+	
 }

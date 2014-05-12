@@ -8,7 +8,7 @@ import java.io.UnsupportedEncodingException;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 /**
  * @Decription 随机文件读取Demo
@@ -23,7 +23,7 @@ public class RandomAccessFileDemo {
 
 	@Before
 	public void before() throws UnsupportedEncodingException {
-		file = new File(FileUtil.getCurrentPath(this), "1.txt");
+		file = new File(FileTool.getCurrentPath(this), "1.txt");
 	}
 
 	public void read() throws IOException // 读取

@@ -1,6 +1,8 @@
 package com.xl.entity;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
 	private int id;
 	private int age;

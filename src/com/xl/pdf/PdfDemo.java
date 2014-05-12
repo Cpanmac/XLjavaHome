@@ -15,7 +15,7 @@ import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 /**
  * @Decription Ò»¡¢Ç°ÑÔ
@@ -45,7 +45,7 @@ public class PdfDemo {
 
 	@Before
 	public void init() throws UnsupportedEncodingException {
-		file = new File(FileUtil.getCurrentPath(this), "pdf.pdf");
+		file = new File(FileTool.getCurrentPath(this), "pdf.pdf");
 	}
 
 	@Test

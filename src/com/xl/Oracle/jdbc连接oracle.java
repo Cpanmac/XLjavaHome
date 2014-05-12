@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 import com.xl.entity.User;
 
-//使用jdbc连接oracle
+//使用jdbc连接oracl7e
 public class jdbc连接oracle {
 	private static String url = "oracle.jdbc.driver.OracleDriver";
 	private static String name = "";

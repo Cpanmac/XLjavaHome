@@ -13,7 +13,7 @@ import org.jsoup.select.Elements;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.xl.util.FileUtil;
+import com.xl.util.FileTool;
 
 /**
  * @Decription 利用Jsoup解析html
@@ -30,7 +30,7 @@ public class HtmlDemo {
 
 	@Before
 	public void init() throws IOException {
-		file = new File(FileUtil.getCurrentPath(this),
+		file = new File(FileTool.getCurrentPath(this),
 				"个人开公司的流程，以后用得着（经典）.html");
 		doc = Jsoup.parse(file, "UTF-8");
 	}
