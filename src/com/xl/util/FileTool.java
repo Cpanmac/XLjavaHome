@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-
 import org.junit.Test;
 
 public class FileTool {
@@ -83,10 +82,10 @@ public class FileTool {
 			List<File> fileList = new ArrayList<File>();
 			fileList = queryAll(fileList, file);
 			for (File f : fileList) {
-				if (RegTool.isMatch(f.getName(), "\\(\\d+?\\)")) {
-					f.deleteOnExit();
-					System.out.println(f.getName() + "删除");
-				}
+				// if (RegTool.isMatch(f.getName(), "\\(\\d+?\\)")) {
+				// f.deleteOnExit();
+				// System.out.println(f.getName() + "删除");
+				// }
 			}
 		} else {
 			throw new RuntimeException("这不是目录");
@@ -124,7 +123,7 @@ public class FileTool {
 	}
 
 	/**
-	 * 返回该文件大小
+	 * 返回该文件大小,leng就可以获得大小了
 	 * 
 	 * @param file
 	 * @return
@@ -132,7 +131,7 @@ public class FileTool {
 	 * @throws IOException
 	 *             int
 	 */
-	@SuppressWarnings("resource")
+	@Deprecated
 	public static int getSize(File file) throws FileNotFoundException,
 			IOException {
 		return new FileInputStream(file).available();
@@ -230,6 +229,21 @@ public class FileTool {
 		bw.write(content);
 		bw.flush();
 		bw.close();
+	}
+
+	public static String getSize(Long fileS) {
+		DecimalFormat df = new DecimalFormat("#.00");
+		String fileSizeString = "";
+		if (fileS < 1024) {
+			fileSizeString = df.format((double) fileS) + "B";
+		} else if (fileS < 1048576) {
+			fileSizeString = df.format((double) fileS / 1024) + "K";
+		} else if (fileS < 1073741824) {
+			fileSizeString = df.format((double) fileS / 1048576) + "M";
+		} else {
+			fileSizeString = df.format((double) fileS / 1073741824) + "G";
+		}
+		return fileSizeString;
 	}
 
 	@Test

@@ -20,4 +20,23 @@ public class FileService {
 		FileTool.queryAll(list, file);
 	}
 
+	/**
+	 * 递归获取文件夹大小
+	 * 
+	 * @param file
+	 * @return
+	 * @throws Exception
+	 */
+	public long getFileSize(File file) {
+		long size = 0;
+		File flist[] = file.listFiles();
+		for (int i = 0; i < flist.length; i++) {
+			if (flist[i].isDirectory()) {
+				size = size + getFileSize(flist[i]);
+			} else {
+				size = size + flist[i].length();
+			}
+		}
+		return size;
+	}
 }

@@ -32,8 +32,10 @@ package com.xl.file;
 
 import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 
 import javax.swing.filechooser.FileSystemView;
 
@@ -42,6 +44,7 @@ import org.junit.Test;
 import com.xl.util.FileTool;
 
 public class FileDemo {
+	private File file;
 
 	@Test
 	public void test1() throws IOException {
@@ -139,5 +142,13 @@ public class FileDemo {
 		File file = new File(FileSystemView.getFileSystemView()
 				.getHomeDirectory(), "5/" + "a.txt");
 		FileTool.write(file, "张三");
+	}
+
+	@Test
+	public void 文件大小() throws FileNotFoundException, IOException {
+		file=new File(FileTool.getCurrentPath(this),this.getClass().getSimpleName()+".java");
+		System.out.println(FileTool.getSize(file.length()));
+		System.out.println(file.length()+"bytes");
+		System.out.println(FileTool.getSize(file));
 	}
 }

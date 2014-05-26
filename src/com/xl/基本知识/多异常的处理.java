@@ -43,7 +43,7 @@ class FuShuException extends Exception // 建立的目的是为了生成对象
 
 }
 
-class Demo {
+class DemoTest {
 	int div(int a, int b) throws FuShuException {
 		if (b < 0) // 如果小于0就让程序停止运转
 			throw new FuShuException("出现了除数是负数的情况", b); // 手动通过throw关键字抛出异常对象
@@ -54,7 +54,7 @@ class Demo {
 class ExceptionDemo3 {
 	public static void main(String[] args) {
 		try {
-			Demo d = new Demo();
+			DemoTest d = new DemoTest();
 			int x = d.div(4, -1);
 			System.out.println("x=" + x);
 		} catch (FuShuException e) {

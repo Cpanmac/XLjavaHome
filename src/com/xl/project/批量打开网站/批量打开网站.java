@@ -1,15 +1,11 @@
 package com.xl.project.批量打开网站;
 
-import java.awt.Desktop;
 import java.io.IOException;
-import java.net.URI;
-import java.util.Arrays;
 import java.util.Scanner;
 
 import org.junit.Test;
 
 import com.xl.util.RegTool;
-import com.xl.util.SystemUtil;
 
 /**
  * @Decription 1.输入文本<br/>
