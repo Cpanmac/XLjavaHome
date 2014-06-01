@@ -1,30 +1,24 @@
 package com.xl.a;
 
-import java.io.IOException;
 
 public class MyEclipse8×¢²áÂë {
 	private static final String LL = "Decompiling this copyrighted software is a violation of both your license agreement and the Digital Millenium Copyright Act of 1998 (http://www.loc.gov/copyright/legislation/dmca.pdf). Under section 1204 of the DMCA, penalties range up to a $500,000 fine or up to five years imprisonment for a first offense. Think about it; pay for a license, avoid prosecution, and feel better about yourself.";// ¶¨ÒåÒ»¸öString×Ö·û´®
-
+	
 	public String getSerial(String userId, String licenseNum) {
 		java.util.Calendar cal = java.util.Calendar.getInstance();
 		cal.add(1, 3);
 		cal.add(6, -1);
 		java.text.NumberFormat nf = new java.text.DecimalFormat("000");
 		licenseNum = nf.format(Integer.valueOf(licenseNum));
-		String verTime = new StringBuilder("-").append(
-				new java.text.SimpleDateFormat("yyMMdd").format(cal.getTime()))
-				.append("0").toString();
+		String verTime = new StringBuilder("-").append(new java.text.SimpleDateFormat("yyMMdd").format(cal.getTime())).append("0").toString();
 		String type = "YE3MP-";
-		String need = new StringBuilder(userId.substring(0, 1)).append(type)
-				.append("300").append(licenseNum).append(verTime).toString();
-		String dx = new StringBuilder(need).append(LL).append(userId)
-				.toString();
+		String need = new StringBuilder(userId.substring(0, 1)).append(type).append("300").append(licenseNum).append(verTime).toString();
+		String dx = new StringBuilder(need).append(LL).append(userId).toString();
 		int suf = this.decode(dx);
-		String code = new StringBuilder(need).append(String.valueOf(suf))
-				.toString();
+		String code = new StringBuilder(need).append(String.valueOf(suf)).toString();
 		return this.change(code);
 	}
-
+	
 	private int decode(String s) {
 		int i;
 		char[] ac;
@@ -40,7 +34,7 @@ public class MyEclipse8×¢²áÂë {
 		}
 		return Math.abs(i);
 	}
-
+	
 	private String change(String s) {
 		byte[] abyte0;
 		char[] ac;
@@ -65,11 +59,11 @@ public class MyEclipse8×¢²áÂë {
 		}
 		return String.valueOf(ac);
 	}
-
+	
 	public MyEclipse8×¢²áÂë() {
 		super();
 	}
-
+	
 	public static void main(String[] args) {
 		try {
 			// System.out.println("please input register name:");

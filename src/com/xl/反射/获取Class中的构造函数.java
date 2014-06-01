@@ -40,7 +40,7 @@ public class 获取Class中的构造函数 {
 	// 如果该类没有空参的构造函数,拿到所有公用的构造函数
 	@Test
 	public void createNewObject_2() throws Exception {
-		Class clazz = Class.forName("reflect.Person");
+		Class<?> clazz = Class.forName("reflect.Person");
 		// 1.拿到该类的所有公有的构造函数getConstructors()
 		Constructor c = clazz.getConstructor(String.class);
 		Person p = (Person) c.newInstance("xxx");
@@ -53,7 +53,7 @@ public class 获取Class中的构造函数 {
 			NoSuchMethodException, IllegalArgumentException,
 			InstantiationException, IllegalAccessException,
 			InvocationTargetException {
-		Class clazz = Class.forName(s);
+		Class<?> clazz = Class.forName(s);
 		Constructor c = clazz.getDeclaredConstructor(List.class);
 		c.setAccessible(true);
 		Person p = (Person) c.newInstance(new ArrayList());

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import com.xl.util.FileTool;
 
 public class FileService {
-
 	/**
 	 * 查询该目录下的所有文件并打印
 	 * 
@@ -18,8 +17,12 @@ public class FileService {
 		}
 		ArrayList<File> list = new ArrayList<File>();
 		FileTool.queryAll(list, file);
+		// System.out.println(list);
+		for (File _file : list) {
+			System.out.println(_file.getName());
+		}
 	}
-
+	
 	/**
 	 * 递归获取文件夹大小
 	 * 

@@ -17,7 +17,6 @@ import org.junit.Test;
  * 
  */
 public class RegTool {
-
 	/**
 	 * 得到所有的中文
 	 * 
@@ -27,7 +26,7 @@ public class RegTool {
 	public static String[] getChinese(String content) {
 		return getContent(content, "[\\u4E00-\\u9FFF]+");
 	}
-
+	
 	/**
 	 * 是否匹配指定规则
 	 * 
@@ -40,7 +39,7 @@ public class RegTool {
 		Matcher m = p.matcher(s);
 		return m.find();
 	}
-
+	
 	/**
 	 * 返回所有符合条件的
 	 * 
@@ -51,24 +50,23 @@ public class RegTool {
 	public static String[] getContent(String content, String regex) {
 		return getContent(content, regex, 0);
 	}
-
+	
 	/**
 	 * 返回符合条件的集合
 	 * 
 	 * @param content
-	 *            内容
+	 *        内容
 	 * @param regex
-	 *            正则
+	 *        正则
 	 * @param params
-	 *            组别
+	 *        组别
 	 * @return List<String>
 	 */
-	public static String[] getContent(String content, String regex,
-			int... params) {
+	public static String[] getContent(String content, String regex, int... params) {
 		List<String> list = new ArrayList<String>();
 		Pattern p = Pattern.compile(regex,// Pattern.MULTILINE | //多行模式
-				// Pattern.DOTALL | //匹配任何字符，包括换行符。
-				Pattern.UNICODE_CASE);
+		        // Pattern.DOTALL | //匹配任何字符，包括换行符。
+		        Pattern.UNICODE_CASE);
 		Matcher m = p.matcher(content);
 		while (m.find()) {
 			for (int i = 0; i < params.length; i++) {
@@ -78,7 +76,7 @@ public class RegTool {
 		String[] strs = new String[list.size()];
 		return list.toArray(strs);
 	}
-
+	
 	/**
 	 * 匹配所有的Email
 	 * 
@@ -88,7 +86,7 @@ public class RegTool {
 	public static String[] getEmail(String content) {
 		return getContent(content, "[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w-]+)+");
 	}
-
+	
 	/**
 	 * 返回http
 	 * 
@@ -98,7 +96,11 @@ public class RegTool {
 	public static String[] getHttpUrl(String content) {
 		return getContent(content, "(http://.+)[\"|']", 1);
 	}
-
+	
+	public static boolean isHttpUrl(String content){
+		return isMatch(content, "http://\\w+");
+	}
+	
 	/**
 	 * 匹配所有的图片格式
 	 * 
@@ -108,7 +110,7 @@ public class RegTool {
 	public static String[] getImageURL(String content) {
 		return getContent(content, "(http://.+?[jpg][pni][gf])");
 	}
-
+	
 	/**
 	 * 去两个以上的空格
 	 * 
@@ -119,7 +121,7 @@ public class RegTool {
 	public static String trim(String content) {
 		return content.replaceAll("\\s{2,}", "");
 	}
-
+	
 	// -----------------------------------这是测试------------------------------------------------
 	@Test
 	public void testGetEmail() {

@@ -49,7 +49,6 @@ public class DateDemo {
 		System.out.println(c.getTimeInMillis());
 		System.out.println(Long.toString(System.currentTimeMillis()).substring(
 				1).length());
-		System.out.println(Long.toString(System.currentTimeMillis()).substring(
-				1));
+		System.out.println(Long.toString(System.currentTimeMillis()).substring(1));
 	}
 }

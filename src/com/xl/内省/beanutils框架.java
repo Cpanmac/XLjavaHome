@@ -20,20 +20,18 @@ import com.xl.entity.Person;
  */
 public class beanutils框架 {
 	@Test
-	public void 赋值() throws IllegalAccessException,
-			InvocationTargetException {
+	public void 赋值() throws IllegalAccessException, InvocationTargetException {
 		Person p = new Person();
 		// 设置属性
 		BeanUtils.setProperty(p, "name", "赋值的姓名1");
 		System.out.println(p.getName());
 	}
-
+	
 	/*
 	 * 好处：直接将整型123，赋值给了int age，支持8种基本数据类型。不支持日期
 	 */
 	@Test
-	public void Test2() throws IllegalAccessException,
-			InvocationTargetException {
+	public void Test2() throws IllegalAccessException, InvocationTargetException {
 		String name = "aaaa";
 		String password = "123";
 		String age = "34";
@@ -43,10 +41,9 @@ public class beanutils框架 {
 		BeanUtils.setProperty(p, "password", password);
 		BeanUtils.setProperty(p, "age", age);
 		BeanUtils.setProperty(p, "birthday", birthday);
-		System.out.println(p.getName() + ".." + p.getPassword() + ".."
-				+ p.getAge() + ".." + p.getBirthday());
+		System.out.println(p.getName() + ".." + p.getPassword() + ".." + p.getAge() + ".." + p.getBirthday());
 	}
-
+	
 	/*
 	 * 
 	 */
@@ -84,8 +81,7 @@ public class beanutils框架 {
 			BeanUtils.setProperty(p, "password", password);
 			BeanUtils.setProperty(p, "age", age);
 			BeanUtils.setProperty(p, "birthday", birhday);
-			System.out.println(p.getName() + ".." + p.getPassword() + ".."
-					+ p.getAge());
+			System.out.println(p.getName() + ".." + p.getPassword() + ".." + p.getAge());
 			System.out.println(p.getBirthday());
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
@@ -93,13 +89,13 @@ public class beanutils框架 {
 			e.printStackTrace();
 		}
 	}
-
+	
 	/*
 	 * 利用Map集合
 	 */
 	@Test
 	public void test5() {
-		Map map = new HashMap();
+		Map<String, String> map = new HashMap<String, String>();
 		map.put("name", "asda");
 		map.put("password", "123");
 		map.put("age", "23");
@@ -109,13 +105,11 @@ public class beanutils框架 {
 		Person bean = new Person();
 		try {
 			BeanUtils.populate(bean, map);
-			System.out.println(bean.getName() + bean.getPassword()
-					+ bean.getBirthday());
+			System.out.println(bean.getName() + bean.getPassword() + bean.getBirthday());
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
 			e.printStackTrace();
 		}
 	}
-
 }

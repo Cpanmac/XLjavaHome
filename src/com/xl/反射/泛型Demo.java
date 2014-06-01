@@ -9,11 +9,11 @@ public class 泛型Demo implements parent {
 	@Test
 	public void 得到泛型() throws InstantiationException, IllegalAccessException {
 		// 得到泛型的真实信息
-		Class clazz = this.getClass(); // 得到当前new的对象
+		Class<? extends 泛型Demo> clazz = this.getClass(); // 得到当前new的对象
 		System.out.println(clazz.getName());
 		Type[] parent = clazz.getGenericInterfaces();
 		System.out.println(parent[0]);
-		Class inter = clazz.getInterfaces()[0];
+		Class<?> inter = clazz.getInterfaces()[0];
 		System.out.println(inter.getName());
 		
 		// ParameterizedType pt = (ParameterizedType)

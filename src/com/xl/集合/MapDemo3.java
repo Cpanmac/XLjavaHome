@@ -1,16 +1,7 @@
 package com.xl.集合;
+
 /*
-map扩展知识。  存储多个HashMap集合
-
-map集合被使用是因为具备映射关系。
-
-"yureban" "01" "zhangsan";
-
-"yureban" "03" "lisi";
-
-"jiuyeban" 01" "wangwu";
-"jiuyeban" "02" "zhaoliu";
-一个学校有多个教室每个教室都有名称，
+ * map扩展知识。 存储多个HashMap集合 map集合被使用是因为具备映射关系。 "yureban" "01" "zhangsan"; "yureban" "03" "lisi"; "jiuyeban" 01" "wangwu"; "jiuyeban" "02" "zhaoliu"; 一个学校有多个教室每个教室都有名称，
  */
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,17 +9,26 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-class Student4 implements Comparable<Student4> {
+import org.junit.Test;
+
+/**
+ * @Description sutdent拥有比较器
+ * 
+ * @author 徐立
+ *
+ * @date 2014-6-10
+ */
+class StudentCompareable implements Comparable<StudentCompareable> {
 	private String id;
 	private String name;
 	private int age;
-
-	Student4(String id, String name) {
+	
+	StudentCompareable(String id, String name) {
 		this.name = name;
 		this.id = id;
 	}
-
-	public int compareTo(Student4 s) {
+	
+	public int compareTo(StudentCompareable s) {
 		int num = new Integer(this.age).compareTo(new Integer(s.age));
 		if (num == 0) {
 			return this.name.compareTo(s.name);
@@ -37,38 +37,37 @@ class Student4 implements Comparable<Student4> {
 	}
 }
 
-public class MapDemo3 { // 之前房间存的Map集合，现在房间存的List集合
-	public static void demo() // 一个教室对应很多Student对象
+public class MapDemo3 {
+	@Test
+	public void demo() // 一个教室对应很多Student对象
 	{
-		Map czbk = new HashMap(); // 右边的值改为List，ArrayList也可以
-		List reyu = new ArrayList<Student4>();
-		List jiuye = new ArrayList<Student4>();
+		Map<String, List<StudentCompareable>> czbk = new HashMap<String, List<StudentCompareable>>(); // 右边的值改为List，ArrayList也可以
+		List<StudentCompareable> reyu = new ArrayList<StudentCompareable>();
+		List<StudentCompareable> jiuye = new ArrayList<StudentCompareable>();
 		czbk.put("yureban", reyu);
 		czbk.put("jiuyeban", jiuye);
-		reyu.add(new Student4("01", "zhagnsa"));
-		reyu.add(new Student4("04", "wangwu"));
-		jiuye.add(new Student4("01", "zhouqi"));
-		jiuye.add(new Student4("02", "zhaoli"));
+		reyu.add(new StudentCompareable("01", "zhagnsa"));
+		reyu.add(new StudentCompareable("04", "wangwu"));
+		jiuye.add(new StudentCompareable("01", "zhouqi"));
+		jiuye.add(new StudentCompareable("02", "zhaoli"));
 		Iterator<String> it = czbk.keySet().iterator(); // 上面两行合成一行
 		while (it.hasNext()) {
 			String roomName = it.next(); // 取出教室的名字赋值给roomName
-			List<Student4> room = (List<Student4>) czbk.get(roomName); // 就把下面的代码复制，改为
+			List<StudentCompareable> room = (List<StudentCompareable>) czbk.get(roomName); // 就把下面的代码复制，改为
 			System.out.println(roomName);
 			getInfos(room);
 		}
-
 	}
-
-	public static void getInfos(List<Student4> list) {
-		Iterator<Student4> it = list.iterator();
+	
+	public static void getInfos(List<StudentCompareable> list) {
+		Iterator<StudentCompareable> it = list.iterator();
 		while (it.hasNext()) {
-			Student4 s = it.next();
+			StudentCompareable s = it.next();
 			System.out.println(s);
 		}
 	}
-
+	
 	public static void main(String[] args) {
-		demo();
 		/*
 		 * HashMap<String,HashMap<String,String>> czbk = new
 		 * HashMap<String,HashMap<String,String>>(); HashMap<String,String> yure
@@ -98,7 +97,7 @@ public class MapDemo3 { // 之前房间存的Map集合，现在房间存的List集合
 		 * getStudentInfo(room); }
 		 */
 	}
-
+	
 	public static void getStudentInfo(HashMap<String, String> roomMap) // 其中一个
 	// 教室创建方法定义功能取出
 	{

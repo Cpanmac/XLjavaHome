@@ -18,7 +18,7 @@ public class Crud {
 	@Test
 	public void create() {
 						
-		String sql = "insert into user(name,gender,salary) values('Ë¿Ë¿','Å®',3000)";
+		String sql = "insert into user(name,gender,salary) values('ÕÅÈý','ÄÐ',3000)";
 		try {
 			conn = JdbcUtil.getMySqlConnection();
 			stmt = conn.createStatement();

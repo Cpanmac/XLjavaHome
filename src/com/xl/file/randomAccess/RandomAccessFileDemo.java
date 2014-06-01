@@ -20,12 +20,12 @@ import com.xl.util.FileTool;
  */
 public class RandomAccessFileDemo {
 	private File file;
-
+	
 	@Before
 	public void before() throws UnsupportedEncodingException {
 		file = new File(FileTool.getCurrentPath(this), "1.txt");
 	}
-
+	
 	public void read() throws IOException // 读取
 	{
 		RandomAccessFile raf = new RandomAccessFile("1.txt", "r"); // 只读的话，可以屏蔽掉只读
@@ -38,9 +38,8 @@ public class RandomAccessFileDemo {
 		String name = new String(buf);
 		System.out.println("姓名：" + name);
 		System.out.println("年龄: " + raf.readInt());
-
 	}
-
+	
 	public void read_2() throws IOException // 读取王五
 	{
 		// 想要直接读取中间的王五,因为王五在4 李四 15 的后面字节数就是
@@ -51,16 +50,16 @@ public class RandomAccessFileDemo {
 		String name = new String(buf);
 		System.out.println("姓名：" + name);
 	}
-
+	
 	@Test
 	public void read_3() throws IOException // skipBytes
-											// 跳过指定字节，只能往下跳，不能往回跳
+	                                        // 跳过指定字节，只能往下跳，不能往回跳
 	{
 		RandomAccessFile raf = new RandomAccessFile(file, "r");
 		int a = raf.skipBytes(3);
 		System.out.println(a);
 	}
-
+	
 	/**
 	 * 添加元素,希望在第四个位置添加周七,直接写到指定位置，不覆盖文件
 	 * 
@@ -74,7 +73,7 @@ public class RandomAccessFileDemo {
 		raf.writeInt(103);
 		raf.close();
 	}
-
+	
 	@Test
 	public void write2() throws IOException // 写入
 	{
@@ -85,5 +84,4 @@ public class RandomAccessFileDemo {
 		raf.write("王五".getBytes()); // 李四是4个字节
 		raf.writeInt(16); // 写入age
 	}
-
 }

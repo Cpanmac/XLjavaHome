@@ -17,10 +17,9 @@ import org.junit.Test;
 import com.xl.entity.Person;
 
 /*
- * 操作javaBean的属性  
+ * 操作javaBean的属性
  */
-
-//使用内省api操作bean的属性
+// 使用内省api操作bean的属性
 public class Demo {
 	/** 每页大小 */
 	int pageSize;
@@ -28,21 +27,17 @@ public class Demo {
 	int recordCount;
 	/** 总页数 */
 	int pageCount;
-
-
+	
 	@Test
 	public void 测试分页() {
 		pageSize = 10;
 		recordCount = 20;
-		pageCount = recordCount / pageSize
-				+ (recordCount % pageSize > 0 ? 1 : 0);
-		pageCount = recordCount % pageSize == 0 ? recordCount / pageSize
-				: recordCount / pageSize + 1;
+		pageCount = recordCount / pageSize + (recordCount % pageSize > 0 ? 1 : 0);
+		pageCount = recordCount % pageSize == 0 ? recordCount / pageSize : recordCount / pageSize + 1;
 		pageCount = (recordCount + pageSize - 1) / pageSize;
 		System.out.println(pageCount);
 	}
-
-	@SuppressWarnings("deprecation")
+	
 	public static void main(String[] args) {
 		Timer t = new Timer();
 		t.schedule(new TimerTask() {
@@ -50,10 +45,9 @@ public class Demo {
 			public void run() {
 				System.out.println("备份成功");
 			}
-
 		}, 1000, 5000);
 	}
-
+	
 	@Test
 	public void 测试邮箱() {
 		Scanner sr = new Scanner(System.in);
@@ -67,13 +61,13 @@ public class Demo {
 			System.out.println(m.group());
 		}
 	}
-
+	
 	@Test
 	public void 测试时间() {
 		long time = System.currentTimeMillis();
 		System.out.println(time);
 	}
-
+	
 	@Test
 	public void test1() throws Exception {
 		/*
@@ -84,7 +78,6 @@ public class Demo {
 		for (PropertyDescriptor pd : pds) {
 			System.out.println(pd.getName()); // 根据Person中的get、set属性。
 		}
-
 		/*
 		 * 只获取自己的属性
 		 */
@@ -94,14 +87,12 @@ public class Demo {
 			System.out.println(pd.getName()); // 根据Person中的get、set属性。
 		}
 	}
-
+	
 	/*
 	 * 运行属性
 	 */
 	@Test
-	public void test2() throws IntrospectionException,
-			IllegalArgumentException, IllegalAccessException,
-			InvocationTargetException {
+	public void test2() throws IntrospectionException, IllegalArgumentException, IllegalAccessException, InvocationTargetException {
 		Person p = new Person();
 		PropertyDescriptor pd = new PropertyDescriptor("age", Person.class);
 		// 得到属性的写方法
@@ -112,7 +103,7 @@ public class Demo {
 		method = pd.getReadMethod();
 		System.out.println(method.invoke(p, null));
 	}
-
+	
 	/*
 	 * 高级点内容：获取当前操作的属性的类型
 	 */

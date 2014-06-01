@@ -1,7 +1,6 @@
 package com.xl.集合;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -27,7 +26,10 @@ public class MapDemo {
 			System.out.println("key:" + key + ",value:" + value);
 		}
 	}
-
+	
+	/**
+	 * keySet().toArray()转换为数组
+	 */
 	@Test
 	public void 将Map集合改成两个String数组() {
 		Map<String, String> query = new HashMap<String, String>();
@@ -41,10 +43,8 @@ public class MapDemo {
 		query.values().toArray(paramsValue);
 		System.out.println(Arrays.toString(params));
 		System.out.println(Arrays.toString(paramsValue));
-		
-		
 		// 不转换直接强转String数据,转换失败
-//		String[] strs =  query.keySet().toArray();
-//		System.out.println(Arrays.toString(strs));
+		Object[] strs = query.keySet().toArray();
+		System.out.println(Arrays.toString(strs));
 	}
 }

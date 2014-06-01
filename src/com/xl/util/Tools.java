@@ -1,19 +1,19 @@
-ï»¿package com.xl.util;
+package com.xl.util;
 
 import java.io.File;
 import java.net.URISyntaxException;
 
 /**
  * 
- * Title: Tools Description: å­—ç¬¦ä¸²å¤„ç†å…¬å…±ç»„ä»¶
+ * Title: Tools Description: ×Ö·û´®´¦Àí¹«¹²×é¼ş
  * 
- * @author å¾ç«‹
+ * @author ĞìÁ¢
  * @version 1.0
  */
 
 public class Tools {
 	/**
-	 * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º
+	 * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
 	 * 
 	 * @param str
 	 * @return boolean
@@ -27,7 +27,7 @@ public class Tools {
 	}
 
 	/**
-	 * ç©ºå¯¹è±¡å¤„ç†
+	 * ¿Õ¶ÔÏó´¦Àí
 	 * 
 	 * @param ob
 	 * @return
@@ -46,7 +46,7 @@ public class Tools {
 	 * @param outInfo
 	 */
 	public static void logToControl(String outMode, Object outInfo) {
-		// ä¼ å…¥ERRåˆ™æ‰“å°çº¢è‰²å­—ä½“è°ƒè¯•ä¿¡æ¯
+		// ´«ÈëERRÔò´òÓ¡ºìÉ«×ÖÌåµ÷ÊÔĞÅÏ¢
 		if ("err".equals(outMode)) {
 			System.err.println(outInfo);
 		} else {
@@ -55,7 +55,7 @@ public class Tools {
 	}
 
 	/**
-	 * å¾—åˆ°å½“å‰å·¥ç¨‹è·¯å¾„
+	 * µÃµ½µ±Ç°¹¤³ÌÂ·¾¶
 	 * 
 	 * @return
 	 */
@@ -71,7 +71,7 @@ public class Tools {
 	}
 
 	/**
-	 * å¾—åˆ°ClassPathçš„ç»å¯¹è·¯å¾„:web å·¥ç¨‹classesè·¯å¾„
+	 * µÃµ½ClassPathµÄ¾ø¶ÔÂ·¾¶:web ¹¤³ÌclassesÂ·¾¶
 	 * 
 	 * @return
 	 */
@@ -88,7 +88,7 @@ public class Tools {
 	}
 
 	/**
-	 * è·å–webå·¥ç¨‹è·¯å¾„ï¼š
+	 * »ñÈ¡web¹¤³ÌÂ·¾¶£º
 	 * 
 	 * @return
 	 */
@@ -99,7 +99,7 @@ public class Tools {
 	}
 
 	/**
-	 * ä¸­æ–‡è½¬æ¢
+	 * ÖĞÎÄ×ª»»
 	 * 
 	 * @param tmpStr
 	 *            string
@@ -120,12 +120,12 @@ public class Tools {
 	}
 
 	/*
-	 * å­—ç¬¦ä¸²æ›¿æ¢æ–¹æ³•ï¼šåŒºåˆ†å¤§å°å†™
+	 * ×Ö·û´®Ìæ»»·½·¨£ºÇø·Ö´óĞ¡Ğ´
 	 * 
-	 * @param sourceStr String åŸå§‹å­—ç¬¦ä¸²
+	 * @param sourceStr String Ô­Ê¼×Ö·û´®
 	 * 
-	 * @param oldString String è¦è¢«æ›¿æ¢çš„å­—ç¬¦ä¸² @param newString String æ›¿æ¢çš„å­—ç¬¦ä¸² @return
-	 * String è¿”å›æ›¿æ¢åçš„å­—ç¬¦ä¸² replaceStr("1234K5678","K","8888");123488885678
+	 * @param oldString String Òª±»Ìæ»»µÄ×Ö·û´® @param newString String Ìæ»»µÄ×Ö·û´® @return
+	 * String ·µ»ØÌæ»»ºóµÄ×Ö·û´® replaceStr("1234K5678","K","8888");123488885678
 	 */
 
 	public static final String replaceStr1(String sourceStr, String oldString,
@@ -155,9 +155,9 @@ public class Tools {
 	}
 
 	/*
-	 * ä»å³è¾¹å‘å·¦å–åˆ†éš”ç¬¦å·¦è¾¹çš„å€¼
+	 * ´ÓÓÒ±ßÏò×óÈ¡·Ö¸ô·û×ó±ßµÄÖµ
 	 * 
-	 * @param sourceåŸå§‹æ–‡æœ¬ @param sepåˆ†éš”ç¬¦ rLeft("1234K5678","K");1234
+	 * @param sourceÔ­Ê¼ÎÄ±¾ @param sep·Ö¸ô·û rLeft("1234K5678","K");1234
 	 */
 	public static String rLeft(String source, String sep) {
 		source = source.toLowerCase();
@@ -176,9 +176,9 @@ public class Tools {
 	}
 
 	/*
-	 * ä»å³è¾¹å‘å·¦å–åˆ†éš”ç¬¦å³è¾¹çš„å€¼
+	 * ´ÓÓÒ±ßÏò×óÈ¡·Ö¸ô·ûÓÒ±ßµÄÖµ
 	 * 
-	 * @param sourceåŸå§‹æ–‡æœ¬ @param sepåˆ†éš”ç¬¦
+	 * @param sourceÔ­Ê¼ÎÄ±¾ @param sep·Ö¸ô·û
 	 * 
 	 * rRight("1234K5678","K");5678
 	 */

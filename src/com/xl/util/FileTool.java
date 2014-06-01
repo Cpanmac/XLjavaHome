@@ -2,6 +2,7 @@ package com.xl.util;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,12 +11,14 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+
 import org.junit.Test;
 
 public class FileTool {
@@ -24,44 +27,38 @@ public class FileTool {
 	 * 思路：工程路径+src+类名
 	 * 
 	 * @param clazz
-	 *            得到类的全名
-	 * 
+	 *        得到类的全名
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
-	public static <T> String getCurrentPath(Class<T> clazz)
-			throws UnsupportedEncodingException {
+	public static <T> String getCurrentPath(Class<T> clazz) {
 		String projectPath = getProjectPath() + File.separator + "src";
 		String name = clazz.getName();
-		name = name.substring(0, name.lastIndexOf(".")).replace(".",
-				File.separator);
+		name = name.substring(0, name.lastIndexOf(".")).replace(".", File.separator);
 		return projectPath + File.separator + name;
 	}
-
+	
 	@Test
-	public void testGetCurrentPath() throws UnsupportedEncodingException {
+	public void testGetCurrentPath() {
 		String path = getCurrentPath(this);
 		System.out.println(path);
 	}
-
-	public static <T> String getCurrentPath(T obj)
-			throws UnsupportedEncodingException {
+	
+	public static <T> String getCurrentPath(T obj) {
 		return getCurrentPath(obj.getClass());
 	}
-
+	
 	/**
 	 * 复制文件
 	 * 
 	 * @param src
 	 * @param target
-	 *            void
+	 *        void
 	 * @throws IOException
 	 */
 	public static void copyFile(File src, File target) throws IOException {
-		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(
-				src));
-		BufferedOutputStream bos = new BufferedOutputStream(
-				new FileOutputStream(target));
+		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(src));
+		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(target));
 		byte[] buf = new byte[1024];
 		int len;
 		while ((len = bis.read(buf)) != -1) {
@@ -71,7 +68,7 @@ public class FileTool {
 		bis.close();
 		bos.close();
 	}
-
+	
 	/**
 	 * 删除指定目录下重复的文件（带（1）这样的）
 	 * 
@@ -91,7 +88,7 @@ public class FileTool {
 			throw new RuntimeException("这不是目录");
 		}
 	}
-
+	
 	/**
 	 * 对文件大小进行格式化
 	 * 
@@ -112,7 +109,7 @@ public class FileTool {
 		}
 		return fileSizeString;
 	}
-
+	
 	/**
 	 * 得到当前工程的绝对路径
 	 * 
@@ -121,7 +118,7 @@ public class FileTool {
 	public static String getProjectPath() {
 		return new File("").getAbsolutePath();
 	}
-
+	
 	/**
 	 * 返回该文件大小,leng就可以获得大小了
 	 * 
@@ -129,19 +126,18 @@ public class FileTool {
 	 * @return
 	 * @throws FileNotFoundException
 	 * @throws IOException
-	 *             int
+	 *         int
 	 */
 	@Deprecated
-	public static int getSize(File file) throws FileNotFoundException,
-			IOException {
+	public static int getSize(File file) throws FileNotFoundException, IOException {
 		return new FileInputStream(file).available();
 	}
-
+	
 	/**
 	 * 打印集合
 	 * 
 	 * @param con
-	 *            void
+	 *        void
 	 */
 	public static <T> void print(Collection<T> con) {
 		Iterator<T> i = con.iterator();
@@ -149,7 +145,7 @@ public class FileTool {
 			System.out.println(i.next());
 		}
 	}
-
+	
 	/**
 	 * 遍历该目录下所有文件
 	 * 
@@ -171,7 +167,7 @@ public class FileTool {
 		}
 		return list;
 	}
-
+	
 	public static List<File> queryAll(List<File> list, File file, String end) {
 		if (file != null) {
 			if (file.isDirectory()) {
@@ -189,28 +185,27 @@ public class FileTool {
 		}
 		return list;
 	}
-
+	
 	/**
 	 * 往目标写入
 	 * 
 	 * @param path
 	 * @param is
-	 *            void
+	 *        void
 	 * @throws IOException
 	 */
 	public static void write(File file, InputStream is) throws IOException {
 		if (!file.exists()) {
 			file.getParentFile().mkdirs();
 		}
-		BufferedOutputStream bos = new BufferedOutputStream(
-				new FileOutputStream(file));
+		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
 		byte[] buf = StreamTool.getBytes(is);
 		bos.write(buf);
 		bos.flush();
 		bos.close();
 		is.close();
 	}
-
+	
 	/**
 	 * 向指定文件输入内容
 	 * 
@@ -230,7 +225,33 @@ public class FileTool {
 		bw.flush();
 		bw.close();
 	}
-
+	
+	public static CharSequence read(File file) throws FileNotFoundException,
+	        UnsupportedEncodingException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file),
+		        "utf-8"));
+		StringBuffer sb;
+		try {
+			sb = new StringBuffer();
+			String content = null;
+			while ((content = br.readLine()) != null) {
+				if (RegTool.isHttpUrl(content)){
+					sb.append(content + "\r\n");
+					System.out.println(content);
+				}
+			}	
+			return sb;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		} finally {
+			try {
+				br.close();
+			} catch (IOException e) {
+				br = null;
+			}
+		}
+	}
+	
 	public static String getSize(Long fileS) {
 		DecimalFormat df = new DecimalFormat("#.00");
 		String fileSizeString = "";
@@ -245,7 +266,7 @@ public class FileTool {
 		}
 		return fileSizeString;
 	}
-
+	
 	@Test
 	public void testTraverser() {
 		File file = new File(getProjectPath());
