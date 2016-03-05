@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/com/project/更改文件名中带冲突的文件/Main.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/itcast/面试/CharArray.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/xl/util/Tools.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test/com/project/更改文件名中带冲突的文件/Main.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
