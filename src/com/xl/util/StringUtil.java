@@ -5,13 +5,13 @@ import java.net.URISyntaxException;
 
 /**
  * 
- * Title: Tools Description: 字符串处理公共组件
+ * Title: StringUtil Description: 字符串处理公共组件
  * 
  * @author 徐立
  * @version 1.0
  */
 
-public class Tools {
+public class StringUtil {
 	/**
 	 * 判断字符串是否为空
 	 * 
@@ -78,8 +78,8 @@ public class Tools {
 	public static String getWebClassPath() {
 		String result = null;
 		try {
-			File file = new File(Tools.class.getClassLoader().getResource("/")
-					.toURI());
+			File file = new File(StringUtil.class.getClassLoader().getResource("/")
+												 .toURI());
 			result = file.getAbsolutePath();
 		} catch (URISyntaxException e) {
 			e.printStackTrace();

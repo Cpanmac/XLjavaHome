@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import com.xl.util.Tools;
+import com.xl.util.StringUtil;
 
 
 public class CodeCounter {
@@ -16,7 +16,7 @@ public class CodeCounter {
 	static long whiteLines = 0; // 空白行数
 
 	public static void main(String[] args) {
-		String path = Tools.getClassPath() + "\\src"; // 获取当前工程的的目录
+		String path = StringUtil.getClassPath() + "\\src"; // 获取当前工程的的目录
 		System.out.println("path========" + path);
 
 		File f = new File(path);
