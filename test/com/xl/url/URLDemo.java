@@ -11,7 +11,7 @@ import com.xl.util.FileTool;
 
 public class URLDemo {
 	@Test
-	public void testUrl() throws Exception {
+	public static void testUrl() throws Exception {
 		String s = "http://www.hao123.com.com/juruboba/";
 		URL url = new URL(s);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
