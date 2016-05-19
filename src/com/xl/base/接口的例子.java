@@ -24,24 +24,22 @@ package com.xl.base;
  }
  */
 
-abstract class Sporter {
-	abstract void play(); // 基本功能定义在类中，扩展功能定义在接口中 找到组织了是继承。 比如：公务员开了一小卖店
-							// 体系外用接口体现
-}
-
 interface Study {
 }
 
+abstract class Sporter {
+    abstract void play(); // 基本功能定义在类中，扩展功能定义在接口中 找到组织了是继承。 比如：公务员开了一小卖店
+    // 体系外用接口体现
+}
+
 class Wangwu extends Sporter implements Study {
-
-	@Override
-	void play() {
-
-	}
+    @Override
+    void play() {
+    }
 }
 
 class StudentDemo {
-	public static void main(String[] args) {
-		System.out.println("Hello World");
-	}
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
 }

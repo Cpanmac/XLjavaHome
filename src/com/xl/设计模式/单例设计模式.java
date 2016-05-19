@@ -20,36 +20,32 @@ java中23种设计模式：
 
 */
 
-class Single
-{
-	private Single(){}
-	private static Single s=new Single();                    //成员变量，私有化一下
-	public	static Single getInstance()   //   //Instance  实例   为了使其能类名调用所以前面+静态static
-	{
-		return s;
-	}
+class Single {
+    private static Single s = new Single();                    //成员变量，私有化一下
+
+    private Single() {
+    }
+
+    public static Single getInstance()   //   //Instance  实例   为了使其能类名调用所以前面+静态static
+    {
+        return s;
+    }
 }
 
-class SingleDemo
-{
-	public static void main(String[] args)
-	{
-		Single ss=Single.getInstance();
-		Single s1=Single.getInstance();           //这两个都是指向同一个类，因为不能被建立
-	}
-	
+class SingleDemo {
+    public static void main(String[] args) {
+        Single ss = Single.getInstance();
+        Single s1 = Single.getInstance();           //这两个都是指向同一个类，因为不能被建立
+    }
 }
 
-
-class Student
-{
-	private String name;
-	private int age;
-	
+class Student {
+    private String name;
+    private int age;
 }
 
 /*	private 类名(){}
-	private static 类名 变量名=new 类名();
+    private static 类名 变量名=new 类名();
 	pubilc static 类名 函数名()
 	{
 		return 变量名;

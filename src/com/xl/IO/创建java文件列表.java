@@ -1,4 +1,5 @@
 package com.xl.IO;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -17,56 +18,53 @@ import java.util.List;
 
  */
 public class 创建java文件列表 {
-	public static void main(String[] args) {
-		File dir = new File("D:/abc");
-		List<File> list = new ArrayList<File>();
-		fileToList(dir, list); // 这样就可以添加进list集合
-		System.out.println(list.size());
-		System.out.println(list);
-		try {
-			// 文件名是
-			File file = new File(dir, "javaList.txt");
+    public static void main(String[] args) {
+        File dir = new File("D:/abc");
+        List<File> list = new ArrayList<File>();
+        fileToList(dir, list); // 这样就可以添加进list集合
+        System.out.println(list.size());
+        System.out.println(list);
+        try {
+            // 文件名是
+            File file = new File(dir, "javaList.txt");
+            writeToFile(list, file.toString()); // 因为存储的字符串。
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-			writeToFile(list, file.toString()); // 因为存储的字符串。
+    // 将文件存储到集合
+    public static void fileToList(File dir, List<File> list) {
+        File[] files = dir.listFiles();
+        for (File file : files) {
+            if (file.isDirectory())
+                fileToList(file, list);
+            else {
+                if (file.getName().endsWith(".java")) // 如果是java就把文件对象存储到集合中去
+                    list.add(file);
+            }
+        }
+    }
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	// 将文件存储到集合
-	public static void fileToList(File dir, List<File> list) {
-		File[] files = dir.listFiles();
-		for (File file : files) {
-			if (file.isDirectory())
-				fileToList(file, list);
-			else {
-				if (file.getName().endsWith(".java")) // 如果是java就把文件对象存储到集合中去
-					list.add(file);
-			}
-		}
-	}
-
-	public static void writeToFile(List<File> list, String javaListFile)
-			throws IOException { // 存的是文本,因为里面扔了异常，必须标识
-		BufferedWriter bufw = null;
-		try {
-			bufw = new BufferedWriter(new FileWriter(javaListFile));
-			for (File f : list) {
-				String path = f.getAbsolutePath(); // 获取每个文件的绝对路径
-				bufw.write(path);
-				bufw.flush();
-			}
-		} catch (IOException e) {
-			// TODO: handle exception
-			throw e; // 处理不了 如果想停的话就抛RuntimeException
-		} finally {
-			try {
-				if (bufw != null)
-					bufw.close();
-			} catch (IOException e) {
-				throw e;
-			}
-		}
-	}
+    public static void writeToFile(List<File> list, String javaListFile) throws IOException { // 存的是文本,因为里面扔了异常，必须标识
+        BufferedWriter bufw = null;
+        try {
+            bufw = new BufferedWriter(new FileWriter(javaListFile));
+            for (File f : list) {
+                String path = f.getAbsolutePath(); // 获取每个文件的绝对路径
+                bufw.write(path);
+                bufw.flush();
+            }
+        } catch (IOException e) {
+            // TODO: handle exception
+            throw e; // 处理不了 如果想停的话就抛RuntimeException
+        } finally {
+            try {
+                if (bufw != null)
+                    bufw.close();
+            } catch (IOException e) {
+                throw e;
+            }
+        }
+    }
 }

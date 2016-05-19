@@ -1,6 +1,5 @@
 package com.xl.泛型;
 
-
 class Worker {
 }
 
@@ -17,26 +16,25 @@ class Tool {
 // 泛型类
 class Utils<QQ> // 由对方指定操作什么类型的对象
 {
-	private QQ q;
+    private QQ q;
 
-	public void setObject(QQ q) {
-		this.q = q;
-	}
+    public QQ getObject() {
+        return q;
+    }
 
-	public QQ getObject() {
-		return q;
-	}
+    public void setObject(QQ q) {
+        this.q = q;
+    }
 }
 
 class GenericDemo3 {
-	public static void main(String[] args) {
-		/*
-		 * Tool t = new Tool(); t.setWorker(new Worker()); t.getWorker();
+    Utils<Worker> u = new Utils<Worker>();
+    // u.setObject(new Worker());
+    Worker w = u.getObject();
+
+    public static void main(String[] args) {
+        /*
+         * Tool t = new Tool(); t.setWorker(new Worker()); t.getWorker();
 		 */
-	}
-
-	Utils<Worker> u = new Utils<Worker>();
-	// u.setObject(new Worker());
-	Worker w = u.getObject();
-
+    }
 }

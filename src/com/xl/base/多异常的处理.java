@@ -25,41 +25,40 @@ package com.xl.base;
 //自定义处理异常
 class FuShuException extends Exception // 建立的目的是为了生成对象
 {
-	private int value;
+    private int value;
 
-	public int getValue() {
-		return value;
-	}
+    /*
+     * private String msg; //定义异常信息,覆写 FuShuException(String msg) {
+     * this.msg=msg; } public String getMessage() { return msg; }
+     */
+    FuShuException(String msg, int value) // 相当于上面的代码
+    {
+        super(msg);
+        this.value = value;
+    }
 
-	/*
-	 * private String msg; //定义异常信息,覆写 FuShuException(String msg) {
-	 * this.msg=msg; } public String getMessage() { return msg; }
-	 */
-	FuShuException(String msg, int value) // 相当于上面的代码
-	{
-		super(msg);
-		this.value = value;
-	}
-
+    public int getValue() {
+        return value;
+    }
 }
 
 class DemoTest {
-	int div(int a, int b) throws FuShuException {
-		if (b < 0) // 如果小于0就让程序停止运转
-			throw new FuShuException("出现了除数是负数的情况", b); // 手动通过throw关键字抛出异常对象
-		return a / b;
-	}
+    int div(int a, int b) throws FuShuException {
+        if (b < 0) // 如果小于0就让程序停止运转
+            throw new FuShuException("出现了除数是负数的情况", b); // 手动通过throw关键字抛出异常对象
+        return a / b;
+    }
 }
 
 class ExceptionDemo3 {
-	public static void main(String[] args) {
-		try {
-			DemoTest d = new DemoTest();
-			int x = d.div(4, -1);
-			System.out.println("x=" + x);
-		} catch (FuShuException e) {
-			System.out.println(e.toString());
-			System.out.println("错误的除数是" + e.getValue());
-		}
-	}
+    public static void main(String[] args) {
+        try {
+            DemoTest d = new DemoTest();
+            int x = d.div(4, -1);
+            System.out.println("x=" + x);
+        } catch (FuShuException e) {
+            System.out.println(e.toString());
+            System.out.println("错误的除数是" + e.getValue());
+        }
+    }
 }

@@ -1,72 +1,65 @@
 package com.xl.反射;
 
+import org.junit.Test;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-import org.junit.Test;
-
-/**
- * @Decription 如果想要完成动态代理，首先需要定义一个InvocationHandler接口的子类，已完成代理的具体操作。
- * 
- * @date 2014-1-19
- * 
- * @author 徐立
- * 
- */
-public class 动态代理 {
-	/**
-	 * 其实在java中有三种类类加载器。 1）Bootstrap ClassLoader 此加载器采用c++编写，一般开发中很少见。
-	 * 2）Extension ClassLoader 用来进行扩展类的加载，一般对应的是jre\lib\ext目录中的类
-	 * 3）AppClassLoader 加载classpath指定的类，是最常用的加载器。同时也是java中默认的加载器。
-	 */
-	@Test
-	public void 类加载器() {
-		Person p = new Person();
-		System.out.println("类加载器  "
-				+ p.getClass().getClassLoader().getClass().getName());
-	}
-
-	@Test
-	public void test() {
-		MyInvocationHandler demo = new MyInvocationHandler();
-		Subject sub = (Subject) demo.bind(new RealSubject());
-		String info = sub.say("Rollen", 20);
-		System.out.println(info);
-	}
-}
-
 // 定义项目接口
 interface Subject {
-	public String say(String name, int age);
+    public String say(String name, int age);
+}
+
+/**
+ * @author 徐立
+ * @Decription 如果想要完成动态代理，首先需要定义一个InvocationHandler接口的子类，已完成代理的具体操作。
+ * @date 2014-1-19
+ */
+public class 动态代理 {
+    /**
+     * 其实在java中有三种类类加载器。 1）Bootstrap ClassLoader 此加载器采用c++编写，一般开发中很少见。
+     * 2）Extension ClassLoader 用来进行扩展类的加载，一般对应的是jre\lib\ext目录中的类
+     * 3）AppClassLoader 加载classpath指定的类，是最常用的加载器。同时也是java中默认的加载器。
+     */
+    @Test
+    public void 类加载器() {
+        Person p = new Person();
+        System.out.println("类加载器  " + p.getClass().getClassLoader().getClass().getName());
+    }
+
+    @Test
+    public void test() {
+        MyInvocationHandler demo = new MyInvocationHandler();
+        Subject sub = (Subject) demo.bind(new RealSubject());
+        String info = sub.say("Rollen", 20);
+        System.out.println(info);
+    }
 }
 
 // 定义真实项目
 class RealSubject implements Subject {
-	@Override
-	public String say(String name, int age) {
-		return name + "  " + age;
-	}
+    @Override
+    public String say(String name, int age) {
+        return name + "  " + age;
+    }
 }
 
 class MyInvocationHandler implements InvocationHandler {
-	private Object obj = null;
+    private Object obj = null;
 
-	public Object bind(Object obj) {
-		this.obj = obj;
-		System.out.println("bind");
-		return java.lang.reflect.Proxy.newProxyInstance(obj.getClass()
-				.getClassLoader(), obj.getClass().getInterfaces(), this);
-	}
+    public Object bind(Object obj) {
+        this.obj = obj;
+        System.out.println("bind");
+        return java.lang.reflect.Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), this);
+    }
 
-	@Override
-	public Object invoke(Object proxy, Method method, Object[] args)
-			throws Throwable {
-		System.out.println("invoke");
-		Object temp = method.invoke(this.obj, args);
-		return temp;
-	}
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("invoke");
+        Object temp = method.invoke(this.obj, args);
+        return temp;
+    }
 }
-
 // 类的生命周期
 // 在一个类编译完成之后，下一步就需要开始使用类，如果要使用一个类，肯定离不开JVM。在程序执行中JVM通过装载，链接，初始化这3个步骤完成。
 // 类的装载是通过类加载器完成的，加载器将.class文件的二进制文件装入JVM的方法区，并且在堆区创建描述这个类的java.lang.Class对象。用来封装数据。

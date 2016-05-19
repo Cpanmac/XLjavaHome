@@ -1,5 +1,4 @@
 package com.xl.file;
-
 // 1.创建。
 // boolean createNewFile();在指定位置创建文件，如果该文件已经在指定位置已经存在，反回false
 // 于输出流的区别：输出流，一创建就会覆盖。
@@ -34,24 +33,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 import javax.swing.filechooser.FileSystemView;
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 public class FileDemo {
     private File file;
     private File[] fileList;
-
-    @Before
-    public void init() throws UnsupportedEncodingException {
-        file = new File(FileTool.getCurrentPath(this), "123.txt");
-    }
-
-    @Test
-    public void test1() throws IOException {
-        File file = new File(FileTool.getCurrentPath(this), "123.txt");
-        String s = "冯帅你好";
-        FileTool.write(file, s);
-    }
 
     public static void method_1() throws IOException {
         File f = new File("file.txt");
@@ -97,6 +89,18 @@ public class FileDemo {
         // System.out.println("parent:"+f.getParent());//此时null，如果有上一层目录就返回结果
         // 返回最后修改的时间long类型
         // System.out.println(f.lastModified());//1357820463062/
+    }
+
+    @Before
+    public void init() throws UnsupportedEncodingException {
+        file = new File(FileTool.getCurrentPath(this), "123.txt");
+    }
+
+    @Test
+    public void test1() throws IOException {
+        File file = new File(FileTool.getCurrentPath(this), "123.txt");
+        String s = "冯帅你好";
+        FileTool.write(file, s);
     }
 
     public void method_5() throws IOException {

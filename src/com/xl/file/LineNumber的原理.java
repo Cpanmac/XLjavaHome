@@ -6,16 +6,16 @@ import java.io.IOException;
 import java.io.Reader;
 
 public class LineNumber的原理 { // 定义计数器实现,读一行，num++
-	public static void main(String[] args) throws IOException {
-		FileReader fr = new FileReader("1.java");
-		MyLineNumberReader mlr = new MyLineNumberReader(fr);
-		String leng;
-		mlr.setLineNumber(0);
-		while ((leng = mlr.myReadLine()) != null) {
-			System.out.println(mlr.getLineNumber() + ":" + leng);
-		}
-		mlr.close(); // 继承的用close,没继承的用myClose()
-	}
+    public static void main(String[] args) throws IOException {
+        FileReader fr = new FileReader("1.java");
+        MyLineNumberReader mlr = new MyLineNumberReader(fr);
+        String leng;
+        mlr.setLineNumber(0);
+        while ((leng = mlr.myReadLine()) != null) {
+            System.out.println(mlr.getLineNumber() + ":" + leng);
+        }
+        mlr.close(); // 继承的用close,没继承的用myClose()
+    }
 }
 
 // class MyLineNumberReader { //可以继承BufferedReader类，里面的就可以不写那么多的代码
@@ -51,22 +51,22 @@ public class LineNumber的原理 { // 定义计数器实现,读一行，num++
 // }
 // }
 class MyLineNumberReader extends BufferedReader {
-	private int lineNumber;
+    private int lineNumber;
 
-	MyLineNumberReader(Reader r) {
-		super(r);
-	}
+    MyLineNumberReader(Reader r) {
+        super(r);
+    }
 
-	public String myReadLine() throws IOException {
-		lineNumber++;
-		return super.readLine();
-	}
+    public String myReadLine() throws IOException {
+        lineNumber++;
+        return super.readLine();
+    }
 
-	public void setLineNumber(int lineNumber) {
-		this.lineNumber = lineNumber;
-	}
+    public int getLineNumber() {
+        return lineNumber;
+    }
 
-	public int getLineNumber() {
-		return lineNumber;
-	}
+    public void setLineNumber(int lineNumber) {
+        this.lineNumber = lineNumber;
+    }
 }

@@ -32,53 +32,39 @@ package com.xl.base;
 2.可以直接访问外部类中的成员，因为还持有外部类中的引用。
 	但是不可以访问它所在的局部中的变量，只能访问被final修饰的局部变量
 */
-abstract class AbsDemo
-{
-	abstract void show();
-}
-class Outer
-{
-
-
-	int x=3;
-
-
-
-  	/*             可以改成匿名内部类
-	class Inner extends AbsDemo
-		{
-			void show()
-			{
-				System.out.println("method:"+x);           //Outer.this 可以省略
-				
-			}
-			
-		}
-  */
-	public void function()
-	{
-	//		new Inner().show();
-
-		new AbsDemo()
-		{
-			
-			void show()
-			{
-				System.out.println("x="+x);
-			}
-			                //要写在Inner的后面 写前面不行
-		}.show();
-	}
-	
+abstract class AbsDemo {
+    abstract void show();
 }
 
-class Xl
-{
-	public static void main(String[] args)
-	{
-		new Outer().function();
-		
-	}
+class Outer {
+    int x = 3;
+
+    /*             可以改成匿名内部类
+  class Inner extends AbsDemo
+      {
+          void show()
+          {
+              System.out.println("method:"+x);           //Outer.this 可以省略
+
+          }
+
+      }
+*/
+    public void function() {
+        //		new Inner().show();
+        new AbsDemo() {
+            void show() {
+                System.out.println("x=" + x);
+            }
+            //要写在Inner的后面 写前面不行
+        }.show();
+    }
+}
+
+class Xl {
+    public static void main(String[] args) {
+        new Outer().function();
+    }
 }
 
 

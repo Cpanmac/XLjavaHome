@@ -34,72 +34,56 @@ Cta c=(Cat)a;
 猫，狗。
 */
 
-
-
-abstract class Animal
-{
-	public abstract void eat();   //不确定     
+abstract class Animal {
+    public abstract void eat();   //不确定
 }
 
+class Cat extends Animal {
+    public void eat() {
+        System.out.println("吃鱼");
+    }
 
-class Cat extends Animal
-{
-	public void eat()
-	{
-		System.out.println("吃鱼");
-	}
-	public void catchMouse()
-	{
-		System.out.println("抓老鼠");
-	}
-
+    public void catchMouse() {
+        System.out.println("抓老鼠");
+    }
 }
 
-class Dog extends Animal
-{
-	public void eat()
-	{
-		System.out.println("吃骨头");
-	}
-	public void kanjia()
-	{
-		System.out.println("看家");
-	}
+class Dog extends Animal {
+    public void eat() {
+        System.out.println("吃骨头");
+    }
+
+    public void kanjia() {
+        System.out.println("看家");
+    }
 }
 
-
-
-
-
-
-
-class DuoTaiDemo
-{
-	public static void main(String[] args)
-	{
-	  /*  Cat c = new Cat();
-		c.eat();
+class DuoTaiDemo {
+    public static void main(String[] args) {
+      /*  Cat c = new Cat();
+        c.eat();
 		
 		Dog d = new Dog();
 		d.eat();
 		*/
-		Animal a=new Cat();                 //类型提升。向上转型
-		function(new Cat());   
-		Cat c=(Cat)a;	 //强制将父类的引用，转化成子类类型。  向下转型
-		c.catchMouse();
-	} 
-	public static void function(Animal a)   //因为可能有多个对象"吃”所以抽取功能，提高代码的复用性javascript:;
-	{
-		a.eat();
-		if(a instanceof Cat)             //判断a是否是猫类型
-		{
-			Cat c=(Cat)a;		
-			c.catchMouse();
-		}
-	}
+        Animal a = new Cat();                 //类型提升。向上转型
+        function(new Cat());
+        Cat c = (Cat) a;     //强制将父类的引用，转化成子类类型。  向下转型
+        c.catchMouse();
+    }
+
+    public static void function(Animal a)   //因为可能有多个对象"吃”所以抽取功能，提高代码的复用性javascript:;
+    {
+        a.eat();
+        if (a instanceof Cat)             //判断a是否是猫类型
+        {
+            Cat c = (Cat) a;
+            c.catchMouse();
+        }
+    }
 
 /*	public static void function(Dog d)    //单独的  上面的功能包括了
-	{
+    {
 		d.eat();
 	}
 */

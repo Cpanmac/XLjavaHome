@@ -33,12 +33,10 @@ import java.io.OutputStreamWriter;
  *
  *
  */
-public class 键盘录入的数据存储到文件
-{
-	public static void main(String[] args) throws IOException
-	{
-		/*
-		BufferedReader bufr = new BufferedReader(new InputStreamReader(
+public class 键盘录入的数据存储到文件 {
+    public static void main(String[] args) throws IOException {
+        /*
+        BufferedReader bufr = new BufferedReader(new InputStreamReader(
 				System.in));
 		BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(
 				new FileOutputStream("out.txt")));
@@ -55,23 +53,17 @@ public class 键盘录入的数据存储到文件
 		bufr.close();
 		bufw.close();
 		*/
-		
-		BufferedReader bufr = new BufferedReader(new InputStreamReader(new FileInputStream(
-				"out.txt")));       //System.in替换
-	
-		BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(
-				System.out));   //new FileOutputStream("out.txt")
-
-		String line = null;
-		while ((line = bufr.readLine()) != null)
-		{
-			if ("over".equals(line))
-				break;
-			bufw.write(line.toUpperCase()); // \r\n也可以,不过不能跨平台
-			bufw.newLine();
-			bufw.flush();
-		}
-		bufr.close();
-		bufw.close();
-	}
+        BufferedReader bufr = new BufferedReader(new InputStreamReader(new FileInputStream("out.txt")));       //System.in替换
+        BufferedWriter bufw = new BufferedWriter(new OutputStreamWriter(System.out));   //new FileOutputStream("out.txt")
+        String line = null;
+        while ((line = bufr.readLine()) != null) {
+            if ("over".equals(line))
+                break;
+            bufw.write(line.toUpperCase()); // \r\n也可以,不过不能跨平台
+            bufw.newLine();
+            bufw.flush();
+        }
+        bufr.close();
+        bufw.close();
+    }
 }

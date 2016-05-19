@@ -28,56 +28,49 @@ import java.net.Socket;
 
  */
 class TransClient {
-	public static void main(String[] args) throws Exception {
-		Socket s = new Socket("127.0.0.1", 10005);
-		// 最方便的就是用转换用的狂读狂写
-		BufferedReader bufr = new BufferedReader(new InputStreamReader(
-				System.in)); // 源，定义读取键盘输入的流对象
-		BufferedWriter bufOut = new BufferedWriter(new OutputStreamWriter(s
-				.getOutputStream()));// 定义目的是输出流。发给服务端
-		// 定义一个socket度曲流，读取服务端返回的大写信息
-		BufferedReader bufIn = new BufferedReader(new InputStreamReader(s
-				.getInputStream()));
-		String line = null;
-		while ((line = bufr.readLine()) != null) { // 读的键盘
-			bufOut.write(line);
-			if ("over".equals(line)) // 写下面就会把over发过去
-				break;
-			String str = bufIn.readLine(); // 读的是服务器发过来的信息
-			System.out.println("server:" + str);
-
-		}
-		bufr.close();
-		s.close();
-	}
+    public static void main(String[] args) throws Exception {
+        Socket s = new Socket("127.0.0.1", 10005);
+        // 最方便的就是用转换用的狂读狂写
+        BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in)); // 源，定义读取键盘输入的流对象
+        BufferedWriter bufOut = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));// 定义目的是输出流。发给服务端
+        // 定义一个socket度曲流，读取服务端返回的大写信息
+        BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
+        String line = null;
+        while ((line = bufr.readLine()) != null) { // 读的键盘
+            bufOut.write(line);
+            if ("over".equals(line)) // 写下面就会把over发过去
+                break;
+            String str = bufIn.readLine(); // 读的是服务器发过来的信息
+            System.out.println("server:" + str);
+        }
+        bufr.close();
+        s.close();
+    }
 }
 
 /*
  * 客户端 源：socket读取流 目的：socket输出流 都是文本，装饰一下。
  */
 class TransServer {
-	public static void main(String[] args) throws Exception {
-		ServerSocket ss = new ServerSocket(10005);
-		Socket s = ss.accept();
-		String ip = s.getInetAddress().getHostAddress();
-		System.out.println("客户端Ip" + ip);// 可以检验连没连上
-		// OutputStream os=s.getOutputStream();
-		// InputStream is =s.getInputStream();
-		// 要一行行的读才方便
-		// 读取socket读取流中的数据
-		BufferedReader bufIn = new BufferedReader(new InputStreamReader(s
-				.getInputStream()));
-		// 目的。socket输出流，将大写数据写入到socket输出流，并发送给客户端
-		BufferedWriter bufOut = new BufferedWriter(new OutputStreamWriter(s
-				.getOutputStream()));
-		String line = null;
-		while ((line = bufIn.readLine()) != null) {
-			bufOut.write(line.toUpperCase());
-		}
-		s.close();
-		ss.close();
-
-	}
+    public static void main(String[] args) throws Exception {
+        ServerSocket ss = new ServerSocket(10005);
+        Socket s = ss.accept();
+        String ip = s.getInetAddress().getHostAddress();
+        System.out.println("客户端Ip" + ip);// 可以检验连没连上
+        // OutputStream os=s.getOutputStream();
+        // InputStream is =s.getInputStream();
+        // 要一行行的读才方便
+        // 读取socket读取流中的数据
+        BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
+        // 目的。socket输出流，将大写数据写入到socket输出流，并发送给客户端
+        BufferedWriter bufOut = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
+        String line = null;
+        while ((line = bufIn.readLine()) != null) {
+            bufOut.write(line.toUpperCase());
+        }
+        s.close();
+        ss.close();
+    }
 }
 
 /*
@@ -85,5 +78,4 @@ class TransServer {
  * 而导致两端，都在等待
  */
 public class Tcp练习建立一个文本转换服务器 {
-
 }

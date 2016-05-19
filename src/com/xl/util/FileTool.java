@@ -1,27 +1,19 @@
 package com.xl.util;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import org.junit.Test;
+
+import java.io.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import org.junit.Test;
-
 public class FileTool {
+    public static void main(String[] args) {
+        System.out.println("11");
+    }
+
     /**
      * 获取当前类的路径<br/>
      * 思路：工程路径+src+类名
@@ -35,12 +27,6 @@ public class FileTool {
         String name = clazz.getName();
         name = name.substring(0, name.lastIndexOf(".")).replace(".", File.separator);
         return projectPath + File.separator + name;
-    }
-
-    @Test
-    public void testGetCurrentPath() {
-        String path = getCurrentPath(this);
-        System.out.println(path);
     }
 
     public static <T> String getCurrentPath(T obj) {
@@ -221,10 +207,8 @@ public class FileTool {
         bw.close();
     }
 
-    public static CharSequence read(File file) throws FileNotFoundException,
-            UnsupportedEncodingException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file),
-                "utf-8"));
+    public static CharSequence read(File file) throws FileNotFoundException, UnsupportedEncodingException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "utf-8"));
         StringBuffer sb;
         try {
             sb = new StringBuffer();
@@ -260,6 +244,12 @@ public class FileTool {
             fileSizeString = df.format((double) fileS / 1073741824) + "G";
         }
         return fileSizeString;
+    }
+
+    @Test
+    public void testGetCurrentPath() {
+        String path = getCurrentPath(this);
+        System.out.println(path);
     }
 
     @Test

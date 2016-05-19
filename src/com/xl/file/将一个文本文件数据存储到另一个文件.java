@@ -21,19 +21,17 @@ import java.io.IOException;
  Writer体系可以操作文件的对象是FileWriter
 
  .*/
-public class 将一个文本文件数据存储到另一个文件
-{
-	public static void main(String[] args) throws IOException
-	{
-		FileReader fr = new FileReader("out.txt");
-		BufferedReader bfr=new BufferedReader(fr);
-		FileWriter fw=new FileWriter("hae.txt");
-		BufferedWriter bfw=new BufferedWriter(fw);
-		String line=null;
-		while ((line=bfr.readLine())!=null){
-			bfw.write(line);
-		}
-		bfw.close();
-		bfr.close();
-	}
+public class 将一个文本文件数据存储到另一个文件 {
+    public static void main(String[] args) throws IOException {
+        FileReader fr = new FileReader("out.txt");
+        BufferedReader bfr = new BufferedReader(fr);
+        FileWriter fw = new FileWriter("hae.txt");
+        BufferedWriter bfw = new BufferedWriter(fw);
+        String line = null;
+        while ((line = bfr.readLine()) != null) {
+            bfw.write(line);
+        }
+        bfw.close();
+        bfr.close();
+    }
 }

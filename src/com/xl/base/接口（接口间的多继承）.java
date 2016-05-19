@@ -18,35 +18,35 @@ package com.xl.base;
  java有多继承，只有接口与接口之间存在多继承，其他都没
  */
 interface Inter {
-	public static final int NUM = 3;
-	
-	public abstract void show();
-}
+    public static final int NUM = 3;
 
-class Test implements Inter // 类与类叫继承， 这叫实现关系
-{
-	public void show() {
-	}
+    public abstract void show();
 }
 
 interface A {
-	void methodA();
+    void methodA();
 }
 
 interface B {
-	void methodB();
+    void methodB();
 }
 
 interface C extends B, A // 多继承
 {
-	void methodC();
+    void methodC();
+}
+
+class Test implements Inter // 类与类叫继承， 这叫实现关系
+{
+    public void show() {
+    }
 }
 
 class InterfaceDemo {
-	public static void main(String[] args) {
-		Test t = new Test();
-		System.out.println(t.NUM);
-		System.out.println(Test.NUM);
-		System.out.println(Inter.NUM);
-	}
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.NUM);
+        System.out.println(Test.NUM);
+        System.out.println(Inter.NUM);
+    }
 }

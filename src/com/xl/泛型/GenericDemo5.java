@@ -2,7 +2,7 @@ package com.xl.泛型;
 
 interface Inter<T> // 这个接口只定义个参数
 {
-	void show(T t);
+    void show(T t);
 }
 
 /*
@@ -11,15 +11,15 @@ interface Inter<T> // 这个接口只定义个参数
  */
 
 class InterImpl<T> implements Inter<T> {
-	public void show(T t) {
-		System.out.println("show：" + t);
-	}
+    public void show(T t) {
+        System.out.println("show：" + t);
+    }
 }
 
 class GenericDemo5 {
-	public static void main(String[] args) {
-		// InterImpl i = new InterImpl();
-		InterImpl<Integer> i = new InterImpl<Integer>();
-		i.show(4);
-	}
+    public static void main(String[] args) {
+        // InterImpl i = new InterImpl();
+        InterImpl<Integer> i = new InterImpl<Integer>();
+        i.show(4);
+    }
 }

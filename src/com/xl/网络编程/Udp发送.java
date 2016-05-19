@@ -12,25 +12,20 @@ import java.net.InetAddress;
  3.通过socket服务发送功能，将数据包发送出去
  4.关闭资源   //至少要用到网卡，走底层资源
  */
-public class Udp发送
-{
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) throws Exception
-	{
-		//  自动生成的方法存根
-		// 1.创建udp服务，通过DataGramSocket
-		DatagramSocket ds = new DatagramSocket(1666);
-		// 2确定数据并封装成数据包
-		byte[] buf = "udp ge men lai le".getBytes();
-
-		DatagramPacket dp = new DatagramPacket(buf, buf.length,
-				InetAddress.getByName("192.168.1.32"), 1666);
-		// 3.通过Socket服务通过已有的数据包发送出去
-		ds.send(dp);
-		// 4.关闭资源
-		ds.close();
-	}
+public class Udp发送 {
+    /**
+     * @param args
+     */
+    public static void main(String[] args) throws Exception {
+        //  自动生成的方法存根
+        // 1.创建udp服务，通过DataGramSocket
+        DatagramSocket ds = new DatagramSocket(1666);
+        // 2确定数据并封装成数据包
+        byte[] buf = "udp ge men lai le".getBytes();
+        DatagramPacket dp = new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.1.32"), 1666);
+        // 3.通过Socket服务通过已有的数据包发送出去
+        ds.send(dp);
+        // 4.关闭资源
+        ds.close();
+    }
 }

@@ -3,11 +3,11 @@ package com.xl.base;
 import org.junit.Test;
 
 public class IntegerDemo {
-	@Test
-	public void 最大Integer() {
-		int max = Integer.MAX_VALUE;
-		System.out.println(max);
-		int min = Integer.MIN_VALUE;
-		System.out.println(min);
-	}
+    @Test
+    public void 最大Integer() {
+        int max = Integer.MAX_VALUE;
+        System.out.println(max);
+        int min = Integer.MIN_VALUE;
+        System.out.println(min);
+    }
 }

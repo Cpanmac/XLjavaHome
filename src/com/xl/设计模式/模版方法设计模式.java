@@ -14,33 +14,28 @@ package com.xl.设计模式;
 那么久将不确定的部分暴露出去，由该类的子类去完成。
 */
 
-abstract class GetTime
-{
-	public final void getTime()
-	{
-		long start= System.currentTimeMillis();
-		runcode();                        //这部分暴露出去
-		long end = System.currentTimeMillis();
-		System.out.println("毫秒："+(end-start));
-		
-	}
-	public abstract void runcode();
+abstract class GetTime {
+    public final void getTime() {
+        long start = System.currentTimeMillis();
+        runcode();                        //这部分暴露出去
+        long end = System.currentTimeMillis();
+        System.out.println("毫秒：" + (end - start));
+    }
+
+    public abstract void runcode();
 }
-class SubTime extends GetTime
-{
-	public void runcode()
-	{
-		for(int x=0;x<1000;x++)
-			{
-			System.out.print(x);
-			}
-	}
+
+class SubTime extends GetTime {
+    public void runcode() {
+        for (int x = 0; x < 1000; x++) {
+            System.out.print(x);
+        }
+    }
 }
-class TemplateDemo
-{
-	public static void main(String[] args)
-	{
-		SubTime gt=new SubTime();
-		gt.getTime();
-	}
+
+class TemplateDemo {
+    public static void main(String[] args) {
+        SubTime gt = new SubTime();
+        gt.getTime();
+    }
 }
