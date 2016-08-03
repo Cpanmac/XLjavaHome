@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="gbk"?>
+<project name="EntityBean" basedir=".">
+	<!--1.修改projectname,2添加metainf -->
+	<!--设置项目的名称,"."代表项目就在当前路径 -->
+	<property name="src.dir" value="${basedir}\src" />
+	<!-- 定义一个属性变量,用作指定项目的源文件得目录 -->
+	<property environment="env" />
+	<!-- 系统的环境变量 -->
+	<property name="jboss.home" value="${env.JBOSS_HOME}" />
+	<property name="jboss.server.config" value="default" />
+	<!-- 用于目前使用JBOSS得配置项,默认是default -->
+	<property name="build.dir" value="${basedir}\build" />
+
+	<path id="build.classpath">
+		<!-- EJB依赖的jar文件 -->
+		<fileset dir="${jboss.home}\client">
+			<!-- 在这个目录下 -->
+			<include name="*.jar" />
+			<!-- 包含所有jar文件 -->
+		</fileset>
+		<pathelement location="${build.dir}" />
+		<!-- 编译过后的class也作为类路径的一部分 -->
+	</path>
+
+	<target name="prepare">
+		<!-- 定义了一个工作,可以随便设置 -->
+		<delete dir="${build.dir}" />
+		<!-- 情况目录 -->
+		<mkdir dir="${build.dir}" />
+		<!-- 用于创建class目录,项目中不存在. -->
+	</target>
+
+	<target name="compile" depends="prepare" description="编译" >
+		<!-- depends属性,代表依赖,确保prepare这个工作先执行, includes="xl/**"只编译以xl开头的包 -->
+		<javac srcdir="${src.dir}" destdir="${build.dir}" encoding="UTF-8" includes="xl/**">
+			<!-- 对源文件进行编译 -->
+			<classpath refid="build.classpath" />
+			<!-- 编译时,引用得jar -->
+		</javac>
+	</target>
+
+	<target name="ejbjar" depends="compile" description="创建EJB发布包">
+		<!-- 打包工作,打包之前先编译 -->
+		<jar jarfile="${basedir}\${ant.project.name}.jar">
+			<!-- ${ant.project.name}项目的名称,就是project的name属性 -->
+			<fileset dir="${build.dir}">
+				<include name="**/*.class" />
+			</fileset>
+			<!--打包META-INF文件 -->
+			<metainf dir="${src.dir}\META-INF"></metainf>
+		</jar>
+	</target>
+
+	<target name="deploy" depends="ejbjar" description="发布ejb">
+		<!-- 发布过程就是一个拷贝过程 -->
+		<copy file="${basedir}\${ant.project.name}.jar" todir="${jboss.home}\server\${jboss.server.config}\deploy" />
+	</target>
+
+	<target name="undeploy" description="卸载ejb">
+		<delete file="${jboss.home}\server\${jboss.server.config}\deploy\${ant.project.name}.jar" />
+	</target>
+</project>

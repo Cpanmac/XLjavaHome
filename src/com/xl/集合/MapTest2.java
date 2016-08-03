@@ -69,7 +69,7 @@ class Student5 implements Comparable<Student5> // 当有比较类时，该类可以不用实现
      * Integer(this.age).compareTo(new Integer(s.age)); } return num; }
      */
     /*
-	 * 这部分代码是保证学生的唯一性的 public int hashCode() //因为比较是根据哈希表排序，所以要覆写 { return
+     * 这部分代码是保证学生的唯一性的 public int hashCode() //因为比较是根据哈希表排序，所以要覆写 { return
 	 * name.hashCode()+age*34; } public boolean equals(Object obj) { if (!(obj
 	 * instanceof Student)) //如果传进来不是Student { //return false; 意义不大，应该抛出异常
 	 * //throw new RuntimeException("类型不匹配"); //运行异常的父类太大了 throw new

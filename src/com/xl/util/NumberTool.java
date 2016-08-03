@@ -13,9 +13,9 @@ import java.util.Map;
  * History:     2011-03-13 created by 潘多强
  */
 public class NumberTool {
-    private static final int FourDecimalMedian = 4;  //小数位数
     public static final int YI = 100000000;//一亿
     public static final int WAN = 10000;//一万
+    private static final int FourDecimalMedian = 4;  //小数位数
 
     /**
      * 将object转换成整型，当传入的对象是null时返回指定的值

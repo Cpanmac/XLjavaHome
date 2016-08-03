@@ -8,16 +8,17 @@ import java.sql.Statement;
 //使用jdbc连接oracl7e
 public class jdbc连接oracle {
     private static String url = "oracle.jdbc.driver.OracleDriver";
-    private static String name = "";
-    private static String password = "123";
+    private static String name = "xl";
+    private static String password = "xl";
 
     public static void main(String[] args) {
         try {
             // 1.加载驱动
             Class.forName(url);
+            System.out.println("开始连接oracle");
             // 2.得到连接 数据库的url,用户名，密码 前面的url通过java
             // buildpath导入oracle驱动jar包（名字叫classes12.jar)
-            Connection ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:ORCL", name, password);
+            Connection ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:PLSExtProc", name, password);
             // 从下面开始和sql server一模一样
             Statement sm = ct.createStatement();
             ResultSet rs = sm.executeQuery("select * from emp");

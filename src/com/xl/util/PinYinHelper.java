@@ -9,8 +9,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class PinYinHelper {
-    private HashMap hypy = new HashMap();
     private static PinYinHelper instance;
+    private HashMap hypy = new HashMap();
 
     public PinYinHelper() {
     }

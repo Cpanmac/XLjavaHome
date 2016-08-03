@@ -68,7 +68,7 @@ public class MapDemo3 {
         // 键值，右边的用getStudentInfo
         // Iterator<String> it = keySet.iterator();
         /*
-		 * Iterator<String> it =czbk.keySet().iterator(); //上面两行合成一行
+         * Iterator<String> it =czbk.keySet().iterator(); //上面两行合成一行
 		 * while(it.hasNext()) { String roomName= it.next();
 		 * //取出教室的名字赋值给roomName HashMap<String,String> room= czbk.get(roomName);
 		 * //根据HashMap的特 点根据键得到右边的值 System.out.println(roomName);

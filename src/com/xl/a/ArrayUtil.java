@@ -3,23 +3,23 @@ package com.xl.a;
 import java.lang.reflect.Array;
 
 /*
- 静态的应用
- 每一个应用程序中都有共性的功能，可以将这些功能进行抽取，独立封装。
- 以便复用
- 1.虽然可以通过建立ArrayTool的对象使用这些工具并未封装特有数据。
- 2.操作数组的每一个方法都没有用到ArrayTool对象中的特有数据。
+ 锟斤拷态锟斤拷应锟斤拷
+ 每一锟斤拷应锟矫筹拷锟斤拷锟叫讹拷锟叫癸拷锟皆的癸拷锟杰ｏ拷锟斤拷锟皆斤拷锟斤拷些锟斤拷锟杰斤拷锟叫筹拷取锟斤拷锟斤拷锟斤拷锟斤拷装锟斤拷
+ 锟皆便复锟斤拷
+ 1.锟斤拷然锟斤拷锟斤拷通锟斤拷锟斤拷锟斤拷ArrayTool锟侥讹拷锟斤拷使锟斤拷锟斤拷些锟斤拷锟竭诧拷未锟斤拷装锟斤拷锟斤拷锟斤拷锟捷★拷
+ 2.锟斤拷锟斤拷锟斤拷锟斤拷锟矫恳伙拷锟斤拷锟斤拷锟斤拷锟矫伙拷锟斤拷玫锟紸rrayTool锟斤拷锟斤拷锟叫碉拷锟斤拷锟斤拷锟斤拷锟捷★拷
 
- 将方法都静态后，可以方便使用，但是该类还是可以被其他程序建立对象。
- 为了更为严谨，强制该类不能建立对象 可以将类私有化
+ 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷态锟襟，匡拷锟皆凤拷锟斤拷使锟矫ｏ拷锟斤拷锟角革拷锟洁还锟角匡拷锟皆憋拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+ 为锟剿革拷为锟较斤拷锟斤拷强锟狡革拷锟洁不锟杰斤拷锟斤拷锟斤拷锟斤拷 锟斤拷锟皆斤拷锟斤拷私锟叫伙拷
  */
 public class ArrayUtil {
     private ArrayUtil() {
     }
 
-    ; // 只能类名调用不能创建对象
+    ; // 只锟斤拷锟斤拷锟斤拷锟斤拷锟矫诧拷锟杰达拷锟斤拷锟斤拷锟斤拷
 
     /**
-     * 返回int数组的最大值
+     * 锟斤拷锟斤拷int锟斤拷锟斤拷锟斤拷锟斤拷值
      *
      * @param arr
      * @return int
@@ -34,36 +34,7 @@ public class ArrayUtil {
     }
 
     /**
-     * 返回数组中的最小值
-     *
-     * @param arr
-     * @return int
-     */
-    public int getMin(int[] arr) {
-        int min = 0;
-        for (int x = 1; x < arr.length; x++) {
-            if (arr[x] < arr[min])
-                min = x;
-        }
-        return arr[min];
-    }
-
-    /**
-     * 交换位置
-     *
-     * @param arr
-     * @param a
-     * @param b   void
-     */
-    public void swap(int[] arr, int a, int b) // 调序
-    {
-        int temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
-    }
-
-    /**
-     * Description: 改变数组长度
+     * Description: 锟侥憋拷锟斤拷锟介长锟斤拷
      *
      * @param oldArray
      * @param addLength
@@ -98,6 +69,35 @@ public class ArrayUtil {
         Object newArray = Array.newInstance(componentType, newLength);
         System.arraycopy(oldArray, 0, newArray, 0, newLength);
         return newArray;
+    }
+
+    /**
+     * 锟斤拷锟斤拷锟斤拷锟斤拷锟叫碉拷锟斤拷小值
+     *
+     * @param arr
+     * @return int
+     */
+    public int getMin(int[] arr) {
+        int min = 0;
+        for (int x = 1; x < arr.length; x++) {
+            if (arr[x] < arr[min])
+                min = x;
+        }
+        return arr[min];
+    }
+
+    /**
+     * 锟斤拷锟斤拷位锟斤拷
+     *
+     * @param arr
+     * @param a
+     * @param b   void
+     */
+    public void swap(int[] arr, int a, int b) // 锟斤拷锟斤拷
+    {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 
     public void bubbleSort(int[] arr) {

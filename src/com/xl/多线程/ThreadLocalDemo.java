@@ -38,7 +38,7 @@ public class ThreadLocalDemo {
             int data = x.get();
             System.out.println("A from " + Thread.currentThread().getName() + " get data :" + data);
             /*
-			 * MyThreadScopeData myData = myThreadScopeData.get();;
+             * MyThreadScopeData myData = myThreadScopeData.get();;
 			 * System.out.println("A from " + Thread.currentThread().getName() +
 			 * " getMyData: " + myData.getName() + "," + myData.getAge());
 			 */

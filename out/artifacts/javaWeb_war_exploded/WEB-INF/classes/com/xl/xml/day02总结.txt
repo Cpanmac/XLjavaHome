@@ -1,0 +1,163 @@
+ 1 什么是JavaBean？有何特征？
+   1）符合特定规则的类
+   2）JavaBean分二类：
+	a）侠义的JavaBean
+		.私有的字段(Field）
+		.对私有字段提供存取方法(读写方法）
+	b）广义的JavaBean
+		.私有的字段(Field）
+		.对私有字段提供存取方法(读写方法）
+		.数量任意的业务方法
+ 
+
+ 2 内省API（SUN公司开发）站在反射角度
+   1)在操作JavaBean时，即对JavaBean进入setter和getter操作时
+   2）属性和getXxxxx()有关，同时必须有返回值
+   3）任何一个JavaBean都有一个class属性，来自于Object类。 
+  
+*3 BeanUtils框架/工具（APACHE开源组织开发）
+   1）BeanUtils框架能够完成内省的一切功能，而且优化
+   2）BeanUtils框架能够对String<->基本类型自动转化
+   3）BeanUtils框架自定义转换器：
+	ConvertUtils.register( 转换规则 ，目标对象的Class)
+   4)向BeanUtils框架注册自定义转换器必须放在bu.setProperty()代码之前    
+   5)使用BeanUtils内置String->Date的转换器：
+	ConvertUtils.register(new DateLocaleConverter(),java.util.Date.class);
+
+*4 泛型
+   1)在编译时，由编译器约束放入集合中的类型
+   2）在运行时，编译器会擦除原泛型类型
+   3）泛型二边要么都不使用约束，要么二边约束一致类型，同时二边必须使用引用类型
+   4）为了与JDK1.4兼容，泛型可以一边有约束，一边无约束
+   思考：不利用中间变量，将二个数交互
+   5）当一个类中出大量的泛型方式或属性/字段，此时可以将该类作成泛型类
+   6）如果使用泛型通配符，只能获取与泛型具体类型无关的信息，例如：长度。
+   7）有二个类，初学者一定要注意：Collections和Arrays
+    
+ 5 什么是xml？为什么使用xml？常见应用？
+   1)允许用户按照w3c组件的规定去定义无数个自定义标签
+   2)需要使用XML技述通知计算机程序去处理关系数据
+   3)保存XML文件时，一定要确保XML文件保存的编码和encoding声明的编码方式一致或兼容
+   4)XML可以用来描述关系结构的数据，还可以作配置文件，当作一个小型的数据库或数据载体
+   
+
+*6 xml文件的语法
+   1)文档声明
+	<?xml version="1.0" 指明XML文件的版本号，XML解析器就会采用对应的版本进行解析
+	      encoding="UTF-8" 指明XML文件中的中文采用UTF-8编码，在IDE工具中，指明该文件的保存编码方式?
+              standalone="yes或no" 指明XML文件需要初其它文件DTD约束的话，就是no，如果单独的XML文件，就是yes>
+        各浏览器中的XML解析器只对XML文件的语法检测 
+
+   2)元素
+	1)通常元素都有开始和结束标签，但也可以使用空标签，即<a></a>=<a/>
+	2）XML中标签嵌入顺序必须一致，且字符大小写不一致
+	3）程序会将标签内的空白字符当作有效字符对待
+	
+
+   3)属性(附加信息的描述)
+	1)属性由属性名和属性值组成，属性值由定界符""或'组合
+	2）当一个事务必须与对象绑定在一起，没有该对象，该事务就没有意义，此时该事务就应成为对象的属性。
+	
+
+   4)注释(不能随意嵌套)  
+	1)给程序员看的
+	2)不能嵌套使用
+
+   5)CDATA区 、特殊字符
+	1)Character Data（字符数据区/段）
+	2）CDATA段中的数据不会被XML解析器所解析
+	3）不能嵌套使用
+	4）XML内置5种转义字符
+		< > & " '
+	5)其它字符：
+		&#x2605;
+	
+
+   6)处理指令（processing instruction）
+	1)可以使用CSS装饰XML文件中的内容
+	2）CSS目前版本只能支持英文标签
+
+ 
+     
+*7 xml约束
+	1)类是对象的约束
+	2）DTD是XML文件的约束	
+        3）浏览器对XML和DTD进行语法的检测
+        4）浏览器不会检测XML是否符合DTD规则
+	5）正确的XML和有效的XML文件
+		正确的XML文件是指语法正确，而有效的XML文件是指语法和规则都正确
+	6)XML中书写DTD有二种方式：
+		a)DTD和XML分离
+		b)XML中嵌入DTD
+	6)XML引用DTD有二种方式：
+		a)SYSTEM：个人或组织，小范围内使用
+		b)PUBLIC：大范围内使用,例如：struts框架。。。
+	7)EMPTY和ANY，项目中尽量使用EMPTY，少用ANY
+        8)在DTD中，必须将所有的标签全部都声明完才行
+	9)在DTD中，定义元素时，可以使用如下符号：
+		a)+：有且只能出现1次或N次
+		b)*：有且只能出现0次或N次
+		c)?：有且只能出现0次或1次
+		d)无：有且只能出现1次
+			注意：以上符号用在()里面		
+	10)DTD属性的设置值情况有四种：
+		a)#REQURIED：该属性必须出现
+		b)#IMPLIED：该属性可有可无
+		c)#FIXED "固定值"：该属性可有可无，如果有的话，必须是"固定值"
+		d)"默认值"：该属性可有可无，如果没有的话，用默认值补充，如果有的话，用新值替代旧值
+         11)当页面出现多个相同的字符串，此时可以使用引用实体来解决，在DTD中定义，在XML中使用
+	 12）当定义DTD时，出个相同的子元素，此时可以使用参数实体来解决，在DTD中定义，在DTD中使用，
+	     使用%标识，通过%参数实体名;来引用	  
+    
+
+
+课后作业：
+
+<!DOCTYPE CATALOG [
+
+<!ENTITY AUTHOR "John Doe">
+<!ENTITY COMPANY "JD Power Tools, Inc.">
+<!ENTITY EMAIL "jd@jd-tools.com">
+
+<!ELEMENT CATALOG (PRODUCT+)>
+
+<!ELEMENT PRODUCT
+(SPECIFICATIONS+,OPTIONS?,PRICE+,NOTES?)>
+<!ATTLIST PRODUCT
+NAME CDATA #IMPLIED
+CATEGORY (HandTool|Table|Shop-Professional) "HandTool"
+PARTNUM CDATA #IMPLIED
+PLANT (Pittsburgh|Milwaukee|Chicago) "Chicago"
+INVENTORY (InStock|Backordered|Discontinued) "InStock">
+
+<!ELEMENT SPECIFICATIONS (#PCDATA)>
+<!ATTLIST SPECIFICATIONS
+WEIGHT CDATA #IMPLIED
+POWER CDATA #IMPLIED>
+
+<!ELEMENT OPTIONS (#PCDATA)>
+<!ATTLIST OPTIONS
+FINISH (Metal|Polished|Matte) "Matte" 
+ADAPTER (Included|Optional|NotApplicable) "Included"
+CASE (HardShell|Soft|NotApplicable) "HardShell">
+
+<!ELEMENT PRICE (#PCDATA)>
+<!ATTLIST PRICE
+MSRP CDATA #IMPLIED
+WHOLESALE CDATA #IMPLIED
+STREET CDATA #IMPLIED
+SHIPPING CDATA #IMPLIED>
+
+<!ELEMENT NOTES (#PCDATA)>
+
+]>    
+
+根据上述DTD，写一个符合约束的XML，并通过validate.html文件验证。
+
+
+
+
+
+
+
+

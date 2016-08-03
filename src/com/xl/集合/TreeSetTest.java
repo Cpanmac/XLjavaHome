@@ -37,7 +37,7 @@ class TreeSetTest {
 class StrLenCompare implements Comparator {
     public int compare(Object o1, Object o2) {
         /*
-		也可以用
+        也可以用
 		String a1 = (String)o1;
 		String a2 = (String)o2;
 		if (a1.length()>a2.length())

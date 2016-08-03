@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class JsonDateValueDeSerializ implements JsonValueProcessor {
-
     /**
      * datePattern
      */
@@ -63,7 +62,6 @@ public class JsonDateValueDeSerializ implements JsonValueProcessor {
         } catch (Exception e) {
             return value;
         }
-
     }
 
     /**
@@ -79,5 +77,4 @@ public class JsonDateValueDeSerializ implements JsonValueProcessor {
     public void setDatePattern(String pDatePattern) {
         datePattern = pDatePattern;
     }
-
-} 
+}

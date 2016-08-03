@@ -10,13 +10,6 @@ public class ArraysDemo {
     String[] strings = new String[]{"223", "21", "sa"};
     private int[] intArray = new int[]{3, 56, 1, 4, 76721, 343, 1};
 
-    @Test
-    public void testSystemOut(){
-        System.out.println(Arrays.toString(intArray));
-        System.out.println(Arrays.asList(intArray));
-
-    }
-
     /**
      * @param pData 数组
      * @param left  排序的开始位置从0开始
@@ -69,6 +62,12 @@ public class ArraysDemo {
         // System.out.println(li);
         // Collections.reverse(li);
         // System.out.println(li);
+    }
+
+    @Test
+    public void testSystemOut() {
+        System.out.println(Arrays.toString(intArray));
+        System.out.println(Arrays.asList(intArray));
     }
 
     @Test

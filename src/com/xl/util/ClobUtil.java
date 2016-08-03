@@ -5,7 +5,6 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.io.Reader;
 import java.sql.Clob;
-
 //import com.sinitek.spirit.logger.LoggerFactory;
 
 /**
@@ -16,9 +15,7 @@ import java.sql.Clob;
  * History:     11-4-4 created by 刘建
  */
 public class ClobUtil {
-
     static final Logger LOGGER = Logger.getLogger(ClobUtil.class);
-
 
     public static String clobToString(Clob clob) {
         return clobToString(clob, "");
@@ -32,17 +29,17 @@ public class ClobUtil {
                 int p = 0;
                 char[] buff = new char[1024];
                 in = clob.getCharacterStream();
-                while ((p = in.read(buff, 0, 1024)) != -1){
+                while ((p = in.read(buff, 0, 1024)) != -1) {
                     content.append(new String(buff, 0, p));
                 }
-//                BufferedReader br = new BufferedReader(in);
-//                String strtemp = br.readLine();
-//                while (strtemp != null) {
-//                    content.append(strtemp+"\n");
-//                    if (!"".equals(sprtStr))
-//                        content.append(sprtStr);
-//                    strtemp = br.readLine();
-//                }
+                //                BufferedReader br = new BufferedReader(in);
+                //                String strtemp = br.readLine();
+                //                while (strtemp != null) {
+                //                    content.append(strtemp+"\n");
+                //                    if (!"".equals(sprtStr))
+                //                        content.append(sprtStr);
+                //                    strtemp = br.readLine();
+                //                }
             } catch (Exception e) {
                 LOGGER.error("read clob failed.", e);
             } finally {

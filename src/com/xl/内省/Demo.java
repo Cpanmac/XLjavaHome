@@ -84,7 +84,7 @@ public class Demo {
             System.out.println(pd.getName()); // 根据Person中的get、set属性。
         }
         /*
-		 * 只获取自己的属性
+         * 只获取自己的属性
 		 */
         info = Introspector.getBeanInfo(Person.class, Object.class); // 去掉了继承Object的bean属性getClass
         PropertyDescriptor[] pds_2 = info.getPropertyDescriptors();

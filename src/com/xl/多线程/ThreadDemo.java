@@ -1,6 +1,7 @@
-package com.xl.¶àÏß³Ì;
+package com.xl.
 
-import org.junit.Test;
+ï¿½ï¿½ï¿½ß³ï¿½;
+        import org.junit.Test;
 
 public class ThreadDemo implements Runnable {
     private int num;

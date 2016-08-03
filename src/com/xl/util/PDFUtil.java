@@ -17,7 +17,6 @@ import java.io.OutputStream;
  * To change this template use File | Settings | File Templates.
  */
 public class PDFUtil {
-
     public static File decrypt(File file, String out) throws IOException, DocumentException {
         PdfStamper stamper = null;
         try {
@@ -33,7 +32,7 @@ public class PDFUtil {
                 return file;
             }
         } finally {
-            if (stamper != null){
+            if (stamper != null) {
                 stamper.close();
             }
         }

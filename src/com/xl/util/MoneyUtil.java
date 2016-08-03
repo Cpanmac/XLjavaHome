@@ -13,7 +13,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MoneyUtil {
-    private static Logger LOGGER = Logger.getLogger(MoneyUtil.class);
     private static final Pattern AMOUNT_PATTERN = Pattern.compile("^(0|[1-9]\\d{0,11})\\.(\\d\\d)$"); // 不考虑分隔符的正确性
     private static final char[] RMB_NUMS = "零壹贰叁肆伍陆柒捌玖".toCharArray();
     private static final String[] UNITS = {"元", "角", "分", "整"};
@@ -22,6 +21,7 @@ public class MoneyUtil {
     private static final String[] unms = new String[]{"零", "一", "二", "三", "四", "五", "六", "七", "八", "九"};
     private static final String[] digits = new String[]{"", "十", "百", "千"};
     private static final String[] units = new String[]{"", "万", "亿", "万亿"};
+    private static Logger LOGGER = Logger.getLogger(MoneyUtil.class);
 
     public static String amountToChinese(double amount, boolean withUnit) {
         if (amount == 0) {
@@ -192,7 +192,7 @@ public class MoneyUtil {
         String numStr = "0";
         if (num != null) {
             numStr = num + "";
-            String[] numStrs= numStr.split("\\.");
+            String[] numStrs = numStr.split("\\.");
             String left = numStrs[0];
             String right = "0";
             if (numStrs.length == 2) {

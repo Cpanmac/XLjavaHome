@@ -208,8 +208,10 @@ public class StringUtil {
         }
         return obj.toString();
     }
+
     /**
      * ½ØÈ¡×Ö·û´®
+     *
      * @param str
      * @param start
      * @param end
@@ -222,8 +224,10 @@ public class StringUtil {
             return str;
         return str.substring(start, end) + patten;
     }
+
     /**
      * ½ØÈ¡×Ö·û´®
+     *
      * @param str
      * @param start
      * @param end
@@ -232,6 +236,4 @@ public class StringUtil {
     public static String subString(String str, int start, int end) {
         return subString(str, start, end, "...");
     }
-
-
 }

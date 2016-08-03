@@ -141,7 +141,7 @@ public class Îå×ÓÆå extends JFrame implements MouseListener, Runnable {
             x = e.getX();
             y = e.getY();
             /*
-			 * System.out.println(x); System.out.println(y);
+             * System.out.println(x); System.out.println(y);
 			 */
             if (x >= 55 && x <= 405 && y >= 72 && y <= 420) {
                 if ((x - 55) % 25 > 12)

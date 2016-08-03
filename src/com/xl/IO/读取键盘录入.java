@@ -31,7 +31,7 @@ public class 读取键盘录入 // ReadIn
         int ch;
         StringBuilder sb = new StringBuilder(); // 建立缓冲区
         /*
-		 * //没有使用readLine读取一行 while (true) { ch = in.read(); if (ch == '\r')
+         * //没有使用readLine读取一行 while (true) { ch = in.read(); if (ch == '\r')
 		 * continue; // 终止当前循环，进行下次循环 if (ch == '\n') // 当输入回车的时候 { String s =
 		 * sb.toString(); // 降缓冲区的字符串转化为String // if (s.endsWith("over")) //
 		 * 输入over结束我的代码 if ("over".equals(s)) break;

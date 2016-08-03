@@ -1,13 +1,12 @@
 package com.project.批量打开网站;
 
-import java.io.File;
-import java.io.FileFilter;
-import java.io.IOException;
-
+import com.xl.util.FileTool;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.xl.util.FileTool;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
 
 /**
  * @author 徐立
@@ -15,6 +14,10 @@ import com.xl.util.FileTool;
  * @date 2014-5-3
  */
 public class 批量打开网站 {
+    /**
+     * 存储网站的集合
+     */
+    String[] strs = null;
     private StringBuffer content = new StringBuffer();
     /**
      * 扫描的文件
@@ -24,10 +27,6 @@ public class 批量打开网站 {
      * 网站的正则
      */
     private String reg = "http.+";
-    /**
-     * 存储网站的集合
-     */
-    String[] strs = null;
 
     @Before
     public void init() {
@@ -56,6 +55,7 @@ public class 批量打开网站 {
         // Desktop.getDesktop().browse(URI.create(_s));
         // }
     }
+
     /**
      * 处理一个
      *

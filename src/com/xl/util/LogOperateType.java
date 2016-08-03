@@ -8,9 +8,6 @@ package com.xl.util;
  * History:     11-7-30 created by 王志华
  */
 public class LogOperateType {
-
-    private LogOperateType(){}
-
     /**
      * 插入操作
      */
@@ -31,4 +28,6 @@ public class LogOperateType {
      * 注销操作
      */
     public static int LOGOUT = 5;
+    private LogOperateType() {
+    }
 }

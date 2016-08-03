@@ -32,7 +32,7 @@ public class Eclipse基本使用 {
         // 增加库add Library相当好多jar包，user Library然后增加很多jar包
 
 		/*快捷键
-		 * 更改大小写Ctrl+Shift+X(或Y)
+         * 更改大小写Ctrl+Shift+X(或Y)
 		 * 查看类的继承关系Ctrl+T
 		 * Ctrl+Shift+T可以直接查看类
 		 * CTRL+SHIFT+L查看所有快捷键

@@ -87,7 +87,7 @@ public class DatePick {
                 } else if (WEEK_END.equals(meth)) {
                     /* 这种输出的是上个星期周日的日期，因为老外那边把周日当成第一天 */
                     cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
-					/* 增加一个星期，才是我们中国人理解的本周日的日期 */
+                    /* 增加一个星期，才是我们中国人理解的本周日的日期 */
                     cal.add(Calendar.WEEK_OF_YEAR, 1);
                     res = sdf.format(cal.getTime());
                 }

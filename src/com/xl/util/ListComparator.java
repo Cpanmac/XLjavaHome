@@ -51,7 +51,6 @@ public class ListComparator implements Comparator {
                     v2 = PinYinHelper.getInstance().getFullPinYin(String.valueOf(v2));
                 }
             }
-
             if (v1 != null && v2 != null) {
                 if (v1 instanceof String && v2 instanceof String) {
                     //returnInt = new PinYinComparator(true).compare(v1, v2);

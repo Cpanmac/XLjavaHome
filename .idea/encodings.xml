@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/javaWeb/com/xl/CodingFilter.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/itcast/面试/CharArray.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/test/com/project/更改文件名中带冲突的文件/Main.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/project/更改文件名中带冲突的文件/Main.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/Regex/RegDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/a/MyEclipseKeyGen.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/ClobUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/CollatorComparator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/EncryptUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/JsonDateValueDeSerializ.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/ListComparator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/LogOperateType.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/MoneyUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/MultiComparator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/NumberCalculateUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/NumberTool.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/PDFUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/util/StrUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/xml/dom4j/DOM4JDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/集合/ArraysDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/xl/集合/LinkMapDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/js/jquery-1.9.1.min.js" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
