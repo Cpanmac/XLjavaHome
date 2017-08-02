@@ -6,19 +6,19 @@ import org.junit.Test;
 
 public class MD5Demo {
     /**
-     * ¼ÓÃÜÖ®Ç°
+     * åŠ å¯†ä¹‹å‰
      */
     String before = "12sd%fa31231";
     /**
-     * ¼ÓÃÜÖ®ºó
+     * åŠ å¯†ä¹‹å
      */
     String after;
 
     @Test
-    public void MD5¼ÓÃÜ() {
+    public void MD5åŠ å¯†() {
         after = DigestUtils.md5Hex(before);
-        // ¸ø¿Õ×Ö·û´®¼ÓÃÜ
-        System.out.println("¿Õ×Ö·û´®:" + DigestUtils.md5Hex(""));
+        // ç»™ç©ºå­—ç¬¦ä¸²åŠ å¯†
+        System.out.println("ç©ºå­—ç¬¦ä¸²:" + DigestUtils.md5Hex(""));
     }
 
     @Test
@@ -27,8 +27,8 @@ public class MD5Demo {
     }
 
     @After
-    public void Êä³ö() {
-        System.out.println("Î»Êı:" + before.length() + ",¼ÓÃÜÖ®Ç°:" + before);
-        System.out.println("Î»Êı:" + after.length() + ",¼ÓÃÜÖ®ºó:" + after + "");
+    public void è¾“å‡º() {
+        System.out.println("ä½æ•°:" + before.length() + ",åŠ å¯†ä¹‹å‰:" + before);
+        System.out.println("ä½æ•°:" + after.length() + ",åŠ å¯†ä¹‹å:" + after + "");
     }
 }

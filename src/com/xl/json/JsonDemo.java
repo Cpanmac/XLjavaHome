@@ -38,7 +38,7 @@ public class JsonDemo {
      * json-lib-2.3-jdk15.jar
      */
     @Test
-    public void ≤‚ ‘() {
+    public void test1() {
         User user = new User();
         user.setName("phl");
         user.setAge(25);

@@ -14,6 +14,15 @@ import java.util.regex.Pattern;
  * @date 2013-12-21
  */
 public class RegTool {
+    public static boolean checkMail(String mail) {
+        // 相对精确的匹配
+        String reg = "[a-zA-Z0-9_]+@[a-zA-Z0-9]+(\\.[a-zA-Z]+){1,3}"; // 6到12位的用户名
+        // 相对笼统的匹配
+        reg = "\\w+@\\w+(\\.\\w+)+";
+        return mail.matches(reg);
+        // 比较叼的匹配
+        //		 while(mail.indexOf("@")!=-1&&mail.indexOf("."))
+    }
     /**
      * 得到所有的中文
      *

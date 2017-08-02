@@ -109,7 +109,7 @@ public class GetMacAddress {
     }
 
     /**
-     * ≤‚ ‘
+     * test1
      */
     public static void main(String[] args) {
         System.out.println(getMacAddress("127.0.0.1"));

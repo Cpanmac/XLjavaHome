@@ -45,7 +45,7 @@ public class LoadresourcesDemo {
     public void test3() throws IOException {
         Properties p = new Properties();
         String name = "obj.properties";
-        // 方法3：Thread，也是去根路径去找资源
+        // 方法3：thread，也是去根路径去找资源
         InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(name);
         System.out.println(in);
         p.load(in);

@@ -1,11 +1,6 @@
 package com.xl.pdf;
 
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.xl.util.FileTool;
 import org.junit.Before;
@@ -61,7 +56,7 @@ public class PdfDemo {
     }
 
     @Test
-    public void 构造器() throws FileNotFoundException, DocumentException {
+    public void pdf() throws FileNotFoundException, DocumentException {
         Rectangle r = new Rectangle(144, 720); //创建指定画布
         Document document = new Document(r);
         PdfWriter.getInstance(document, new FileOutputStream(file));

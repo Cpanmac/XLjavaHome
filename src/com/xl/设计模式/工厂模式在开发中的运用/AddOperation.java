@@ -1,8 +1,0 @@
-package com.xl.设计模式.工厂模式在开发中的运用;
-
-public class AddOperation extends Operation {
-    public double getResult() {
-        double result = this.getNum1() + this.getNum2();
-        return result;
-    }
-}
