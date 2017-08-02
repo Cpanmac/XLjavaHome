@@ -3,6 +3,7 @@ package com.xl.util;
 import org.junit.Test;
 
 import javax.swing.filechooser.FileSystemView;
+import java.awt.*;
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -258,6 +259,10 @@ public class FileTool {
         System.out.println(file.getAbsolutePath());
         System.out.println(file.getName());
         return fsv.getHomeDirectory();
+    }
+
+    public static void open(File file) throws IOException {
+        Desktop.getDesktop().open(file);
     }
 
     @Test

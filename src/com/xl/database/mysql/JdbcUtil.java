@@ -1,5 +1,7 @@
 package com.xl.database.mysql;
 
+import org.junit.Test;
+
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,26 +20,18 @@ public final class JdbcUtil {
         Properties props = new Properties();
         // 获得工程目录
         try {
-            InputStream is = Demo3.class.getClassLoader().getResourceAsStream("mysql/db.properties");
-            is = JdbcUtil.class.getResourceAsStream("db.properties");
+            InputStream is = JdbcUtil.class.getResourceAsStream("/mysql/db.properties");
             props.load(is);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        driver = props.getProperty("driver");
-        url = props.getProperty("url");
-        user = props.getProperty("user");
-        password = props.getProperty("password");
-    }
-
-    // 静态块：注册驱动
-    static {
-        try {
+            driver = props.getProperty("driver");
+            url = props.getProperty("url");
+            user = props.getProperty("user");
+            password = props.getProperty("password");
             Class.forName(driver);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     // 取得连接
     public static Connection getMySqlConnection() {
         Connection conn = null;
@@ -78,5 +72,10 @@ public final class JdbcUtil {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Test
+    public void test1() {
+        System.out.println("测试");
     }
 }
