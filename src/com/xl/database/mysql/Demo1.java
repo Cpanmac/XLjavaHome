@@ -3,16 +3,12 @@ package com.xl.database.mysql;
 import com.mysql.jdbc.Driver;
 import org.junit.Test;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Demo1 {
-    String url = "jdbc:mysql://127.0.0.1:3306/test"; // 访问xl数据库
-    String user = "root";
-    String password = "123";
+    String url = "jdbc:mysql://127.0.0.1:3306/xl"; // 访问xl数据库
+    String user = "xl";
+    String password = "xl";
 
     private void register() throws SQLException {
         DriverManager.registerDriver(new com.mysql.jdbc.Driver());

@@ -2,6 +2,7 @@ package com.xl.util;
 
 import org.junit.Test;
 
+import javax.swing.filechooser.FileSystemView;
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -12,6 +13,10 @@ import java.util.List;
 public class FileTool {
     public static void main(String[] args) {
         System.out.println("11");
+    }
+
+    public static void openNodepad() {
+        SystemUtil.exec("notepad");
     }
 
     /**
@@ -112,7 +117,7 @@ public class FileTool {
      * @throws IOException           int
      */
     @Deprecated
-    public static int getSize(File file) throws FileNotFoundException, IOException {
+    public static int getSize(File file) throws IOException {
         return new FileInputStream(file).available();
     }
 
@@ -244,6 +249,15 @@ public class FileTool {
             fileSizeString = df.format((double) fileS / 1073741824) + "G";
         }
         return fileSizeString;
+    }
+
+    @Test
+    public static File getDesktopPath() {
+        FileSystemView fsv = FileSystemView.getFileSystemView();
+        File file = fsv.getHomeDirectory();
+        System.out.println(file.getAbsolutePath());
+        System.out.println(file.getName());
+        return fsv.getHomeDirectory();
     }
 
     @Test

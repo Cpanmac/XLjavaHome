@@ -157,7 +157,7 @@ public class Crud {
             e.printStackTrace();
         }
     }
-    // public static void main(String[] args) {
+    // public static void callstored(String[] args) {
     // Crud crud = new Crud();
     // // crud.read(" 'or true or' ");
     // crud.createTable("system");

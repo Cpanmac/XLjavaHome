@@ -2,14 +2,13 @@ package com.xl.a;
 
 import org.junit.Test;
 
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 public class DateDemo {
     @Test
-    public void 根据时间得到12位() {
+    public void test2() {
         Date now = new Date();
         SimpleDateFormat sf = new SimpleDateFormat("yyyyMMddhhmm");
         // 年份2+月份2+日期2+毫秒3
@@ -28,18 +27,9 @@ public class DateDemo {
     @Test
     public void test1() {
         for (int i = 0; i <= 10; i++) {
-            // 根据时间得到12位();
+            // test2();
             test();
         }
-    }
-
-    @Test
-    public void 时间戳() {
-        Timestamp t1 = new Timestamp(System.currentTimeMillis());
-        System.out.println(t1);
-        Timestamp t2 = new Timestamp(new Date().getTime());
-        System.out.println(t2);
-        System.out.println(t1 == t2);
     }
 
     @Test
