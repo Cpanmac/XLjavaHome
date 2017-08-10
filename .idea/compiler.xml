@@ -19,7 +19,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javaSE" target="1.5" />
+      <module name="sinitekpm" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
