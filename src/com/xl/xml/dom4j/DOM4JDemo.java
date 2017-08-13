@@ -11,11 +11,7 @@ import org.dom4j.io.XMLWriter;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.Iterator;
 import java.util.List;
 //乱码产生原因:io流
@@ -39,16 +35,15 @@ public class DOM4JDemo {
      * 文档对象
      */
     private Document document;
-    
+
     @Test
-    public void createNoEncoding(){
+    public void createNoEncoding() {
         File file = new File("a");
         //XMLWriter writer = new XMLWriter(new FileOutputStream(file));
         //writer.write(document);
         //writer.close();
     }
-    
-    
+
     // 方法二,解决编码问题:FileOutputStream
     @Test
     public void add() throws DocumentException, IOException {
@@ -103,6 +98,23 @@ public class DOM4JDemo {
         XMLWriter writer = new XMLWriter(new FileOutputStream(file), format);
         writer.write(document);
         writer.close();
+    }
+
+    @Test
+    public void deleteAllTest() throws DocumentException, IOException {
+        SAXReader reader = new SAXReader();
+        Document document = reader.read(file);
+        Element e = document.getRootElement();
+        List<Element> children = e.elements();
+        for (Element e1 : children) {
+            e.remove(e1);
+        }
+        OutputFormat format = OutputFormat.createPrettyPrint();
+        format.setEncoding("utf-8");
+        XMLWriter writer = new XMLWriter(new FileOutputStream(file), format);
+        writer.write(document);
+        writer.close();
+        FileTool.open(file);
     }
 
     @Before
