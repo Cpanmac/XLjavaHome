@@ -10,6 +10,7 @@ public class LinkedListTest {
     public static void main(String[] args) {
         DuiLie d1 = new DuiLie();
         d1.myAdd("java01");
+        d1.myAdd("java01");
         d1.myAdd("java02");
         d1.myAdd("java03");
         d1.myAdd("java04");

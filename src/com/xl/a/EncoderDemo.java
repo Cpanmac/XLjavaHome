@@ -1,6 +1,8 @@
 package com.xl.a;
 
+import com.xl.util.FileTool;
 import org.apache.commons.io.FileUtils;
+import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,9 +10,10 @@ import java.util.Collection;
 import java.util.Iterator;
 
 /**
- * @User: li.xu
- * @Date: 2017/8/8
- * @Time: 14:33
+ * Created with IntelliJ IDEA.
+ * User: 徐立
+ * Date: 2017-08-14
+ * Time: 12:38
  * To change this template use File | Settings | File Templates.
  */
 public class EncoderDemo {
@@ -54,5 +57,11 @@ public class EncoderDemo {
             FileUtils.writeLines(new File(GBK8FilePath), "GBK", FileUtils.readLines(javaUtf8File, "UTF-8"));
             System.out.println("转换完成！");
         }
+    }
+
+    @Test
+    public void getFileTest() {
+        String f = FileTool.getCurrentPath(this.getClass());
+        System.out.println(f);
     }
 }
