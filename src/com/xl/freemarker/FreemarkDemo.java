@@ -18,7 +18,7 @@ import java.util.Map;
  * @Time: 17:12
  * To change this template use File | Settings | File Templates.
  */
-public class Freemark {
+public class FreemarkDemo {
     private final String imgFile = "freemarker/a.jpg";
     /**
      * freemark模板配置
@@ -42,14 +42,14 @@ public class Freemark {
      *
      * @param templatePath 模板文件位置
      */
-    public Freemark(String templatePath) {
+    public FreemarkDemo(String templatePath) {
         configuration = new Configuration();
         configuration.setDefaultEncoding("utf-8");
         configuration.setClassForTemplateLoading(this.getClass(), templatePath);
     }
 
     public static void main(String[] args) throws IOException {
-        Freemark freemark = new Freemark("/freemarker/");
+        FreemarkDemo freemark = new FreemarkDemo("/freemarker/");
         //		freemark.setTemplateName("wordTemplate.ftl");
         freemark.setTemplateName("简历-朱老师.ftl");
         freemark.setFileName("doc_" + new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date()) + ".doc");
