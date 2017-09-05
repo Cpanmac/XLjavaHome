@@ -4,18 +4,18 @@ import java.sql.*;
 
 //使用jdbc连接oracl7e
 public class OracleDemo {
-    private static String url = "oracle.jdbc.driver.OracleDriver";
+    private static String className = "oracle.jdbc.driver.OracleDriver";
     private static String name = "xl";
     private static String password = "xl";
 
     public static void main(String[] args) {
         try {
             // 1.加载驱动
-            Class.forName(url);
+            Class.forName(className);
             System.out.println("开始连接oracle");
             // 2.得到连接 数据库的url,用户名，密码 前面的url通过java
             // buildpath导入oracle驱动jar包（名字叫classes12.jar)
-            Connection ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:PLSExtProc", name, password);
+            Connection ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:orcl", name, password);
             // 从下面开始和sql server一模一样
             Statement sm = ct.createStatement();
             ResultSet rs = sm.executeQuery("select * from emp");
@@ -76,7 +76,7 @@ public class OracleDemo {
         try {
             // 1.加载驱动
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:ORCL", "scott", "q123");
+            ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:ORCL", "xl", "xl");
             System.out.println("加载成功");
             // 2.创建CallableStatement,有几个参数也几个问号
             cs = ct.prepareCall("{call sp_pro9(?,?)}");
