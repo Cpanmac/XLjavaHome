@@ -1,511 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="ANALYSIS_IN_BACKGROUND" value="true" />
-  </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/resource/mysql/db.properties" line="3" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8565abbf-9644-43d3-baf7-c35f7737c67c" name="Default" comment="去除中文命名">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resource/freemarker/a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/xl/freemarker/Freemark.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_1_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_attrs_1_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_commons_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_tree_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__axis_axis_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__axis_axis_jaxrpc_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__axis_axis_saaj_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_2_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__chardet_chardet_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_session_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_Sinitek_MetaDB2_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_basedataapi_2_0_15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_basedataapp_2_0_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_basedataimpl_2_0_15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_brokermarkapi_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_brokermarkimpl_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_commoncore_2_2_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_crmsendclient_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_industryresearchapi_2_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_industryresearchimpl_2_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_investpoolapi_2_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_investpoolimpl_2_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_rschreportapi_2_0_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_rschreportimpl_2_0_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_sirmappcore_2_2_20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_stockresearchapi_2_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_sirm_sinitek_stockresearchimpl_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_Sinitek_DS_ServiceFramework_0_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_Sinitek_Spirit_WebControl_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_Sinitek_Spirit_WebFramework_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_org_client_0_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_org_core_0_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_org_server_0_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_right_client_0_0_6b.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_right_core_0_0_6b.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_right_server_0_0_6b.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_spirit_businlogger_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_spirit_logger_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_um_client_0_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_um_core_0_0_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_spirit_um_server_0_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_util_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_weixin_weixin_java_common_1_1_4_jdk6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sinitek_weixin_weixin_java_cp_1_1_4_jdk6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_whalin_Memcached_Java_Client_3_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_chain_commons_chain_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_discovery_commons_discovery_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__compiler_compiler_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cpdetector_cpdetector_1_0_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dwr_dwr_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__itext2_rq_itext2_rq_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javassist_javassist_3_11_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_5_0_b01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_jta_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_jaxrpc_api_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javolution_javolution_5_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jaxen_jaxen_1_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__json_json_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jwebsocket_jwebsocket_common_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jwebsocket_jwebsocket_server_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jwebsocket_jwebsocket_serverapi_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_1_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jxls_jxls_core_1_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_jexcelapi_jxl_2_6_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_0_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__opensymphony_quartz_all_1_6_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__oracle_jdbc_OracleDriver_ojdbc_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_jexl_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_struts_struts2_core_2_3_32.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_struts_struts_core_1_3_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_struts_xwork_xwork_core_2_3_32.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_taglibs_taglibs_standard_impl_1_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_servlet_api_6_0_44.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_artofsolving_jodconverter_jodconverter_core_3_0_beta_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elfinder_elfinder_servlet_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_22.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_3_2_6_ga.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hsqldb_hsqldb_2_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openoffice_juh_4_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openoffice_jurt_4_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openoffice_ridl_4_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openoffice_unoil_4_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_patchca_patchca_0_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_6_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_1_3_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_asm_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_struts_2_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__oro_oro_2_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resource/freemarker/简历-朱老师.ftl" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\game\MyPaint.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\game\Snake.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\game\yidong.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\CharAndString.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\CharArray.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\Clock.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\DoubleMinus.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\ForTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\GoodBye.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\IOTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\LongDivision.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\MyClass.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\OddTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\RandomTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\ReturnValue.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\Swap.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\UnicodeTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\itcast\face\WhileTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\view\Demo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\view\Demo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\view\Demo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\view\Demo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\view\JImagePane$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\view\JImagePane.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\AdbCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\BufferedReaderDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\BufferedWriterDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\ByteArrayStream\ByteArrayStreamDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\ByteArrayStream\Messages.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\CopyTextByBuf.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\DataStreamDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\DataStream\DataStreamDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\FilepathSeparator.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\PrinterWriter.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\channelflow\PipedStreamDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\channelflow\Read.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\channelflow\Write.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\zip\UnZip.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\zip\Zip.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\IO\zip\ZipUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\MouseTrack.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Properties\LoadresourcesDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Properties\PropertiesDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Properties\SystemInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Regex\CodeCounter.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Regex\IpSort.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Regex\RegexTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Tcp\TcpClient.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Tcp\TcpClient2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Tcp\TcpServer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Tcp\TcpServer2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Tcp\TextClient.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Tcp\TextServer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Tcp\TransClient.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\Tcp\TransServer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\AllFile$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\AllFile$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\AllFile$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\AllFile.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\ArrayUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\DateDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\FileInfoDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\FileInfoDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\FileInfoDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\GetMacAddress.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\KeyGen.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\MailDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\MyEclipse8KeyGen.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\MyEclipseKeyGen.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\a\ShutDown.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\AbsDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\BinaryRecursive.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\EclipseDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\FloatCount.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\InsideDemo$a.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\InsideDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\IntegerDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\JunitDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\MD5Demo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\Outer$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\Outer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\PrintRhombus.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\SwitchDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\TestPrintf.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\UUIDDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\Variable.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\Xl.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\numberDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\base\resource\ResourceDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\ArraysDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\ArraysDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\CollectionDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\CollectionToArray.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\CollectionsDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\CollectionsDemo2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\Demo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\DuiLie.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\HashSetDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\HashSetTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\LinkedListDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\LinkedListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\ListDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\MapDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\MapDemo3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\MapTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\MapTest2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\MapTest3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\MyCompare.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\Person.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\StrLenComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\StrLenCompare.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\StuNameComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\Student.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\Student2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\Student3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\Student5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\StudentCompareable.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\TreeSetDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\TreeSetDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\TreeSetDemo2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\TreeSetTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\VectorDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\Write.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\collections\WriterDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\Oracle\BaseDao.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\Oracle\OracleDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\Oracle\test.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\Oracle\test1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\BaseDao.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\BaseDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\Crud.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\Demo1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\Demo2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\Demo3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\Demo4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\JdbcUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\database\mysql\db.properties" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\Apple.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\Factory.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\FactoryDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\GetTime.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\Orange.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\Single.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\SingleDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\Student.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\SubTime.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\TemplateDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\Apple.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\Banana.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\Fruit.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\FruitFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\MainClass.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\NorthApple.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\NorthBanana.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\NorthFruitFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\SouthApple.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\SouthBanana.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\SouthFruitFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\WenshiApple.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\WenshiBanana.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\abstractfactory\WenshiFruitFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\factory\AddOperation.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\factory\AddOperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\factory\MainClass.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\factory\Operation.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\factory\OperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\factory\SubtractionOperation.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\fruit.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\singleton\MainClass.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\singleton\Person.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\singleton\Person2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\singleton\Person3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\design\singleton\Person4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\download$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\download$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\download$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\download$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\download$5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\download.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\entity\Book.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\entity\ImageEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\entity\Person.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\entity\Student.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\entity\User.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\enumdemo\Enumdemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\enumdemo\Grade$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\enumdemo\Grade$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\enumdemo\Grade$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\enumdemo\Grade$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\enumdemo\Grade$5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\enumdemo\Grade.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\file\FileReaderDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\file\FileReaderDemo2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\file\FileService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\file\FileStream.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\file\LineNumberReaderDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\file\RandomAccessFileDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\file\randomAccess\RandomAccessFileDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\Demo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\GenericDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\GenericDemo2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\GenericDemo3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\GenericDemo4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\GenericDemo5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\Inter.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\InterImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\LenComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\Student.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\Tool.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\Utils.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\generic\Worker.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\AwtDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\AwtDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\AwtDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\Demo1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\Login.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyMenuDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyMenuDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyMenuDemo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyMenuDemo$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyMenuDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyWindow$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyWindow$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyWindow$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyWindow$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyWindow$5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyWindow.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyWindowListener.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\MyWindowListener1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\ScrollBar.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\gui\SwingDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\html\HtmlDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\AcceptKeyboardEntry.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\ChatDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\IPDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\Rece.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\Send.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\SendFileDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TcpClient.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TcpDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TcpDemo2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TcpServer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TextClient.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TextServer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TransClient.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TransClient1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TransServer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\TransServer1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\URLDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\UdpAccept.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\internet\UdpSend.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\json\JsonDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\pdf\PdfDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\GetClass.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\GetClassConstructed.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\GetField.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\GetMethod.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\InvokeSetAndGet.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\MyInvocationHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\Person.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\ProxyDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\RealSubject.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\RelectDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\Subject.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\generic\A.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\reflect\generic\GenericDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\socketDemo\Cilent.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\socketDemo\MyThread.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\socketDemo\Server.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\socketDemo\User.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\DownLoadTask.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\MyThreadScopeData.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\MyTimeTask.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\SynchronizedDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\SynchronizedDemo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\SynchronizedDemo$Outputer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\SynchronizedDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\TaskDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\TaskDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadLocalDemo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadLocalDemo$A.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadLocalDemo$B.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadLocalDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadShareData$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadShareData$A.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadShareData$B.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\ThreadShareData.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\thread\download.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\url\URLDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\ClobUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\CollatorComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\CollectionUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\DBUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\DatePick.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\DateUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\DynamicUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\EncryptUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\FileTool.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\GetJNDI.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\JdbcUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\JsonDateValueDeSerializ.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\JsonUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\ListComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\LogOperateType.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\MD5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\MoneyUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\MultiComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\NetUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\NumberCalculateUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\NumberTool.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\PDFUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\PinYinHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\RegHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\RegTool.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\ResultVO.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\StrUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\StreamTool.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\StringUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\SystemUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\beanutils$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\beanutils.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\util\persist\support\ResultToBean.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\BeanListHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\JaxpXml.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\SAXAnalyze.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\SAXXmlDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\Schema.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\TagValueHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\XPathXmlDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\XmlDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\dom4j\DOM4JDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\sax\ListHandler2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\sax\SAXXmlDemo.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\sax\SAX解析指定标签的内容继承实现.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\code\javaSE\out\production\javaSE\com\xl\xml\sax\TagValueHandler.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xl/util/FileTool.java" afterPath="$PROJECT_DIR$/src/com/xl/util/FileTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xl/database/mysql/JdbcUtil.java" afterPath="$PROJECT_DIR$/src/com/xl/database/mysql/JdbcUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/javaSE.iml" afterPath="$PROJECT_DIR$/.idea/javaSE.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\code\javaSE\src\com\xl\database\mysql\db.properties" afterPath="$PROJECT_DIR$/resource/mysql/db.properties" />
-    </list>
-    <list id="e8c4ee56-b851-4ed7-a032-95bb330360af" name="Failed commit: Default" comment="去除中文命名" />
-    <ignored path="javaSE.iws" />
+    <list default="true" id="345310ea-50df-4acb-bfc9-7a7aad5d623e" name="Default" comment="" />
+    <ignored path="javase.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -515,92 +14,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="javaSE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xl/database/Oracle/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#619#625#0" expanded="false" />
-                <marker date="1499838857775" expanded="true" signature="515:532" placeholder="select * fro..msg..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Freemark.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/xl/freemarker/Freemark.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileTool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xl/util/FileTool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="281" column="39" selection-start-line="281" selection-start-column="39" selection-end-line="281" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileOutputStream.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/FileOutputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OracleDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xl/database/Oracle/OracleDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-              <folding>
-                <marker date="1501644634825" expanded="true" signature="762:779" placeholder="select * fro..emp..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+    <favorites_list name="javase" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -610,66 +29,11 @@
       <projects_view />
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/com/xl/base/EclipseDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/二进制递归.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/BinaryRecursive.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/内部类Demo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/InsideDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/可变参数.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/Variable.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/多态的特点.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/打印菱形.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/PrintRhombus.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/浮点数计算.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/collections/LinkMapDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/解析xml.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/XmlDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/util/beanutils.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/自带的jaxp解析xml.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/JaxpXml.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/Regex/RegDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/file/FileDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/sax/SAX解析xml接口实现.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/sax/SAXXmlDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/gui/下拉列表滚动条.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/gui/ScrollBar.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/gui/登录界面.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/gui/Login.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/IntegerDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/game/贪吃蛇.java" />
-        <option value="$PROJECT_DIR$/src/com/game/Snake.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/Properties/系统信息.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/collections/MapDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/reflect/ProxyDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/database/Oracle/调用有返回值的过程.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/database/Oracle/调用有返回值的过程_列表结果集.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/reflect/generic/GenericDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/thread/TaskDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/base/FloatCount.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/json/JsonDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/XPath提取xml文档数据.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/XPathXmlDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/collections/ArraysDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/a/DateDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/SAX解析xml接口实现.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/xml/SAXXmlDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/internet/TcpClient.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/collections/MapTest2.java" />
-        <option value="$PROJECT_DIR$/resource/mysql/db.properties" />
-        <option value="$PROJECT_DIR$/src/com/xl/database/mysql/JdbcUtil.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/freemarker/FreemarkerDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/freemarker/Freemarker.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/util/FileTool.java" />
-        <option value="$PROJECT_DIR$/src/com/xl/freemarker/Freemark.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -677,88 +41,16 @@
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
     </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="sinitekpm" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Profiles" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProfilesNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </treeState>
-  </component>
-  <component name="NamedScopeManager">
-    <order />
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Android Lint</id>
-          </State>
-          <State>
-            <id>Control flow issuesJava</id>
-          </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>Internationalization issues</id>
-          </State>
-          <State>
-            <id>Internationalization issuesJava</id>
-          </State>
-          <State>
-            <id>J2ME issuesJava</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-          <State>
-            <id>Manifest</id>
-          </State>
-          <State>
-            <id>Properties Files</id>
-          </State>
-          <State>
-            <id>XML</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Android</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
+    <option name="x" value="-17" />
+    <option name="width" value="1934" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -767,7 +59,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -781,397 +73,51 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
+              <option name="myItemId" value="javase" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
+              <option name="myItemId" value="javase" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freemarker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freemarker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mysql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javaSE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/freemaker" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="recentsLimit" value="5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\code\javaSE\resource\freemarker" />
-      <recent name="D:\code\javaSE" />
-    </key>
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="com.xl.database.Oracle.OracleDemo" />
-      <recent name="com.xl.util.FileTool" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\code\javaSE\resource\mysql" />
-      <recent name="D:\code\javaSE\resource" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.xl.util" />
-      <recent name="com.xl.base" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Freemark">
-    <configuration default="false" name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.view.Demo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaSE" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="MD5Demo.MD5加密" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.xl.base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="javaSE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.xl.base" />
-      <option name="MAIN_CLASS_NAME" value="com.xl.base.MD5Demo" />
-      <option name="METHOD_NAME" value="MD5加密" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="JdbcUtil.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.xl.database.mysql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="javaSE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.xl.database.mysql" />
-      <option name="MAIN_CLASS_NAME" value="com.xl.database.mysql.JdbcUtil" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="JdbcUtil" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.xl.database.mysql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="javaSE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.xl.database.mysql" />
-      <option name="MAIN_CLASS_NAME" value="com.xl.database.mysql.JdbcUtil" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="Freemark" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.xl.freemarker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.xl.freemarker.Freemark" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="javaSE" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -1191,100 +137,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1308,26 +160,12 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1358,580 +196,69 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
-    <configuration default="false" name="查看文件夹的大小.test1" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.project.查看文件夹的大小.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="javaSE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.project.查看文件夹的大小" />
-      <option name="MAIN_CLASS_NAME" value="com.project.查看文件夹的大小.查看文件夹的大小" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.查看文件夹的大小.test1" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Demo" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MD5Demo.MD5加密" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JdbcUtil.test1" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JdbcUtil" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Freemark" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Freemark" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JdbcUtil" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JdbcUtil.test1" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MD5Demo.MD5加密" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Demo" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8565abbf-9644-43d3-baf7-c35f7737c67c" name="Default" comment="" />
-      <created>1501580911802</created>
+      <changelist id="345310ea-50df-4acb-bfc9-7a7aad5d623e" name="Default" comment="" />
+      <created>1502370021446</created>
       <option name="number" value="Default" />
-      <updated>1501580911802</updated>
-      <workItem from="1501580913059" duration="960000" />
-      <workItem from="1501640164102" duration="2855000" />
-      <workItem from="1501643355849" duration="2327000" />
-      <workItem from="1501651436823" duration="3083000" />
-      <workItem from="1501664817758" duration="188000" />
-      <workItem from="1501665012375" duration="1324000" />
+      <option name="presentableId" value="Default" />
+      <updated>1502370021446</updated>
+      <workItem from="1502370022960" duration="173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10737000" />
-  </component>
-  <component name="TodoView" selected-index="4">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="173000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-17" y="0" width="1934" height="1042" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="去除中文命名" />
-    <option name="LAST_COMMIT_MESSAGE" value="去除中文命名" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/xl/database/mysql/JdbcUtil.java</url>
-          <line>27</line>
-          <properties />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/xl/freemarker/Freemark.java</url>
-          <line>117</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="6" />
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="is" />
-      </configuration>
-      <configuration name="Application">
-        <watch expression="getClass().getClassLoader().getResourceAsStream(imgFile)" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/xl/internet/ChatDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/internet/TcpDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="20" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/internet/TcpDemo2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/internet/URLDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/internet/SendFileDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/internet/AcceptKeyboardEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/base/EclipseDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/base/BinaryRecursive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/base/Variable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/IO/PrinterWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/base/PrintRhombus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/util/beanutils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/xml/JaxpXml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/xml/XmlDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/xml/sax/SAXXmlDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/gui/ScrollBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/gui/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/base/IntegerDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/game/Snake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/Properties/SystemInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/reflect/ProxyDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/collections/MapDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/reflect/generic/GenericDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/thread/TaskDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/base/FloatCount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/json/JsonDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="45" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/IO/FilepathSeparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/reflect/InvokeSetAndGet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/reflect/GetMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/database/Oracle/笔记">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/database/Oracle/test1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/database/Oracle/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/xml/XPathXmlDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="47" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/collections/ArraysDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/gui/AwtDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/a/DateDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/xml/SAXXmlDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/internet/TcpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/view/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/collections/MapTest2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/base/InsideDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/base/MD5Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/thread/ThreadDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/mysql/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/database/mysql/JdbcUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/database/Oracle/OracleDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-          <folding>
-            <marker date="1501644634825" expanded="true" signature="762:779" placeholder="select * fro..emp..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/database/Oracle/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#619#625#0" expanded="false" />
-            <marker date="1499838857775" expanded="true" signature="515:532" placeholder="select * fro..msg..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/FileOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/util/FileTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="281" column="39" selection-start-line="281" selection-start-column="39" selection-end-line="281" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xl/freemarker/Freemark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="masterDetails">
     <states>
@@ -1961,6 +288,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>axis_webservice</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1972,7 +300,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2009,17 +337,6 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>Maven: antlr:antlr:2.7.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
