@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.List;
 
 public class BaseDaoImpl<T> implements BaseDao<T> {
-    Connection conn = JdbcUtil.getMySqlConnection();
+    Connection conn = MysqlJdbcUtil.getMySqlConnection();
 
     @Override
     public void save(T entity) {

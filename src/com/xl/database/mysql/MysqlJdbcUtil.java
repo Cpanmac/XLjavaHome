@@ -1,7 +1,5 @@
 package com.xl.database.mysql;
 
-import org.junit.Test;
-
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +8,7 @@ import java.sql.Statement;
 import java.util.Properties;
 
 //JDBC工具类：关闭流和取得连接
-public final class JdbcUtil {
+public final class MysqlJdbcUtil {
     private static String driver;
     private static String url;
     private static String user;
@@ -20,7 +18,7 @@ public final class JdbcUtil {
         Properties props = new Properties();
         // 获得工程目录
         try {
-            InputStream is = JdbcUtil.class.getResourceAsStream("/mysql/db.properties");
+            InputStream is = MysqlJdbcUtil.class.getResourceAsStream("/mysql/db.properties");
             props.load(is);
             driver = props.getProperty("driver");
             url = props.getProperty("url");
@@ -31,7 +29,6 @@ public final class JdbcUtil {
             e.printStackTrace();
         }
     }
-
     // 取得连接
     public static Connection getMySqlConnection() {
         Connection conn = null;
@@ -72,10 +69,5 @@ public final class JdbcUtil {
                 e.printStackTrace();
             }
         }
-    }
-
-    @Test
-    public void test1() {
-        System.out.println("测试");
     }
 }

@@ -12,7 +12,7 @@ public class Demo3 {
         ResultSet rs = null;
         String sql = "select * from user";
         try {
-            conn = JdbcUtil.getMySqlConnection();
+            conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -22,9 +22,9 @@ public class Demo3 {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JdbcUtil.close(rs);
-            JdbcUtil.close(stmt);
-            JdbcUtil.close(conn);
+            MysqlJdbcUtil.close(rs);
+            MysqlJdbcUtil.close(stmt);
+            MysqlJdbcUtil.close(conn);
         }
     }
 }

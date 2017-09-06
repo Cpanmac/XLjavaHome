@@ -19,7 +19,7 @@ public class Crud {
     public void create() {
         String sql = "insert into user(name,gender,salary) values('张三','男',3000)";
         try {
-            conn = JdbcUtil.getMySqlConnection();
+            conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
             System.out.println(i);
@@ -27,9 +27,9 @@ public class Crud {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JdbcUtil.close(rs);
-            JdbcUtil.close(stmt);
-            JdbcUtil.close(conn);
+            MysqlJdbcUtil.close(rs);
+            MysqlJdbcUtil.close(stmt);
+            MysqlJdbcUtil.close(conn);
         }
     }
 
@@ -40,7 +40,7 @@ public class Crud {
         ResultSet rs = null;
         String sql = "select * from user where gender='male'";
         try {
-            conn = JdbcUtil.getMySqlConnection();
+            conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -51,9 +51,9 @@ public class Crud {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JdbcUtil.close(rs);
-            JdbcUtil.close(stmt);
-            JdbcUtil.close(conn);
+            MysqlJdbcUtil.close(rs);
+            MysqlJdbcUtil.close(stmt);
+            MysqlJdbcUtil.close(conn);
         }
     }
 
@@ -64,16 +64,16 @@ public class Crud {
         ResultSet rs = null;
         String sql = "update user set gender='female' where id = 8";
         try {
-            conn = JdbcUtil.getMySqlConnection();
+            conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
             System.out.println(i > 0 ? "成功" : "失败");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JdbcUtil.close(rs);
-            JdbcUtil.close(stmt);
-            JdbcUtil.close(conn);
+            MysqlJdbcUtil.close(rs);
+            MysqlJdbcUtil.close(stmt);
+            MysqlJdbcUtil.close(conn);
         }
     }
 
@@ -84,16 +84,16 @@ public class Crud {
         ResultSet rs = null;
         String sql = "delete from user where name = '丝丝'";
         try {
-            conn = JdbcUtil.getMySqlConnection();
+            conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
             System.out.println(i > 0 ? "成功" : "失败");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JdbcUtil.close(rs);
-            JdbcUtil.close(stmt);
-            JdbcUtil.close(conn);
+            MysqlJdbcUtil.close(rs);
+            MysqlJdbcUtil.close(stmt);
+            MysqlJdbcUtil.close(conn);
         }
     }
 
@@ -104,7 +104,7 @@ public class Crud {
         String sql = "select * from user where name='" + name + "'";
         System.out.println("sql=" + sql);
         try {
-            conn = JdbcUtil.getMySqlConnection();
+            conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -116,9 +116,9 @@ public class Crud {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JdbcUtil.close(rs);
-            JdbcUtil.close(stmt);
-            JdbcUtil.close(conn);
+            MysqlJdbcUtil.close(rs);
+            MysqlJdbcUtil.close(stmt);
+            MysqlJdbcUtil.close(conn);
         }
     }
 
@@ -127,7 +127,7 @@ public class Crud {
         String tableName = "xl";
         String sql = "create table if not exists " + tableName + "(id varchar(40) primary key)";
         try {
-            conn = JdbcUtil.getMySqlConnection();
+            conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             System.out.println(sql);
             // int i= stmt.executeUpdate(sql); //创建表并没有影响结果所以i的值是0
@@ -138,9 +138,9 @@ public class Crud {
             // TODO Auto-generated catch block
             e.printStackTrace();
         } finally {
-            JdbcUtil.close(rs);
-            JdbcUtil.close(stmt);
-            JdbcUtil.close(conn);
+            MysqlJdbcUtil.close(rs);
+            MysqlJdbcUtil.close(stmt);
+            MysqlJdbcUtil.close(conn);
         }
     }
 
@@ -149,7 +149,7 @@ public class Crud {
         String tableName = "xl";
         String sql = "drop table if exists " + "xl";
         try {
-            conn = JdbcUtil.getMySqlConnection();
+            conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             boolean b = stmt.execute(sql);
             System.out.println(b); // false
