@@ -11,7 +11,7 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.UnsupportedEncodingException;
 
-public class SAX解析指定标签的内容继承实现 {
+public class SAXDemo {
     private String xmlPath;
 
     @Before
