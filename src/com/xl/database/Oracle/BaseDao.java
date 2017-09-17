@@ -9,7 +9,6 @@ public class BaseDao {
     private final static String DRIVER = "oracle.jdbc.driver.OracleDriver";
     private final static String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
     private final static String USERNAME = "xl";
-    private final static String PASSWORD = "xl";
 
     //连接方法
     public Connection getConnection() {
@@ -17,7 +16,7 @@ public class BaseDao {
         //加载驱动
         try {
             Class.forName(DRIVER);
-            conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            conn = DriverManager.getConnection(URL, USERNAME, "xl");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

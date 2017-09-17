@@ -8,19 +8,11 @@ import org.junit.Test;
 public class Enumdemo {
     @Test
     public void test() {
-        print(Grade.D);
-    }
-
-    public void print(Grade g) {
-        String value = g.localeValue();
-        System.out.println(value);
-    }
-
-    // 测试枚举常用方法
-    @Test
-    public void test2() {
         // 1. 获取枚举的名称
         System.out.println(Grade.C.name());
+        System.out.println(Grade.D.getValue());
+        System.out.println(Grade.D.name());
+        System.out.println(Grade.D.localeValue());
         // 2.将字符串改成枚举。valueOf
         String str = "B";
         // Grade g=Grade.valueOf(Grade.class,str);
@@ -33,12 +25,3 @@ public class Enumdemo {
         }
     }
 }
-// java5以前
-// class Grade{
-// private Grade(){}
-// public static final Grade A=new Grade();
-// public static final Grade B=new Grade();
-// public static final Grade C=new Grade();
-// public static final Grade D=new Grade();
-//	
-// }

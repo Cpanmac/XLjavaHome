@@ -29,9 +29,3 @@ class HashSetDemo {
     }
 }
 
-class Demo {
-    public int hashCode()   //¸´Ð´µôwinµÄÖµ
-    {
-        return 1;
-    }
-}

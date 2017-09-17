@@ -83,9 +83,9 @@ public class ArraysDemo {
     public void length() {
         int length = intArray.length;
         ArrayUtil.arrayAddLength(intArray, 10);
-        System.out.println(length);
+        System.out.println(intArray.length);
         ArrayUtil.arrayAddLength(intArray, 2);
-        System.out.println(length);
+        System.out.println(intArray.length);
     }
 
     @Test

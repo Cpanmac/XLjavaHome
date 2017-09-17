@@ -111,7 +111,7 @@ public class EncryptUtil {
 
     public String encodeMD5(String plainText) {
         try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
+            MessageDigest md = MessageDigest.getInstance("MD5Tool");
             byte[] cipher = md.digest(plainText.getBytes());
             StringBuilder builder = new StringBuilder();
             for (byte b : cipher) {

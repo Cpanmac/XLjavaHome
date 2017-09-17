@@ -3,7 +3,7 @@ package com.xl.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class MD5 {
+public class MD5Tool {
     /**
      * ×Ö·û´®MD5¼ÓÃÜ
      *
@@ -13,7 +13,7 @@ public class MD5 {
     public static String toMD5(String s) {
         String str = null;
         try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
+            MessageDigest md = MessageDigest.getInstance("MD5Tool");
             md.update(s.getBytes());
             byte b[] = md.digest();
             int i;
