@@ -16,7 +16,7 @@ public class FileService {
             throw new RuntimeException("这不是目录");
         }
         ArrayList<File> list = new ArrayList<File>();
-        FileTool.queryAll(list, file);
+        FileTool.queryAll(file, list);
         // System.out.println(list);
         for (File _file : list) {
             System.out.println(_file.getName());

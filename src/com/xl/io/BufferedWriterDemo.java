@@ -1,4 +1,4 @@
-package com.xl.IO;
+package com.xl.io;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

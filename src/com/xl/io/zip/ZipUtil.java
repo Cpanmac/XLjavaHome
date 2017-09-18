@@ -1,4 +1,4 @@
-package com.xl.IO.zip;
+package com.xl.io.zip;
 
 import java.io.*;
 import java.util.ArrayList;

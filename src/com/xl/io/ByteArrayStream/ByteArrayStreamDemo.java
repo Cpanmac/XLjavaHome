@@ -1,4 +1,4 @@
-package com.xl.IO.ByteArrayStream;
+package com.xl.io.ByteArrayStream;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

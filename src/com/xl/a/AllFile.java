@@ -71,7 +71,7 @@ public class AllFile {
         if (dir.exists() && dir.isDirectory()) {
             ta.setText("");// 清空以前得
             List<File> list = new ArrayList<File>();
-            FileTool.queryAll(list, dir);
+            FileTool.queryAll(dir, list);
             if (list.size() > 300) {
                 ta.setText("该目录下文件太多了");
                 return;

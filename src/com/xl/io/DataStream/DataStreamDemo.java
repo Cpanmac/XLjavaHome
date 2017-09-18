@@ -1,4 +1,4 @@
-package com.xl.IO.DataStream;
+package com.xl.io.DataStream;
 
 import java.io.*;
 

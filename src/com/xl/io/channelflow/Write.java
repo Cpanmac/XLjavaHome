@@ -1,4 +1,4 @@
-package com.xl.IO.channelflow;
+package com.xl.io.channelflow;
 
 import java.io.PipedOutputStream;
 
