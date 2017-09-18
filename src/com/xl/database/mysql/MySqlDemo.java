@@ -14,7 +14,7 @@ import java.sql.Connection;
 public class MySqlDemo {
     @Test
     public void getConnectTest() {
-       Connection c= MysqlJdbcUtil.getMySqlConnection();
+        Connection c = MysqlJdbcUtil.getMySqlConnection();
         System.out.println(c);
     }
 }

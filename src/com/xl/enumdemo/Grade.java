@@ -15,26 +15,22 @@ public enum Grade {
         public String localeValue() {
             return "优";
         }
-    },
-    B("89-80") {
+    }, B("89-80") {
         @Override
         public String localeValue() {
             return "良好";
         }
-    },
-    C("70-79") {
+    }, C("70-79") {
         @Override
         public String localeValue() {
             return "一般";
         }
-    },
-    D("60-69") {
+    }, D("60-69") {
         @Override
         public String localeValue() {
             return "差";
         }
-    },
-    E("0-59") {
+    }, E("0-59") {
         @Override
         public String localeValue() {
             return "不及格";

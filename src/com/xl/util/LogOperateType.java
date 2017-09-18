@@ -28,6 +28,7 @@ public class LogOperateType {
      * 注销操作
      */
     public static int LOGOUT = 5;
+
     private LogOperateType() {
     }
 }

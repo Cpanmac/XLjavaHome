@@ -2,11 +2,7 @@ package com.xl.Regex;
 
 import com.xl.util.StringUtil;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class CodeCounter {
     static long normalLines = 0; // 正常行数

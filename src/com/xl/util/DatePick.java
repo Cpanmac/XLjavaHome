@@ -133,7 +133,7 @@ public class DatePick {
                 if (MONTH_START.equals(meth)) {
                     res = sdf_date.format(cal.getTime());
                 } else if (MONTH_END.equals(meth)) {
-					/* set 本月最后一天 */
+                    /* set 本月最后一天 */
                     cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
 					/* 如果本月最后一天是星期天表示本月结束，否则就在本月的最后一个星期天的基础上加一周 */
                     if (cal.get(Calendar.WEEK_OF_MONTH) != 6) {

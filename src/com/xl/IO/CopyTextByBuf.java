@@ -1,10 +1,6 @@
 package com.xl.IO;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class CopyTextByBuf {
     public static void main(String[] args) {

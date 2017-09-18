@@ -23,6 +23,7 @@ public class RegTool {
         // 比较叼的匹配
         //		 while(mail.indexOf("@")!=-1&&mail.indexOf("."))
     }
+
     /**
      * 得到所有的中文
      *

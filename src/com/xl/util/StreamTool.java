@@ -1,10 +1,6 @@
 package com.xl.util;
 
-import java.io.ByteArrayOutputStream;
-import java.io.CharArrayWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.Reader;
+import java.io.*;
 
 public class StreamTool {
     /**
