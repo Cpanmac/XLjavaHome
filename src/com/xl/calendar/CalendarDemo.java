@@ -6,14 +6,14 @@ import java.util.Calendar;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ĞìÁ¢
+ * User: å¾ç«‹
  * Date: 2017/9/19
  * Time: 13:29
  * To change this template use File | Settings | File Templates.
  */
 public class CalendarDemo {
     /**
-     * monthÊÇ-1µÄ
+     * monthæ˜¯-1çš„
      */
     @Test
     public void calendarTest() {
@@ -25,5 +25,13 @@ public class CalendarDemo {
         System.out.println("HOUR_OF_DAY:"+c.get(Calendar.HOUR_OF_DAY));
         System.out.println("MINUTE:"+c.get(Calendar.MINUTE));
         System.out.println("MILLISECOND:"+c.get(Calendar.MILLISECOND));
+    }
+
+    @Test
+    public void compareTest() {
+        Calendar tomorrow = Calendar.getInstance();//æ˜å¤©
+        tomorrow.add(Calendar.DATE,1);
+        Calendar now = Calendar.getInstance();
+        System.out.println(tomorrow.compareTo(now));   //1
     }
 }
