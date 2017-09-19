@@ -22,5 +22,8 @@ public class CalendarDemo {
         System.out.println("MONTH:"+c.get(Calendar.MONTH));
         System.out.println("DAY_OF_YEAR:"+c.get(Calendar.DAY_OF_YEAR));
         System.out.println("DAY_OF_MONTH:"+c.get(Calendar.DAY_OF_MONTH));
+        System.out.println("HOUR_OF_DAY:"+c.get(Calendar.HOUR_OF_DAY));
+        System.out.println("MINUTE:"+c.get(Calendar.MINUTE));
+        System.out.println("MILLISECOND:"+c.get(Calendar.MILLISECOND));
     }
 }
