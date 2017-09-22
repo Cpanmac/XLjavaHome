@@ -60,6 +60,21 @@ public class FileTool {
     }
 
     /**
+     * 获取资源目录下的文件
+     *
+     * @param path
+     * @return
+     */
+    public static File getResourceFile(String path) {
+        File f = new File(FileTool.class.getResource("/" + path).getFile());
+        return f;
+    }
+
+    public static InputStream getResourceInputStream(String path) {
+        return FileTool.class.getResourceAsStream("/" + path);
+    }
+
+    /**
      * 利用第三方开源包cpdetector获取文件编码格式
      *
      * @param file
