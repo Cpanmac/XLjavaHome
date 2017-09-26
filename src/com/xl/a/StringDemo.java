@@ -3,6 +3,7 @@ package com.xl.a;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -25,5 +26,11 @@ public class StringDemo {
         result.add("ddd");
         String s = org.apache.commons.lang.StringUtils.join(result.iterator(), "、");
         System.out.println(s);
+    }
+
+    @Test
+    public void spiltTest() {
+        String s = "测试";
+        System.out.println(Arrays.toString(s.split(",")));
     }
 }
