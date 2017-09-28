@@ -1,11 +1,27 @@
 package com.xl.util;
 
-import info.monitorenter.cpdetector.io.*;
+import info.monitorenter.cpdetector.io.ASCIIDetector;
+import info.monitorenter.cpdetector.io.CodepageDetectorProxy;
+import info.monitorenter.cpdetector.io.JChardetFacade;
+import info.monitorenter.cpdetector.io.ParsingDetector;
+import info.monitorenter.cpdetector.io.UnicodeDetector;
 import org.junit.Test;
 
 import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;

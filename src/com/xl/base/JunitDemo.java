@@ -1,7 +1,12 @@
 package com.xl.base;
 
 import com.xl.entity.Person;
-import org.junit.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class JunitDemo {
     // 使用Junit测试加@Test就可以 要直接测试所有的方法就点击类名，然后run as

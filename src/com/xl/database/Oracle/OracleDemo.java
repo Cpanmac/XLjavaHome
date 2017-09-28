@@ -1,8 +1,13 @@
 package com.xl.database.Oracle;
 
-import java.sql.*;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-//Ê¹ÓÃjdbcÁ¬½Óoracl7e
+//Ê¹ï¿½ï¿½jdbcï¿½ï¿½ï¿½ï¿½oracl7e
 public class OracleDemo {
     private static String className = "oracle.jdbc.driver.OracleDriver";
     private static String name = "xl";
@@ -10,20 +15,20 @@ public class OracleDemo {
 
     public static void main(String[] args) {
         try {
-            // 1.¼ÓÔØÇý¶¯
+            // 1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Class.forName(className);
-            System.out.println("¿ªÊ¼Á¬½Óoracle");
-            // 2.µÃµ½Á¬½Ó Êý¾Ý¿âµÄurl,ÓÃ»§Ãû£¬ÃÜÂë Ç°ÃæµÄurlÍ¨¹ýjava
-            // buildpathµ¼ÈëoracleÇý¶¯jar°ü£¨Ãû×Ö½Ðclasses12.jar)
+            System.out.println("ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½oracle");
+            // 2.ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½url,ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç°ï¿½ï¿½ï¿½urlÍ¨ï¿½ï¿½java
+            // buildpathï¿½ï¿½ï¿½ï¿½oracleï¿½ï¿½ï¿½ï¿½jarï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½classes12.jar)
             Connection ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:orcl", name, password);
-            // ´ÓÏÂÃæ¿ªÊ¼ºÍsql serverÒ»Ä£Ò»Ñù
+            // ï¿½ï¿½ï¿½ï¿½ï¿½æ¿ªÊ¼ï¿½ï¿½sql serverÒ»Ä£Ò»ï¿½ï¿½
             Statement sm = ct.createStatement();
             ResultSet rs = sm.executeQuery("select * from emp");
             while (rs.next()) {
-                // ÓÃ»§Ãû,ÏÈ¿´ÐÕÃûÊÇÄÄ¸ö×Ö¶Î,ÊÇµÚ¶þ¸ö£¬ËùÒÔgetString(2),´Ó1¿ªÊ¼µÄ
-                System.out.println("ÓÃ»§Ãû£º" + rs.getString(2));
+                // ï¿½Ã»ï¿½ï¿½ï¿½,ï¿½È¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Ö¶ï¿½,ï¿½ÇµÚ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½getString(2),ï¿½ï¿½1ï¿½ï¿½Ê¼ï¿½ï¿½
+                System.out.println("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½" + rs.getString(2));
             }
-            // ¹Ø±Õ´ò¿ªµÄ×ÊÔ´
+            // ï¿½Ø±Õ´ò¿ªµï¿½ï¿½ï¿½Ô´
             rs.close();
             sm.close();
             ct.close();
@@ -36,25 +41,25 @@ public class OracleDemo {
         Connection ct = null;
         CallableStatement cs = null;
         try {
-            // 1.¼ÓÔØÇý¶¯
+            // 1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Class.forName("oracle.jdbc.driver.OracleDriver");
             ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:ORCL", "scott", "q123");
-            System.out.println("¼ÓÔØ³É¹¦");
-            // 2.´´½¨CallableStatement,ÓÐ¼¸¸ö²ÎÊýÒ²¼¸¸öÎÊºÅ
+            System.out.println("ï¿½ï¿½ï¿½Ø³É¹ï¿½");
+            // 2.ï¿½ï¿½ï¿½ï¿½CallableStatement,ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½
             cs = ct.prepareCall("{call sp_pro8(?,?,?,?)}");
-            //¸øµÚÒ»¸ö£¿setProperty
+            //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½setProperty
             cs.setInt(1, 7788);
-            //¸øµÚ¶þ¸ö£¿setProperty£¬ÕâÊÇ½ÓÊÕ,Èç¹ûÊÇÓÎ±êµÄ»°OracleTypes.CURSOR
+            //ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½setPropertyï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î±ï¿½Ä»ï¿½OracleTypes.CURSOR
             cs.registerOutParameter(2, oracle.jdbc.OracleTypes.VARCHAR);
             cs.registerOutParameter(3, oracle.jdbc.OracleTypes.DOUBLE);
             cs.registerOutParameter(4, oracle.jdbc.OracleTypes.VARCHAR);
-            // Ö´ÐÐ
+            // Ö´ï¿½ï¿½
             cs.execute();
-            //			È¡³ö·µ»ØÖµ,Òª×¢Òâ£¿µÄË³Ðò
+            //			È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ,Òª×¢ï¿½â£¿ï¿½ï¿½Ë³ï¿½ï¿½
             String name = cs.getString(2);
             double sal = cs.getDouble(3);
             String job = cs.getString(4);
-            System.out.println("ÐÕÃûÊÇ£º" + name + "Ð½Ë®ÊÇ£º" + sal + "Ôª£¬¹¤×÷ÊÇ£º" + job);
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½" + name + "Ð½Ë®ï¿½Ç£ï¿½" + sal + "Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½" + job);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -63,7 +68,7 @@ public class OracleDemo {
             try {
                 cs.close();
                 ct.close();
-                System.out.println("¹Ø±Õ³É¹¦£¡");
+                System.out.println("ï¿½Ø±Õ³É¹ï¿½ï¿½ï¿½");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -74,21 +79,21 @@ public class OracleDemo {
         Connection ct = null;
         CallableStatement cs = null;
         try {
-            // 1.¼ÓÔØÇý¶¯
+            // 1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Class.forName("oracle.jdbc.driver.OracleDriver");
             ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:ORCL", "xl", "xl");
-            System.out.println("¼ÓÔØ³É¹¦");
-            // 2.´´½¨CallableStatement,ÓÐ¼¸¸ö²ÎÊýÒ²¼¸¸öÎÊºÅ
+            System.out.println("ï¿½ï¿½ï¿½Ø³É¹ï¿½");
+            // 2.ï¿½ï¿½ï¿½ï¿½CallableStatement,ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½
             cs = ct.prepareCall("{call sp_pro9(?,?)}");
-            // ¸øµÚÒ»¸ö£¿setProperty£¬²éÔÄ10ºÅ²¿ÃÅ
+            // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½setPropertyï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½Å²ï¿½ï¿½ï¿½
             cs.setInt(1, 10);
-            // ¸øµÚ¶þ¸ö£¿setProperty£¬ÕâÊÇ½ÓÊÕ
+            // ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½setPropertyï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½
             cs.registerOutParameter(2, oracle.jdbc.OracleTypes.CURSOR);
-            // Ö´ÐÐ
+            // Ö´ï¿½ï¿½
             cs.execute();
-            // È¡³ö·µ»ØÖµ,Òª×¢Òâ£¿µÄË³Ðò
+            // È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ,Òª×¢ï¿½â£¿ï¿½ï¿½Ë³ï¿½ï¿½
             String name = cs.getString(2);
-            // µÃµ½½á¹û¼¯
+            // ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             ResultSet rs = (ResultSet) cs.getObject(2);
             while (rs.next()) {
                 System.out.println(rs.getInt(1) + "  " + rs.getString(2));
@@ -101,7 +106,7 @@ public class OracleDemo {
             try {
                 cs.close();
                 ct.close();
-                System.out.println("¹Ø±Õ³É¹¦£¡");
+                System.out.println("ï¿½Ø±Õ³É¹ï¿½ï¿½ï¿½");
             } catch (SQLException e2) {
                 e2.printStackTrace();
             }

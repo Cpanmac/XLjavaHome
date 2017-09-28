@@ -1,4 +1,4 @@
-package com.itcast.face;
+package com.xl.face;
 
 public class OddTest {
     public static boolean isOdd(int i) {

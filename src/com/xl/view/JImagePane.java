@@ -1,4 +1,4 @@
-package com.view;
+package com.xl.view;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

@@ -1,4 +1,4 @@
-package com.itcast.face;
+package com.xl.face;
 
 public class GoodBye {
     public static void main(String[] args) {

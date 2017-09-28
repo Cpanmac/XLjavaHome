@@ -3,7 +3,7 @@
  *
  * Created on __DATE__, __TIME__
  */
-package com.view;
+package com.xl.view;
 
 import com.xl.file.FileService;
 

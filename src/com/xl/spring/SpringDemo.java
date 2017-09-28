@@ -1,4 +1,4 @@
-package com.spring;
+package com.xl.spring;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

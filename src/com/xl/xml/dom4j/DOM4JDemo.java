@@ -11,7 +11,11 @@ import org.dom4j.io.XMLWriter;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.Iterator;
 import java.util.List;
 //乱码产生原因:io流

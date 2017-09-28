@@ -1,4 +1,4 @@
-package com.game;
+package com.xl.game;
 
 import javax.swing.*;
 import java.awt.*;
