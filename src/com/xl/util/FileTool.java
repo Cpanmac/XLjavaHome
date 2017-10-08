@@ -86,6 +86,12 @@ public class FileTool {
         return f;
     }
 
+    /**
+     * 获取资源目录下的输入流
+     *
+     * @param path
+     * @return
+     */
     public static InputStream getResourceInputStream(String path) {
         return FileTool.class.getResourceAsStream("/" + path);
     }

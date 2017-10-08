@@ -19,25 +19,35 @@ public class CalendarDemo {
     @Test
     public void calendarTest() {
         Calendar c = Calendar.getInstance();
-        System.out.println("YEAR:" + c.get(Calendar.YEAR));
-        System.out.println("MONTH:" + c.get(Calendar.MONTH));
-        System.out.println("DAY_OF_YEAR:" + c.get(Calendar.DAY_OF_YEAR));
-        System.out.println("DAY_OF_MONTH:" + c.get(Calendar.DAY_OF_MONTH));
-        System.out.println("HOUR_OF_DAY:" + c.get(Calendar.HOUR_OF_DAY));
-        System.out.println("MINUTE:" + c.get(Calendar.MINUTE));
-        System.out.println("MILLISECOND:" + c.get(Calendar.MILLISECOND));
-        c.set(Calendar.DATE, 1);
-        System.out.println(TimeUtil.formatDate(c.getTime(), "yyyy-MM-dd"));
-        c.set(Calendar.MONTH, 0);
-        System.out.println(TimeUtil.formatDate(c.getTime(), "yyyy-MM-dd"));
+        System.out.println("YEAR:"+c.get(Calendar.YEAR));
+        System.out.println("MONTH:"+c.get(Calendar.MONTH));
+        System.out.println("DAY_OF_YEAR:"+c.get(Calendar.DAY_OF_YEAR));
+        System.out.println("DAY_OF_MONTH:"+c.get(Calendar.DAY_OF_MONTH));
+        System.out.println("HOUR_OF_DAY:"+c.get(Calendar.HOUR_OF_DAY));
+        System.out.println("MINUTE:"+c.get(Calendar.MINUTE));
+        System.out.println("MILLISECOND:"+c.get(Calendar.MILLISECOND));
+        c.set(Calendar.DATE,1);
+        System.out.println(TimeUtil.formatDate(c.getTime(),"yyyy-MM-dd"));
+        c.set(Calendar.MONTH,0);
+        System.out.println(TimeUtil.formatDate(c.getTime(),"yyyy-MM-dd"));
     }
 
     @Test
     public void compareTest() {
         Calendar tomorrow = Calendar.getInstance();//明天
-        tomorrow.add(Calendar.DATE, 1);
+        tomorrow.add(Calendar.DATE,1);
         Calendar now = Calendar.getInstance();
         System.out.println(tomorrow.compareTo(now));   //1
         System.out.println(now.compareTo(now));   //0
+    }
+
+    @Test
+    public void todateTest() {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.HOUR_OF_DAY,0);
+        c.set(Calendar.MINUTE,0);
+        c.set(Calendar.SECOND,0);
+        System.out.println(TimeUtil.formatDate(c.getTime(), "yyyy-MM-dd HH:ss:mm"));
+        System.out.println(TimeUtil.formatDate(c.getTime(), "yyyy-MM-dd HH:ss:mm"));
     }
 }
