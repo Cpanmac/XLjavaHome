@@ -6,6 +6,18 @@ public class Student {
     private int age;
     private String phone;
 
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public Student(String sex, String name, int age, String phone) {
+        this.sex = sex;
+        this.name = name;
+        this.age = age;
+        this.phone = phone;
+    }
+
     public String getSex() {
         return sex;
     }

@@ -4,11 +4,13 @@ package com.xl.collections;
  * 往TreeSet集合中存储自定义对象学生. 想按照学生的年龄进行排序
  */
 
+import com.xl.entity.Student;
+
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
 
-class TreeSetDemo {
+public class TreeSetDemo {
     public static void main(String[] args) {
         TreeSet<Student> ts = null;
         ts = new TreeSet<Student>(new Comparator<Student>() {
@@ -35,21 +37,3 @@ class TreeSetDemo {
     }
 }
 
-class Student // 强制让学生具备比较性。
-{
-    private String name;
-    private int age;
-
-    Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-}
