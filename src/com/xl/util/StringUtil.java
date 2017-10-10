@@ -1,7 +1,10 @@
 package com.xl.util;
 
+import org.junit.Test;
+
 import java.io.File;
 import java.net.URISyntaxException;
+import java.util.Collection;
 
 /**
  * Title: StringUtil Description: 字符串处理公共组件
@@ -196,11 +199,6 @@ public class StringUtil {
         return retstr;
     }
 
-    public static void main(String args[]) {
-        String s = "E:\\workproject\\JspXMLProject\\WebRoot\\WEB-INF\\classes";
-        String m = rLeft(s, "Webroot");
-        System.out.println("m==" + m);
-    }
 
     public static String safeToString(Object obj, String s) {
         if (obj == null) {
