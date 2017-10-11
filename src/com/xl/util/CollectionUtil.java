@@ -84,5 +84,4 @@ public class CollectionUtil {
         }
         return _result;
     }
-
 }

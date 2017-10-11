@@ -138,7 +138,7 @@ public class DatePick {
                     /* 如果本月最后一天是星期天表示本月结束，否则就在本月的最后一个星期天的基础上加一周 */
                     if (cal.get(Calendar.WEEK_OF_MONTH) != 6) {
                         cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
-						/* 增加一个星期，才是我们中国人理解的本周日的日期 */
+                        /* 增加一个星期，才是我们中国人理解的本周日的日期 */
                         cal.add(Calendar.WEEK_OF_YEAR, 1);
                     }
                     res = sdf_date.format(cal.getTime());
@@ -294,7 +294,7 @@ public class DatePick {
                 if ("month".equals(type)) {
                     res = (orgY - nowY) * 12 + orgM - nowM;
                 } else if ("quarter".equals(type)) {
-					/* 由于Calendar.MONTH中将一月的返回值定为0，所以这里把月份值都加上1再处理 */
+                    /* 由于Calendar.MONTH中将一月的返回值定为0，所以这里把月份值都加上1再处理 */
                     res = (orgY - nowY) * 4 + (orgM + 1) / 4 - (nowM + 1) / 4;
                 }
             } catch (ParseException e) {
