@@ -34,7 +34,6 @@ public class JunitDemo {
     @Test
     public void testRun() {
         // Person p = new Person();
-        p.run();
         // 断言.里面很多方法
         // 一个期望值，一个返回值
         // Assert.assertEquals("2",p.run());
