@@ -1,6 +1,7 @@
 package com.xl.encode;
 
 import com.xl.util.FileTool;
+import com.xl.util.StringUtil;
 import org.junit.Test;
 
 import java.io.File;
@@ -31,7 +32,25 @@ public class EncoderDemo {
         List<File> fileList = FileTool.queryAll(FileTool.getProjectPath(), "java");
         for (int i = 0; i < fileList.size(); i++) {
             File file = fileList.get(i);
-            System.out.println(file.getName() + ":" + FileTool.getFileEncode(file));
+            String encode = FileTool.getFileEncode(file);
+            if (encode != null && !encode.equals("UTF-8")) {
+                OutputStreamWriter w1 = null;
+                try {
+                    String content = FileTool.getContent(file);
+                    if (StringUtil.isEmpty(content)) {
+                        System.out.println(file.getAbsolutePath() + "为空");
+                    } else {
+                        w1 = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
+                        w1.write(content);
+                        w1.flush();
+                        System.out.println(file.getAbsolutePath() + "转换完成:" + content);
+                    }
+                } finally {
+                    if (w1 != null) {
+                        w1.close();
+                    }
+                }
+            }
         }
     }
 
