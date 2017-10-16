@@ -6,49 +6,49 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.Date;
-//»ñÈ¡Ä¿Â¼/ÎÄ¼şĞÅÏ¢
+//è·å–ç›®å½•/æ–‡ä»¶ä¿¡æ¯
 
 public class FileInfoDemo extends JFrame {
     public static final int HEIGHT = 600;
-    JTextField jtfPath;    //ÎÄ¼şÂ·¾¶ÊäÈë¿ò
-    JTextArea jtaInfo;    //ÏÔÊ¾ÎÄ¼şÊôĞÔÎÄ±¾¿ò
+    JTextField jtfPath;    //æ–‡ä»¶è·¯å¾„è¾“å…¥æ¡†
+    JTextArea jtaInfo;    //æ˜¾ç¤ºæ–‡ä»¶å±æ€§æ–‡æœ¬æ¡†
     private int width = 800;
 
     public FileInfoDemo() {
-        super("È¡µÃÄ¿Â¼/ÎÄ¼şĞÅÏ¢");    //µ÷ÓÃ¸¸Àà¹¹Ôìº¯Êı
+        super("å–å¾—ç›®å½•/æ–‡ä»¶ä¿¡æ¯");    //è°ƒç”¨çˆ¶ç±»æ„é€ å‡½æ•°
         //        setLayout(new ScrollPaneLayout());
-        jtfPath = new JTextField(16);    //ÊµÀı»¯ÎÄ¼şÊäÈë¿ò
-        JButton jbSelectedFile = new JButton("Ñ¡Ôñ");    //ÊµÀı»¯ÎÄ¼şÑ¡Ôñ°´Å¥
-        JPanel panel = new JPanel();    //Ãæ°å,ÓÃÓÚÈİÄÉÊäÈë¿òºÍÎÄ¼şÑ¡Ôñ°´Å¥
-        jtaInfo = new JTextArea();    //ÊµÀı»¯ÎÄ¼şĞÅÏ¢ÏÔÊ¾¿ò
-        panel.add(jtfPath);    //Ôö¼Ó×é¼şµ½Ãæ°å
+        jtfPath = new JTextField(16);    //å®ä¾‹åŒ–æ–‡ä»¶è¾“å…¥æ¡†
+        JButton jbSelectedFile = new JButton("é€‰æ‹©");    //å®ä¾‹åŒ–æ–‡ä»¶é€‰æ‹©æŒ‰é’®
+        JPanel panel = new JPanel();    //é¢æ¿,ç”¨äºå®¹çº³è¾“å…¥æ¡†å’Œæ–‡ä»¶é€‰æ‹©æŒ‰é’®
+        jtaInfo = new JTextArea();    //å®ä¾‹åŒ–æ–‡ä»¶ä¿¡æ¯æ˜¾ç¤ºæ¡†
+        panel.add(jtfPath);    //å¢åŠ ç»„ä»¶åˆ°é¢æ¿
         panel.add(jbSelectedFile);
         //        this.setLocation(200, 200);
-        setLocationRelativeTo(getOwner());//¾çÖĞ
-        Container container = getContentPane();    //µÃµ½ÈİÆ÷
-        container.add(panel, BorderLayout.NORTH);    //Ôö¼Ó×é¼şµ½ÈİÆ÷ÉÏ
+        setLocationRelativeTo(getOwner());//å‰§ä¸­
+        Container container = getContentPane();    //å¾—åˆ°å®¹å™¨
+        container.add(panel, BorderLayout.NORTH);    //å¢åŠ ç»„ä»¶åˆ°å®¹å™¨ä¸Š
         JScrollPane jsp = new JScrollPane(jtaInfo);
-        jsp.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));    //ÉèÖÃ±ß½ç
+        jsp.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));    //è®¾ç½®è¾¹ç•Œ
         container.add(jsp, BorderLayout.CENTER);
-        jbSelectedFile.addActionListener(new ActionListener() {    //Ñ¡ÔñÎÄ¼ş°´Å¥ÊÂ¼ş´¦Àí
+        jbSelectedFile.addActionListener(new ActionListener() {    //é€‰æ‹©æ–‡ä»¶æŒ‰é’®äº‹ä»¶å¤„ç†
             public void actionPerformed(ActionEvent event) {
-                JFileChooser fileChooser = new JFileChooser();        //ÊµÀı»¯ÎÄ¼şÑ¡ÔñÆ÷
-                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);  //ÉèÖÃÎÄ¼şÑ¡ÔñÄ£Ê½,´Ë´¦ÎªÎÄ¼şºÍÄ¿Â¼¾ù¿É
-                if (fileChooser.showOpenDialog(FileInfoDemo.this) == JFileChooser.APPROVE_OPTION) {    //µ¯³öÎÄ¼şÑ¡ÔñÆ÷,²¢ÅĞ¶ÏÊÇ·ñµã»÷ÁË´ò¿ª°´Å¥
-                    String fileName = fileChooser.getSelectedFile().getAbsolutePath();    //µÃµ½Ñ¡ÔñÎÄ¼ş»òÄ¿Â¼µÄ¾ø¶ÔÂ·¾¶
+                JFileChooser fileChooser = new JFileChooser();        //å®ä¾‹åŒ–æ–‡ä»¶é€‰æ‹©å™¨
+                fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);  //è®¾ç½®æ–‡ä»¶é€‰æ‹©æ¨¡å¼,æ­¤å¤„ä¸ºæ–‡ä»¶å’Œç›®å½•å‡å¯
+                if (fileChooser.showOpenDialog(FileInfoDemo.this) == JFileChooser.APPROVE_OPTION) {    //å¼¹å‡ºæ–‡ä»¶é€‰æ‹©å™¨,å¹¶åˆ¤æ–­æ˜¯å¦ç‚¹å‡»äº†æ‰“å¼€æŒ‰é’®
+                    String fileName = fileChooser.getSelectedFile().getAbsolutePath();    //å¾—åˆ°é€‰æ‹©æ–‡ä»¶æˆ–ç›®å½•çš„ç»å¯¹è·¯å¾„
                     jtfPath.setText(fileName);
-                    showFileInfo(jtfPath.getText());    //ÏÔÊ¾ÎÄ¼şĞÅÏ¢
+                    showFileInfo(jtfPath.getText());    //æ˜¾ç¤ºæ–‡ä»¶ä¿¡æ¯
                 }
             }
         });
-        jtfPath.addActionListener(new ActionListener() {    //ÎÄ¼şÂ·¾¶ÊäÈë¿òÊÂ¼ş´¦Àí
+        jtfPath.addActionListener(new ActionListener() {    //æ–‡ä»¶è·¯å¾„è¾“å…¥æ¡†äº‹ä»¶å¤„ç†
             public void actionPerformed(ActionEvent event) {
-                showFileInfo(jtfPath.getText());    //ÏÔÊ¾ÎÄ¼şĞÅÏ¢
+                showFileInfo(jtfPath.getText());    //æ˜¾ç¤ºæ–‡ä»¶ä¿¡æ¯
             }
         });
-        setSize(width, HEIGHT);    //ÉèÖÃ´°¿Ú³ß´ç
-        setVisible(true);    //ÉèÖÃ´°¿Ú¿ÉÊÓ
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    //¹Ø±Õ´°¿ÚÊ±ÍË³ö³ÌĞò
+        setSize(width, HEIGHT);    //è®¾ç½®çª—å£å°ºå¯¸
+        setVisible(true);    //è®¾ç½®çª—å£å¯è§†
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    //å…³é—­çª—å£æ—¶é€€å‡ºç¨‹åº
     }
 
     public static void main(String[] args) {
@@ -56,25 +56,25 @@ public class FileInfoDemo extends JFrame {
     }
 
     public void showFileInfo(String filename) {
-        jtaInfo.setText("");    //Çå¿ÕĞÅÏ¢ÏÔÊ¾¿ò
-        File f = new File(filename);    //ÒÔµÃµ½µÄÂ·¾¶ÊµÀı»¯ÎÄ¼ş¶ÔÏó
-        jtaInfo.append(filename + ":\n");    //ÔÚĞÅÏ¢ÏÔÊ¾´°¿ÚÔö¼ÓÏÔÊ¾ÎÄ±¾
-        if (f.isDirectory()) {    //ÊÇ·ñÎªÄ¿Â¼
-            jtaInfo.append("ÊÇÒ»¸öÄ¿Â¼");
-        } else if (f.isFile()) {    //ÊÇ·ñÎªÎÄ¼ş
-            jtaInfo.append("ÊÇÒ»¸öÎÄ¼ş");
+        jtaInfo.setText("");    //æ¸…ç©ºä¿¡æ¯æ˜¾ç¤ºæ¡†
+        File f = new File(filename);    //ä»¥å¾—åˆ°çš„è·¯å¾„å®ä¾‹åŒ–æ–‡ä»¶å¯¹è±¡
+        jtaInfo.append(filename + ":\n");    //åœ¨ä¿¡æ¯æ˜¾ç¤ºçª—å£å¢åŠ æ˜¾ç¤ºæ–‡æœ¬
+        if (f.isDirectory()) {    //æ˜¯å¦ä¸ºç›®å½•
+            jtaInfo.append("æ˜¯ä¸€ä¸ªç›®å½•");
+        } else if (f.isFile()) {    //æ˜¯å¦ä¸ºæ–‡ä»¶
+            jtaInfo.append("æ˜¯ä¸€ä¸ªæ–‡ä»¶");
         }
-        jtaInfo.append("\n ¿É¶Á: " + f.canRead()); //µÃµ½¿É¶ÁÊôĞÔ
-        jtaInfo.append("\n ¿ÉĞ´: " + f.canWrite());    //µÃµ½¿ÉĞ´ÊôĞÔ
-        jtaInfo.append("\n Òş²Ø: " + f.isHidden());  //ÊÇ·ñÊÇÒş²ØÎÄ¼ş
-        jtaInfo.append("\n Ö»¶Á: " + f.setReadOnly());  //ÊÇ·ñÊÇÖ»¶ÁÎÄ¼ş
-        long modifyDate = f.lastModified();    //µÃµ½×îºóĞŞ¸ÄÈÕÆÚ
+        jtaInfo.append("\n å¯è¯»: " + f.canRead()); //å¾—åˆ°å¯è¯»å±æ€§
+        jtaInfo.append("\n å¯å†™: " + f.canWrite());    //å¾—åˆ°å¯å†™å±æ€§
+        jtaInfo.append("\n éšè—: " + f.isHidden());  //æ˜¯å¦æ˜¯éšè—æ–‡ä»¶
+        jtaInfo.append("\n åªè¯»: " + f.setReadOnly());  //æ˜¯å¦æ˜¯åªè¯»æ–‡ä»¶
+        long modifyDate = f.lastModified();    //å¾—åˆ°æœ€åä¿®æ”¹æ—¥æœŸ
         if (modifyDate != 0) {
-            jtaInfo.append("\n ×îºóĞŞ¸ÄÈÕÆÚ: " + new Date(modifyDate));
+            jtaInfo.append("\n æœ€åä¿®æ”¹æ—¥æœŸ: " + new Date(modifyDate));
         }
-        long length = f.length();    //µÃµ½ÎÄ¼ş³¤¶È(Èç¹ûÊÇÄ¿Â¼,ÔòÎª0)
+        long length = f.length();    //å¾—åˆ°æ–‡ä»¶é•¿åº¦(å¦‚æœæ˜¯ç›®å½•,åˆ™ä¸º0)
         if (length != 0) {
-            jtaInfo.append("\n ÎÄ¼ş³¤¶È: " + length);
+            jtaInfo.append("\n æ–‡ä»¶é•¿åº¦: " + length);
         }
     }
 }

@@ -13,7 +13,7 @@ class DataStreamDemo {
     }
 
     public static void readData() throws IOException {
-        //°´Ë³Ğò¶Á£¬±ğÏ¹¶Á,¶Á·´µÄ»°ÊÇ´íµÄ£¡
+        //æŒ‰é¡ºåºè¯»ï¼Œåˆ«çè¯»,è¯»åçš„è¯æ˜¯é”™çš„ï¼
         DataInputStream dis = new DataInputStream(new FileInputStream("data.txt"));
         int num = dis.readInt();
         boolean b = dis.readBoolean();
@@ -26,13 +26,13 @@ class DataStreamDemo {
         dis.close();
     }
 
-    public static void writeData() throws IOException  //Ğ´Èë
+    public static void writeData() throws IOException  //å†™å…¥
     {
         DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.txt"));
-        dos.writeInt(234);  //4¸ö×Ö½Ú
-        dos.writeBoolean(true);  //1¸ö×Ö½Ú
-        dos.writeDouble(912.112); //8¸ö×Ö½Ú Éú³ÉµÄtxtÎÄ¼ş¿Ï¶¨ÊÇ13¸ö×Ö½Ú
-        dos.writeUTF("¹şà¶");    //ÒÔUTF-8ĞŞ¸Ä°æĞ´Èë£¬Ö»ÄÜÓÃÏàÓ¦µÄ¶ÁÈ¡·½Ê½¶ÁÈ¡£¬ÓÃ×ª»»Á÷£¬¶Á²»³ö
+        dos.writeInt(234);  //4ä¸ªå­—èŠ‚
+        dos.writeBoolean(true);  //1ä¸ªå­—èŠ‚
+        dos.writeDouble(912.112); //8ä¸ªå­—èŠ‚ ç”Ÿæˆçš„txtæ–‡ä»¶è‚¯å®šæ˜¯13ä¸ªå­—èŠ‚
+        dos.writeUTF("å“ˆå–½");    //ä»¥UTF-8ä¿®æ”¹ç‰ˆå†™å…¥ï¼Œåªèƒ½ç”¨ç›¸åº”çš„è¯»å–æ–¹å¼è¯»å–ï¼Œç”¨è½¬æ¢æµï¼Œè¯»ä¸å‡º
         dos.close();
     }
 }

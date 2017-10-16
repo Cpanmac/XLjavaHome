@@ -5,7 +5,7 @@ import java.net.Socket;
 
 public class TcpClient {
     public static void main(String[] args) throws Exception {
-        // ´´½¨¿Í»§¶ËµÄsocket·şÎñ¡£Ö¸¶¨Ä¿µÄµÄÖ÷»úºÍ¶Ë¿Ú
+        // åˆ›å»ºå®¢æˆ·ç«¯çš„socketæœåŠ¡ã€‚æŒ‡å®šç›®çš„çš„ä¸»æœºå’Œç«¯å£
         Socket s = new Socket("192.168.1.254", 10003);
         OutputStream out = s.getOutputStream();
         out.write("top ge men lai le".getBytes());

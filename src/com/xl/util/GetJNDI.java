@@ -5,18 +5,18 @@ import javax.naming.InitialContext;
 import java.util.Properties;
 
 /**
- * @author ĞìÁ¢
- * @Decription Ejb, Weblogic²éÕÒJNDIµÄ¹¤¾ßÀà
+ * @author å¾ç«‹
+ * @Decription Ejb, WeblogicæŸ¥æ‰¾JNDIçš„å·¥å…·ç±»
  * @date 2013-12-21
  */
 public class GetJNDI {
     private static int webType = 0;
-    // EJB·şÎñÆ÷IPµØÖ·
+    // EJBæœåŠ¡å™¨IPåœ°å€
     private static String ejbServerIP = "";
-    // EJB·şÎñÆ÷¶Ë¿Ú
+    // EJBæœåŠ¡å™¨ç«¯å£
     private static String ejbServerPort = "";
 
-    // ÊÊÓÃ°æ±¾£ºWebLogic 10g/11g
+    // é€‚ç”¨ç‰ˆæœ¬ï¼šWebLogic 10g/11g
     public static Object webLogic10(String mappedName, String className) {
         try {
             Properties env = new Properties();
@@ -29,7 +29,7 @@ public class GetJNDI {
         }
     }
 
-    // ÊÊÓÃ°æ±¾£ºJBoss 4.2.3
+    // é€‚ç”¨ç‰ˆæœ¬ï¼šJBoss 4.2.3
     public static Object jBoss4(String mappedName) {
         try {
             Properties env = new Properties();
@@ -42,7 +42,7 @@ public class GetJNDI {
         }
     }
 
-    // ÊÊÓÃ°æ±¾£ºJBoss 5.0.0/5.0.1/6.0.0/6.1.0
+    // é€‚ç”¨ç‰ˆæœ¬ï¼šJBoss 5.0.0/5.0.1/6.0.0/6.1.0
     public static Object jBoss5(String mappedName) {
         try {
             Properties env = new Properties();
@@ -55,7 +55,7 @@ public class GetJNDI {
         }
     }
 
-    // ÊÊÓÃ°æ±¾£ºJBoss 7.1.1 Ğè´«ÈëEJBµÄJar°üÃû
+    // é€‚ç”¨ç‰ˆæœ¬ï¼šJBoss 7.1.1 éœ€ä¼ å…¥EJBçš„JaråŒ…å
     public static Object jBoss7(String jarName, String mappedName) {
         try {
             Properties env = new Properties();
@@ -68,7 +68,7 @@ public class GetJNDI {
         }
     }
 
-    // EJB·şÎñÆ÷µØÖ·ºÍ¶Ë¿ÚÍêÕûÊ±µÄ×ÔÊÊÓ¦·½·¨
+    // EJBæœåŠ¡å™¨åœ°å€å’Œç«¯å£å®Œæ•´æ—¶çš„è‡ªé€‚åº”æ–¹æ³•
     public Object initLookup(String jarName, String mappedName, String className) {
         if (null != webLogic10(mappedName, className)) {
             webType = 1;
@@ -82,7 +82,7 @@ public class GetJNDI {
         return webType == 0 ? null : lookup(jarName, mappedName, className);
     }
 
-    // EJB·şÎñÆ÷µØÖ·»ò¶Ë¿Ú²ĞÈ±Ê±µÄ×ÔÊÊÓ¦·½·¨
+    // EJBæœåŠ¡å™¨åœ°å€æˆ–ç«¯å£æ®‹ç¼ºæ—¶çš„è‡ªé€‚åº”æ–¹æ³•
     public Object autoLookup(String jarName, String mappedName, String className) {
         ejbServerIP = ejbServerIP.length() == 0 ? "localhost" : ejbServerIP;
         ejbServerPort = ejbServerPort.length() == 0 ? "7001" : ejbServerPort;

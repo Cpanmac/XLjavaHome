@@ -16,10 +16,10 @@ public class DateUtil {
     }
 
     /**
-     * ½«×Ö·û´®×ª»»³ÉÈÕÆÚÀàĞÍ yyyy-MM-dd
+     * å°†å­—ç¬¦ä¸²è½¬æ¢æˆæ—¥æœŸç±»å‹ yyyy-MM-dd
      *
-     * @param date ´«ÈëµÄ×Ö·û´®
-     * @return ×ª»»³ÉµÄÈÕÆÚÖµ
+     * @param date ä¼ å…¥çš„å­—ç¬¦ä¸²
+     * @return è½¬æ¢æˆçš„æ—¥æœŸå€¼
      */
     public static Date parseDate(String date) {
         Date ret = null;
@@ -34,10 +34,10 @@ public class DateUtil {
     }
 
     /**
-     * ½«×Ö·û´®×ª»»³ÉÈÕÆÚÀàĞÍ yyyy-MM-dd HH:mm:ss
+     * å°†å­—ç¬¦ä¸²è½¬æ¢æˆæ—¥æœŸç±»å‹ yyyy-MM-dd HH:mm:ss
      *
-     * @param date ÈÕÆÚ×Ö·û´®
-     * @return ×ª»»³ÉµÄÈÕÆÚÖµ
+     * @param date æ—¥æœŸå­—ç¬¦ä¸²
+     * @return è½¬æ¢æˆçš„æ—¥æœŸå€¼
      */
     public static Date parseTime(String date) {
         Date ret = null;
@@ -52,10 +52,10 @@ public class DateUtil {
     }
 
     /**
-     * ½«ÈÕÆÚÀàĞÍ×ª»»³É"yyyy-MM-dd"×Ö·û´®
+     * å°†æ—¥æœŸç±»å‹è½¬æ¢æˆ"yyyy-MM-dd"å­—ç¬¦ä¸²
      *
-     * @param date ´«ÈëµÄÈÕÆÚÖµ
-     * @return ×Ö·û´®ÀàĞÍµÄÈÕÆÚÖµ
+     * @param date ä¼ å…¥çš„æ—¥æœŸå€¼
+     * @return å­—ç¬¦ä¸²ç±»å‹çš„æ—¥æœŸå€¼
      */
     public static String formatDate(Date date) {
         String ret = "";
@@ -68,10 +68,10 @@ public class DateUtil {
     }
 
     /**
-     * ½«ÈÕÆÚÀàĞÍ×ª»»³É"yyyyMMdd"×Ö·û´®
+     * å°†æ—¥æœŸç±»å‹è½¬æ¢æˆ"yyyyMMdd"å­—ç¬¦ä¸²
      *
-     * @param date ´«ÈëµÄÈÕÆÚÖµ
-     * @return ×Ö·û´®ÀàĞÍµÄÈÕÆÚÖµ
+     * @param date ä¼ å…¥çš„æ—¥æœŸå€¼
+     * @return å­—ç¬¦ä¸²ç±»å‹çš„æ—¥æœŸå€¼
      */
     public static String formatDateString(Date date) {
         String ret = "";
@@ -84,10 +84,10 @@ public class DateUtil {
     }
 
     /**
-     * ÎÄ¼şÉÏ´«Ê±,Éú³ÉÎÄ¼şÃû ½«ÈÕÆÚÀàĞÍ×ª»»³É"yyyyMMddHHmmssSSS"×Ö·û´®
+     * æ–‡ä»¶ä¸Šä¼ æ—¶,ç”Ÿæˆæ–‡ä»¶å å°†æ—¥æœŸç±»å‹è½¬æ¢æˆ"yyyyMMddHHmmssSSS"å­—ç¬¦ä¸²
      *
      * @param date
-     * @return ×Ö·û´®ÀàĞÍµÄÈÕÆÚÖµ
+     * @return å­—ç¬¦ä¸²ç±»å‹çš„æ—¥æœŸå€¼
      */
     public static String formatFileUploadTime(Date date) {
         String ret = "";
@@ -100,10 +100,10 @@ public class DateUtil {
     }
 
     /**
-     * ½«ÈÕÆÚÀàĞÍ×ª»»³É"yyyy-MM-dd  HH:mm:ss"×Ö·û´®
+     * å°†æ—¥æœŸç±»å‹è½¬æ¢æˆ"yyyy-MM-dd  HH:mm:ss"å­—ç¬¦ä¸²
      *
      * @param date
-     * @return ·µ»Ø×Ö·û´®ÀàĞÍµÄÈÕÆÚÖµ
+     * @return è¿”å›å­—ç¬¦ä¸²ç±»å‹çš„æ—¥æœŸå€¼
      */
     public static String formatTime(Date date) {
         String ret = "";

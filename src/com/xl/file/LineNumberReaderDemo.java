@@ -6,14 +6,14 @@ import java.io.LineNumberReader;
 
 public class LineNumberReaderDemo {
     /**
-     * @param ĞìÁ¢
+     * @param å¾ç«‹
      */
     public static void main(String[] args) throws IOException {
         // TODO Auto-generated method stub
         FileReader fr = new FileReader("1.java");
         LineNumberReader lnr = new LineNumberReader(fr);
         String line = null;
-        lnr.setLineNumber(0); // ÉèÖÃÆğÊ¼ĞĞºÅ £¬ÕıÎÄ¾Í´Ó1¿ªÊ¼
+        lnr.setLineNumber(0); // è®¾ç½®èµ·å§‹è¡Œå· ï¼Œæ­£æ–‡å°±ä»1å¼€å§‹
         while ((line = lnr.readLine()) != null) {
             System.out.println(lnr.getLineNumber() + ":" + line);
         }

@@ -12,18 +12,18 @@ class TextClient {
         BufferedReader bufr = new BufferedReader(new FileReader("ip.java"));
         PrintWriter out = new PrintWriter(s.getOutputStream(), true);
         //		long time=System.currentTimeMillis();
-        //Õâ¸ö¹ØÁªÁ÷£¬·¢ËÍ½áÊø±ê¼Ç
+        //è¿™ä¸ªå…³è”æµï¼Œå‘é€ç»“æŸæ ‡è®°
         //		DataOutputStream dos = new DataOutputStream(s.getOutputStream());
         //		dos.writeLong(time);
         //		out.print(time);
         String line = null;
-        while ((line = bufr.readLine()) != null) // ÒòÎªÔ´ÊÇÎÄ¼ş£¬ËùÒÔ¿ÉÒÔ½áÊø
+        while ((line = bufr.readLine()) != null) // å› ä¸ºæºæ˜¯æ–‡ä»¶ï¼Œæ‰€ä»¥å¯ä»¥ç»“æŸ
         {
             out.println(line);
         }
         //		out.println("over");
-        //		dos.writeLong(time); //ÄÇ±ß½áÊøµÄ±ê¼Ç
-        s.shutdownOutput();//¹Ø±Õ¿Í»§¶ËµÄÊä³öÁ÷£¬Ïàµ±ÓÚ¸øÁ÷ÖĞ¼ÓÈëÁË½áÊø±ê¼Ç
+        //		dos.writeLong(time); //é‚£è¾¹ç»“æŸçš„æ ‡è®°
+        s.shutdownOutput();//å…³é—­å®¢æˆ·ç«¯çš„è¾“å‡ºæµï¼Œç›¸å½“äºç»™æµä¸­åŠ å…¥äº†ç»“æŸæ ‡è®°
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
         String str = bufIn.readLine();
         System.out.println(str);
