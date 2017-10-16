@@ -2,7 +2,7 @@ package com.xl.io.channelflow;
 
 import java.io.PipedOutputStream;
 
-public class Write implements Runnable  //Ğ´ÈëÏß³Ì
+public class Write implements Runnable  //å†™å…¥çº¿ç¨‹
 {
     private PipedOutputStream pos;
 
@@ -10,15 +10,15 @@ public class Write implements Runnable  //Ğ´ÈëÏß³Ì
         this.pos = pos;
     }
 
-    public void run()   //¸²¸Çrun·½·¨²»ÄÜÅ×Ö»ÄÜ´¦Àí
+    public void run()   //è¦†ç›–runæ–¹æ³•ä¸èƒ½æŠ›åªèƒ½å¤„ç†
     {
         try {
-            //Ğ´ÈëÖ®Ç°ÈÃĞ´ÈëµÄÏß³ÌÍ£Ò»»á£¬ÒªÅ×Òì³£
-            Thread.sleep(6000); //sleepÊÍ·ÅÖ´ĞĞÈ¨
-            pos.write("piped À´ À²".getBytes());  //write·½·¨Ö»ÄÜ½ÓÊÜByte¼°ÆäÊı×é
+            //å†™å…¥ä¹‹å‰è®©å†™å…¥çš„çº¿ç¨‹åœä¸€ä¼šï¼Œè¦æŠ›å¼‚å¸¸
+            Thread.sleep(6000); //sleepé‡Šæ”¾æ‰§è¡Œæƒ
+            pos.write("piped æ¥ å•¦".getBytes());  //writeæ–¹æ³•åªèƒ½æ¥å—ByteåŠå…¶æ•°ç»„
             pos.close();
         } catch (Exception e) {
-            throw new RuntimeException("¹ÜµÀÊä³öÁ÷Ê§°Ü ");  //ÓÖ³ÆÎªĞ´Èë
+            throw new RuntimeException("ç®¡é“è¾“å‡ºæµå¤±è´¥ ");  //åˆç§°ä¸ºå†™å…¥
         }
     }
 }

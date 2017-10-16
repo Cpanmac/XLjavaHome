@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-//»ùÓÚJDBCµÄCURD²Ù×÷
-//exceute(sql);³ıÁËselect²Ù×÷·µ»ØtrueÖ®Íâ£¬ÆäËû²Ù×÷¶¼·µ»Øfalse¡£
-//StatementÃ»ÓĞ°²È«ĞÔ¼ì²â¡£s
+//åŸºäºJDBCçš„CURDæ“ä½œ
+//exceute(sql);é™¤äº†selectæ“ä½œè¿”å›trueä¹‹å¤–ï¼Œå…¶ä»–æ“ä½œéƒ½è¿”å›falseã€‚
+//Statementæ²¡æœ‰å®‰å…¨æ€§æ£€æµ‹ã€‚s
 public class Crud {
     Connection conn = null;
     Statement stmt = null;
@@ -17,13 +17,13 @@ public class Crud {
 
     @Test
     public void create() {
-        String sql = "insert into user(name,gender,salary) values('ÕÅÈı','ÄĞ',3000)";
+        String sql = "insert into user(name,gender,salary) values('å¼ ä¸‰','ç”·',3000)";
         try {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
             System.out.println(i);
-            System.out.println(i > 0 ? "³É¹¦" : "Ê§°Ü");
+            System.out.println(i > 0 ? "æˆåŠŸ" : "å¤±è´¥");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -67,7 +67,7 @@ public class Crud {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
-            System.out.println(i > 0 ? "³É¹¦" : "Ê§°Ü");
+            System.out.println(i > 0 ? "æˆåŠŸ" : "å¤±è´¥");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -82,12 +82,12 @@ public class Crud {
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
-        String sql = "delete from user where name = 'Ë¿Ë¿'";
+        String sql = "delete from user where name = 'ä¸ä¸'";
         try {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
-            System.out.println(i > 0 ? "³É¹¦" : "Ê§°Ü");
+            System.out.println(i > 0 ? "æˆåŠŸ" : "å¤±è´¥");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -130,10 +130,10 @@ public class Crud {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             System.out.println(sql);
-            // int i= stmt.executeUpdate(sql); //´´½¨±í²¢Ã»ÓĞÓ°Ïì½á¹ûËùÒÔiµÄÖµÊÇ0
+            // int i= stmt.executeUpdate(sql); //åˆ›å»ºè¡¨å¹¶æ²¡æœ‰å½±å“ç»“æœæ‰€ä»¥içš„å€¼æ˜¯0
             boolean i = stmt.equals(sql);
             System.out.println(i); // false
-            System.out.println("´´½¨³É¹¦£¡");
+            System.out.println("åˆ›å»ºæˆåŠŸï¼");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

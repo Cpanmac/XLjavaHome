@@ -89,7 +89,7 @@ public class download {
                 long s = System.currentTimeMillis();
                 down2(tfd.getText());
                 long s1 = System.currentTimeMillis();
-                System.out.println("spendµÄÊ±¼ä" + (s - s1));
+                System.out.println("spendçš„æ—¶é—´" + (s - s1));
             }
         });
         okbut.addActionListener(new ActionListener() {
@@ -109,7 +109,7 @@ public class download {
                     long s = System.currentTimeMillis();
                     down2(tfd.getText());
                     long s1 = System.currentTimeMillis();
-                    System.out.println("spendµÄÊ±¼ä" + (s - s1));
+                    System.out.println("spendçš„æ—¶é—´" + (s - s1));
                 }
             }
         });
@@ -165,7 +165,7 @@ public class download {
         } catch (MalformedURLException e1) {
             e1.printStackTrace();
         } catch (IOException e1) {
-            l.setText("ÍøÂçÃ»Á¬ÉÏ£¬³¬Ê±£¡");
+            l.setText("ç½‘ç»œæ²¡è¿ä¸Šï¼Œè¶…æ—¶ï¼");
         }
     }
 }

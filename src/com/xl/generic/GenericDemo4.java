@@ -10,7 +10,7 @@ class GenericDemo4 {
 
 class Demo {
     public <T> void show(T t) {
-        System.out.println("show£º" + t);
+        System.out.println("showï¼š" + t);
     }
 
     public <Q> void print(Q q) {

@@ -1,5 +1,5 @@
 /**
- * µÇÂ½½çÃæ
+ * ç™»é™†ç•Œé¢
  * JTextField
  */
 package com.xl.gui;
@@ -8,42 +8,42 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Login extends JFrame {
-    //¶¨Òå×é¼ş
+    //å®šä¹‰ç»„ä»¶
     JPanel jp1, jp2, jp3, jp4;
     JLabel jlb1, jlb2;
     JButton jb1, jb2;
     JTextField jtf1, jtf2;
 
-    //¹¹Ôìº¯Êı
+    //æ„é€ å‡½æ•°
     public Login() {
         jp1 = new JPanel();
         jp2 = new JPanel();
         jp3 = new JPanel();
-        jlb1 = new JLabel("ÓÃ»§Ãû");
-        jlb2 = new JLabel("ÃÜ Âë");
-        jb1 = new JButton("µÇÂ¼");
-        jb2 = new JButton("È¡Ïû");
+        jlb1 = new JLabel("ç”¨æˆ·å");
+        jlb2 = new JLabel("å¯† ç ");
+        jb1 = new JButton("ç™»å½•");
+        jb2 = new JButton("å–æ¶ˆ");
         jtf1 = new JTextField(10);
         jtf2 = new JTextField(10);
-        //ÉèÖÃ²¼¾Ö¹ÜÀí
+        //è®¾ç½®å¸ƒå±€ç®¡ç†
         this.setLayout(new GridLayout(3, 1));
-        //¼ÓÈë¸÷¸ö×é¼ş
+        //åŠ å…¥å„ä¸ªç»„ä»¶
         jp1.add(jlb1);
         jp1.add(jtf1);
         jp2.add(jlb2);
         jp2.add(jtf2);
         jp3.add(jb1);
         jp3.add(jb2);
-        //¼ÓÈëµ½JFrame
+        //åŠ å…¥åˆ°JFrame
         this.setTitle("Login");
         this.add(jp1);
         this.add(jp2);
         this.add(jp3);
         this.setSize(300, 150);
         this.setResizable(false);
-        //ÍË³ö´°¿ÚÍË³öjvm
+        //é€€å‡ºçª—å£é€€å‡ºjvm
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //ÏÔÊ¾
+        //æ˜¾ç¤º
         this.setVisible(true);
     }
 

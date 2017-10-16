@@ -15,11 +15,11 @@ class TextClient {
         BufferedReader bufr = new BufferedReader(new FileReader("ip.java"));
         PrintWriter out = new PrintWriter(s.getOutputStream(), true);
         String line = null;
-        while ((line = bufr.readLine()) != null) // ÒòÎªÔ´ÊÇÎÄ¼ş£¬ËùÒÔ¿ÉÒÔ½áÊø
+        while ((line = bufr.readLine()) != null) // å› ä¸ºæºæ˜¯æ–‡ä»¶ï¼Œæ‰€ä»¥å¯ä»¥ç»“æŸ
         {
             out.println(line);
         }
-        // ÕâÑù²¢²»ÄÜ½áÊø
+        // è¿™æ ·å¹¶ä¸èƒ½ç»“æŸ
         out.println("over");
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
         String str = bufIn.readLine();
@@ -36,8 +36,8 @@ class TextServer {
         String ip = s.getInetAddress().getHostAddress();
         System.out.println(ip);
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
-        // ÕæÊÇµÄÓ¦¸Ã°ÑÃû×ÖÈ¡Ò»Ñù¡£Èç¹ûÓĞÍ¬ÃûÅĞ¶ÏÒ»ÏÂ
-        PrintWriter out = new PrintWriter(new FileWriter("C:\\Documents and Settings\\All Users\\×ÀÃæ\\server.txt"), true);
+        // çœŸæ˜¯çš„åº”è¯¥æŠŠåå­—å–ä¸€æ ·ã€‚å¦‚æœæœ‰åŒååˆ¤æ–­ä¸€ä¸‹
+        PrintWriter out = new PrintWriter(new FileWriter("C:\\Documents and Settings\\All Users\\æ¡Œé¢\\server.txt"), true);
         String line = null;
         while ((line = bufIn.readLine()) != null) {
             if ("over".equals(line))
@@ -45,7 +45,7 @@ class TextServer {
             out.println(line);
         }
         PrintWriter pw = new PrintWriter(s.getOutputStream(), true);
-        pw.println("ÉÏ´«³É¹¦£¡");
+        pw.println("ä¸Šä¼ æˆåŠŸï¼");
         out.close();
         s.close();
         ss.close();

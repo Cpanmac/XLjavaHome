@@ -10,42 +10,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- * ÎÒ³öÏÖµÄÎÊÌâ£ºÔÚPersonÖĞ¹¹Ôì·½·¨ÊÇÄ¬ÈÏµÄÊ±ºò,getConstructorÃ»ÓĞ»ñµÃÆä¹¹Ôì·½·¨
+ * æˆ‘å‡ºç°çš„é—®é¢˜ï¼šåœ¨Personä¸­æ„é€ æ–¹æ³•æ˜¯é»˜è®¤çš„æ—¶å€™,getConstructoræ²¡æœ‰è·å¾—å…¶æ„é€ æ–¹æ³•
  */
 public class GetClassConstructed {
     private String s;
 
     @Before
     public void before() {
-        // ¼ÓÔØµÄÀà
+        // åŠ è½½çš„ç±»
         s = "reflect.Person";
     }
 
-    // ·´Éä¹¹Ôìº¯Êı(¿Õ²ÎÊı£©£ºpublic Person()
+    // åå°„æ„é€ å‡½æ•°(ç©ºå‚æ•°ï¼‰ï¼špublic Person()
     @Test
     public void createNewObject() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         String name = "reflect.Person";
         Class clazz = Class.forName(name);
-        // ¸ÃÀàÖĞÖ»ÓĞÒ»¸ö»ñÈ¡¿Õ²ÎÊıµÄ·½·¨newInstance
-        Object obj = clazz.newInstance(); // µ÷ÓÃÁË¿Õ²ÎÊıµÄ¹¹Ôìº¯Êı£¬
+        // è¯¥ç±»ä¸­åªæœ‰ä¸€ä¸ªè·å–ç©ºå‚æ•°çš„æ–¹æ³•newInstance
+        Object obj = clazz.newInstance(); // è°ƒç”¨äº†ç©ºå‚æ•°çš„æ„é€ å‡½æ•°ï¼Œ
         Person p = (Person) obj;
         System.out.println(p.name);
-        // Òì³££º
-        // 1.Èç¹ûÃ»ÓĞ¿Õ²ÎµÄ¹¹Ôìº¯Êı»á±¨Ò»¸öjava.lang.InstantiationException³õÊ¼»¯Òì³£
-        // 2.Èç¹û¹¹Ôìº¯Êı±»privateĞŞÊÎjava.lang.IllegalAccessExceptionÎŞĞ§·ÃÎÊÒì³£
+        // å¼‚å¸¸ï¼š
+        // 1.å¦‚æœæ²¡æœ‰ç©ºå‚çš„æ„é€ å‡½æ•°ä¼šæŠ¥ä¸€ä¸ªjava.lang.InstantiationExceptionåˆå§‹åŒ–å¼‚å¸¸
+        // 2.å¦‚æœæ„é€ å‡½æ•°è¢«privateä¿®é¥°java.lang.IllegalAccessExceptionæ— æ•ˆè®¿é—®å¼‚å¸¸
     }
 
-    // Èç¹û¸ÃÀàÃ»ÓĞ¿Õ²ÎµÄ¹¹Ôìº¯Êı,ÄÃµ½ËùÓĞ¹«ÓÃµÄ¹¹Ôìº¯Êı
+    // å¦‚æœè¯¥ç±»æ²¡æœ‰ç©ºå‚çš„æ„é€ å‡½æ•°,æ‹¿åˆ°æ‰€æœ‰å…¬ç”¨çš„æ„é€ å‡½æ•°
     @Test
     public void createNewObject_2() throws Exception {
         Class<?> clazz = Class.forName("reflect.Person");
-        // 1.ÄÃµ½¸ÃÀàµÄËùÓĞ¹«ÓĞµÄ¹¹Ôìº¯ÊıgetConstructors()
+        // 1.æ‹¿åˆ°è¯¥ç±»çš„æ‰€æœ‰å…¬æœ‰çš„æ„é€ å‡½æ•°getConstructors()
         Constructor c = clazz.getConstructor(String.class);
         Person p = (Person) c.newInstance("xxx");
         System.out.println(p.name);
     }
 
-    // Ë½ÓĞµÄ¹¹Ôìº¯Êı
+    // ç§æœ‰çš„æ„é€ å‡½æ•°
     @Test
     public void test() throws ClassNotFoundException, SecurityException, NoSuchMethodException, IllegalArgumentException, InstantiationException, IllegalAccessException, InvocationTargetException {
         Class<?> clazz = Class.forName(s);

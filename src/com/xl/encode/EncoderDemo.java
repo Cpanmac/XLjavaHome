@@ -22,12 +22,12 @@ public class EncoderDemo {
     private File utfFile = FileTool.getResourceFile("/utf-8.txt");
 
     /**
-     * 将指定目录下的GBK文件转为UTF-8文件
+     * 将指定目录下其他格式文件为UTF-8文件
      *
      * @throws IOException
      */
     @Test
-    public void getFileTest() throws IOException, InterruptedException {
+    public void encodeTest() throws IOException, InterruptedException {
         System.out.println(FileTool.getCurrentPath(getClass()));
         List<File> fileList = FileTool.queryAll(FileTool.getProjectPath(), "java");
         for (int i = 0; i < fileList.size(); i++) {
@@ -52,15 +52,5 @@ public class EncoderDemo {
                 }
             }
         }
-    }
-
-    @Test
-    public void aTest() throws IOException {
-        File file = new File("D:\\code\\javaSE\\src\\com\\xl\\util\\FileTool.java");
-        String content = FileTool.getContent(file);
-        OutputStreamWriter w1 = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
-        w1.write(content);
-        w1.flush();
-        w1.close();
     }
 }

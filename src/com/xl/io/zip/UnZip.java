@@ -9,7 +9,7 @@ import java.util.zip.ZipFile;
 
 /**
  * @author ourife
- * @version ´´½¨Ê±¼ä£ºJun 29, 2007 11:51:52 AM ½âÑ¹ËõÎÄ¼ş
+ * @version åˆ›å»ºæ—¶é—´ï¼šJun 29, 2007 11:51:52 AM è§£å‹ç¼©æ–‡ä»¶
  */
 public class UnZip {
     public static void main(String argv[]) {

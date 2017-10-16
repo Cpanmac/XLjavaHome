@@ -15,15 +15,15 @@ public class RandomAccessFileDemo {
     }
 
     public static void readFile() throws IOException {
-        RandomAccessFile raf = new RandomAccessFile("ran.txt", "r"); // rÖ»¶Á
-        // µ÷Õû¶ÔÏóÖĞµÄÖ¸Õë
-        // raf.seek(8); //È¡ÏÂÒ»¸öºº×Ö
-        // Ìø¹ıÖ¸¶¨µÄ×Ö½ÚÊı
-        // raf.skipBytes(8); //ÒÅº¶µÄÊÇ²»ÄÜÍù»ØÌø
-        byte[] buf = new byte[4]; // ÒòÎªint ÊÇ4¸ö×Ö½Ú
+        RandomAccessFile raf = new RandomAccessFile("ran.txt", "r"); // råªè¯»
+        // è°ƒæ•´å¯¹è±¡ä¸­çš„æŒ‡é’ˆ
+        // raf.seek(8); //å–ä¸‹ä¸€ä¸ªæ±‰å­—
+        // è·³è¿‡æŒ‡å®šçš„å­—èŠ‚æ•°
+        // raf.skipBytes(8); //é—æ†¾çš„æ˜¯ä¸èƒ½å¾€å›è·³
+        byte[] buf = new byte[4]; // å› ä¸ºint æ˜¯4ä¸ªå­—èŠ‚
         raf.read(buf);
-        String name = new String(buf);// ½«×Ö·ûÊı×é×ª»»Îª×Ö·û´®
-        System.out.println("name= " + name); // È¡³öÄêÁä
+        String name = new String(buf);// å°†å­—ç¬¦æ•°ç»„è½¬æ¢ä¸ºå­—ç¬¦ä¸²
+        System.out.println("name= " + name); // å–å‡ºå¹´é¾„
         int age = raf.readInt();
         System.out.println("age=" + age);
         raf.close();
@@ -31,18 +31,18 @@ public class RandomAccessFileDemo {
 
     public static void writeFile_2() throws IOException {
         RandomAccessFile raf = new RandomAccessFile("ran.txt", "rw");
-        raf.write("ÖÜÆÚ".getBytes()); // ²»¸²¸ÇÎÄ¼ş£¬Ö±½ÓÔÚÎÄ¼şÀïÃæĞ´Êı¾İ£¬ÕâÊÇÓëÊä³öÁ÷µÄÇø±ğ
+        raf.write("å‘¨æœŸ".getBytes()); // ä¸è¦†ç›–æ–‡ä»¶ï¼Œç›´æ¥åœ¨æ–‡ä»¶é‡Œé¢å†™æ•°æ®ï¼Œè¿™æ˜¯ä¸è¾“å‡ºæµçš„åŒºåˆ«
         raf.writeInt(103);
         raf.close();
     }
 
     public static void writeFile() throws IOException {
-        RandomAccessFile raf = new RandomAccessFile("ran.txt", "rw"); // rw¶ÁĞ´Ä£Ê½
-        raf.write("ÀîËÄ".getBytes());
-        // raf.write(97); // ÔÚÎÄ±¾ÀïÃæÏÔÊ¾µÄÊÇa write·½·¨Ö»Ğ´intµÄ×îµÍ8Î» ²éÔÄµÄÊÇGBKµÄ±í
-        // raf.write(258); // Êı¾İ¶ªÊ§
-        raf.writeInt(38); // Òò´Ë³öÏÖÁËÕâ¸ö·½·¨
-        raf.write("ÍõÎå".getBytes());
+        RandomAccessFile raf = new RandomAccessFile("ran.txt", "rw"); // rwè¯»å†™æ¨¡å¼
+        raf.write("æå››".getBytes());
+        // raf.write(97); // åœ¨æ–‡æœ¬é‡Œé¢æ˜¾ç¤ºçš„æ˜¯a writeæ–¹æ³•åªå†™intçš„æœ€ä½8ä½ æŸ¥é˜…çš„æ˜¯GBKçš„è¡¨
+        // raf.write(258); // æ•°æ®ä¸¢å¤±
+        raf.writeInt(38); // å› æ­¤å‡ºç°äº†è¿™ä¸ªæ–¹æ³•
+        raf.write("ç‹äº”".getBytes());
         raf.writeInt(23);
         raf.close();
     }

@@ -13,8 +13,8 @@ class CollectionsDemo {
     /*
      * public static void sortDemo() { List<String> list = new
      * ArrayList<String>(); list.add("abcd"); list.add("aaa"); list.add("z");
-     * list.add("zz"); list.add("kkk"); list.add("qq"); //²»¾ß±¸±È½ÏĞÔ£¬²»ÄÜÅÅĞò sop(list);
-     * // Collections.sort(list); //²»ÄÜ¸øSet¼¯ºÏÅÅĞò£¬ÒòÎªSet¼¯ºÏÓĞTreeSet
+     * list.add("zz"); list.add("kkk"); list.add("qq"); //ä¸å…·å¤‡æ¯”è¾ƒæ€§ï¼Œä¸èƒ½æ’åº sop(list);
+     * // Collections.sort(list); //ä¸èƒ½ç»™Seté›†åˆæ’åºï¼Œå› ä¸ºSeté›†åˆæœ‰TreeSet
      * Collections.sort(list,new StrLenComparator()); sop(list); String max =
      * Collections.max(list); sop(max); }
      */
@@ -33,34 +33,34 @@ class CollectionsDemo {
         Collections.sort(list);
         sop(list);
         // int index = Collections.binarySearch(list,"abcwerd");
-        // //²éÕÒlist¼¯ºÏÖĞµÄaaa,·µ»Ø½Ç±ê£¬Èç¹û²»´æÔÚÔò·µ»Ø¸ºÊı
+        // //æŸ¥æ‰¾listé›†åˆä¸­çš„aaa,è¿”å›è§’æ ‡ï¼Œå¦‚æœä¸å­˜åœ¨åˆ™è¿”å›è´Ÿæ•°
         // sop("index="+index);
         int index = halfSearch(list, "abs", null);
         sop(index);
     }
 
-    public static int halfSearch(List<String> list, String key, Comparator<String> cmp) // µ±²»¾ß±¸±È½ÏĞÔÊ±£¬ºóÃæ¼Ó¸ö
+    public static int halfSearch(List<String> list, String key, Comparator<String> cmp) // å½“ä¸å…·å¤‡æ¯”è¾ƒæ€§æ—¶ï¼Œåé¢åŠ ä¸ª
     {
-        int max, min, mid; // ÕÛ°ëµÄÈı¸ö±äÁ¿
+        int max, min, mid; // æŠ˜åŠçš„ä¸‰ä¸ªå˜é‡
         max = list.size() - 1;
         min = 0;
         while (min <= max) {
-            mid = (max + min) >> 1; // ×î´óÖµ+×îĞ¡Öµ³ıÒÔ2.¾ÍÊÇÖĞ¼äÖµ
+            mid = (max + min) >> 1; // æœ€å¤§å€¼+æœ€å°å€¼é™¤ä»¥2.å°±æ˜¯ä¸­é—´å€¼
             String str = list.get(mid);
-            // int num =str.compareTo(key); //ÖĞ¼ä½Ç±êµÄÔªËØÓëkey±È½Ï
-            int num = cmp.compare(key, str); // ¼ÓÁË±È½ÏÆ÷ÔõÃ´±È
+            // int num =str.compareTo(key); //ä¸­é—´è§’æ ‡çš„å…ƒç´ ä¸keyæ¯”è¾ƒ
+            int num = cmp.compare(key, str); // åŠ äº†æ¯”è¾ƒå™¨æ€ä¹ˆæ¯”
             if (num > 0) {
                 max = mid - 1;
             } else if (num < 0)
                 min = mid + 1;
             else
-                return mid; // ÖĞ¼äÖµ
+                return mid; // ä¸­é—´å€¼
         }
-        return -min - 1; // ²åÈëµã¾ÍÊÇmin
+        return -min - 1; // æ’å…¥ç‚¹å°±æ˜¯min
     }
 }
 
-class StrLenComparator implements Comparator<String> // ×Ö·û´®³¤¶È±È½ÏÆ÷
+class StrLenComparator implements Comparator<String> // å­—ç¬¦ä¸²é•¿åº¦æ¯”è¾ƒå™¨
 {
     public int compare(String s1, String s2) {
         if (s1.length() > s2.length())

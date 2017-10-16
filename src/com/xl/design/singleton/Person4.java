@@ -4,11 +4,11 @@ public class Person4 {
     private static Person4 person;
     private String name;
 
-    //¹¹Ôìº¯ÊıË½ÓĞ»¯
+    //æ„é€ å‡½æ•°ç§æœ‰åŒ–
     private Person4() {
     }
 
-    //Ìá¹©Ò»¸öÈ«¾ÖµÄ¾²Ì¬·½·¨
+    //æä¾›ä¸€ä¸ªå…¨å±€çš„é™æ€æ–¹æ³•
     public static Person4 getPerson() {
         if (person == null) {
             synchronized (Person4.class) {

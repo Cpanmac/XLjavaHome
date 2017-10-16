@@ -7,13 +7,13 @@ import java.util.ArrayList;
 
 public class FileService {
     /**
-     * ²éÑ¯¸ÃÄ¿Â¼ÏÂµÄËùÓĞÎÄ¼ş²¢´òÓ¡
+     * æŸ¥è¯¢è¯¥ç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶å¹¶æ‰“å°
      *
      * @param file
      */
     public void queryAll(File file) throws RuntimeException {
         if (!file.isDirectory()) {
-            throw new RuntimeException("Õâ²»ÊÇÄ¿Â¼");
+            throw new RuntimeException("è¿™ä¸æ˜¯ç›®å½•");
         }
         ArrayList<File> list = new ArrayList<File>();
         FileTool.queryAll(file, list);
@@ -24,7 +24,7 @@ public class FileService {
     }
 
     /**
-     * µİ¹é»ñÈ¡ÎÄ¼ş¼Ğ´óĞ¡
+     * é€’å½’è·å–æ–‡ä»¶å¤¹å¤§å°
      *
      * @param file
      * @return

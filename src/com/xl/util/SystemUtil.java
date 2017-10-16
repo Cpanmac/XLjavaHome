@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * @author ĞìÁ¢
- * @Decription ÏµÍ³¹¤¾ßÀà
+ * @author å¾ç«‹
+ * @Decription ç³»ç»Ÿå·¥å…·ç±»
  * @date 2013-12-20
  */
 public class SystemUtil {
     /**
-     * Ö´ĞĞÏµÍ³ÃüÁî
+     * æ‰§è¡Œç³»ç»Ÿå‘½ä»¤
      *
      * @param command
      * @return InputStream
@@ -22,7 +22,7 @@ public class SystemUtil {
             Process p = Runtime.getRuntime().exec(command);
             return p.getInputStream();
         } catch (IOException e) {
-            throw new RuntimeException("Ö´ĞĞÃüÁîÊ§°Ü");
+            throw new RuntimeException("æ‰§è¡Œå‘½ä»¤å¤±è´¥");
         }
     }
 
@@ -31,12 +31,12 @@ public class SystemUtil {
             Process p = Runtime.getRuntime().exec(command);
             return p.getInputStream();
         } catch (IOException e) {
-            throw new RuntimeException("Ö´ĞĞÃüÁîÊ§°Ü");
+            throw new RuntimeException("æ‰§è¡Œå‘½ä»¤å¤±è´¥");
         }
     }
 
     /**
-     * µÃµ½¿ØÖÆÌ¨´òÓ¡µÄĞÅÏ¢
+     * å¾—åˆ°æ§åˆ¶å°æ‰“å°çš„ä¿¡æ¯
      *
      * @param command
      * @return String
