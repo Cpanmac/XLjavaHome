@@ -14,34 +14,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AllFile {
-    private Frame f; // å¯ä»¥ç›´æ¥ç»§æ‰¿Frame,å°±å¯ä»¥ç›´æ¥è°ƒç”¨é‡Œé¢çš„æ–¹æ³•äº†
-    private TextField tf; // æ–‡æœ¬æ¡†
-    private Button but; // æŒ‰é’®
-    private TextArea ta; // æ˜¯æ˜¾ç¤ºæ–‡æœ¬çš„å¤šè¡ŒåŒºåŸŸ
+    private Frame f; // ¿ÉÒÔÖ±½Ó¼Ì³ĞFrame,¾Í¿ÉÒÔÖ±½Óµ÷ÓÃÀïÃæµÄ·½·¨ÁË
+    private TextField tf; // ÎÄ±¾¿ò
+    private Button but; // °´Å¥
+    private TextArea ta; // ÊÇÏÔÊ¾ÎÄ±¾µÄ¶àĞĞÇøÓò
 
     public static void main(String[] args) {
         new AllFile().init();
     }
 
     /**
-     * åˆå§‹åŒ–æ§ä»¶ void
+     * ³õÊ¼»¯¿Ø¼ş void
      */
     public void init() {
-        f = new Frame("æŸ¥çœ‹æŒ‡å®šç›®å½•ä¸‹æ‰€æœ‰çš„æ–‡ä»¶");
+        f = new Frame("²é¿´Ö¸¶¨Ä¿Â¼ÏÂËùÓĞµÄÎÄ¼ş");
         f.setBounds(300, 100, 600, 500);
         f.setLayout(new FlowLayout());
-        tf = new TextField(60);// æ–‡æœ¬é•¿åº¦
-        but = new Button("æŸ¥çœ‹");
+        tf = new TextField(60);// ÎÄ±¾³¤¶È
+        but = new Button("²é¿´");
         ta = new TextArea(25, 70);
         f.add(tf);
         f.add(but);
         f.add(ta);
         initEvent();
-        f.setVisible(true); // æ˜¾ç¤º
+        f.setVisible(true); // ÏÔÊ¾
     }
 
     /**
-     * åˆå§‹åŒ–äº‹ä»¶ void
+     * ³õÊ¼»¯ÊÂ¼ş void
      */
     private void initEvent() {
         f.addWindowListener(new WindowAdapter() {
@@ -58,7 +58,7 @@ public class AllFile {
                 }
             }
         });
-        // ç»™buttonæ·»åŠ äº‹ä»¶
+        // ¸øbuttonÌí¼ÓÊÂ¼ş
         but.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -68,27 +68,27 @@ public class AllFile {
     }
 
     /**
-     * æ‰§è¡Œ
+     * Ö´ĞĞ
      */
     public void exec() {
         String dirPath = tf.getText().trim();
         File dir = new File(dirPath);
         if (dir.exists() && dir.isDirectory()) {
-            ta.setText("");// æ¸…ç©ºä»¥å‰å¾—
+            ta.setText("");// Çå¿ÕÒÔÇ°µÃ
             List<File> list = new ArrayList<File>();
             FileTool.queryAll(dir, list);
             if (list.size() > 300) {
-                ta.setText("è¯¥ç›®å½•ä¸‹æ–‡ä»¶å¤ªå¤šäº†");
+                ta.setText("¸ÃÄ¿Â¼ÏÂÎÄ¼şÌ«¶àÁË");
                 return;
             }
             if (list.size() == 0) {
-                ta.setText("è¯¥ç›®å½•æ²¡æœ‰æ–‡ä»¶");
+                ta.setText("¸ÃÄ¿Â¼Ã»ÓĞÎÄ¼ş");
             }
             for (File f : list) {
                 ta.append(f.getAbsolutePath() + "\r\n");
             }
         } else {
-            ta.setText("è¯·è¾“å…¥ç›®å½•");
+            ta.setText("ÇëÊäÈëÄ¿Â¼");
         }
     }
 }

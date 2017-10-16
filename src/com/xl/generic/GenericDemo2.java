@@ -20,9 +20,9 @@ class GenericDemo2 {
     }
 }
 
-class LenComparator implements Comparator<String>  //è¿™åŠ äº†<String?
+class LenComparator implements Comparator<String>  //Õâ¼ÓÁË<String?
 {
-    public int compare(String o1, String o2)  //è¿™å„¿å°±ä¸å†™Object å†™String
+    public int compare(String o1, String o2)  //Õâ¶ù¾Í²»Ğ´Object Ğ´String
     {
         int num = new Integer(o2.length()).compareTo(new Integer(o1.length()));
         if (num == 0)

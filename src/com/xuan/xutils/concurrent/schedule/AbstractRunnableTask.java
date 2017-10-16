@@ -1,10 +1,10 @@
 package com.xuan.xutils.concurrent.schedule;
 
 /**
- * æè¿°æŸä¸ªç³»ç»Ÿä»»åŠ¡çš„æŠ½è±¡åŸºç±»
+ * ÃèÊöÄ³¸öÏµÍ³ÈÎÎñµÄ³éÏó»ùÀà
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:27:10 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:27:10 $
  */
 public abstract class AbstractRunnableTask extends AbstractTask implements Runnable {
     public AbstractRunnableTask(String name) {
@@ -12,14 +12,14 @@ public abstract class AbstractRunnableTask extends AbstractTask implements Runna
     }
 
     /**
-     * å¤„ç†ä»»åŠ¡æ‰§è¡Œçš„æ–¹æ³•.
+     * ´¦ÀíÈÎÎñÖ´ĞĞµÄ·½·¨.
      *
-     * @throws Exception æ‰§è¡Œå¼‚å¸¸æ—¶æŠ›å‡º
+     * @throws Exception Ö´ĞĞÒì³£Ê±Å×³ö
      */
     public abstract void processTask() throws Exception;
 
     /**
-     * ä»»åŠ¡çº¿ç¨‹æ‰§è¡Œçš„æ–¹æ³•, ç›´æ¥è°ƒç”¨ä»»åŠ¡å¤„ç†æ–¹æ³•.
+     * ÈÎÎñÏß³ÌÖ´ĞĞµÄ·½·¨, Ö±½Óµ÷ÓÃÈÎÎñ´¦Àí·½·¨.
      */
     @Override
     public void run() {
@@ -39,13 +39,13 @@ public abstract class AbstractRunnableTask extends AbstractTask implements Runna
     }
 
     /**
-     * ä»»åŠ¡æ‰§è¡Œå‰æ“ä½œ,å­ç±»æ ¹æ®è‡ªå·±è¦æ±‚å¯å¤å†™
+     * ÈÎÎñÖ´ĞĞÇ°²Ù×÷,×ÓÀà¸ù¾İ×Ô¼ºÒªÇó¿É¸´Ğ´
      */
     protected void beforeProcessTask() {
     }
 
     /**
-     * ä»»åŠ¡æ‰§è¡Œåæ“ä½œ,å­ç±»æ ¹æ®è‡ªå·±è¦æ±‚å¯å¤å†™
+     * ÈÎÎñÖ´ĞĞºó²Ù×÷,×ÓÀà¸ù¾İ×Ô¼ºÒªÇó¿É¸´Ğ´
      */
     protected void afterProcessTask() {
     }

@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class ShutDown {
     public static void main(String[] args) throws IOException {
         Runtime ce = Runtime.getRuntime();
-        ce.exec("Shutdown.exe -s -t 600"); //è®¾ç½®è‡ªåŠ¨å…³æœºè¿˜å‰©ä¸‹å¤šé•¿æ—¶é—´
-        System.out.print("æ˜¯å¦å–æ¶ˆy/n");
+        ce.exec("Shutdown.exe -s -t 600"); //ÉèÖÃ×Ô¶¯¹Ø»ú»¹Ê£ÏÂ¶à³¤Ê±¼ä
+        System.out.print("ÊÇ·ñÈ¡Ïûy/n");
         Scanner sr = new Scanner(System.in);
         String n = sr.next();
         if ("y".equals(n))

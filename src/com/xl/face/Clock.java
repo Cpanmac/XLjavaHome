@@ -3,8 +3,8 @@ package com.xl.face;
 import org.junit.Test;
 
 /**
- * @author å¾ç«‹
- * @Decription è®¡æ•°å™¨é—®é¢˜ï¼Œè¿ç®—ç¬¦çš„ä¼˜å…ˆçº§
+ * @author ĞìÁ¢
+ * @Decription ¼ÆÊıÆ÷ÎÊÌâ£¬ÔËËã·ûµÄÓÅÏÈ¼¶
  * @date 2014-5-15
  */
 public class Clock {

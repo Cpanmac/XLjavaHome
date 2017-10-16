@@ -5,32 +5,32 @@ import com.xuan.xutils.domain.BaseDO;
 import java.util.Date;
 
 /**
- * ä¸€èˆ¬RPCè°ƒç”¨æˆ–è€…HTTPæ¥å£è¿”å›,æˆ‘ä»¬ä¼šç»Ÿä¸€å°è£…ç±»ä¼¼ä¸‹é¢çš„Resultå¯¹è±¡
+ * Ò»°ãRPCµ÷ÓÃ»òÕßHTTP½Ó¿Ú·µ»Ø,ÎÒÃÇ»áÍ³Ò»·â×°ÀàËÆÏÂÃæµÄResult¶ÔÏó
  * <p>
  * Created by xuan on 17/8/2.
  */
 public class BaseResult extends BaseDO {
     private static final long serialVersionUID = 1L;
     /**
-     * ç»“æœçŠ¶æ€ç ,ä¸€èˆ¬ç”¨æ¥è¡¨ç¤ºè¿™æ¬¡è°ƒç”¨æ˜¯å¦æˆåŠŸ,
-     * å‚çœ‹æšä¸¾: CodeEnum
+     * ½á¹û×´Ì¬Âë,Ò»°ãÓÃÀ´±íÊ¾Õâ´Îµ÷ÓÃÊÇ·ñ³É¹¦,
+     * ²Î¿´Ã¶¾Ù: CodeEnum
      */
     private int code;
     /**
-     * æ—¶é—´æˆ³
+     * Ê±¼ä´Á
      */
     private long serverTime = new Date().getTime();
     /**
-     * å½“è¿”å›ä¸€ç§é”™è¯¯ç»“æœæ—¶,ä¸å…‰è¦è®¾ç½®messageé”™è¯¯ä¿¡æ¯,æœ€å¥½å†è®¾ç½®ä¸€ä¸ªbizCode,è°ƒç”¨æ–¹å¯ä»¥æ ¹æ®è¿™ä¸ªbizCodeæ¥åšå“åº”çš„ä¸šåŠ¡å¤„ç†
-     * å‚çœ‹æšä¸¾: BizCodeEnum
+     * µ±·µ»ØÒ»ÖÖ´íÎó½á¹ûÊ±,²»¹âÒªÉèÖÃmessage´íÎóĞÅÏ¢,×îºÃÔÙÉèÖÃÒ»¸öbizCode,µ÷ÓÃ·½¿ÉÒÔ¸ù¾İÕâ¸öbizCodeÀ´×öÏìÓ¦µÄÒµÎñ´¦Àí
+     * ²Î¿´Ã¶¾Ù: BizCodeEnum
      */
     private String bizCode;
     /**
-     * æˆåŠŸæˆ–è€…å¤±è´¥æç¤ºä¿¡æ¯
+     * ³É¹¦»òÕßÊ§°ÜÌáÊ¾ĞÅÏ¢
      */
     private String message;
     /**
-     * è¿”å›çš„ç»“æœå¯¹è±¡
+     * ·µ»ØµÄ½á¹û¶ÔÏó
      */
     private Object result;
 

@@ -15,50 +15,50 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 通用配置实现(还有待进一步整理)
+ * ͨ������ʵ��(���д���һ������)
  * <p>
  * Created by xuan on 17/8/14.
  */
 public class XThreadPoolImpl implements XThreadPool {
     /**
-     * 线程池名称
+     * �̳߳�����
      */
     private String name;
     /**
-     * 内部核心执行服务
+     * �ڲ�����ִ�з���
      */
     private ExecutorService executor;
     /**
-     * 当关闭线程池时是否关闭任务
+     * ���ر��̳߳�ʱ�Ƿ�ر�����
      */
     private boolean waitForTasksToCompleteOnShutdown = false;
     /**
-     * 阻塞队列长度
+     * �������г���
      */
     private int queueCapacity = 1024;
     /**
-     * 核心线程数，这个是肯定会分配的线程数
+     * �����߳���������ǿ϶��������߳���
      */
     private int corePoolSize = 10;
     /**
-     * 最大线程数，实际上能否达到还取决于队列数queueCapacity是否满了
+     * ����߳�����ʵ�����ܷ�ﵽ��ȡ���ڶ�����queueCapacity�Ƿ�����
      */
     private int maxPoolSize = 20;
     /**
-     * 空闲线程的存活时间，为0表示一直可以存活
+     * �����̵߳Ĵ��ʱ�䣬Ϊ0��ʾһֱ���Դ��
      */
     private int keepAliveSeconds = 300;
     /**
-     * 中断超时时间，默认5秒
+     * �жϳ�ʱʱ�䣬Ĭ��5��
      */
     private int shutdownTimeout = 5000;
     /**
-     * 默认的拒绝策略
+     * Ĭ�ϵľܾ�����
      */
     private RejectedExecutionHandler rejectedExecutionHandler = new ThreadPoolExecutor.AbortPolicy();
 
     /**
-     * 设置线程池名称
+     * �����̳߳�����
      *
      * @param name
      */
@@ -67,7 +67,7 @@ public class XThreadPoolImpl implements XThreadPool {
     }
 
     /**
-     * 如果配置了等待任务完成那么先使用shutdown, 停止接收新任务并尝试完成所有已存在任务.否则直接调用shutdownNow 取消所有workQueue中Pending的任务，并中断所有阻塞函数。
+     * ��������˵ȴ����������ô��ʹ��shutdown, ֹͣ���������񲢳�����������Ѵ�������.����ֱ�ӵ���shutdownNow ȡ������workQueue��Pending�����񣬲��ж���������������
      *
      * @throws Exception
      */
@@ -81,7 +81,7 @@ public class XThreadPoolImpl implements XThreadPool {
     }
 
     /**
-     * 等待关闭
+     * �ȴ��ر�
      */
     private void awaitTerminationIfNecessary() {
         if (this.shutdownTimeout > 0) {
@@ -99,7 +99,7 @@ public class XThreadPoolImpl implements XThreadPool {
     }
 
     /**
-     * 初始化
+     * ��ʼ��
      *
      * @throws Exception
      */
@@ -109,8 +109,8 @@ public class XThreadPoolImpl implements XThreadPool {
         }
 
         /*
-         * 能定制Thread name的ThreadFactory 非常重要，使得创建的线程有自己的名字而不是默认的"pool-x-thread-y"，
-         * 在用threaddump查看线程时特别有用。 格式如: "X-Thread-xxx-%d"
+         * �ܶ���Thread name��ThreadFactory �ǳ���Ҫ��ʹ�ô������߳����Լ������ֶ�����Ĭ�ϵ�"pool-x-thread-y"��
+         * ����threaddump�鿴�߳�ʱ�ر����á� ��ʽ��: "X-Thread-xxx-%d"
          */
         String threadNameFormat = "X-Thread-" + name + "-%d";
         ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat(threadNameFormat).build();
@@ -118,7 +118,7 @@ public class XThreadPoolImpl implements XThreadPool {
     }
 
     /**
-     * 初始化线程池
+     * ��ʼ���̳߳�
      *
      * @param threadFactory
      * @param rejectedExecutionHandler
@@ -131,7 +131,7 @@ public class XThreadPoolImpl implements XThreadPool {
     }
 
     /**
-     * 创建一个有界队列
+     * ����һ���н����
      *
      * @param queueCapacity
      * @return
@@ -140,7 +140,7 @@ public class XThreadPoolImpl implements XThreadPool {
         if (queueCapacity > 0) {
             return new LinkedBlockingQueue<Runnable>(queueCapacity);
         } else {
-            //一个没有数据缓冲的队列,消费者要get,必须等待生产者put,反之亦然
+            //һ��û�����ݻ���Ķ���,������Ҫget,����ȴ�������put,��֮��Ȼ
             return new SynchronousQueue<Runnable>();
         }
     }
@@ -176,13 +176,89 @@ public class XThreadPoolImpl implements XThreadPool {
     }
 
     /**
-     * 保证不会有Exception抛出到线程池的Runnable，防止用户没有捕捉异常导致中断了线程池中的线程。
+     * �����Ƿ�ȴ���������Źر�
+     *
+     * @param waitForTasksToCompleteOnShutdown
+     */
+    public void setWaitForTasksToCompleteOnShutdown(boolean waitForTasksToCompleteOnShutdown) {
+        this.waitForTasksToCompleteOnShutdown = waitForTasksToCompleteOnShutdown;
+    }
+
+    /**
+     * ���ùرճ�ʱ
+     *
+     * @param shutdownTimeout
+     */
+    public void setShutdownTimeout(int shutdownTimeout) {
+        this.shutdownTimeout = shutdownTimeout;
+    }
+    //====================set and get====================
+
+    /**
+     * Ĭ���Ǿܾ�����
+     *
+     * @param rejectedExecutionHandler
+     */
+    public void setRejectedExecutionHandler(RejectedExecutionHandler rejectedExecutionHandler) {
+        this.rejectedExecutionHandler = (rejectedExecutionHandler != null ? rejectedExecutionHandler : new ThreadPoolExecutor.AbortPolicy());
+    }
+
+    /**
+     * ���ö�������
+     *
+     * @param queueCapacity
+     */
+    public void setQueueCapacity(int queueCapacity) {
+        this.queueCapacity = queueCapacity;
+    }
+
+    /**
+     * ���ú����߳���
+     *
+     * @param corePoolSize
+     */
+    public void setCorePoolSize(int corePoolSize) {
+        this.corePoolSize = corePoolSize;
+    }
+
+    /**
+     * ��������߳���
+     *
+     * @param maxPoolSize
+     */
+    public void setMaxPoolSize(int maxPoolSize) {
+        this.maxPoolSize = maxPoolSize;
+    }
+
+    /**
+     * �����̱߳�����
+     *
+     * @param keepAliveSeconds
+     */
+    public void setKeepAliveSeconds(int keepAliveSeconds) {
+        this.keepAliveSeconds = keepAliveSeconds;
+    }
+
+    /**
+     * ��ȡִ����
+     *
+     * @return
+     */
+    public ExecutorService getExecutor() {
+        if (this.executor != null) {
+            throw new RuntimeException("executor not initialized");
+        }
+        return executor;
+    }
+
+    /**
+     * ��֤������Exception�׳����̳߳ص�Runnable����ֹ�û�û�в�׽�쳣�����ж����̳߳��е��̡߳�
      */
     public static class WrapExceptionRunnable implements Runnable {
         private Runnable runnable;
 
         public WrapExceptionRunnable(Runnable runnable) {
-            //如果参数为null 记录错误日志，并设置一个空任务，这样线程池可以快速结束
+            //�������Ϊnull ��¼������־��������һ�������������̳߳ؿ��Կ��ٽ���
             if (runnable == null) {
                 System.out.println("[WrapExceptionRunnable-WrapExceptionRunnable]error, runnable cann't be null");
                 this.runnable = new Runnable() {
@@ -207,13 +283,13 @@ public class XThreadPoolImpl implements XThreadPool {
     }
 
     /**
-     * 保证不会有Exception抛出到线程池的Runnable，防止用户没有捕捉异常导致中断了线程池中的线程。
+     * ��֤������Exception�׳����̳߳ص�Runnable����ֹ�û�û�в�׽�쳣�����ж����̳߳��е��̡߳�
      */
     public static class WrapExceptionCallable<T> implements Callable<T> {
         private Callable<T> callable;
 
         public WrapExceptionCallable(Callable<T> callable) {
-            //如果参数为null 记录错误日志，并设置一个空任务，这样线程池可以快速结束
+            //�������Ϊnull ��¼������־��������һ�������������̳߳ؿ��Կ��ٽ���
             if (callable == null) {
                 System.out.println("[WrapExceptionCallable-WrapExceptionCallable]error, callable cann't be null");
                 this.callable = new Callable<T>() {
@@ -237,81 +313,5 @@ public class XThreadPoolImpl implements XThreadPool {
                 return null;
             }
         }
-    }
-    //====================set and get====================
-
-    /**
-     * 设置是否等待任务结束才关闭
-     *
-     * @param waitForTasksToCompleteOnShutdown
-     */
-    public void setWaitForTasksToCompleteOnShutdown(boolean waitForTasksToCompleteOnShutdown) {
-        this.waitForTasksToCompleteOnShutdown = waitForTasksToCompleteOnShutdown;
-    }
-
-    /**
-     * 设置关闭超时
-     *
-     * @param shutdownTimeout
-     */
-    public void setShutdownTimeout(int shutdownTimeout) {
-        this.shutdownTimeout = shutdownTimeout;
-    }
-
-    /**
-     * 默认是拒绝策略
-     *
-     * @param rejectedExecutionHandler
-     */
-    public void setRejectedExecutionHandler(RejectedExecutionHandler rejectedExecutionHandler) {
-        this.rejectedExecutionHandler = (rejectedExecutionHandler != null ? rejectedExecutionHandler : new ThreadPoolExecutor.AbortPolicy());
-    }
-
-    /**
-     * 设置队列容量
-     *
-     * @param queueCapacity
-     */
-    public void setQueueCapacity(int queueCapacity) {
-        this.queueCapacity = queueCapacity;
-    }
-
-    /**
-     * 设置核心线程数
-     *
-     * @param corePoolSize
-     */
-    public void setCorePoolSize(int corePoolSize) {
-        this.corePoolSize = corePoolSize;
-    }
-
-    /**
-     * 设置最大线程数
-     *
-     * @param maxPoolSize
-     */
-    public void setMaxPoolSize(int maxPoolSize) {
-        this.maxPoolSize = maxPoolSize;
-    }
-
-    /**
-     * 设置线程保活秒
-     *
-     * @param keepAliveSeconds
-     */
-    public void setKeepAliveSeconds(int keepAliveSeconds) {
-        this.keepAliveSeconds = keepAliveSeconds;
-    }
-
-    /**
-     * 获取执行器
-     *
-     * @return
-     */
-    public ExecutorService getExecutor() {
-        if (this.executor != null) {
-            throw new RuntimeException("executor not initialized");
-        }
-        return executor;
     }
 }

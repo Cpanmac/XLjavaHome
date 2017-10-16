@@ -9,17 +9,17 @@ import java.net.URL;
 
 public class NetUtil {
     /**
-     * æ ¹æ®urlè¿”å›å…¶htmlæ–‡æœ¬
+     * ¸ù¾İurl·µ»ØÆähtmlÎÄ±¾
      *
-     * @param url urlåœ°å€
+     * @param url urlµØÖ·
      * @return
      */
     public static String getContent(String url) {
         try {
             URL _url = new URL(url);
             HttpURLConnection conn = (HttpURLConnection) _url.openConnection();
-            conn.setReadTimeout(20000); // è®¾ç½®è¶…æ—¶
-            conn.setRequestMethod("GET"); // é»˜è®¤æ˜¯GET,å¯ä»¥ä¸ç”¨è®¾ç½®
+            conn.setReadTimeout(20000); // ÉèÖÃ³¬Ê±
+            conn.setRequestMethod("GET"); // Ä¬ÈÏÊÇGET,¿ÉÒÔ²»ÓÃÉèÖÃ
             if (conn.getResponseCode() == 200) {
                 InputStream is = conn.getInputStream();
                 byte[] content = StreamTool.getBytes(is);
@@ -27,10 +27,10 @@ public class NetUtil {
                 if (code.contains("GBK")) {
                     return new String(content, "GBK");
                 } else {
-                    return new String(content, "utf-8"); // é»˜è®¤ä»¥UTF-8ç¼–ç 
+                    return new String(content, "utf-8"); // Ä¬ÈÏÒÔUTF-8±àÂë
                 }
             } else {
-                throw new IllegalStateException("è®¿é—®ç½‘ç»œå¤±è´¥");
+                throw new IllegalStateException("·ÃÎÊÍøÂçÊ§°Ü");
             }
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
@@ -42,7 +42,7 @@ public class NetUtil {
     }
 
     /**
-     * é€šè¿‡urlè·å–è¾“å…¥æµ
+     * Í¨¹ıurl»ñÈ¡ÊäÈëÁ÷
      *
      * @param url
      * @return
@@ -53,13 +53,13 @@ public class NetUtil {
             URL _url = new URL(url);
             HttpURLConnection conn = (HttpURLConnection) _url.openConnection();
             conn.setConnectTimeout(20000);
-            // conn.setRequestMethod("get");//ä¸ºäº†è·å–å…¶ä»–èµ„æº,ç”¨getè¯·æ±‚ä¼šæŠ¥å¼‚å¸¸
+            // conn.setRequestMethod("get");//ÎªÁË»ñÈ¡ÆäËû×ÊÔ´,ÓÃgetÇëÇó»á±¨Òì³£
             int code = conn.getResponseCode();
             if (code == 200) {
                 return conn.getInputStream();
             }
         } catch (Exception e) {
-            throw new RuntimeException("è·å–urlå¤±è´¥");
+            throw new RuntimeException("»ñÈ¡urlÊ§°Ü");
         }
         return null;
     }

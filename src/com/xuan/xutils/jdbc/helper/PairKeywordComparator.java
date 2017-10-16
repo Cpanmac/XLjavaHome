@@ -3,10 +3,10 @@ package com.xuan.xutils.jdbc.helper;
 import java.util.Comparator;
 
 /**
- * å…³é”®å­—æ’åºæ¯”è¾ƒå™¨
+ * ¹Ø¼ü×ÖÅÅĞò±È½ÏÆ÷
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:49:24 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:49:24 $
  */
 public class PairKeywordComparator implements Comparator<PairKeyword> {
     @Override

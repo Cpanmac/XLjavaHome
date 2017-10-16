@@ -2,7 +2,7 @@ package com.xl.design.abstractfactory;
 
 public abstract class Apple implements Fruit {
     /*
-     * é‡‡é›†
+     * ²É¼¯
      */
     public abstract void get();
 }

@@ -1,14 +1,14 @@
 package com.xuan.xutils.concurrent.forkjoin.listtask.core;
 
 /**
- * æ‰§è¡ŒListTaskå¼‚å¸¸
+ * Ö´ĞĞListTaskÒì³£
  * <p>
  * Created by xuan on 17/8/29.
  */
 public class ListTaskException extends Throwable {
     private static final long serialVersionUID = 1;
     /**
-     * çœŸå®æŠ›å‡ºçš„å¼‚å¸¸ï¼Œæ–¹ä¾¿ç”¨æˆ·å¯¹ä¸ç”¨å¼‚å¸¸è¿›è¡Œå¤„ç†
+     * ÕæÊµÅ×³öµÄÒì³££¬·½±ãÓÃ»§¶Ô²»ÓÃÒì³£½øĞĞ´¦Àí
      */
     private Throwable realException;
 
@@ -18,7 +18,7 @@ public class ListTaskException extends Throwable {
     }
 
     /**
-     * å¤å†™è¿™ä¸ªæ–¹æ³•å¯ä»¥é˜²æ­¢æ‰“å‡ºå †æ ˆä¿¡æ¯
+     * ¸´Ğ´Õâ¸ö·½·¨¿ÉÒÔ·ÀÖ¹´ò³ö¶ÑÕ»ĞÅÏ¢
      *
      * @return
      */

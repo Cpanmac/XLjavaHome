@@ -11,24 +11,24 @@ public class TransServer {
         ServerSocket ss = new ServerSocket(10005);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println("å®¢æˆ·ç«¯Ip" + ip);// å¯ä»¥æ£€éªŒè¿æ²¡è¿ä¸Š
+        System.out.println("¿Í»§¶ËIp" + ip);// ¿ÉÒÔ¼ìÑéÁ¬Ã»Á¬ÉÏ
         // OutputStream os=s.getOutputStream();
         // InputStream is =s.getInputStream();
-        // è¦ä¸€è¡Œè¡Œçš„è¯»æ‰æ–¹ä¾¿
-        // è¯»å–socketè¯»å–æµä¸­çš„æ•°æ®
+        // ÒªÒ»ĞĞĞĞµÄ¶Á²Å·½±ã
+        // ¶ÁÈ¡socket¶ÁÈ¡Á÷ÖĞµÄÊı¾İ
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
-        // ç›®çš„ã€‚socketè¾“å‡ºæµï¼Œå°†å¤§å†™æ•°æ®å†™å…¥åˆ°socketè¾“å‡ºæµï¼Œå¹¶å‘é€ç»™å®¢æˆ·ç«¯
+        // Ä¿µÄ¡£socketÊä³öÁ÷£¬½«´óĞ´Êı¾İĞ´Èëµ½socketÊä³öÁ÷£¬²¢·¢ËÍ¸ø¿Í»§¶Ë
         //		BufferedWriter bufOut = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
-        //		ç®€åŒ–ä¸Šé¢çš„ä»£ç 
-        PrintWriter out = new PrintWriter(s.getOutputStream(), true); //èƒ½æ¥å—å­—ç¬¦æµè¿˜èƒ½æ¥å—å­—èŠ‚æµè¿˜èƒ½è‡ªåŠ¨åˆ·æ–°ï¼Œtrueè¡¨ç¤ºæœ‰æ•ˆçš„åˆ·æ–°
+        //		¼ò»¯ÉÏÃæµÄ´úÂë
+        PrintWriter out = new PrintWriter(s.getOutputStream(), true); //ÄÜ½ÓÊÜ×Ö·ûÁ÷»¹ÄÜ½ÓÊÜ×Ö½ÚÁ÷»¹ÄÜ×Ô¶¯Ë¢ĞÂ£¬true±íÊ¾ÓĞĞ§µÄË¢ĞÂ
         String line = null;
-        while ((line = bufIn.readLine()) != null) // readLineè¯»åˆ°å›è½¦ç¬¦æ‰ç®—ç»“æŸï¼Œæ‰€ä»¥å®¢æˆ·ç«¯é‚£è¾¹å†™å…¥çš„æ—¶å€™åªèƒ½å†™å…¥å›è½¦ç¬¦ä¹‹å‰çš„æ•°æ®
+        while ((line = bufIn.readLine()) != null) // readLine¶Áµ½»Ø³µ·û²ÅËã½áÊø£¬ËùÒÔ¿Í»§¶ËÄÇ±ßĞ´ÈëµÄÊ±ºòÖ»ÄÜĞ´Èë»Ø³µ·ûÖ®Ç°µÄÊı¾İ
         {
             System.out.println(line);
-            //			bufOut.write(line.toUpperCase()); // å†™ç¼“å†²åŒºé‡Œå»äº†
+            //			bufOut.write(line.toUpperCase()); // Ğ´»º³åÇøÀïÈ¥ÁË
             //			bufOut.newLine();
-            //			bufOut.flush(); // æ‰€ä»¥è¦åˆ·æ–°ï¼
-            out.println(line);  //å¸¦è¿™æ¢è¡Œçš„è‡ªåŠ¨åˆ·æ–°
+            //			bufOut.flush(); // ËùÒÔÒªË¢ĞÂ£¡
+            out.println(line);  //´øÕâ»»ĞĞµÄ×Ô¶¯Ë¢ĞÂ
         }
         s.close();
         ss.close();

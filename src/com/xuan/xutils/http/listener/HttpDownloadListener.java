@@ -1,17 +1,17 @@
 package com.xuan.xutils.http.listener;
 
 /**
- * ä¸‹è½½ç›‘å¬
+ * ÏÂÔØ¼àÌı
  *
  * @author xuan
  */
 public interface HttpDownloadListener {
     /**
-     * å¤„ç†ç»“æœæ—¶å›è°ƒ
+     * ´¦Àí½á¹ûÊ±»Øµ÷
      *
-     * @param count    æ€»é‡å­—èŠ‚
-     * @param current  å½“å‰å¤„ç†å­—èŠ‚
-     * @param isFinish æ˜¯å¦å¤„ç†å®Œæˆ
+     * @param count    ×ÜÁ¿×Ö½Ú
+     * @param current  µ±Ç°´¦Àí×Ö½Ú
+     * @param isFinish ÊÇ·ñ´¦ÀíÍê³É
      */
     void callBack(long count, long current, boolean isFinish);
 }

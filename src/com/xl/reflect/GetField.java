@@ -9,19 +9,19 @@ public class GetField {
     private String className = "reflect.Person";
 
     /*
-     * è·å–å…¬æœ‰å­—æ®µ
+     * »ñÈ¡¹«ÓĞ×Ö¶Î
      */
     @Test
     public void test1() throws ClassNotFoundException, NoSuchFieldException, SecurityException, InstantiationException, IllegalAccessException {
         Person p = new Person();
         Class clazz = Class.forName(className);
-        Field field = clazz.getField("name"); // ä¼ å±æ€§å
+        Field field = clazz.getField("name"); // ´«ÊôĞÔÃû
         String name = (String) field.get(p);
         System.out.println(name);
-        //å¾—åˆ°å±æ€§çš„å€¼
+        //µÃµ½ÊôĞÔµÄÖµ
         //System.out.println(f.get(f));
         /*
-         * å¦‚æœä¸çŸ¥é“å­—æ®µç±»å‹
+         * Èç¹û²»ÖªµÀ×Ö¶ÎÀàĞÍ
 		 */
         Class type = field.getType();
         System.out.println(type); // class java.lang.String
@@ -33,14 +33,14 @@ public class GetField {
         }
 
 		/*
-         * è®¾ç½®å­—æ®µçš„å€¼
+         * ÉèÖÃ×Ö¶ÎµÄÖµ
 		 */
         field.set(p, "xxx");
         System.out.println(p.name);
     }
 
     /*
-     * è·å–ç§æœ‰çš„å­—æ®µ
+     * »ñÈ¡Ë½ÓĞµÄ×Ö¶Î
      */
     @Test
     public void test2() throws Exception {
@@ -51,6 +51,6 @@ public class GetField {
         System.out.println(f.get(p));
     }
     /*
-     * è·å–é™æ€çš„å­—æ®µ:å’Œä¸Šé¢ä¸€æ ·ï¼Œä¸èƒ½çœç•¥å¯¹è±¡ã€‚
+     * »ñÈ¡¾²Ì¬µÄ×Ö¶Î:ºÍÉÏÃæÒ»Ñù£¬²»ÄÜÊ¡ÂÔ¶ÔÏó¡£
 	 */
 }

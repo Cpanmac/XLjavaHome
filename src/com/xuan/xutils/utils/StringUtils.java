@@ -7,10 +7,10 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * å­—ç¬¦ä¸²å·¥å…·ç±»
+ * ×Ö·û´®¹¤¾ßÀà
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:46:33 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:46:33 $
  */
 public abstract class StringUtils {
     public static final String EMPTY = "";
@@ -23,11 +23,11 @@ public abstract class StringUtils {
     private static final String BOOLEAN_FALSE_NUMBER = "0";
 
     /**
-     * åœ¨strå³è¾¹åŠ å…¥è¶³å¤Ÿå¤šçš„addStrå­—ç¬¦ä¸²
+     * ÔÚstrÓÒ±ß¼ÓÈë×ã¹»¶àµÄaddStr×Ö·û´®
      *
-     * @param str    åŸå­—ç¬¦ä¸²
-     * @param addStr æ–°å¢çš„å­—ç¬¦ä¸²
-     * @param length ç”Ÿæˆçš„å­—ç¬¦ä¸²æ€»é•¿åº¦ä¸è¶…è¿‡length
+     * @param str    Ô­×Ö·û´®
+     * @param addStr ĞÂÔöµÄ×Ö·û´®
+     * @param length Éú³ÉµÄ×Ö·û´®×Ü³¤¶È²»³¬¹ılength
      * @return
      */
     public static String addStringRight(String str, String addStr, int length) {
@@ -39,7 +39,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * åœ¨å­—ç¬¦ä¸²stræ‹¼æ¥åˆ†éš”ç¬¦regexå’Œå­—ç¬¦ä¸²sub
+     * ÔÚ×Ö·û´®strÆ´½Ó·Ö¸ô·ûregexºÍ×Ö·û´®sub
      *
      * @param str
      * @param sub
@@ -51,7 +51,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * åœ¨å­—ç¬¦ä¸²strå³è¾¹è¡¥é½0ç›´åˆ°é•¿åº¦ç­‰äºlength
+     * ÔÚ×Ö·û´®strÓÒ±ß²¹Æë0Ö±µ½³¤¶ÈµÈÓÚlength
      *
      * @param str
      * @param length
@@ -62,7 +62,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * è®¡ç®—å­—ç¬¦ä¸²strä¸­å­—ç¬¦subçš„ä¸ªæ•°
+     * ¼ÆËã×Ö·û´®strÖĞ×Ö·ûsubµÄ¸öÊı
      *
      * @param str
      * @param sub
@@ -79,7 +79,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * è®¡ç®—å­—ç¬¦ä¸²strå³è¾¹å‡ºç°å¤šå°‘æ¬¡sub
+     * ¼ÆËã×Ö·û´®strÓÒ±ß³öÏÖ¶àÉÙ´Îsub
      *
      * @param str
      * @param sub
@@ -137,13 +137,13 @@ public abstract class StringUtils {
     }
 
     /**
-     * æˆªå–å›ºå®šé•¿åº¦çš„å­—ç¬¦ä¸²ï¼Œå‰©ä½™éƒ¨åˆ†çœŸå®é•¿åº¦ä¸ä¼šè¶…è¿‡lenï¼Œè¶…é•¿éƒ¨åˆ†ç”¨suffixä»£æ›¿ã€‚
+     * ½ØÈ¡¹Ì¶¨³¤¶ÈµÄ×Ö·û´®£¬Ê£Óà²¿·ÖÕæÊµ³¤¶È²»»á³¬¹ılen£¬³¬³¤²¿·ÖÓÃsuffix´úÌæ¡£
      *
      * @param str
      * @param len
      * @param suffix
      * @return
-     * @deprecated å·²ç»è¢« {@link #cutOut(String, int, String)} å–ä»£ï¼Œè¯¥æ–¹æ³•çš„æ˜¾ç¤ºæ ¼å¼ä¼šæ›´æ•´é½ã€‚
+     * @deprecated ÒÑ¾­±» {@link #cutOut(String, int, String)} È¡´ú£¬¸Ã·½·¨µÄÏÔÊ¾¸ñÊ½»á¸üÕûÆë¡£
      */
     @Deprecated
     public static String cutOff(String str, int len, String suffix) {
@@ -164,7 +164,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æˆªå–å›ºå®šé•¿åº¦çš„å­—ç¬¦ä¸²ï¼Œè¶…é•¿éƒ¨åˆ†ç”¨suffixä»£æ›¿ï¼Œæœ€ç»ˆå­—ç¬¦ä¸²çœŸå®é•¿åº¦ä¸ä¼šè¶…è¿‡maxLength.
+     * ½ØÈ¡¹Ì¶¨³¤¶ÈµÄ×Ö·û´®£¬³¬³¤²¿·ÖÓÃsuffix´úÌæ£¬×îÖÕ×Ö·û´®ÕæÊµ³¤¶È²»»á³¬¹ımaxLength.
      *
      * @param str
      * @param maxLength
@@ -199,7 +199,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * åœ¨å­—ç¬¦ä¸²strå·¦è¾¹è¡¥é½0ç›´åˆ°é•¿åº¦ç­‰äºlength
+     * ÔÚ×Ö·û´®str×ó±ß²¹Æë0Ö±µ½³¤¶ÈµÈÓÚlength
      *
      * @param str
      * @param len
@@ -213,7 +213,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * ç”¨æ¥æ˜¾ç¤ºå¼‚å¸¸ä¿¡æ¯çš„htmlè¿‡æ»¤å™¨
+     * ÓÃÀ´ÏÔÊ¾Òì³£ĞÅÏ¢µÄhtml¹ıÂËÆ÷
      *
      * @param value
      * @return
@@ -223,12 +223,12 @@ public abstract class StringUtils {
     }
 
     /**
-     * @param text å°†è¦è¢«æ ¼å¼åŒ–çš„å­—ç¬¦ä¸² <br>
-     *             eg:å‚æ•°ä¸€:{0},å‚æ•°äºŒ:{1},å‚æ•°ä¸‰:{2}
-     * @param args å°†æ›¿ä»£å­—ç¬¦ä¸²ä¸­çš„å‚æ•°,äº›å‚æ•°å°†æ›¿æ¢{X} <br>
+     * @param text ½«Òª±»¸ñÊ½»¯µÄ×Ö·û´® <br>
+     *             eg:²ÎÊıÒ»:{0},²ÎÊı¶ş:{1},²ÎÊıÈı:{2}
+     * @param args ½«Ìæ´ú×Ö·û´®ÖĞµÄ²ÎÊı,Ğ©²ÎÊı½«Ìæ»»{X} <br>
      *             eg:new Object[] { "0001", "0005049", new Integer(1) }
-     * @return æ ¼å¼åŒ–åçš„å­—ç¬¦ä¸² <br>
-     * eg: åœ¨ä¸Šé¢çš„è¾“å…¥ä¸‹è¾“å‡ºä¸º:å‚æ•°ä¸€:0001,å‚æ•°äºŒ:0005049,å‚æ•°ä¸‰:1
+     * @return ¸ñÊ½»¯ºóµÄ×Ö·û´® <br>
+     * eg: ÔÚÉÏÃæµÄÊäÈëÏÂÊä³öÎª:²ÎÊıÒ»:0001,²ÎÊı¶ş:0005049,²ÎÊıÈı:1
      */
     public static String format(String text, Object[] args) {
         if (Validators.isEmpty(text) || args == null || args.length == 0) {
@@ -241,10 +241,10 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ ¼å¼åŒ–æµ®ç‚¹å‹æ•°å­—æˆå­—ç¬¦ä¸², ä¿ç•™ä¸¤ä½å°æ•°ä½.
+     * ¸ñÊ½»¯¸¡µãĞÍÊı×Ö³É×Ö·û´®, ±£ÁôÁ½Î»Ğ¡ÊıÎ».
      *
-     * @param number æµ®ç‚¹æ•°å­—
-     * @return æ ¼å¼åŒ–ä¹‹åçš„å­—ç¬¦ä¸²
+     * @param number ¸¡µãÊı×Ö
+     * @return ¸ñÊ½»¯Ö®ºóµÄ×Ö·û´®
      */
     public static String formatDecimal(double number) {
         NumberFormat format = NumberFormat.getInstance();
@@ -255,12 +255,12 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ ¼å¼åŒ–æµ®ç‚¹ç±»å‹æ•°æ®.
+     * ¸ñÊ½»¯¸¡µãÀàĞÍÊı¾İ.
      *
-     * @param number            æµ®ç‚¹æ•°æ®
-     * @param minFractionDigits æœ€å°ä¿ç•™å°æ•°ä½
-     * @param maxFractionDigits æœ€å¤§ä¿ç•™å°æ•°ä½
-     * @return å°†æµ®ç‚¹æ•°æ®æ ¼å¼åŒ–åçš„å­—ç¬¦ä¸²
+     * @param number            ¸¡µãÊı¾İ
+     * @param minFractionDigits ×îĞ¡±£ÁôĞ¡ÊıÎ»
+     * @param maxFractionDigits ×î´ó±£ÁôĞ¡ÊıÎ»
+     * @return ½«¸¡µãÊı¾İ¸ñÊ½»¯ºóµÄ×Ö·û´®
      */
     public static String formatDecimal(double number, int minFractionDigits, int maxFractionDigits) {
         NumberFormat format = NumberFormat.getInstance();
@@ -270,10 +270,10 @@ public abstract class StringUtils {
     }
 
     /**
-     * å–å¾—å­—ç¬¦ä¸²çš„çœŸå®é•¿åº¦ï¼Œä¸€ä¸ªæ±‰å­—é•¿åº¦ä¸ºä¸¤ä¸ªå­—èŠ‚ã€‚
+     * È¡µÃ×Ö·û´®µÄÕæÊµ³¤¶È£¬Ò»¸öºº×Ö³¤¶ÈÎªÁ½¸ö×Ö½Ú¡£
      *
-     * @param str å­—ç¬¦ä¸²
-     * @return å­—ç¬¦ä¸²çš„å­—èŠ‚æ•°
+     * @param str ×Ö·û´®
+     * @return ×Ö·û´®µÄ×Ö½ÚÊı
      */
     public static int getRealLength(String str) {
         if (str == null) {
@@ -292,10 +292,10 @@ public abstract class StringUtils {
     }
 
     /**
-     * HTML æ–‡æœ¬è¿‡æ»¤ï¼Œå¦‚æœ value ä¸º <code>null</code> æˆ–ä¸ºç©ºä¸²ï¼Œåˆ™è¿”å› "&amp;nbsp;"ã€‚
+     * HTML ÎÄ±¾¹ıÂË£¬Èç¹û value Îª <code>null</code> »òÎª¿Õ´®£¬Ôò·µ»Ø "&amp;nbsp;"¡£
      * <p>
      * <p>
-     * è½¬æ¢çš„å­—ç¬¦ä¸²å…³ç³»å¦‚ä¸‹ï¼š
+     * ×ª»»µÄ×Ö·û´®¹ØÏµÈçÏÂ£º
      * <p>
      * <ul>
      * <li>&amp; --> &amp;amp;</li>
@@ -304,13 +304,13 @@ public abstract class StringUtils {
      * <li>&quot; --> &amp;quot;</li>
      * <li>\n --> &lt;br/&gt;</li>
      * <li>\t --> &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</li>
-     * <li>ç©ºæ ¼ --> &amp;nbsp;</li>
+     * <li>¿Õ¸ñ --> &amp;nbsp;</li>
      * </ul>
      * <p>
-     * <strong>æ­¤æ–¹æ³•é€‚ç”¨äºåœ¨ HTML é¡µé¢ä¸Šçš„éæ–‡æœ¬æ¡†å…ƒç´ ï¼ˆdivã€spanã€table ç­‰ï¼‰ä¸­æ˜¾ç¤ºæ–‡æœ¬æ—¶è°ƒç”¨ã€‚</strong>
+     * <strong>´Ë·½·¨ÊÊÓÃÓÚÔÚ HTML Ò³ÃæÉÏµÄ·ÇÎÄ±¾¿òÔªËØ£¨div¡¢span¡¢table µÈ£©ÖĞÏÔÊ¾ÎÄ±¾Ê±µ÷ÓÃ¡£</strong>
      *
-     * @param value è¦è¿‡æ»¤çš„æ–‡æœ¬
-     * @return è¿‡æ»¤åçš„ HTML æ–‡æœ¬
+     * @param value Òª¹ıÂËµÄÎÄ±¾
+     * @return ¹ıÂËºóµÄ HTML ÎÄ±¾
      */
     public static String htmlFilter(String value) {
         if (value == null || value.length() == 0) {
@@ -320,10 +320,10 @@ public abstract class StringUtils {
     }
 
     /**
-     * HTML æ–‡æœ¬è¿‡æ»¤ï¼Œå¦‚æœ value ä¸º <code>null</code> æˆ–ä¸ºç©ºä¸²ï¼Œåˆ™è¿”å›ç©ºä¸²ã€‚
+     * HTML ÎÄ±¾¹ıÂË£¬Èç¹û value Îª <code>null</code> »òÎª¿Õ´®£¬Ôò·µ»Ø¿Õ´®¡£
      * <p>
      * <p>
-     * è½¬æ¢çš„å­—ç¬¦ä¸²å…³ç³»å¦‚ä¸‹ï¼š
+     * ×ª»»µÄ×Ö·û´®¹ØÏµÈçÏÂ£º
      * <p>
      * <ul>
      * <li>&amp; --> &amp;amp;</li>
@@ -333,10 +333,10 @@ public abstract class StringUtils {
      * <li>\n --> &lt;br/&gt;</li>
      * </ul>
      * <p>
-     * <strong>æ­¤æ–¹æ³•é€‚ç”¨äºåœ¨ HTML é¡µé¢ä¸Šçš„æ–‡æœ¬æ¡†ï¼ˆtextã€textareaï¼‰ä¸­æ˜¾ç¤ºæ–‡æœ¬æ—¶è°ƒç”¨ã€‚</strong>
+     * <strong>´Ë·½·¨ÊÊÓÃÓÚÔÚ HTML Ò³ÃæÉÏµÄÎÄ±¾¿ò£¨text¡¢textarea£©ÖĞÏÔÊ¾ÎÄ±¾Ê±µ÷ÓÃ¡£</strong>
      *
-     * @param value è¦è¿‡æ»¤çš„æ–‡æœ¬
-     * @return è¿‡æ»¤åçš„ HTML æ–‡æœ¬
+     * @param value Òª¹ıÂËµÄÎÄ±¾
+     * @return ¹ıÂËºóµÄ HTML ÎÄ±¾
      */
     public static String htmlFilterToEmpty(String value) {
         if (value == null || value.length() == 0) {
@@ -346,17 +346,17 @@ public abstract class StringUtils {
     }
 
     /**
-     * å¿½ç•¥å€¼ä¸º <code>null</code> çš„å­—ç¬¦ä¸²
+     * ºöÂÔÖµÎª <code>null</code> µÄ×Ö·û´®
      *
-     * @param str å­—ç¬¦ä¸²
-     * @return å¦‚æœå­—ç¬¦ä¸²ä¸º <code>null</code>, åˆ™è¿”å›ç©ºå­—ç¬¦ä¸².
+     * @param str ×Ö·û´®
+     * @return Èç¹û×Ö·û´®Îª <code>null</code>, Ôò·µ»Ø¿Õ×Ö·û´®.
      */
     public static String ignoreNull(String str) {
         return str == null ? "" : str;
     }
 
     /**
-     * åªå¦åŒ…æ‹¬"\""ç­‰ä¸åˆ©äºæ–‡æœ¬æ¡†æ˜¾ç¤ºçš„å­—ç¬¦
+     * Ö»·ñ°üÀ¨"\""µÈ²»ÀûÓÚÎÄ±¾¿òÏÔÊ¾µÄ×Ö·û
      *
      * @param arg
      * @return
@@ -369,10 +369,10 @@ public abstract class StringUtils {
     }
 
     /**
-     * è¿‡æ»¤htmlçš„"'"å­—ç¬¦(è½¬ä¹‰ä¸º"\'")ä»¥åŠå…¶ä»–ç‰¹æ®Šå­—ç¬¦, ä¸»è¦ç”¨äºé“¾æ¥åœ°å€çš„ç‰¹æ®Šå­—ç¬¦è¿‡æ»¤.
+     * ¹ıÂËhtmlµÄ"'"×Ö·û(×ªÒåÎª"\'")ÒÔ¼°ÆäËûÌØÊâ×Ö·û, Ö÷ÒªÓÃÓÚÁ´½ÓµØÖ·µÄÌØÊâ×Ö·û¹ıÂË.
      *
-     * @param str è¦è¿‡æ»¤çš„å­—ç¬¦ä¸²
-     * @return è¿‡æ»¤åçš„å­—ç¬¦ä¸²
+     * @param str Òª¹ıÂËµÄ×Ö·û´®
+     * @return ¹ıÂËºóµÄ×Ö·û´®
      */
     public static String linkFilter(String str) {
         if (Validators.isEmpty(str)) {
@@ -424,7 +424,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ¸…é™¤å­—ç¬¦ä¸²å·¦ä¾§çš„ç©ºæ ¼
+     * Çå³ı×Ö·û´®×ó²àµÄ¿Õ¸ñ
      *
      * @param str
      * @return
@@ -434,7 +434,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ¸…é™¤å­—ç¬¦ä¸²å·¦ä¾§çš„æŒ‡å®šå­—ç¬¦ä¸²
+     * Çå³ı×Ö·û´®×ó²àµÄÖ¸¶¨×Ö·û´®
      *
      * @param str
      * @param remove
@@ -451,7 +451,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ¸…é™¤å­—ç¬¦ä¸²å³ä¾§çš„ç©ºæ ¼
+     * Çå³ı×Ö·û´®ÓÒ²àµÄ¿Õ¸ñ
      *
      * @param str
      * @return
@@ -461,7 +461,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ¸…é™¤å­—ç¬¦ä¸²å³ä¾§çš„æŒ‡å®šå­—ç¬¦ä¸²
+     * Çå³ı×Ö·û´®ÓÒ²àµÄÖ¸¶¨×Ö·û´®
      *
      * @param str
      * @param remove
@@ -478,7 +478,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æŠŠå­—ç¬¦ä¸²æŒ‰ç…§è§„åˆ™åˆ†å‰²ï¼Œæ¯”å¦‚strä¸ºâ€œid=123&name=testâ€ï¼Œruleä¸ºâ€œid=#&name=#â€ï¼Œåˆ†éš”åä¸º["123", "test"];
+     * °Ñ×Ö·û´®°´ÕÕ¹æÔò·Ö¸î£¬±ÈÈçstrÎª¡°id=123&name=test¡±£¬ruleÎª¡°id=#&name=#¡±£¬·Ö¸ôºóÎª["123", "test"];
      *
      * @param str
      * @param rule
@@ -517,7 +517,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ›¿æ¢sql likeçš„å­—æ®µä¸­çš„é€šé…ç¬¦ï¼ŒåŒ…æ‹¬[]%_
+     * Ìæ»»sql likeµÄ×Ö¶ÎÖĞµÄÍ¨Åä·û£¬°üÀ¨[]%_
      *
      * @param str
      * @return
@@ -545,7 +545,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æŠŠå­—ç¬¦ä¸²æŒ‰ç…§æŒ‡å®šçš„å­—ç¬¦é›†è¿›è¡Œç¼–ç 
+     * °Ñ×Ö·û´®°´ÕÕÖ¸¶¨µÄ×Ö·û¼¯½øĞĞ±àÂë
      *
      * @param str
      * @param charSetName
@@ -560,7 +560,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æŠŠä¸€ä¸ªå­—èŠ‚æ•°ç»„è½¬æ¢ä¸º16è¿›åˆ¶è¡¨è¾¾çš„å­—ç¬¦ä¸²
+     * °ÑÒ»¸ö×Ö½ÚÊı×é×ª»»Îª16½øÖÆ±í´ïµÄ×Ö·û´®
      *
      * @param bytes
      * @return
@@ -574,7 +574,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æŠŠ16è¿›åˆ¶è¡¨è¾¾çš„å­—ç¬¦ä¸²è½¬æ¢ä¸ºæ•´æ•°
+     * °Ñ16½øÖÆ±í´ïµÄ×Ö·û´®×ª»»ÎªÕûÊı
      *
      * @param hexString
      * @return
@@ -584,11 +584,11 @@ public abstract class StringUtils {
     }
 
     /**
-     * å°†ä»¥ASCIIå­—ç¬¦è¡¨ç¤ºçš„16è¿›åˆ¶å­—ç¬¦ä¸²ä»¥æ¯ä¸¤ä¸ªå­—ç¬¦åˆ†å‰²è½¬æ¢ä¸º16è¿›åˆ¶è¡¨ç¤ºçš„byteæ•°ç»„.<br>
+     * ½«ÒÔASCII×Ö·û±íÊ¾µÄ16½øÖÆ×Ö·û´®ÒÔÃ¿Á½¸ö×Ö·û·Ö¸î×ª»»Îª16½øÖÆ±íÊ¾µÄbyteÊı×é.<br>
      * e.g. "e024c854" --> byte[]{0xe0, 0x24, 0xc8, 0x54}
      *
-     * @param str åŸ16è¿›åˆ¶å­—ç¬¦ä¸²
-     * @return 16è¿›åˆ¶è¡¨ç¤ºçš„byteæ•°ç»„
+     * @param str Ô­16½øÖÆ×Ö·û´®
+     * @return 16½øÖÆ±íÊ¾µÄbyteÊı×é
      */
     public static byte[] hexString2Bytes(String str) {
         if (null == str || str.length() == 0) {
@@ -609,7 +609,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ¸…é™¤å­—ç¬¦ä¸²ä¸¤è¾¹çš„ç©ºæ ¼ï¼Œnullä¸å¤„ç†
+     * Çå³ı×Ö·û´®Á½±ßµÄ¿Õ¸ñ£¬null²»´¦Àí
      *
      * @param str
      * @return
@@ -632,7 +632,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ¸…é™¤å­—ç¬¦ä¸²ä¸­çš„å›è½¦å’Œæ¢è¡Œç¬¦
+     * Çå³ı×Ö·û´®ÖĞµÄ»Ø³µºÍ»»ĞĞ·û
      *
      * @param str
      * @return
@@ -645,9 +645,9 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ¸…é™¤ä¸‹åˆ’çº¿ï¼ŒæŠŠä¸‹åˆ’çº¿åé¢å­—æ¯è½¬æ¢æˆå¤§å†™å­—æ¯
-     * ä¾‹å¦‚: test_xuan_nihao
-     * è¿”å›: testXuanNihao
+     * Çå³ıÏÂ»®Ïß£¬°ÑÏÂ»®ÏßºóÃæ×ÖÄ¸×ª»»³É´óĞ´×ÖÄ¸
+     * ÀıÈç: test_xuan_nihao
+     * ·µ»Ø: testXuanNihao
      *
      * @param str
      * @return
@@ -666,11 +666,11 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ ¹æ®åˆ†å‰²ç¬¦å¯¹å­—ç¬¦ä¸²è¿›è¡Œåˆ†å‰²ï¼Œæ¯ä¸ªåˆ†å‰²åçš„å­—ç¬¦ä¸²å°†è¢« <tt>trim</tt> åæ”¾åˆ°åˆ—è¡¨ä¸­ã€‚
+     * ¸ù¾İ·Ö¸î·û¶Ô×Ö·û´®½øĞĞ·Ö¸î£¬Ã¿¸ö·Ö¸îºóµÄ×Ö·û´®½«±» <tt>trim</tt> ºó·Åµ½ÁĞ±íÖĞ¡£
      *
-     * @param str       å°†è¦è¢«åˆ†å‰²çš„å­—ç¬¦ä¸²
-     * @param delimiter åˆ†éš”ç¬¦
-     * @return åˆ†å‰²åçš„ç»“æœåˆ—è¡¨
+     * @param str       ½«Òª±»·Ö¸îµÄ×Ö·û´®
+     * @param delimiter ·Ö¸ô·û
+     * @return ·Ö¸îºóµÄ½á¹ûÁĞ±í
      */
     public static final List<String> split(String str, char delimiter) {
         // return no groups if we have an empty string
@@ -690,7 +690,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * åˆ¤æ–­ value çš„å€¼æ˜¯å¦è¡¨ç¤ºæ¡ä»¶ä¸ºçœŸã€‚ä¾‹å­ï¼š
+     * ÅĞ¶Ï value µÄÖµÊÇ·ñ±íÊ¾Ìõ¼şÎªÕæ¡£Àı×Ó£º
      * <p>
      * <ul>
      * <li>"1" -> true</li>
@@ -702,15 +702,15 @@ public abstract class StringUtils {
      * <li>"test" -> false</li>
      * </ul>
      *
-     * @param value å­—ç¬¦ä¸²
-     * @return å¦‚æœ value ç­‰äº â€œ1â€ æˆ–è€… â€œtrueâ€ï¼ˆå¤§å°å†™æ— å…³ï¼‰ è¿”å› <code>true</code>ï¼Œå¦åˆ™è¿”å› <code>false</code>ã€‚
+     * @param value ×Ö·û´®
+     * @return Èç¹û value µÈÓÚ ¡°1¡± »òÕß ¡°true¡±£¨´óĞ¡Ğ´ÎŞ¹Ø£© ·µ»Ø <code>true</code>£¬·ñÔò·µ»Ø <code>false</code>¡£
      */
     public static boolean isValueTrue(String value) {
         return BOOLEAN_TRUE_NUMBER.equals(value) || BOOLEAN_TRUE_STRING.equalsIgnoreCase(value);
     }
 
     /**
-     * åˆ¤æ–­ value çš„å€¼æ˜¯å¦è¡¨ç¤ºæ¡ä»¶ä¸ºå‡ã€‚ä¾‹å­ï¼š
+     * ÅĞ¶Ï value µÄÖµÊÇ·ñ±íÊ¾Ìõ¼şÎª¼Ù¡£Àı×Ó£º
      * <p>
      * <ul>
      * <li>"0" -> true</li>
@@ -722,15 +722,15 @@ public abstract class StringUtils {
      * <li>"test" -> false</li>
      * </ul>
      *
-     * @param value å­—ç¬¦ä¸²
-     * @return å¦‚æœ value ç­‰äº â€œ0â€ æˆ–è€… â€œfalseâ€ï¼ˆå¤§å°å†™æ— å…³ï¼‰ è¿”å› <code>true</code>ï¼Œå¦åˆ™è¿”å› <code>false</code>ã€‚
+     * @param value ×Ö·û´®
+     * @return Èç¹û value µÈÓÚ ¡°0¡± »òÕß ¡°false¡±£¨´óĞ¡Ğ´ÎŞ¹Ø£© ·µ»Ø <code>true</code>£¬·ñÔò·µ»Ø <code>false</code>¡£
      */
     public static boolean isValueFalse(String value) {
         return BOOLEAN_FALSE_NUMBER.equals(value) || BOOLEAN_FALSE_STRING.equalsIgnoreCase(value);
     }
 
     /**
-     * åˆ¤æ–­ä¸¤ä¸ªå­—ç¬¦ä¸²æ˜¯å¦equals,å¦‚æœå­—ç¬¦ä¸²æ˜¯null,å°±ç›´æ¥è¿”å›false
+     * ÅĞ¶ÏÁ½¸ö×Ö·û´®ÊÇ·ñequals,Èç¹û×Ö·û´®ÊÇnull,¾ÍÖ±½Ó·µ»Øfalse
      *
      * @param str1
      * @param str2
@@ -744,12 +744,12 @@ public abstract class StringUtils {
     }
 
     /**
-     * æ‹¼æ¥å­—ç¬¦ä¸²
-     * ä¾‹å¦‚: dataList=[a,b,c], separator=";"
-     * è¿”å›: a;b;c
+     * Æ´½Ó×Ö·û´®
+     * ÀıÈç: dataList=[a,b,c], separator=";"
+     * ·µ»Ø: a;b;c
      *
-     * @param dataList  æ•°æ®æ•°ç»„,ä¼šè°ƒç”¨toString()è½¬å­—ç¬¦ä¸²
-     * @param separator åˆ†éš”ç¬¦
+     * @param dataList  Êı¾İÊı×é,»áµ÷ÓÃtoString()×ª×Ö·û´®
+     * @param separator ·Ö¸ô·û
      * @return
      */
     public static String join(List<Object> dataList, String separator) {
@@ -768,7 +768,7 @@ public abstract class StringUtils {
     }
 
     /**
-     * å­—ç¬¦ä¸²æ˜¯å¦æ˜¯ç©ºç™½çš„,åŒapacheçš„StringUtilsä¸­çš„åŒåæ–¹æ³•ä¸€æ ·
+     * ×Ö·û´®ÊÇ·ñÊÇ¿Õ°×µÄ,Í¬apacheµÄStringUtilsÖĞµÄÍ¬Ãû·½·¨Ò»Ñù
      *
      * @param cs
      * @return

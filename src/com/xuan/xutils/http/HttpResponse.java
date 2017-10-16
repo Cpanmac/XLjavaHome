@@ -3,33 +3,33 @@ package com.xuan.xutils.http;
 import java.io.File;
 
 /**
- * Httpå“åº”å¯¹è±¡
+ * HttpÏìÓ¦¶ÔÏó
  *
  * @author xuan
  */
 public class HttpResponse {
     /**
-     * æˆåŠŸçš„çŠ¶æ€ç 
+     * ³É¹¦µÄ×´Ì¬Âë
      */
     public static final int STATUS_CODE_SUCCESS = 200;
     /**
-     * å¤±è´¥çš„çŠ¶æ€ç 
+     * Ê§°ÜµÄ×´Ì¬Âë
      */
     public static final int STATUS_CODE_FAIL = -1;
     /**
-     * è¿”å›çŠ¶æ€ç ï¼›æˆåŠŸ200
+     * ·µ»Ø×´Ì¬Âë£»³É¹¦200
      */
     private int statusCode;
     /**
-     * è¿”å›çŠ¶æ€çŸ­è¯­
+     * ·µ»Ø×´Ì¬¶ÌÓï
      */
     private String reasonPhrase;
     /**
-     * è¿”å›ç»“æœï¼šå½“è¿”å›æ˜¯å­—ç¬¦ä¸²æ—¶æ‰æœ‰
+     * ·µ»Ø½á¹û£ºµ±·µ»ØÊÇ×Ö·û´®Ê±²ÅÓĞ
      */
     private String resultStr;
     /**
-     * è¿”å›ç»“æœï¼šå½“è¿”å›æ˜¯æ–‡ä»¶æ—¶æ‰æœ‰
+     * ·µ»Ø½á¹û£ºµ±·µ»ØÊÇÎÄ¼şÊ±²ÅÓĞ
      */
     private File resultFile;
 
@@ -47,7 +47,7 @@ public class HttpResponse {
     }
 
     /**
-     * åˆ¤æ–­ç½‘ç»œæ˜¯å¦è¿”å›æ­£å¸¸ï¼Œæ­£å¸¸ç ï¼200
+     * ÅĞ¶ÏÍøÂçÊÇ·ñ·µ»ØÕı³££¬Õı³£Âë£½200
      *
      * @return
      */

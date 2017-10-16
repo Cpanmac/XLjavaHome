@@ -12,12 +12,12 @@ import java.security.NoSuchAlgorithmException;
  * Created by IntelliJ IDEA.
  * User: sinitek
  * Date: 12-2-27
- * Time: ä¸Šåˆ10:41
+ * Time: ÉÏÎç10:41
  * To change this template use File | Settings | File Templates.
  */
 public class EncryptUtil {
     /**
-     * è¿›è¡ŒdesåŠ å¯†
+     * ½øĞĞdes¼ÓÃÜ
      *
      * @param message
      * @param key
@@ -29,7 +29,7 @@ public class EncryptUtil {
     }
 
     /**
-     * è¿›è¡ŒdesåŠ å¯†
+     * ½øĞĞdes¼ÓÃÜ
      *
      * @param message
      * @param key
@@ -51,7 +51,7 @@ public class EncryptUtil {
     }
 
     /**
-     * è¿›è¡Œdesè§£å¯†
+     * ½øĞĞdes½âÃÜ
      *
      * @param message
      * @param key
@@ -75,7 +75,7 @@ public class EncryptUtil {
     }
 
     /**
-     * 16è¿›åˆ¶å­—ç¬¦ä¸²è½¬byte
+     * 16½øÖÆ×Ö·û´®×ªbyte
      *
      * @param ss
      * @return
@@ -91,7 +91,7 @@ public class EncryptUtil {
     }
 
     /**
-     * byteæµè½¬æ¢æˆ16è¿›åˆ¶å­—ç¬¦ä¸²
+     * byteÁ÷×ª»»³É16½øÖÆ×Ö·û´®
      *
      * @param b
      * @return

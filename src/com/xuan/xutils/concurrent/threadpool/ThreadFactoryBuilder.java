@@ -5,29 +5,29 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * 构建ThreadFactory工具类(来自guava)
+ * ����ThreadFactory������(����guava)
  * <p>
  * Created by xuan on 17/8/14.
  */
 public class ThreadFactoryBuilder {
     /**
-     * 名称格式化串
+     * ���Ƹ�ʽ����
      */
     private String nameFormat = null;
     /**
-     * 是否是守护线程
+     * �Ƿ����ػ��߳�
      */
     private Boolean daemon = null;
     /**
-     * 线程优先级
+     * �߳����ȼ�
      */
     private Integer priority = null;
     /**
-     * 线程发生异常后,未正常捕获时,会回调这个异常处理器
+     * �̷߳����쳣��,δ��������ʱ,��ص�����쳣������
      */
     private Thread.UncaughtExceptionHandler uncaughtExceptionHandler = null;
     /**
-     * 线程工厂
+     * �̹߳���
      */
     private ThreadFactory backingThreadFactory = null;
 
@@ -35,75 +35,7 @@ public class ThreadFactoryBuilder {
     }
 
     /**
-     * 给线程设置名称,支持format
-     *
-     * @param nameFormat
-     * @return
-     */
-    public ThreadFactoryBuilder setNameFormat(String nameFormat) {
-        String.format(nameFormat, 0);//如果nameFormat是null或者format格式不对,就能立马返回错误
-        this.nameFormat = nameFormat;
-        return this;
-    }
-
-    /**
-     * 设置是否守护
-     *
-     * @param daemon
-     * @return
-     */
-    public ThreadFactoryBuilder setDaemon(boolean daemon) {
-        this.daemon = daemon;
-        return this;
-    }
-
-    /**
-     * 设置优先级
-     *
-     * @param priority
-     * @return
-     */
-    public ThreadFactoryBuilder setPriority(int priority) {
-        //虽然在Thread#setPriority()时会校验有限级的有效性.但是这里提前校验一下,提示效果更好,如果是无效还能提前校验出来
-        checkArgument(priority >= Thread.MIN_PRIORITY, "Thread priority (%s) must be >= %s", priority, Thread.MIN_PRIORITY);
-        checkArgument(priority <= Thread.MAX_PRIORITY, "Thread priority (%s) must be <= %s", priority, Thread.MAX_PRIORITY);
-        this.priority = priority;
-        return this;
-    }
-
-    /**
-     * 设置未捕捉异常处理器
-     *
-     * @param uncaughtExceptionHandler
-     * @return
-     */
-    public ThreadFactoryBuilder setUncaughtExceptionHandler(Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
-        this.uncaughtExceptionHandler = checkNotNull(uncaughtExceptionHandler);
-        return this;
-    }
-
-    /**
-     * 设置ThreadFactory
-     *
-     * @param backingThreadFactory
-     * @return
-     */
-    public ThreadFactoryBuilder setThreadFactory(ThreadFactory backingThreadFactory) {
-        this.backingThreadFactory = checkNotNull(backingThreadFactory);
-        return this;
-    }
-
-    /**
-     * 根据参数开始构建
-     *
-     * @return
-     */
-    public ThreadFactory build() {
-        return build(this);
-    }
-
-    /**
-     * 内部构建
+     * �ڲ�����
      *
      * @param builder
      * @return
@@ -137,7 +69,75 @@ public class ThreadFactoryBuilder {
     }
 
     /**
-     * expression校验
+     * ���߳���������,֧��format
+     *
+     * @param nameFormat
+     * @return
+     */
+    public ThreadFactoryBuilder setNameFormat(String nameFormat) {
+        String.format(nameFormat, 0);//���nameFormat��null����format��ʽ����,���������ش���
+        this.nameFormat = nameFormat;
+        return this;
+    }
+
+    /**
+     * �����Ƿ��ػ�
+     *
+     * @param daemon
+     * @return
+     */
+    public ThreadFactoryBuilder setDaemon(boolean daemon) {
+        this.daemon = daemon;
+        return this;
+    }
+
+    /**
+     * �������ȼ�
+     *
+     * @param priority
+     * @return
+     */
+    public ThreadFactoryBuilder setPriority(int priority) {
+        //��Ȼ��Thread#setPriority()ʱ��У�����޼�����Ч��.����������ǰУ��һ��,��ʾЧ������,�������Ч������ǰУ�����
+        checkArgument(priority >= Thread.MIN_PRIORITY, "Thread priority (%s) must be >= %s", priority, Thread.MIN_PRIORITY);
+        checkArgument(priority <= Thread.MAX_PRIORITY, "Thread priority (%s) must be <= %s", priority, Thread.MAX_PRIORITY);
+        this.priority = priority;
+        return this;
+    }
+
+    /**
+     * ����δ��׽�쳣������
+     *
+     * @param uncaughtExceptionHandler
+     * @return
+     */
+    public ThreadFactoryBuilder setUncaughtExceptionHandler(Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
+        this.uncaughtExceptionHandler = checkNotNull(uncaughtExceptionHandler);
+        return this;
+    }
+
+    /**
+     * ����ThreadFactory
+     *
+     * @param backingThreadFactory
+     * @return
+     */
+    public ThreadFactoryBuilder setThreadFactory(ThreadFactory backingThreadFactory) {
+        this.backingThreadFactory = checkNotNull(backingThreadFactory);
+        return this;
+    }
+
+    /**
+     * ���ݲ�����ʼ����
+     *
+     * @return
+     */
+    public ThreadFactory build() {
+        return build(this);
+    }
+
+    /**
+     * expressionУ��
      *
      * @param expression
      * @param errorMessageTemplate
@@ -150,7 +150,7 @@ public class ThreadFactoryBuilder {
     }
 
     /**
-     * %s标识符号替换成真实值
+     * %s��ʶ�����滻����ʵֵ
      *
      * @param template
      * @param args
@@ -186,7 +186,7 @@ public class ThreadFactoryBuilder {
     }
 
     /**
-     * 判空
+     * �п�
      *
      * @param reference
      * @param <T>

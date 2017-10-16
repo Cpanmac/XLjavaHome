@@ -16,16 +16,16 @@ import java.util.List;
 public class SAXAnalyze {
     @Test
     public void read() throws Exception {
-        // 1.åˆ›å»ºè§£æå·¥å‚
+        // 1.´´½¨½âÎö¹¤³§
         SAXParserFactory factory = SAXParserFactory.newInstance();
-        // 2.å¾—åˆ°è§£æå™¨
+        // 2.µÃµ½½âÎöÆ÷
         SAXParser sp = factory.newSAXParser();
-        // 3.å¾—åˆ°è¯»å–å™¨
+        // 3.µÃµ½¶ÁÈ¡Æ÷
         XMLReader reader = sp.getXMLReader();
-        // 4.è®¾ç½®å†…å®¹å¤„ç†å™¨
+        // 4.ÉèÖÃÄÚÈİ´¦ÀíÆ÷
         BeanListHandler handler = new BeanListHandler();
         reader.setContentHandler(handler);
-        // 5.è¯»å–xmlæ–‡æ¡£å†…å®¹
+        // 5.¶ÁÈ¡xmlÎÄµµÄÚÈİ
         reader.parse("book.xml");
         List list = handler.getBooks();
         Iterator iterator = list.iterator();
@@ -36,7 +36,7 @@ public class SAXAnalyze {
     }
 }
 
-// æŠŠXMLæ–‡æ¡£ä¸­çš„æ¯ä¸€æœ¬ä¹¦å°è£…åˆ°ä¸€ä¸ªbookå¯¹è±¡,å¹¶æŠŠå¤šä¸ªbookå¯¹è±¡æ”¾åœ¨ä¸€ä¸ªlisté›†åˆä¸­
+// °ÑXMLÎÄµµÖĞµÄÃ¿Ò»±¾Êé·â×°µ½Ò»¸öbook¶ÔÏó,²¢°Ñ¶à¸öbook¶ÔÏó·ÅÔÚÒ»¸ölist¼¯ºÏÖĞ
 class BeanListHandler extends DefaultHandler {
     private List list = new ArrayList();
     private String currentTag;
@@ -45,22 +45,22 @@ class BeanListHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String name, Attributes attributes) throws SAXException {
         currentTag = name;
-        if ("ä¹¦".equals(currentTag)) {
+        if ("Êé".equals(currentTag)) {
             book = new Book();
         }
     }
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        if ("ä¹¦å".equals(currentTag)) {
+        if ("ÊéÃû".equals(currentTag)) {
             String name = new String(ch, start, length);
             book.setName(name);
         }
-        if ("ä½œè€…".equals(currentTag)) {
+        if ("×÷Õß".equals(currentTag)) {
             String author = new String(ch, start, length);
             book.setAuthor(author);
         }
-        if ("å”®ä»·".equals(currentTag)) {
+        if ("ÊÛ¼Û".equals(currentTag)) {
             String price = new String(ch, start, length);
             book.setPrice(price);
         }
@@ -68,16 +68,16 @@ class BeanListHandler extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        // å½“ç»“æŸæ ‡ç­¾ä¸ºä¹¦çš„æ—¶å€™è¯´æ˜å…¨éƒ¨å­˜åˆ°äº†bookå¯¹è±¡,è¿™ä¸ªæ—¶å€™å­˜è¿›List
-        if (qName.equals("ä¹¦")) {
+        // µ±½áÊø±êÇ©ÎªÊéµÄÊ±ºòËµÃ÷È«²¿´æµ½ÁËbook¶ÔÏó,Õâ¸öÊ±ºò´æ½øList
+        if (qName.equals("Êé")) {
             list.add(book);
-            // book=null; //è¿™ä¸ªå¯ä»¥å»æ‰
+            // book=null; //Õâ¸ö¿ÉÒÔÈ¥µô
         }
-        // å¦‚æœcurrentTagä¸ç­‰äºnullä¼šå‡ºç©ºæŒ‡é’ˆå¼‚å¸¸,
+        // Èç¹ûcurrentTag²»µÈÓÚnull»á³ö¿ÕÖ¸ÕëÒì³£,
         currentTag = null;
     }
 
-    // æä¾›List
+    // Ìá¹©List
     public List getBooks() {
         return list;
     }

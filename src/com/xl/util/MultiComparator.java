@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * åˆ—è¡¨æ’åºç»„ï¼Œç”¨äºæ”¯æŒå¤šå­—æ®µæ’åº
+ * ÁĞ±íÅÅĞò×é£¬ÓÃÓÚÖ§³Ö¶à×Ö¶ÎÅÅĞò
  *
  * @author yg.huang
  * @version v1.0

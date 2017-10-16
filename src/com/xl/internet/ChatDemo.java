@@ -10,12 +10,12 @@ import java.net.SocketException;
 
 /*
 
- æœ‰æ”¶æ•°æ®çš„éƒ¨åˆ†ï¼Œå’Œå‘æ•°æ®çš„éƒ¨åˆ†ã€‚
- è¿™ä¸¤éƒ¨åˆ†éœ€è¦åŒæ—¶æ‰§è¡Œã€‚
- é‚£å°±éœ€è¦å¤šçº¿ç¨‹æŠ€æœ¯ã€‚
- ä¸€ä¸ªçº¿ç¨‹è´Ÿè´£æ”¶ï¼Œä¸€ä¸ªçº¿ç¨‹è´Ÿè´£å‘ã€‚
-å› ä¸ºæ”¶å’Œå‘åŠ¨ä½œæ˜¯ä¸ä¸€è‡´çš„ã€‚æ‰€ä»¥è¦å®šä¹‰ä¸¤ä¸ªrunæ–¹æ³•ã€‚
-è€Œä¸”è¿™ä¸¤ä¸ªæ–¹æ³•è¦å°è£…åˆ°ä¸¤ä¸ªç±»ä¸­
+ ÓĞÊÕÊı¾İµÄ²¿·Ö£¬ºÍ·¢Êı¾İµÄ²¿·Ö¡£
+ ÕâÁ½²¿·ÖĞèÒªÍ¬Ê±Ö´ĞĞ¡£
+ ÄÇ¾ÍĞèÒª¶àÏß³Ì¼¼Êõ¡£
+ Ò»¸öÏß³Ì¸ºÔğÊÕ£¬Ò»¸öÏß³Ì¸ºÔğ·¢¡£
+ÒòÎªÊÕºÍ·¢¶¯×÷ÊÇ²»Ò»ÖÂµÄ¡£ËùÒÔÒª¶¨ÒåÁ½¸örun·½·¨¡£
+¶øÇÒÕâÁ½¸ö·½·¨Òª·â×°µ½Á½¸öÀàÖĞ
  */
 public class ChatDemo {
     public static void main(String[] args) {
@@ -25,8 +25,8 @@ public class ChatDemo {
             new Thread(new Send(sendSocket)).start();
             new Thread(new Rece(receSocket)).start();
         } catch (SocketException e) {
-            //è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
-            throw new RuntimeException("å‡ºé”™å•¦");
+            //×Ô¶¯Éú³ÉµÄ catch ¿é
+            throw new RuntimeException("³ö´íÀ²");
         }
     }
 }
@@ -38,19 +38,19 @@ class Send implements Runnable {
         this.ds = ds;
     }
 
-    public void run() {  //å‘é€è¦try
+    public void run() {  //·¢ËÍÒªtry
         try {
-            BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));//ç”¨åˆ°è½¬æ¢æµ
+            BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));//ÓÃµ½×ª»»Á÷
             String line = null;
             while ((line = bufr.readLine()) != null) {
                 if ("886".equals(line))
                     break;
                 byte[] buf = line.getBytes();
-                DatagramPacket dp = new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.1.255"), 10002);//ç»™æ‰€æœ‰çš„å‘å¹¿æ’­
+                DatagramPacket dp = new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.1.255"), 10002);//¸øËùÓĞµÄ·¢¹ã²¥
                 ds.send(dp);
             }
         } catch (Exception e) {
-            throw new RuntimeException("å‘é€å¤±è´¥");
+            throw new RuntimeException("·¢ËÍÊ§°Ü");
         }
     }
 }
@@ -68,13 +68,13 @@ class Rece implements Runnable {
                 byte[] buf = new byte[1024];
                 DatagramPacket dp = new DatagramPacket(buf, buf.length);
                 ds.receive(dp);
-                //æ¥æ•°æ®ä¹‹å‰çœ‹çœ‹ip
+                //½ÓÊı¾İÖ®Ç°¿´¿´ip
                 String ip = dp.getAddress().getHostAddress();
                 String data = new String(dp.getData(), 0, dp.getLength());
                 System.out.println(ip + ":" + data);
             }
         } catch (IOException e) {
-            throw new RuntimeException("æ¥å—å¤±è´¥");
+            throw new RuntimeException("½ÓÊÜÊ§°Ü");
         }
     }
 }

@@ -9,20 +9,20 @@ import java.util.Random;
 import java.util.Set;
 
 /**
- * æ•°å­—å·¥å…·ç±»<br>
- * å¯¹äºç²¾ç¡®å€¼è®¡ç®—åº”è¯¥ä½¿ç”¨ {@link BigDecimal}<br>
- * JDK7ä¸­<strong>BigDecimal(double val)</strong>æ„é€ æ–¹æ³•çš„ç»“æœæœ‰ä¸€å®šçš„ä¸å¯é¢„çŸ¥æ€§ï¼Œä¾‹å¦‚ï¼š
+ * Êı×Ö¹¤¾ßÀà<br>
+ * ¶ÔÓÚ¾«È·Öµ¼ÆËãÓ¦¸ÃÊ¹ÓÃ {@link BigDecimal}<br>
+ * JDK7ÖĞ<strong>BigDecimal(double val)</strong>¹¹Ôì·½·¨µÄ½á¹ûÓĞÒ»¶¨µÄ²»¿ÉÔ¤ÖªĞÔ£¬ÀıÈç£º
  * <p>
  * <pre>
  * new BigDecimal(0.1)
  * </pre>
  * <p>
- * è¡¨ç¤ºçš„ä¸æ˜¯<strong>0.1</strong>è€Œæ˜¯<strong>0.1000000000000000055511151231257827021181583404541015625</strong>
+ * ±íÊ¾µÄ²»ÊÇ<strong>0.1</strong>¶øÊÇ<strong>0.1000000000000000055511151231257827021181583404541015625</strong>
  * <p>
  * <p>
- * è¿™æ˜¯å› ä¸º0.1æ— æ³•å‡†ç¡®çš„è¡¨ç¤ºä¸ºdoubleã€‚å› æ­¤åº”è¯¥ä½¿ç”¨<strong>new BigDecimal(String)</strong>ã€‚
+ * ÕâÊÇÒòÎª0.1ÎŞ·¨×¼È·µÄ±íÊ¾Îªdouble¡£Òò´ËÓ¦¸ÃÊ¹ÓÃ<strong>new BigDecimal(String)</strong>¡£
  * </p>
- * ç›¸å…³ä»‹ç»ï¼š
+ * Ïà¹Ø½éÉÜ£º
  * <ul>
  * <li>http://www.oschina.net/code/snippet_563112_25237</li>
  * <li>https://github.com/venusdrogon/feilong-core/wiki/one-jdk7-bug-thinking</li>
@@ -32,7 +32,7 @@ import java.util.Set;
  */
 public class NumberUtil {
     /**
-     * é»˜è®¤é™¤æ³•è¿ç®—ç²¾åº¦
+     * Ä¬ÈÏ³ı·¨ÔËËã¾«¶È
      */
     private static final int DEFAUT_DIV_SCALE = 10;
 
@@ -40,22 +40,22 @@ public class NumberUtil {
     }
 
     /**
-     * æä¾›ç²¾ç¡®çš„åŠ æ³•è¿ç®—
+     * Ìá¹©¾«È·µÄ¼Ó·¨ÔËËã
      *
-     * @param v1 è¢«åŠ æ•°
-     * @param v2 åŠ æ•°
-     * @return å’Œ
+     * @param v1 ±»¼ÓÊı
+     * @param v2 ¼ÓÊı
+     * @return ºÍ
      */
     public static double add(double v1, double v2) {
         return add(Double.toString(v1), Double.toString(v2)).doubleValue();
     }
 
     /**
-     * æä¾›ç²¾ç¡®çš„åŠ æ³•è¿ç®—
+     * Ìá¹©¾«È·µÄ¼Ó·¨ÔËËã
      *
-     * @param v1 è¢«åŠ æ•°
-     * @param v2 åŠ æ•°
-     * @return å’Œ
+     * @param v1 ±»¼ÓÊı
+     * @param v2 ¼ÓÊı
+     * @return ºÍ
      * @since 3.0.8
      */
     public static BigDecimal add(String v1, String v2) {
@@ -65,22 +65,22 @@ public class NumberUtil {
     }
 
     /**
-     * æä¾›ç²¾ç¡®çš„å‡æ³•è¿ç®—
+     * Ìá¹©¾«È·µÄ¼õ·¨ÔËËã
      *
-     * @param v1 è¢«å‡æ•°
-     * @param v2 å‡æ•°
-     * @return å·®
+     * @param v1 ±»¼õÊı
+     * @param v2 ¼õÊı
+     * @return ²î
      */
     public static double sub(double v1, double v2) {
         return sub(Double.toString(v1), Double.toString(v2)).doubleValue();
     }
 
     /**
-     * æä¾›ç²¾ç¡®çš„å‡æ³•è¿ç®—
+     * Ìá¹©¾«È·µÄ¼õ·¨ÔËËã
      *
-     * @param v1 è¢«å‡æ•°
-     * @param v2 å‡æ•°
-     * @return å·®
+     * @param v1 ±»¼õÊı
+     * @param v2 ¼õÊı
+     * @return ²î
      * @since 3.0.8
      */
     public static BigDecimal sub(String v1, String v2) {
@@ -90,22 +90,22 @@ public class NumberUtil {
     }
 
     /**
-     * æä¾›ç²¾ç¡®çš„ä¹˜æ³•è¿ç®—
+     * Ìá¹©¾«È·µÄ³Ë·¨ÔËËã
      *
-     * @param v1 è¢«ä¹˜æ•°
-     * @param v2 ä¹˜æ•°
-     * @return ç§¯
+     * @param v1 ±»³ËÊı
+     * @param v2 ³ËÊı
+     * @return »ı
      */
     public static double mul(double v1, double v2) {
         return mul(Double.toString(v1), Double.toString(v2)).doubleValue();
     }
 
     /**
-     * æä¾›ç²¾ç¡®çš„ä¹˜æ³•è¿ç®—
+     * Ìá¹©¾«È·µÄ³Ë·¨ÔËËã
      *
-     * @param v1 è¢«ä¹˜æ•°
-     * @param v2 ä¹˜æ•°
-     * @return ç§¯
+     * @param v1 ±»³ËÊı
+     * @param v2 ³ËÊı
+     * @return »ı
      * @since 3.0.8
      */
     public static BigDecimal mul(String v1, String v2) {
@@ -115,72 +115,72 @@ public class NumberUtil {
     }
 
     /**
-     * æä¾›(ç›¸å¯¹)ç²¾ç¡®çš„é™¤æ³•è¿ç®—,å½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µçš„æ—¶å€™,ç²¾ç¡®åˆ°å°æ•°ç‚¹å10ä½,åé¢çš„å››èˆäº”å…¥
+     * Ìá¹©(Ïà¶Ô)¾«È·µÄ³ı·¨ÔËËã,µ±·¢Éú³ı²»¾¡µÄÇé¿öµÄÊ±ºò,¾«È·µ½Ğ¡Êıµãºó10Î»,ºóÃæµÄËÄÉáÎåÈë
      *
-     * @param v1 è¢«é™¤æ•°
-     * @param v2 é™¤æ•°
-     * @return ä¸¤ä¸ªå‚æ•°çš„å•†
+     * @param v1 ±»³ıÊı
+     * @param v2 ³ıÊı
+     * @return Á½¸ö²ÎÊıµÄÉÌ
      */
     public static double div(double v1, double v2) {
         return div(v1, v2, DEFAUT_DIV_SCALE);
     }
 
     /**
-     * æä¾›(ç›¸å¯¹)ç²¾ç¡®çš„é™¤æ³•è¿ç®—,å½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µçš„æ—¶å€™,ç²¾ç¡®åˆ°å°æ•°ç‚¹å10ä½,åé¢çš„å››èˆäº”å…¥
+     * Ìá¹©(Ïà¶Ô)¾«È·µÄ³ı·¨ÔËËã,µ±·¢Éú³ı²»¾¡µÄÇé¿öµÄÊ±ºò,¾«È·µ½Ğ¡Êıµãºó10Î»,ºóÃæµÄËÄÉáÎåÈë
      *
-     * @param v1 è¢«é™¤æ•°
-     * @param v2 é™¤æ•°
-     * @return ä¸¤ä¸ªå‚æ•°çš„å•†
+     * @param v1 ±»³ıÊı
+     * @param v2 ³ıÊı
+     * @return Á½¸ö²ÎÊıµÄÉÌ
      */
     public static BigDecimal div(String v1, String v2) {
         return div(v1, v2, DEFAUT_DIV_SCALE);
     }
 
     /**
-     * æä¾›(ç›¸å¯¹)ç²¾ç¡®çš„é™¤æ³•è¿ç®—,å½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µæ—¶,ç”±scaleæŒ‡å®šç²¾ç¡®åº¦,åé¢çš„å››èˆäº”å…¥
+     * Ìá¹©(Ïà¶Ô)¾«È·µÄ³ı·¨ÔËËã,µ±·¢Éú³ı²»¾¡µÄÇé¿öÊ±,ÓÉscaleÖ¸¶¨¾«È·¶È,ºóÃæµÄËÄÉáÎåÈë
      *
-     * @param v1    è¢«é™¤æ•°
-     * @param v2    é™¤æ•°
-     * @param scale ç²¾ç¡®åº¦ï¼Œå¦‚æœä¸ºè´Ÿå€¼ï¼Œå–ç»å¯¹å€¼
-     * @return ä¸¤ä¸ªå‚æ•°çš„å•†
+     * @param v1    ±»³ıÊı
+     * @param v2    ³ıÊı
+     * @param scale ¾«È·¶È£¬Èç¹ûÎª¸ºÖµ£¬È¡¾ø¶ÔÖµ
+     * @return Á½¸ö²ÎÊıµÄÉÌ
      */
     public static double div(double v1, double v2, int scale) {
         return div(v1, v2, scale, RoundingMode.HALF_UP);
     }
 
     /**
-     * æä¾›(ç›¸å¯¹)ç²¾ç¡®çš„é™¤æ³•è¿ç®—,å½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µæ—¶,ç”±scaleæŒ‡å®šç²¾ç¡®åº¦,åé¢çš„å››èˆäº”å…¥
+     * Ìá¹©(Ïà¶Ô)¾«È·µÄ³ı·¨ÔËËã,µ±·¢Éú³ı²»¾¡µÄÇé¿öÊ±,ÓÉscaleÖ¸¶¨¾«È·¶È,ºóÃæµÄËÄÉáÎåÈë
      *
-     * @param v1    è¢«é™¤æ•°
-     * @param v2    é™¤æ•°
-     * @param scale ç²¾ç¡®åº¦ï¼Œå¦‚æœä¸ºè´Ÿå€¼ï¼Œå–ç»å¯¹å€¼
-     * @return ä¸¤ä¸ªå‚æ•°çš„å•†
+     * @param v1    ±»³ıÊı
+     * @param v2    ³ıÊı
+     * @param scale ¾«È·¶È£¬Èç¹ûÎª¸ºÖµ£¬È¡¾ø¶ÔÖµ
+     * @return Á½¸ö²ÎÊıµÄÉÌ
      */
     public static BigDecimal div(String v1, String v2, int scale) {
         return div(v1, v2, scale, RoundingMode.HALF_UP);
     }
 
     /**
-     * æä¾›(ç›¸å¯¹)ç²¾ç¡®çš„é™¤æ³•è¿ç®—,å½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µæ—¶,ç”±scaleæŒ‡å®šç²¾ç¡®åº¦
+     * Ìá¹©(Ïà¶Ô)¾«È·µÄ³ı·¨ÔËËã,µ±·¢Éú³ı²»¾¡µÄÇé¿öÊ±,ÓÉscaleÖ¸¶¨¾«È·¶È
      *
-     * @param v1           è¢«é™¤æ•°
-     * @param v2           é™¤æ•°
-     * @param scale        ç²¾ç¡®åº¦ï¼Œå¦‚æœä¸ºè´Ÿå€¼ï¼Œå–ç»å¯¹å€¼
-     * @param roundingMode ä¿ç•™å°æ•°çš„æ¨¡å¼ {@link RoundingMode}
-     * @return ä¸¤ä¸ªå‚æ•°çš„å•†
+     * @param v1           ±»³ıÊı
+     * @param v2           ³ıÊı
+     * @param scale        ¾«È·¶È£¬Èç¹ûÎª¸ºÖµ£¬È¡¾ø¶ÔÖµ
+     * @param roundingMode ±£ÁôĞ¡ÊıµÄÄ£Ê½ {@link RoundingMode}
+     * @return Á½¸ö²ÎÊıµÄÉÌ
      */
     public static double div(double v1, double v2, int scale, RoundingMode roundingMode) {
         return div(Double.toString(v1), Double.toString(v2), scale, roundingMode).doubleValue();
     }
 
     /**
-     * æä¾›(ç›¸å¯¹)ç²¾ç¡®çš„é™¤æ³•è¿ç®—,å½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µæ—¶,ç”±scaleæŒ‡å®šç²¾ç¡®åº¦
+     * Ìá¹©(Ïà¶Ô)¾«È·µÄ³ı·¨ÔËËã,µ±·¢Éú³ı²»¾¡µÄÇé¿öÊ±,ÓÉscaleÖ¸¶¨¾«È·¶È
      *
-     * @param v1           è¢«é™¤æ•°
-     * @param v2           é™¤æ•°
-     * @param scale        ç²¾ç¡®åº¦ï¼Œå¦‚æœä¸ºè´Ÿå€¼ï¼Œå–ç»å¯¹å€¼
-     * @param roundingMode ä¿ç•™å°æ•°çš„æ¨¡å¼ {@link RoundingMode}
-     * @return ä¸¤ä¸ªå‚æ•°çš„å•†
+     * @param v1           ±»³ıÊı
+     * @param v2           ³ıÊı
+     * @param scale        ¾«È·¶È£¬Èç¹ûÎª¸ºÖµ£¬È¡¾ø¶ÔÖµ
+     * @param roundingMode ±£ÁôĞ¡ÊıµÄÄ£Ê½ {@link RoundingMode}
+     * @return Á½¸ö²ÎÊıµÄÉÌ
      */
     public static BigDecimal div(String v1, String v2, int scale, RoundingMode roundingMode) {
         if (scale < 0) {
@@ -193,52 +193,52 @@ public class NumberUtil {
     // ------------------------------------------------------------------------------------------- round
 
     /**
-     * ä¿ç•™å›ºå®šä½æ•°å°æ•°<br>
-     * é‡‡ç”¨å››èˆäº”å…¥ç­–ç•¥ {@link RoundingMode#HALF_UP}<br>
-     * ä¾‹å¦‚ä¿ç•™2ä½å°æ•°ï¼š123.456789 =ã€‹ 123.46
+     * ±£Áô¹Ì¶¨Î»ÊıĞ¡Êı<br>
+     * ²ÉÓÃËÄÉáÎåÈë²ßÂÔ {@link RoundingMode#HALF_UP}<br>
+     * ÀıÈç±£Áô2Î»Ğ¡Êı£º123.456789 =¡· 123.46
      *
-     * @param v     å€¼
-     * @param scale ä¿ç•™å°æ•°ä½æ•°
-     * @return æ–°å€¼
+     * @param v     Öµ
+     * @param scale ±£ÁôĞ¡ÊıÎ»Êı
+     * @return ĞÂÖµ
      */
     public static double round(double v, int scale) {
         return round(v, scale, RoundingMode.HALF_UP);
     }
 
     /**
-     * ä¿ç•™å›ºå®šä½æ•°å°æ•°<br>
-     * é‡‡ç”¨å››èˆäº”å…¥ç­–ç•¥ {@link RoundingMode#HALF_UP}<br>
-     * ä¾‹å¦‚ä¿ç•™2ä½å°æ•°ï¼š123.456789 =ã€‹ 123.46
+     * ±£Áô¹Ì¶¨Î»ÊıĞ¡Êı<br>
+     * ²ÉÓÃËÄÉáÎåÈë²ßÂÔ {@link RoundingMode#HALF_UP}<br>
+     * ÀıÈç±£Áô2Î»Ğ¡Êı£º123.456789 =¡· 123.46
      *
-     * @param numberStr æ•°å­—å€¼çš„å­—ç¬¦ä¸²è¡¨ç°å½¢å¼
-     * @param scale     ä¿ç•™å°æ•°ä½æ•°
-     * @return æ–°å€¼
+     * @param numberStr Êı×ÖÖµµÄ×Ö·û´®±íÏÖĞÎÊ½
+     * @param scale     ±£ÁôĞ¡ÊıÎ»Êı
+     * @return ĞÂÖµ
      */
     public static double round(String numberStr, int scale) {
         return round(numberStr, scale, RoundingMode.HALF_UP);
     }
 
     /**
-     * ä¿ç•™å›ºå®šä½æ•°å°æ•°<br>
-     * ä¾‹å¦‚ä¿ç•™å››ä½å°æ•°ï¼š123.456789 =ã€‹ 123.4567
+     * ±£Áô¹Ì¶¨Î»ÊıĞ¡Êı<br>
+     * ÀıÈç±£ÁôËÄÎ»Ğ¡Êı£º123.456789 =¡· 123.4567
      *
-     * @param v            å€¼
-     * @param scale        ä¿ç•™å°æ•°ä½æ•°
-     * @param roundingMode ä¿ç•™å°æ•°çš„æ¨¡å¼ {@link RoundingMode}
-     * @return æ–°å€¼
+     * @param v            Öµ
+     * @param scale        ±£ÁôĞ¡ÊıÎ»Êı
+     * @param roundingMode ±£ÁôĞ¡ÊıµÄÄ£Ê½ {@link RoundingMode}
+     * @return ĞÂÖµ
      */
     public static double round(double v, int scale, RoundingMode roundingMode) {
         return round(Double.toString(v), scale, roundingMode);
     }
 
     /**
-     * ä¿ç•™å›ºå®šä½æ•°å°æ•°<br>
-     * ä¾‹å¦‚ä¿ç•™å››ä½å°æ•°ï¼š123.456789 =ã€‹ 123.4567
+     * ±£Áô¹Ì¶¨Î»ÊıĞ¡Êı<br>
+     * ÀıÈç±£ÁôËÄÎ»Ğ¡Êı£º123.456789 =¡· 123.4567
      *
-     * @param numberStr    æ•°å­—å€¼çš„å­—ç¬¦ä¸²è¡¨ç°å½¢å¼
-     * @param scale        ä¿ç•™å°æ•°ä½æ•°
-     * @param roundingMode ä¿ç•™å°æ•°çš„æ¨¡å¼ {@link RoundingMode}
-     * @return æ–°å€¼
+     * @param numberStr    Êı×ÖÖµµÄ×Ö·û´®±íÏÖĞÎÊ½
+     * @param scale        ±£ÁôĞ¡ÊıÎ»Êı
+     * @param roundingMode ±£ÁôĞ¡ÊıµÄÄ£Ê½ {@link RoundingMode}
+     * @return ĞÂÖµ
      */
     public static double round(String numberStr, int scale, RoundingMode roundingMode) {
         final BigDecimal b = new BigDecimal(numberStr);
@@ -246,11 +246,11 @@ public class NumberUtil {
     }
 
     /**
-     * ä¿ç•™å°æ•°ä½ï¼Œé‡‡ç”¨å››èˆäº”å…¥
+     * ±£ÁôĞ¡ÊıÎ»£¬²ÉÓÃËÄÉáÎåÈë
      *
-     * @param number è¢«ä¿ç•™å°æ•°çš„æ•°å­—
-     * @param digit  ä¿ç•™çš„å°æ•°ä½æ•°
-     * @return ä¿ç•™å°æ•°åçš„å­—ç¬¦ä¸²
+     * @param number ±»±£ÁôĞ¡ÊıµÄÊı×Ö
+     * @param digit  ±£ÁôµÄĞ¡ÊıÎ»Êı
+     * @return ±£ÁôĞ¡ÊıºóµÄ×Ö·û´®
      */
     public static String roundStr(double number, int digit) {
         return String.format("%." + digit + 'f', number);
@@ -258,44 +258,44 @@ public class NumberUtil {
     // ------------------------------------------------------------------------------------------- decimalFormat
 
     /**
-     * æ ¼å¼åŒ–double<br>
-     * å¯¹ {@link DecimalFormat} åšå°è£…<br>
+     * ¸ñÊ½»¯double<br>
+     * ¶Ô {@link DecimalFormat} ×ö·â×°<br>
      *
-     * @param pattern æ ¼å¼ æ ¼å¼ä¸­ä¸»è¦ä»¥ # å’Œ 0 ä¸¤ç§å ä½ç¬¦å·æ¥æŒ‡å®šæ•°å­—é•¿åº¦ã€‚0 è¡¨ç¤ºå¦‚æœä½æ•°ä¸è¶³åˆ™ä»¥ 0 å¡«å……ï¼Œ# è¡¨ç¤ºåªè¦æœ‰å¯èƒ½å°±æŠŠæ•°å­—æ‹‰ä¸Šè¿™ä¸ªä½ç½®ã€‚<br>
+     * @param pattern ¸ñÊ½ ¸ñÊ½ÖĞÖ÷ÒªÒÔ # ºÍ 0 Á½ÖÖÕ¼Î»·ûºÅÀ´Ö¸¶¨Êı×Ö³¤¶È¡£0 ±íÊ¾Èç¹ûÎ»Êı²»×ãÔòÒÔ 0 Ìî³ä£¬# ±íÊ¾Ö»ÒªÓĞ¿ÉÄÜ¾Í°ÑÊı×ÖÀ­ÉÏÕâ¸öÎ»ÖÃ¡£<br>
      *                <ul>
-     *                <li>0 =ã€‹ å–ä¸€ä½æ•´æ•°</li>
-     *                <li>0.00 =ã€‹ å–ä¸€ä½æ•´æ•°å’Œä¸¤ä½å°æ•°</li>
-     *                <li>00.000 =ã€‹ å–ä¸¤ä½æ•´æ•°å’Œä¸‰ä½å°æ•°</li>
-     *                <li># =ã€‹ å–æ‰€æœ‰æ•´æ•°éƒ¨åˆ†</li>
-     *                <li>#.##% =ã€‹ ä»¥ç™¾åˆ†æ¯”æ–¹å¼è®¡æ•°ï¼Œå¹¶å–ä¸¤ä½å°æ•°</li>
-     *                <li>#.#####E0 =ã€‹ æ˜¾ç¤ºä¸ºç§‘å­¦è®¡æ•°æ³•ï¼Œå¹¶å–äº”ä½å°æ•°</li>
-     *                <li>,### =ã€‹ æ¯ä¸‰ä½ä»¥é€—å·è¿›è¡Œåˆ†éš”ï¼Œä¾‹å¦‚ï¼š299,792,458</li>
-     *                <li>å…‰é€Ÿå¤§å°ä¸ºæ¯ç§’,###ç±³ =ã€‹ å°†æ ¼å¼åµŒå…¥æ–‡æœ¬</li>
+     *                <li>0 =¡· È¡Ò»Î»ÕûÊı</li>
+     *                <li>0.00 =¡· È¡Ò»Î»ÕûÊıºÍÁ½Î»Ğ¡Êı</li>
+     *                <li>00.000 =¡· È¡Á½Î»ÕûÊıºÍÈıÎ»Ğ¡Êı</li>
+     *                <li># =¡· È¡ËùÓĞÕûÊı²¿·Ö</li>
+     *                <li>#.##% =¡· ÒÔ°Ù·Ö±È·½Ê½¼ÆÊı£¬²¢È¡Á½Î»Ğ¡Êı</li>
+     *                <li>#.#####E0 =¡· ÏÔÊ¾Îª¿ÆÑ§¼ÆÊı·¨£¬²¢È¡ÎåÎ»Ğ¡Êı</li>
+     *                <li>,### =¡· Ã¿ÈıÎ»ÒÔ¶ººÅ½øĞĞ·Ö¸ô£¬ÀıÈç£º299,792,458</li>
+     *                <li>¹âËÙ´óĞ¡ÎªÃ¿Ãë,###Ã× =¡· ½«¸ñÊ½Ç¶ÈëÎÄ±¾</li>
      *                </ul>
-     * @param value   å€¼
-     * @return æ ¼å¼åŒ–åçš„å€¼
+     * @param value   Öµ
+     * @return ¸ñÊ½»¯ºóµÄÖµ
      */
     public static String decimalFormat(String pattern, double value) {
         return new DecimalFormat(pattern).format(value);
     }
 
     /**
-     * æ ¼å¼åŒ–double<br>
-     * å¯¹ {@link DecimalFormat} åšå°è£…<br>
+     * ¸ñÊ½»¯double<br>
+     * ¶Ô {@link DecimalFormat} ×ö·â×°<br>
      *
-     * @param pattern æ ¼å¼ æ ¼å¼ä¸­ä¸»è¦ä»¥ # å’Œ 0 ä¸¤ç§å ä½ç¬¦å·æ¥æŒ‡å®šæ•°å­—é•¿åº¦ã€‚0 è¡¨ç¤ºå¦‚æœä½æ•°ä¸è¶³åˆ™ä»¥ 0 å¡«å……ï¼Œ# è¡¨ç¤ºåªè¦æœ‰å¯èƒ½å°±æŠŠæ•°å­—æ‹‰ä¸Šè¿™ä¸ªä½ç½®ã€‚<br>
+     * @param pattern ¸ñÊ½ ¸ñÊ½ÖĞÖ÷ÒªÒÔ # ºÍ 0 Á½ÖÖÕ¼Î»·ûºÅÀ´Ö¸¶¨Êı×Ö³¤¶È¡£0 ±íÊ¾Èç¹ûÎ»Êı²»×ãÔòÒÔ 0 Ìî³ä£¬# ±íÊ¾Ö»ÒªÓĞ¿ÉÄÜ¾Í°ÑÊı×ÖÀ­ÉÏÕâ¸öÎ»ÖÃ¡£<br>
      *                <ul>
-     *                <li>0 =ã€‹ å–ä¸€ä½æ•´æ•°</li>
-     *                <li>0.00 =ã€‹ å–ä¸€ä½æ•´æ•°å’Œä¸¤ä½å°æ•°</li>
-     *                <li>00.000 =ã€‹ å–ä¸¤ä½æ•´æ•°å’Œä¸‰ä½å°æ•°</li>
-     *                <li># =ã€‹ å–æ‰€æœ‰æ•´æ•°éƒ¨åˆ†</li>
-     *                <li>#.##% =ã€‹ ä»¥ç™¾åˆ†æ¯”æ–¹å¼è®¡æ•°ï¼Œå¹¶å–ä¸¤ä½å°æ•°</li>
-     *                <li>#.#####E0 =ã€‹ æ˜¾ç¤ºä¸ºç§‘å­¦è®¡æ•°æ³•ï¼Œå¹¶å–äº”ä½å°æ•°</li>
-     *                <li>,### =ã€‹ æ¯ä¸‰ä½ä»¥é€—å·è¿›è¡Œåˆ†éš”ï¼Œä¾‹å¦‚ï¼š299,792,458</li>
-     *                <li>å…‰é€Ÿå¤§å°ä¸ºæ¯ç§’,###ç±³ =ã€‹ å°†æ ¼å¼åµŒå…¥æ–‡æœ¬</li>
+     *                <li>0 =¡· È¡Ò»Î»ÕûÊı</li>
+     *                <li>0.00 =¡· È¡Ò»Î»ÕûÊıºÍÁ½Î»Ğ¡Êı</li>
+     *                <li>00.000 =¡· È¡Á½Î»ÕûÊıºÍÈıÎ»Ğ¡Êı</li>
+     *                <li># =¡· È¡ËùÓĞÕûÊı²¿·Ö</li>
+     *                <li>#.##% =¡· ÒÔ°Ù·Ö±È·½Ê½¼ÆÊı£¬²¢È¡Á½Î»Ğ¡Êı</li>
+     *                <li>#.#####E0 =¡· ÏÔÊ¾Îª¿ÆÑ§¼ÆÊı·¨£¬²¢È¡ÎåÎ»Ğ¡Êı</li>
+     *                <li>,### =¡· Ã¿ÈıÎ»ÒÔ¶ººÅ½øĞĞ·Ö¸ô£¬ÀıÈç£º299,792,458</li>
+     *                <li>¹âËÙ´óĞ¡ÎªÃ¿Ãë,###Ã× =¡· ½«¸ñÊ½Ç¶ÈëÎÄ±¾</li>
      *                </ul>
-     * @param value   å€¼
-     * @return æ ¼å¼åŒ–åçš„å€¼
+     * @param value   Öµ
+     * @return ¸ñÊ½»¯ºóµÄÖµ
      * @since 3.0.5
      */
     public static String decimalFormat(String pattern, long value) {
@@ -304,10 +304,10 @@ public class NumberUtil {
     // ------------------------------------------------------------------------------------------- isXXX
 
     /**
-     * æ˜¯å¦ä¸ºæ•°å­—
+     * ÊÇ·ñÎªÊı×Ö
      *
-     * @param str å­—ç¬¦ä¸²å€¼
-     * @return æ˜¯å¦ä¸ºæ•°å­—
+     * @param str ×Ö·û´®Öµ
+     * @return ÊÇ·ñÎªÊı×Ö
      */
     public static boolean isNumber(String str) {
         if (StringUtil.isEmpty(str)) {
@@ -406,10 +406,10 @@ public class NumberUtil {
     }
 
     /**
-     * åˆ¤æ–­Stringæ˜¯å¦æ˜¯æ•´æ•°
+     * ÅĞ¶ÏStringÊÇ·ñÊÇÕûÊı
      *
      * @param s String
-     * @return æ˜¯å¦ä¸ºæ•´æ•°
+     * @return ÊÇ·ñÎªÕûÊı
      */
     public static boolean isInteger(String s) {
         if (StringUtil.isNotEmpty(s))
@@ -419,10 +419,10 @@ public class NumberUtil {
     }
 
     /**
-     * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦æ˜¯æµ®ç‚¹æ•°
+     * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÊÇ¸¡µãÊı
      *
      * @param s String
-     * @return æ˜¯å¦ä¸º{@link Double}ç±»å‹
+     * @return ÊÇ·ñÎª{@link Double}ÀàĞÍ
      */
     public static boolean isDouble(String s) {
         try {
@@ -436,11 +436,11 @@ public class NumberUtil {
     }
 
     /**
-     * æ˜¯å¦æ˜¯è´¨æ•°<br>
-     * è´¨æ•°è¡¨çš„è´¨æ•°åˆç§°ç´ æ•°ã€‚æŒ‡æ•´æ•°åœ¨ä¸€ä¸ªå¤§äº1çš„è‡ªç„¶æ•°ä¸­,é™¤äº†1å’Œæ­¤æ•´æ•°è‡ªèº«å¤–,æ²¡æ³•è¢«å…¶ä»–è‡ªç„¶æ•°æ•´é™¤çš„æ•°ã€‚
+     * ÊÇ·ñÊÇÖÊÊı<br>
+     * ÖÊÊı±íµÄÖÊÊıÓÖ³ÆËØÊı¡£Ö¸ÕûÊıÔÚÒ»¸ö´óÓÚ1µÄ×ÔÈ»ÊıÖĞ,³ıÁË1ºÍ´ËÕûÊı×ÔÉíÍâ,Ã»·¨±»ÆäËû×ÔÈ»ÊıÕû³ıµÄÊı¡£
      *
-     * @param n æ•°å­—
-     * @return æ˜¯å¦æ˜¯è´¨æ•°
+     * @param n Êı×Ö
+     * @return ÊÇ·ñÊÇÖÊÊı
      */
     public static boolean isPrimes(int n) {
         for (int i = 2; i <= Math.sqrt(n); i++) {
@@ -453,12 +453,12 @@ public class NumberUtil {
     // ------------------------------------------------------------------------------------------- generateXXX
 
     /**
-     * ç”Ÿæˆä¸é‡å¤éšæœºæ•° æ ¹æ®ç»™å®šçš„æœ€å°æ•°å­—å’Œæœ€å¤§æ•°å­—ï¼Œä»¥åŠéšæœºæ•°çš„ä¸ªæ•°ï¼Œäº§ç”ŸæŒ‡å®šçš„ä¸é‡å¤çš„æ•°ç»„
+     * Éú³É²»ÖØ¸´Ëæ»úÊı ¸ù¾İ¸ø¶¨µÄ×îĞ¡Êı×ÖºÍ×î´óÊı×Ö£¬ÒÔ¼°Ëæ»úÊıµÄ¸öÊı£¬²úÉúÖ¸¶¨µÄ²»ÖØ¸´µÄÊı×é
      *
-     * @param begin æœ€å°æ•°å­—ï¼ˆåŒ…å«è¯¥æ•°ï¼‰
-     * @param end   æœ€å¤§æ•°å­—ï¼ˆä¸åŒ…å«è¯¥æ•°ï¼‰
-     * @param size  æŒ‡å®šäº§ç”Ÿéšæœºæ•°çš„ä¸ªæ•°
-     * @return éšæœºintæ•°ç»„
+     * @param begin ×îĞ¡Êı×Ö£¨°üº¬¸ÃÊı£©
+     * @param end   ×î´óÊı×Ö£¨²»°üº¬¸ÃÊı£©
+     * @param size  Ö¸¶¨²úÉúËæ»úÊıµÄ¸öÊı
+     * @return Ëæ»úintÊı×é
      */
     public static int[] generateRandomNumber(int begin, int end, int size) throws Exception {
         if (begin > end) {
@@ -466,36 +466,36 @@ public class NumberUtil {
             begin = end;
             end = temp;
         }
-        // åŠ å…¥é€»è¾‘åˆ¤æ–­ï¼Œç¡®ä¿begin<endå¹¶ä¸”sizeä¸èƒ½å¤§äºè¯¥è¡¨ç¤ºèŒƒå›´
+        // ¼ÓÈëÂß¼­ÅĞ¶Ï£¬È·±£begin<end²¢ÇÒsize²»ÄÜ´óÓÚ¸Ã±íÊ¾·¶Î§
         if ((end - begin) < size) {
             throw new Exception("Size is larger than range between begin and end!");
         }
-        // ç§å­ä½ å¯ä»¥éšæ„ç”Ÿæˆï¼Œä½†ä¸èƒ½é‡å¤
+        // ÖÖ×ÓÄã¿ÉÒÔËæÒâÉú³É£¬µ«²»ÄÜÖØ¸´
         int[] seed = new int[end - begin];
         for (int i = begin; i < end; i++) {
             seed[i - begin] = i;
         }
         int[] ranArr = new int[size];
         Random ran = new Random();
-        // æ•°é‡ä½ å¯ä»¥è‡ªå·±å®šä¹‰ã€‚
+        // ÊıÁ¿Äã¿ÉÒÔ×Ô¼º¶¨Òå¡£
         for (int i = 0; i < size; i++) {
-            // å¾—åˆ°ä¸€ä¸ªä½ç½®
+            // µÃµ½Ò»¸öÎ»ÖÃ
             int j = ran.nextInt(seed.length - i);
-            // å¾—åˆ°é‚£ä¸ªä½ç½®çš„æ•°å€¼
+            // µÃµ½ÄÇ¸öÎ»ÖÃµÄÊıÖµ
             ranArr[i] = seed[j];
-            // å°†æœ€åä¸€ä¸ªæœªç”¨çš„æ•°å­—æ”¾åˆ°è¿™é‡Œ
+            // ½«×îºóÒ»¸öÎ´ÓÃµÄÊı×Ö·Åµ½ÕâÀï
             seed[j] = seed[seed.length - 1 - i];
         }
         return ranArr;
     }
 
     /**
-     * ç”Ÿæˆä¸é‡å¤éšæœºæ•° æ ¹æ®ç»™å®šçš„æœ€å°æ•°å­—å’Œæœ€å¤§æ•°å­—ï¼Œä»¥åŠéšæœºæ•°çš„ä¸ªæ•°ï¼Œäº§ç”ŸæŒ‡å®šçš„ä¸é‡å¤çš„æ•°ç»„
+     * Éú³É²»ÖØ¸´Ëæ»úÊı ¸ù¾İ¸ø¶¨µÄ×îĞ¡Êı×ÖºÍ×î´óÊı×Ö£¬ÒÔ¼°Ëæ»úÊıµÄ¸öÊı£¬²úÉúÖ¸¶¨µÄ²»ÖØ¸´µÄÊı×é
      *
-     * @param begin æœ€å°æ•°å­—ï¼ˆåŒ…å«è¯¥æ•°ï¼‰
-     * @param end   æœ€å¤§æ•°å­—ï¼ˆä¸åŒ…å«è¯¥æ•°ï¼‰
-     * @param size  æŒ‡å®šäº§ç”Ÿéšæœºæ•°çš„ä¸ªæ•°
-     * @return éšæœºintæ•°ç»„
+     * @param begin ×îĞ¡Êı×Ö£¨°üº¬¸ÃÊı£©
+     * @param end   ×î´óÊı×Ö£¨²»°üº¬¸ÃÊı£©
+     * @param size  Ö¸¶¨²úÉúËæ»úÊıµÄ¸öÊı
+     * @return Ëæ»úintÊı×é
      */
     public static Integer[] generateBySet(int begin, int end, int size) throws Exception {
         if (begin > end) {
@@ -503,7 +503,7 @@ public class NumberUtil {
             begin = end;
             end = temp;
         }
-        // åŠ å…¥é€»è¾‘åˆ¤æ–­ï¼Œç¡®ä¿begin<endå¹¶ä¸”sizeä¸èƒ½å¤§äºè¯¥è¡¨ç¤ºèŒƒå›´
+        // ¼ÓÈëÂß¼­ÅĞ¶Ï£¬È·±£begin<end²¢ÇÒsize²»ÄÜ´óÓÚ¸Ã±íÊ¾·¶Î§
         if ((end - begin) < size) {
             throw new Exception("Size is larger than range between begin and end!");
         }
@@ -518,23 +518,23 @@ public class NumberUtil {
     // ------------------------------------------------------------------------------------------- range
 
     /**
-     * ç»™å®šèŒƒå›´å†…çš„æ•´æ•°åˆ—è¡¨ï¼Œæ­¥è¿›ä¸º1
+     * ¸ø¶¨·¶Î§ÄÚµÄÕûÊıÁĞ±í£¬²½½øÎª1
      *
-     * @param start å¼€å§‹ï¼ˆåŒ…å«ï¼‰
-     * @param stop  ç»“æŸï¼ˆåŒ…å«ï¼‰
-     * @return æ•´æ•°åˆ—è¡¨
+     * @param start ¿ªÊ¼£¨°üº¬£©
+     * @param stop  ½áÊø£¨°üº¬£©
+     * @return ÕûÊıÁĞ±í
      */
     public static int[] range(int start, int stop) {
         return range(start, stop, 1);
     }
 
     /**
-     * ç»™å®šèŒƒå›´å†…çš„æ•´æ•°åˆ—è¡¨
+     * ¸ø¶¨·¶Î§ÄÚµÄÕûÊıÁĞ±í
      *
-     * @param start å¼€å§‹ï¼ˆåŒ…å«ï¼‰
-     * @param stop  ç»“æŸï¼ˆåŒ…å«ï¼‰
-     * @param step  æ­¥è¿›
-     * @return æ•´æ•°åˆ—è¡¨
+     * @param start ¿ªÊ¼£¨°üº¬£©
+     * @param stop  ½áÊø£¨°üº¬£©
+     * @param step  ²½½ø
+     * @return ÕûÊıÁĞ±í
      */
     public static int[] range(int start, int stop, int step) {
         if (start < stop) {
@@ -555,25 +555,25 @@ public class NumberUtil {
     }
 
     /**
-     * å°†ç»™å®šèŒƒå›´å†…çš„æ•´æ•°æ·»åŠ åˆ°å·²æœ‰é›†åˆä¸­ï¼Œæ­¥è¿›ä¸º1
+     * ½«¸ø¶¨·¶Î§ÄÚµÄÕûÊıÌí¼Óµ½ÒÑÓĞ¼¯ºÏÖĞ£¬²½½øÎª1
      *
-     * @param start  å¼€å§‹ï¼ˆåŒ…å«ï¼‰
-     * @param stop   ç»“æŸï¼ˆåŒ…å«ï¼‰
-     * @param values é›†åˆ
-     * @return é›†åˆ
+     * @param start  ¿ªÊ¼£¨°üº¬£©
+     * @param stop   ½áÊø£¨°üº¬£©
+     * @param values ¼¯ºÏ
+     * @return ¼¯ºÏ
      */
     public static Collection<Integer> appendRange(int start, int stop, Collection<Integer> values) {
         return appendRange(start, stop, 1, values);
     }
 
     /**
-     * å°†ç»™å®šèŒƒå›´å†…çš„æ•´æ•°æ·»åŠ åˆ°å·²æœ‰é›†åˆä¸­
+     * ½«¸ø¶¨·¶Î§ÄÚµÄÕûÊıÌí¼Óµ½ÒÑÓĞ¼¯ºÏÖĞ
      *
-     * @param start  å¼€å§‹ï¼ˆåŒ…å«ï¼‰
-     * @param stop   ç»“æŸï¼ˆåŒ…å«ï¼‰
-     * @param step   æ­¥è¿›
-     * @param values é›†åˆ
-     * @return é›†åˆ
+     * @param start  ¿ªÊ¼£¨°üº¬£©
+     * @param stop   ½áÊø£¨°üº¬£©
+     * @param step   ²½½ø
+     * @param values ¼¯ºÏ
+     * @return ¼¯ºÏ
      */
     public static Collection<Integer> appendRange(int start, int stop, int step, Collection<Integer> values) {
         if (start < stop) {
@@ -592,10 +592,10 @@ public class NumberUtil {
     // ------------------------------------------------------------------------------------------- others
 
     /**
-     * é˜¶ä¹˜ï¼šn!
+     * ½×³Ë£ºn!
      *
-     * @param n å€¼
-     * @return é˜¶ä¹˜
+     * @param n Öµ
+     * @return ½×³Ë
      */
     public static int factorial(int n) {
         if (n == 1) {
@@ -605,11 +605,11 @@ public class NumberUtil {
     }
 
     /**
-     * å¹³æ–¹æ ¹ç®—æ³•<br>
-     * æ¨èä½¿ç”¨ {@link Math#sqrt(double)}
+     * Æ½·½¸ùËã·¨<br>
+     * ÍÆ¼öÊ¹ÓÃ {@link Math#sqrt(double)}
      *
-     * @param x å€¼
-     * @return å¹³æ–¹æ ¹
+     * @param x Öµ
+     * @return Æ½·½¸ù
      */
     public static long sqrt(long x) {
         long y = 0;
@@ -628,12 +628,12 @@ public class NumberUtil {
     }
 
     /**
-     * å¯ä»¥ç”¨äºè®¡ç®—åŒè‰²çƒã€å¤§ä¹é€æ³¨æ•°çš„æ–¹æ³•<br>
-     * æ¯”å¦‚å¤§ä¹é€35é€‰5å¯ä»¥è¿™æ ·è°ƒç”¨processMultiple(7,5); å°±æ˜¯æ•°å­¦ä¸­çš„ï¼šC75=7*6/2*1
+     * ¿ÉÒÔÓÃÓÚ¼ÆËãË«É«Çò¡¢´óÀÖÍ¸×¢ÊıµÄ·½·¨<br>
+     * ±ÈÈç´óÀÖÍ¸35Ñ¡5¿ÉÒÔÕâÑùµ÷ÓÃprocessMultiple(7,5); ¾ÍÊÇÊıÑ§ÖĞµÄ£ºC75=7*6/2*1
      *
-     * @param selectNum é€‰ä¸­å°çƒä¸ªæ•°
-     * @param minNum    æœ€å°‘è¦é€‰ä¸­å¤šå°‘ä¸ªå°çƒ
-     * @return æ³¨æ•°
+     * @param selectNum Ñ¡ÖĞĞ¡Çò¸öÊı
+     * @param minNum    ×îÉÙÒªÑ¡ÖĞ¶àÉÙ¸öĞ¡Çò
+     * @return ×¢Êı
      */
     public static int processMultiple(int selectNum, int minNum) {
         int result;
@@ -642,11 +642,11 @@ public class NumberUtil {
     }
 
     /**
-     * æœ€å¤§å…¬çº¦æ•°
+     * ×î´ó¹«Ô¼Êı
      *
-     * @param m ç¬¬ä¸€ä¸ªå€¼
-     * @param n ç¬¬äºŒä¸ªå€¼
-     * @return æœ€å¤§å…¬çº¦æ•°
+     * @param m µÚÒ»¸öÖµ
+     * @param n µÚ¶ş¸öÖµ
+     * @return ×î´ó¹«Ô¼Êı
      */
     public static int divisor(int m, int n) {
         while (m % n != 0) {
@@ -658,21 +658,21 @@ public class NumberUtil {
     }
 
     /**
-     * æœ€å°å…¬å€æ•°
+     * ×îĞ¡¹«±¶Êı
      *
-     * @param m ç¬¬ä¸€ä¸ªå€¼
-     * @param n ç¬¬äºŒä¸ªå€¼
-     * @return æœ€å°å…¬å€æ•°
+     * @param m µÚÒ»¸öÖµ
+     * @param n µÚ¶ş¸öÖµ
+     * @return ×îĞ¡¹«±¶Êı
      */
     public static int multiple(int m, int n) {
         return m * n / divisor(m, n);
     }
 
     /**
-     * è·å¾—æ•°å­—å¯¹åº”çš„äºŒè¿›åˆ¶å­—ç¬¦ä¸²
+     * »ñµÃÊı×Ö¶ÔÓ¦µÄ¶ş½øÖÆ×Ö·û´®
      *
-     * @param number æ•°å­—
-     * @return äºŒè¿›åˆ¶å­—ç¬¦ä¸²
+     * @param number Êı×Ö
+     * @return ¶ş½øÖÆ×Ö·û´®
      */
     public static String getBinaryStr(Number number) {
         if (number instanceof Long) {
@@ -685,9 +685,9 @@ public class NumberUtil {
     }
 
     /**
-     * äºŒè¿›åˆ¶è½¬int
+     * ¶ş½øÖÆ×ªint
      *
-     * @param binaryStr äºŒè¿›åˆ¶å­—ç¬¦ä¸²
+     * @param binaryStr ¶ş½øÖÆ×Ö·û´®
      * @return int
      */
     public static int binaryToInt(String binaryStr) {
@@ -695,9 +695,9 @@ public class NumberUtil {
     }
 
     /**
-     * äºŒè¿›åˆ¶è½¬long
+     * ¶ş½øÖÆ×ªlong
      *
-     * @param binaryStr äºŒè¿›åˆ¶å­—ç¬¦ä¸²
+     * @param binaryStr ¶ş½øÖÆ×Ö·û´®
      * @return long
      */
     public static long binaryToLong(String binaryStr) {
@@ -706,11 +706,11 @@ public class NumberUtil {
     // ------------------------------------------------------------------------------------------- compare
 
     /**
-     * æ¯”è¾ƒä¸¤ä¸ªå€¼çš„å¤§å°
+     * ±È½ÏÁ½¸öÖµµÄ´óĞ¡
      *
-     * @param x ç¬¬ä¸€ä¸ªå€¼
-     * @param y ç¬¬äºŒä¸ªå€¼
-     * @return x==yè¿”å›0ï¼Œx&lt;yè¿”å›-1ï¼Œx&gt;yè¿”å›1
+     * @param x µÚÒ»¸öÖµ
+     * @param y µÚ¶ş¸öÖµ
+     * @return x==y·µ»Ø0£¬x&lt;y·µ»Ø-1£¬x&gt;y·µ»Ø1
      * @see Character#compare(char, char)
      * @since 3.0.1
      */
@@ -719,11 +719,11 @@ public class NumberUtil {
     }
 
     /**
-     * æ¯”è¾ƒä¸¤ä¸ªå€¼çš„å¤§å°
+     * ±È½ÏÁ½¸öÖµµÄ´óĞ¡
      *
-     * @param x ç¬¬ä¸€ä¸ªå€¼
-     * @param y ç¬¬äºŒä¸ªå€¼
-     * @return x==yè¿”å›0ï¼Œx&lt;yè¿”å›-1ï¼Œx&gt;yè¿”å›1
+     * @param x µÚÒ»¸öÖµ
+     * @param y µÚ¶ş¸öÖµ
+     * @return x==y·µ»Ø0£¬x&lt;y·µ»Ø-1£¬x&gt;y·µ»Ø1
      * @see Double#compare(double, double)
      * @since 3.0.1
      */
@@ -732,11 +732,11 @@ public class NumberUtil {
     }
 
     /**
-     * æ¯”è¾ƒä¸¤ä¸ªå€¼çš„å¤§å°
+     * ±È½ÏÁ½¸öÖµµÄ´óĞ¡
      *
-     * @param x ç¬¬ä¸€ä¸ªå€¼
-     * @param y ç¬¬äºŒä¸ªå€¼
-     * @return x==yè¿”å›0ï¼Œx&lt;yè¿”å›-1ï¼Œx&gt;yè¿”å›1
+     * @param x µÚÒ»¸öÖµ
+     * @param y µÚ¶ş¸öÖµ
+     * @return x==y·µ»Ø0£¬x&lt;y·µ»Ø-1£¬x&gt;y·µ»Ø1
      * @see Integer#compare(int, int)
      * @since 3.0.1
      */
@@ -752,11 +752,11 @@ public class NumberUtil {
     }
 
     /**
-     * æ¯”è¾ƒä¸¤ä¸ªå€¼çš„å¤§å°
+     * ±È½ÏÁ½¸öÖµµÄ´óĞ¡
      *
-     * @param x ç¬¬ä¸€ä¸ªå€¼
-     * @param y ç¬¬äºŒä¸ªå€¼
-     * @return x==yè¿”å›0ï¼Œx&lt;yè¿”å›-1ï¼Œx&gt;yè¿”å›1
+     * @param x µÚÒ»¸öÖµ
+     * @param y µÚ¶ş¸öÖµ
+     * @return x==y·µ»Ø0£¬x&lt;y·µ»Ø-1£¬x&gt;y·µ»Ø1
      * @see Long#compare(long, long)
      * @since 3.0.1
      */
@@ -772,11 +772,11 @@ public class NumberUtil {
     }
 
     /**
-     * æ¯”è¾ƒä¸¤ä¸ªå€¼çš„å¤§å°
+     * ±È½ÏÁ½¸öÖµµÄ´óĞ¡
      *
-     * @param x ç¬¬ä¸€ä¸ªå€¼
-     * @param y ç¬¬äºŒä¸ªå€¼
-     * @return x==yè¿”å›0ï¼Œx&lt;yè¿”å›-1ï¼Œx&gt;yè¿”å›1
+     * @param x µÚÒ»¸öÖµ
+     * @param y µÚ¶ş¸öÖµ
+     * @return x==y·µ»Ø0£¬x&lt;y·µ»Ø-1£¬x&gt;y·µ»Ø1
      * @see Short#compare(short, short)
      * @since 3.0.1
      */
@@ -792,11 +792,11 @@ public class NumberUtil {
     }
 
     /**
-     * æ¯”è¾ƒä¸¤ä¸ªå€¼çš„å¤§å°
+     * ±È½ÏÁ½¸öÖµµÄ´óĞ¡
      *
-     * @param x ç¬¬ä¸€ä¸ªå€¼
-     * @param y ç¬¬äºŒä¸ªå€¼
-     * @return x==yè¿”å›0ï¼Œx&lt;yè¿”å›-1ï¼Œx&gt;yè¿”å›1
+     * @param x µÚÒ»¸öÖµ
+     * @param y µÚ¶ş¸öÖµ
+     * @return x==y·µ»Ø0£¬x&lt;y·µ»Ø-1£¬x&gt;y·µ»Ø1
      * @see Byte#compare(byte, byte)
      * @since 3.0.1
      */
@@ -805,8 +805,8 @@ public class NumberUtil {
     }
 
     /**
-     * æ•°å­—è½¬å­—ç¬¦ä¸²<br>
-     * è°ƒç”¨{@link Number#toString()}ï¼Œå¹¶å»é™¤å°¾å°æ•°ç‚¹å„¿åå¤šä½™çš„0
+     * Êı×Ö×ª×Ö·û´®<br>
+     * µ÷ÓÃ{@link Number#toString()}£¬²¢È¥³ıÎ²Ğ¡Êıµã¶ùºó¶àÓàµÄ0
      *
      * @param number A Number
      * @return A String.
@@ -815,7 +815,7 @@ public class NumberUtil {
         if (number == null) {
             throw new NullPointerException("Number is null !");
         }
-        // å»æ‰å°æ•°ç‚¹å„¿åå¤šä½™çš„0
+        // È¥µôĞ¡Êıµã¶ùºó¶àÓàµÄ0
         String string = number.toString();
         if (string.indexOf('.') > 0 && string.indexOf('e') < 0 && string.indexOf('E') < 0) {
             while (string.endsWith("0")) {
@@ -829,11 +829,11 @@ public class NumberUtil {
     }
 
     /**
-     * æ˜¯å¦ç©ºç™½ç¬¦<br>
-     * ç©ºç™½ç¬¦åŒ…æ‹¬ç©ºæ ¼ã€åˆ¶è¡¨ç¬¦ã€å…¨è§’ç©ºæ ¼å’Œä¸é—´æ–­ç©ºæ ¼<br>
+     * ÊÇ·ñ¿Õ°×·û<br>
+     * ¿Õ°×·û°üÀ¨¿Õ¸ñ¡¢ÖÆ±í·û¡¢È«½Ç¿Õ¸ñºÍ²»¼ä¶Ï¿Õ¸ñ<br>
      *
-     * @param c å­—ç¬¦
-     * @return æ˜¯å¦ç©ºç™½ç¬¦
+     * @param c ×Ö·û
+     * @return ÊÇ·ñ¿Õ°×·û
      * @see Character#isWhitespace(int)
      * @see Character#isSpaceChar(int)
      * @since 3.0.6
@@ -843,11 +843,11 @@ public class NumberUtil {
     }
 
     /**
-     * æ˜¯å¦ç©ºç™½ç¬¦<br>
-     * ç©ºç™½ç¬¦åŒ…æ‹¬ç©ºæ ¼ã€åˆ¶è¡¨ç¬¦ã€å…¨è§’ç©ºæ ¼å’Œä¸é—´æ–­ç©ºæ ¼<br>
+     * ÊÇ·ñ¿Õ°×·û<br>
+     * ¿Õ°×·û°üÀ¨¿Õ¸ñ¡¢ÖÆ±í·û¡¢È«½Ç¿Õ¸ñºÍ²»¼ä¶Ï¿Õ¸ñ<br>
      *
-     * @param c å­—ç¬¦
-     * @return æ˜¯å¦ç©ºç™½ç¬¦
+     * @param c ×Ö·û
+     * @return ÊÇ·ñ¿Õ°×·û
      * @see Character#isWhitespace(int)
      * @see Character#isSpaceChar(int)
      * @since 3.0.6
@@ -857,11 +857,11 @@ public class NumberUtil {
     }
 
     /**
-     * è®¡ç®—ç­‰ä»½ä¸ªæ•°
+     * ¼ÆËãµÈ·İ¸öÊı
      *
-     * @param total æ€»æ•°
-     * @param part  æ¯ä»½çš„ä¸ªæ•°
-     * @return åˆ†æˆäº†å‡ ä»½
+     * @param total ×ÜÊı
+     * @param part  Ã¿·İµÄ¸öÊı
+     * @return ·Ö³ÉÁË¼¸·İ
      * @since 3.0.6
      */
     public static int count(int total, int part) {

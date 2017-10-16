@@ -3,22 +3,22 @@ package com.xuan.xutils.domain.result;
 import java.text.MessageFormat;
 
 /**
- * bizCodeé”™è¯¯ç å®šä¹‰è§„èŒƒ
+ * bizCode´íÎóÂë¶¨Òå¹æ·¶
  * <p>
  * Created by xuan on 17/8/2.
  */
 public enum BizCodeEnum {
     /**
-     * bizCodeçš„æ ¼å¼ä¸€èˆ¬æˆ‘ä»¬å®šä¹‰ä¸º: ä¸šåŠ¡åŸŸèŒƒå›´å‰ç¼€ + ç¼–ç 
-     * ä¸€äº›é€šç”¨æç¤ºæœ€å¥½ä½¿ç”¨MessageFormat.formatå¤„ç†,è¿™æ ·åœ¨è¿”å›æ—¶å¯ä»¥å†å®šåˆ¶ä¸€äº›å€¼
+     * bizCodeµÄ¸ñÊ½Ò»°ãÎÒÃÇ¶¨ÒåÎª: ÒµÎñÓò·¶Î§Ç°×º + ±àÂë
+     * Ò»Ğ©Í¨ÓÃÌáÊ¾×îºÃÊ¹ÓÃMessageFormat.format´¦Àí,ÕâÑùÔÚ·µ»ØÊ±¿ÉÒÔÔÙ¶¨ÖÆÒ»Ğ©Öµ
      */
-    PARAM_IS_EMPTY("common_001", "å‚æ•°[{0}]ä¸èƒ½ä¸ºç©º."), DATABASE_OPERATE_FAIL("common_002", "æ•°æ®åº“æ“ä½œå¤±è´¥,æç¤º[{0}]."),;
+    PARAM_IS_EMPTY("common_001", "²ÎÊı[{0}]²»ÄÜÎª¿Õ."), DATABASE_OPERATE_FAIL("common_002", "Êı¾İ¿â²Ù×÷Ê§°Ü,ÌáÊ¾[{0}]."),;
     /**
      * bizCode
      */
     private String bizCode;
     /**
-     * bizCodeæç¤ºè¯´æ˜
+     * bizCodeÌáÊ¾ËµÃ÷
      */
     private String msg;
 
@@ -36,7 +36,7 @@ public enum BizCodeEnum {
     }
 
     /**
-     * æ„å»ºä¸€ä¸ªå‹å¥½æç¤º,è¾“å…¥å‚æ•°ä¾èµ–msgçš„å®šä¹‰
+     * ¹¹½¨Ò»¸öÓÑºÃÌáÊ¾,ÊäÈë²ÎÊıÒÀÀµmsgµÄ¶¨Òå
      *
      * @param params
      * @return

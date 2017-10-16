@@ -13,7 +13,7 @@ class LinkedListDemo {
         link.addFirst("java06");
         System.out.println(link.getFirst());
         System.out.println(link.getLast());
-        // ä¸ç”¨è¿­ä»£å™¨æ¸…ç©ºæ‰€æœ‰å…ƒç´ 
+        // ²»ÓÃµü´úÆ÷Çå¿ÕËùÓĞÔªËØ
         System.out.println(link.toArray());
     }
 }

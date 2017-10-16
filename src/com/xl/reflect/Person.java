@@ -5,18 +5,18 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Person implements Serializable {
-    // å”¯ä¸€åºåˆ—åŒ–æ ‡è¯†
-    public static final long serialVersionUID = 42L; // å€¼è‡ªå·±å–å
+    // Î¨Ò»ĞòÁĞ»¯±êÊ¶
+    public static final long serialVersionUID = 42L; // Öµ×Ô¼ºÈ¡Ãû
     private static int age = 13;
-    public String name = "è¿™æ˜¯name";
-    // transient è¯¥å­—æ®µæ— æ³•åºåˆ—åŒ–ï¼Œæ‰€ä»¥ä¼ è¾“å¯¹è±¡çš„æ—¶å€™ä¸ä¼šä¼ è¿‡å»
+    public String name = "ÕâÊÇname";
+    // transient ¸Ã×Ö¶ÎÎŞ·¨ĞòÁĞ»¯£¬ËùÒÔ´«Êä¶ÔÏóµÄÊ±ºò²»»á´«¹ıÈ¥
     transient String pas;
     // private int password=123;
     private String password;
     private String birthday;
 
     public Person() {
-        System.out.println("ç©ºå‚æ•°çš„æ„é€ å‡½æ•°");
+        System.out.println("¿Õ²ÎÊıµÄ¹¹Ôìº¯Êı");
     }
 
     private Person(List list) {
@@ -38,7 +38,7 @@ public class Person implements Serializable {
     }
 
     public static void main(String[] args) {
-        System.out.println("è¿™æ˜¯mainæ–¹æ³•ï¼");
+        System.out.println("ÕâÊÇmain·½·¨£¡");
     }
 
     public void aa1() {
@@ -54,7 +54,7 @@ public class Person implements Serializable {
     }
 
     private void eat() {
-        System.out.println("ç§æœ‰çš„åƒ");
+        System.out.println("Ë½ÓĞµÄ³Ô");
     }
 
     public int getAge() {
@@ -94,6 +94,6 @@ public class Person implements Serializable {
     }
 
     public void show() {
-        System.out.println("ç§æœ‰çš„");
+        System.out.println("Ë½ÓĞµÄ");
     }
 }

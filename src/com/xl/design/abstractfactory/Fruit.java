@@ -2,7 +2,7 @@ package com.xl.design.abstractfactory;
 
 public interface Fruit {
     /*
-     * é‡‡é›†
+     * ²É¼¯
      */
     void get();
 }

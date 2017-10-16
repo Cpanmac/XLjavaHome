@@ -5,28 +5,28 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * æ•°ç»„å·¥å…·ç±»
+ * Êı×é¹¤¾ßÀà
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:56:54 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:56:54 $
  */
 public abstract class ArrayUtils {
     /**
-     * æ˜¾ç¤ºå­—ç¬¦ä¸²æ•°ç»„çš„å†…å®¹ï¼Œç”¨,åˆ†éš”
+     * ÏÔÊ¾×Ö·û´®Êı×éµÄÄÚÈİ£¬ÓÃ,·Ö¸ô
      *
-     * @param args å­—ç¬¦ä¸²æ•°ç»„
-     * @return å­—ç¬¦ä¸²æ•°ç»„çš„å†…å®¹
+     * @param args ×Ö·û´®Êı×é
+     * @return ×Ö·û´®Êı×éµÄÄÚÈİ
      */
     public static String toString(String[] args) {
         return toString(args, ",");
     }
 
     /**
-     * æ˜¾ç¤ºå­—ç¬¦ä¸²æ•°ç»„çš„å†…å®¹
+     * ÏÔÊ¾×Ö·û´®Êı×éµÄÄÚÈİ
      *
-     * @param args      å­—ç¬¦ä¸²æ•°ç»„
-     * @param separator åˆ†éš”ç¬¦
-     * @return å­—ç¬¦ä¸²æ•°ç»„çš„å†…å®¹
+     * @param args      ×Ö·û´®Êı×é
+     * @param separator ·Ö¸ô·û
+     * @return ×Ö·û´®Êı×éµÄÄÚÈİ
      */
     public static String toString(String[] args, String separator) {
         if (args == null || args.length == 0) {
@@ -43,10 +43,10 @@ public abstract class ArrayUtils {
     }
 
     /**
-     * å–å¾—å­—ç¬¦ä¸²æ•°ç»„çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
+     * È¡µÃ×Ö·û´®Êı×éµÄµÚÒ»¸öÔªËØ
      *
-     * @param stringArray å­—ç¬¦ä¸²æ•°ç»„
-     * @return å­—ç¬¦ä¸²æ•°ç»„çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
+     * @param stringArray ×Ö·û´®Êı×é
+     * @return ×Ö·û´®Êı×éµÄµÚÒ»¸öÔªËØ
      */
     public static String getFirst(String[] stringArray) {
         if (stringArray == null || stringArray.length == 0) {
@@ -56,10 +56,10 @@ public abstract class ArrayUtils {
     }
 
     /**
-     * å–å¾—æ•°ç»„çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
+     * È¡µÃÊı×éµÄµÚÒ»¸öÔªËØ
      *
-     * @param array æ•°ç»„
-     * @return æ•°ç»„çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
+     * @param array Êı×é
+     * @return Êı×éµÄµÚÒ»¸öÔªËØ
      */
     public static Object getFirst(Object[] array) {
         if (array == null || array.length == 0) {
@@ -69,31 +69,31 @@ public abstract class ArrayUtils {
     }
 
     /**
-     * æŠŠListè½¬æ¢æˆå­—ç¬¦ä¸²æ•°ç»„
+     * °ÑList×ª»»³É×Ö·û´®Êı×é
      *
-     * @param list å­—ç¬¦ä¸²List
-     * @return å­—ç¬¦ä¸²æ•°ç»„
+     * @param list ×Ö·û´®List
+     * @return ×Ö·û´®Êı×é
      */
     public static String[] toArray(List<String> list) {
         return list.toArray(new String[list.size()]);
     }
 
     /**
-     * æŠŠSetè½¬æ¢æˆå­—ç¬¦ä¸²æ•°ç»„
+     * °ÑSet×ª»»³É×Ö·û´®Êı×é
      *
-     * @param set å­—ç¬¦ä¸²Set
-     * @return å­—ç¬¦ä¸²æ•°ç»„
+     * @param set ×Ö·û´®Set
+     * @return ×Ö·û´®Êı×é
      */
     public static String[] toArray(Set<String> set) {
         return set.toArray(new String[set.size()]);
     }
 
     /**
-     * åˆ¤æ–­å­—ç¬¦ä¸²æ•°ç»„æ˜¯å¦åŒ…å«æŒ‡å®šçš„å­—ç¬¦ä¸²
+     * ÅĞ¶Ï×Ö·û´®Êı×éÊÇ·ñ°üº¬Ö¸¶¨µÄ×Ö·û´®
      *
-     * @param array å­—ç¬¦ä¸²æ•°ç»„
-     * @param str   æŒ‡å®šçš„å­—ç¬¦ä¸²
-     * @return åŒ…å«trueï¼Œå¦åˆ™false
+     * @param array ×Ö·û´®Êı×é
+     * @param str   Ö¸¶¨µÄ×Ö·û´®
+     * @return °üº¬true£¬·ñÔòfalse
      */
     public static boolean contains(String[] array, String str) {
         if (array == null || array.length == 0) {
@@ -111,10 +111,10 @@ public abstract class ArrayUtils {
     }
 
     /**
-     * åˆ¤æ–­å­—ç¬¦ä¸²æ•°ç»„æ˜¯å¦æœ‰ä¸ä¸ºEmptyçš„å€¼
+     * ÅĞ¶Ï×Ö·û´®Êı×éÊÇ·ñÓĞ²»ÎªEmptyµÄÖµ
      *
-     * @param args å­—ç¬¦ä¸²æ•°ç»„
-     * @return æœ‰trueï¼Œå¦åˆ™false
+     * @param args ×Ö·û´®Êı×é
+     * @return ÓĞtrue£¬·ñÔòfalse
      */
     public static boolean hasValue(String[] args) {
         if (args == null || args.length == 0 || (args.length == 1 && args[0] == null)) {
@@ -129,11 +129,11 @@ public abstract class ArrayUtils {
     }
 
     /**
-     * è”åˆä¸¤ä¸ªæ•°ç»„
+     * ÁªºÏÁ½¸öÊı×é
      *
-     * @param first ç¬¬ä¸€ä¸ªæ•°ç»„
-     * @param last  å¦ä¸€ä¸ªæ•°ç»„
-     * @return å†…å®¹åˆå¹¶åçš„æ•°ç»„
+     * @param first µÚÒ»¸öÊı×é
+     * @param last  ÁíÒ»¸öÊı×é
+     * @return ÄÚÈİºÏ²¢ºóµÄÊı×é
      */
     public static Object[] combine(Object[] first, Object[] last) {
         if (first.length == 0 && last.length == 0) {
@@ -146,10 +146,10 @@ public abstract class ArrayUtils {
     }
 
     /**
-     * æŠŠæ•°ç»„è½¬æ¢æˆ åˆ—è¡¨ï¼Œå¦‚æœæ•°ç»„ä¸º nullï¼Œåˆ™ä¼šè¿”å›ä¸€ä¸ªç©ºåˆ—è¡¨ã€‚
+     * °ÑÊı×é×ª»»³É ÁĞ±í£¬Èç¹ûÊı×éÎª null£¬Ôò»á·µ»ØÒ»¸ö¿ÕÁĞ±í¡£
      *
-     * @param array æ•°ç»„
-     * @return åˆ—è¡¨å¯¹è±¡
+     * @param array Êı×é
+     * @return ÁĞ±í¶ÔÏó
      */
     public static List<Object> toList(Object[] array) {
         ArrayList<Object> list = new ArrayList<Object>();
@@ -163,10 +163,10 @@ public abstract class ArrayUtils {
     }
 
     /**
-     * æ¸…é™¤å­—ç¬¦ä¸²æ•°ç»„ä¸­çš„null
+     * Çå³ı×Ö·û´®Êı×éÖĞµÄnull
      *
-     * @param array å­—ç¬¦ä¸²æ•°ç»„
-     * @return æ¸…é™¤nullåçš„å­—ç¬¦ä¸²æ•°ç»„
+     * @param array ×Ö·û´®Êı×é
+     * @return Çå³ınullºóµÄ×Ö·û´®Êı×é
      */
     public static String[] clearNull(String[] array) {
         ArrayList<String> list = new ArrayList<String>();

@@ -1,41 +1,41 @@
 package com.xuan.xutils.utils;
 
 /**
- * ç”Ÿæˆéšæœºæ•°å­—ã€å­—ç¬¦ä¸²çš„å·¥å…·ç±»
+ * Éú³ÉËæ»úÊı×Ö¡¢×Ö·û´®µÄ¹¤¾ßÀà
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:10:13 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:10:13 $
  */
 public abstract class RandomUtils {
-    // æ²¡æœ‰æ·»åŠ  Iã€O çš„åŸå› æ˜¯é¿å…å’Œæ•°å­— 1ã€0 æ··æ·†
+    // Ã»ÓĞÌí¼Ó I¡¢O µÄÔ­ÒòÊÇ±ÜÃâºÍÊı×Ö 1¡¢0 »ìÏı
     private static final String ALPHA_NUMERIC = "ABCDEFGHJKLMNPQRSTUVWXYZ123456789";
 
     /**
-     * äº§ç”Ÿä¸€ä¸ªå›ºå®šèŒƒå›´ï¼ˆmin-max ä¹‹é—´ï¼‰çš„éšæœºæ­£æ•´æ•°ã€‚
+     * ²úÉúÒ»¸ö¹Ì¶¨·¶Î§£¨min-max Ö®¼ä£©µÄËæ»úÕıÕûÊı¡£
      *
-     * @param min æœ€å°å€¼ï¼Œ
-     * @param max æœ€å¤§å€¼
-     * @return min-max ä¹‹é—´çš„éšæœºæ•´æ•°ï¼ŒåŒ…æ‹¬ minã€max
+     * @param min ×îĞ¡Öµ£¬
+     * @param max ×î´óÖµ
+     * @return min-max Ö®¼äµÄËæ»úÕûÊı£¬°üÀ¨ min¡¢max
      */
     public static int getRandomInt(int min, int max) {
         return (int) (Math.random() * (max - min + 1) + min);
     }
 
     /**
-     * äº§ç”Ÿå›ºå®šé•¿åº¦çš„éšæœºæ•°å­—ä¸²ã€‚
+     * ²úÉú¹Ì¶¨³¤¶ÈµÄËæ»úÊı×Ö´®¡£
      *
-     * @param length é•¿åº¦
-     * @return éšæœºæ•°å­—ä¸²
+     * @param length ³¤¶È
+     * @return Ëæ»úÊı×Ö´®
      */
     public static String getRandomNum(int length) {
         return (Double.toString(Math.random())).substring(2, (2 + length));
     }
 
     /**
-     * äº§ç”Ÿå›ºå®šé•¿åº¦çš„éšæœºå­—æ¯æ•°å­—ä¸²ï¼Œå…¶ä¸­å­—æ¯ä¸ºå¤§å†™æ–¹å¼ã€‚
+     * ²úÉú¹Ì¶¨³¤¶ÈµÄËæ»ú×ÖÄ¸Êı×Ö´®£¬ÆäÖĞ×ÖÄ¸Îª´óĞ´·½Ê½¡£
      *
-     * @param length é•¿åº¦
-     * @return éšæœºå­—æ¯æ•°å­—ä¸²
+     * @param length ³¤¶È
+     * @return Ëæ»ú×ÖÄ¸Êı×Ö´®
      */
     public static String getRandomStr(int length) {
         char[] randomBytes = new char[length];
@@ -46,10 +46,10 @@ public abstract class RandomUtils {
     }
 
     /**
-     * äº§ç”Ÿå›ºå®šé•¿åº¦çš„éšæœºå­—æ¯æ•°å­—ä¸²ï¼Œå…¶ä¸­å­—æ¯ä¸ºå°å†™æ–¹å¼ã€‚
+     * ²úÉú¹Ì¶¨³¤¶ÈµÄËæ»ú×ÖÄ¸Êı×Ö´®£¬ÆäÖĞ×ÖÄ¸ÎªĞ¡Ğ´·½Ê½¡£
      *
-     * @param length é•¿åº¦
-     * @return éšæœºå­—æ¯æ•°å­—ä¸²
+     * @param length ³¤¶È
+     * @return Ëæ»ú×ÖÄ¸Êı×Ö´®
      */
     public static String getRandomStrLowerCase(int length) {
         return getRandomStr(length).toLowerCase();

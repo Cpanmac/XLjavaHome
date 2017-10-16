@@ -9,49 +9,49 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Httpè¯·æ±‚å¯¹è±¡
+ * HttpÇëÇó¶ÔÏó
  *
  * @author xuan
  */
 public class HttpRequest {
     /**
-     * è¯·æ±‚åœ°å€. ä¾‹å¦‚:http://xuanner.com
+     * ÇëÇóµØÖ·. ÀıÈç:http://xuanner.com
      */
     private String mUrl;
     /**
-     * æ™®é€šå‚æ•°
+     * ÆÕÍ¨²ÎÊı
      */
     private Map<String, String> mParamMap;
     /**
-     * æ–‡ä»¶å‚æ•°
+     * ÎÄ¼ş²ÎÊı
      */
     private Map<String, File> mFileParamMap;
     /**
-     * å¤´éƒ¨å‚æ•°
+     * Í·²¿²ÎÊı
      */
     private Map<String, String> mHeaderMap;
     /**
-     * ç”¨è¯·æ±‚ä½“Jsonæ–¹å¼æäº¤çš„Jsonå†…å®¹
+     * ÓÃÇëÇóÌåJson·½Ê½Ìá½»µÄJsonÄÚÈİ
      */
     private String mBodyJson;
     /**
-     * æäº¤æˆ–è€…è·å–çš„ç¼–ç æ–¹å¼
+     * Ìá½»»òÕß»ñÈ¡µÄ±àÂë·½Ê½
      */
     private String mEncode = "utf-8";
     /**
-     * è¿æ¥è¶…æ—¶
+     * Á¬½Ó³¬Ê±
      */
     private int mConnectionTimeout = 1000 * 30;
     /**
-     * è¯»å–è¶…æ—¶
+     * ¶ÁÈ¡³¬Ê±
      */
     private int mReadTimeout = 1000 * 30;
     /**
-     * ç»“æœè¿”å›å›è°ƒ,åªæœ‰ä¸‹è½½æ–‡ä»¶æ—¶ä¼šè¢«è°ƒç”¨
+     * ½á¹û·µ»Ø»Øµ÷,Ö»ÓĞÏÂÔØÎÄ¼şÊ±»á±»µ÷ÓÃ
      */
     private HttpDownloadListener mDownloadListener;
     /**
-     * ä¸‹è½½æ—¶æ–‡ä»¶å­˜æ”¾è·¯å¾„
+     * ÏÂÔØÊ±ÎÄ¼ş´æ·ÅÂ·¾¶
      */
     private String mDownloadFileName;
 
@@ -108,7 +108,7 @@ public class HttpRequest {
     }
 
     /**
-     * æ”¾å…¥è¯·æ±‚ä½“Jsonä¸²
+     * ·ÅÈëÇëÇóÌåJson´®
      *
      * @param bodyJson
      */
@@ -119,7 +119,7 @@ public class HttpRequest {
     }
 
     /**
-     * æ·»åŠ æ™®é€šå‚æ•°
+     * Ìí¼ÓÆÕÍ¨²ÎÊı
      *
      * @param key
      * @param value
@@ -131,7 +131,7 @@ public class HttpRequest {
     }
 
     /**
-     * æ·»åŠ æ–‡ä»¶å‚æ•°
+     * Ìí¼ÓÎÄ¼ş²ÎÊı
      *
      * @param key
      * @param file
@@ -141,7 +141,7 @@ public class HttpRequest {
     }
 
     /**
-     * æ·»åŠ å¤´éƒ¨
+     * Ìí¼ÓÍ·²¿
      *
      * @param key
      * @param value
@@ -151,7 +151,7 @@ public class HttpRequest {
     }
 
     /**
-     * åˆ é™¤æ™®é€šå‚æ•°
+     * É¾³ıÆÕÍ¨²ÎÊı
      *
      * @param key
      */
@@ -160,7 +160,7 @@ public class HttpRequest {
     }
 
     /**
-     * åˆ é™¤æ–‡ä»¶å‚æ•°
+     * É¾³ıÎÄ¼ş²ÎÊı
      *
      * @param key
      */
@@ -169,7 +169,7 @@ public class HttpRequest {
     }
 
     /**
-     * åˆ é™¤å¤´éƒ¨
+     * É¾³ıÍ·²¿
      *
      * @param key
      */
@@ -178,7 +178,7 @@ public class HttpRequest {
     }
 
     /**
-     * è¿”å›å‚æ•°çš„æ‹¼æ¥
+     * ·µ»Ø²ÎÊıµÄÆ´½Ó
      *
      * @return
      */
@@ -194,7 +194,7 @@ public class HttpRequest {
     }
 
     /**
-     * è·å–GETå‚æ•°ä¸²
+     * »ñÈ¡GET²ÎÊı´®
      *
      * @return
      */
@@ -222,7 +222,7 @@ public class HttpRequest {
         return mBodyJson;
     }
 
-    // åˆå§‹åŒ–MAP
+    // ³õÊ¼»¯MAP
     private void init() {
         mParamMap = new ConcurrentHashMap<String, String>();
         mFileParamMap = new ConcurrentHashMap<String, File>();

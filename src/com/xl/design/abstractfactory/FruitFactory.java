@@ -1,9 +1,9 @@
 package com.xl.design.abstractfactory;
 
 public interface FruitFactory {
-    //瀹炰緥鍖朅pple
+    //实例化Apple
     Fruit getApple();
 
-    //瀹炰緥鍖朆anana
+    //实例化Banana
     Fruit getBanana();
 }

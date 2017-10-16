@@ -1,5 +1,5 @@
 package com.xl.reflect;
 
 public class RelectDemo {
-    // FIXME 鍐欎竴涓皝璋冪敤杩欎釜鏂规硶鑳藉緱鐭ヨ皟鐢ㄨ鏂规硶鏄摢涓被
+    // FIXME 写一个谁调用这个方法能得知调用该方法是哪个类
 }

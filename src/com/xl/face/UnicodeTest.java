@@ -2,7 +2,7 @@ package com.xl.face;
 
 public class UnicodeTest {
     public static void main(String[] args) {
-        // \u0022 æ˜¯åŒå¼•å·çš„ Unicodeè½¬ä¹‰å­—ç¬¦ 
+        // \u0022 ÊÇË«ÒıºÅµÄ Unicode×ªÒå×Ö·û 
         System.out.println("a\u0022.length() +\u0022b".length());
         System.out.println("a".length() + "b".length());
     }

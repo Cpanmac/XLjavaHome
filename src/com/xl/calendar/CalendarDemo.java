@@ -7,14 +7,14 @@ import java.util.Calendar;
 
 /**
  * Created with IntelliJ IDEA.
- * User: å¾ç«‹
+ * User: ĞìÁ¢
  * Date: 2017/9/19
  * Time: 13:29
  * To change this template use File | Settings | File Templates.
  */
 public class CalendarDemo {
     /**
-     * monthæ˜¯-1çš„
+     * monthÊÇ-1µÄ
      */
     @Test
     public void calendarTest() {
@@ -34,7 +34,7 @@ public class CalendarDemo {
 
     @Test
     public void compareTest() {
-        Calendar tomorrow = Calendar.getInstance();//æ˜å¤©
+        Calendar tomorrow = Calendar.getInstance();//Ã÷Ìì
         tomorrow.add(Calendar.DATE, 1);
         Calendar now = Calendar.getInstance();
         System.out.println(tomorrow.compareTo(now));   //1

@@ -6,8 +6,8 @@ import java.util.Map;
 
 /**
  * @author zhuming
- * @description ç”¨äºç»Ÿä¸€æ¥æ”¶è¿‡ç¨‹è¿”å›å€¼çš„å¯¹è±¡
- * @date 2013-9-10 ä¸‹åˆ5:25:09
+ * @description ÓÃÓÚÍ³Ò»½ÓÊÕ¹ı³Ì·µ»ØÖµµÄ¶ÔÏó
+ * @date 2013-9-10 ÏÂÎç5:25:09
  */
 public class ResultVO<T> implements Serializable {
     /**
@@ -15,27 +15,27 @@ public class ResultVO<T> implements Serializable {
      */
     private static final long serialVersionUID = 1L;
     /**************************************
-     * å˜é‡å®šä¹‰åŒº
+     * ±äÁ¿¶¨ÒåÇø
      **************************************/
     /**
-     * ç»“æœé›†
+     * ½á¹û¼¯
      */
     private List<T> resultList;
     private String returnCode;
     private String errorMessage;
     private String sqlError;
     /**
-     * æ€»é¡µæ•°
+     * ×ÜÒ³Êı
      */
     private int pageCount;
     private int rowCount;
     /**
-     * å…¶ä»–è¿”å›ç»“æœé›†
+     * ÆäËû·µ»Ø½á¹û¼¯
      */
     private Map<String, Object> othermap;
 
     /**
-     * æ˜¯å¦æœ‰è¿”å›ç»“æœé›†å¹¶ä¸”å¤§äº1
+     * ÊÇ·ñÓĞ·µ»Ø½á¹û¼¯²¢ÇÒ´óÓÚ1
      *
      * @throws
      * @param: @return
@@ -50,7 +50,7 @@ public class ResultVO<T> implements Serializable {
     }
 
     /**
-     * ç»“æœé›†ä¸ºç©º
+     * ½á¹û¼¯Îª¿Õ
      *
      * @throws
      * @param: @return

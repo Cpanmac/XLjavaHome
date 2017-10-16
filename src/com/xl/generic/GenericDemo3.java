@@ -10,11 +10,11 @@ class Tool {
 }
 
 /*
- * æ³›å‹å‰åšæ³• class Tool { private Object obj; publlic void setWoker(Object obj) {
+ * ·ºĞÍÇ°×ö·¨ class Tool { private Object obj; publlic void setWoker(Object obj) {
  * this.object=object; } public Object getObject() { return object; } }
  */
-// æ³›å‹ç±»
-class Utils<QQ> // ç”±å¯¹æ–¹æŒ‡å®šæ“ä½œä»€ä¹ˆç±»å‹çš„å¯¹è±¡
+// ·ºĞÍÀà
+class Utils<QQ> // ÓÉ¶Ô·½Ö¸¶¨²Ù×÷Ê²Ã´ÀàĞÍµÄ¶ÔÏó
 {
     private QQ q;
 

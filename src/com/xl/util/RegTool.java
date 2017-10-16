@@ -9,23 +9,23 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author å¾ç«‹
- * @Decription æ­£åˆ™å·¥å…·ç±»
+ * @author ĞìÁ¢
+ * @Decription ÕıÔò¹¤¾ßÀà
  * @date 2013-12-21
  */
 public class RegTool {
     public static boolean checkMail(String mail) {
-        // ç›¸å¯¹ç²¾ç¡®çš„åŒ¹é…
-        String reg = "[a-zA-Z0-9_]+@[a-zA-Z0-9]+(\\.[a-zA-Z]+){1,3}"; // 6åˆ°12ä½çš„ç”¨æˆ·å
-        // ç›¸å¯¹ç¬¼ç»Ÿçš„åŒ¹é…
+        // Ïà¶Ô¾«È·µÄÆ¥Åä
+        String reg = "[a-zA-Z0-9_]+@[a-zA-Z0-9]+(\\.[a-zA-Z]+){1,3}"; // 6µ½12Î»µÄÓÃ»§Ãû
+        // Ïà¶ÔÁıÍ³µÄÆ¥Åä
         reg = "\\w+@\\w+(\\.\\w+)+";
         return mail.matches(reg);
-        // æ¯”è¾ƒå¼çš„åŒ¹é…
+        // ±È½ÏµğµÄÆ¥Åä
         //		 while(mail.indexOf("@")!=-1&&mail.indexOf("."))
     }
 
     /**
-     * å¾—åˆ°æ‰€æœ‰çš„ä¸­æ–‡
+     * µÃµ½ËùÓĞµÄÖĞÎÄ
      *
      * @param content
      * @return
@@ -35,7 +35,7 @@ public class RegTool {
     }
 
     /**
-     * æ˜¯å¦åŒ¹é…æŒ‡å®šè§„åˆ™
+     * ÊÇ·ñÆ¥ÅäÖ¸¶¨¹æÔò
      *
      * @param s
      * @param reg
@@ -48,7 +48,7 @@ public class RegTool {
     }
 
     /**
-     * è¿”å›æ‰€æœ‰ç¬¦åˆæ¡ä»¶çš„
+     * ·µ»ØËùÓĞ·ûºÏÌõ¼şµÄ
      *
      * @param content
      * @param regex
@@ -59,17 +59,17 @@ public class RegTool {
     }
 
     /**
-     * è¿”å›ç¬¦åˆæ¡ä»¶çš„é›†åˆ
+     * ·µ»Ø·ûºÏÌõ¼şµÄ¼¯ºÏ
      *
-     * @param content å†…å®¹
-     * @param regex   æ­£åˆ™
-     * @param params  ç»„åˆ«
+     * @param content ÄÚÈİ
+     * @param regex   ÕıÔò
+     * @param params  ×é±ğ
      * @return List<String>
      */
     public static String[] getContent(String content, String regex, int... params) {
         List<String> list = new ArrayList<String>();
-        Pattern p = Pattern.compile(regex,// Pattern.MULTILINE | //å¤šè¡Œæ¨¡å¼
-                // Pattern.DOTALL | //åŒ¹é…ä»»ä½•å­—ç¬¦ï¼ŒåŒ…æ‹¬æ¢è¡Œç¬¦ã€‚
+        Pattern p = Pattern.compile(regex,// Pattern.MULTILINE | //¶àĞĞÄ£Ê½
+                // Pattern.DOTALL | //Æ¥ÅäÈÎºÎ×Ö·û£¬°üÀ¨»»ĞĞ·û¡£
                 Pattern.UNICODE_CASE);
         Matcher m = p.matcher(content);
         while (m.find()) {
@@ -82,7 +82,7 @@ public class RegTool {
     }
 
     /**
-     * åŒ¹é…æ‰€æœ‰çš„Email
+     * Æ¥ÅäËùÓĞµÄEmail
      *
      * @param content
      * @return
@@ -92,7 +92,7 @@ public class RegTool {
     }
 
     /**
-     * è¿”å›http
+     * ·µ»Øhttp
      *
      * @param content
      * @return List<String>
@@ -106,7 +106,7 @@ public class RegTool {
     }
 
     /**
-     * åŒ¹é…æ‰€æœ‰çš„å›¾ç‰‡æ ¼å¼
+     * Æ¥ÅäËùÓĞµÄÍ¼Æ¬¸ñÊ½
      *
      * @param content
      * @return
@@ -116,7 +116,7 @@ public class RegTool {
     }
 
     /**
-     * åˆ¤æ–­æ˜¯å¦ä¸­æ–‡
+     * ÅĞ¶ÏÊÇ·ñÖĞÎÄ
      *
      * @param s
      * @return
@@ -129,7 +129,7 @@ public class RegTool {
     }
 
     /**
-     * å»ä¸¤ä¸ªä»¥ä¸Šçš„ç©ºæ ¼
+     * È¥Á½¸öÒÔÉÏµÄ¿Õ¸ñ
      *
      * @param content
      * @param regex
@@ -139,10 +139,10 @@ public class RegTool {
         return content.replaceAll("\\s{2,}", "");
     }
 
-    // -----------------------------------è¿™æ˜¯æµ‹è¯•------------------------------------------------
+    // -----------------------------------ÕâÊÇ²âÊÔ------------------------------------------------
     @Test
     public void testGetEmail() {
-        String s = "æ½åŠ1239sæˆ‘ä»¿ä½›dfs0812093@qq.com";
+        String s = "Î«·»1239sÎÒ·Â·ğdfs0812093@qq.com";
         String[] strs = getEmail(s);
         System.out.println(Arrays.toString(strs));
     }

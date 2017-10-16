@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * æ—¥å¿—æ‰“ç‚¹,æ•´ä¸ªé“¾è·¯
+ * ÈÕÖ¾´òµã,Õû¸öÁ´Â·
  * <p>
  * Created by xuan on 17/7/29.
  */
 public class TKPointLine {
     /**
-     * ä»å¼€å§‹åˆ°ç»“æŸè®°å½•çš„æ‰“ç‚¹æ—¥å¿—
+     * ´Ó¿ªÊ¼µ½½áÊø¼ÇÂ¼µÄ´òµãÈÕÖ¾
      */
     private List<TKPoint> pointList = new ArrayList<>();
 
@@ -23,7 +23,7 @@ public class TKPointLine {
     }
 
     /**
-     * æ·»åŠ ä¸€ä¸ªæ—¥å¿—ç‚¹
+     * Ìí¼ÓÒ»¸öÈÕÖ¾µã
      *
      * @param tkPoint
      */

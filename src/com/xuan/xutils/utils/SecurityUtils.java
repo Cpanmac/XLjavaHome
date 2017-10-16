@@ -4,23 +4,23 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * åŠ è§£å¯†å·¥å…·ç±»
+ * ¼Ó½âÃÜ¹¤¾ßÀà
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:10:59 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:10:59 $
  */
 public abstract class SecurityUtils {
     private static final char[] chs = {'L', 'K', 'J', '4', 'D', 'G', 'F', 'V', 'R', 'T', 'Y', 'B', 'N', 'U', 'P', 'W', '3', 'E', '5', 'H', 'M', '7', 'Q', '9', 'S', 'A', 'Z', 'X', '8', 'C', '6', '2'};
 
     /**
-     * è‡ªèº«æ··æ·†åŠ å¯†ï¼Œæœ€å¤šåªèƒ½åŠ å¯† 30 ä¸ªå­—èŠ‚é•¿åº¦çš„å­—ç¬¦ä¸²ã€‚
+     * ×ÔÉí»ìÏı¼ÓÃÜ£¬×î¶àÖ»ÄÜ¼ÓÃÜ 30 ¸ö×Ö½Ú³¤¶ÈµÄ×Ö·û´®¡£
      * <p>
      * <p>
-     * <b>å¯¹åŒä¸€ä¸ªå­—ç¬¦ä¸²ï¼ŒåŠ å¯†åçš„å¯†æ–‡å¯èƒ½æ˜¯ä¸ç›¸åŒçš„ï¼Œæ‰€ä»¥åœ¨åˆ¤æ–­å¯†ç æ˜¯å¦ç›¸ç­‰æ—¶ï¼Œä¸èƒ½é‡‡ç”¨å¯†æ–‡è¿›è¡Œæ¯”å¯¹ï¼Œå¿…é¡»é‡‡ç”¨æ˜æ–‡æ¯”å¯¹ã€‚</b>
+     * <b>¶ÔÍ¬Ò»¸ö×Ö·û´®£¬¼ÓÃÜºóµÄÃÜÎÄ¿ÉÄÜÊÇ²»ÏàÍ¬µÄ£¬ËùÒÔÔÚÅĞ¶ÏÃÜÂëÊÇ·ñÏàµÈÊ±£¬²»ÄÜ²ÉÓÃÃÜÎÄ½øĞĞ±È¶Ô£¬±ØĞë²ÉÓÃÃ÷ÎÄ±È¶Ô¡£</b>
      * </p>
      *
-     * @param source æºå­—ç¬¦ä¸²
-     * @return åŠ å¯†åå­—ç¬¦ä¸²
+     * @param source Ô´×Ö·û´®
+     * @return ¼ÓÃÜºó×Ö·û´®
      * @see {@link #decodeBySelf(String)}
      */
     public static String encodeBySelf(String source) {
@@ -36,10 +36,10 @@ public abstract class SecurityUtils {
         byte[] encodedBytes2 = new byte[30];
         int n1 = 0, n2 = 0;
         for (int i = 0; i < plainTextBytes.length; i++) {
-            if ((i + 1) % 2 != 0) { // å¥‡æ•°ä½
+            if ((i + 1) % 2 != 0) { // ÆæÊıÎ»
                 encodedBytes1[n1++] = (byte) get32Hi(plainTextBytes[i] * 4);
                 encodedBytes1[n1++] = (byte) get32Low(plainTextBytes[i] * 4);
-            } else { // å¶æ•°ä½
+            } else { // Å¼ÊıÎ»
                 encodedBytes2[n2++] = (byte) get32Hi(plainTextBytes[i] * 4);
                 encodedBytes2[n2++] = (byte) get32Low(plainTextBytes[i] * 4);
             }
@@ -70,14 +70,14 @@ public abstract class SecurityUtils {
     }
 
     /**
-     * è‡ªèº«æ··æ·†è§£å¯†ã€‚å¦‚æœä¸æ˜¯åˆæ³•çš„åŠ å¯†ä¸²ï¼ˆé•¿åº¦ä¸æ˜¯64ä¸ªå­—èŠ‚ï¼‰ï¼Œä¼šç›´æ¥è¿”å›åŸå­—ç¬¦ä¸²ã€‚
+     * ×ÔÉí»ìÏı½âÃÜ¡£Èç¹û²»ÊÇºÏ·¨µÄ¼ÓÃÜ´®£¨³¤¶È²»ÊÇ64¸ö×Ö½Ú£©£¬»áÖ±½Ó·µ»ØÔ­×Ö·û´®¡£
      *
-     * @param str åŠ å¯†çš„å­—ç¬¦ä¸²
-     * @return è§£å¯†åå­—ç¬¦ä¸²
+     * @param str ¼ÓÃÜµÄ×Ö·û´®
+     * @return ½âÃÜºó×Ö·û´®
      * @see {@link #encodeBySelf(String)}
      */
     public static String decodeBySelf(String str) {
-        // å¦‚æœä¸æ˜¯åˆæ³•çš„åŠ å¯†ä¸²ï¼Œåˆ™ç›´æ¥è¿”å›
+        // Èç¹û²»ÊÇºÏ·¨µÄ¼ÓÃÜ´®£¬ÔòÖ±½Ó·µ»Ø
         if (str == null || str.length() != 64) {
             return str;
         }
@@ -117,10 +117,10 @@ public abstract class SecurityUtils {
     }
 
     /**
-     * ä½¿ç”¨ SHA1 åŠ å¯†ã€‚
+     * Ê¹ÓÃ SHA1 ¼ÓÃÜ¡£
      *
-     * @param str æºå­—ç¬¦ä¸²
-     * @return åŠ å¯†åå­—ç¬¦ä¸²
+     * @param str Ô´×Ö·û´®
+     * @return ¼ÓÃÜºó×Ö·û´®
      */
     public static String encodeBySHA1(String str) {
         try {
@@ -133,10 +133,10 @@ public abstract class SecurityUtils {
     }
 
     /**
-     * ä½¿ç”¨ MD5 å¯¹å­—ç¬¦ä¸²åŠ å¯†ã€‚
+     * Ê¹ÓÃ MD5 ¶Ô×Ö·û´®¼ÓÃÜ¡£
      *
-     * @param str æºå­—ç¬¦ä¸²
-     * @return åŠ å¯†åå­—ç¬¦ä¸²
+     * @param str Ô´×Ö·û´®
+     * @return ¼ÓÃÜºó×Ö·û´®
      */
     public static String encodeByMD5(String str) {
         try {
@@ -149,10 +149,10 @@ public abstract class SecurityUtils {
     }
 
     /**
-     * ä½¿ç”¨ MD5 å¯¹å­—èŠ‚æ•°ç»„åŠ å¯†ã€‚
+     * Ê¹ÓÃ MD5 ¶Ô×Ö½ÚÊı×é¼ÓÃÜ¡£
      *
-     * @param bytes æºå­—ç¬¦ byte æ•°ç»„
-     * @return åŠ å¯†åå­—ç¬¦ä¸²
+     * @param bytes Ô´×Ö·û byte Êı×é
+     * @return ¼ÓÃÜºó×Ö·û´®
      */
     public static String encodeByMD5(byte[] bytes) {
         try {
@@ -165,10 +165,10 @@ public abstract class SecurityUtils {
     }
 
     /**
-     * ä½¿ç”¨36è¿›åˆ¶è§£ç ã€‚
+     * Ê¹ÓÃ36½øÖÆ½âÂë¡£
      *
-     * @param str ç¼–ç çš„å­—ç¬¦ä¸²
-     * @return è§£ç åå­—ç¬¦ä¸²
+     * @param str ±àÂëµÄ×Ö·û´®
+     * @return ½âÂëºó×Ö·û´®
      * @see {@link #encodeBy36Radix(String)}
      */
     public static String decodeBy36Radix(String str) {
@@ -201,10 +201,10 @@ public abstract class SecurityUtils {
     }
 
     /**
-     * ä½¿ç”¨36è¿›åˆ¶è¿›è¡Œç¼–ç ã€‚
+     * Ê¹ÓÃ36½øÖÆ½øĞĞ±àÂë¡£
      *
-     * @param str æºå­—ç¬¦ä¸²
-     * @return ç¼–ç åå­—ç¬¦ä¸²
+     * @param str Ô´×Ö·û´®
+     * @return ±àÂëºó×Ö·û´®
      * @see {@link #decodeBy36Radix(String)}
      */
     public static String encodeBy36Radix(String str) {

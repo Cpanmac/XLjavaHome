@@ -1,10 +1,10 @@
 package com.xuan.xutils.cache;
 
 /**
- * 琛ㄧず缂撳瓨宸茬粡瀛樺湪鐨勫紓甯哥被
+ * 表示缓存已经存在的异常类
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 涓婂崍10:39:34 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 上午10:39:34 $
  */
 public class CacheExistsException extends CacheException {
     private static final long serialVersionUID = 1L;

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 鍩轰簬DES绠楁硶鐨勫姞瀵嗚В瀵嗗伐鍏风被
+ * 基于DES算法的加密解密工具类
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 涓婂崍10:19:35 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 上午10:19:35 $
  */
 public abstract class DESUtils {
     public static final String CONST_DES_KEY_1 = "des.key1";

@@ -113,7 +113,7 @@ public class PinYinHelper {
                 this.hypy.put(items[0].trim(), list);
             }
         } catch (Exception var10) {
-            throw new RuntimeException("è¯»å–æ‹¼éŸ³æ•°æ®å­—å…¸æ–‡ä»¶å¤±è´¥", var10);
+            throw new RuntimeException("¶ÁÈ¡Æ´ÒôÊı¾İ×ÖµäÎÄ¼şÊ§°Ü", var10);
         }
     }
 }

@@ -1,11 +1,11 @@
 package com.xl.collections;
 /*
-setæ¥å£:å…ƒç´ æ˜¯æ— åºçš„//å­˜å…¥å’Œå–å‡ºçš„é¡ºåºæ˜¯ä¸ä¸€å®šä¸€è‡´ï¼Œå…ƒç´ ä¸å¯ä»¥é‡å¤ï¼Œå¹¶ä¸”æœ€å¤šåŒ…å«ä¸€ä¸ªnullå…ƒç´ 
-seté›†åˆçš„åŠŸèƒ½å’ŒCollectionæ˜¯ä¸€æ ·çš„ï¼Œæ²¡æœ‰è§’æ ‡
-å¸¸è§å­ç±»
-HashSet:åº•å±‚æ•°æ®ç»“æ„æ˜¯å“ˆå¸Œè¡¨ã€‚ 
+set½Ó¿Ú:ÔªËØÊÇÎŞĞòµÄ//´æÈëºÍÈ¡³öµÄË³ĞòÊÇ²»Ò»¶¨Ò»ÖÂ£¬ÔªËØ²»¿ÉÒÔÖØ¸´£¬²¢ÇÒ×î¶à°üº¬Ò»¸önullÔªËØ
+set¼¯ºÏµÄ¹¦ÄÜºÍCollectionÊÇÒ»ÑùµÄ£¬Ã»ÓĞ½Ç±ê
+³£¼û×ÓÀà
+HashSet:µ×²ãÊı¾İ½á¹¹ÊÇ¹şÏ£±í¡£ 
 TreeSet:
-å“ˆå¸Œè¡¨ï¼šå­˜æ”¾ä¸€å †å“ˆå¸Œå€¼(äºŒè¿›åˆ¶)çš„è¡¨ï¼Œå­˜æ”¾çš„å“ˆå¸Œå€¼å°±æ˜¯å¯¹è±¡åœ°å€å€¼,æ¯ä¸ªå¯¹è±¡éƒ½æœ‰hashCodeæ–¹æ³•ï¼Œå¯ä»¥è¦†å†™æ‰
+¹şÏ£±í£º´æ·ÅÒ»¶Ñ¹şÏ£Öµ(¶ş½øÖÆ)µÄ±í£¬´æ·ÅµÄ¹şÏ£Öµ¾ÍÊÇ¶ÔÏóµØÖ·Öµ,Ã¿¸ö¶ÔÏó¶¼ÓĞhashCode·½·¨£¬¿ÉÒÔ¸²Ğ´µô
 */
 
 import java.util.HashSet;
@@ -15,14 +15,14 @@ class HashSetDemo {
     public static void main(String[] args) {
         HashSet hs = new HashSet();
         System.out.println(hs.toString());
-        hs.add("java01");             //è¿”å›å€¼æ˜¯å¸ƒå°”å‹,æ‰€ä»¥æ— æ³•å­˜å‚¨ç›¸åŒçš„å…ƒç´ ã€‚
+        hs.add("java01");             //·µ»ØÖµÊÇ²¼¶ûĞÍ,ËùÒÔÎŞ·¨´æ´¢ÏàÍ¬µÄÔªËØ¡£
         hs.add("java01");
         hs.add("java03");
         hs.add("java03");
         hs.add("java02");
         System.out.println(hs.add("java01"));
         System.out.println(hs.toString());
-        Iterator it = hs.iterator();      //å–å‡ºHashSet
+        Iterator it = hs.iterator();      //È¡³öHashSet
         while (it.hasNext()) {
             System.out.println(it.next());
         }

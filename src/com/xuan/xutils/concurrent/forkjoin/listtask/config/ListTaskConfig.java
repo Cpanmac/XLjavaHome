@@ -1,25 +1,25 @@
 package com.xuan.xutils.concurrent.forkjoin.listtask.config;
 
 /**
- * Ф┴╖Х║▄Ф≈╤Г └И┘█Г╫╝Е▐┌Ф∙╟О╪▄Е▐╞Д╩╔Х╝╘Д╦─Д╨⌡И╚≤Г╨╖Г■╗Ф┬╥Е╝ Е┬╤Д╦─Д╨⌡Е▐┌Ф∙╟Ф²╔Е╫╠Е⌠█Е╜░Д╩╩Е┼║Г └Е┬├Х╖ёГ╜┴
+ * ж╢ппй╠╣деДжц╡нйЩё╛©иртхцр╩п╘╦ъ╪╤сц╩╖╤╗жфр╩п╘╡нйЩю╢с╟оЛвсхннЯ╣д╥ж╫Б╣х
  * <p>
  * Created by xuan on 17/8/26.
  */
 public class ListTaskConfig {
     /**
-     * И╩≤Х╝╓Д╩╔1Д╦╙Е▌÷Ф∙╟Ф█╝Ф▀├Е┬├Ф┬░Д╦─Д╦╙Е╜░Д╩╩Е┼║
+     * д╛хорт1╦Жт╜йЩ╬щ╡П╥жЁир╩╦ЖвсхннЯ
      */
     private final static int DEFAULT_SUB_ORIGIN_LIST_SIZE = 1;
     /**
-     * Х╤┘Ф≈╤И╩≤Х╝╓О╪ 5Г╖▓
+     * Ё╛й╠д╛хоё╨5цК
      */
     private final static int DEFAULT_TIMEOUT_SECOND = 5;
     /**
-     * Е°╗Ф▀├Е┬├Е╜░Д╩╩Е┼║Ф≈╤О╪▄Д╩╔Е╓ Е╟▒Д╦╙Е▌÷Ф∙╟Ф█╝Д╦╨Е█∙Д╫█О╪▄И╩≤Х╝╓О╪ 1
+     * тз╡П╥жвсхннЯй╠ё╛рт╤Юиы╦Жт╜йЩ╬щн╙╣╔н╩ё╛д╛хоё╨1
      */
     private int subOriginListSize = DEFAULT_SUB_ORIGIN_LIST_SIZE;
     /**
-     * Д╩╩Е┼║Ф┴╖Х║▄Х╤┘Ф≈╤Ф≈╤И≈╢О╪▄Е█∙Д╫█О╪ Г╖▓
+     * хннЯж╢ппЁ╛й╠й╠╪Дё╛╣╔н╩ё╨цК
      */
     private long timeoutSecond = DEFAULT_TIMEOUT_SECOND;
 

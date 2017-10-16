@@ -21,27 +21,27 @@ public class ExcelTest {
         try {
             createExcel();
         } catch (IOException e) {
-            LOG.error("寮傚父", e);
+            LOG.error("异常", e);
         } catch (InvalidFormatException e) {
-            LOG.error("寮傚父", e);
+            LOG.error("异常", e);
         }
     }
 
     private void createExcel() throws IOException, InvalidFormatException {
         FastExcel fastExcel = new FastExcel("E:/data.xlsx");
-        fastExcel.setSheetName("娲诲姩淇℃伅鏁版嵁");
+        fastExcel.setSheetName("活动信息数据");
         List<MyTest> tests = fastExcel.parse(MyTest.class);
         if (null != tests && !tests.isEmpty()) {
             for (MyTest myTest : tests) {
-                LOG.debug("璁板綍:{}", myTest.toString());
+                LOG.debug("记录:{}", myTest.toString());
             }
             FastExcel create = new FastExcel("E:/data2.xlsx");
-            create.setSheetName("娲诲姩淇℃伅鏁版嵁");
+            create.setSheetName("活动信息数据");
             boolean result = create.createExcel(tests);
-            LOG.debug("缁撴灉:{}", result);
+            LOG.debug("结果:{}", result);
             create.close();
         } else {
-            LOG.debug("娌℃湁缁撴灉");
+            LOG.debug("没有结果");
         }
         fastExcel.close();
     }

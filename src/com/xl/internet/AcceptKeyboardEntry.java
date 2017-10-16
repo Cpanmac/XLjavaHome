@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
-public class AcceptKeyboardEntry    //鎺ュ彈绔彲浠ヤ笉鍏筹紝涓�鐩村紑鐫�
+public class AcceptKeyboardEntry    //接受端可以不关，一直开着
 {
     public static void main(String[] args) throws IOException {
         DatagramSocket ds = new DatagramSocket(10001);

@@ -9,22 +9,22 @@ import java.lang.reflect.Type;
 public class GenericDemo extends A<Person, String> {
     @Test
     public void getGeneric() throws InstantiationException, IllegalAccessException {
-        // å¾—åˆ°æ³›å‹çš„çœŸå®ä¿¡æ¯
-        Class<? extends GenericDemo> clazz = this.getClass(); // å¾—åˆ°å½“å‰newçš„å¯¹è±¡
+        // µÃµ½·ºĞÍµÄÕæÊµĞÅÏ¢
+        Class<? extends GenericDemo> clazz = this.getClass(); // µÃµ½µ±Ç°newµÄ¶ÔÏó
         System.out.println(clazz.getName());
         Type[] parent = clazz.getGenericInterfaces();
         System.out.println(parent[0]);
         Class<?> inter = clazz.getInterfaces()[0];
         System.out.println(inter.getName());
         // ParameterizedType pt = (ParameterizedType)
-        // clazz.getGenericSuperclass(); // å¾—åˆ°æ³›å‹çš„çˆ¶ç±»
+        // clazz.getGenericSuperclass(); // µÃµ½·ºĞÍµÄ¸¸Àà
         // System.out.println(pt);
         // clazz = (Class) pt.getActualTypeArguments()[0];
         // System.out.println(clazz);
     }
 
     /**
-     * æœ‰äº›æ— æ³•newçš„å¯¹è±¡æ˜¯ä¼šå‡ºå¼‚å¸¸çš„
+     * ÓĞĞ©ÎŞ·¨newµÄ¶ÔÏóÊÇ»á³öÒì³£µÄ
      */
     @Test
     public void test() {
@@ -40,7 +40,7 @@ class A<T, E> {
     public A() {
         java.lang.reflect.Type t = this.getClass().getGenericSuperclass();
         boolean b = ParameterizedType.class.isInstance(t);
-        System.out.println("æ˜¯å¦æ˜¯è¿™ä¸ªç±»å‹çš„" + b);
+        System.out.println("ÊÇ·ñÊÇÕâ¸öÀàĞÍµÄ" + b);
         ParameterizedType pt = (ParameterizedType) t;
         pt.getRawType();
         pt.getOwnerType();

@@ -1,12 +1,12 @@
 package com.xuan.xutils.domain.result;
 
 /**
- * 结果状态码的枚举
+ * ���״̬���ö��
  * <p>
  * Created by xuan on 17/8/2.
  */
 public enum CodeEnum {
-    ERROR(0, "错误"), SUCCESS(1, "成功");
+    ERROR(0, "����"), SUCCESS(1, "�ɹ�");
     private int code;
     private String msg;
 
@@ -15,16 +15,8 @@ public enum CodeEnum {
         this.msg = msg;
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
     /**
-     * 判断是否包含
+     * �ж��Ƿ����
      *
      * @param code
      * @return
@@ -39,7 +31,7 @@ public enum CodeEnum {
     }
 
     /**
-     * isContain取反
+     * isContainȡ��
      *
      * @param code
      * @return
@@ -48,8 +40,16 @@ public enum CodeEnum {
         return !isContain(code);
     }
 
+    public int getCode() {
+        return code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
     /**
-     * 判断是否相同
+     * �ж��Ƿ���ͬ
      *
      * @param code
      * @return
@@ -59,7 +59,7 @@ public enum CodeEnum {
     }
 
     /**
-     * isEq取反
+     * isEqȡ��
      *
      * @param code
      * @return
@@ -69,7 +69,7 @@ public enum CodeEnum {
     }
 
     /**
-     * 根据code获取枚举,如果获取不到,返回null
+     * ����code��ȡö��,�����ȡ����,����null
      *
      * @param code
      * @return

@@ -26,7 +26,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * <ol>
  * <li>ActionClass.properties</li>
  * <li>package.properties (of the directory where class is located and every parent directory all the way to the root
- * directory,必须在一个包下)</li>
+ * directory,������һ������)</li>
  * <li>global resource properties</li>
  * </ol>
  * <p>
@@ -54,24 +54,24 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * <!-- END SNIPPET: globalresource -->
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 上午10:21:08 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ����10:21:08 $
  */
 public class LocalizedTextUtil {
     private static final List<String> DEFAULT_RESOURCE_BUNDLES = new CopyOnWriteArrayList<String>();
-    private static boolean reloadBundles = false;
-    /**
-     * 国际化资源文件的编码格式
-     */
-    private static Charset charsetOfBundles = Charset.defaultCharset();
     private static final ResourceBundle EMPTY_BUNDLE = new EmptyResourceBundle();
     private static final ConcurrentMap<String, ResourceBundle> bundlesMap = new ConcurrentHashMap<String, ResourceBundle>();
     private static final Map<MessageFormatKey, MessageFormat> messageFormats = new HashMap<MessageFormatKey, MessageFormat>();
+    private static boolean reloadBundles = false;
+    /**
+     * ���ʻ���Դ�ļ��ı����ʽ
+     */
+    private static Charset charsetOfBundles = Charset.defaultCharset();
     private static ClassLoader delegatedClassLoader;
     static {
         clearDefaultResourceBundles();
     }
     /**
-     * 清理全局资源文件
+     * ����ȫ����Դ�ļ�
      */
     public static void clearDefaultResourceBundles() {
         if (DEFAULT_RESOURCE_BUNDLES != null) {
@@ -87,7 +87,7 @@ public class LocalizedTextUtil {
     }
 
     /**
-     * 设置是否允许重新加载资源文件
+     * �����Ƿ��������¼�����Դ�ļ�
      *
      * @param reloadBundles reload bundles?
      */
@@ -96,7 +96,7 @@ public class LocalizedTextUtil {
     }
 
     /**
-     * 设置国际化资源文件的编码格式
+     * ���ù��ʻ���Դ�ļ��ı����ʽ
      *
      * @param charsetOfBundles charsetOfBundles
      */
@@ -105,9 +105,9 @@ public class LocalizedTextUtil {
     }
 
     /**
-     * 添加全局的资源文件
+     * ���ȫ�ֵ���Դ�ļ�
      * <p>
-     * 如果资源文件已经存在于列表中，会重新添加
+     * �����Դ�ļ��Ѿ��������б��У����������
      *
      * @param resourceBundleName the name of the bundle to add.
      */
@@ -120,7 +120,7 @@ public class LocalizedTextUtil {
     }
 
     /**
-     * 取得全局的信息 Returns a localized message for the specified key, aTextName. Neither the key nor the message is
+     * ȡ��ȫ�ֵ���Ϣ Returns a localized message for the specified key, aTextName. Neither the key nor the message is
      * evaluated.
      *
      * @param aTextName the message key
@@ -144,7 +144,7 @@ public class LocalizedTextUtil {
     }
 
     /**
-     * 取得全局的信息 Returns a localized message for the specified key, aTextName, substituting variables from the array of
+     * ȡ��ȫ�ֵ���Ϣ Returns a localized message for the specified key, aTextName, substituting variables from the array of
      * params into the message. Neither the key nor the message is evaluated.
      *
      * @param aTextName the message key
@@ -436,7 +436,7 @@ public class LocalizedTextUtil {
     }
 
     /**
-     * 转换字符串编码
+     * ת���ַ�������
      *
      * @param str
      * @return
@@ -446,7 +446,7 @@ public class LocalizedTextUtil {
     }
 
     /**
-     * 清理资源文件和tomcat缓存
+     * ������Դ�ļ���tomcat����
      */
     private static void reloadBundles() {
         if (reloadBundles) {
@@ -485,7 +485,7 @@ public class LocalizedTextUtil {
     }
 
     /**
-     * 重置所有状态和缓存。一般测试时使用
+     * ��������״̬�ͻ��档һ�����ʱʹ��
      */
     public static void reset() {
         clearDefaultResourceBundles();
@@ -493,6 +493,14 @@ public class LocalizedTextUtil {
         synchronized (messageFormats) {
             messageFormats.clear();
         }
+    }
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        setReloadBundles(true);
+        addDefaultResourceBundle("jdbc");
+        setCharsetOfBundles(Charset.forName("gbk"));
+        String s = findText(LocalizedTextUtil.class, "jdbc.driverClassName", Locale.getDefault());
+        System.out.println(s);
     }
 
     static class MessageFormatKey {
@@ -551,13 +559,5 @@ public class LocalizedTextUtil {
         protected Object handleGetObject(String key) {
             return null; // dummy
         }
-    }
-
-    public static void main(String[] args) throws UnsupportedEncodingException {
-        setReloadBundles(true);
-        addDefaultResourceBundle("jdbc");
-        setCharsetOfBundles(Charset.forName("gbk"));
-        String s = findText(LocalizedTextUtil.class, "jdbc.driverClassName", Locale.getDefault());
-        System.out.println(s);
     }
 }

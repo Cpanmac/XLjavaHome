@@ -1,8 +1,8 @@
 package com.xl.face;
 
 /**
- * @author å¾ç«‹
- * @Decription æ— æƒ…çš„å¢é‡æ“ä½œ
+ * @author ĞìÁ¢
+ * @Decription ÎŞÇéµÄÔöÁ¿²Ù×÷
  * @date 2014-5-15
  */
 public class ForTest {

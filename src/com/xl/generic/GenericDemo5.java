@@ -1,18 +1,18 @@
 package com.xl.generic;
 
-interface Inter<T> // è¿™ä¸ªæ¥å£åªå®šä¹‰ä¸ªå‚æ•°
+interface Inter<T> // Õâ¸ö½Ó¿ÚÖ»¶¨Òå¸ö²ÎÊı
 {
     void show(T t);
 }
 
 /*
- * class InterImpl implements Inter<String> //æ¥å£å®ç°ç±»ï¼ŒæŠŠStringè¿™ä¸ªå‚æ•°ä¼ è¿›å»äº†ï¼Œåªèƒ½æ¥æ”¶String {
+ * class InterImpl implements Inter<String> //½Ó¿ÚÊµÏÖÀà£¬°ÑStringÕâ¸ö²ÎÊı´«½øÈ¥ÁË£¬Ö»ÄÜ½ÓÊÕString {
  * public void show(String t) { System.out.println("show:"+t); } }
  */
 
 class InterImpl<T> implements Inter<T> {
     public void show(T t) {
-        System.out.println("showï¼š" + t);
+        System.out.println("show£º" + t);
     }
 }
 

@@ -14,75 +14,75 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * å®šæ—¶ä»»åŠ¡æ‰§è¡Œå™¨ã€‚ä¸€äº›æ¯”è¾ƒè€—æ—¶çš„ä»»åŠ¡å¯ä»¥é€šè¿‡æäº¤åˆ°æ­¤ç±»æ¥å¼‚æ­¥æ‰§è¡Œã€‚
+ * ¶¨Ê±ÈÎÎñÖ´ĞĞÆ÷¡£Ò»Ğ©±È½ÏºÄÊ±µÄÈÎÎñ¿ÉÒÔÍ¨¹ıÌá½»µ½´ËÀàÀ´Òì²½Ö´ĞĞ¡£
  * <p>
  * <p>
- * åœ¨å†…éƒ¨å®ç°ä¸Šä½¿ç”¨äº†ä¸€ä¸ªå›ºå®šé•¿åº¦çš„çº¿ç¨‹æ± å’Œä¸€ä¸ªæ— ç•Œçš„è¯·æ±‚é˜Ÿåˆ—æ¥æ‰§è¡Œæäº¤çš„ä»»åŠ¡ã€‚
+ * ÔÚÄÚ²¿ÊµÏÖÉÏÊ¹ÓÃÁËÒ»¸ö¹Ì¶¨³¤¶ÈµÄÏß³Ì³ØºÍÒ»¸öÎŞ½çµÄÇëÇó¶ÓÁĞÀ´Ö´ĞĞÌá½»µÄÈÎÎñ¡£
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:32:42 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:32:42 $
  */
 public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     /**
-     * æ­£åœ¨æ‰§è¡Œçš„ä»»åŠ¡åˆ—è¡¨
+     * ÕıÔÚÖ´ĞĞµÄÈÎÎñÁĞ±í
      */
     private final List<AbstractTask> activeTasks = new CopyOnWriteArrayList<AbstractTask>();
     /**
-     * æ‰€æœ‰æäº¤çš„ä»»åŠ¡åˆ—è¡¨
+     * ËùÓĞÌá½»µÄÈÎÎñÁĞ±í
      */
     private final List<AbstractTask> allTasks = new CopyOnWriteArrayList<AbstractTask>();
 
     /**
-     * ä½¿ç”¨ç»™å®šçš„æ ¸å¿ƒæ± å¤§å°åˆ›å»ºä¸€ä¸ªæ–°çš„ ScheduledTaskExecutorã€‚
+     * Ê¹ÓÃ¸ø¶¨µÄºËĞÄ³Ø´óĞ¡´´½¨Ò»¸öĞÂµÄ ScheduledTaskExecutor¡£
      *
-     * @param corePoolSize çº¿ç¨‹æ± ä¸­æ‰€ä¿ç•™çš„çº¿ç¨‹æ•°ï¼ˆåŒ…æ‹¬ç©ºé—²çº¿ç¨‹ï¼‰
-     * @throws IllegalArgumentException å¦‚æœ <tt>corePoolSize &lt; 0</tt>
+     * @param corePoolSize Ïß³Ì³ØÖĞËù±£ÁôµÄÏß³ÌÊı£¨°üÀ¨¿ÕÏĞÏß³Ì£©
+     * @throws IllegalArgumentException Èç¹û <tt>corePoolSize &lt; 0</tt>
      */
     public ScheduledTaskExecutor(int corePoolSize) {
         super(corePoolSize);
     }
 
     /**
-     * ä½¿ç”¨ç»™å®šçš„æ ¸å¿ƒæ± å¤§å°åˆ›å»ºä¸€ä¸ªæ–°çš„ ScheduledTaskExecutorã€‚
+     * Ê¹ÓÃ¸ø¶¨µÄºËĞÄ³Ø´óĞ¡´´½¨Ò»¸öĞÂµÄ ScheduledTaskExecutor¡£
      *
-     * @param corePoolSize  çº¿ç¨‹æ± ä¸­æ‰€ä¿ç•™çš„çº¿ç¨‹æ•°ï¼ˆåŒ…æ‹¬ç©ºé—²çº¿ç¨‹ï¼‰
-     * @param threadFactory æ‰§è¡Œç¨‹åºåˆ›å»ºæ–°çº¿ç¨‹æ—¶ä½¿ç”¨çš„å·¥å‚
-     * @throws IllegalArgumentException å¦‚æœ <tt>corePoolSize &lt; 0</tt>
-     * @throws NullPointerException     å¦‚æœ threadFactory ä¸ºnull
+     * @param corePoolSize  Ïß³Ì³ØÖĞËù±£ÁôµÄÏß³ÌÊı£¨°üÀ¨¿ÕÏĞÏß³Ì£©
+     * @param threadFactory Ö´ĞĞ³ÌĞò´´½¨ĞÂÏß³ÌÊ±Ê¹ÓÃµÄ¹¤³§
+     * @throws IllegalArgumentException Èç¹û <tt>corePoolSize &lt; 0</tt>
+     * @throws NullPointerException     Èç¹û threadFactory Îªnull
      */
     public ScheduledTaskExecutor(int corePoolSize, ThreadFactory threadFactory) {
         super(corePoolSize, threadFactory);
     }
 
     /**
-     * ä½¿ç”¨ç»™å®šçš„æ ¸å¿ƒæ± å¤§å°åˆ›å»ºä¸€ä¸ªæ–°çš„ ScheduledTaskExecutorã€‚
+     * Ê¹ÓÃ¸ø¶¨µÄºËĞÄ³Ø´óĞ¡´´½¨Ò»¸öĞÂµÄ ScheduledTaskExecutor¡£
      *
-     * @param corePoolSize çº¿ç¨‹æ± ä¸­æ‰€ä¿ç•™çš„çº¿ç¨‹æ•°ï¼ˆåŒ…æ‹¬ç©ºé—²çº¿ç¨‹ï¼‰
-     * @param handler      ç”±äºè¶…å‡ºçº¿ç¨‹èŒƒå›´å’Œé˜Ÿåˆ—å®¹é‡è€Œä½¿æ‰§è¡Œè¢«é˜»å¡æ—¶æ‰€ä½¿ç”¨çš„å¤„ç†ç¨‹åº
-     * @throws IllegalArgumentException å¦‚æœ <tt>corePoolSize &lt; 0</tt>
-     * @throws NullPointerException     å¦‚æœ handler ä¸ºnull
+     * @param corePoolSize Ïß³Ì³ØÖĞËù±£ÁôµÄÏß³ÌÊı£¨°üÀ¨¿ÕÏĞÏß³Ì£©
+     * @param handler      ÓÉÓÚ³¬³öÏß³Ì·¶Î§ºÍ¶ÓÁĞÈİÁ¿¶øÊ¹Ö´ĞĞ±»×èÈûÊ±ËùÊ¹ÓÃµÄ´¦Àí³ÌĞò
+     * @throws IllegalArgumentException Èç¹û <tt>corePoolSize &lt; 0</tt>
+     * @throws NullPointerException     Èç¹û handler Îªnull
      */
     public ScheduledTaskExecutor(int corePoolSize, RejectedExecutionHandler handler) {
         super(corePoolSize, handler);
     }
 
     /**
-     * ä½¿ç”¨ç»™å®šçš„æ ¸å¿ƒæ± å¤§å°åˆ›å»ºä¸€ä¸ªæ–°çš„ ScheduledTaskExecutorã€‚
+     * Ê¹ÓÃ¸ø¶¨µÄºËĞÄ³Ø´óĞ¡´´½¨Ò»¸öĞÂµÄ ScheduledTaskExecutor¡£
      *
-     * @param corePoolSize  çº¿ç¨‹æ± ä¸­æ‰€ä¿ç•™çš„çº¿ç¨‹æ•°ï¼ˆåŒ…æ‹¬ç©ºé—²çº¿ç¨‹ï¼‰
-     * @param threadFactory æ‰§è¡Œç¨‹åºåˆ›å»ºæ–°çº¿ç¨‹æ—¶ä½¿ç”¨çš„å·¥å‚
-     * @param handler       ç”±äºè¶…å‡ºçº¿ç¨‹èŒƒå›´å’Œé˜Ÿåˆ—å®¹é‡è€Œä½¿æ‰§è¡Œè¢«é˜»å¡æ—¶æ‰€ä½¿ç”¨çš„å¤„ç†ç¨‹åº
-     * @throws IllegalArgumentException å¦‚æœ <tt>corePoolSize &lt; 0</tt>
-     * @throws NullPointerException     å¦‚æœ threadFactory æˆ–è€… handler ä¸ºnull
+     * @param corePoolSize  Ïß³Ì³ØÖĞËù±£ÁôµÄÏß³ÌÊı£¨°üÀ¨¿ÕÏĞÏß³Ì£©
+     * @param threadFactory Ö´ĞĞ³ÌĞò´´½¨ĞÂÏß³ÌÊ±Ê¹ÓÃµÄ¹¤³§
+     * @param handler       ÓÉÓÚ³¬³öÏß³Ì·¶Î§ºÍ¶ÓÁĞÈİÁ¿¶øÊ¹Ö´ĞĞ±»×èÈûÊ±ËùÊ¹ÓÃµÄ´¦Àí³ÌĞò
+     * @throws IllegalArgumentException Èç¹û <tt>corePoolSize &lt; 0</tt>
+     * @throws NullPointerException     Èç¹û threadFactory »òÕß handler Îªnull
      */
     public ScheduledTaskExecutor(int corePoolSize, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
         super(corePoolSize, threadFactory, handler);
     }
 
     /**
-     * ä½¿ç”¨æ‰€è¦æ±‚çš„é›¶å»¶è¿Ÿæ‰§è¡Œå‘½ä»¤ã€‚è¿™åœ¨æ•ˆæœä¸Šç­‰åŒäºè°ƒç”¨ schedule(task, 0, anyUnit)ã€‚
+     * Ê¹ÓÃËùÒªÇóµÄÁãÑÓ³ÙÖ´ĞĞÃüÁî¡£ÕâÔÚĞ§¹ûÉÏµÈÍ¬ÓÚµ÷ÓÃ schedule(task, 0, anyUnit)¡£
      *
-     * @param task è¦æ‰§è¡Œçš„ä»»åŠ¡
+     * @param task ÒªÖ´ĞĞµÄÈÎÎñ
      */
     public void execute(AbstractRunnableTask task) {
         super.execute(task);
@@ -90,11 +90,11 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * æäº¤ä¸€ä¸ªå¸¦æ‰§è¡Œç»“æœçš„ä»»åŠ¡.
+     * Ìá½»Ò»¸ö´øÖ´ĞĞ½á¹ûµÄÈÎÎñ.
      *
-     * @param <T>  ä»»åŠ¡ç»“æœç±»å‹
-     * @param task è¦æ‰§è¡Œçš„ä»»åŠ¡
-     * @return ä»»åŠ¡çš„æ‰§è¡Œç»“æœ
+     * @param <T>  ÈÎÎñ½á¹ûÀàĞÍ
+     * @param task ÒªÖ´ĞĞµÄÈÎÎñ
+     * @return ÈÎÎñµÄÖ´ĞĞ½á¹û
      */
     public <T> Future<T> submit(AbstractCallableTask<T> task) {
         Future<T> future = null;
@@ -108,12 +108,12 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * åˆ›å»ºå¹¶æ‰§è¡Œåœ¨ç»™å®šå»¶è¿Ÿæ—¶é—´åå¯ç”¨çš„ä¸€æ¬¡æ€§ä»»åŠ¡ã€‚
+     * ´´½¨²¢Ö´ĞĞÔÚ¸ø¶¨ÑÓ³ÙÊ±¼äºóÆôÓÃµÄÒ»´ÎĞÔÈÎÎñ¡£
      *
-     * @param task  è¦æ‰§è¡Œçš„ä»»åŠ¡
-     * @param delay ä»ç°åœ¨å¼€å§‹å»¶è¿Ÿæ‰§è¡Œçš„æ—¶é—´
-     * @param unit  å»¶è¿Ÿå‚æ•°çš„æ—¶é—´å•ä½
-     * @return è¡¨ç¤ºæŒ‚èµ·ä»»åŠ¡å®Œæˆçš„ ScheduledFutureï¼Œå¹¶ä¸”å…¶ get() æ–¹æ³•åœ¨å®Œæˆåå°†è¿”å› nullã€‚
+     * @param task  ÒªÖ´ĞĞµÄÈÎÎñ
+     * @param delay ´ÓÏÖÔÚ¿ªÊ¼ÑÓ³ÙÖ´ĞĞµÄÊ±¼ä
+     * @param unit  ÑÓ³Ù²ÎÊıµÄÊ±¼äµ¥Î»
+     * @return ±íÊ¾¹ÒÆğÈÎÎñÍê³ÉµÄ ScheduledFuture£¬²¢ÇÒÆä get() ·½·¨ÔÚÍê³Éºó½«·µ»Ø null¡£
      */
     public ScheduledFuture<?> schedule(AbstractRunnableTask task, long delay, TimeUnit unit) {
         ScheduledFuture<?> future = null;
@@ -127,18 +127,18 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * åˆ›å»ºå¹¶æ‰§è¡Œä¸€ä¸ªåœ¨ç»™å®šåˆå§‹å»¶è¿Ÿåé¦–æ¬¡å¯ç”¨çš„å®šæœŸæ“ä½œï¼Œåç»­æ“ä½œå…·æœ‰ç»™å®šçš„å‘¨æœŸï¼›<br>
-     * ä¹Ÿå°±æ˜¯å°†åœ¨ initialDelay åå¼€å§‹æ‰§è¡Œï¼Œç„¶ååœ¨ initialDelay + period åæ‰§è¡Œï¼Œæ¥ç€åœ¨ initialDelay + 2 * period åæ‰§è¡Œï¼Œä¾æ­¤ç±»æ¨ã€‚<br>
-     * å¦‚æœä»»åŠ¡çš„ä»»ä¸€æ‰§è¡Œé‡åˆ°å¼‚å¸¸ï¼Œéƒ½ä¼šå–æ¶ˆåç»­æ‰§è¡Œã€‚å¦åˆ™ï¼Œåªèƒ½é€šè¿‡æ‰§è¡Œç¨‹åºçš„å–æ¶ˆæˆ–ç»ˆæ­¢æ–¹æ³•æ¥ç»ˆæ­¢è¯¥ä»»åŠ¡ã€‚
+     * ´´½¨²¢Ö´ĞĞÒ»¸öÔÚ¸ø¶¨³õÊ¼ÑÓ³ÙºóÊ×´ÎÆôÓÃµÄ¶¨ÆÚ²Ù×÷£¬ºóĞø²Ù×÷¾ßÓĞ¸ø¶¨µÄÖÜÆÚ£»<br>
+     * Ò²¾ÍÊÇ½«ÔÚ initialDelay ºó¿ªÊ¼Ö´ĞĞ£¬È»ºóÔÚ initialDelay + period ºóÖ´ĞĞ£¬½Ó×ÅÔÚ initialDelay + 2 * period ºóÖ´ĞĞ£¬ÒÀ´ËÀàÍÆ¡£<br>
+     * Èç¹ûÈÎÎñµÄÈÎÒ»Ö´ĞĞÓöµ½Òì³££¬¶¼»áÈ¡ÏûºóĞøÖ´ĞĞ¡£·ñÔò£¬Ö»ÄÜÍ¨¹ıÖ´ĞĞ³ÌĞòµÄÈ¡Ïû»òÖÕÖ¹·½·¨À´ÖÕÖ¹¸ÃÈÎÎñ¡£
      *
-     * @param task         è¦æ‰§è¡Œçš„ä»»åŠ¡
-     * @param initialDelay é¦–æ¬¡æ‰§è¡Œçš„å»¶è¿Ÿæ—¶é—´
-     * @param period       è¿ç»­æ‰§è¡Œä¹‹é—´çš„å‘¨æœŸ
-     * @param unit         initialDelay å’Œ period å‚æ•°çš„æ—¶é—´å•ä½
-     * @return è¡¨ç¤ºæŒ‚èµ·ä»»åŠ¡å®Œæˆçš„ Futureï¼Œå¹¶ä¸”å…¶ get() æ–¹æ³•åœ¨å–æ¶ˆåå°†æŠ›å‡ºå¼‚å¸¸ã€‚
-     * @throws RejectedExecutionException å¦‚æœæ— æ³•å®‰æ’æ‰§è¡Œè¯¥ä»»åŠ¡
-     * @throws NullPointerException       å¦‚æœ command ä¸º null
-     * @throws IllegalArgumentException   å¦‚æœ period å°äºæˆ–ç­‰äº 0
+     * @param task         ÒªÖ´ĞĞµÄÈÎÎñ
+     * @param initialDelay Ê×´ÎÖ´ĞĞµÄÑÓ³ÙÊ±¼ä
+     * @param period       Á¬ĞøÖ´ĞĞÖ®¼äµÄÖÜÆÚ
+     * @param unit         initialDelay ºÍ period ²ÎÊıµÄÊ±¼äµ¥Î»
+     * @return ±íÊ¾¹ÒÆğÈÎÎñÍê³ÉµÄ Future£¬²¢ÇÒÆä get() ·½·¨ÔÚÈ¡Ïûºó½«Å×³öÒì³£¡£
+     * @throws RejectedExecutionException Èç¹ûÎŞ·¨°²ÅÅÖ´ĞĞ¸ÃÈÎÎñ
+     * @throws NullPointerException       Èç¹û command Îª null
+     * @throws IllegalArgumentException   Èç¹û period Ğ¡ÓÚ»òµÈÓÚ 0
      */
     public ScheduledFuture<?> scheduleAtFixedRate(AbstractRunnableTask task, long initialDelay, long period, TimeUnit unit) {
         ScheduledFuture<?> future = null;
@@ -152,17 +152,17 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * åˆ›å»ºå¹¶æ‰§è¡Œä¸€ä¸ªåœ¨ç»™å®šåˆå§‹å»¶è¿Ÿåé¦–æ¬¡å¯ç”¨çš„å®šæœŸæ“ä½œï¼Œéšåï¼Œåœ¨æ¯ä¸€æ¬¡æ‰§è¡Œç»ˆæ­¢å’Œä¸‹ä¸€æ¬¡æ‰§è¡Œå¼€å§‹ä¹‹é—´éƒ½å­˜åœ¨ç»™å®šçš„å»¶è¿Ÿã€‚<br>
-     * å¦‚æœä»»åŠ¡çš„ä»»ä¸€æ‰§è¡Œé‡åˆ°å¼‚å¸¸ï¼Œå°±ä¼šå–æ¶ˆåç»­æ‰§è¡Œã€‚å¦åˆ™ï¼Œåªèƒ½é€šè¿‡æ‰§è¡Œç¨‹åºçš„å–æ¶ˆæˆ–ç»ˆæ­¢æ–¹æ³•æ¥ç»ˆæ­¢è¯¥ä»»åŠ¡ã€‚
+     * ´´½¨²¢Ö´ĞĞÒ»¸öÔÚ¸ø¶¨³õÊ¼ÑÓ³ÙºóÊ×´ÎÆôÓÃµÄ¶¨ÆÚ²Ù×÷£¬Ëæºó£¬ÔÚÃ¿Ò»´ÎÖ´ĞĞÖÕÖ¹ºÍÏÂÒ»´ÎÖ´ĞĞ¿ªÊ¼Ö®¼ä¶¼´æÔÚ¸ø¶¨µÄÑÓ³Ù¡£<br>
+     * Èç¹ûÈÎÎñµÄÈÎÒ»Ö´ĞĞÓöµ½Òì³££¬¾Í»áÈ¡ÏûºóĞøÖ´ĞĞ¡£·ñÔò£¬Ö»ÄÜÍ¨¹ıÖ´ĞĞ³ÌĞòµÄÈ¡Ïû»òÖÕÖ¹·½·¨À´ÖÕÖ¹¸ÃÈÎÎñ¡£
      *
-     * @param task         è¦æ‰§è¡Œçš„ä»»åŠ¡
-     * @param initialDelay é¦–æ¬¡æ‰§è¡Œçš„å»¶è¿Ÿæ—¶é—´
-     * @param delay        ä¸€æ¬¡æ‰§è¡Œç»ˆæ­¢å’Œä¸‹ä¸€æ¬¡æ‰§è¡Œå¼€å§‹ä¹‹é—´çš„å»¶è¿Ÿ
-     * @param unit         initialDelay å’Œ delay å‚æ•°çš„æ—¶é—´å•ä½
-     * @return è¡¨ç¤ºæŒ‚èµ·ä»»åŠ¡å®Œæˆçš„ Futureï¼Œå¹¶ä¸”å…¶ get() æ–¹æ³•åœ¨å–æ¶ˆåå°†æŠ›å‡ºå¼‚å¸¸ã€‚
-     * @throws RejectedExecutionException å¦‚æœæ— æ³•å®‰æ’æ‰§è¡Œè¯¥ä»»åŠ¡
-     * @throws NullPointerException       å¦‚æœ command ä¸º null
-     * @throws IllegalArgumentException   å¦‚æœ delay å°äºæˆ–ç­‰äº 0
+     * @param task         ÒªÖ´ĞĞµÄÈÎÎñ
+     * @param initialDelay Ê×´ÎÖ´ĞĞµÄÑÓ³ÙÊ±¼ä
+     * @param delay        Ò»´ÎÖ´ĞĞÖÕÖ¹ºÍÏÂÒ»´ÎÖ´ĞĞ¿ªÊ¼Ö®¼äµÄÑÓ³Ù
+     * @param unit         initialDelay ºÍ delay ²ÎÊıµÄÊ±¼äµ¥Î»
+     * @return ±íÊ¾¹ÒÆğÈÎÎñÍê³ÉµÄ Future£¬²¢ÇÒÆä get() ·½·¨ÔÚÈ¡Ïûºó½«Å×³öÒì³£¡£
+     * @throws RejectedExecutionException Èç¹ûÎŞ·¨°²ÅÅÖ´ĞĞ¸ÃÈÎÎñ
+     * @throws NullPointerException       Èç¹û command Îª null
+     * @throws IllegalArgumentException   Èç¹û delay Ğ¡ÓÚ»òµÈÓÚ 0
      */
     public ScheduledFuture<?> scheduleWithFixedDelay(AbstractRunnableTask task, long initialDelay, long delay, TimeUnit unit) {
         ScheduledFuture<?> future = null;
@@ -176,27 +176,27 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * è·å–æ‰€æœ‰å·²æäº¤çš„ä»»åŠ¡.
+     * »ñÈ¡ËùÓĞÒÑÌá½»µÄÈÎÎñ.
      *
-     * @return æ‰€æœ‰å·²æäº¤çš„ä»»åŠ¡åˆ—è¡¨
+     * @return ËùÓĞÒÑÌá½»µÄÈÎÎñÁĞ±í
      */
     public List<AbstractTask> getAllTasks() {
         return Collections.unmodifiableList(allTasks);
     }
 
     /**
-     * è·å–æ­£åœ¨æ‰§è¡Œçš„ä»»åŠ¡.
+     * »ñÈ¡ÕıÔÚÖ´ĞĞµÄÈÎÎñ.
      *
-     * @return æ­£åœ¨æ‰§è¡Œçš„ä»»åŠ¡åˆ—è¡¨
+     * @return ÕıÔÚÖ´ĞĞµÄÈÎÎñÁĞ±í
      */
     public List<AbstractTask> getActiveTasks() {
         return Collections.unmodifiableList(activeTasks);
     }
 
     /**
-     * åœ¨ä»¥å‰å·²æäº¤ä»»åŠ¡çš„æ‰§è¡Œä¸­å‘èµ·ä¸€ä¸ªæœ‰åºçš„å…³é—­ï¼Œä½†æ˜¯ä¸æ¥å—æ–°ä»»åŠ¡ã€‚<br>
-     * å¦‚æœå·²å°† ExecuteExistingDelayedTasksAfterShutdownPolicy è®¾ç½®ä¸º falseï¼Œåˆ™å–æ¶ˆå°šæœªè¶…å‡ºå…¶å»¶è¿Ÿçš„ç°æœ‰å»¶è¿Ÿä»»åŠ¡ã€‚<br>
-     * å¹¶ä¸”é™¤éå·²å°† ContinueExistingPeriodicTasksAfterShutdownPolicy è®¾ç½®ä¸º trueï¼Œå¦åˆ™å°†å–æ¶ˆç°æœ‰å®šæœŸä»»åŠ¡çš„åç»­æ‰§è¡Œã€‚
+     * ÔÚÒÔÇ°ÒÑÌá½»ÈÎÎñµÄÖ´ĞĞÖĞ·¢ÆğÒ»¸öÓĞĞòµÄ¹Ø±Õ£¬µ«ÊÇ²»½ÓÊÜĞÂÈÎÎñ¡£<br>
+     * Èç¹ûÒÑ½« ExecuteExistingDelayedTasksAfterShutdownPolicy ÉèÖÃÎª false£¬ÔòÈ¡ÏûÉĞÎ´³¬³öÆäÑÓ³ÙµÄÏÖÓĞÑÓ³ÙÈÎÎñ¡£<br>
+     * ²¢ÇÒ³ı·ÇÒÑ½« ContinueExistingPeriodicTasksAfterShutdownPolicy ÉèÖÃÎª true£¬·ñÔò½«È¡ÏûÏÖÓĞ¶¨ÆÚÈÎÎñµÄºóĞøÖ´ĞĞ¡£
      */
     @Override
     public void shutdown() {
@@ -205,9 +205,9 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * å°è¯•åœæ­¢æ‰€æœ‰æ­£åœ¨æ‰§è¡Œçš„ä»»åŠ¡ã€æš‚åœç­‰å¾…ä»»åŠ¡çš„å¤„ç†ï¼Œå¹¶è¿”å›ç­‰å¾…æ‰§è¡Œçš„ä»»åŠ¡åˆ—è¡¨ã€‚<br>
-     * è™½ç„¶å°½æœ€å¤§åŠªåŠ›ï¼Œä½†å¹¶ä¸ä¿è¯å¯ä»¥åœæ­¢å¤„ç†æ­£åœ¨æ‰§è¡Œçš„ä»»åŠ¡ã€‚<br>
-     * æ­¤å®ç°é€šè¿‡ Thread.interrupt() å–æ¶ˆä»»åŠ¡ï¼Œæ‰€ä»¥ä»»ä½•æ— æ³•å“åº”ä¸­æ–­çš„ä»»åŠ¡éƒ½å¯èƒ½æ°¸è¿œæ— æ³•ç»ˆæ­¢ã€‚
+     * ³¢ÊÔÍ£Ö¹ËùÓĞÕıÔÚÖ´ĞĞµÄÈÎÎñ¡¢ÔİÍ£µÈ´ıÈÎÎñµÄ´¦Àí£¬²¢·µ»ØµÈ´ıÖ´ĞĞµÄÈÎÎñÁĞ±í¡£<br>
+     * ËäÈ»¾¡×î´óÅ¬Á¦£¬µ«²¢²»±£Ö¤¿ÉÒÔÍ£Ö¹´¦ÀíÕıÔÚÖ´ĞĞµÄÈÎÎñ¡£<br>
+     * ´ËÊµÏÖÍ¨¹ı Thread.interrupt() È¡ÏûÈÎÎñ£¬ËùÒÔÈÎºÎÎŞ·¨ÏìÓ¦ÖĞ¶ÏµÄÈÎÎñ¶¼¿ÉÄÜÓÀÔ¶ÎŞ·¨ÖÕÖ¹¡£
      */
     @Override
     public List<Runnable> shutdownNow() {
@@ -221,12 +221,12 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * ä¿®æ”¹æˆ–æ›¿æ¢ç”¨äºæ‰§è¡Œ runnable çš„ä»»åŠ¡ã€‚æ­¤æ–¹æ³•å¯é‡å†™ç”¨äºç®¡ç†å†…éƒ¨ä»»åŠ¡çš„å…·ä½“ç±»ã€‚é»˜è®¤å®ç°åªè¿”å›ç»™å®šä»»åŠ¡ã€‚<br>
-     * <b>æ³¨æ„ï¼šå¯¹äºå®šæœŸåå¤æ‰§è¡Œçš„ä»»åŠ¡ï¼ŒJDK6.0æœ‰ä¸€ä¸ªåœ¨ä»»åŠ¡æ‰§è¡Œä¸€æ¬¡ä¹‹åè¿”å›çš„ç»™å®šä»»åŠ¡å°±ä¸ä¼šç»è¿‡æ­¤æ–¹æ³•åŒ…è£…çš„bugã€‚</b>
+     * ĞŞ¸Ä»òÌæ»»ÓÃÓÚÖ´ĞĞ runnable µÄÈÎÎñ¡£´Ë·½·¨¿ÉÖØĞ´ÓÃÓÚ¹ÜÀíÄÚ²¿ÈÎÎñµÄ¾ßÌåÀà¡£Ä¬ÈÏÊµÏÖÖ»·µ»Ø¸ø¶¨ÈÎÎñ¡£<br>
+     * <b>×¢Òâ£º¶ÔÓÚ¶¨ÆÚ·´¸´Ö´ĞĞµÄÈÎÎñ£¬JDK6.0ÓĞÒ»¸öÔÚÈÎÎñÖ´ĞĞÒ»´ÎÖ®ºó·µ»ØµÄ¸ø¶¨ÈÎÎñ¾Í²»»á¾­¹ı´Ë·½·¨°ü×°µÄbug¡£</b>
      *
-     * @param r    æ‰€æäº¤çš„ Runnable
-     * @param task æ‰§è¡Œ runnable æ‰€åˆ›å»ºçš„ä»»åŠ¡
-     * @return å¯ä»¥æ‰§è¡Œ runnable çš„ä»»åŠ¡
+     * @param r    ËùÌá½»µÄ Runnable
+     * @param task Ö´ĞĞ runnable Ëù´´½¨µÄÈÎÎñ
+     * @return ¿ÉÒÔÖ´ĞĞ runnable µÄÈÎÎñ
      */
     @Override
     protected <V> RunnableScheduledFuture<V> decorateTask(Runnable r, RunnableScheduledFuture<V> task) {
@@ -234,12 +234,12 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * ä¿®æ”¹æˆ–æ›¿æ¢ç”¨äºæ‰§è¡Œ callable çš„ä»»åŠ¡ã€‚æ­¤æ–¹æ³•å¯é‡å†™ç”¨äºç®¡ç†å†…éƒ¨ä»»åŠ¡çš„å…·ä½“ç±»ã€‚é»˜è®¤å®ç°åªè¿”å›ç»™å®šä»»åŠ¡ã€‚<br>
-     * <b>æ³¨æ„ï¼šå¯¹äºå®šæœŸåå¤æ‰§è¡Œçš„ä»»åŠ¡ï¼ŒJDK6.0æœ‰ä¸€ä¸ªåœ¨ä»»åŠ¡æ‰§è¡Œä¸€æ¬¡ä¹‹åè¿”å›çš„ç»™å®šä»»åŠ¡å°±ä¸ä¼šç»è¿‡æ­¤æ–¹æ³•åŒ…è£…çš„bugã€‚</b>
+     * ĞŞ¸Ä»òÌæ»»ÓÃÓÚÖ´ĞĞ callable µÄÈÎÎñ¡£´Ë·½·¨¿ÉÖØĞ´ÓÃÓÚ¹ÜÀíÄÚ²¿ÈÎÎñµÄ¾ßÌåÀà¡£Ä¬ÈÏÊµÏÖÖ»·µ»Ø¸ø¶¨ÈÎÎñ¡£<br>
+     * <b>×¢Òâ£º¶ÔÓÚ¶¨ÆÚ·´¸´Ö´ĞĞµÄÈÎÎñ£¬JDK6.0ÓĞÒ»¸öÔÚÈÎÎñÖ´ĞĞÒ»´ÎÖ®ºó·µ»ØµÄ¸ø¶¨ÈÎÎñ¾Í²»»á¾­¹ı´Ë·½·¨°ü×°µÄbug¡£</b>
      *
-     * @param c    æ‰€æäº¤çš„ Callable
-     * @param task æ‰§è¡Œ callable æ‰€åˆ›å»ºçš„ä»»åŠ¡
-     * @return å¯ä»¥æ‰§è¡Œ callable çš„ä»»åŠ¡
+     * @param c    ËùÌá½»µÄ Callable
+     * @param task Ö´ĞĞ callable Ëù´´½¨µÄÈÎÎñ
+     * @return ¿ÉÒÔÖ´ĞĞ callable µÄÈÎÎñ
      */
     @Override
     protected <V> RunnableScheduledFuture<V> decorateTask(Callable<V> c, RunnableScheduledFuture<V> task) {
@@ -270,7 +270,7 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * æ·»åŠ ä¸€ä¸ªä»»åŠ¡åˆ°æ‰€æœ‰ä»»åŠ¡åˆ—è¡¨
+     * Ìí¼ÓÒ»¸öÈÎÎñµ½ËùÓĞÈÎÎñÁĞ±í
      *
      * @param task
      */
@@ -279,7 +279,7 @@ public class ScheduledTaskExecutor extends ScheduledThreadPoolExecutor {
     }
 
     /**
-     * æ¸…é™¤æ‰€æœ‰ä»»åŠ¡å’Œæ´»è·ƒä»»åŠ¡åˆ—è¡¨
+     * Çå³ıËùÓĞÈÎÎñºÍ»îÔ¾ÈÎÎñÁĞ±í
      */
     private void clearTasks() {
         activeTasks.clear();

@@ -3,30 +3,30 @@ package com.xuan.xutils.domain.result;
 import com.xuan.xutils.domain.BaseDO;
 
 /**
- * åˆ†é¡µå¯¹è±¡
+ * ·ÖÒ³¶ÔÏó
  * <p>
  * Created by xuan on 17/8/2.
  */
 public class Page extends BaseDO {
     private static final long serialVersionUID = 1L;
     /**
-     * å½“å‰é¡µ
+     * µ±Ç°Ò³
      */
     private int page;
     /**
-     * ä¸‹ä¸€é¡µ
+     * ÏÂÒ»Ò³
      */
     private int nextPage;
     /**
-     * æ¯é¡µæ¡æ•°
+     * Ã¿Ò³ÌõÊı
      */
     private int pageSize;
     /**
-     * æ€»è®°å½•æ•°
+     * ×Ü¼ÇÂ¼Êı
      */
     private int totalCount;
     /**
-     * æ€»é¡µæ•°
+     * ×ÜÒ³Êı
      */
     private int totalPages;
 

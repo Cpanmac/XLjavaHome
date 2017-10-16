@@ -3,23 +3,23 @@ package com.xuan.xutils.cache;
 import java.io.Serializable;
 
 /**
- * ç”¨äºåŒ…è£…è¢«ç¼“å­˜å¯¹è±¡çš„ç±»
+ * ÓÃÓÚ°ü×°±»»º´æ¶ÔÏóµÄÀà
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:38:42 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:38:42 $
  */
 public class CacheObject implements Serializable {
     private static final long serialVersionUID = 1L;
     /**
-     * åˆ›å»ºæ—¶çš„æ—¶é—´æˆ³,å•ä½:æ¯«ç§’
+     * ´´½¨Ê±µÄÊ±¼ä´Á,µ¥Î»:ºÁÃë
      */
     private volatile long creationTime;
     /**
-     * ç¼“å­˜è·å–æ—¶é—´,å•ä½:æ¯«ç§’
+     * »º´æ»ñÈ¡Ê±¼ä,µ¥Î»:ºÁÃë
      */
     private volatile long expiryTime;
     /**
-     * ç¼“å­˜å¯¹è±¡
+     * »º´æ¶ÔÏó
      */
     private Object value;
 
@@ -51,7 +51,7 @@ public class CacheObject implements Serializable {
     }
 
     /**
-     * åˆ¤æ–­ç¼“å­˜æ˜¯å¦è¿‡æœŸ
+     * ÅĞ¶Ï»º´æÊÇ·ñ¹ıÆÚ
      *
      * @return
      */

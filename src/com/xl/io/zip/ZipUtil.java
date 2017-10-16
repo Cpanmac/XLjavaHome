@@ -14,8 +14,8 @@ import java.util.zip.ZipOutputStream;
 
 /**
  * @author ourife
- * @version åˆ›å»ºæ—¶é—´ï¼šJun 29, 2007 11:41:41 AM
- *          å‹ç¼©æ–‡ä»¶
+ * @version ´´½¨Ê±¼ä£ºJun 29, 2007 11:41:41 AM
+ *          Ñ¹ËõÎÄ¼ş
  */
 public class ZipUtil {
     private static List list = new ArrayList();
@@ -23,15 +23,15 @@ public class ZipUtil {
     public static void main(String argv[]) {
         try {
             byte b[] = new byte[512];
-            //å‹ç¼©æ–‡ä»¶çš„ä¿å­˜è·¯å¾„
+            //Ñ¹ËõÎÄ¼şµÄ±£´æÂ·¾¶
             String zipFile = "D:/ziptest/test.zip";
-            //å‹ç¼©æ–‡ä»¶ç›®å½•
+            //Ñ¹ËõÎÄ¼şÄ¿Â¼
             String filepath = "D:/ziptest/";
             List fileList = allFile(filepath);
             FileOutputStream fileOutputStream = new FileOutputStream(zipFile);
-            //ä½¿ç”¨è¾“å‡ºæµæ£€æŸ¥
+            //Ê¹ÓÃÊä³öÁ÷¼ì²é
             CheckedOutputStream cs = new CheckedOutputStream(fileOutputStream, new CRC32());
-            //å£°æ˜è¾“å‡ºzipæµ
+            //ÉùÃ÷Êä³özipÁ÷
             ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(cs));
             for (int i = 0; i < fileList.size(); i++) {
                 InputStream in = new FileInputStream((String) fileList.get(i));

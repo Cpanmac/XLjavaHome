@@ -1,25 +1,25 @@
 package com.xuan.xutils.bt.tracker;
 
 /**
- * æ—¥å¿—æ‰“ç‚¹å¯¹è±¡
+ * ÈÕÖ¾´òµã¶ÔÏó
  * <p>
  * Created by xuan on 17/7/29.
  */
 public class TKPoint {
     /**
-     * è·¯å¾„ç‚¹åç§°
+     * Â·¾¶µãÃû³Æ
      */
     private String name;
     /**
-     * å¤‡æ³¨è¯´æ˜
+     * ±¸×¢ËµÃ÷
      */
     private String remark;
     /**
-     * è·ç¦»ä¸Šæ¬¡é—´éš”æ—¶é—´,å•ä½:æ¯«ç§’
+     * ¾àÀëÉÏ´Î¼ä¸ôÊ±¼ä,µ¥Î»:ºÁÃë
      */
     private Long interval;
     /**
-     * å½“å‰æ—¶é—´æˆ³
+     * µ±Ç°Ê±¼ä´Á
      */
     private Long timestamp;
 
@@ -29,7 +29,7 @@ public class TKPoint {
     }
 
     /**
-     * è·å–è®°å½•çš„ç¬¬ä¸€ç‚¹
+     * »ñÈ¡¼ÇÂ¼µÄµÚÒ»µã
      *
      * @param name
      * @return
@@ -41,7 +41,7 @@ public class TKPoint {
     }
 
     /**
-     * ä¸­é—´çš„ç‚¹
+     * ÖĞ¼äµÄµã
      *
      * @param pre
      * @param name

@@ -3,7 +3,7 @@ package com.xl.util;
  * Created with IntelliJ IDEA.
  * User: Administrator
  * Date: 13-10-29
- * Time: ä¸‹åˆ7:54
+ * Time: ÏÂÎç7:54
  * To change this template use File | Settings | File Templates.
  */
 

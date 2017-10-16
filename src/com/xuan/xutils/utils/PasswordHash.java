@@ -36,8 +36,8 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 
 /**
- * 密码加盐加密算法
- * 参看:http://crackstation.net/hashing-security.htm
+ * ������μ����㷨
+ * �ο�:http://crackstation.net/hashing-security.htm
  * <p>
  * Created by xuan on 17/8/2.
  */
@@ -52,7 +52,7 @@ public class PasswordHash {
     public static final int PBKDF2_INDEX = 2;
 
     /**
-     * 解析加密后的拿到salt
+     * �������ܺ���õ�salt
      *
      * @param correctHash
      * @return
@@ -63,7 +63,7 @@ public class PasswordHash {
     }
 
     /**
-     * 解析加密后的密码
+     * �������ܺ������
      *
      * @param correctHash
      * @return
@@ -74,7 +74,7 @@ public class PasswordHash {
     }
 
     /**
-     * 生成随机盐值
+     * ���������ֵ
      *
      * @return
      */
@@ -224,11 +224,10 @@ public class PasswordHash {
      * @param args ignored
      */
     public static void main(String[] args) {
-        String 明文 = "12345";
-        String 密文 = createHash("12345", UUIDUtils.uuid());
-        System.out.println("明文:" + 明文);
-        System.out.println("密文:" + 密文);
-        //校验
+        String ���� ="12345";
+        String ���� =createHash("12345", UUIDUtils.uuid());
+        System.out.println("����:" + ����); System.out.println("����:" + ����);
+        //У��
         System.out.println(PasswordHash.validatePassword("12345", "1000:402880e4571c7e2701571c7e27640000:8c20eadbed225781e461d6802cbb3572ed1f7a02b281cf63"));
     }
 }

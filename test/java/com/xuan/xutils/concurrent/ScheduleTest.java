@@ -7,7 +7,7 @@ import org.junit.Test;
 import java.util.concurrent.Future;
 
 /**
- * ä»»åŠ¡æ‰§è¡Œæµ‹è¯•
+ * ÈÎÎñÖ´ĞĞ²âÊÔ
  * <p>
  * Created by xuan on 17/8/14.
  */

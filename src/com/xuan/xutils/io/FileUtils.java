@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * Created with IntelliJ IDEA.æ–‡ä»¶æ“ä½œå·¥å…·ç±»
- * User: å¾ç«‹
+ * Created with IntelliJ IDEA.ÎÄ¼ş²Ù×÷¹¤¾ßÀà
+ * User: ĞìÁ¢
  * Date: 2017-10-16
  * Time: 11:10
  * To change this template use File | Settings | File Templates.
@@ -31,10 +31,10 @@ public abstract class FileUtils {
     private static final long FILE_COPY_BUFFER_SIZE = ONE_MB * 30;
 
     /**
-     * æˆªå–æ–‡ä»¶çš„åç¼€åï¼Œä¾‹å¦‚æ–‡ä»¶åæ˜¯xuan.jpgæ—¶ï¼Œè¿”å›çš„åç¼€åæ—¶jpg
+     * ½ØÈ¡ÎÄ¼şµÄºó×ºÃû£¬ÀıÈçÎÄ¼şÃûÊÇxuan.jpgÊ±£¬·µ»ØµÄºó×ºÃûÊ±jpg
      *
-     * @param fileName æ–‡ä»¶å
-     * @return åç¼€å
+     * @param fileName ÎÄ¼şÃû
+     * @return ºó×ºÃû
      */
     public static String getExtension(String fileName) {
         if (null == fileName) {
@@ -43,14 +43,14 @@ public abstract class FileUtils {
         int pointIndex = fileName.lastIndexOf(".");
         return pointIndex > 0 && pointIndex < fileName.length() ? fileName.substring(pointIndex + 1).toLowerCase() : EMPTY;
     }
-    // ////////////////////å­—èŠ‚å†™å…¥è¯»å‡ºæ–‡ä»¶æ–¹æ³•ï¼Œä¸€èˆ¬å¯ä»¥ç”¨æ¥å†™å›¾ç‰‡ï¼Œå£°éŸ³ç­‰////////////////////
+    // ////////////////////×Ö½ÚĞ´Èë¶Á³öÎÄ¼ş·½·¨£¬Ò»°ã¿ÉÒÔÓÃÀ´Ğ´Í¼Æ¬£¬ÉùÒôµÈ////////////////////
 
     /**
-     * å­—èŠ‚å†™å…¥åˆ°æ–‡ä»¶ä¸­
+     * ×Ö½ÚĞ´Èëµ½ÎÄ¼şÖĞ
      *
-     * @param file   æ–‡ä»¶
-     * @param data   å­—èŠ‚æ•°æ®
-     * @param append æ˜¯å¦ä»æ–‡ä»¶åé¢æ·»åŠ 
+     * @param file   ÎÄ¼ş
+     * @param data   ×Ö½ÚÊı¾İ
+     * @param append ÊÇ·ñ´ÓÎÄ¼şºóÃæÌí¼Ó
      * @throws IOException
      */
     public static void writeByteArrayToFile(File file, byte[] data, boolean append) throws IOException {
@@ -64,10 +64,10 @@ public abstract class FileUtils {
     }
 
     /**
-     * è¯»å‡ºæ–‡ä»¶ä¸­çš„å­—èŠ‚
+     * ¶Á³öÎÄ¼şÖĞµÄ×Ö½Ú
      *
-     * @param file æ–‡ä»¶
-     * @return å­—èŠ‚æ•°ç»„
+     * @param file ÎÄ¼ş
+     * @return ×Ö½ÚÊı×é
      * @throws IOException
      */
     public static byte[] readFileToByteArray(File file) throws IOException {
@@ -79,15 +79,15 @@ public abstract class FileUtils {
             IOUtils.closeQuietly(in);
         }
     }
-    // ////////////////////å­—ç¬¦ä¸²ä»æ–‡ä»¶ä¸­å†™å…¥è¯»å‡ºæ–¹æ³•////////////////////
+    // ////////////////////×Ö·û´®´ÓÎÄ¼şÖĞĞ´Èë¶Á³ö·½·¨////////////////////
 
     /**
-     * æ•°æ®å†™å…¥æ–‡ä»¶
+     * Êı¾İĞ´ÈëÎÄ¼ş
      *
-     * @param file     è¦å†™å…¥çš„æ–‡ä»¶
-     * @param data     æ•°æ®
-     * @param encoding æŒ‡å®šç¼–ç 
-     * @param append   æ˜¯å¦è¿½åŠ 
+     * @param file     ÒªĞ´ÈëµÄÎÄ¼ş
+     * @param data     Êı¾İ
+     * @param encoding Ö¸¶¨±àÂë
+     * @param append   ÊÇ·ñ×·¼Ó
      * @throws IOException
      */
     public static void writeStringToFile(File file, String data, String encoding, boolean append) throws IOException {
@@ -101,10 +101,10 @@ public abstract class FileUtils {
     }
 
     /**
-     * ä»æ–‡ä»¶ä¸­ä»¥æŒ‡å®šç¼–ç è¯»å–æˆå­—ç¬¦ä¸²
+     * ´ÓÎÄ¼şÖĞÒÔÖ¸¶¨±àÂë¶ÁÈ¡³É×Ö·û´®
      *
-     * @param file     æ–‡ä»¶
-     * @param encoding ç¼–ç 
+     * @param file     ÎÄ¼ş
+     * @param encoding ±àÂë
      * @return
      * @throws IOException
      */
@@ -117,13 +117,13 @@ public abstract class FileUtils {
             IOUtils.closeQuietly(in);
         }
     }
-    // ////////////////////æ‰“å¼€è¾“å…¥è¾“å‡ºæµæ–¹æ³•////////////////////
+    // ////////////////////´ò¿ªÊäÈëÊä³öÁ÷·½·¨////////////////////
 
     /**
-     * æ‰“å¼€ä¸€ä¸ªæ–‡ä»¶çš„å†™å…¥æµï¼Œæ–‡ä»¶ä¸å­˜åœ¨ä¼šè‡ªåŠ¨åˆ›å»º
+     * ´ò¿ªÒ»¸öÎÄ¼şµÄĞ´ÈëÁ÷£¬ÎÄ¼ş²»´æÔÚ»á×Ô¶¯´´½¨
      *
-     * @param file   æ–‡ä»¶
-     * @param append æ˜¯å¦ä»¥è¿½åŠ çš„æ–¹å¼å†™å…¥
+     * @param file   ÎÄ¼ş
+     * @param append ÊÇ·ñÒÔ×·¼ÓµÄ·½Ê½Ğ´Èë
      * @return
      * @throws IOException
      */
@@ -147,9 +147,9 @@ public abstract class FileUtils {
     }
 
     /**
-     * æ‰“å¼€æ–‡ä»¶è¾“å…¥æµï¼Œæ ¡éªŒå‹å¥½çš„æç¤º
+     * ´ò¿ªÎÄ¼şÊäÈëÁ÷£¬Ğ£ÑéÓÑºÃµÄÌáÊ¾
      *
-     * @param file è¦æ‰“å¼€çš„æ–‡ä»¶
+     * @param file Òª´ò¿ªµÄÎÄ¼ş
      * @return
      * @throws IOException
      */
@@ -166,12 +166,12 @@ public abstract class FileUtils {
         }
         return new FileInputStream(file);
     }
-    // ////////////////////æ–‡ä»¶å•ä½å­—èŠ‚å‹å¥½è¾“å‡º////////////////////
+    // ////////////////////ÎÄ¼şµ¥Î»×Ö½ÚÓÑºÃÊä³ö////////////////////
 
     /**
-     * å‹å¥½çš„æ˜¾ç¤ºå•ä½ï¼Œèˆå¼ƒæœ‰ç‚¹é—®é¢˜ï¼Œä¾‹å¦‚ï¼šbyteCountToDisplaySize(2047)æ˜¾ç¤º1Kï¼Œæ˜æ˜¾æ˜¯èˆå¼ƒäº†
+     * ÓÑºÃµÄÏÔÊ¾µ¥Î»£¬ÉáÆúÓĞµãÎÊÌâ£¬ÀıÈç£ºbyteCountToDisplaySize(2047)ÏÔÊ¾1K£¬Ã÷ÏÔÊÇÉáÆúÁË
      *
-     * @param size byteå•ä½å€¼
+     * @param size byteµ¥Î»Öµ
      * @return
      */
     public static String byteCountToDisplaySize(long size) {
@@ -193,14 +193,14 @@ public abstract class FileUtils {
         }
         return displaySize;
     }
-    // ////////////////////ç§»åŠ¨æ–‡ä»¶////////////////////
+    // ////////////////////ÒÆ¶¯ÎÄ¼ş////////////////////
 
     /**
-     * å‰ªåˆ‡æ–‡ä»¶å¤¹åˆ°æ–‡ä»¶å¤¹
+     * ¼ôÇĞÎÄ¼ş¼Ğµ½ÎÄ¼ş¼Ğ
      *
-     * @param src     æºæ–‡ä»¶å¤¹
-     * @param destDir ç›®çš„æ–‡ä»¶å¤¹
-     * @param isCover å­˜åœ¨æ˜¯å¦è¦†ç›–
+     * @param src     Ô´ÎÄ¼ş¼Ğ
+     * @param destDir Ä¿µÄÎÄ¼ş¼Ğ
+     * @param isCover ´æÔÚÊÇ·ñ¸²¸Ç
      * @throws IOException
      */
     public static void moveDirectoryToDirectory(File src, File destDir, boolean isCover) throws IOException {
@@ -238,11 +238,11 @@ public abstract class FileUtils {
     }
 
     /**
-     * å‰ªåˆ‡æ–‡ä»¶åˆ°æ–‡ä»¶å¤¹
+     * ¼ôÇĞÎÄ¼şµ½ÎÄ¼ş¼Ğ
      *
-     * @param srcFile æºæ–‡ä»¶
-     * @param destDir ç›®çš„æ–‡ä»¶å¤¹
-     * @param isCover å­˜åœ¨æ˜¯å¦è¦†ç›–
+     * @param srcFile Ô´ÎÄ¼ş
+     * @param destDir Ä¿µÄÎÄ¼ş¼Ğ
+     * @param isCover ´æÔÚÊÇ·ñ¸²¸Ç
      * @throws IOException
      */
     public static void moveFileToDirectory(File srcFile, File destDir, boolean isCover) throws IOException {
@@ -265,11 +265,11 @@ public abstract class FileUtils {
     }
 
     /**
-     * å‰ªåˆ‡æ–‡ä»¶åˆ°æ–‡ä»¶
+     * ¼ôÇĞÎÄ¼şµ½ÎÄ¼ş
      *
-     * @param srcFile  æºæ–‡ä»¶
-     * @param destFile ç›®çš„æ–‡ä»¶
-     * @param isCover  å­˜åœ¨æ˜¯å¦è¦†ç›–
+     * @param srcFile  Ô´ÎÄ¼ş
+     * @param destFile Ä¿µÄÎÄ¼ş
+     * @param isCover  ´æÔÚÊÇ·ñ¸²¸Ç
      * @throws IOException
      */
     public static void moveFile(File srcFile, File destFile, boolean isCover) throws IOException {
@@ -304,13 +304,13 @@ public abstract class FileUtils {
             }
         }
     }
-    // ////////////////////æ–‡ä»¶å¤¹å†…å®¹æ‹·è´åˆ°æŒ‡å®šæ–‡ä»¶å¤¹ä¸­////////////////////
+    // ////////////////////ÎÄ¼ş¼ĞÄÚÈİ¿½±´µ½Ö¸¶¨ÎÄ¼ş¼ĞÖĞ////////////////////
 
     /**
-     * æ‹·è´æ–‡ä»¶å¤¹åˆ°æ–‡ä»¶å¤¹
+     * ¿½±´ÎÄ¼ş¼Ğµ½ÎÄ¼ş¼Ğ
      *
-     * @param srcDir  æºæ–‡ä»¶å¤¹
-     * @param destDir ç›®çš„æ–‡ä»¶å¤¹
+     * @param srcDir  Ô´ÎÄ¼ş¼Ğ
+     * @param destDir Ä¿µÄÎÄ¼ş¼Ğ
      * @throws IOException
      */
     public static void copyDirectoryToDirectory(File srcDir, File destDir) throws IOException {
@@ -318,11 +318,11 @@ public abstract class FileUtils {
     }
 
     /**
-     * æ‹·è´æ–‡ä»¶å¤¹åˆ°æ–‡ä»¶å¤¹
+     * ¿½±´ÎÄ¼ş¼Ğµ½ÎÄ¼ş¼Ğ
      *
-     * @param srcDir  æºæ–‡ä»¶å¤¹
-     * @param destDir ç›®çš„æ–‡ä»¶å¤¹
-     * @param filter  æ–‡ä»¶è¿‡æ»¤å™¨
+     * @param srcDir  Ô´ÎÄ¼ş¼Ğ
+     * @param destDir Ä¿µÄÎÄ¼ş¼Ğ
+     * @param filter  ÎÄ¼ş¹ıÂËÆ÷
      * @throws IOException
      */
     public static void copyDirectoryToDirectory(File srcDir, File destDir, FileFilter filter) throws IOException {
@@ -393,13 +393,13 @@ public abstract class FileUtils {
             destDir.setLastModified(srcDir.lastModified());
         }
     }
-    // ////////////////////æ–‡ä»¶æ‹·è´åˆ°æŒ‡å®šæ–‡ä»¶å¤¹é‡Œ////////////////////
+    // ////////////////////ÎÄ¼ş¿½±´µ½Ö¸¶¨ÎÄ¼ş¼ĞÀï////////////////////
 
     /**
-     * æ‹·è´æ–‡ä»¶åˆ°æ–‡ä»¶å¤¹
+     * ¿½±´ÎÄ¼şµ½ÎÄ¼ş¼Ğ
      *
-     * @param srcFile æºæ–‡ä»¶
-     * @param destDir ç›®çš„æ–‡ä»¶å¤¹
+     * @param srcFile Ô´ÎÄ¼ş
+     * @param destDir Ä¿µÄÎÄ¼ş¼Ğ
      * @throws IOException
      */
     public static void copyFileToDirectory(File srcFile, File destDir) throws IOException {
@@ -407,11 +407,11 @@ public abstract class FileUtils {
     }
 
     /**
-     * æ‹·è´æ–‡ä»¶åˆ°æ–‡ä»¶å¤¹
+     * ¿½±´ÎÄ¼şµ½ÎÄ¼ş¼Ğ
      *
-     * @param srcFile          æºæ–‡ä»¶
-     * @param destDir          ç›®çš„æ–‡ä»¶å¤¹
-     * @param preserveFileDate æ˜¯å¦ä¿®æ”¹æ—¶é—´
+     * @param srcFile          Ô´ÎÄ¼ş
+     * @param destDir          Ä¿µÄÎÄ¼ş¼Ğ
+     * @param preserveFileDate ÊÇ·ñĞŞ¸ÄÊ±¼ä
      * @throws IOException
      */
     public static void copyFileToDirectory(File srcFile, File destDir, boolean preserveFileDate) throws IOException {
@@ -424,13 +424,13 @@ public abstract class FileUtils {
         File destFile = new File(destDir, srcFile.getName());
         copyFile(srcFile, destFile, preserveFileDate);
     }
-    // ////////////////////æ–‡ä»¶æ‹·è´åˆ°æ–‡ä»¶////////////////////
+    // ////////////////////ÎÄ¼ş¿½±´µ½ÎÄ¼ş////////////////////
 
     /**
-     * æ‹·è´æ–‡ä»¶åˆ°æ–‡ä»¶
+     * ¿½±´ÎÄ¼şµ½ÎÄ¼ş
      *
-     * @param srcFile  æºæ–‡ä»¶
-     * @param destFile ç›®çš„æ–‡ä»¶
+     * @param srcFile  Ô´ÎÄ¼ş
+     * @param destFile Ä¿µÄÎÄ¼ş
      * @throws IOException
      */
     public static void copyFile(File srcFile, File destFile) throws IOException {
@@ -438,11 +438,11 @@ public abstract class FileUtils {
     }
 
     /**
-     * æ‹·è´æ–‡ä»¶åˆ°æ–‡ä»¶
+     * ¿½±´ÎÄ¼şµ½ÎÄ¼ş
      *
-     * @param srcFile          æºæ–‡ä»¶
-     * @param destFile         ç›®çš„æ–‡ä»¶
-     * @param preserveFileDate æ˜¯å¦ä¿®æ”¹æ—¶é—´
+     * @param srcFile          Ô´ÎÄ¼ş
+     * @param destFile         Ä¿µÄÎÄ¼ş
+     * @param preserveFileDate ÊÇ·ñĞŞ¸ÄÊ±¼ä
      * @throws IOException
      */
     public static void copyFile(File srcFile, File destFile, boolean preserveFileDate) throws IOException {
@@ -452,19 +452,19 @@ public abstract class FileUtils {
         if (destFile == null) {
             throw new NullPointerException("Destination must not be null");
         }
-        if (!srcFile.exists()) {// æºä¸å­˜åœ¨
+        if (!srcFile.exists()) {// Ô´²»´æÔÚ
             throw new FileNotFoundException("Source '" + srcFile + "' does not exist");
         }
-        if (destFile.isDirectory()) {// æºå­˜åœ¨ï¼Œä½†æ˜¯æ˜¯ä¸ªç›®å½•
+        if (destFile.isDirectory()) {// Ô´´æÔÚ£¬µ«ÊÇÊÇ¸öÄ¿Â¼
             throw new IOException("Destination '" + destFile + "' exists but is a directory");
         }
-        if (srcFile.getCanonicalPath().equals(destFile.getCanonicalPath())) {// æŒ‡å‘äº†åŒä¸€ä¸ªæ–‡ä»¶
+        if (srcFile.getCanonicalPath().equals(destFile.getCanonicalPath())) {// Ö¸ÏòÁËÍ¬Ò»¸öÎÄ¼ş
             throw new IOException("Source '" + srcFile + "' and destination '" + destFile + "' are the same");
         }
-        if (destFile.exists() && !destFile.canWrite()) {// ç›®æ ‡æ–‡ä»¶å­˜åœ¨ï¼Œæ²¡æœ‰å†™æƒé™
+        if (destFile.exists() && !destFile.canWrite()) {// Ä¿±êÎÄ¼ş´æÔÚ£¬Ã»ÓĞĞ´È¨ÏŞ
             throw new IOException("Destination '" + destFile + "' exists but is read-only");
         }
-        // åˆ›å»ºçˆ¶æ–‡ä»¶å¤¹
+        // ´´½¨¸¸ÎÄ¼ş¼Ğ
         File parentFile = destFile.getParentFile();
         if (null != parentFile) {
             if (!parentFile.mkdirs() && !parentFile.isDirectory()) {
@@ -500,16 +500,16 @@ public abstract class FileUtils {
         if (srcFile.length() != destFile.length()) {
             throw new IOException("Failed to copy full contents from '" + srcFile + "' to '" + destFile + "'");
         }
-        if (preserveFileDate) {// ä¿®æ”¹æ–‡ä»¶æœ€åä¿®æ”¹æ—¶é—´
+        if (preserveFileDate) {// ĞŞ¸ÄÎÄ¼ş×îºóĞŞ¸ÄÊ±¼ä
             destFile.setLastModified(srcFile.lastModified());
         }
     }
-    // ////////////////////é€’å½’åˆ é™¤æ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰æ–‡ä»¶////////////////////
+    // ////////////////////µİ¹éÉ¾³ıÎÄ¼ş¼ĞÏÂµÄËùÓĞÎÄ¼ş////////////////////
 
     /**
-     * åˆ é™¤æŒ‡å®šç›®å½•ä¸‹æ–‡ä»¶åŠç›®å½•ï¼Œé»˜è®¤æœ¬èº«ä¹Ÿä¼šè¢«åˆ é™¤
+     * É¾³ıÖ¸¶¨Ä¿Â¼ÏÂÎÄ¼ş¼°Ä¿Â¼£¬Ä¬ÈÏ±¾ÉíÒ²»á±»É¾³ı
      *
-     * @param filePath æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹è·¯å¾„
+     * @param filePath ÎÄ¼ş»òÕßÎÄ¼ş¼ĞÂ·¾¶
      */
     public static void deleteFileOrDirectoryQuietly(String filePath) {
         try {
@@ -520,37 +520,37 @@ public abstract class FileUtils {
     }
 
     /**
-     * åˆ é™¤æŒ‡å®šç›®å½•ä¸‹æ–‡ä»¶åŠç›®å½•
+     * É¾³ıÖ¸¶¨Ä¿Â¼ÏÂÎÄ¼ş¼°Ä¿Â¼
      *
-     * @param filePath       æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹è·¯å¾„
-     * @param deleteThisPath æ˜¯å¦éœ€è¦åˆ é™¤è¿™ä¸ªæœ¬èº«æŒ‡å®šçš„æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹
+     * @param filePath       ÎÄ¼ş»òÕßÎÄ¼ş¼ĞÂ·¾¶
+     * @param deleteThisPath ÊÇ·ñĞèÒªÉ¾³ıÕâ¸ö±¾ÉíÖ¸¶¨µÄÎÄ¼ş»òÕßÎÄ¼ş¼Ğ
      */
     public static void deleteFileOrDirectory(String filePath, boolean deleteThisPath) throws IOException {
         if (null != filePath && filePath.length() > 0) {
             File file = new File(filePath);
-            if (file.isDirectory()) {// å¤„ç†ç›®å½•
+            if (file.isDirectory()) {// ´¦ÀíÄ¿Â¼
                 File files[] = file.listFiles();
                 for (int i = 0; i < files.length; i++) {
                     deleteFileOrDirectory(files[i].getAbsolutePath(), true);
                 }
             }
             if (deleteThisPath) {
-                if (!file.isDirectory()) {// å¦‚æœæ˜¯æ–‡ä»¶ï¼Œåˆ é™¤
+                if (!file.isDirectory()) {// Èç¹ûÊÇÎÄ¼ş£¬É¾³ı
                     file.delete();
-                } else {// ç›®å½•
-                    if (file.listFiles().length == 0) {// ç›®å½•ä¸‹æ²¡æœ‰æ–‡ä»¶æˆ–è€…ç›®å½•ï¼Œåˆ é™¤
+                } else {// Ä¿Â¼
+                    if (file.listFiles().length == 0) {// Ä¿Â¼ÏÂÃ»ÓĞÎÄ¼ş»òÕßÄ¿Â¼£¬É¾³ı
                         file.delete();
                     }
                 }
             }
         }
     }
-    // ////////////////////é€’å½’è·å–æ–‡ä»¶å¤¹ä¸‹é¢çš„æ‰€æœ‰æ–‡ä»¶////////////////////
+    // ////////////////////µİ¹é»ñÈ¡ÎÄ¼ş¼ĞÏÂÃæµÄËùÓĞÎÄ¼ş////////////////////
 
     /**
-     * è·å–æŒ‡å®šè·¯å¾„ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
+     * »ñÈ¡Ö¸¶¨Â·¾¶ÏÂµÄËùÓĞÎÄ¼ş
      *
-     * @param path æŒ‡å®šè·¯å¾„
+     * @param path Ö¸¶¨Â·¾¶
      * @return
      */
     public static List<File> getFileListByPath(String path) {
@@ -558,10 +558,10 @@ public abstract class FileUtils {
     }
 
     /**
-     * è·å–æŒ‡å®šè·¯å¾„ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
+     * »ñÈ¡Ö¸¶¨Â·¾¶ÏÂµÄËùÓĞÎÄ¼ş
      *
-     * @param path   æŒ‡å®šè·¯å¾„
-     * @param filter æ–‡ä»¶è¿‡æ»¤å™¨
+     * @param path   Ö¸¶¨Â·¾¶
+     * @param filter ÎÄ¼ş¹ıÂËÆ÷
      * @return
      */
     public static List<File> getFileListByPath(String path, FileFilter filter) {
@@ -571,13 +571,13 @@ public abstract class FileUtils {
         }
         return new Recursiver().getFileList(directory, filter);
     }
-    // ////////////////////æ“ä½œPropertiesæ–‡ä»¶////////////////////
+    // ////////////////////²Ù×÷PropertiesÎÄ¼ş////////////////////
 
     /**
-     * è¯»å–æŒ‡å®šè·¯å¾„çš„Propertiesæ–‡ä»¶
+     * ¶ÁÈ¡Ö¸¶¨Â·¾¶µÄPropertiesÎÄ¼ş
      *
-     * @param path è·¯å¾„
-     * @return Propertieså¯¹è±¡
+     * @param path Â·¾¶
+     * @return Properties¶ÔÏó
      */
     public static Properties readProperties(String path) {
         File file = new File(path);
@@ -598,10 +598,10 @@ public abstract class FileUtils {
     }
 
     /**
-     * ä»è¾“å…¥æµè¯»å–Propertieså¯¹è±¡
+     * ´ÓÊäÈëÁ÷¶ÁÈ¡Properties¶ÔÏó
      *
-     * @param in è¾“å…¥æµ
-     * @return Propertieså¯¹è±¡
+     * @param in ÊäÈëÁ÷
+     * @return Properties¶ÔÏó
      */
     public static Properties readProperties(InputStream in) {
         Properties properties = new Properties();
@@ -616,10 +616,10 @@ public abstract class FileUtils {
     }
 
     /**
-     * æŠŠPropertieså¯¹è±¡å†™åˆ°æŒ‡å®šè·¯å¾„çš„æ–‡ä»¶é‡Œ
+     * °ÑProperties¶ÔÏóĞ´µ½Ö¸¶¨Â·¾¶µÄÎÄ¼şÀï
      *
-     * @param path       è·¯è¿›
-     * @param properties Propertieså¯¹è±¡
+     * @param path       Â·½ø
+     * @param properties Properties¶ÔÏó
      */
     public static void writeProperties(String path, Properties properties) {
         OutputStream out = null;
@@ -634,10 +634,10 @@ public abstract class FileUtils {
     }
 
     /**
-     * é€’å½’è·å–æŒ‡å®šç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶çš„éå†å™¨
+     * µİ¹é»ñÈ¡Ö¸¶¨Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼şµÄ±éÀúÆ÷
      *
      * @author xuan
-     * @version $Revision: 1.0 $, $Date: 2013-9-5 ä¸‹åˆ1:13:17 $
+     * @version $Revision: 1.0 $, $Date: 2013-9-5 ÏÂÎç1:13:17 $
      */
     private static class Recursiver {
         private static ArrayList<File> files = new ArrayList<File>();

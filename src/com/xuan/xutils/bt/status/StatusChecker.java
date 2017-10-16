@@ -1,13 +1,13 @@
 package com.xuan.xutils.bt.status;
 
 /**
- * æ£€æŸ¥æ¥å£
+ * ¼ì²é½Ó¿Ú
  * <p>
  * Created by xuan on 17/7/29.
  */
 public interface StatusChecker {
     /**
-     * æ£€æŸ¥çŠ¶æ€
+     * ¼ì²é×´Ì¬
      *
      * @return status
      */

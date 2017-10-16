@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * æ ¹æ®ipè·å–macåœ°å€
+ * ¸ù¾İip»ñÈ¡macµØÖ·
  */
 public class GetMacAddress {
     public static String callCmd(String[] cmd) {
@@ -26,9 +26,9 @@ public class GetMacAddress {
     }
 
     /**
-     * @param cmd     ç¬¬ä¸€ä¸ªå‘½ä»¤
-     * @param another ç¬¬äºŒä¸ªå‘½ä»¤
-     * @return ç¬¬äºŒä¸ªå‘½ä»¤çš„æ‰§è¡Œç»“æœ
+     * @param cmd     µÚÒ»¸öÃüÁî
+     * @param another µÚ¶ş¸öÃüÁî
+     * @return µÚ¶ş¸öÃüÁîµÄÖ´ĞĞ½á¹û
      */
     public static String callCmd(String[] cmd, String[] another) {
         String result = "";
@@ -36,7 +36,7 @@ public class GetMacAddress {
         try {
             Runtime rt = Runtime.getRuntime();
             Process proc = rt.exec(cmd);
-            proc.waitFor();  //å·²ç»æ‰§è¡Œå®Œç¬¬ä¸€ä¸ªå‘½ä»¤ï¼Œå‡†å¤‡æ‰§è¡Œç¬¬äºŒä¸ªå‘½ä»¤
+            proc.waitFor();  //ÒÑ¾­Ö´ĞĞÍêµÚÒ»¸öÃüÁî£¬×¼±¸Ö´ĞĞµÚ¶ş¸öÃüÁî
             proc = rt.exec(another);
             InputStreamReader is = new InputStreamReader(proc.getInputStream());
             BufferedReader br = new BufferedReader(is);
@@ -50,10 +50,10 @@ public class GetMacAddress {
     }
 
     /**
-     * @param ip           ç›®æ ‡ip,ä¸€èˆ¬åœ¨å±€åŸŸç½‘å†…
-     * @param sourceString å‘½ä»¤å¤„ç†çš„ç»“æœå­—ç¬¦ä¸²
-     * @param macSeparator macåˆ†éš”ç¬¦å·
-     * @return macåœ°å€ï¼Œç”¨ä¸Šé¢çš„åˆ†éš”ç¬¦å·è¡¨ç¤º
+     * @param ip           Ä¿±êip,Ò»°ãÔÚ¾ÖÓòÍøÄÚ
+     * @param sourceString ÃüÁî´¦ÀíµÄ½á¹û×Ö·û´®
+     * @param macSeparator mac·Ö¸ô·ûºÅ
+     * @return macµØÖ·£¬ÓÃÉÏÃæµÄ·Ö¸ô·ûºÅ±íÊ¾
      */
     public static String filterMacAddress(final String ip, final String sourceString, final String macSeparator) {
         String result = "";
@@ -63,14 +63,14 @@ public class GetMacAddress {
         while (matcher.find()) {
             result = matcher.group(1);
             if (sourceString.indexOf(ip) <= sourceString.lastIndexOf(matcher.group(1))) {
-                break;  //å¦‚æœæœ‰å¤šä¸ªIP,åªåŒ¹é…æœ¬IPå¯¹åº”çš„Mac.
+                break;  //Èç¹ûÓĞ¶à¸öIP,Ö»Æ¥Åä±¾IP¶ÔÓ¦µÄMac.
             }
         }
         return result;
     }
 
     /**
-     * @param ip ç›®æ ‡ip
+     * @param ip Ä¿±êip
      * @return Mac Address
      */
     public static String getMacInWindows(final String ip) {
@@ -83,7 +83,7 @@ public class GetMacAddress {
     }
 
     /**
-     * @param ip ç›®æ ‡ip
+     * @param ip Ä¿±êip
      * @return Mac Address
      */
     public static String getMacInLinux(final String ip) {
@@ -95,9 +95,9 @@ public class GetMacAddress {
     }
 
     /**
-     * è·å–MACåœ°å€
+     * »ñÈ¡MACµØÖ·
      *
-     * @return è¿”å›MACåœ°å€
+     * @return ·µ»ØMACµØÖ·
      */
     public static String getMacAddress(String ip) {
         String macAddress = "";

@@ -5,27 +5,27 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 
 /*
- éœ€æ±‚ï¼šé€šè¿‡udpä¼ è¾“æ–¹å¼ï¼Œå°†ä¸€æ®µæ–‡å­—æ•°æ®å‘é€å‡ºå»ã€‚
- æ€è·¯ï¼š
- 1.å»ºç«‹updsocketæœåŠ¡ //æ‰¾åˆ°é‚®å±€
- 2.æä¾›æ•°æ®ï¼Œå¹¶å°†æ•°æ®å°è£…åˆ°æ•°æ®åŒ…ä¸­ã€‚ 
- 3.é€šè¿‡socketæœåŠ¡å‘é€åŠŸèƒ½ï¼Œå°†æ•°æ®åŒ…å‘é€å‡ºå»
- 4.å…³é—­èµ„æº   //è‡³å°‘è¦ç”¨åˆ°ç½‘å¡ï¼Œèµ°åº•å±‚èµ„æº
+ ĞèÇó£ºÍ¨¹ıudp´«Êä·½Ê½£¬½«Ò»¶ÎÎÄ×ÖÊı¾İ·¢ËÍ³öÈ¥¡£
+ Ë¼Â·£º
+ 1.½¨Á¢updsocket·şÎñ //ÕÒµ½ÓÊ¾Ö
+ 2.Ìá¹©Êı¾İ£¬²¢½«Êı¾İ·â×°µ½Êı¾İ°üÖĞ¡£ 
+ 3.Í¨¹ısocket·şÎñ·¢ËÍ¹¦ÄÜ£¬½«Êı¾İ°ü·¢ËÍ³öÈ¥
+ 4.¹Ø±Õ×ÊÔ´   //ÖÁÉÙÒªÓÃµ½Íø¿¨£¬×ßµ×²ã×ÊÔ´
  */
 public class UdpSend {
     /**
      * @param args
      */
     public static void main(String[] args) throws Exception {
-        //  è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
-        // 1.åˆ›å»ºudpæœåŠ¡ï¼Œé€šè¿‡DataGramSocket
+        //  ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+        // 1.´´½¨udp·şÎñ£¬Í¨¹ıDataGramSocket
         DatagramSocket ds = new DatagramSocket(1666);
-        // 2ç¡®å®šæ•°æ®å¹¶å°è£…æˆæ•°æ®åŒ…
+        // 2È·¶¨Êı¾İ²¢·â×°³ÉÊı¾İ°ü
         byte[] buf = "udp ge men lai le".getBytes();
         DatagramPacket dp = new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.1.32"), 1666);
-        // 3.é€šè¿‡SocketæœåŠ¡é€šè¿‡å·²æœ‰çš„æ•°æ®åŒ…å‘é€å‡ºå»
+        // 3.Í¨¹ıSocket·şÎñÍ¨¹ıÒÑÓĞµÄÊı¾İ°ü·¢ËÍ³öÈ¥
         ds.send(dp);
-        // 4.å…³é—­èµ„æº
+        // 4.¹Ø±Õ×ÊÔ´
         ds.close();
     }
 }

@@ -12,19 +12,19 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * @author å¾ç«‹
+ * @author ĞìÁ¢
  * @Decription
  * @date 2014-2-24
  */
 public class download {
     /**
-     * ä¸‹è½½è·¯å¾„
+     * ÏÂÔØÂ·¾¶
      */
     public static final String path = "http://www.hao123.com";
     private static Object obj = new download();
 
     public static void main(String[] args) throws Exception {
-        /** ä¸‹è½½æ–‡ä»¶ä¿å­˜è·¯å¾„ */
+        /** ÏÂÔØÎÄ¼ş±£´æÂ·¾¶ */
         File file;
         URL url = new URL(path);
         file = new File(FileTool.getCurrentPath(obj), "1.html");
@@ -35,21 +35,21 @@ public class download {
         int code = conn.getResponseCode();
         if (code == 200) {
             int len = conn.getContentLength();
-            // 1.è®¾ç½®æœ¬åœ°æ–‡ä»¶å¤§å°è·ŸæœåŠ¡å™¨çš„æ–‡ä»¶å¤§å°ä¸€è‡´
+            // 1.ÉèÖÃ±¾µØÎÄ¼ş´óĞ¡¸ú·şÎñÆ÷µÄÎÄ¼ş´óĞ¡Ò»ÖÂ
             RandomAccessFile raf = new RandomAccessFile(file, "rwd");
             raf.setLength(len);
-            // 2 .å‡è®¾å¼€å¯3 ä¸ªçº¿ç¨‹
+            // 2 .¼ÙÉè¿ªÆô3 ¸öÏß³Ì
             int threadnumber = 3;
             int blocksize = len / threadnumber;
             /**
-             * çº¿ç¨‹1 0~ blocksize çº¿ç¨‹2 1*bolocksize ~ 2*blocksize çº¿ç¨‹3 2*blocksize ~
-             * æ–‡ä»¶æœ«å°¾
+             * Ïß³Ì1 0~ blocksize Ïß³Ì2 1*bolocksize ~ 2*blocksize Ïß³Ì3 2*blocksize ~
+             * ÎÄ¼şÄ©Î²
              */
             for (int i = 0; i < threadnumber; i++) {
                 int startposition = i * blocksize;
                 int endpositon = (i + 1) * blocksize;
                 if (i == (threadnumber - 1)) {
-                    // æœ€åä¸€ä¸ªçº¿ç¨‹
+                    // ×îºóÒ»¸öÏß³Ì
                     endpositon = len;
                 }
                 DownLoadTask task = new DownLoadTask(i, path, file.getAbsolutePath(), startposition, endpositon);
@@ -65,23 +65,23 @@ public class download {
 }
 
 /**
- * @author å¾ç«‹
- * @Decription æ–­ç‚¹ç»­ä¼ 
+ * @author ĞìÁ¢
+ * @Decription ¶ÏµãĞø´«
  * @date 2014-2-24
  */
 class DownLoadTask extends Thread {
     int startposition;
     int endpositon;
     /**
-     * çº¿ç¨‹id
+     * Ïß³Ìid
      */
     private int threadid;
     /**
-     * urlä¸‹è½½è·¯å¾„
+     * urlÏÂÔØÂ·¾¶
      */
     private String urlPath;
     /**
-     * ä¸‹è½½çš„æ–‡ä»¶çš„è·¯å¾„
+     * ÏÂÔØµÄÎÄ¼şµÄÂ·¾¶
      */
     private String filePath;
 
@@ -97,11 +97,11 @@ class DownLoadTask extends Thread {
     @Override
     public void run() {
         try {
-            // å®ç°æ–­ç‚¹ç»­ä¼ ä¸­é—´Fileä»¥çº¿ç¨‹idå‘½åï¼Œè®°å½•æ–‡ä»¶ä½ç½®
+            // ÊµÏÖ¶ÏµãĞø´«ÖĞ¼äFileÒÔÏß³ÌidÃüÃû£¬¼ÇÂ¼ÎÄ¼şÎ»ÖÃ
             File postionfile = new File(FileTool.getCurrentPath(this), +threadid + ".txt");
             URL url = new URL(urlPath);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            System.out.println("çº¿ç¨‹" + threadid + "æ­£åœ¨ä¸‹è½½ " + "å¼€å§‹ä½ç½® : " + startposition + "ç»“æŸä½ç½® " + endpositon);
+            System.out.println("Ïß³Ì" + threadid + "ÕıÔÚÏÂÔØ " + "¿ªÊ¼Î»ÖÃ : " + startposition + "½áÊøÎ»ÖÃ " + endpositon);
             if (postionfile.exists()) {
                 FileInputStream fis = new FileInputStream(postionfile);
                 byte[] result = StreamTool.getBytes(fis);
@@ -116,28 +116,28 @@ class DownLoadTask extends Thread {
             conn.setConnectTimeout(5000);
             conn.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)");
             InputStream is = conn.getInputStream();
-            // è®¾ç½® æ•°æ®ä»æ–‡ä»¶å“ªä¸ªä½ç½®å¼€å§‹å†™
+            // ÉèÖÃ Êı¾İ´ÓÎÄ¼şÄÄ¸öÎ»ÖÃ¿ªÊ¼Ğ´
             RandomAccessFile file = new RandomAccessFile(filePath, "rwd");
             file.seek(startposition);
             byte[] buffer = new byte[1024];
             int len = 0;
-            // ä»£è¡¨å½“å‰è¯»åˆ°çš„æœåŠ¡å™¨æ•°æ®çš„ä½ç½® ,åŒæ—¶è¿™ä¸ªå€¼å·²ç»å­˜å‚¨çš„æ–‡ä»¶çš„ä½ç½®
+            // ´ú±íµ±Ç°¶Áµ½µÄ·şÎñÆ÷Êı¾İµÄÎ»ÖÃ ,Í¬Ê±Õâ¸öÖµÒÑ¾­´æ´¢µÄÎÄ¼şµÄÎ»ÖÃ
             int currentPostion = startposition;
-            // åˆ›å»ºä¸€ä¸ªæ–‡ä»¶å¯¹è±¡ ,è®°å½•å½“å‰æŸä¸ªæ–‡ä»¶çš„ä¸‹è½½ä½ç½®
+            // ´´½¨Ò»¸öÎÄ¼ş¶ÔÏó ,¼ÇÂ¼µ±Ç°Ä³¸öÎÄ¼şµÄÏÂÔØÎ»ÖÃ
             while ((len = is.read(buffer)) != -1) {
                 file.write(buffer, 0, len);
                 currentPostion += len;
-                // éœ€è¦æŠŠcurrentPostion ä¿¡æ¯ç»™æŒä¹…åŒ–åˆ°å­˜å‚¨è®¾å¤‡
+                // ĞèÒª°ÑcurrentPostion ĞÅÏ¢¸ø³Ö¾Ã»¯µ½´æ´¢Éè±¸
                 String position = currentPostion + "";
-                // å¦‚æœæ”¾åœ¨å¤–é¢å‡ºç°write error
+                // Èç¹û·ÅÔÚÍâÃæ³öÏÖwrite error
                 FileOutputStream fos = new FileOutputStream(postionfile);
                 fos.write(position.getBytes());
                 fos.flush();
                 fos.close();
             }
             file.close();
-            System.out.println("çº¿ç¨‹" + threadid + "ä¸‹è½½å®Œæ¯•");
-            // å½“çº¿ç¨‹ä¸‹è½½å®Œæ¯•å æŠŠæ–‡ä»¶åˆ é™¤æ‰
+            System.out.println("Ïß³Ì" + threadid + "ÏÂÔØÍê±Ï");
+            // µ±Ïß³ÌÏÂÔØÍê±Ïºó °ÑÎÄ¼şÉ¾³ıµô
             if (postionfile.exists()) {
                 postionfile.delete();
             }

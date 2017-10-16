@@ -10,16 +10,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * æ•æ„Ÿè¯æ±‡ç±». æ­¤ç±»ä¼šè¯»å–èµ„æºæ–‡ä»¶(é»˜è®¤ä¸ºtabooed.words)ä¸­çš„è¯æ±‡.
+ * Ãô¸Ğ´Ê»ãÀà. ´ËÀà»á¶ÁÈ¡×ÊÔ´ÎÄ¼ş(Ä¬ÈÏÎªtabooed.words)ÖĞµÄ´Ê»ã.
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:24:31 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:24:31 $
  */
 public class TabooedWords {
     private final Set<String> tabooedWords = new HashSet<String>();
 
     /**
-     * ä»é»˜è®¤çš„æ•æ„Ÿè¯æ±‡æ–‡ä»¶ä¸­è¯»å–è¯æ±‡, åˆå§‹åŒ–æ•æ„Ÿè¯æ±‡åˆ—è¡¨.
+     * ´ÓÄ¬ÈÏµÄÃô¸Ğ´Ê»ãÎÄ¼şÖĞ¶ÁÈ¡´Ê»ã, ³õÊ¼»¯Ãô¸Ğ´Ê»ãÁĞ±í.
      */
     public synchronized void initialize() {
         InputStream in = TabooedWords.class.getClassLoader().getResourceAsStream("tabooed.words");
@@ -27,10 +27,10 @@ public class TabooedWords {
     }
 
     /**
-     * ä»æŒ‡å®šçš„æ•æ„Ÿè¯æ±‡è¾“å…¥æµä¸­è¯»å–è¯æ±‡, åˆå§‹åŒ–æ•æ„Ÿè¯æ±‡åˆ—è¡¨.
+     * ´ÓÖ¸¶¨µÄÃô¸Ğ´Ê»ãÊäÈëÁ÷ÖĞ¶ÁÈ¡´Ê»ã, ³õÊ¼»¯Ãô¸Ğ´Ê»ãÁĞ±í.
      *
-     * @param in      æ•æ„Ÿè¯æ±‡è¾“å…¥æµ
-     * @param charset ç¼–ç æ–¹å¼
+     * @param in      Ãô¸Ğ´Ê»ãÊäÈëÁ÷
+     * @param charset ±àÂë·½Ê½
      */
     public synchronized void initialize(InputStream in, String charset) {
         BufferedReader reader = null;
@@ -49,9 +49,9 @@ public class TabooedWords {
     }
 
     /**
-     * è·å–æ‰€æœ‰è¯»å–åˆ°çš„æ•æ„Ÿè¯æ±‡.
+     * »ñÈ¡ËùÓĞ¶ÁÈ¡µ½µÄÃô¸Ğ´Ê»ã.
      *
-     * @return æ•æ„Ÿè¯æ±‡
+     * @return Ãô¸Ğ´Ê»ã
      */
     public Set<String> getTabooedWords() {
         return tabooedWords;

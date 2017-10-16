@@ -7,7 +7,7 @@ import java.io.File;
 import java.util.Map;
 
 /**
- * HTTPå·¥å…·ç±»ï¼ŒåæœŸå¯ä»¥æœ‰å¤šç§å®ç°æ–¹å¼
+ * HTTP¹¤¾ßÀà£¬ºóÆÚ¿ÉÒÔÓĞ¶àÖÖÊµÏÖ·½Ê½
  *
  * @author xuan
  */
@@ -15,7 +15,7 @@ public abstract class HttpUtils {
     public static final boolean DEBUG = false;
 
     /**
-     * è·å–ä¸€ä¸ªHttpClientç¤ºä¾‹,å¦‚æœæœ‰è‡ªå·±çš„å®ç°,å¯ä»¥åœ¨è¿™é‡Œæ›¿æ¢
+     * »ñÈ¡Ò»¸öHttpClientÊ¾Àı,Èç¹ûÓĞ×Ô¼ºµÄÊµÏÖ,¿ÉÒÔÔÚÕâÀïÌæ»»
      *
      * @return
      */
@@ -24,10 +24,10 @@ public abstract class HttpUtils {
     }
 
     /**
-     * POSTè¯·æ±‚,jsonæäº¤
+     * POSTÇëÇó,jsonÌá½»
      *
      * @param url
-     * @param bodyJson æ”¾åœ¨è¯·æ±‚ä½“ä¸­çš„å­—ç¬¦ä¸²
+     * @param bodyJson ·ÅÔÚÇëÇóÌåÖĞµÄ×Ö·û´®
      * @return
      */
     public static HttpResponse postJson(String url, String bodyJson) {
@@ -40,7 +40,7 @@ public abstract class HttpUtils {
     }
 
     /**
-     * POSTè¯·æ±‚,æ™®é€šå‚æ•°æ–¹å¼æäº¤
+     * POSTÇëÇó,ÆÕÍ¨²ÎÊı·½Ê½Ìá½»
      *
      * @param url
      * @param paramsMap
@@ -60,7 +60,7 @@ public abstract class HttpUtils {
     }
 
     /**
-     * GETè¯·æ±‚
+     * GETÇëÇó
      *
      * @param url
      * @param paramsMap
@@ -80,7 +80,7 @@ public abstract class HttpUtils {
     }
 
     /**
-     * ä¸Šä¼ æ–‡ä»¶
+     * ÉÏ´«ÎÄ¼ş
      *
      * @param url
      * @param fileMap
@@ -106,7 +106,7 @@ public abstract class HttpUtils {
     }
 
     /**
-     * GETçš„æ–¹å¼ä¸‹è½½
+     * GETµÄ·½Ê½ÏÂÔØ
      *
      * @param url
      * @param paramsMap
@@ -130,7 +130,7 @@ public abstract class HttpUtils {
     }
 
     /**
-     * POSTçš„æ–¹å¼ä¸‹è½½
+     * POSTµÄ·½Ê½ÏÂÔØ
      *
      * @param url
      * @param paramsMap
@@ -154,7 +154,7 @@ public abstract class HttpUtils {
     }
 
     /**
-     * æ‰“å°è¯·æ±‚æ—¥å¿—
+     * ´òÓ¡ÇëÇóÈÕÖ¾
      *
      * @param request
      */

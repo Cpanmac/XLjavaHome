@@ -1,7 +1,7 @@
 package com.xuan.xutils.bt.status;
 
 /**
- * 状态Level枚举
+ * ״̬Levelö��
  * <p>
  * Created by xuan on 17/7/29.
  */

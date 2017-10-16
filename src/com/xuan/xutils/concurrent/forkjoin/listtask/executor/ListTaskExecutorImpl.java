@@ -14,19 +14,19 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 /**
- * æŠŠä¸€ä¸ªListä»»åŠ¡è¿›è¡Œåˆ†è§£å¹¶å‘æ‰§è¡Œï¼Œå¯¹ä½¿ç”¨è€…åˆå¯ä»¥åŒæ­¥æ‹¿åˆ°æ•°æ®
+ * °ÑÒ»¸öListÈÎÎñ½øĞĞ·Ö½â²¢·¢Ö´ĞĞ£¬¶ÔÊ¹ÓÃÕßÓÖ¿ÉÒÔÍ¬²½ÄÃµ½Êı¾İ
  * <p>
  * Created by xuan on 17/8/23.
  */
 public class ListTaskExecutorImpl<T, R> implements ListTaskExecutor<T, R> {
     /**
-     * ForkJoinçº¿ç¨‹æ± ï¼Œä¸€ä¸ªæ‰§è¡Œå™¨ä¸ºä¸€ä¸ªçº¿ç¨‹æ± ã€‚
-     * ä¸ºäº†å¯æ§ï¼Œä¸€ä¸ªåº”ç”¨æœ€å¥½ä½¿ç”¨Springåªå®ä¾‹åŒ–ä¸€ä¸ªListTaskExecutorå®ä¾‹ï¼Œè™½ç„¶æ€§èƒ½ä¸Šä¼šæ‰“æŠ˜æ‰£ï¼Œä½†æ˜¯æˆ‘ä»¬è¿˜æ˜¯è¦ä¿è¯èµ„æºä¸è¢«è€—å°½è€Œå½±å“æ•´ä¸ªåº”ç”¨
+     * ForkJoinÏß³Ì³Ø£¬Ò»¸öÖ´ĞĞÆ÷ÎªÒ»¸öÏß³Ì³Ø¡£
+     * ÎªÁË¿É¿Ø£¬Ò»¸öÓ¦ÓÃ×îºÃÊ¹ÓÃSpringÖ»ÊµÀı»¯Ò»¸öListTaskExecutorÊµÀı£¬ËäÈ»ĞÔÄÜÉÏ»á´òÕÛ¿Û£¬µ«ÊÇÎÒÃÇ»¹ÊÇÒª±£Ö¤×ÊÔ´²»±»ºÄ¾¡¶øÓ°ÏìÕû¸öÓ¦ÓÃ
      */
     private ForkJoinPool forkJoinPool;
 
     /**
-     * æ„é€ æ–¹æ³•ï¼šå¯ä»¥çº¿ç¨‹æ± çš„æ•°é‡
+     * ¹¹Ôì·½·¨£º¿ÉÒÔÏß³Ì³ØµÄÊıÁ¿
      *
      * @param parallelism
      */
@@ -35,7 +35,7 @@ public class ListTaskExecutorImpl<T, R> implements ListTaskExecutor<T, R> {
     }
 
     /**
-     * æ„é€ æ–¹æ³•ï¼šé»˜è®¤çº¿ç¨‹æ± çš„æ•°é‡ä¸º10
+     * ¹¹Ôì·½·¨£ºÄ¬ÈÏÏß³Ì³ØµÄÊıÁ¿Îª10
      */
     public ListTaskExecutorImpl() {
         this(10);

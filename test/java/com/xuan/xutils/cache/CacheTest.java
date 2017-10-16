@@ -5,22 +5,22 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * ç¼“å­˜æµ‹è¯•
+ * »º´æ²âÊÔ
  * <p>
  * Created by xuan on 17/7/31.
  */
 public class CacheTest {
     @Test
     public void testAdd() {
-        //åˆ›å»ºç¼“å­˜ç®¡ç†å™¨,æ­£å¼ç¯å¢ƒå¯ä»¥é…ç½®åœ¨Springä¸­ç­‰ä½¿ç”¨,å•ä¾‹æ—¢å¯
+        //´´½¨»º´æ¹ÜÀíÆ÷,ÕıÊ½»·¾³¿ÉÒÔÅäÖÃÔÚSpringÖĞµÈÊ¹ÓÃ,µ¥Àı¼È¿É
         CacheManager cacheManager = new DefaultCacheManager();
         cacheManager.addCache("test", new SimpleCache());
-        //æœªæ”¾å…¥ç¼“å­˜å–ä¸åˆ°
+        //Î´·ÅÈë»º´æÈ¡²»µ½
         Object v = cacheManager.getCache("test").get("testKey");
         Assert.assertNull(v);
-        //æ”¾å…¥ç¼“å­˜
+        //·ÅÈë»º´æ
         cacheManager.getCache("test").add("testKey", "xuan");
-        //å–ç¼“å­˜çš„å€¼
+        //È¡»º´æµÄÖµ
         v = (String) cacheManager.getCache("test").get("testKey");
         Assert.assertNotNull(v);
         Assert.assertTrue("xuan".equals(v));

@@ -1,7 +1,7 @@
 package com.xl.a;
 
 public class MyEclipse8KeyGen {
-    private static final String LL = "Decompiling this copyrighted software is a violation of both your license agreement and the Digital Millenium Copyright Act of 1998 (http://www.loc.gov/copyright/legislation/dmca.pdf). Under section 1204 of the DMCA, penalties range up to a $500,000 fine or up to five years imprisonment for a first offense. Think about it; pay for a license, avoid prosecution, and feel better about yourself.";// å®šä¹‰ä¸€ä¸ªStringå­—ç¬¦ä¸²
+    private static final String LL = "Decompiling this copyrighted software is a violation of both your license agreement and the Digital Millenium Copyright Act of 1998 (http://www.loc.gov/copyright/legislation/dmca.pdf). Under section 1204 of the DMCA, penalties range up to a $500,000 fine or up to five years imprisonment for a first offense. Think about it; pay for a license, avoid prosecution, and feel better about yourself.";// ¶¨ÒåÒ»¸öString×Ö·û´®
 
     public MyEclipse8KeyGen() {
         super();
@@ -18,7 +18,7 @@ public class MyEclipse8KeyGen {
             MyEclipse8KeyGen myeclipsegen = new MyEclipse8KeyGen();
             String res = myeclipsegen.getSerial(userId, "20");
             System.out.println(userId);
-            System.out.println(res); // è¾“å‡ºåºåˆ—å·ä¿¡æ¯
+            System.out.println(res); // Êä³öĞòÁĞºÅĞÅÏ¢
         } catch (Exception e) {
             System.out.println(e);
         }

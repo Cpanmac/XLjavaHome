@@ -6,11 +6,11 @@ import java.util.LinkedList;
 import java.util.Map;
 
 /**
- * 缓存实现，采用LRU算法，能够取得被挤出缓存的对象<br />
- * LRU是Least Recently Used的缩写，即最近最少使用页面置换算法
+ * ����ʵ�֣�����LRU�㷨���ܹ�ȡ�ñ���������Ķ���<br />
+ * LRU��Least Recently Used����д�����������ʹ��ҳ���û��㷨
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 上午10:42:57 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ����10:42:57 $
  */
 public class LRUPlusCache implements Serializable {
     private static final long serialVersionUID = -4174256121921240092L;
@@ -19,20 +19,34 @@ public class LRUPlusCache implements Serializable {
     private final HashMap<String, Object> map = new HashMap<String, Object>();
 
     /**
-     * 构造方法
+     * ���췽��
      *
-     * @param capacity 缓存的容量
+     * @param capacity ���������
      */
     public LRUPlusCache(int capacity) {
         this.capacity = capacity;
     }
 
+    public static void main(String[] args) {
+        LRUPlusCache cache = new LRUPlusCache(5);
+        for (int i = 0; i < 6; i++) {
+            System.out.println(cache.putInCache(i + "", i + "$"));
+            System.out.println(cache);
+        }
+        System.out.println(cache.putInCache("1", "1$"));
+        System.out.println(cache);
+        System.out.println(cache.getFromCache("1"));
+        System.out.println(cache);
+        System.out.println(cache.getFromCache("4"));
+        System.out.println(cache);
+    }
+
     /**
-     * 放到缓存中，会放在缓存中的第一个位置
+     * �ŵ������У�����ڻ����еĵ�һ��λ��
      *
-     * @param key   键
-     * @param value 值
-     * @return 被挤出的对象，如果为null，说明没有对象被挤出
+     * @param key   ��
+     * @param value ֵ
+     * @return �������Ķ������Ϊnull��˵��û�ж��󱻼���
      */
     public synchronized Object putInCache(String key, Object value) {
         Object oldValue = map.put(key, value);
@@ -48,10 +62,10 @@ public class LRUPlusCache implements Serializable {
     }
 
     /**
-     * 从缓存中读取，被读取的对象会放到缓存中的第一个位置
+     * �ӻ����ж�ȡ������ȡ�Ķ����ŵ������еĵ�һ��λ��
      *
      * @param key
-     * @return 对象
+     * @return ����
      */
     public synchronized Object getFromCache(String key) {
         Object value = map.get(key);
@@ -63,9 +77,9 @@ public class LRUPlusCache implements Serializable {
     }
 
     /**
-     * 删除缓存中所有对象
+     * ɾ�����������ж���
      *
-     * @return 被删除的所有对象Map
+     * @return ��ɾ�������ж���Map
      */
     public synchronized Map<String, Object> removeAll() {
         HashMap<String, Object> removedMap = new HashMap<String, Object>(map);
@@ -88,19 +102,5 @@ public class LRUPlusCache implements Serializable {
             StringBuilder.append("]");
         }
         return StringBuilder.toString();
-    }
-
-    public static void main(String[] args) {
-        LRUPlusCache cache = new LRUPlusCache(5);
-        for (int i = 0; i < 6; i++) {
-            System.out.println(cache.putInCache(i + "", i + "$"));
-            System.out.println(cache);
-        }
-        System.out.println(cache.putInCache("1", "1$"));
-        System.out.println(cache);
-        System.out.println(cache.getFromCache("1"));
-        System.out.println(cache);
-        System.out.println(cache.getFromCache("4"));
-        System.out.println(cache);
     }
 }

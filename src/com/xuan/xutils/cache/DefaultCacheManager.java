@@ -7,20 +7,20 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * 默认的缓存管理器接口实现类
+ * Ĭ�ϵĻ���������ӿ�ʵ����
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 上午10:41:14 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ����10:41:14 $
  */
 public class DefaultCacheManager implements CacheManager<Cache<String, Object>> {
     /**
-     * 缓存管理器是否已经被关闭
-     */
-    private volatile boolean isShutdown = false;
-    /**
-     * 缓存池
+     * �����
      */
     private final ConcurrentHashMap<String, Cache<String, Object>> cachePool = new ConcurrentHashMap<String, Cache<String, Object>>();
+    /**
+     * ����������Ƿ��Ѿ����ر�
+     */
+    private volatile boolean isShutdown = false;
 
     public DefaultCacheManager() {
     }

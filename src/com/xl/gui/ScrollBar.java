@@ -1,6 +1,6 @@
 /**
  * JComboBox/Jlist/JScorllPane
- * ä¸‹æ‹‰æ¡†ç»„ä»¶/åˆ—è¡¨æ¡†ç»„ä»¶/æ»šåŠ¨æ¡ç»„ä»¶
+ * ÏÂÀ­¿ò×é¼ş/ÁĞ±í¿ò×é¼ş/¹ö¶¯Ìõ×é¼ş
  */
 package com.xl.gui;
 
@@ -8,40 +8,40 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ScrollBar extends JFrame {
-    //å®šä¹‰
+    //¶¨Òå
     JPanel jp1, jp2;
     JLabel jl1, jl2;
     JComboBox jcb1;
     JList jlist;
     JScrollPane jsp;
 
-    //æ„é€ å‡½æ•°
+    //¹¹Ôìº¯Êı
     public ScrollBar() {
         jp1 = new JPanel();
         jp2 = new JPanel();
-        jl1 = new JLabel("ä½ çš„ç±è´¯");
-        jl2 = new JLabel("æ—…æ¸¸åœ°ç‚¹");
-        String[] jp = {"åŒ—äº¬", "ä¸Šæµ·", "å¤©æ´¥", "ç«æ˜Ÿ"};
+        jl1 = new JLabel("ÄãµÄ¼®¹á");
+        jl2 = new JLabel("ÂÃÓÎµØµã");
+        String[] jp = {"±±¾©", "ÉÏº£", "Ìì½ò", "»ğĞÇ"};
         jcb1 = new JComboBox(jp);
-        String[] dd = {"ä¹å¯¨æ²Ÿ", "æ•…å®«", "å¤©å®‰é—¨", "æ²³å—", "æ‰¶æ²Ÿ", "ç»ƒå¯º"};
+        String[] dd = {"¾ÅÕ¯¹µ", "¹Ê¹¬", "Ìì°²ÃÅ", "ºÓÄÏ", "·ö¹µ", "Á·ËÂ"};
         jlist = new JList(dd);
-        jlist.setVisibleRowCount(2);   // è®¾ç½®æ»šåŠ¨æ¡æ˜¾ç¤ºå‡ æ¡ä¿¡æ¯
-        jsp = new JScrollPane(jlist);   //  æŠŠåˆ—è¡¨è®¡å…¥åˆ°æ»šåŠ¨æ¡é‡Œé¢
-        //è®¾ç½®å¸ƒå±€
-        this.setLayout(new GridLayout(3, 1));   // æ»šåŠ¨æ¡çš„å¸ƒå±€æ˜¯æ˜¯ç½‘æ ¼å¸ƒå±€
+        jlist.setVisibleRowCount(2);   // ÉèÖÃ¹ö¶¯ÌõÏÔÊ¾¼¸ÌõĞÅÏ¢
+        jsp = new JScrollPane(jlist);   //  °ÑÁĞ±í¼ÆÈëµ½¹ö¶¯ÌõÀïÃæ
+        //ÉèÖÃ²¼¾Ö
+        this.setLayout(new GridLayout(3, 1));   // ¹ö¶¯ÌõµÄ²¼¾ÖÊÇÊÇÍø¸ñ²¼¾Ö
         jp1.add(jl1);
         jp1.add(jcb1);
-        jp2.add(jl2);   //å§æ ‡ç­¾åŠ å…¥åˆ° é¢æ¿2ä¸­
-        jp2.add(jsp);   // æŠŠæ»šåŠ¨æ¡åŠ å…¥åˆ° é¢æ¿2ä¸­
+        jp2.add(jl2);   //°É±êÇ©¼ÓÈëµ½ Ãæ°å2ÖĞ
+        jp2.add(jsp);   // °Ñ¹ö¶¯Ìõ¼ÓÈëµ½ Ãæ°å2ÖĞ
         this.add(jp1);
-        this.add(jp2);   // æŠŠé¢æ¿2 è®¡å…¥åˆ°  JFrameé¢æ¿ä¸­
+        this.add(jp2);   // °ÑÃæ°å2 ¼ÆÈëµ½  JFrameÃæ°åÖĞ
         this.setSize(500, 500);
         this.setLocation(200, 200);
-        this.setTitle("æ³¨å†Œæ–°ç”¨æˆ·");
-        this.setResizable(false);    // ä¸æ”¯æŒæœ€å¤§åŒ–
-        //é€€å‡ºçª—å£é€€å‡ºjvm
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // é€€å‡ºæ—¶å€™å…³é—­JVM
-        //æ˜¾ç¤º
+        this.setTitle("×¢²áĞÂÓÃ»§");
+        this.setResizable(false);    // ²»Ö§³Ö×î´ó»¯
+        //ÍË³ö´°¿ÚÍË³öjvm
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // ÍË³öÊ±ºò¹Ø±ÕJVM
+        //ÏÔÊ¾
         this.setVisible(true);
     }
 

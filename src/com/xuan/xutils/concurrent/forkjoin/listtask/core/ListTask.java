@@ -8,33 +8,33 @@ import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * ä»»åŠ¡æ ¸å¿ƒä»£ç ï¼Œè¿™ä¸ªä»»åŠ¡ä¸»è¦åšä¸¤ä»¶äº‹
- * ç¬¬ä¸€ï¼šå¦‚æœåŸæ•°æ®è¶³å¤Ÿå¤šï¼Œå°±ä¼šè¿›è¡Œä»»åŠ¡æ‹†åˆ†ï¼Œæ‹†åˆ†åˆ°åŸæ•°æ®è¶³å¤Ÿå°çš„å­ä»»åŠ¡
- * ç¬¬äºŒï¼šå¦‚æœåŸæ•°æ®è¶³å¤Ÿå°‘ï¼Œè°ƒç”¨ç”¨æˆ·ä¼ å…¥çš„é€»è¾‘å›è°ƒæ‹¿åˆ°ç»“æœæ•°æ®
+ * ÈÎÎñºËĞÄ´úÂë£¬Õâ¸öÈÎÎñÖ÷Òª×öÁ½¼şÊÂ
+ * µÚÒ»£ºÈç¹ûÔ­Êı¾İ×ã¹»¶à£¬¾Í»á½øĞĞÈÎÎñ²ğ·Ö£¬²ğ·Öµ½Ô­Êı¾İ×ã¹»Ğ¡µÄ×ÓÈÎÎñ
+ * µÚ¶ş£ºÈç¹ûÔ­Êı¾İ×ã¹»ÉÙ£¬µ÷ÓÃÓÃ»§´«ÈëµÄÂß¼­»Øµ÷ÄÃµ½½á¹ûÊı¾İ
  * <p>
  * Created by xuan on 17/8/23.
  */
 public class ListTask<T, R> extends RecursiveTask<ListTaskResult<R>> {
     private static final long serialVersionUID = 1;
     /**
-     * é…ç½®å‚æ•°
+     * ÅäÖÃ²ÎÊı
      */
     private ListTaskConfig config;
     /**
-     * ä»»åŠ¡éœ€è¦å¤„ç†çš„åŸå§‹æ•°æ®
+     * ÈÎÎñĞèÒª´¦ÀíµÄÔ­Ê¼Êı¾İ
      */
     private List<T> originList;
     /**
-     * ç”¨æˆ·é€»è¾‘å›è°ƒ
+     * ÓÃ»§Âß¼­»Øµ÷
      */
     private ListTaskCallable<T, R> callable;
 
     /**
-     * æ„é€ å‡½æ•°
+     * ¹¹Ôìº¯Êı
      *
-     * @param originList åŸæ•°æ®
-     * @param callable   é€»è¾‘å¤„ç†å›è°ƒ
-     * @param config     é…ç½®å‚æ•°
+     * @param originList Ô­Êı¾İ
+     * @param callable   Âß¼­´¦Àí»Øµ÷
+     * @param config     ÅäÖÃ²ÎÊı
      */
     public ListTask(List<T> originList, ListTaskCallable<T, R> callable, ListTaskConfig config) {
         if (null == originList || originList.size() == 0) {
@@ -54,26 +54,26 @@ public class ListTask<T, R> extends RecursiveTask<ListTaskResult<R>> {
     @Override
     protected ListTaskResult<R> compute() {
         if (originList.size() <= config.getSubOriginListSize()) {
-            //å¦‚æœåŸæ•°æ®è¶³å¤Ÿå°‘ï¼Œå³å°äºé…ç½®å‚æ•°æŒ‡å®šçš„å•ä¸ªä»»åŠ¡çš„åŸæ•°æ®æ•°é‡æ—¶ï¼Œè¿›è¡Œç”¨æˆ·çš„ä¸šåŠ¡é€»è¾‘å›è°ƒæ‰§è¡Œï¼Œæ‹¿åˆ°ç»“æœ
+            //Èç¹ûÔ­Êı¾İ×ã¹»ÉÙ£¬¼´Ğ¡ÓÚÅäÖÃ²ÎÊıÖ¸¶¨µÄµ¥¸öÈÎÎñµÄÔ­Êı¾İÊıÁ¿Ê±£¬½øĞĞÓÃ»§µÄÒµÎñÂß¼­»Øµ÷Ö´ĞĞ£¬ÄÃµ½½á¹û
             List<R> resultList = callable.call(originList);
             ListTaskResult<R> result = new ListTaskResult<R>();
             result.setList(resultList);
             return result;
         } else {
-            //å¦‚æœåŸæ•°æ®è¶³å¤Ÿå¤šï¼Œé‚£ä¹ˆéœ€è¦è¿›è¡Œä»»åŠ¡æ‹†åˆ†ï¼Œæ ¹æ®é…ç½®ï¼Œæ‹†åˆ†æˆå¤šä¸ªå­ä»»åŠ¡
-            //ä¾‹å¦‚ï¼šåŸæ•°æ®=20ä¸ªï¼Œç”¨æˆ·é…ç½®å­ä»»åŠ¡çš„åŸæ•°æ®æ•°é‡subOriginListSize=3
-            //é‚£ä¹ˆï¼šä¼šæ‹†åˆ†ä»»åŠ¡ï¼š3ï¼Œ3ï¼Œ3ï¼Œ3ï¼Œ3ï¼Œ3ï¼Œ2ä¸€å…±7ä¸ªå­ä»»åŠ¡
+            //Èç¹ûÔ­Êı¾İ×ã¹»¶à£¬ÄÇÃ´ĞèÒª½øĞĞÈÎÎñ²ğ·Ö£¬¸ù¾İÅäÖÃ£¬²ğ·Ö³É¶à¸ö×ÓÈÎÎñ
+            //ÀıÈç£ºÔ­Êı¾İ=20¸ö£¬ÓÃ»§ÅäÖÃ×ÓÈÎÎñµÄÔ­Êı¾İÊıÁ¿subOriginListSize=3
+            //ÄÇÃ´£º»á²ğ·ÖÈÎÎñ£º3£¬3£¬3£¬3£¬3£¬3£¬2Ò»¹²7¸ö×ÓÈÎÎñ
             List<ListTask<T, R>> taskList = new ArrayList<>();
             int subTaskSize = originList.size() / config.getSubOriginListSize();
             if (originList.size() % config.getSubOriginListSize() > 0) {
-                //æœªé™¤å°½æœ‰ä½™æ•°ï¼Œéœ€è¦é¢å¤–å†åŠ ä¸€ä¸ª
+                //Î´³ı¾¡ÓĞÓàÊı£¬ĞèÒª¶îÍâÔÙ¼ÓÒ»¸ö
                 subTaskSize += 1;
             }
             for (int i = 0; i < subTaskSize; i++) {
                 int start = i * config.getSubOriginListSize();
                 int end = i * config.getSubOriginListSize() + config.getSubOriginListSize();
                 if (end > originList.size()) {
-                    //æœ€åä¸€ä¸ªä»»åŠ¡ï¼Œæœªå¿…åˆšå¥½æ˜¯subOriginListSizeçš„æ•°é‡ï¼Œæ‰€ä»¥endå€¼è¿›è¡Œè°ƒæ•´
+                    //×îºóÒ»¸öÈÎÎñ£¬Î´±Ø¸ÕºÃÊÇsubOriginListSizeµÄÊıÁ¿£¬ËùÒÔendÖµ½øĞĞµ÷Õû
                     end = originList.size();
                 }
                 List<T> subList = originList.subList(start, end);
@@ -81,7 +81,7 @@ public class ListTask<T, R> extends RecursiveTask<ListTaskResult<R>> {
                 subTask.fork();
                 taskList.add(subTask);
             }
-            //åˆå¹¶ä»»åŠ¡æ‰§è¡Œç»“æœ
+            //ºÏ²¢ÈÎÎñÖ´ĞĞ½á¹û
             ListTaskResult<R> result = new ListTaskResult<>();
             for (ListTask<T, R> task : taskList) {
                 result.mergeFrom(task.join());

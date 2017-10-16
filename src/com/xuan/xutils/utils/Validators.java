@@ -5,38 +5,38 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
- * ä¸€äº›åŸºæœ¬çš„å­—ç¬¦ä¸²,é›†åˆ,æ•°å­—ç­‰æ ¡éªŒå·¥å…·
+ * Ò»Ğ©»ù±¾µÄ×Ö·û´®,¼¯ºÏ,Êı×ÖµÈĞ£Ñé¹¤¾ß
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:44:21 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:44:21 $
  */
 public abstract class Validators {
     /**
-     * ç®€ä½“ä¸­æ–‡çš„æ­£åˆ™è¡¨è¾¾å¼ã€‚
+     * ¼òÌåÖĞÎÄµÄÕıÔò±í´ïÊ½¡£
      */
     private static final String REGEX_SIMPLE_CHINESE = "^[\u4E00-\u9FA5]+$";
     /**
-     * å­—æ¯æ•°å­—çš„æ­£åˆ™è¡¨è¾¾å¼ã€‚
+     * ×ÖÄ¸Êı×ÖµÄÕıÔò±í´ïÊ½¡£
      */
     private static final String REGEX_ALPHANUMERIC = "[a-zA-Z0-9]+";
     /**
-     * æ•´æ•°æˆ–æµ®ç‚¹æ•°çš„æ­£åˆ™è¡¨è¾¾å¼ã€‚
+     * ÕûÊı»ò¸¡µãÊıµÄÕıÔò±í´ïÊ½¡£
      */
     private static final String REGEX_NUMERIC = "(\\+|-){0,1}(\\d+)([.]?)(\\d*)";
     /**
-     * èº«ä»½è¯å·ç çš„æ­£åˆ™è¡¨è¾¾å¼ã€‚
+     * Éí·İÖ¤ºÅÂëµÄÕıÔò±í´ïÊ½¡£
      */
     private static final String REGEX_ID_CARD = "(\\d{14}|\\d{17})(\\d|x|X)";
     /**
-     * ç”µå­é‚®ç®±çš„æ­£åˆ™è¡¨è¾¾å¼ã€‚
+     * µç×ÓÓÊÏäµÄÕıÔò±í´ïÊ½¡£
      */
     private static final String REGEX_EMAIL = ".+@.+\\.[a-z]+";
 
     /**
-     * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦åªåŒ…å«å­—æ¯å’Œæ•°å­—.
+     * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÖ»°üº¬×ÖÄ¸ºÍÊı×Ö.
      *
-     * @param str å­—ç¬¦ä¸²
-     * @return å¦‚æœå­—ç¬¦ä¸²åªåŒ…å«å­—æ¯å’Œæ•°å­—, åˆ™è¿”å› <code>true</code>, å¦åˆ™è¿”å› <code>false</code>.
+     * @param str ×Ö·û´®
+     * @return Èç¹û×Ö·û´®Ö»°üº¬×ÖÄ¸ºÍÊı×Ö, Ôò·µ»Ø <code>true</code>, ·ñÔò·µ»Ø <code>false</code>.
      */
     public static boolean isAlphanumeric(String str) {
         return isRegexMatch(str, REGEX_ALPHANUMERIC);
@@ -72,15 +72,15 @@ public abstract class Validators {
     }
 
     /**
-     * æ˜¯å¦æ˜¯åˆæ³•çš„æ—¥æœŸå­—ç¬¦ä¸²(ç±»ä¼¼æ ¼å¼:2017-03-01æ˜¯åˆæ³•çš„)
+     * ÊÇ·ñÊÇºÏ·¨µÄÈÕÆÚ×Ö·û´®(ÀàËÆ¸ñÊ½:2017-03-01ÊÇºÏ·¨µÄ)
      * <p>
      * <pre>
      *   Validators.isBlank(&quot;2017-03-01&quot;)       = true
      *   Validators.isBlank(&quot;2017-0301&quot;)        = false
      * </pre>
      *
-     * @param str æ—¥æœŸå­—ç¬¦ä¸²
-     * @return æ˜¯trueï¼Œå¦åˆ™false
+     * @param str ÈÕÆÚ×Ö·û´®
+     * @return ÊÇtrue£¬·ñÔòfalse
      */
     public static boolean isDate(String str) {
         if (isEmpty(str) || str.length() > 10) {
@@ -99,15 +99,15 @@ public abstract class Validators {
     }
 
     /**
-     * æ˜¯å¦æ˜¯åˆæ³•çš„æ—¥æœŸæ—¶é—´å­—ç¬¦ä¸²
+     * ÊÇ·ñÊÇºÏ·¨µÄÈÕÆÚÊ±¼ä×Ö·û´®
      * <p>
      * <pre>
      *   Validators.isDateTime(&quot;2017-03-01 12:03:01&quot;)       = true
      *   Validators.isDateTime(&quot;2017-03-01 12:0301&quot;)        = false
      * </pre>
      *
-     * @param str æ—¥æœŸæ—¶é—´å­—ç¬¦ä¸²
-     * @return æ˜¯trueï¼Œå¦åˆ™false
+     * @param str ÈÕÆÚÊ±¼ä×Ö·û´®
+     * @return ÊÇtrue£¬·ñÔòfalse
      */
     public static boolean isDateTime(String str) {
         if (isEmpty(str) || str.length() > 20) {
@@ -121,17 +121,17 @@ public abstract class Validators {
     }
 
     /**
-     * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦æ˜¯åˆæ³•çš„ç”µå­é‚®ç®±åœ°å€.
+     * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÊÇºÏ·¨µÄµç×ÓÓÊÏäµØÖ·.
      *
-     * @param str å­—ç¬¦ä¸²
-     * @return æ˜¯trueï¼Œå¦åˆ™false
+     * @param str ×Ö·û´®
+     * @return ÊÇtrue£¬·ñÔòfalse
      */
     public static boolean isEmail(String str) {
         return isRegexMatch(str, REGEX_EMAIL);
     }
 
     /**
-     * å½“æ•°ç»„ä¸º<code>null</code>, æˆ–è€…é•¿åº¦ä¸º0, æˆ–è€…é•¿åº¦ä¸º1ä¸”å…ƒç´ çš„å€¼ä¸º<code>null</code>æ—¶è¿”å› <code>true</code>.
+     * µ±Êı×éÎª<code>null</code>, »òÕß³¤¶ÈÎª0, »òÕß³¤¶ÈÎª1ÇÒÔªËØµÄÖµÎª<code>null</code>Ê±·µ»Ø <code>true</code>.
      *
      * @param args
      * @return true/false
@@ -141,9 +141,9 @@ public abstract class Validators {
     }
 
     /**
-     * å­—ç¬¦ä¸²æ˜¯å¦ä¸ºEmptyï¼Œnullå’Œç©ºæ ¼éƒ½ç®—æ˜¯Empty
+     * ×Ö·û´®ÊÇ·ñÎªEmpty£¬nullºÍ¿Õ¸ñ¶¼ËãÊÇEmpty
      *
-     * @param str å­—ç¬¦ä¸²
+     * @param str ×Ö·û´®
      * @return true/false
      */
     public static boolean isEmpty(String str) {
@@ -151,23 +151,23 @@ public abstract class Validators {
     }
 
     /**
-     * åˆ¤æ–­é›†åˆæ˜¯å¦ä¸ºç©ºã€‚
+     * ÅĞ¶Ï¼¯ºÏÊÇ·ñÎª¿Õ¡£
      *
-     * @param <T>        é›†åˆæ³›å‹
-     * @param collection é›†åˆå¯¹è±¡
-     * @return å½“é›†åˆå¯¹è±¡ä¸º <code>null</code> æˆ–è€…é•¿åº¦ä¸ºé›¶æ—¶è¿”å› <code>true</code>ï¼Œå¦åˆ™è¿”å› <code>false</code>ã€‚
+     * @param <T>        ¼¯ºÏ·ºĞÍ
+     * @param collection ¼¯ºÏ¶ÔÏó
+     * @return µ±¼¯ºÏ¶ÔÏóÎª <code>null</code> »òÕß³¤¶ÈÎªÁãÊ±·µ»Ø <code>true</code>£¬·ñÔò·µ»Ø <code>false</code>¡£
      */
     public static <T> boolean isEmpty(Collection<T> collection) {
         return collection == null || collection.isEmpty();
     }
 
     /**
-     * åˆ¤æ–­Mapæ˜¯å¦ä¸ºç©º
+     * ÅĞ¶ÏMapÊÇ·ñÎª¿Õ
      *
-     * @param map Mapå¯¹è±¡
+     * @param map Map¶ÔÏó
      * @param <K>
      * @param <V>
-     * @return å½“Mapå¯¹è±¡ä¸º <code>null</code> æˆ–è€…å…ƒç´ ä¸ºç©ºæ˜¯è¿”å› <code>true</code>ï¼Œå¦åˆ™è¿”å› <code>false</code>ã€‚
+     * @return µ±Map¶ÔÏóÎª <code>null</code> »òÕßÔªËØÎª¿ÕÊÇ·µ»Ø <code>true</code>£¬·ñÔò·µ»Ø <code>false</code>¡£
      */
     public static <K, V> boolean isEmptyMap(Map<K, V> map) {
         return map == null || map.isEmpty();
@@ -182,14 +182,14 @@ public abstract class Validators {
      * @return If the str is valid ID card number return <code>true</code>, otherwise return <code>false</code>.
      */
     public static boolean isIdCardNumber(String str) {
-        // 15ä½æˆ–18æ•°å­—, 14æ•°å­—åŠ x(X)å­—ç¬¦æˆ–17æ•°å­—åŠ x(X)å­—ç¬¦æ‰æ˜¯åˆæ³•çš„
+        // 15Î»»ò18Êı×Ö, 14Êı×Ö¼Óx(X)×Ö·û»ò17Êı×Ö¼Óx(X)×Ö·û²ÅÊÇºÏ·¨µÄ
         return isRegexMatch(str, REGEX_ID_CARD);
     }
 
     /**
-     * æ˜¯å¦ä¸ºæ•°å­—çš„å­—ç¬¦ä¸²ã€‚
+     * ÊÇ·ñÎªÊı×ÖµÄ×Ö·û´®¡£
      *
-     * @param str å­—ç¬¦ä¸²
+     * @param str ×Ö·û´®
      * @return true/false
      */
     public static boolean isNumber(String str) {
@@ -205,7 +205,7 @@ public abstract class Validators {
     }
 
     /**
-     * æ˜¯å¦æ˜¯å›ºå®šèŒƒå›´å†…çš„æ•°å­—çš„å­—ç¬¦ä¸²
+     * ÊÇ·ñÊÇ¹Ì¶¨·¶Î§ÄÚµÄÊı×ÖµÄ×Ö·û´®
      *
      * @param str
      * @param min
@@ -221,35 +221,35 @@ public abstract class Validators {
     }
 
     /**
-     * åˆ¤æ–­å­—ç¬¦æ˜¯å¦ä¸ºæ•´æ•°æˆ–æµ®ç‚¹æ•°. <br>
+     * ÅĞ¶Ï×Ö·ûÊÇ·ñÎªÕûÊı»ò¸¡µãÊı. <br>
      *
-     * @param str å­—ç¬¦ä¸²
-     * @return è‹¥ä¸ºæ•´æ•°æˆ–æµ®ç‚¹æ•°åˆ™è¿”å› <code>true</code>, å¦åˆ™è¿”å› <code>false</code>
+     * @param str ×Ö·û´®
+     * @return ÈôÎªÕûÊı»ò¸¡µãÊıÔò·µ»Ø <code>true</code>, ·ñÔò·µ»Ø <code>false</code>
      */
     public static boolean isNumeric(String str) {
         return isRegexMatch(str, REGEX_NUMERIC);
     }
 
     /**
-     * åˆ¤æ–­å­—ç¬¦æ˜¯å¦ä¸ºç¬¦åˆç²¾åº¦è¦æ±‚çš„æ•´æ•°æˆ–æµ®ç‚¹æ•°ã€‚
+     * ÅĞ¶Ï×Ö·ûÊÇ·ñÎª·ûºÏ¾«¶ÈÒªÇóµÄÕûÊı»ò¸¡µãÊı¡£
      *
-     * @param str         å­—ç¬¦ä¸²
-     * @param fractionNum å°æ•°éƒ¨åˆ†çš„æœ€å¤šå…è®¸çš„ä½æ•°
-     * @return è‹¥ä¸ºæ•´æ•°æˆ–æµ®ç‚¹æ•°åˆ™è¿”å› <code>true</code>, å¦åˆ™è¿”å› <code>false</code>
+     * @param str         ×Ö·û´®
+     * @param fractionNum Ğ¡Êı²¿·ÖµÄ×î¶àÔÊĞíµÄÎ»Êı
+     * @return ÈôÎªÕûÊı»ò¸¡µãÊıÔò·µ»Ø <code>true</code>, ·ñÔò·µ»Ø <code>false</code>
      */
     public static boolean isNumeric(String str, int fractionNum) {
         if (isEmpty(str)) {
             return false;
         }
-        // æ•´æ•°æˆ–æµ®ç‚¹æ•°
+        // ÕûÊı»ò¸¡µãÊı
         String regex = "(\\+|-){0,1}(\\d+)([.]?)(\\d{0," + fractionNum + "})";
         return Pattern.matches(regex, str);
     }
 
     /**
-     * åˆ¤æ–­æ˜¯å¦æ˜¯åˆæ³•çš„é‚®ç¼–
+     * ÅĞ¶ÏÊÇ·ñÊÇºÏ·¨µÄÓÊ±à
      *
-     * @param str å­—ç¬¦ä¸²
+     * @param str ×Ö·û´®
      * @return true/false
      */
     public static boolean isPostcode(String str) {
@@ -263,7 +263,7 @@ public abstract class Validators {
     }
 
     /**
-     * åˆ¤æ–­æ˜¯å¦æ˜¯å›ºå®šé•¿åº¦èŒƒå›´å†…çš„å­—ç¬¦ä¸²
+     * ÅĞ¶ÏÊÇ·ñÊÇ¹Ì¶¨³¤¶È·¶Î§ÄÚµÄ×Ö·û´®
      *
      * @param str
      * @param minLength
@@ -284,9 +284,9 @@ public abstract class Validators {
     }
 
     /**
-     * åˆ¤æ–­æ˜¯å¦æ˜¯åˆæ³•çš„æ—¶é—´å­—ç¬¦ä¸²ã€‚
+     * ÅĞ¶ÏÊÇ·ñÊÇºÏ·¨µÄÊ±¼ä×Ö·û´®¡£
      *
-     * @param str å­—ç¬¦ä¸²
+     * @param str ×Ö·û´®
      * @return true/false
      */
     public static boolean isTime(String str) {
@@ -306,9 +306,9 @@ public abstract class Validators {
     }
 
     /**
-     * æ˜¯å¦æ˜¯ç®€ä½“ä¸­æ–‡å­—ç¬¦ä¸²ã€‚
+     * ÊÇ·ñÊÇ¼òÌåÖĞÎÄ×Ö·û´®¡£
      *
-     * @param str å­—ç¬¦ä¸²
+     * @param str ×Ö·û´®
      * @return true/false
      */
     public static boolean isSimpleChinese(String str) {
@@ -316,10 +316,10 @@ public abstract class Validators {
     }
 
     /**
-     * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦åŒ¹é…äº†æ­£åˆ™è¡¨è¾¾å¼ã€‚
+     * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÆ¥ÅäÁËÕıÔò±í´ïÊ½¡£
      *
-     * @param str   å­—ç¬¦ä¸²
-     * @param regex æ­£åˆ™è¡¨è¾¾å¼
+     * @param str   ×Ö·û´®
+     * @param regex ÕıÔò±í´ïÊ½
      * @return true/false
      */
     public static boolean isRegexMatch(String str, String regex) {

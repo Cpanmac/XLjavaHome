@@ -3,9 +3,9 @@ package com.xl.thread;
 import java.util.Random;
 
 /**
- * @author å¾ç«‹
- * @Decription å®ç°çº¿ç¨‹ç±»å…±äº«æ•°æ®
- * @date 2014å¹´3æœˆ7æ—¥
+ * @author ĞìÁ¢
+ * @Decription ÊµÏÖÏß³ÌÀà¹²ÏíÊı¾İ
+ * @date 2014Äê3ÔÂ7ÈÕ
  */
 public class ThreadLocalDemo {
     private static ThreadLocal<Integer> x = new ThreadLocal<Integer>();

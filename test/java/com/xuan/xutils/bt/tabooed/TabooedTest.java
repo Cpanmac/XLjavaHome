@@ -5,17 +5,17 @@ import org.junit.Test;
 import java.util.List;
 
 /**
- * é“­æ„Ÿè¯æµ‹è¯•
+ * Ãú¸Ğ´Ê²âÊÔ
  * <p>
  * Created by xuan on 17/8/8.
  */
 public class TabooedTest {
-    private final static String TEXT = "æˆ‘æ˜¯ä¸€ä¸ªå­¦ä¹ javaçš„å°æœ‹å‹,å¬è¯´è¿™ä¸ªé‡Œé¢ä¼šæœ‰å¾ˆå¤šé“­æ„Ÿè¯.æˆ‘æ˜¯ä¸­å›½äººä¹Ÿä¸èƒ½è¯´ä¹ˆ,å“æˆ‘å¤ªå¤±æœ›äº†.å°±è¿™æ ·å§.è¿™ä¹Ÿè¡Œçš„å•Š";
+    private final static String TEXT = "ÎÒÊÇÒ»¸öÑ§Ï°javaµÄĞ¡ÅóÓÑ,ÌıËµÕâ¸öÀïÃæ»áÓĞºÜ¶àÃú¸Ğ´Ê.ÎÒÊÇÖĞ¹úÈËÒ²²»ÄÜËµÃ´,°¥ÎÒÌ«Ê§ÍûÁË.¾ÍÕâÑù°É.ÕâÒ²ĞĞµÄ°¡";
 
     @Test
     public void testGetTabooedWords() {
         /**
-         * æµ‹è¯•ä¸‹æ¥å¥½åƒæ€§èƒ½ä¸æ˜¯å¾ˆå¥½éƒé—·,å¯èƒ½è·Ÿé“­æ„Ÿè¯çš„å…³é”®å­—å¤šå°‘æœ‰å…³ç³»
+         * ²âÊÔÏÂÀ´ºÃÏñĞÔÄÜ²»ÊÇºÜºÃÓôÃÆ,¿ÉÄÜ¸úÃú¸Ğ´ÊµÄ¹Ø¼ü×Ö¶àÉÙÓĞ¹ØÏµ
          */
         List<String> tabooedList = TabooedUtils.getTabooedWords(TEXT);
         System.out.println("++++++++++tabooedList:" + tabooedList);

@@ -23,8 +23,8 @@ class Orange implements fruit {
     }
 }
 
-// æž„é€ å·¥åŽ‚ç±»
-// ä¹Ÿå°±æ˜¯è¯´ä»¥åŽå¦‚æžœæˆ‘ä»¬åœ¨æ·»åŠ å…¶ä»–çš„å®žä¾‹çš„æ—¶å€™åªéœ€è¦ä¿®æ”¹å·¥åŽ‚ç±»å°±è¡Œäº†
+// ¹¹Ôì¹¤³§Àà
+// Ò²¾ÍÊÇËµÒÔºóÈç¹ûÎÒÃÇÔÚÌí¼ÓÆäËûµÄÊµÀýµÄÊ±ºòÖ»ÐèÒªÐÞ¸Ä¹¤³§Àà¾ÍÐÐÁË
 class Factory {
     public static fruit getInstance(String fruitName) {
         fruit f = null;
@@ -37,5 +37,5 @@ class Factory {
         return f;
     }
 }
-// è¿™æ ·ï¼Œå½“æˆ‘ä»¬åœ¨æ·»åŠ ä¸€ä¸ªå­ç±»çš„æ—¶å€™ï¼Œå°±éœ€è¦ä¿®æ”¹å·¥åŽ‚ç±»äº†ã€‚å¦‚æžœæˆ‘ä»¬æ·»åŠ å¤ªå¤šçš„å­ç±»çš„æ—¶å€™ï¼Œæ”¹çš„å°±ä¼šå¾ˆå¤šã€‚
-// çŽ°åœ¨æˆ‘ä»¬çœ‹çœ‹åˆ©ç”¨åå°„æœºåˆ¶ï¼š
+// ÕâÑù£¬µ±ÎÒÃÇÔÚÌí¼ÓÒ»¸ö×ÓÀàµÄÊ±ºò£¬¾ÍÐèÒªÐÞ¸Ä¹¤³§ÀàÁË¡£Èç¹ûÎÒÃÇÌí¼ÓÌ«¶àµÄ×ÓÀàµÄÊ±ºò£¬¸ÄµÄ¾Í»áºÜ¶à¡£
+// ÏÖÔÚÎÒÃÇ¿´¿´ÀûÓÃ·´Éä»úÖÆ£º

@@ -6,11 +6,11 @@ import java.io.IOException;
 public class FileReaderDemo2 {
     public static void main(String[] args) {
         FileReader fr = null;
-        char[] buf = new char[1024]; // å¦‚æœç¼“å†²åŒºè¶…å¤§ï¼Œé€šå¸¸å®šä¹‰1024çš„æ•´æ•°å€ï¼Œ2Kï¼Œ1ä¸ªå­—ç¬¦2ä¸ªå­—èŠ‚ï¼Œ1024*2=2KB
+        char[] buf = new char[1024]; // Èç¹û»º³åÇø³¬´ó£¬Í¨³£¶¨Òå1024µÄÕûÊı±¶£¬2K£¬1¸ö×Ö·û2¸ö×Ö½Ú£¬1024*2=2KB
         int num = 0;
         try {
             fr = new FileReader("demo.txt");
-            // å®šä¹‰ä¸€ä¸ªå­—ç¬¦æ•°ç»„ï¼Œç”¨äºå­˜å‚¨è¯»åˆ°å­—ç¬¦ã€‚è¯¥read(char[])è¿”å›çš„æ˜¯è¯»åˆ°å­—ç¬¦ä¸ªæ•°
+            // ¶¨ÒåÒ»¸ö×Ö·ûÊı×é£¬ÓÃÓÚ´æ´¢¶Áµ½×Ö·û¡£¸Ãread(char[])·µ»ØµÄÊÇ¶Áµ½×Ö·û¸öÊı
             while ((num = fr.read(buf)) != -1) {
                 System.out.print(new String(buf, 0, num));
             }

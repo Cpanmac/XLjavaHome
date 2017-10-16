@@ -8,18 +8,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ä¸€äº›åŸºæœ¬çš„å­—ç¬¦ä¸²,é›†åˆ,æ•°å­—ç­‰æ ¡éªŒå·¥å…·
+ * Ò»Ğ©»ù±¾µÄ×Ö·û´®,¼¯ºÏ,Êı×ÖµÈĞ£Ñé¹¤¾ß
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2017-08-01 ä¸Šåˆ9:44:21 $
+ * @version $Revision: 1.0 $, $Date: 2017-08-01 ÉÏÎç9:44:21 $
  */
 public abstract class XBeanUtils {
     /**
-     * Map --> Bean : åˆ©ç”¨Introspector,PropertyDescriptorå®ç° Map --> Bean
-     * map ä¸­value çš„ç±»å‹å¿…é¡»å¯¹åº”åˆ°Beanä¸­çš„ç±»å‹
+     * Map --> Bean : ÀûÓÃIntrospector,PropertyDescriptorÊµÏÖ Map --> Bean
+     * map ÖĞvalue µÄÀàĞÍ±ØĞë¶ÔÓ¦µ½BeanÖĞµÄÀàĞÍ
      *
      * @param map
-     * @param beanClass å¿…é¡»æä¾›å…¬å…±çš„é»˜è®¤æ„é€ å‡½æ•°
+     * @param beanClass ±ØĞëÌá¹©¹«¹²µÄÄ¬ÈÏ¹¹Ôìº¯Êı
      * @param <T>
      * @return
      */
@@ -35,7 +35,7 @@ public abstract class XBeanUtils {
                     continue;
                 }
                 Object value = map.get(key);
-                // å¾—åˆ°propertyå¯¹åº”çš„setteræ–¹æ³•
+                // µÃµ½property¶ÔÓ¦µÄsetter·½·¨
                 Method setter = property.getWriteMethod();
                 setter.invoke(obj, value);
             }
@@ -46,7 +46,7 @@ public abstract class XBeanUtils {
     }
 
     /**
-     * Bean --> Map åˆ©ç”¨Introspectorå’ŒPropertyDescriptor å°†Bean --> Map,å¯¹getClass åšäº†è¿‡æ»¤
+     * Bean --> Map ÀûÓÃIntrospectorºÍPropertyDescriptor ½«Bean --> Map,¶ÔgetClass ×öÁË¹ıÂË
      *
      * @param obj
      * @return
@@ -61,11 +61,11 @@ public abstract class XBeanUtils {
             PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
             for (PropertyDescriptor property : propertyDescriptors) {
                 String key = property.getName();
-                // è¿‡æ»¤classå±æ€§
+                // ¹ıÂËclassÊôĞÔ
                 if (key.equals("class")) {
                     continue;
                 }
-                // å¾—åˆ°propertyå¯¹åº”çš„getteræ–¹æ³•
+                // µÃµ½property¶ÔÓ¦µÄgetter·½·¨
                 Method getter = property.getReadMethod();
                 Object value = getter.invoke(obj);
                 map.put(key, value);

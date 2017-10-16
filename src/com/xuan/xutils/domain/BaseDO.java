@@ -3,7 +3,7 @@ package com.xuan.xutils.domain;
 import java.io.Serializable;
 
 /**
- * æ‰€æœ‰domainçš„åŸºç±»
+ * ËùÓĞdomainµÄ»ùÀà
  * <p>
  * Created by xuan on 17/8/2.
  */

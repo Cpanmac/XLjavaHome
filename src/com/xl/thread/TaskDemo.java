@@ -5,14 +5,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * @author å¾ç«‹
- * @Decription 1.å¿…é¡»æ”¾åœ¨ä¸»çº¿ç¨‹é‡Œé¢ï¼Œç”¨junité‡Œé¢ä»£ç ä¸èƒ½æ‰§è¡Œ
- * @date 2014å¹´3æœˆ2æ—¥
+ * @author ĞìÁ¢
+ * @Decription 1.±ØĞë·ÅÔÚÖ÷Ïß³ÌÀïÃæ£¬ÓÃjunitÀïÃæ´úÂë²»ÄÜÖ´ĞĞ
+ * @date 2014Äê3ÔÂ2ÈÕ
  */
 public class TaskDemo {
     public static void main(String[] args) throws InterruptedException {
         // Schedele();
-        // è¿‡2ç§’è°ƒåº¦ä¸€æ¬¡ï¼Œè¿‡4ç§’è°ƒåº¦ä¸€æ¬¡ï¼Œè¿‡8ç§’è°ƒåº¦ä¸€æ¬¡
+        // ¹ı2Ãëµ÷¶ÈÒ»´Î£¬¹ı4Ãëµ÷¶ÈÒ»´Î£¬¹ı8Ãëµ÷¶ÈÒ»´Î
         // Incremental();
         init();
     }
@@ -32,14 +32,14 @@ public class TaskDemo {
     }
 
     public static void Schedele() {
-        // TimerTask:task:æ‰§è¡Œçš„ä»»åŠ¡,long delay:åœ¨å¤šå°‘æ¯«ç§’åæ‰§è¡Œ,
-        // long period:æ‰§è¡Œåï¼Œæ¯ç»è¿‡
+        // TimerTask:task:Ö´ĞĞµÄÈÎÎñ,long delay:ÔÚ¶àÉÙºÁÃëºóÖ´ĞĞ,
+        // long period:Ö´ĞĞºó£¬Ã¿¾­¹ı
         new java.util.Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("è¿™æ˜¯å®šæ—¶å™¨é‡Œé¢çš„å†…å®¹");
+                System.out.println("ÕâÊÇ¶¨Ê±Æ÷ÀïÃæµÄÄÚÈİ");
             }
-        }, 10, 3000); // schedule:æ—¶åˆ»è¡¨ï¼Œè¿›åº¦è¡¨ï¼› æ¸…å•ï¼Œæ˜ç»†è¡¨ï¼› é¢„å®šè®¡åˆ’ï¼› ç›®å½•
+        }, 10, 3000); // schedule:Ê±¿Ì±í£¬½ø¶È±í£» Çåµ¥£¬Ã÷Ï¸±í£» Ô¤¶¨¼Æ»®£» Ä¿Â¼
         while (true) {
             try {
                 Thread.sleep(1000);
@@ -52,7 +52,7 @@ public class TaskDemo {
 
 class MyTimeTask extends TimerTask {
     /**
-     * å†…éƒ¨ç±»ä¸èƒ½æ˜¯é™æ€çš„ï¼Œå¦‚æœä¸æ˜¯é™æ€çš„æ•°å­—æ˜¯ä¸ä¼šå˜å¾—
+     * ÄÚ²¿Àà²»ÄÜÊÇ¾²Ì¬µÄ£¬Èç¹û²»ÊÇ¾²Ì¬µÄÊı×ÖÊÇ²»»á±äµÃ
      */
     static long i = 2000;
 

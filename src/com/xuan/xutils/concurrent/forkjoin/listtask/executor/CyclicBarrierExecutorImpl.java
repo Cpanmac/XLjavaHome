@@ -13,7 +13,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * ä½¿ç”¨æ™®é€šçš„çº¿ç¨‹æ± æ¥å®ç°ï¼Œä»…ä»…ç”¨æ¥åšæµ‹è¯•å¯¹æ¯”ï¼Œæš‚æ—¶ä¸å»ºè®®ä½¿ç”¨çš„
+ * Ê¹ÓÃÆÕÍ¨µÄÏß³Ì³ØÀ´ÊµÏÖ£¬½ö½öÓÃÀ´×ö²âÊÔ¶Ô±È£¬ÔİÊ±²»½¨ÒéÊ¹ÓÃµÄ
  * <p>
  * Created by xuan on 17/8/28.
  */

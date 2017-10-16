@@ -3,22 +3,22 @@ package com.xuan.xutils.concurrent.schedule;
 import java.util.Date;
 
 /**
- * 描述某个系统任务的抽象基类.
+ * ����ĳ��ϵͳ����ĳ������.
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 上午10:26:19 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ����10:26:19 $
  */
 public abstract class AbstractTask {
     /**
-     * 任务名称
+     * ��������
      */
     private final String name;
     /**
-     * 执行时间戳
+     * ִ��ʱ���
      */
     private final Date timestamp;
     /**
-     * 是否正在执行
+     * �Ƿ�����ִ��
      */
     protected volatile boolean isWorking = true;
 
@@ -35,12 +35,12 @@ public abstract class AbstractTask {
         return timestamp;
     }
 
-    public void setWorking(boolean isWorking) {
-        this.isWorking = isWorking;
-    }
-
     public boolean isWorking() {
         return isWorking;
+    }
+
+    public void setWorking(boolean isWorking) {
+        this.isWorking = isWorking;
     }
 
     @Override

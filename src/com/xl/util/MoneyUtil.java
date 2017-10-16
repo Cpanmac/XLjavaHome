@@ -1,5 +1,5 @@
 /*
- *è´§å¸å·¥å…·ç±»
+ *»õ±Ò¹¤¾ßÀà
  * Amount2RMB.java 2008-6-15
  */
 package com.xl.util;
@@ -13,14 +13,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MoneyUtil {
-    private static final Pattern AMOUNT_PATTERN = Pattern.compile("^(0|[1-9]\\d{0,11})\\.(\\d\\d)$"); // ä¸è€ƒè™‘åˆ†éš”ç¬¦çš„æ­£ç¡®æ€§
-    private static final char[] RMB_NUMS = "é›¶å£¹è´°åè‚†ä¼é™†æŸ’æŒç–".toCharArray();
-    private static final String[] UNITS = {"å…ƒ", "è§’", "åˆ†", "æ•´"};
-    private static final String[] U1 = {"", "æ‹¾", "ä½°", "ä»Ÿ"};
-    private static final String[] U2 = {"", "ä¸‡", "äº¿"};
-    private static final String[] unms = new String[]{"é›¶", "ä¸€", "äºŒ", "ä¸‰", "å››", "äº”", "å…­", "ä¸ƒ", "å…«", "ä¹"};
-    private static final String[] digits = new String[]{"", "å", "ç™¾", "åƒ"};
-    private static final String[] units = new String[]{"", "ä¸‡", "äº¿", "ä¸‡äº¿"};
+    private static final Pattern AMOUNT_PATTERN = Pattern.compile("^(0|[1-9]\\d{0,11})\\.(\\d\\d)$"); // ²»¿¼ÂÇ·Ö¸ô·ûµÄÕıÈ·ĞÔ
+    private static final char[] RMB_NUMS = "ÁãÒ¼·¡ÈşËÁÎéÂ½Æâ°Æ¾Á".toCharArray();
+    private static final String[] UNITS = {"Ôª", "½Ç", "·Ö", "Õû"};
+    private static final String[] U1 = {"", "Ê°", "°Û", "Çª"};
+    private static final String[] U2 = {"", "Íò", "ÒÚ"};
+    private static final String[] unms = new String[]{"Áã", "Ò»", "¶ş", "Èı", "ËÄ", "Îå", "Áù", "Æß", "°Ë", "¾Å"};
+    private static final String[] digits = new String[]{"", "Ê®", "°Ù", "Ç§"};
+    private static final String[] units = new String[]{"", "Íò", "ÒÚ", "ÍòÒÚ"};
     private static Logger LOGGER = Logger.getLogger(MoneyUtil.class);
 
     public static String amountToChinese(double amount, boolean withUnit) {
@@ -31,10 +31,10 @@ public class MoneyUtil {
         String toDo = format.format(amount);
         String result = convert(toDo);
         if (!withUnit) {
-            result = result.replaceAll("å…ƒ", "");
-            result = result.replaceAll("è§’", "");
-            result = result.replaceAll("åˆ†", "");
-            result = result.replaceAll("æ•´", "");
+            result = result.replaceAll("Ôª", "");
+            result = result.replaceAll("½Ç", "");
+            result = result.replaceAll("·Ö", "");
+            result = result.replaceAll("Õû", "");
         }
         return result;
     }
@@ -57,25 +57,25 @@ public class MoneyUtil {
             return "";
         }
         if (x.equals("0")) {
-            return "é›¶";
+            return "Áã";
         }
-        //å»é™¤å­—ç¬¦ä¸²é¦–éƒ¨çš„0ï¼Œä¾‹å¦‚ï¼š0010->10
+        //È¥³ı×Ö·û´®Ê×²¿µÄ0£¬ÀıÈç£º0010->10
         int fm;
         for (fm = 0; fm < x.length(); fm++) {
             if (x.charAt(fm) != '0') {
                 break;
             }
         }
-        x = x.substring(fm);//å»é™¤å®Œæ¯•
-        //æŠŠå­—ç¬¦ä¸²çœ‹ä½œä¸€äº›ç»„ï¼Œä¾‹å¦‚ï¼š123456789->1,2345,6789
+        x = x.substring(fm);//È¥³ıÍê±Ï
+        //°Ñ×Ö·û´®¿´×÷Ò»Ğ©×é£¬ÀıÈç£º123456789->1,2345,6789
         String result = "";
         int p = 0;
         int m = x.length() % 4;
         int k = (m > 0 ? x.length() / 4 + 1 : x.length() / 4);
-        //ä»æœ€å·¦è¾¹çš„é‚£ç»„å¼€å§‹ï¼Œå‘å³å¾ªç¯
+        //´Ó×î×ó±ßµÄÄÇ×é¿ªÊ¼£¬ÏòÓÒÑ­»·
         for (int i = k; i > 0; i--) {
             int len = 4;
-            if (i == k && m != 0)//å½“iä¸ºæœ€å·¦è¾¹çš„é‚£ç»„æ—¶ï¼Œç»„é•¿åº¦å¯èƒ½æœ‰å˜åŒ–
+            if (i == k && m != 0)//µ±iÎª×î×ó±ßµÄÄÇ×éÊ±£¬×é³¤¶È¿ÉÄÜÓĞ±ä»¯
             {
                 len = m;
             }
@@ -84,17 +84,17 @@ public class MoneyUtil {
             for (int j = 0; j < le; j++) {
                 int n = Integer.parseInt(s.substring(j, j + 1));
                 if (0 == n) {
-                    if (j < le - 1 && Integer.parseInt(s.substring(j + 1, j + 2)) > 0 && !result.endsWith(unms[0])) {//åŠ é›¶çš„æ¡ä»¶ï¼šä¸ä¸ºæœ€åä¸€ä½ && ä¸‹ä¸€ä½æ•°å­—å¤§äº0 && ä»¥å‰æ²¡æœ‰åŠ è¿‡â€œé›¶â€
+                    if (j < le - 1 && Integer.parseInt(s.substring(j + 1, j + 2)) > 0 && !result.endsWith(unms[0])) {//¼ÓÁãµÄÌõ¼ş£º²»Îª×îºóÒ»Î» && ÏÂÒ»Î»Êı×Ö´óÓÚ0 && ÒÔÇ°Ã»ÓĞ¼Ó¹ı¡°Áã¡±
                         result += unms[0];
                     }
                 } else {
-                    if (!(n == 1 && (result.endsWith(unms[0]) || result.length() == 0) && j == le - 2)) {//å¤„ç†1013ä¸€åƒé›¶"åä¸‰"ï¼Œ1113 ä¸€åƒä¸€ç™¾"ä¸€åä¸‰"
+                    if (!(n == 1 && (result.endsWith(unms[0]) || result.length() == 0) && j == le - 2)) {//´¦Àí1013Ò»Ç§Áã"Ê®Èı"£¬1113 Ò»Ç§Ò»°Ù"Ò»Ê®Èı"
                         result += unms[n];
                     }
                     result += digits[le - j - 1];
                 }
             }
-            if (0 != Integer.parseInt(s))//å¦‚æœè¿™ç»„æ•°å­—ä¸å…¨æ˜¯ 0 ï¼Œåˆ™åŠ ä¸Šå•ä½ï¼šä¸‡ï¼Œäº¿ï¼Œä¸‡äº¿
+            if (0 != Integer.parseInt(s))//Èç¹ûÕâ×éÊı×Ö²»È«ÊÇ 0 £¬Ôò¼ÓÉÏµ¥Î»£ºÍò£¬ÒÚ£¬ÍòÒÚ
             {
                 result += units[i - 1];
             }
@@ -103,7 +103,7 @@ public class MoneyUtil {
         return result;
     }
 
-    //æ£€æŸ¥å­—ç¬¦ä¸²sæ˜¯å¦å…¨ä¸ºæ•°å­—
+    //¼ì²é×Ö·û´®sÊÇ·ñÈ«ÎªÊı×Ö
     private static boolean checkIsNumbers(String x) {
         if (null == x) {
             return false;
@@ -117,61 +117,61 @@ public class MoneyUtil {
     }
 
     /**
-     * å°†é‡‘é¢ï¼ˆæ•´æ•°éƒ¨åˆ†ç­‰äºæˆ–å°‘äº12ä½ï¼Œå°æ•°éƒ¨åˆ†2ä½ï¼‰è½¬æ¢ä¸ºä¸­æ–‡å¤§å†™å½¢å¼.
+     * ½«½ğ¶î£¨ÕûÊı²¿·ÖµÈÓÚ»òÉÙÓÚ12Î»£¬Ğ¡Êı²¿·Ö2Î»£©×ª»»ÎªÖĞÎÄ´óĞ´ĞÎÊ½.
      *
-     * @param amount é‡‘é¢æ•°å­—
-     * @return ä¸­æ–‡å¤§å†™
+     * @param amount ½ğ¶îÊı×Ö
+     * @return ÖĞÎÄ´óĞ´
      * @throws IllegalArgumentException
      */
     public static String convert(String amount) throws IllegalArgumentException {
-        // å»æ‰åˆ†éš”ç¬¦
+        // È¥µô·Ö¸ô·û
         amount = amount.replace(",", "");
-        // éªŒè¯é‡‘é¢æ­£ç¡®æ€§
+        // ÑéÖ¤½ğ¶îÕıÈ·ĞÔ
         if (amount.equals("0.00")) {
-            return "é›¶å…ƒæ•´";
+            return "ÁãÔªÕû";
         }
         Matcher matcher = AMOUNT_PATTERN.matcher(amount);
         if (!matcher.find()) {
-            LOGGER.error("è¾“å…¥é‡‘é¢æœ‰è¯¯ï¼Œè½¬æ¢å¤±è´¥ï¼[" + amount + "]");
+            LOGGER.error("ÊäÈë½ğ¶îÓĞÎó£¬×ª»»Ê§°Ü£¡[" + amount + "]");
             return "";
-            //            throw new IllegalArgumentException("è¾“å…¥é‡‘é¢æœ‰è¯¯.");
+            //            throw new IllegalArgumentException("ÊäÈë½ğ¶îÓĞÎó.");
         }
-        String integer = matcher.group(1); // æ•´æ•°éƒ¨åˆ†
-        String fraction = matcher.group(2); // å°æ•°éƒ¨åˆ†
+        String integer = matcher.group(1); // ÕûÊı²¿·Ö
+        String fraction = matcher.group(2); // Ğ¡Êı²¿·Ö
         String result = "";
         if (!integer.equals("0")) {
-            result += integer2rmb(integer) + UNITS[0]; // æ•´æ•°éƒ¨åˆ†
+            result += integer2rmb(integer) + UNITS[0]; // ÕûÊı²¿·Ö
         }
         if (fraction.equals("00")) {
-            result += UNITS[3]; // æ·»åŠ [æ•´]
+            result += UNITS[3]; // Ìí¼Ó[Õû]
         } else if (fraction.startsWith("0") && integer.equals("0")) {
-            result += fraction2rmb(fraction).substring(1); // å»æ‰åˆ†å‰é¢çš„[é›¶]
+            result += fraction2rmb(fraction).substring(1); // È¥µô·ÖÇ°ÃæµÄ[Áã]
         } else {
-            result += fraction2rmb(fraction); // å°æ•°éƒ¨åˆ†
+            result += fraction2rmb(fraction); // Ğ¡Êı²¿·Ö
         }
         return result;
     }
 
-    // å°†é‡‘é¢å°æ•°éƒ¨åˆ†è½¬æ¢ä¸ºä¸­æ–‡å¤§å†™
+    // ½«½ğ¶îĞ¡Êı²¿·Ö×ª»»ÎªÖĞÎÄ´óĞ´
     private static String fraction2rmb(String fraction) {
-        char jiao = fraction.charAt(0); // è§’
-        char fen = fraction.charAt(1); // åˆ†
+        char jiao = fraction.charAt(0); // ½Ç
+        char fen = fraction.charAt(1); // ·Ö
         return (RMB_NUMS[jiao - '0'] + (jiao > '0' ? UNITS[1] : "")) + (fen > '0' ? RMB_NUMS[fen - '0'] + UNITS[2] : "");
     }
 
-    // å°†é‡‘é¢æ•´æ•°éƒ¨åˆ†è½¬æ¢ä¸ºä¸­æ–‡å¤§å†™
+    // ½«½ğ¶îÕûÊı²¿·Ö×ª»»ÎªÖĞÎÄ´óĞ´
     private static String integer2rmb(String integer) {
         StringBuilder buffer = new StringBuilder();
-        // ä»ä¸ªä½æ•°å¼€å§‹è½¬æ¢
+        // ´Ó¸öÎ»Êı¿ªÊ¼×ª»»
         int i, j;
         for (i = integer.length() - 1, j = 0; i >= 0; i--, j++) {
             char n = integer.charAt(i);
             if (n == '0') {
-                // å½“næ˜¯0ä¸”nçš„å³è¾¹ä¸€ä½ä¸æ˜¯0æ—¶ï¼Œæ’å…¥[é›¶]
+                // µ±nÊÇ0ÇÒnµÄÓÒ±ßÒ»Î»²»ÊÇ0Ê±£¬²åÈë[Áã]
                 if (i < integer.length() - 1 && integer.charAt(i + 1) != '0') {
                     buffer.append(RMB_NUMS[0]);
                 }
-                // æ’å…¥[ä¸‡]æˆ–è€…[äº¿]
+                // ²åÈë[Íò]»òÕß[ÒÚ]
                 if (j % 4 == 0) {
                     if (i > 0 && integer.charAt(i - 1) != '0' || i > 1 && integer.charAt(i - 2) != '0' || i > 2 && integer.charAt(i - 3) != '0') {
                         buffer.append(U2[j / 4]);
@@ -179,10 +179,10 @@ public class MoneyUtil {
                 }
             } else {
                 if (j % 4 == 0) {
-                    buffer.append(U2[j / 4]);     // æ’å…¥[ä¸‡]æˆ–è€…[äº¿]
+                    buffer.append(U2[j / 4]);     // ²åÈë[Íò]»òÕß[ÒÚ]
                 }
-                buffer.append(U1[j % 4]);         // æ’å…¥[æ‹¾]ã€[ä½°]æˆ–[ä»Ÿ]
-                buffer.append(RMB_NUMS[n - '0']); // æ’å…¥æ•°å­—
+                buffer.append(U1[j % 4]);         // ²åÈë[Ê°]¡¢[°Û]»ò[Çª]
+                buffer.append(RMB_NUMS[n - '0']); // ²åÈëÊı×Ö
             }
         }
         return buffer.reverse().toString();
@@ -203,7 +203,7 @@ public class MoneyUtil {
     }
 
     /**
-     * å°†doubleç±»å‹çš„æ•°å­—è½¬æ¢ä¸º###,###,###.00çš„å½¢å¼
+     * ½«doubleÀàĞÍµÄÊı×Ö×ª»»Îª###,###,###.00µÄĞÎÊ½
      *
      * @param
      * @return
@@ -214,7 +214,7 @@ public class MoneyUtil {
         if (d != 0) {
             NumberFormat numberFormat = DecimalFormat.getCurrencyInstance();
             numberFormat.setRoundingMode(RoundingMode.HALF_UP);
-            str = numberFormat.format(d).replace("ï¿¥", "");
+            str = numberFormat.format(d).replace("£¤", "");
         }
         return str;
     }
@@ -224,19 +224,19 @@ public class MoneyUtil {
         // System.out.println(convert("600000000000"));
         System.out.println(amountToChinese(600000000000.45678d, true));
         System.out.println(convert("600000000000.00"));
-        System.out.println("å£¹ä¸‡é™†ä»Ÿè‚†ä½°é›¶ç–å…ƒé›¶è´°åˆ†".equals(convert("16,409.02")));
-        System.out.println("å£¹ä»Ÿè‚†ä½°é›¶ç–å…ƒä¼è§’".equals(convert("1,409.50")));
-        System.out.println("é™†ä»Ÿé›¶æŸ’å…ƒå£¹è§’è‚†åˆ†".equals(convert("6,007.14")));
-        System.out.println("å£¹ä»Ÿé™†ä½°æŒæ‹¾å…ƒåè§’è´°åˆ†".equals(convert("1,680.32")));
-        System.out.println("åä½°è´°æ‹¾ä¼å…ƒé›¶è‚†åˆ†".equals(convert("325.04")));
-        System.out.println("è‚†ä»Ÿåä½°è´°æ‹¾å£¹å…ƒæ•´".equals(convert("4,321.00")));
-        System.out.println("å£¹åˆ†".equals(convert("0.01")));
-        System.out.println(convert("1234,5678,9012.34").equals("å£¹ä»Ÿè´°ä½°åæ‹¾è‚†äº¿ä¼ä»Ÿé™†ä½°æŸ’æ‹¾æŒä¸‡ç–ä»Ÿé›¶å£¹æ‹¾è´°å…ƒåè§’è‚†åˆ†"));
-        System.out.println(convert("1000,1000,1000.10").equals("å£¹ä»Ÿäº¿é›¶å£¹ä»Ÿä¸‡é›¶å£¹ä»Ÿå…ƒå£¹è§’"));
-        System.out.println(convert("9009,9009,9009.99").equals("ç–ä»Ÿé›¶ç–äº¿ç–ä»Ÿé›¶ç–ä¸‡ç–ä»Ÿé›¶ç–å…ƒç–è§’ç–åˆ†"));
-        System.out.println(convert("5432,0001,0001.01").equals("ä¼ä»Ÿè‚†ä½°åæ‹¾è´°äº¿é›¶å£¹ä¸‡é›¶å£¹å…ƒé›¶å£¹åˆ†"));
-        System.out.println(convert("1000,0000,1110.00").equals("å£¹ä»Ÿäº¿é›¶å£¹ä»Ÿå£¹ä½°å£¹æ‹¾å…ƒæ•´"));
-        System.out.println(convert("1010,0000,0001.11").equals("å£¹ä»Ÿé›¶å£¹æ‹¾äº¿é›¶å£¹å…ƒå£¹è§’å£¹åˆ†"));
-        System.out.println(convert("1000,0000,0000.01").equals("å£¹ä»Ÿäº¿å…ƒé›¶å£¹åˆ†"));
+        System.out.println("Ò¼ÍòÂ½ÇªËÁ°ÛÁã¾ÁÔªÁã·¡·Ö".equals(convert("16,409.02")));
+        System.out.println("Ò¼ÇªËÁ°ÛÁã¾ÁÔªÎé½Ç".equals(convert("1,409.50")));
+        System.out.println("Â½ÇªÁãÆâÔªÒ¼½ÇËÁ·Ö".equals(convert("6,007.14")));
+        System.out.println("Ò¼ÇªÂ½°Û°ÆÊ°ÔªÈş½Ç·¡·Ö".equals(convert("1,680.32")));
+        System.out.println("Èş°Û·¡Ê°ÎéÔªÁãËÁ·Ö".equals(convert("325.04")));
+        System.out.println("ËÁÇªÈş°Û·¡Ê°Ò¼ÔªÕû".equals(convert("4,321.00")));
+        System.out.println("Ò¼·Ö".equals(convert("0.01")));
+        System.out.println(convert("1234,5678,9012.34").equals("Ò¼Çª·¡°ÛÈşÊ°ËÁÒÚÎéÇªÂ½°ÛÆâÊ°°ÆÍò¾ÁÇªÁãÒ¼Ê°·¡ÔªÈş½ÇËÁ·Ö"));
+        System.out.println(convert("1000,1000,1000.10").equals("Ò¼ÇªÒÚÁãÒ¼ÇªÍòÁãÒ¼ÇªÔªÒ¼½Ç"));
+        System.out.println(convert("9009,9009,9009.99").equals("¾ÁÇªÁã¾ÁÒÚ¾ÁÇªÁã¾ÁÍò¾ÁÇªÁã¾ÁÔª¾Á½Ç¾Á·Ö"));
+        System.out.println(convert("5432,0001,0001.01").equals("ÎéÇªËÁ°ÛÈşÊ°·¡ÒÚÁãÒ¼ÍòÁãÒ¼ÔªÁãÒ¼·Ö"));
+        System.out.println(convert("1000,0000,1110.00").equals("Ò¼ÇªÒÚÁãÒ¼ÇªÒ¼°ÛÒ¼Ê°ÔªÕû"));
+        System.out.println(convert("1010,0000,0001.11").equals("Ò¼ÇªÁãÒ¼Ê°ÒÚÁãÒ¼ÔªÒ¼½ÇÒ¼·Ö"));
+        System.out.println(convert("1000,0000,0000.01").equals("Ò¼ÇªÒÚÔªÁãÒ¼·Ö"));
     }
 }

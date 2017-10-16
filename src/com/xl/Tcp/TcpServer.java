@@ -7,19 +7,19 @@ import java.net.Socket;
 
 public class TcpServer {
     public static void main(String[] args) throws IOException {
-        // å»ºç«‹æœåŠ¡ç«¯SocketæœåŠ¡ï¼Œå¹¶ç›‘å¬ä¸€ä¸ªç«¯å£
+        // ½¨Á¢·şÎñ¶ËSocket·şÎñ£¬²¢¼àÌıÒ»¸ö¶Ë¿Ú
         ServerSocket ss = new ServerSocket(10003);
-        // é€šè¿‡acceptæ–¹æ³•è¿æ¥è¿‡æ¥çš„å®¢æˆ·ç«¯å¯¹è±¡ã€‚
+        // Í¨¹ıaccept·½·¨Á¬½Ó¹ıÀ´µÄ¿Í»§¶Ë¶ÔÏó¡£
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println("ipåœ°å€æ˜¯ï¼š" + ip);
-        // è·å–å®¢æˆ·ç«¯å‘é€è¿‡æ¥çš„æ•°æ®ï¼Œé‚£ä¹ˆè¦ç”¨å®¢æˆ·ç«¯çš„å¯¹è±¡è¯»å–æµè¯»å–å¯¹è±¡
+        System.out.println("ipµØÖ·ÊÇ£º" + ip);
+        // »ñÈ¡¿Í»§¶Ë·¢ËÍ¹ıÀ´µÄÊı¾İ£¬ÄÇÃ´ÒªÓÃ¿Í»§¶ËµÄ¶ÔÏó¶ÁÈ¡Á÷¶ÁÈ¡¶ÔÏó
         InputStream in = s.getInputStream();
         byte[] buf = new byte[1024];
         int len = in.read(buf);
         System.out.println(new String(buf, 0, len));
-        // udpé€šè¿‡æ•°æ®åŒ…è·å–å¯¹æ–¹IP
-        s.close(); // å…³å¯¹æ–¹,
-        ss.close();// å¯é€‰æ“ä½œ
+        // udpÍ¨¹ıÊı¾İ°ü»ñÈ¡¶Ô·½IP
+        s.close(); // ¹Ø¶Ô·½,
+        ss.close();// ¿ÉÑ¡²Ù×÷
     }
 }

@@ -10,8 +10,8 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
 /**
- * @author å¾ç«‹
- * @Decription åˆ°åº•å…³é—­äº†å—, closeæ–¹æ³•ä¹ŸæŠ›å¼‚å¸¸
+ * @author ÐìÁ¢
+ * @Decription µ½µ×¹Ø±ÕÁËÂð, close·½·¨Ò²Å×Òì³£
  * @date 2014-5-15
  */
 public class IOTest {
@@ -31,7 +31,7 @@ public class IOTest {
             while ((n = in.read(buf)) > 0)
                 out.write(buf, 0, n);
         } finally {
-            // è¿™æ˜¯ä¸å¥½çš„åšæ³•
+            // ÕâÊÇ²»ºÃµÄ×ö·¨
             if (in != null)
                 in.close();
             if (out != null)
@@ -50,7 +50,7 @@ public class IOTest {
             while ((n = in.read(buf)) > 0)
                 out.write(buf, 0, n);
         } finally {
-            // å»ºè®®
+            // ½¨Òé
             if (in != null)
                 try {
                     in.close();

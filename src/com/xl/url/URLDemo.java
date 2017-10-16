@@ -14,25 +14,25 @@ public class URLDemo {
         String s = "http://www.hao123.com.com/juruboba/";
         URL url = new URL(s);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setReadTimeout(5000); // 5ç§’è·å–ä¸åˆ°å°±è¶…æ—¶
+        conn.setReadTimeout(5000); // 5Ãë»ñÈ¡²»µ½¾Í³¬Ê±
         System.out.println(url.getProtocol() + url.getHost());
-        conn.setRequestProperty("if-modifyed-since", System.currentTimeMillis() + ""); // FIXME è¿˜ä¸æ¸…æ¥šè¿™æ˜¯åšå•¥çš„
+        conn.setRequestProperty("if-modifyed-since", System.currentTimeMillis() + ""); // FIXME »¹²»Çå³şÕâÊÇ×öÉ¶µÄ
         System.out.println(conn.getHeaderFields());
-        // HTTPURLæ‹¥æœ‰æ›´å¤šçš„æ–¹æ³•
-        int code = conn.getResponseCode();// 200ä¸ºè¿”å›æˆåŠŸ,404æ‰¾ä¸åˆ°é¡µé¢,500æœåŠ¡å™¨å‡ºé”™
-        System.out.println("responseçŠ¶æ€ç " + code);
-        System.out.println("è¯·æ±‚æ–¹å¼:" + conn.getRequestMethod());
-        System.out.println("ç¼–ç æ–¹å¼:" + conn.getHeaderField("Content-Type"));
+        // HTTPURLÓµÓĞ¸ü¶àµÄ·½·¨
+        int code = conn.getResponseCode();// 200Îª·µ»Ø³É¹¦,404ÕÒ²»µ½Ò³Ãæ,500·şÎñÆ÷³ö´í
+        System.out.println("response×´Ì¬Âë" + code);
+        System.out.println("ÇëÇó·½Ê½:" + conn.getRequestMethod());
+        System.out.println("±àÂë·½Ê½:" + conn.getHeaderField("Content-Type"));
         System.out.println(conn.getURL());
     }
 
     /**
-     * è·å–è¯¥ç±»ç›®å½•ä¸‹èµ„æºæ–‡ä»¶çš„URL
+     * »ñÈ¡¸ÃÀàÄ¿Â¼ÏÂ×ÊÔ´ÎÄ¼şµÄURL
      *
-     * @param clazz    ç±»
-     * @param resource 1.nullæˆ–""æˆ–/:è¿”å›ä¸åŒ…æ‹¬è‡ªå·±å¾—URL<br/>
-     *                 2.:å½“å‰classpathçš„ç»å¯¹è·¯å¾„
-     * @return URL .classæ–‡ä»¶å¯¹åº”çš„ç»å¯¹è·¯å¾„
+     * @param clazz    Àà
+     * @param resource 1.null»ò""»ò/:·µ»Ø²»°üÀ¨×Ô¼ºµÃURL<br/>
+     *                 2.:µ±Ç°classpathµÄ¾ø¶ÔÂ·¾¶
+     * @return URL .classÎÄ¼ş¶ÔÓ¦µÄ¾ø¶ÔÂ·¾¶
      */
     public static URL getURL(Class clazz, String resource) {
         if (resource == null) {
@@ -45,13 +45,13 @@ public class URLDemo {
     public void testGetURL() throws IOException {
         URL u = getURL(FileTool.class, "/");
         System.out.println(u); // file:/D:/mywork/javaSE/bin/util/1
-        System.out.println(u.getContent()); // å¦‚æœæœ‰èµ„æºjava.io.BufferedInputStream@983d95
+        System.out.println(u.getContent()); // Èç¹ûÓĞ×ÊÔ´java.io.BufferedInputStream@983d95
         System.out.println(u.getDefaultPort()); // -1
         System.out.println(u.getPath()); // /D:/mywork/javaSE/bin/util/1
         System.out.println(u.getFile()); // /D:/mywork/javaSE/bin/util/1
         File file = new File(u.getFile());
         System.out.println(file.getAbsolutePath());// D:\mywork\javaSE\bin\\util
         File parent = file.getParentFile().getParentFile();
-        System.out.println(parent); // å½“å‰å·¥ç¨‹çš„ç»å¯¹è·¯å¾„D:\mywork\javaSE
+        System.out.println(parent); // µ±Ç°¹¤³ÌµÄ¾ø¶ÔÂ·¾¶D:\mywork\javaSE
     }
 }

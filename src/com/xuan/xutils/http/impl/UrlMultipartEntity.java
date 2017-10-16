@@ -14,26 +14,26 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * åŸºäºURLConnectionå®ç°çš„æ–‡ä»¶ä¸Šä¼ è¯·æ±‚å®ä½“
+ * »ùÓÚURLConnectionÊµÏÖµÄÎÄ¼şÉÏ´«ÇëÇóÊµÌå
  * <p>
  * Created by xuan on 16/2/25.
  */
 public class UrlMultipartEntity {
     /**
-     * æ ‡å‡†çš„æ¢è¡Œç¬¦ç»“æŸ
+     * ±ê×¼µÄ»»ĞĞ·û½áÊø
      */
     private static final char[] CLRF = new char[]{'\r', '\n'};
     /**
-     * æ ‡å‡†çš„ä¸¤ä¸ªæ¢è¡Œç¬¦ç»“æŸ
+     * ±ê×¼µÄÁ½¸ö»»ĞĞ·û½áÊø
      */
     private static final char[] DOUBLE_CLRF = new char[]{'\r', '\n', '\r', '\n'};
     /**
-     * åˆ†å‰²çº¿
+     * ·Ö¸îÏß
      */
     private static final String BOUNDARY_START = "---------------------------HttpAPIFormBoundary";
 
     /**
-     * æŠŠæ•°æ®å†™åˆ°è¯·æ±‚ä½“ä¸­å»
+     * °ÑÊı¾İĞ´µ½ÇëÇóÌåÖĞÈ¥
      *
      * @param connection
      * @param request
@@ -44,7 +44,7 @@ public class UrlMultipartEntity {
         // Open the connection and set the correct header
         connection.setDoOutput(true);
         connection.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
-        connection.setRequestMethod("POST");// POSTæ¨¡å¼
+        connection.setRequestMethod("POST");// POSTÄ£Ê½
         connection.setUseCaches(false);
         boundary = "--" + boundary;
         OutputStream os = connection.getOutputStream();

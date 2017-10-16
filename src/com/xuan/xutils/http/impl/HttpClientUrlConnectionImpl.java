@@ -14,144 +14,22 @@ import java.net.URLConnection;
 import java.util.Map;
 
 /**
- * 用UrlConnect方式实现HTTP请求
+ * ��UrlConnect��ʽʵ��HTTP����
  * <p>
  * Created by xuan on 16/2/24.
  */
 public class HttpClientUrlConnectionImpl implements HttpClient {
     /**
-     * 缓存字节数
+     * �����ֽ���
      */
     private static final int BUFFER_SIZE = 1024;
     /**
-     * 表单POST提交
+     * ��POST�ύ
      */
     private static final String METHOD_POST = "POST";
 
-    @Override
-    public HttpResponse getDowload(HttpRequest request) {
-        try {
-            URL url = new URL(request.getGetUrl());
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            initRequest(conn, request);
-            return readResponseForFile(conn, request);
-        } catch (Exception e) {
-            e.printStackTrace();
-            HttpResponse response = new HttpResponse();
-            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
-            response.setReasonPhrase(e.getMessage());
-            return response;
-        }
-    }
-
-    @Override
-    public HttpResponse postDowload(HttpRequest request) {
-        try {
-            URL url = new URL(request.getUrl());
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod(METHOD_POST);// POST模式
-            conn.setDoOutput(true);//发送POST请求必须设置如下
-            conn.setUseCaches(false);
-            initRequest(conn, request);
-            //设置POST参数
-            putParamsToOutputStream(conn, request);
-            return readResponseForFile(conn, request);
-        } catch (Exception e) {
-            HttpResponse response = new HttpResponse();
-            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
-            response.setReasonPhrase(e.getMessage());
-            return response;
-        }
-    }
-
-    @Override
-    public HttpResponse get(HttpRequest request) {
-        try {
-            URL url = new URL(request.getGetUrl());
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            initRequest(conn, request);
-            return readResponseForString(conn, request.getEncode());
-        } catch (Exception e) {
-            HttpResponse response = new HttpResponse();
-            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
-            response.setReasonPhrase(e.getMessage());
-            return response;
-        }
-    }
-
-    @Override
-    public HttpResponse post(HttpRequest request) {
-        try {
-            URL url = new URL(request.getUrl());
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod(METHOD_POST);// POST模式
-            conn.setDoOutput(true);//发送POST请求必须设置如下
-            conn.setUseCaches(false);
-            initRequest(conn, request);
-            //设置POST参数
-            putParamsToOutputStream(conn, request);
-            return readResponseForString(conn, request.getEncode());
-        } catch (Exception e) {
-            HttpResponse response = new HttpResponse();
-            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
-            response.setReasonPhrase(e.getMessage());
-            return response;
-        }
-    }
-
-    @Override
-    public HttpResponse postJson(HttpRequest request) {
-        try {
-            URL url = new URL(request.getUrl());
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod(METHOD_POST);// POST模式
-            conn.setDoOutput(true);//发送POST请求必须设置如下
-            initRequest(conn, request);
-            //设置POST参数
-            putParamsToOutputStreamForJson(conn, request);
-            return readResponseForString(conn, request.getEncode());
-        } catch (Exception e) {
-            HttpResponse response = new HttpResponse();
-            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
-            response.setReasonPhrase(e.getMessage());
-            return response;
-        }
-    }
-
-    @Override
-    public HttpResponse upload(HttpRequest request) {
-        try {
-            URL url = new URL(request.getUrl());
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            initRequest(conn, request);
-            putBodyEntityToOutputStream(conn, request);
-            return readResponseForString(conn, request.getEncode());
-        } catch (Exception e) {
-            HttpResponse response = new HttpResponse();
-            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
-            response.setReasonPhrase(e.getMessage());
-            return response;
-        }
-    }
-
     /**
-     * 请求参数设置
-     *
-     * @param conn
-     * @param request
-     */
-    private void initRequest(URLConnection conn, HttpRequest request) {
-        //头部设置
-        for (Map.Entry<String, String> entry : request.getHeaderMap().entrySet()) {
-            conn.addRequestProperty(entry.getKey(), entry.getValue());
-        }
-        //超时设置
-        conn.setConnectTimeout(request.getConnectionTimeout());
-        conn.setReadTimeout(request.getReadTimeout());
-    }
-
-    /**
-     * 把请求体放到输出流中
+     * ��������ŵ��������
      *
      * @param conn
      * @param request
@@ -166,7 +44,7 @@ public class HttpClientUrlConnectionImpl implements HttpClient {
     }
 
     /**
-     * 以Json的格式放入请求体
+     * ��Json�ĸ�ʽ����������
      *
      * @param conn
      * @param request
@@ -191,7 +69,7 @@ public class HttpClientUrlConnectionImpl implements HttpClient {
     }
 
     /**
-     * 把参数当作普通表单放到OutputStream中去
+     * �Ѳ���������ͨ���ŵ�OutputStream��ȥ
      *
      * @param conn
      * @param request
@@ -215,7 +93,7 @@ public class HttpClientUrlConnectionImpl implements HttpClient {
     }
 
     /**
-     * 读取结果为文件
+     * ��ȡ���Ϊ�ļ�
      *
      * @param conn
      * @param request
@@ -224,7 +102,7 @@ public class HttpClientUrlConnectionImpl implements HttpClient {
     private static HttpResponse readResponseForFile(HttpURLConnection conn, HttpRequest request) {
         boolean hasListener = false;
         if (null != request.getDownloadListener()) {
-            //设置了下载监听,需要非压缩的方式下载,这样可以提前计算出文件大小
+            //���������ؼ���,��Ҫ��ѹ���ķ�ʽ����,����������ǰ������ļ���С
             hasListener = true;
         }
         HttpResponse response = new HttpResponse();
@@ -234,21 +112,21 @@ public class HttpClientUrlConnectionImpl implements HttpClient {
             inStream = conn.getInputStream();
             byte[] buffer = new byte[BUFFER_SIZE];
             int len = 0;
-            int curCount = 0;//当前字节量
-            int total = -1;//总字节量
+            int curCount = 0;//��ǰ�ֽ���
+            int total = -1;//���ֽ���
             if (hasListener) {
                 total = conn.getContentLength();
             }
             while ((len = inStream.read(buffer)) != -1) {
                 curCount += len;
                 if (hasListener) {
-                    // 加载中回调
+                    // �����лص�
                     request.getDownloadListener().callBack(total, curCount, false);
                 }
                 outStream.write(buffer, 0, len);
             }
             if (hasListener) {
-                // 加载中回调
+                // �����лص�
                 request.getDownloadListener().callBack(total, curCount, true);
             }
             response.setStatusCode(conn.getResponseCode());
@@ -272,7 +150,7 @@ public class HttpClientUrlConnectionImpl implements HttpClient {
     }
 
     /**
-     * 从HttpURLConnection对象中读取数据,并使用指定的编码进行编码成字符串
+     * ��HttpURLConnection�����ж�ȡ����,��ʹ��ָ���ı�����б�����ַ���
      *
      * @param conn
      * @param encode
@@ -305,5 +183,127 @@ public class HttpClientUrlConnectionImpl implements HttpClient {
             }
         }
         return response;
+    }
+
+    @Override
+    public HttpResponse getDowload(HttpRequest request) {
+        try {
+            URL url = new URL(request.getGetUrl());
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            initRequest(conn, request);
+            return readResponseForFile(conn, request);
+        } catch (Exception e) {
+            e.printStackTrace();
+            HttpResponse response = new HttpResponse();
+            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
+            response.setReasonPhrase(e.getMessage());
+            return response;
+        }
+    }
+
+    @Override
+    public HttpResponse postDowload(HttpRequest request) {
+        try {
+            URL url = new URL(request.getUrl());
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod(METHOD_POST);// POSTģʽ
+            conn.setDoOutput(true);//����POST���������������
+            conn.setUseCaches(false);
+            initRequest(conn, request);
+            //����POST����
+            putParamsToOutputStream(conn, request);
+            return readResponseForFile(conn, request);
+        } catch (Exception e) {
+            HttpResponse response = new HttpResponse();
+            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
+            response.setReasonPhrase(e.getMessage());
+            return response;
+        }
+    }
+
+    @Override
+    public HttpResponse get(HttpRequest request) {
+        try {
+            URL url = new URL(request.getGetUrl());
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            initRequest(conn, request);
+            return readResponseForString(conn, request.getEncode());
+        } catch (Exception e) {
+            HttpResponse response = new HttpResponse();
+            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
+            response.setReasonPhrase(e.getMessage());
+            return response;
+        }
+    }
+
+    @Override
+    public HttpResponse post(HttpRequest request) {
+        try {
+            URL url = new URL(request.getUrl());
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod(METHOD_POST);// POSTģʽ
+            conn.setDoOutput(true);//����POST���������������
+            conn.setUseCaches(false);
+            initRequest(conn, request);
+            //����POST����
+            putParamsToOutputStream(conn, request);
+            return readResponseForString(conn, request.getEncode());
+        } catch (Exception e) {
+            HttpResponse response = new HttpResponse();
+            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
+            response.setReasonPhrase(e.getMessage());
+            return response;
+        }
+    }
+
+    @Override
+    public HttpResponse postJson(HttpRequest request) {
+        try {
+            URL url = new URL(request.getUrl());
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod(METHOD_POST);// POSTģʽ
+            conn.setDoOutput(true);//����POST���������������
+            initRequest(conn, request);
+            //����POST����
+            putParamsToOutputStreamForJson(conn, request);
+            return readResponseForString(conn, request.getEncode());
+        } catch (Exception e) {
+            HttpResponse response = new HttpResponse();
+            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
+            response.setReasonPhrase(e.getMessage());
+            return response;
+        }
+    }
+
+    @Override
+    public HttpResponse upload(HttpRequest request) {
+        try {
+            URL url = new URL(request.getUrl());
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            initRequest(conn, request);
+            putBodyEntityToOutputStream(conn, request);
+            return readResponseForString(conn, request.getEncode());
+        } catch (Exception e) {
+            HttpResponse response = new HttpResponse();
+            response.setStatusCode(HttpResponse.STATUS_CODE_FAIL);
+            response.setReasonPhrase(e.getMessage());
+            return response;
+        }
+    }
+
+    /**
+     * �����������
+     *
+     * @param conn
+     * @param request
+     */
+    private void initRequest(URLConnection conn, HttpRequest request) {
+        //ͷ������
+        for (Map.Entry<String, String> entry : request.getHeaderMap().entrySet()) {
+            conn.addRequestProperty(entry.getKey(), entry.getValue());
+        }
+        //��ʱ����
+        conn.setConnectTimeout(request.getConnectionTimeout());
+        conn.setReadTimeout(request.getReadTimeout());
     }
 }

@@ -13,34 +13,34 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * 默认的简单缓存实现类
+ * Ĭ�ϵļ򵥻���ʵ����
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 上午10:44:23 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ����10:44:23 $
  */
 public class SimpleCache implements Cache<String, Object> {
     /**
-     * 缓存类的名称
-     */
-    private final String CACHE_NAME = SimpleCache.class.getName();
-    /**
-     * 内部 map 的个数，根据 key 的 hash 对 moduleSize 取模来定位到具体的某一个内部的 map，减少阻塞情况发生。
+     * �ڲ� map �ĸ��������� key �� hash �� moduleSize ȡģ����λ�������ĳһ���ڲ��� map�������������������
      */
     private static final int MODULE_SIZE = 10;
     /**
-     * 清理超时缓存的服务运行的时间间隔，默认 10 分钟
+     * ����ʱ����ķ������е�ʱ������Ĭ�� 10 ����
      */
     private static final int EXPIRY_INTERVAL = 10;
     /**
-     * 具体存放缓存的 map 数组
+     * �����������
+     */
+    private final String CACHE_NAME = SimpleCache.class.getName();
+    /**
+     * �����Ż���� map ����
      */
     private final ConcurrentMap<String, Object>[] cacheMaps;
     /**
-     * 存放缓存超时时间的 map
+     * ��Ż��泬ʱʱ��� map
      */
     private final Map<String, Long> cacheTimeMap;
     /**
-     * 清理超时缓存的服务
+     * ����ʱ����ķ���
      */
     private final ScheduledExecutorService executorService;
 
@@ -206,13 +206,13 @@ public class SimpleCache implements Cache<String, Object> {
         long countValue = 0;
         AtomicLong counter = (AtomicLong) get(key);
         if (counter == null) {
-            // 表示计数器还没有存在，创建计数器并尝试添加
+            // ��ʾ��������û�д��ڣ��������������������
             AtomicLong newCounter = new AtomicLong(initValue);
             counter = (AtomicLong) getCacheMap(key).putIfAbsent(key, newCounter);
             if (counter == null) {
-                // 表示计数器添加成功，采用新的计数器
+                // ��ʾ��������ӳɹ��������µļ�����
                 counter = newCounter;
-                cacheTimeMap.put(key, -1L);// 将此数据标记为永不过期
+                cacheTimeMap.put(key, -1L);// �������ݱ��Ϊ��������
             }
         }
         countValue = counter.addAndGet(delta);
@@ -282,7 +282,7 @@ public class SimpleCache implements Cache<String, Object> {
     }
 
     /**
-     * 清理获取缓存的任务
+     * �����ȡ���������
      */
     private class CacheExpiryTask implements Runnable {
         @Override

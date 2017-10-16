@@ -11,7 +11,7 @@ public class DateDemo {
         Date d2 = d;
         System.out.println(d.getMonth());
         System.out.println(d.getDay());
-        System.out.println(d2.compareTo(d));//ç›¸ç­‰å°±è¾“å‡º
+        System.out.println(d2.compareTo(d));//ÏàµÈ¾ÍÊä³ö
         // 0
     }
 }

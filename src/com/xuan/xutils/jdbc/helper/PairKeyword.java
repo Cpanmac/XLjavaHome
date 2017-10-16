@@ -1,10 +1,10 @@
 package com.xuan.xutils.jdbc.helper;
 
 /**
- * å…³é”®å­—å¯¹ï¼Œç”¨äºåˆ—è¡¨æ’åº
+ * ¹Ø¼ü×Ö¶Ô£¬ÓÃÓÚÁĞ±íÅÅĞò
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:48:29 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:48:29 $
  */
 public class PairKeyword {
     private final String name;

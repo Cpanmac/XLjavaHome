@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * å¿½ç•¥å¤§å°å†™çš„Map<br>
- * å¯¹KEYå¿½ç•¥å¤§å°å†™ï¼Œget("Value")å’Œget("value")è·å¾—çš„å€¼ç›¸åŒï¼Œputè¿›å…¥çš„å€¼ä¹Ÿä¼šè¢«è¦†ç›–
+ * ºöÂÔ´óĞ¡Ğ´µÄMap<br>
+ * ¶ÔKEYºöÂÔ´óĞ¡Ğ´£¬get("Value")ºÍget("value")»ñµÃµÄÖµÏàÍ¬£¬put½øÈëµÄÖµÒ²»á±»¸²¸Ç
  *
- * @param <K> é”®ç±»å‹
- * @param <V> å€¼ç±»å‹
+ * @param <K> ¼üÀàĞÍ
+ * @param <V> ÖµÀàĞÍ
  * @author Looly
  * @since 3.0.2
  */
@@ -16,33 +16,33 @@ public class CaseInsensitiveMap<K, V> extends HashMap<K, V> {
     private static final long serialVersionUID = 4043263744224569870L;
 
     /**
-     * æ„é€ 
+     * ¹¹Ôì
      */
     public CaseInsensitiveMap() {
         super();
     }
 
     /**
-     * æ„é€ 
+     * ¹¹Ôì
      *
-     * @param initialCapacity åˆå§‹å¤§å°
-     * @param loadFactor      åŠ è½½å› å­
+     * @param initialCapacity ³õÊ¼´óĞ¡
+     * @param loadFactor      ¼ÓÔØÒò×Ó
      */
     public CaseInsensitiveMap(int initialCapacity, float loadFactor) {
         super(initialCapacity, loadFactor);
     }
 
     /**
-     * æ„é€ 
+     * ¹¹Ôì
      *
-     * @param initialCapacity åˆå§‹å¤§å°
+     * @param initialCapacity ³õÊ¼´óĞ¡
      */
     public CaseInsensitiveMap(int initialCapacity) {
         this(initialCapacity, 0.75f);
     }
 
     /**
-     * æ„é€ 
+     * ¹¹Ôì
      *
      * @param m Map
      */
@@ -52,10 +52,10 @@ public class CaseInsensitiveMap<K, V> extends HashMap<K, V> {
     }
 
     /**
-     * å°†Keyè½¬ä¸ºå°å†™
+     * ½«Key×ªÎªĞ¡Ğ´
      *
      * @param key KEY
-     * @return å°å†™KEy
+     * @return Ğ¡Ğ´KEy
      */
     private static Object lowerCaseKey(Object key) {
         if (key instanceof CharSequence) {

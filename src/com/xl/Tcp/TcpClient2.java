@@ -7,10 +7,10 @@ public class TcpClient2 {
     public static void main(String[] args) throws Exception {
         Socket s = new Socket("127.0.0.1", 10004);
         java.io.OutputStream out = s.getOutputStream();
-        out.write("æœåŠ¡ç«¯ï¼Œä½ å¥½ï¼Œæˆ‘æ˜¯å®¢æˆ·ç«¯ã€‚".getBytes());
-        //è¯»
+        out.write("·şÎñ¶Ë£¬ÄãºÃ£¬ÎÒÊÇ¿Í»§¶Ë¡£".getBytes());
+        //¶Á
         InputStream in = s.getInputStream();
-        //å»ºç«‹ç¼“å†²åŒº
+        //½¨Á¢»º³åÇø
         byte[] buf = new byte[1024];
         int len = in.read(buf);
         System.out.println(new String(buf, 0, len));

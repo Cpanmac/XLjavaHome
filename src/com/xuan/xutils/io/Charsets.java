@@ -3,32 +3,12 @@ package com.xuan.xutils.io;
 import java.nio.charset.Charset;
 
 /**
- * 常用编码工具
+ * ���ñ��빤��
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2013-9-4 下午7:32:50 $
+ * @version $Revision: 1.0 $, $Date: 2013-9-4 ����7:32:50 $
  */
 public class Charsets {
-    /**
-     * 获取字符编码对象
-     *
-     * @param charset
-     * @return
-     */
-    public static Charset toCharset(Charset charset) {
-        return charset == null ? Charset.defaultCharset() : charset;
-    }
-
-    /**
-     * 获取字符编码对象
-     *
-     * @param charset
-     * @return
-     */
-    public static Charset toCharset(String charset) {
-        return charset == null ? Charset.defaultCharset() : Charset.forName(charset);
-    }
-
     public static final String UTF8 = "UTF-8";
     public static final String ISO88591 = "ISO-8859-1";
     public static final String USASCII = "US-ASCII";
@@ -41,4 +21,24 @@ public class Charsets {
     public static final Charset UTF_16 = Charset.forName(UTF16);
     public static final Charset UTF_16BE = Charset.forName(UTF16BE);
     public static final Charset UTF_16LE = Charset.forName(UTF16LE);
+
+    /**
+     * ��ȡ�ַ��������
+     *
+     * @param charset
+     * @return
+     */
+    public static Charset toCharset(Charset charset) {
+        return charset == null ? Charset.defaultCharset() : charset;
+    }
+
+    /**
+     * ��ȡ�ַ��������
+     *
+     * @param charset
+     * @return
+     */
+    public static Charset toCharset(String charset) {
+        return charset == null ? Charset.defaultCharset() : Charset.forName(charset);
+    }
 }

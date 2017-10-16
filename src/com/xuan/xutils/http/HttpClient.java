@@ -1,13 +1,13 @@
 package com.xuan.xutils.http;
 
 /**
- * HTTè®¿é—®é€šç”¨æ¥å£
+ * HTT·ÃÎÊÍ¨ÓÃ½Ó¿Ú
  *
  * @author xuan
  */
 public interface HttpClient {
     /**
-     * POSTè¯·æ±‚ï¼ŒJsonæ”¾åˆ°è¯·æ±‚ä½“é‡Œé¢
+     * POSTÇëÇó£¬Json·Åµ½ÇëÇóÌåÀïÃæ
      *
      * @param bpRequest
      * @return
@@ -15,7 +15,7 @@ public interface HttpClient {
     HttpResponse postJson(HttpRequest bpRequest);
 
     /**
-     * POSTè¯·æ±‚ï¼Œæ™®é€šå‚æ•°çš„æ–¹å¼æäº¤
+     * POSTÇëÇó£¬ÆÕÍ¨²ÎÊıµÄ·½Ê½Ìá½»
      *
      * @param bpRequest
      * @return
@@ -23,7 +23,7 @@ public interface HttpClient {
     HttpResponse post(HttpRequest bpRequest);
 
     /**
-     * GETè¯·æ±‚
+     * GETÇëÇó
      *
      * @param bpRequest
      * @return
@@ -31,7 +31,7 @@ public interface HttpClient {
     HttpResponse get(HttpRequest bpRequest);
 
     /**
-     * ä¸‹è½½ï¼Œç”¨çš„æ˜¯GETè¯·æ±‚
+     * ÏÂÔØ£¬ÓÃµÄÊÇGETÇëÇó
      *
      * @param bpRequest
      * @return
@@ -39,7 +39,7 @@ public interface HttpClient {
     HttpResponse getDowload(HttpRequest bpRequest);
 
     /**
-     * ä¸‹è½½ï¼Œç”¨çš„æ˜¯POSTè¯·æ±‚
+     * ÏÂÔØ£¬ÓÃµÄÊÇPOSTÇëÇó
      *
      * @param bpRequest
      * @return
@@ -47,7 +47,7 @@ public interface HttpClient {
     HttpResponse postDowload(HttpRequest bpRequest);
 
     /**
-     * æ¨¡æ‹Ÿè¡¨å•ä¸Šä¼ æ–‡ä»¶
+     * Ä£Äâ±íµ¥ÉÏ´«ÎÄ¼ş
      *
      * @param bpRequest
      * @return

@@ -5,11 +5,11 @@ import lombok.Data;
 @Data
 public class ImageEntity {
     /**
-     * æ ‡é¢˜
+     * ±êÌâ
      */
     private String title;
     /**
-     * åœ°å€
+     * µØÖ·
      */
     private String url;
 }

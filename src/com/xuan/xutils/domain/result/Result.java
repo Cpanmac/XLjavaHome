@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * è¿”å›ç»“æœ
+ * ·µ»Ø½á¹û
  * <p>
  * Created by xuan on 17/8/2.
  */
@@ -14,12 +14,12 @@ public class Result extends BaseResult {
     private static final long serialVersionUID = 1L;
 
     /**
-     * æ„å»ºç»“æœ
+     * ¹¹½¨½á¹û
      *
-     * @param codeEnum ç»“æœçŠ¶æ€ç æšä¸¾
-     * @param bizCode  ä¸šåŠ¡ç 
-     * @param message  æç¤º
-     * @param result   ç»“æœå¯¹è±¡
+     * @param codeEnum ½á¹û×´Ì¬ÂëÃ¶¾Ù
+     * @param bizCode  ÒµÎñÂë
+     * @param message  ÌáÊ¾
+     * @param result   ½á¹û¶ÔÏó
      * @return
      */
     public static Result obtain(CodeEnum codeEnum, String bizCode, String message, Object result) {
@@ -35,7 +35,7 @@ public class Result extends BaseResult {
     }
 
     /**
-     * æˆåŠŸ
+     * ³É¹¦
      *
      * @param message
      * @param result
@@ -46,17 +46,17 @@ public class Result extends BaseResult {
     }
 
     /**
-     * æˆåŠŸ
+     * ³É¹¦
      *
      * @param result
      * @return
      */
     public static Result obtainSuccess(Object result) {
-        return Result.obtainSuccess("æˆåŠŸ", result);
+        return Result.obtainSuccess("³É¹¦", result);
     }
 
     /**
-     * æˆåŠŸ
+     * ³É¹¦
      *
      * @return
      */
@@ -65,7 +65,7 @@ public class Result extends BaseResult {
     }
 
     /**
-     * æˆåŠŸ
+     * ³É¹¦
      *
      * @param keyList
      * @param valList
@@ -93,7 +93,7 @@ public class Result extends BaseResult {
     }
 
     /**
-     * æˆåŠŸ
+     * ³É¹¦
      *
      * @param key
      * @param value
@@ -108,7 +108,7 @@ public class Result extends BaseResult {
     }
 
     /**
-     * æˆåŠŸ
+     * ³É¹¦
      *
      * @param list
      * @return
@@ -118,7 +118,7 @@ public class Result extends BaseResult {
     }
 
     /**
-     * å¤±è´¥
+     * Ê§°Ü
      *
      * @param bizCode
      * @param message
@@ -129,7 +129,7 @@ public class Result extends BaseResult {
     }
 
     /**
-     * å¤±è´¥
+     * Ê§°Ü
      *
      * @param message
      * @return
