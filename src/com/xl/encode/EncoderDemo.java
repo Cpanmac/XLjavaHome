@@ -4,32 +4,30 @@ import com.xl.util.FileTool;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: 徐立
+ * User: 寰愮珛
  * Date: 2017-08-14
  * Time: 12:38
  * To change this template use File | Settings | File Templates.
  */
 public class EncoderDemo {
-    private String gbkPath = FileTool.getCurrentPath(getClass()) + "\\gbk";
-    private File gbkFile = new File(gbkPath);
-    private String utfPath = FileTool.getCurrentPath(getClass()) + "\\utf-8";
-    private File utfFile = new File(utfPath);
+    private File gbkFile = FileTool.getResourceFile("/gbk.txt");
+    private File utfFile = FileTool.getResourceFile("/utf-8.txt");
 
     /**
-     * 将指定目录下的GBK文件转为UTF-8文件
+     * 灏嗘寚瀹氱洰褰曚笅鐨凣BK鏂囦欢杞负UTF-8鏂囦欢
      *
      * @throws IOException
      */
     @Test
-    public void getFileTest() throws IOException {
+    public void getFileTest() throws IOException, InterruptedException {
         System.out.println(FileTool.getCurrentPath(getClass()));
-        System.out.println(FileTool.getFileEncode(gbkPath));
-        System.out.println(FileTool.getFileEncode(utfPath));
         List<File> fileList = FileTool.queryAll(FileTool.getProjectPath(), "java");
         for (int i = 0; i < fileList.size(); i++) {
             File file = fileList.get(i);
@@ -37,13 +35,13 @@ public class EncoderDemo {
         }
     }
 
-    /**
-     * 转变文件   TODO
-     */
     @Test
-    public void fileTest() throws IOException {
-        System.out.println(FileTool.read(gbkFile));
-        FileTool.write(gbkFile, FileTool.read(gbkFile) + "1111");
-        System.out.println(FileTool.read(utfFile));
+    public void aTest() throws IOException {
+        File file = new File("D:\\code\\javaSE\\src\\com\\xl\\util\\FileTool.java");
+        String content = FileTool.getContent(file);
+        OutputStreamWriter w1 = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
+        w1.write(content);
+        w1.flush();
+        w1.close();
     }
 }

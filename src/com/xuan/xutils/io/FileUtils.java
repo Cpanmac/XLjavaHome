@@ -14,10 +14,11 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * 文件操作工具类
- *
- * @author xuan
- * @version $Revision: 1.0 $, $Date: 2013-9-4 下午7:24:34 $
+ * Created with IntelliJ IDEA.文件操作工具类
+ * User: 徐立
+ * Date: 2017-10-16
+ * Time: 11:10
+ * To change this template use File | Settings | File Templates.
  */
 public abstract class FileUtils {
     public static final String EMPTY = "";

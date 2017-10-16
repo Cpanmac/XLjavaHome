@@ -1,5 +1,6 @@
 package fastexcel;
 
+import com.github.sd4324530.fastexcel.FastExcel;
 import fastexcel.entity.MyTest;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.Test;

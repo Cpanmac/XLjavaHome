@@ -11,9 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URLDecoder;
 
-/**
- * Created by –Ï¡¢ on 4/30 0030.
- */
 public class CodingFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -33,6 +30,5 @@ public class CodingFilter implements Filter {
 
     @Override
     public void destroy() {
-
     }
 }

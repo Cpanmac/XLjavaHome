@@ -5,10 +5,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class MD5Tool {
     /**
-     * ×Ö·û´®MD5¼ÓÃÜ
-     *
-     * @param s
-     * @return
+     * å­—ç¬¦ä¸²MD5åŠ å¯†     *     * @param s     * @return
      */
     public static String toMD5(String s) {
         String str = null;
