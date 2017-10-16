@@ -18,9 +18,14 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class EncoderDemo {
-    private File gbkFile = FileTool.getResourceFile("/gbk.txt");
-    private File utfFile = FileTool.getResourceFile("/utf-8.txt");
+    private File gbkFile = FileTool.getResourceFile("gbk.txt");
+    private File utfFile = FileTool.getResourceFile("utf-8.txt");
 
+    @Test
+    public void pathTest() {
+        System.out.println(gbkFile.getAbsolutePath());
+        System.out.println(utfFile.getAbsolutePath());
+    }
     /**
      * 将指定目录下其他格式文件为UTF-8文件
      *

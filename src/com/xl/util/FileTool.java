@@ -82,7 +82,7 @@ public class FileTool {
      * @return
      */
     public static File getResourceFile(String path) {
-        return new File(FileTool.class.getResource(path).getFile());
+        return new File(FileTool.class.getClassLoader().getResource(path).getFile());
     }
 
     /**
@@ -92,7 +92,7 @@ public class FileTool {
      * @return
      */
     public static InputStream getResourceInputStream(String path) {
-        return FileTool.class.getResourceAsStream("/" + path);
+        return FileTool.class.getClassLoader().getResourceAsStream(path);
     }
 
     /**

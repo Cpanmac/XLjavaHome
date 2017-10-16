@@ -1,13 +1,6 @@
 package com.xl.generic;
 
-class Worker {
-}
-
-class Student {
-}
-
-class Tool {
-}
+import javafx.concurrent.Worker;
 
 /*
  * 泛型前做法 class Tool { private Object obj; publlic void setWoker(Object obj) {
