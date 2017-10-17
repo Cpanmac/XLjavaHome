@@ -13,15 +13,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /*
- ²Ëµ¥Ãæ¿ÉÒÔÌí¼Ó²Ëµ¥ÌõÓÖ¿ÉÒÔÌí¼Ó²Ëµ¥£¬Menu extends MenuItem,Menu add(MenuItem)
+ èœå•é¢å¯ä»¥æ·»åŠ èœå•æ¡åˆå¯ä»¥æ·»åŠ èœå•ï¼ŒMenu extends MenuItem,Menu add(MenuItem)
  */
 public class MyMenuDemo {
     private Frame f;
-    private Menu FileMenu; // ÎÄ¼ş²Ëµ¥
-    private MenuBar mb, bar; // ²Ëµ¥Ìõ
-    private MenuItem openItem, saveItem, closeItem; // ´ò¿ª£¬±£´æ£¬¹Ø±ÕÌõÄ¿
-    private FileDialog openDia, saveDia; // ÉèÖÃ¶Ô»°¿òÓÃÓë´ò¿ªÎÄ¼ş£¬±£´æÎÄ¼ş
-    private TextArea ta; // Ìí¼ÓÎÄ±¾ÇøÓòÓÃÓÚ´ò¿ªÑ¡ÔñµÄÎÄ¼ş
+    private Menu FileMenu; // æ–‡ä»¶èœå•
+    private MenuBar mb, bar; // èœå•æ¡
+    private MenuItem openItem, saveItem, closeItem; // æ‰“å¼€ï¼Œä¿å­˜ï¼Œå…³é—­æ¡ç›®
+    private FileDialog openDia, saveDia; // è®¾ç½®å¯¹è¯æ¡†ç”¨ä¸æ‰“å¼€æ–‡ä»¶ï¼Œä¿å­˜æ–‡ä»¶
+    private TextArea ta; // æ·»åŠ æ–‡æœ¬åŒºåŸŸç”¨äºæ‰“å¼€é€‰æ‹©çš„æ–‡ä»¶
     private File file;
 
     MyMenuDemo() {
@@ -35,81 +35,81 @@ public class MyMenuDemo {
     public void init() {
         f = new Frame("myWindow");
         f.setBounds(300, 100, 600, 600);
-        // f.setLayout(new FlowLayout()); // Á÷Ê½²¼¾Ö,Ìí¼ÓÎÄ±¾¿òµÄ»°ºÜÄÑ¿´£¬ÓÃÄ¬ÈÏµÄ
-        // System.out.println(f.getExtendeState()); //·µ»ØintÀàĞÍ»ñÈ¡´Ë´°ÌåµÄ×´Ì¬¡£0
-        bar = new MenuBar();// ³õÊ¼»¯²Ëµ¥Ìõ
-        // m = new Menu("ÎÄ¼ş");
+        // f.setLayout(new FlowLayout()); // æµå¼å¸ƒå±€,æ·»åŠ æ–‡æœ¬æ¡†çš„è¯å¾ˆéš¾çœ‹ï¼Œç”¨é»˜è®¤çš„
+        // System.out.println(f.getExtendeState()); //è¿”å›intç±»å‹è·å–æ­¤çª—ä½“çš„çŠ¶æ€ã€‚0
+        bar = new MenuBar();// åˆå§‹åŒ–èœå•æ¡
+        // m = new Menu("æ–‡ä»¶");
         ta = new TextArea();
-        FileMenu = new Menu("ÎÄ¼ş"); // ³õÊ¼»¯²Ëµ¥
-        openItem = new MenuItem("´ò¿ª");
-        saveItem = new MenuItem("±£´æ");
-        closeItem = new MenuItem("ÍË³ö");
+        FileMenu = new Menu("æ–‡ä»¶"); // åˆå§‹åŒ–èœå•
+        openItem = new MenuItem("æ‰“å¼€");
+        saveItem = new MenuItem("ä¿å­˜");
+        closeItem = new MenuItem("é€€å‡º");
         FileMenu.add(openItem);
         FileMenu.add(saveItem);
         FileMenu.add(closeItem);
-        bar.add(FileMenu); // ½«²Ëµ¥ÌõÓë²Ëµ¥¹ØÁª
-        f.setMenuBar(bar);// ½«²Ëµ¥ÌõÌí¼Ó½ø¿ò¼Ü
-        openDia = new FileDialog(f, "ÎÒÒª´ò¿ª", FileDialog.LOAD); // ºóÃæµÄÄ£Ê½²»Ğ´Ò²¿ÉÒÔ£¬Ä¬ÈÏµÄ¾ÍÊÇ´ò¿ª
-        saveDia = new FileDialog(f, "ÎÒÒª±£´æ", FileDialog.SAVE); // ±£´æ
+        bar.add(FileMenu); // å°†èœå•æ¡ä¸èœå•å…³è”
+        f.setMenuBar(bar);// å°†èœå•æ¡æ·»åŠ è¿›æ¡†æ¶
+        openDia = new FileDialog(f, "æˆ‘è¦æ‰“å¼€", FileDialog.LOAD); // åé¢çš„æ¨¡å¼ä¸å†™ä¹Ÿå¯ä»¥ï¼Œé»˜è®¤çš„å°±æ˜¯æ‰“å¼€
+        saveDia = new FileDialog(f, "æˆ‘è¦ä¿å­˜", FileDialog.SAVE); // ä¿å­˜
         f.add(ta);
         myEvent();
         f.setVisible(true);
-        // ×Ô¼º²âÊÔ
-        // System.out.println(closeItem.isEnabled());// ÊÇ·ñÆôÓÃÁË²Ëµ¥Ïî
-        // System.out.println(closeItem.paramString()); // ·µ»Ø´Ë×´Ì¬µÄ×Ö·û´®
+        // è‡ªå·±æµ‹è¯•
+        // System.out.println(closeItem.isEnabled());// æ˜¯å¦å¯ç”¨äº†èœå•é¡¹
+        // System.out.println(closeItem.paramString()); // è¿”å›æ­¤çŠ¶æ€çš„å­—ç¬¦ä¸²
     }
 
     private void myEvent() {
         saveItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (file == null) {
-                    saveDia.setVisible(true); // ÏÔÊ¾±£´æ,¿ÉÒÔ²»ÏÔÊ¾£¬µ±ÎÄ¼ş²»´æÔÚÊ±ÏÔÊ¾
-                    String dirPath = saveDia.getDirectory();// »ñÈ¡´æ´¢µÄÂ·¾¶
-                    String fileName = saveDia.getFile();// »ñÈ¡´æ´¢µÄÎÄ¼şÃû
+                    saveDia.setVisible(true); // æ˜¾ç¤ºä¿å­˜,å¯ä»¥ä¸æ˜¾ç¤ºï¼Œå½“æ–‡ä»¶ä¸å­˜åœ¨æ—¶æ˜¾ç¤º
+                    String dirPath = saveDia.getDirectory();// è·å–å­˜å‚¨çš„è·¯å¾„
+                    String fileName = saveDia.getFile();// è·å–å­˜å‚¨çš„æ–‡ä»¶å
                     if (dirPath == null || fileName == null)
                         return;
                     file = new File(dirPath, fileName);
                 }
                 try {
                     BufferedWriter bufw = new BufferedWriter(new FileWriter(file));
-                    String text = ta.getText(); //½«ÎÄ±¾ÇøÓòµÄÎÄ±¾´«½øtext
+                    String text = ta.getText(); //å°†æ–‡æœ¬åŒºåŸŸçš„æ–‡æœ¬ä¼ è¿›text
                     bufw.write(text);
                     //	bufw.flush();
                     bufw.close();
                 } catch (IOException ex) {
-                    throw new RuntimeException("Ğ´ÈëÊ§°Ü£¡");
+                    throw new RuntimeException("å†™å…¥å¤±è´¥ï¼");
                 }
             }
         });
-        openItem.addActionListener(new ActionListener() // µã»÷´ò¿ªµÄÊÂ¼ş
+        openItem.addActionListener(new ActionListener() // ç‚¹å‡»æ‰“å¼€çš„äº‹ä»¶
         {
             public void actionPerformed(ActionEvent e) {
                 openDia.setVisible(true);
-                String dirPath = openDia.getDirectory();// »ñµÃ´ò¿ªÎÄ¼şµÄÂ·¾¶
+                String dirPath = openDia.getDirectory();// è·å¾—æ‰“å¼€æ–‡ä»¶çš„è·¯å¾„
                 String fileName = openDia.getFile();
                 System.out.println(dirPath + "  " + fileName);
-                // Èç¹ûÃ»Ñ¡ÔñÎÄ¼ş¾Í»á³ö¿ÕÖ¸ÕëÒì³££¬Ä¿Â¼ÓĞ£¬ÎÄ¼şÃ»ÓĞ¡£ËùÒÔµÃÅĞ¶Ï
+                // å¦‚æœæ²¡é€‰æ‹©æ–‡ä»¶å°±ä¼šå‡ºç©ºæŒ‡é’ˆå¼‚å¸¸ï¼Œç›®å½•æœ‰ï¼Œæ–‡ä»¶æ²¡æœ‰ã€‚æ‰€ä»¥å¾—åˆ¤æ–­
                 if (dirPath == null || fileName == null)
                     return;
-                ta.setText(""); // Ã¿´Î´ò¿ª¶¼Çå¿ÕÖ®Ç°µÄÎÄ±¾
+                ta.setText(""); // æ¯æ¬¡æ‰“å¼€éƒ½æ¸…ç©ºä¹‹å‰çš„æ–‡æœ¬
                 file = new File(dirPath, fileName);
                 try {
                     BufferedReader bufr = new BufferedReader(new FileReader(file));
                     String line = null;
                     while ((line = bufr.readLine()) != null) {
-                        ta.append(line + "\r\n"); // ½«¶ÁÈ¡µÄÎÄ¼şÌí¼Óµ½ÎÄ±¾ÖĞ
+                        ta.append(line + "\r\n"); // å°†è¯»å–çš„æ–‡ä»¶æ·»åŠ åˆ°æ–‡æœ¬ä¸­
                     }
                     bufr.close();
                 } catch (IOException ew) {
-                    throw new RuntimeException("¶ÁÈ¡Ê§°Ü");
+                    throw new RuntimeException("è¯»å–å¤±è´¥");
                 }
             }
         });
-        closeItem.addActionListener(new ActionListener() // µã»÷²Ëµ¥ÍË³ö´¥·¢µÄÊÂ¼ş
+        closeItem.addActionListener(new ActionListener() // ç‚¹å‡»èœå•é€€å‡ºè§¦å‘çš„äº‹ä»¶
         {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
+                // TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
                 System.exit(0);
             }
         });

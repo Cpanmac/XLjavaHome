@@ -5,13 +5,13 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Future;
 
 /**
- * 自定义一个线程池
+ * 鑷畾涔変竴涓嚎绋嬫睜
  * <p>
  * Created by xuan on 17/8/14.
  */
 public interface XThreadPool extends Executor {
     /**
-     * 提交任务
+     * 鎻愪氦浠诲姟
      *
      * @param task
      * @return
@@ -19,7 +19,7 @@ public interface XThreadPool extends Executor {
     Future<?> submit(Runnable task);
 
     /**
-     * 提交任务
+     * 鎻愪氦浠诲姟
      *
      * @param task
      * @param <T>

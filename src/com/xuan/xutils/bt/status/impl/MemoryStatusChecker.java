@@ -5,7 +5,7 @@ import com.xuan.xutils.bt.status.Status;
 import com.xuan.xutils.bt.status.StatusChecker;
 
 /**
- * ÄÚ´æÊ¹ÓÃ¼ì²é
+ * å†…å­˜ä½¿ç”¨æ£€æŸ¥
  * <p>
  * Created by xuan on 17/7/29.
  */
@@ -16,7 +16,7 @@ public class MemoryStatusChecker implements StatusChecker {
         long freeMemory = runtime.freeMemory();
         long totalMemory = runtime.totalMemory();
         long maxMemory = runtime.maxMemory();
-        boolean ok = (maxMemory - (totalMemory - freeMemory) > 2048); // Ê£Óà¿Õ¼äĞ¡ÓÚ2M±¨¾¯
+        boolean ok = (maxMemory - (totalMemory - freeMemory) > 2048); // å‰©ä½™ç©ºé—´å°äº2MæŠ¥è­¦
         String msg = "max:" + (maxMemory / 1024 / 1024) + "M,total:" + (totalMemory / 1024 / 1024) + "M,used:" + ((totalMemory / 1024 / 1024) - (freeMemory / 1024 / 1024)) + "M,free:" + (freeMemory / 1024 / 1024) + "M";
         return new Status(ok ? Level.OK : Level.WARN, msg);
     }

@@ -1,31 +1,31 @@
 package com.xl.util;
 
 /**
- * File Desc:    ÈÕÖ¾²Ù×÷ÀàĞÍ
+ * File Desc:    æ—¥å¿—æ“ä½œç±»å‹
  * Product Name: SIRM
  * Module Name:
- * Author:      ÍõÖ¾»ª
- * History:     11-7-30 created by ÍõÖ¾»ª
+ * Author:      ç‹å¿—å
+ * History:     11-7-30 created by ç‹å¿—å
  */
 public class LogOperateType {
     /**
-     * ²åÈë²Ù×÷
+     * æ’å…¥æ“ä½œ
      */
     public static int INSERT = 1;
     /**
-     * ¸üĞÂ²Ù×÷
+     * æ›´æ–°æ“ä½œ
      */
     public static int UPDATE = 2;
     /**
-     * É¾³ı²Ù×÷
+     * åˆ é™¤æ“ä½œ
      */
     public static int DELETE = 3;
     /**
-     * µÇÂ¼²Ù×÷
+     * ç™»å½•æ“ä½œ
      */
     public static int LOGIN = 4;
     /**
-     * ×¢Ïú²Ù×÷
+     * æ³¨é”€æ“ä½œ
      */
     public static int LOGOUT = 5;
 

@@ -1,21 +1,21 @@
 package com.xuan.xutils.bt.status;
 
 /**
- * ¼ì²éÖ¸±êµÄ×´Ì¬
+ * æ£€æŸ¥æŒ‡æ ‡çš„çŠ¶æ€
  * <p>
  * Created by xuan on 17/7/29.
  */
 public class Status {
     /**
-     * ×´Ì¬¼¶±ğ
+     * çŠ¶æ€çº§åˆ«
      */
     private final Level level;
     /**
-     * ×´Ì¬ÏûÏ¢
+     * çŠ¶æ€æ¶ˆæ¯
      */
     private final String message;
     /**
-     * ÃèÊö
+     * æè¿°
      */
     private final String description;
 

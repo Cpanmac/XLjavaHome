@@ -1,17 +1,17 @@
 package com.xuan.xutils.jdbc.helper;
 
 /**
- * SQLÖ´ĞĞ´¦ÀíÆ÷½Ó¿Ú, ÓÃÓÚ´¦Àí´øIN×Ó¾äµÄSQLÓï¾äÖĞINÖĞ²ÎÊı¹ı³¤µÄÎÊÌâ
+ * SQLæ‰§è¡Œå¤„ç†å™¨æ¥å£, ç”¨äºå¤„ç†å¸¦INå­å¥çš„SQLè¯­å¥ä¸­INä¸­å‚æ•°è¿‡é•¿çš„é—®é¢˜
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:14:51 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:14:51 $
  */
 public interface InSQLProcessor {
     /**
-     * Ö´ĞĞSQLµÄ·½·¨.
+     * æ‰§è¡ŒSQLçš„æ–¹æ³•.
      *
-     * @param sql  SQLÓï¾ä
-     * @param args Óï¾äÖĞµÄ²ÎÊı
+     * @param sql  SQLè¯­å¥
+     * @param args è¯­å¥ä¸­çš„å‚æ•°
      */
     void executeSQL(String sql, Object[] args);
 }

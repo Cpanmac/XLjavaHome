@@ -12,12 +12,12 @@ public class MapDemo {
         map.put("03", "zhangsan3");
         map.put("01", "zhangsan1");
         map.put("04", "zhangsan4");
-        // »ñÈ¡map¼¯ºÏµÄËùÓĞ¼üµÄSet¼¯ºÏ,keySet();
+        // è·å–mapé›†åˆçš„æ‰€æœ‰é”®çš„Seté›†åˆ,keySet();
         Set<Map.Entry<String, String>> entrySet = map.entrySet();
-        // ÓĞÁËSet¼¯ºÏ¡£¾Í¿ÉÒÔ»ñÈ¡Æäµü´úÆ÷
-        Iterator<Map.Entry<String, String>> it = entrySet.iterator(); // µü´úÆ÷ºÍSetÀïÃæÒ»ÖÂ
+        // æœ‰äº†Seté›†åˆã€‚å°±å¯ä»¥è·å–å…¶è¿­ä»£å™¨
+        Iterator<Map.Entry<String, String>> it = entrySet.iterator(); // è¿­ä»£å™¨å’ŒSeté‡Œé¢ä¸€è‡´
         while (it.hasNext()) {
-            Map.Entry<String, String> me = it.next(); // ÕâÒ²ÒªĞ´
+            Map.Entry<String, String> me = it.next(); // è¿™ä¹Ÿè¦å†™
             String key = me.getKey();
             String value = me.getValue();
             System.out.println("key:" + key + ",value:" + value);

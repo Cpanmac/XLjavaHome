@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ĞèÇóÃèÊö£ºÎÒÓĞÒ»¶¨ÊıÁ¿µÄ×Ö·û´®ÁĞ±í£¬ÏÖÔÚÒª¸øÕâĞ©×Ö·û´®¼ÓÉÏ"_deal".
+ * éœ€æ±‚æè¿°ï¼šæˆ‘æœ‰ä¸€å®šæ•°é‡çš„å­—ç¬¦ä¸²åˆ—è¡¨ï¼Œç°åœ¨è¦ç»™è¿™äº›å­—ç¬¦ä¸²åŠ ä¸Š"_deal".
  * <p>
  * Created by xuan on 17/8/24.
  */
@@ -25,7 +25,7 @@ public class ForkJoinTest {
     }
 
     /**
-     * ´®ĞĞ
+     * ä¸²è¡Œ
      *
      * @return
      */
@@ -43,7 +43,7 @@ public class ForkJoinTest {
     }
 
     /**
-     * ²¢ĞĞ
+     * å¹¶è¡Œ
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class ForkJoinTest {
     }
 
     /**
-     * Ïß³Ì³Ø
+     * çº¿ç¨‹æ± 
      */
     private void run3() throws ListTaskException {
         List<String> list = initList();
@@ -82,7 +82,7 @@ public class ForkJoinTest {
     }
 
     /**
-     * ³õÊ¼»¯Ô­Ê¼Êı¾İ
+     * åˆå§‹åŒ–åŸå§‹æ•°æ®
      *
      * @return
      */
@@ -95,7 +95,7 @@ public class ForkJoinTest {
     }
 
     /**
-     * Êµ¼ÊÒ»¸öĞ¡ÈÎÎñÒª×öµÄÊÂÇé
+     * å®é™…ä¸€ä¸ªå°ä»»åŠ¡è¦åšçš„äº‹æƒ…
      *
      * @param str
      * @return

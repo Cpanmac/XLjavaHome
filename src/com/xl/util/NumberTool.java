@@ -6,19 +6,19 @@ import java.text.NumberFormat;
 import java.util.Map;
 
 /**
- * File Desc:  Êı×Ö¹¤¾ßÀà
+ * File Desc:  æ•°å­—å·¥å…·ç±»
  * Product Name: SIRM
  * Module Name: Common
- * Author:      ÅË¶àÇ¿
- * History:     2011-03-13 created by ÅË¶àÇ¿
+ * Author:      æ½˜å¤šå¼º
+ * History:     2011-03-13 created by æ½˜å¤šå¼º
  */
 public class NumberTool {
-    public static final int YI = 100000000;//Ò»ÒÚ
-    public static final int WAN = 10000;//Ò»Íò
-    private static final int FourDecimalMedian = 4;  //Ğ¡ÊıÎ»Êı
+    public static final int YI = 100000000;//ä¸€äº¿
+    public static final int WAN = 10000;//ä¸€ä¸‡
+    private static final int FourDecimalMedian = 4;  //å°æ•°ä½æ•°
 
     /**
-     * ½«object×ª»»³ÉÕûĞÍ£¬µ±´«ÈëµÄ¶ÔÏóÊÇnullÊ±·µ»ØÖ¸¶¨µÄÖµ
+     * å°†objectè½¬æ¢æˆæ•´å‹ï¼Œå½“ä¼ å…¥çš„å¯¹è±¡æ˜¯nullæ—¶è¿”å›æŒ‡å®šçš„å€¼
      *
      * @param o
      * @param dv
@@ -36,7 +36,7 @@ public class NumberTool {
     }
 
     /**
-     * ½«object×ª»»³ÉÕûĞÍ£¬µ±´«ÈëµÄ¶ÔÏóÊÇnullÊ±·µ»ØÖ¸¶¨µÄÖµ
+     * å°†objectè½¬æ¢æˆæ•´å‹ï¼Œå½“ä¼ å…¥çš„å¯¹è±¡æ˜¯nullæ—¶è¿”å›æŒ‡å®šçš„å€¼
      *
      * @param o
      * @param dv
@@ -57,11 +57,11 @@ public class NumberTool {
     }
 
     /**
-     * ½«object×ª»»³ÉÕûĞÍ£¬µ±´«ÈëµÄ¶ÔÏóÊÇnullÊ±·µ»ØÖ¸¶¨µÄÖµ
+     * å°†objectè½¬æ¢æˆæ•´å‹ï¼Œå½“ä¼ å…¥çš„å¯¹è±¡æ˜¯nullæ—¶è¿”å›æŒ‡å®šçš„å€¼
      *
-     * @param o     ÊıÖµ
-     * @param dv    Ä¬ÈÏÖµ
-     * @param round ÓĞĞ§Ğ¡ÊıÎ»Êı
+     * @param o     æ•°å€¼
+     * @param dv    é»˜è®¤å€¼
+     * @param round æœ‰æ•ˆå°æ•°ä½æ•°
      * @return
      */
     public static Double safeToDouble(Object o, Double dv, int round) {
@@ -80,7 +80,7 @@ public class NumberTool {
     }
 
     /**
-     * ½«object×ª»»³ÉÕûĞÍ£¬µ±´«ÈëµÄ¶ÔÏóÊÇnullÊ±·µ»ØÖ¸¶¨µÄÖµ
+     * å°†objectè½¬æ¢æˆæ•´å‹ï¼Œå½“ä¼ å…¥çš„å¯¹è±¡æ˜¯nullæ—¶è¿”å›æŒ‡å®šçš„å€¼
      *
      * @param o
      * @param dv
@@ -101,11 +101,11 @@ public class NumberTool {
     }
 
     /**
-     * ½«object×ª»»³Éfloat£¬µ±´«ÈëµÄ¶ÔÏóÊÇnullÊ±·µ»ØÖ¸¶¨µÄÖµ
+     * å°†objectè½¬æ¢æˆfloatï¼Œå½“ä¼ å…¥çš„å¯¹è±¡æ˜¯nullæ—¶è¿”å›æŒ‡å®šçš„å€¼
      *
-     * @param o     ÊıÖµ
-     * @param dv    Ä¬ÈÏÖµ
-     * @param round ÓĞĞ§Ğ¡ÊıÎ»Êı
+     * @param o     æ•°å€¼
+     * @param dv    é»˜è®¤å€¼
+     * @param round æœ‰æ•ˆå°æ•°ä½æ•°
      */
     public static Float safeToFloat(Object o, Float dv, int round) {
         Float r = dv;
@@ -123,7 +123,7 @@ public class NumberTool {
     }
 
     /**
-     * StringÀàĞÍ ×ª BigDecimalÀàĞÍ
+     * Stringç±»å‹ è½¬ BigDecimalç±»å‹
      *
      * @return paraValue
      */
@@ -142,7 +142,7 @@ public class NumberTool {
     }
 
     /**
-     * StringÀàĞÍ ×ª BigDecimalÀàĞÍ
+     * Stringç±»å‹ è½¬ BigDecimalç±»å‹
      *
      * @return paraValue
      */
@@ -161,7 +161,7 @@ public class NumberTool {
     }
 
     /**
-     * aParaValueÖµ - bParaValueÖµ
+     * aParaValueå€¼ - bParaValueå€¼
      *
      * @return BigDecimal
      */
@@ -175,7 +175,7 @@ public class NumberTool {
     }
 
     /**
-     * aParaValueÖµ / bParaValueÖµ
+     * aParaValueå€¼ / bParaValueå€¼
      *
      * @return BigDecimal
      */
@@ -214,30 +214,30 @@ public class NumberTool {
     }
 
     /**
-     * ´ÓÖ¸¶¨MapÖĞ»ñÈ¡Ö¸¶¨KeyµÄ Öµ£¬²¢½«ÆÚÖµ×ªÎªIntegerĞÍ£¬ÈôMapÖĞÖ¸¶¨Key²»´æÔÚ£¬ÔòÖ±½Ó·µ»ØÄ¬ÈÏÖµ
+     * ä»æŒ‡å®šMapä¸­è·å–æŒ‡å®šKeyçš„ å€¼ï¼Œå¹¶å°†æœŸå€¼è½¬ä¸ºIntegerå‹ï¼Œè‹¥Mapä¸­æŒ‡å®šKeyä¸å­˜åœ¨ï¼Œåˆ™ç›´æ¥è¿”å›é»˜è®¤å€¼
      *
      * @param map          Map
      * @param key          Key
-     * @param defaultValue Ä¬ÈÏÖµ
-     * @return ½«MapÖµ×ª»»ºóµÄIntegerÖµ£¬Èô²»´æÔÚÔò·µ»ØÄ¬ÈÏÖµ
+     * @param defaultValue é»˜è®¤å€¼
+     * @return å°†Mapå€¼è½¬æ¢åçš„Integerå€¼ï¼Œè‹¥ä¸å­˜åœ¨åˆ™è¿”å›é»˜è®¤å€¼
      */
     public static Integer convertMapKeyToInt(Map map, String key, Integer defaultValue) {
         return safeToInteger(map.get(key), defaultValue);
     }
 
     /**
-     * ´ÓÖ¸¶¨MapÖĞ»ñÈ¡Ö¸¶¨KeyµÄÖµ£¬²¢½«ÆÚÖµ×ªÎªIntegerĞÍ£¬ÈôMapÖĞÖ¸¶¨Key²»´æÔÚ£¬ÔòÖ±½Ó·µ»Ø0
+     * ä»æŒ‡å®šMapä¸­è·å–æŒ‡å®šKeyçš„å€¼ï¼Œå¹¶å°†æœŸå€¼è½¬ä¸ºIntegerå‹ï¼Œè‹¥Mapä¸­æŒ‡å®šKeyä¸å­˜åœ¨ï¼Œåˆ™ç›´æ¥è¿”å›0
      *
      * @param map Map
      * @param key Key
-     * @return ½«MapÖµ×ª»»ºóµÄIntegerÖµ£¬Èô²»´æÔÚÔò·µ»Ø0
+     * @return å°†Mapå€¼è½¬æ¢åçš„Integerå€¼ï¼Œè‹¥ä¸å­˜åœ¨åˆ™è¿”å›0
      */
     public static Integer convertMapKeyToInt(Map map, String key) {
         return convertMapKeyToInt(map, key, 0);
     }
 
     /**
-     * ½«intÊı×é×ª»»³ÉÒÔ¶ººÅ·Ö¸ôµÄ×Ö·û´®
+     * å°†intæ•°ç»„è½¬æ¢æˆä»¥é€—å·åˆ†éš”çš„å­—ç¬¦ä¸²
      *
      * @param intArray
      * @return
@@ -253,11 +253,11 @@ public class NumberTool {
     }
 
     /**
-     * Ìá¹©¾«È·µÄ¼Ó·¨ÔËËã¡£
+     * æä¾›ç²¾ç¡®çš„åŠ æ³•è¿ç®—ã€‚
      *
      * @param v1
      * @param v2
-     * @return Á½¸ö²ÎÊıµÄºÍ
+     * @return ä¸¤ä¸ªå‚æ•°çš„å’Œ
      */
     public static Double safeAdd(Double v1, Double v2) {
         if (v1 != null && v2 != null) {
@@ -269,11 +269,11 @@ public class NumberTool {
     }
 
     /**
-     * Ìá¹©¾«È·µÄ¼õ·¨ÔËËã¡£
+     * æä¾›ç²¾ç¡®çš„å‡æ³•è¿ç®—ã€‚
      *
-     * @param v1 ¼õÊı
-     * @param v2 ±»¼õÊı
-     * @return Á½¸ö²ÎÊıµÄ²î
+     * @param v1 å‡æ•°
+     * @param v2 è¢«å‡æ•°
+     * @return ä¸¤ä¸ªå‚æ•°çš„å·®
      */
     public static Double safeSub(Double v1, Double v2) {
         if (v1 != null && v2 != null) {
@@ -285,23 +285,23 @@ public class NumberTool {
     }
 
     /**
-     * Ìá¹©¾«È·µÄ³ı·¨ÔËËã,Ê¹ÓÃÄ¬ÈÏ¾«È·¶È¡£
+     * æä¾›ç²¾ç¡®çš„é™¤æ³•è¿ç®—,ä½¿ç”¨é»˜è®¤ç²¾ç¡®åº¦ã€‚
      *
-     * @param v1 ³ıÊı
-     * @param v2 ±»³ıÊı
-     * @return Á½¸ö²ÎÊıÏà³ı½á¹û
+     * @param v1 é™¤æ•°
+     * @param v2 è¢«é™¤æ•°
+     * @return ä¸¤ä¸ªå‚æ•°ç›¸é™¤ç»“æœ
      */
     public static Double safeDiv(Double v1, Double v2) {
         return safeDiv(v1, v2, FourDecimalMedian);
     }
 
     /**
-     * Ìá¹©¾«È·µÄ³ı·¨ÔËËã¡£
+     * æä¾›ç²¾ç¡®çš„é™¤æ³•è¿ç®—ã€‚
      *
-     * @param v1    ³ıÊı
-     * @param v2    ±»³ıÊı
-     * @param sacle ¾«È·¶È
-     * @return Á½¸ö²ÎÊıÏà³ı½á¹û
+     * @param v1    é™¤æ•°
+     * @param v2    è¢«é™¤æ•°
+     * @param sacle ç²¾ç¡®åº¦
+     * @return ä¸¤ä¸ªå‚æ•°ç›¸é™¤ç»“æœ
      */
     public static Double safeDiv(Double v1, Double v2, int sacle) {
         if (v1 != null && v2 != null && v2 != 0.0) {
@@ -313,11 +313,11 @@ public class NumberTool {
     }
 
     /**
-     * Ìá¹©¾«È·µÄ³Ë·¨ÔËËã¡£
+     * æä¾›ç²¾ç¡®çš„ä¹˜æ³•è¿ç®—ã€‚
      *
      * @param v1
      * @param v2
-     * @return Á½¸ö²ÎÊıµÄ»ı
+     * @return ä¸¤ä¸ªå‚æ•°çš„ç§¯
      */
     public static Double safeMul(Double v1, Double v2) {
         if (v1 != null && v2 != null) {
@@ -329,10 +329,10 @@ public class NumberTool {
     }
 
     /**
-     * ¸ñÊ½»¯Êı×Ö
+     * æ ¼å¼åŒ–æ•°å­—
      *
-     * @param number  Êı×Ö
-     * @param pattern ¸ñÊ½
+     * @param number  æ•°å­—
+     * @param pattern æ ¼å¼
      * @return
      */
     public static String formateNumber(double number, String pattern) {

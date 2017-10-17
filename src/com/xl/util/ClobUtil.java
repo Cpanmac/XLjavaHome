@@ -11,8 +11,8 @@ import java.sql.Clob;
  * File Desc:
  * Product Name: SIRM
  * Module Name: BaseDase
- * Author:      Αυ½¨
- * History:     11-4-4 created by Αυ½¨
+ * Author:      εε»Ί
+ * History:     11-4-4 created by εε»Ί
  */
 public class ClobUtil {
     static final Logger LOGGER = Logger.getLogger(ClobUtil.class);

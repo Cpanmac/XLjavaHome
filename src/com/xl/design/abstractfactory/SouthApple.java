@@ -2,6 +2,6 @@ package com.xl.design.abstractfactory;
 
 public class SouthApple extends Apple {
     public void get() {
-        System.out.println("采集南方苹果");
+        System.out.println("閲囬泦鍗楁柟鑻规灉");
     }
 }

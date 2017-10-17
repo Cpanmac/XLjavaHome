@@ -7,16 +7,22 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
 
-//JDBC¹¤¾ßÀà£º¹Ø±ÕÁ÷ºÍÈ¡µÃÁ¬½Ó
+/**
+ * Created with IntelliJ IDEA. JDBCå·¥å…·ç±»ï¼šå…³é—­æµå’Œå–å¾—è¿æ¥
+ * User: å¾ç«‹
+ * Date: 2017-10-17
+ * Time: 17:27
+ * To change this template use File | Settings | File Templates.
+ */
 public final class MysqlJdbcUtil {
     private static String driver;
     private static String url;
     private static String user;
     private static String password;
-    // ¾²Ì¬¿é£º¼ÓÔØÎÄ¼ş
+    // é™æ€å—ï¼šåŠ è½½æ–‡ä»¶
     static {
         Properties props = new Properties();
-        // »ñµÃ¹¤³ÌÄ¿Â¼
+        // è·å¾—å·¥ç¨‹ç›®å½•
         try {
             InputStream is = MysqlJdbcUtil.class.getResourceAsStream("/mysql/db.properties");
             props.load(is);
@@ -29,7 +35,7 @@ public final class MysqlJdbcUtil {
             e.printStackTrace();
         }
     }
-    // È¡µÃÁ¬½Ó
+    // å–å¾—è¿æ¥
     public static Connection getMySqlConnection() {
         Connection conn = null;
         try {
@@ -40,7 +46,7 @@ public final class MysqlJdbcUtil {
         return conn;
     }
 
-    // ¹Ø±ÕÁ¬½Ó
+    // å…³é—­è¿æ¥
     public static void close(ResultSet rs) {
         if (rs != null) {
             try {

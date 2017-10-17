@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ¶¯Ì¬²éÑ¯ SQL Óï¾äÉú³É¹¤¾ßÀà
+ * åŠ¨æ€æŸ¥è¯¢ SQL è¯­å¥ç”Ÿæˆå·¥å…·ç±»
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:35:37 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:35:37 $
  */
 public class SqlCreator {
     private final StringBuilder sql;
@@ -18,19 +18,19 @@ public class SqlCreator {
     private boolean isFirst = true;
 
     /**
-     * ¹¹Ôì·½·¨¡£
+     * æ„é€ æ–¹æ³•ã€‚
      *
-     * @param baseSQL ´øÓĞ WHERE ¹Ø¼ü×ÖµÄÔ­Ê¼ sql
+     * @param baseSQL å¸¦æœ‰ WHERE å…³é”®å­—çš„åŸå§‹ sql
      */
     public SqlCreator(String baseSQL) {
         this(baseSQL, true);
     }
 
     /**
-     * ¹¹Ôì·½·¨¡£
+     * æ„é€ æ–¹æ³•ã€‚
      *
-     * @param baseSQL  Ô­Ê¼ sql
-     * @param hasWhere Ô­Ê¼ sql ÊÇ·ñ´øÓĞ WHERE ¹Ø¼ü×Ö
+     * @param baseSQL  åŸå§‹ sql
+     * @param hasWhere åŸå§‹ sql æ˜¯å¦å¸¦æœ‰ WHERE å…³é”®å­—
      */
     public SqlCreator(String baseSQL, boolean hasWhere) {
         if (baseSQL == null || baseSQL.trim().length() == 0) {
@@ -44,36 +44,36 @@ public class SqlCreator {
     }
 
     /**
-     * Ôö¼Ó²éÑ¯Ìõ¼ş
+     * å¢åŠ æŸ¥è¯¢æ¡ä»¶
      *
-     * @param operator     ²Ù×÷£¬±ÈÈç£ºAND¡¢OR
-     * @param expression   ±í´ïÊ½£¬±ÈÈç£ºid=1
-     * @param precondition ÏÈ¾öÌõ¼ş£¬µ±ÎªtrueÊ±²Å»áÔö¼Ó²éÑ¯Ìõ¼ş£¬±ÈÈç user != null
+     * @param operator     æ“ä½œï¼Œæ¯”å¦‚ï¼šANDã€OR
+     * @param expression   è¡¨è¾¾å¼ï¼Œæ¯”å¦‚ï¼šid=1
+     * @param precondition å…ˆå†³æ¡ä»¶ï¼Œå½“ä¸ºtrueæ—¶æ‰ä¼šå¢åŠ æŸ¥è¯¢æ¡ä»¶ï¼Œæ¯”å¦‚ user != null
      */
     public void addExpression(String operator, String expression, boolean precondition) {
         addExpression(operator, expression, null, precondition);
     }
 
     /**
-     * Ôö¼Ó²éÑ¯Ìõ¼ş
+     * å¢åŠ æŸ¥è¯¢æ¡ä»¶
      *
-     * @param operator     ²Ù×÷£¬±ÈÈç£ºAND¡¢OR
-     * @param expression   ±í´ïÊ½£¬±ÈÈç£ºid=?
-     * @param arg          ±í´ïÊ½ÖĞµÄ²ÎÊıµÄÖµ
-     * @param precondition ÏÈ¾öÌõ¼ş£¬µ±ÎªtrueÊ±²Å»áÔö¼Ó²éÑ¯Ìõ¼ş£¬±ÈÈç id != null
+     * @param operator     æ“ä½œï¼Œæ¯”å¦‚ï¼šANDã€OR
+     * @param expression   è¡¨è¾¾å¼ï¼Œæ¯”å¦‚ï¼šid=?
+     * @param arg          è¡¨è¾¾å¼ä¸­çš„å‚æ•°çš„å€¼
+     * @param precondition å…ˆå†³æ¡ä»¶ï¼Œå½“ä¸ºtrueæ—¶æ‰ä¼šå¢åŠ æŸ¥è¯¢æ¡ä»¶ï¼Œæ¯”å¦‚ id != null
      */
     public void addExpression(String operator, String expression, Object arg, boolean precondition) {
         addExpression(operator, expression, arg, Integer.MIN_VALUE, precondition);
     }
 
     /**
-     * Ôö¼Ó²éÑ¯Ìõ¼ş
+     * å¢åŠ æŸ¥è¯¢æ¡ä»¶
      *
-     * @param operator     ²Ù×÷£¬±ÈÈç£ºAND¡¢OR
-     * @param expression   ±í´ïÊ½£¬±ÈÈç£ºid=?
-     * @param arg          ±í´ïÊ½ÖĞµÄ²ÎÊıµÄÖµ
-     * @param argType      ±í´ïÊ½ÖĞµÄ²ÎÊıµÄÀàĞÍ
-     * @param precondition ÏÈ¾öÌõ¼ş£¬µ±ÎªtrueÊ±²Å»áÔö¼Ó²éÑ¯Ìõ¼ş£¬±ÈÈç id != null
+     * @param operator     æ“ä½œï¼Œæ¯”å¦‚ï¼šANDã€OR
+     * @param expression   è¡¨è¾¾å¼ï¼Œæ¯”å¦‚ï¼šid=?
+     * @param arg          è¡¨è¾¾å¼ä¸­çš„å‚æ•°çš„å€¼
+     * @param argType      è¡¨è¾¾å¼ä¸­çš„å‚æ•°çš„ç±»å‹
+     * @param precondition å…ˆå†³æ¡ä»¶ï¼Œå½“ä¸ºtrueæ—¶æ‰ä¼šå¢åŠ æŸ¥è¯¢æ¡ä»¶ï¼Œæ¯”å¦‚ id != null
      */
     public void addExpression(String operator, String expression, Object arg, int argType, boolean precondition) {
         if (precondition) {
@@ -100,45 +100,45 @@ public class SqlCreator {
     }
 
     /**
-     * Ôö¼ÓAND²éÑ¯Ìõ¼ş
+     * å¢åŠ ANDæŸ¥è¯¢æ¡ä»¶
      *
-     * @param expression   ±í´ïÊ½
-     * @param precondition ÏÈ¾öÌõ¼ş
+     * @param expression   è¡¨è¾¾å¼
+     * @param precondition å…ˆå†³æ¡ä»¶
      */
     public void and(String expression, boolean precondition) {
         addExpression("AND", expression, precondition);
     }
 
     /**
-     * Ôö¼ÓAND²éÑ¯Ìõ¼ş
+     * å¢åŠ ANDæŸ¥è¯¢æ¡ä»¶
      *
-     * @param expression   ±í´ïÊ½
-     * @param arg          ²ÎÊıµÄÖµ
-     * @param precondition ÏÈ¾öÌõ¼ş
+     * @param expression   è¡¨è¾¾å¼
+     * @param arg          å‚æ•°çš„å€¼
+     * @param precondition å…ˆå†³æ¡ä»¶
      */
     public void and(String expression, Object arg, boolean precondition) {
         addExpression("AND", expression, arg, precondition);
     }
 
     /**
-     * Ôö¼ÓAND²éÑ¯Ìõ¼ş
+     * å¢åŠ ANDæŸ¥è¯¢æ¡ä»¶
      *
-     * @param expression   ±í´ïÊ½
-     * @param arg          ²ÎÊıµÄÖµ
-     * @param argType      ²ÎÊıµÄÀàĞÍ
-     * @param precondition ÏÈ¾öÌõ¼ş
+     * @param expression   è¡¨è¾¾å¼
+     * @param arg          å‚æ•°çš„å€¼
+     * @param argType      å‚æ•°çš„ç±»å‹
+     * @param precondition å…ˆå†³æ¡ä»¶
      */
     public void and(String expression, Object arg, int argType, boolean precondition) {
         addExpression("AND", expression, arg, argType, precondition);
     }
 
     /**
-     * Ôö¼Ó AND IN ²éÑ¯Ìõ¼ş£¬±ÈÈçAND id IN (?, ?, ?);
+     * å¢åŠ  AND IN æŸ¥è¯¢æ¡ä»¶ï¼Œæ¯”å¦‚AND id IN (?, ?, ?);
      *
-     * @param columnName   ÁĞÃû³Æ£¬±ÈÈç id
-     * @param args         ²ÎÊıµÄÖµÊı×é£¬±ÈÈç new String[] {"1", "2", "3"}
-     * @param argType      ²ÎÊıµÄÀàĞÍ
-     * @param precondition ÏÈ¾öÌõ¼ş
+     * @param columnName   åˆ—åç§°ï¼Œæ¯”å¦‚ id
+     * @param args         å‚æ•°çš„å€¼æ•°ç»„ï¼Œæ¯”å¦‚ new String[] {"1", "2", "3"}
+     * @param argType      å‚æ•°çš„ç±»å‹
+     * @param precondition å…ˆå†³æ¡ä»¶
      */
     public void andIn(String columnName, Object[] args, int argType, boolean precondition) {
         if (precondition && args.length > 0) {
@@ -166,42 +166,42 @@ public class SqlCreator {
     }
 
     /**
-     * Ôö¼ÓOR²éÑ¯Ìõ¼ş
+     * å¢åŠ ORæŸ¥è¯¢æ¡ä»¶
      *
-     * @param expression   ±í´ïÊ½
-     * @param precondition ÏÈ¾öÌõ¼ş
+     * @param expression   è¡¨è¾¾å¼
+     * @param precondition å…ˆå†³æ¡ä»¶
      */
     public void or(String expression, boolean precondition) {
         addExpression("OR", expression, precondition);
     }
 
     /**
-     * Ôö¼ÓOR²éÑ¯Ìõ¼ş
+     * å¢åŠ ORæŸ¥è¯¢æ¡ä»¶
      *
-     * @param expression   ±í´ïÊ½
-     * @param arg          ²ÎÊıµÄÖµ
-     * @param precondition ÏÈ¾öÌõ¼ş
+     * @param expression   è¡¨è¾¾å¼
+     * @param arg          å‚æ•°çš„å€¼
+     * @param precondition å…ˆå†³æ¡ä»¶
      */
     public void or(String expression, Object arg, boolean precondition) {
         addExpression("OR", expression, arg, precondition);
     }
 
     /**
-     * Ôö¼ÓOR²éÑ¯Ìõ¼ş
+     * å¢åŠ ORæŸ¥è¯¢æ¡ä»¶
      *
-     * @param expression   ±í´ïÊ½
-     * @param arg          ²ÎÊıµÄÖµ
-     * @param argType      ²ÎÊıµÄÀàĞÍ
-     * @param precondition ÏÈ¾öÌõ¼ş
+     * @param expression   è¡¨è¾¾å¼
+     * @param arg          å‚æ•°çš„å€¼
+     * @param argType      å‚æ•°çš„ç±»å‹
+     * @param precondition å…ˆå†³æ¡ä»¶
      */
     public void or(String expression, Object arg, int argType, boolean precondition) {
         addExpression("OR", expression, arg, argType, precondition);
     }
 
     /**
-     * Ìí¼Ó GROUP BY Óï¾ä¡£
+     * æ·»åŠ  GROUP BY è¯­å¥ã€‚
      *
-     * @param columnNames ÁĞÃû
+     * @param columnNames åˆ—å
      */
     public void groupBy(String... columnNames) {
         if (columnNames == null || columnNames.length == 0 || (columnNames.length == 1 && columnNames[0] == null)) {
@@ -215,28 +215,28 @@ public class SqlCreator {
     }
 
     /**
-     * ÉıĞòÅÅĞò
+     * å‡åºæ’åº
      *
-     * @param columnName ÁĞÃû
+     * @param columnName åˆ—å
      */
     public void orderBy(String columnName) {
         orderBy(columnName, false);
     }
 
     /**
-     * ½µĞòÅÅĞò
+     * é™åºæ’åº
      *
-     * @param columnName ÁĞÃû
+     * @param columnName åˆ—å
      */
     public void orderByDesc(String columnName) {
         orderBy(columnName, true);
     }
 
     /**
-     * ÅÅĞò
+     * æ’åº
      *
-     * @param columnName ÁĞÃû
-     * @param isDesc     ÊÇ·ñ½µĞò
+     * @param columnName åˆ—å
+     * @param isDesc     æ˜¯å¦é™åº
      */
     public void orderBy(String columnName, boolean isDesc) {
         if (!hasOrderBy) {
@@ -252,18 +252,18 @@ public class SqlCreator {
     }
 
     /**
-     * È¡µÃËùÓĞ²ÎÊıµÄÖµÊı×é
+     * å–å¾—æ‰€æœ‰å‚æ•°çš„å€¼æ•°ç»„
      *
-     * @return ËùÓĞ²ÎÊıµÄÖµÊı×é
+     * @return æ‰€æœ‰å‚æ•°çš„å€¼æ•°ç»„
      */
     public Object[] getArgs() {
         return args.toArray();
     }
 
     /**
-     * È¡µÃËùÓĞ²ÎÊıµÄÀàĞÍÊı×é
+     * å–å¾—æ‰€æœ‰å‚æ•°çš„ç±»å‹æ•°ç»„
      *
-     * @return ËùÓĞ²ÎÊıµÄÀàĞÍÊı×é
+     * @return æ‰€æœ‰å‚æ•°çš„ç±»å‹æ•°ç»„
      */
     public int[] getArgTypes() {
         Integer[] objectTypes = argTypes.toArray(new Integer[argTypes.size()]);
@@ -275,9 +275,9 @@ public class SqlCreator {
     }
 
     /**
-     * È¡µÃ×îºóÉú³É²éÑ¯sql
+     * å–å¾—æœ€åç”ŸæˆæŸ¥è¯¢sql
      *
-     * @return ²éÑ¯sql
+     * @return æŸ¥è¯¢sql
      */
     public String getSQL() {
         return sql.toString();

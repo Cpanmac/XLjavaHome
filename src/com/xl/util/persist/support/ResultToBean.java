@@ -10,8 +10,8 @@ import java.util.Map;
 
 /**
  * @author zhuming
- * @description 将ResultSet转换为Bean对象
- * @date 2013-9-16 下午12:18:52
+ * @description 灏哛esultSet杞崲涓築ean瀵硅薄
+ * @date 2013-9-16 涓嬪崍12:18:52
  */
 public class ResultToBean {
     private Class convertBean;

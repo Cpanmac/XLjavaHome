@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ĞìÁ¢
+ * User: å¾ç«‹
  * Date: 2017/10/16
  * Time: 15:12
  * To change this template use File | Settings | File Templates.
@@ -17,11 +17,11 @@ public class AnnotationDemo {
     @Deprecated
     @MethodInfo(comments = "deprecated method", date = "Nov 17 2012")
     public static void oldMethod() {
-        System.out.println("¹ıÈ¥µÄ·½·¨ÆúÓÃ");
+        System.out.println("è¿‡å»çš„æ–¹æ³•å¼ƒç”¨");
     }
 
     @SuppressWarnings({"unchecked", "deprecation"})
-    @MethodInfo(author = "ĞìÁ¢", comments = "Main method", date = "Nov 17 2012", revision = 10)
+    @MethodInfo(author = "å¾ç«‹", comments = "Main method", date = "Nov 17 2012", revision = 10)
     public static void genericsTest() throws FileNotFoundException {
         List l = new ArrayList();
         l.add("abc");
@@ -43,8 +43,8 @@ public class AnnotationDemo {
     }
 
     @Override
-    @MethodInfo(author = "ĞìÁ¢", comments = "Main method", date = "Nov 17 2012", revision = 1)
+    @MethodInfo(author = "å¾ç«‹", comments = "Main method", date = "Nov 17 2012", revision = 1)
     public String toString() {
-        return "ÕâÊÇtoString·½·¨";
+        return "è¿™æ˜¯toStringæ–¹æ³•";
     }
 }

@@ -1,12 +1,12 @@
 package com.xuan.xutils.domain.enums;
 
 /**
- * Ò»¸öÍ¨ÓÃµÄÇø·Ö¶Ô´íµÄÃ¶¾Ù
+ * ä¸€ä¸ªé€šç”¨çš„åŒºåˆ†å¯¹é”™çš„æšä¸¾
  * <p>
  * Created by xuan on 17/8/2.
  */
 public enum YNEnum {
-    Y(true, 1, "ÊÇ"), N(false, 0, "·ñ");
+    Y(true, 1, "æ˜¯"), N(false, 0, "å¦");
     private boolean value;
     private int code;
     private String msg;
@@ -18,7 +18,7 @@ public enum YNEnum {
     }
 
     /**
-     * ¸ù¾İcode»ñÈ¡µ½YNEnum,È¡²»µ½·µ»Ønull
+     * æ ¹æ®codeè·å–åˆ°YNEnum,å–ä¸åˆ°è¿”å›null
      *
      * @param code
      * @return

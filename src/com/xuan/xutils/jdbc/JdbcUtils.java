@@ -15,18 +15,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * JDBC ¹¤¾ßÀà,
+ * JDBC å·¥å…·ç±»,
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:13:34 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:13:34 $
  */
 public abstract class JdbcUtils {
     /**
-     * È¡µÃÌî³ä²ÎÊıºóµÄsql
+     * å–å¾—å¡«å……å‚æ•°åçš„sql
      *
-     * @param preparedSQL Ô¤±àÒësql
-     * @param args        ²ÎÊıÊı×é
-     * @return Ìî³ä²ÎÊıºóµÄsql
+     * @param preparedSQL é¢„ç¼–è¯‘sql
+     * @param args        å‚æ•°æ•°ç»„
+     * @return å¡«å……å‚æ•°åçš„sql
      */
     public static String getSQL(String preparedSQL, Object[] args) {
         if (args == null || args.length == 0) {
@@ -58,10 +58,10 @@ public abstract class JdbcUtils {
     }
 
     /**
-     * È¡µÃÖ´ĞĞcountµÄsql
+     * å–å¾—æ‰§è¡Œcountçš„sql
      *
-     * @param sql Ö´ĞĞ²éÑ¯µÄsql
-     * @return Ö´ĞĞcountµÄsql
+     * @param sql æ‰§è¡ŒæŸ¥è¯¢çš„sql
+     * @return æ‰§è¡Œcountçš„sql
      */
     public static String getCountSQL(String sql) {
         String normalSql = sql;
@@ -84,10 +84,10 @@ public abstract class JdbcUtils {
     }
 
     /**
-     * ¸ù¾İ²ÎÊı¸öÊıÉú³ÉINÀ¨»¡ÀïÃæµÄ²¿·Ösql£¬°üº¬À¨»¡
+     * æ ¹æ®å‚æ•°ä¸ªæ•°ç”ŸæˆINæ‹¬å¼§é‡Œé¢çš„éƒ¨åˆ†sqlï¼ŒåŒ…å«æ‹¬å¼§
      *
-     * @param size ²ÎÊı¸öÊı
-     * @return INÀ¨»¡ÀïÃæµÄ²¿·Ösql
+     * @param size å‚æ•°ä¸ªæ•°
+     * @return INæ‹¬å¼§é‡Œé¢çš„éƒ¨åˆ†sql
      */
     public static String getInSQL(int size) {
         StringBuilder inSQL = new StringBuilder();
@@ -104,41 +104,41 @@ public abstract class JdbcUtils {
     }
 
     /**
-     * ¿ØÖÆ´ø IN ×Ó¾äµÄ SQL Óï¾äÖĞ IN ×Ó¾ä²ÎÊıÊıÄ¿×î¶àÎª 300 ¸ö£¨ASE ×î´óÏŞÖÆÊı£©£¬Èô³¬³ö¾Í·ÖÅúÖ´ĞĞ¡£<br>
-     * ÓÃÓÚ½â¾ö´ø IN ×Ó¾äµÄ SQL ÖĞ IN ×Ó¾ä²ÎÊıÊıÄ¿³¬³ö×î´óÏŞÖÆÊıÊ±³ö´íµÄÎÊÌâ¡£
+     * æ§åˆ¶å¸¦ IN å­å¥çš„ SQL è¯­å¥ä¸­ IN å­å¥å‚æ•°æ•°ç›®æœ€å¤šä¸º 300 ä¸ªï¼ˆASE æœ€å¤§é™åˆ¶æ•°ï¼‰ï¼Œè‹¥è¶…å‡ºå°±åˆ†æ‰¹æ‰§è¡Œã€‚<br>
+     * ç”¨äºè§£å†³å¸¦ IN å­å¥çš„ SQL ä¸­ IN å­å¥å‚æ•°æ•°ç›®è¶…å‡ºæœ€å¤§é™åˆ¶æ•°æ—¶å‡ºé”™çš„é—®é¢˜ã€‚
      *
-     * @param inSQL     ´ø "IN" µÄ sql Óï¾ä, e.g. SELECT * FROM table_name WHERE field_name IN
-     * @param inArgs    IN ×Ó¾äÖĞµÄËùÓĞ²ÎÊı
-     * @param otherArgs ÆäËû²ÎÊı
-     * @param processor ´¦ÀíÃ¿´Î SQL Ö´ĞĞ½á¹ûµÄ½Ó¿Ú£¬ÀıÈçÊµÏÖÖĞ¿É»ñÈ¡Ã¿´Î²éÑ¯½á¹û£¬È»ºó½«ËüÃÇÀÛ¼Ó
+     * @param inSQL     å¸¦ "IN" çš„ sql è¯­å¥, e.g. SELECT * FROM table_name WHERE field_name IN
+     * @param inArgs    IN å­å¥ä¸­çš„æ‰€æœ‰å‚æ•°
+     * @param otherArgs å…¶ä»–å‚æ•°
+     * @param processor å¤„ç†æ¯æ¬¡ SQL æ‰§è¡Œç»“æœçš„æ¥å£ï¼Œä¾‹å¦‚å®ç°ä¸­å¯è·å–æ¯æ¬¡æŸ¥è¯¢ç»“æœï¼Œç„¶åå°†å®ƒä»¬ç´¯åŠ 
      */
     public static void executeInSQL(String inSQL, Object[] inArgs, Object[] otherArgs, InSQLProcessor processor) {
         if (inArgs == null || inArgs.length == 0) {
             return;
         }
-        // IN×Ó¾äÖĞ×î¶àÔÊĞíµÄ²ÎÊıÊıÄ¿
+        // INå­å¥ä¸­æœ€å¤šå…è®¸çš„å‚æ•°æ•°ç›®
         int inArgsMaxNum = 300;
-        // ÆäËû²ÎÊıÊıÄ¿
+        // å…¶ä»–å‚æ•°æ•°ç›®
         int otherArgsNum = (otherArgs == null) ? 0 : otherArgs.length;
-        // ²éÑ¯Ö´ĞĞµÄ´ÎÊı
+        // æŸ¥è¯¢æ‰§è¡Œçš„æ¬¡æ•°
         int execNum = (inArgs.length % inArgsMaxNum == 0) ? inArgs.length / inArgsMaxNum : inArgs.length / inArgsMaxNum + 1;
-        // ·ÖÅúÖ´ĞĞSQL
+        // åˆ†æ‰¹æ‰§è¡ŒSQL
         for (int i = 0; i < execNum; i++) {
-            // Ã¿´ÎÖ´ĞĞSQLÊ±IN×Ó¾äÖĞµÄ²ÎÊıÊıÄ¿
-            // Èç¹ûÊÇ×îºóÒ»´ÎÖ´ĞĞµÄSQL, ²ÎÊı¼ÆËãÓĞÇø±ğ
+            // æ¯æ¬¡æ‰§è¡ŒSQLæ—¶INå­å¥ä¸­çš„å‚æ•°æ•°ç›®
+            // å¦‚æœæ˜¯æœ€åä¸€æ¬¡æ‰§è¡Œçš„SQL, å‚æ•°è®¡ç®—æœ‰åŒºåˆ«
             int inArgsNum = ((i + 1) == execNum) ? inArgs.length - inArgsMaxNum * i : inArgsMaxNum;
-            String sql = inSQL + JdbcUtils.getInSQL(inArgsNum); // ²úÉúsqlÓï¾ä
-            int count = inArgsNum + otherArgsNum; // Ã¿´ÎÖ´ĞĞÊ±×ÜµÄ²ÎÊıÊıÄ¿
-            Object[] args = new Object[count]; // ×ÜµÄ²ÎÊı
-            // ³õÊ¼»¯ÆäËû²ÎÊı
+            String sql = inSQL + JdbcUtils.getInSQL(inArgsNum); // äº§ç”Ÿsqlè¯­å¥
+            int count = inArgsNum + otherArgsNum; // æ¯æ¬¡æ‰§è¡Œæ—¶æ€»çš„å‚æ•°æ•°ç›®
+            Object[] args = new Object[count]; // æ€»çš„å‚æ•°
+            // åˆå§‹åŒ–å…¶ä»–å‚æ•°
             for (int j = 0; j < otherArgsNum; j++) {
                 args[j] = otherArgs[j];
             }
-            // Ã¿´ÎÖ´ĞĞÊ±IN×Ó¾äÖĞµÚÒ»¸ö²ÎÊıÔÚÊı×éÖĞµÄË÷Òı
+            // æ¯æ¬¡æ‰§è¡Œæ—¶INå­å¥ä¸­ç¬¬ä¸€ä¸ªå‚æ•°åœ¨æ•°ç»„ä¸­çš„ç´¢å¼•
             int startParamIndex = inArgsMaxNum * i;
-            // ³õÊ¼»¯IN×Ó¾ä²ÎÊı
+            // åˆå§‹åŒ–INå­å¥å‚æ•°
             for (int j = otherArgsNum; j < count; j++) {
-                // ×¢ÒâË÷Òı
+                // æ³¨æ„ç´¢å¼•
                 args[j] = inArgs[startParamIndex + j - otherArgsNum];
             }
             processor.executeSQL(sql, args); // Call back
@@ -146,10 +146,10 @@ public abstract class JdbcUtils {
     }
 
     /**
-     * ½«²ÎÊıÒÔObjectÀàĞÍÌîÈëÔ¤ÖÆÊ½sqlÓï¾äÖĞ.
+     * å°†å‚æ•°ä»¥Objectç±»å‹å¡«å…¥é¢„åˆ¶å¼sqlè¯­å¥ä¸­.
      *
-     * @param args ²ÎÊı
-     * @param ps   Ô¤ÖÆÊ½sqlÓï¾ä¶ÔÏó
+     * @param args å‚æ•°
+     * @param ps   é¢„åˆ¶å¼sqlè¯­å¥å¯¹è±¡
      * @throws SQLException
      */
     public static void setParamsToStatement(Object[] args, PreparedStatement ps) throws SQLException {
@@ -164,11 +164,11 @@ public abstract class JdbcUtils {
     }
 
     /**
-     * ½«²ÎÊıÒÔºÏÊÊµÄÀàĞÍÌîÈëÔ¤ÖÆÊ½sqlÓï¾äÖĞ.
+     * å°†å‚æ•°ä»¥åˆé€‚çš„ç±»å‹å¡«å…¥é¢„åˆ¶å¼sqlè¯­å¥ä¸­.
      *
-     * @param args     ²ÎÊı
-     * @param argTypes ²ÎÊıÀàĞÍ
-     * @param ps       Ô¤ÖÆÊ½sqlÓï¾ä¶ÔÏó
+     * @param args     å‚æ•°
+     * @param argTypes å‚æ•°ç±»å‹
+     * @param ps       é¢„åˆ¶å¼sqlè¯­å¥å¯¹è±¡
      * @throws SQLException
      */
     public static void setSuitedParamsToStatement(Object[] args, int[] argTypes, PreparedStatement ps) throws SQLException {
@@ -209,12 +209,12 @@ public abstract class JdbcUtils {
     }
 
     /**
-     * ´Ó¼ÇÂ¼¼¯ÖĞ»ñµÃÖ¸¶¨ÁĞµÄÖµ
+     * ä»è®°å½•é›†ä¸­è·å¾—æŒ‡å®šåˆ—çš„å€¼
      *
-     * @param columnIndex ÁĞĞòºÅ£¬´Ó1¿ªÊ¼
-     * @param argType     ÁĞµÄÀàĞÍ
-     * @param rs          ¼ÇÂ¼¼¯
-     * @return Ö¸¶¨ÁĞµÄÖµ
+     * @param columnIndex åˆ—åºå·ï¼Œä»1å¼€å§‹
+     * @param argType     åˆ—çš„ç±»å‹
+     * @param rs          è®°å½•é›†
+     * @return æŒ‡å®šåˆ—çš„å€¼
      * @throws SQLException
      */
     public static Object getColumnValueFromResultSet(int columnIndex, int argType, ResultSet rs) throws SQLException {
@@ -240,12 +240,12 @@ public abstract class JdbcUtils {
     }
 
     /**
-     * »ñµÃ³É¶Ô³öÏÖµÄµÚÒ»¸ö¹Ø¼ü×Ö¶ÔÓ¦µÄ¹Ø¼ü×ÖµÄÎ»ÖÃ¡£
+     * è·å¾—æˆå¯¹å‡ºç°çš„ç¬¬ä¸€ä¸ªå…³é”®å­—å¯¹åº”çš„å…³é”®å­—çš„ä½ç½®ã€‚
      *
      * @param str
-     * @param keyword         ¹Ø¼ü×Ö£¬ÀıÈç£ºselect
-     * @param oppositeKeyword ¶ÔÓ¦µÄ¹Ø¼ü×Ö£¬ÀıÈç£ºfrom
-     * @return µÚÒ»¸ö¹Ø¼ü×Ö¶ÔÓ¦µÄ¹Ø¼ü×ÖµÄÎ»ÖÃ
+     * @param keyword         å…³é”®å­—ï¼Œä¾‹å¦‚ï¼šselect
+     * @param oppositeKeyword å¯¹åº”çš„å…³é”®å­—ï¼Œä¾‹å¦‚ï¼šfrom
+     * @return ç¬¬ä¸€ä¸ªå…³é”®å­—å¯¹åº”çš„å…³é”®å­—çš„ä½ç½®
      */
     private static int getFirstPairIndex(String str, String keyword, String oppositeKeyword) {
         ArrayList<PairKeyword> keywordArray = new ArrayList<PairKeyword>();

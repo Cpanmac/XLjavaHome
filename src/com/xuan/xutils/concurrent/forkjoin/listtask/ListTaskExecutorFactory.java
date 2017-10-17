@@ -5,13 +5,13 @@ import com.xuan.xutils.concurrent.forkjoin.listtask.executor.ListTaskExecutor;
 import com.xuan.xutils.concurrent.forkjoin.listtask.executor.ListTaskExecutorImpl;
 
 /**
- * ÈÎÎñÖ´ĞĞÆ÷¹¤³§Àà,×îºÃ¿ÉÒÔÊ¹ÓÃSpring·½Ê½ÅäÖÃBean£¬ÕâÀïÖ»ÊÇÌá¹©ÁËAPI·½Ê½
+ * ä»»åŠ¡æ‰§è¡Œå™¨å·¥å‚ç±»,æœ€å¥½å¯ä»¥ä½¿ç”¨Springæ–¹å¼é…ç½®Beanï¼Œè¿™é‡Œåªæ˜¯æä¾›äº†APIæ–¹å¼
  * <p>
  * Created by xuan on 17/8/23.
  */
 public abstract class ListTaskExecutorFactory {
     /**
-     * »ñÈ¡ListTaskÖ´ĞĞÆ÷
+     * è·å–ListTaskæ‰§è¡Œå™¨
      *
      * @return
      */
@@ -20,7 +20,7 @@ public abstract class ListTaskExecutorFactory {
     }
 
     /**
-     * »ñÈ¡ListTaskÖ´ĞĞÆ÷
+     * è·å–ListTaskæ‰§è¡Œå™¨
      *
      * @return
      */

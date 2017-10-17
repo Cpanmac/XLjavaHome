@@ -15,18 +15,18 @@ public class PropertiesDemo {
         // method_1();
         loadDemo();
     }
-    // load·½·¨µÄÔ­Àí
+    // loadæ–¹æ³•çš„åŸç†
 
     public static void loadDemo() throws IOException {
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream("info.txt");
-        InputStreamReader isr = new InputStreamReader(fis); // Ã»ÓĞÕâµÄ»°£¬ÎÄ×Ö½«ÊÇÂÒÂë
+        InputStreamReader isr = new InputStreamReader(fis); // æ²¡æœ‰è¿™çš„è¯ï¼Œæ–‡å­—å°†æ˜¯ä¹±ç 
         prop.load(isr);
         // System.out.println(prop);
-        // ĞŞ¸ÄÁËÏÂÊôĞÔ
+        // ä¿®æ”¹äº†ä¸‹å±æ€§
         prop.setProperty("wangwu", "39");
-        prop.list(System.out); // ÁĞ³ö¼¯ºÏÄ¿Â¼
-        // store ·½·¨´æ´¢µ½ÎÄ¼ş
+        prop.list(System.out); // åˆ—å‡ºé›†åˆç›®å½•
+        // store æ–¹æ³•å­˜å‚¨åˆ°æ–‡ä»¶
         FileOutputStream fos = new FileOutputStream("info1.txt");
         prop.store(fos, "haha");
         prop.list(System.out);
@@ -36,17 +36,17 @@ public class PropertiesDemo {
     }
 
     /*
-     * ÑİÊ¾£¬ÈçºÎ½«Á÷ÖĞµÄÊı¾İ´æ´¢µ½¼¯ºÏÖĞ¡£ ÏëÒª½«info.txtÖĞ¼üÖµÊı¾İ´æ´¢µ½¼¯ºÏÖĞ½øĞĞ²Ù×÷¡£ 1.ÓÃÒ»¸öÁ÷ºÍinfo.txtÎÄ¼ş¹ØÁª
-     * 2.¶ÁÈ¡Ò»ĞĞÊı¾İ£¬½«¸ÄĞĞÊı¾İÓÃ¡°=¡±½øĞĞÇĞ¸î¡£ 3.µÈºÅ×ó±ß×÷Îª¼ü£¬ÓÒ±ß×÷ÎªÖµ£¬´æ´¢µ½Properties¼¯ºÏÖĞ
+     * æ¼”ç¤ºï¼Œå¦‚ä½•å°†æµä¸­çš„æ•°æ®å­˜å‚¨åˆ°é›†åˆä¸­ã€‚ æƒ³è¦å°†info.txtä¸­é”®å€¼æ•°æ®å­˜å‚¨åˆ°é›†åˆä¸­è¿›è¡Œæ“ä½œã€‚ 1.ç”¨ä¸€ä¸ªæµå’Œinfo.txtæ–‡ä»¶å…³è”
+     * 2.è¯»å–ä¸€è¡Œæ•°æ®ï¼Œå°†æ”¹è¡Œæ•°æ®ç”¨â€œ=â€è¿›è¡Œåˆ‡å‰²ã€‚ 3.ç­‰å·å·¦è¾¹ä½œä¸ºé”®ï¼Œå³è¾¹ä½œä¸ºå€¼ï¼Œå­˜å‚¨åˆ°Propertiesé›†åˆä¸­
      */
-    // ÉèÖÃºÍ»ñÈ¡ÔªËØ¡£
+    // è®¾ç½®å’Œè·å–å…ƒç´ ã€‚
     public static void method_1() throws IOException {
         Properties prop = new Properties();
         BufferedReader br = new BufferedReader(new FileReader("info.txt"));
         String line = null;
         while ((line = br.readLine()) != null) {
             String[] arr = line.split("=");
-            prop.setProperty(arr[0], arr[1]); // ½«Êı¾İ´æ´¢µ½PropertiesÊı¾İ
+            prop.setProperty(arr[0], arr[1]); // å°†æ•°æ®å­˜å‚¨åˆ°Propertiesæ•°æ®
             // System.out.println(line);
         }
         br.close();
@@ -55,12 +55,12 @@ public class PropertiesDemo {
 
     public static void setAndGet() {
         Properties prop = new Properties();
-        prop.setProperty("ÕÅÈı", "30");
+        prop.setProperty("å¼ ä¸‰", "30");
         prop.setProperty("lisi", "39");
-        System.out.println(prop); // {ÕÅÈı=30, lisi=39}
-        String value = prop.getProperty("lisi"); // »ñÈ¡Öµ
+        System.out.println(prop); // {å¼ ä¸‰=30, lisi=39}
+        String value = prop.getProperty("lisi"); // è·å–å€¼
         System.out.println(value);
-        // ´òÓ¡¼ü
+        // æ‰“å°é”®
         Set<String> names = prop.stringPropertyNames();
         for (String s : names)
             System.out.println(s + ":" + prop.getProperty(s));

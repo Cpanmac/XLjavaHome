@@ -6,15 +6,15 @@ import java.io.Serializable;
 
 @Data
 public class Person implements Serializable {
-    // Î¨Ò»ĞòÁĞ»¯±êÊ¶
-    public static final long serialVersionUID = 42L; // Öµ×Ô¼ºÈ¡Ãû
-    public String name = "ÕâÊÇname";
+    // å”¯ä¸€åºåˆ—åŒ–æ ‡è¯†
+    public static final long serialVersionUID = 42L; // å€¼è‡ªå·±å–å
+    public String name = "è¿™æ˜¯name";
     private int age = 13;
     // private int password=123;
     private String password;
     private String birthday;
     /**
-     * transient ¸Ã×Ö¶ÎÎŞ·¨ĞòÁĞ»¯£¬ËùÒÔ´«Êä¶ÔÏóµÄÊ±ºò²»»á´«¹ıÈ¥
+     * transient è¯¥å­—æ®µæ— æ³•åºåˆ—åŒ–ï¼Œæ‰€ä»¥ä¼ è¾“å¯¹è±¡çš„æ—¶å€™ä¸ä¼šä¼ è¿‡å»
      */
     transient String pas;
 }

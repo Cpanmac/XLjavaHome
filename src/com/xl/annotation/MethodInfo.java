@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ĞìÁ¢
+ * User: å¾ç«‹
  * Date: 2017/10/16
  * Time: 15:08
  * To change this template use File | Settings | File Templates.
@@ -19,7 +19,7 @@ import java.lang.annotation.Target;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MethodInfo {
-    String author() default "ÕâÊÇ×÷Õß";
+    String author() default "è¿™æ˜¯ä½œè€…";
 
     String date();
 

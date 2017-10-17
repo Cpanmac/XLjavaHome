@@ -22,47 +22,47 @@ public class SAXDemo {
 
     @Test
     public void read() throws Exception {
-        // 1.´´½¨½âÎö¹¤³§
+        // 1.åˆ›å»ºè§£æå·¥å‚
         SAXParserFactory factory = SAXParserFactory.newInstance();
-        // 2.µÃµ½½âÎöÆ÷
+        // 2.å¾—åˆ°è§£æå™¨
         SAXParser sp = factory.newSAXParser();
-        // 3.µÃµ½¶ÁÈ¡Æ÷
+        // 3.å¾—åˆ°è¯»å–å™¨
         XMLReader reader = sp.getXMLReader();
-        // 4.ÉèÖÃÄÚÈİ´¦ÀíÆ÷
+        // 4.è®¾ç½®å†…å®¹å¤„ç†å™¨
         ListHandler2 handler = new ListHandler2();
         reader.setContentHandler(handler);
-        // 5.¶ÁÈ¡xmlÎÄµµÄÚÈİ
+        // 5.è¯»å–xmlæ–‡æ¡£å†…å®¹
         reader.parse(xmlPath);
     }
 }
 
-// ¼Ì³ĞDefaultHandler,Õâ¸ö½âÎöÆ÷ÊÇ°´Ë³Ğò¶ÁµÄ,Òª¸²¸Ç3¸ö·½·¨
+// ç»§æ‰¿DefaultHandler,è¿™ä¸ªè§£æå™¨æ˜¯æŒ‰é¡ºåºè¯»çš„,è¦è¦†ç›–3ä¸ªæ–¹æ³•
 class ListHandler2 extends DefaultHandler {
-    private String currentTag; // ¼ÇÂ¼µ±Ç°½âÎöµ½µÄÊÇÊ²Ã´±êÇ©
-    private int needNumber = 1; // ¼ÇÂ¼Ïë»ñÈ¡µÄµÚ¼¸¸ö×÷Õß±êÇ©µÄÖµ
-    private int currentNumber; // µ±Ç°½âÎöµ½µÚ¼¸¸ö
+    private String currentTag; // è®°å½•å½“å‰è§£æåˆ°çš„æ˜¯ä»€ä¹ˆæ ‡ç­¾
+    private int needNumber = 1; // è®°å½•æƒ³è·å–çš„ç¬¬å‡ ä¸ªä½œè€…æ ‡ç­¾çš„å€¼
+    private int currentNumber; // å½“å‰è§£æåˆ°ç¬¬å‡ ä¸ª
 
     @Override
     public void startElement(String uri, String localName, String name, Attributes attributes) {
-        // ½«±êÇ©Ãû¸³Öµ¸øcurrentTag
+        // å°†æ ‡ç­¾åèµ‹å€¼ç»™currentTag
         currentTag = name;
-        // µ±½âÎöµ½µÚÒ»¸ö×÷ÕßµÄÊ±ºòcurrentNumber++
-        if (currentTag.equals("×÷Õß")) {
+        // å½“è§£æåˆ°ç¬¬ä¸€ä¸ªä½œè€…çš„æ—¶å€™currentNumber++
+        if (currentTag.equals("ä½œè€…")) {
             currentNumber++;
         }
     }
 
     @Override
     public void characters(char[] ch, int start, int length) {
-        if ("×÷Õß".equals(currentTag) && currentNumber == needNumber) {
-            // Õâ¾ÍÊÇ±êÇ©ÀïÃæµÄÄÚÈİ
+        if ("ä½œè€…".equals(currentTag) && currentNumber == needNumber) {
+            // è¿™å°±æ˜¯æ ‡ç­¾é‡Œé¢çš„å†…å®¹
             System.out.println(new String(ch, start, length));
         }
     }
 
     @Override
     public void endElement(String uri, String localName, String name) {
-        // µ±¶Áµ½½áÊø±êÇ©µÄÊ±ºòÖÃÎª¿Õ
+        // å½“è¯»åˆ°ç»“æŸæ ‡ç­¾çš„æ—¶å€™ç½®ä¸ºç©º
         currentTag = null;
     }
 }

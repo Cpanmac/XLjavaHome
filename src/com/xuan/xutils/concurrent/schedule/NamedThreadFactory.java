@@ -4,27 +4,27 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Ò»¸ö¿ÉÒÔÉú³É´øÓĞ×Ô¶¨ÒåÇ°×ºÏß³ÌÃûµÄÏß³Ì¹¤³§<br />
- * ÀıÈç£º Ïß³ÌÃûÎªxuan-thread-5ÖĞxuanÎª×Ô¶¨ÒåÇ°×º,5±íÊ¾ÊÇÉú²úµÄµÚ5¸öÏß³Ì
+ * ä¸€ä¸ªå¯ä»¥ç”Ÿæˆå¸¦æœ‰è‡ªå®šä¹‰å‰ç¼€çº¿ç¨‹åçš„çº¿ç¨‹å·¥å‚<br />
+ * ä¾‹å¦‚ï¼š çº¿ç¨‹åä¸ºxuan-thread-5ä¸­xuanä¸ºè‡ªå®šä¹‰å‰ç¼€,5è¡¨ç¤ºæ˜¯ç”Ÿäº§çš„ç¬¬5ä¸ªçº¿ç¨‹
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:31:32 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:31:32 $
  */
 public class NamedThreadFactory implements ThreadFactory {
     private static AtomicInteger threadNumber = new AtomicInteger(1);
     private final String namePrefix;
 
     /**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      *
-     * @param namePrefix ×Ô¶¨ÒåÇ°×º
+     * @param namePrefix è‡ªå®šä¹‰å‰ç¼€
      */
     public NamedThreadFactory(String namePrefix) {
         this.namePrefix = namePrefix;
     }
 
     /**
-     * ¸²Ğ´ThreadFactoryÖĞµÄnewThread
+     * è¦†å†™ThreadFactoryä¸­çš„newThread
      */
     @Override
     public Thread newThread(Runnable runnable) {

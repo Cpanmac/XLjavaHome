@@ -4,11 +4,11 @@ import java.lang.reflect.Method;
 
 public class DynamicUtils {
     /**
-     * ¶¯Ì¬¸üĞÂ¶ÔÏó£¨ÊÊÓÃÓÚJBossµÄ¶ÔÏóĞŞ¸Ä¼´×Ô¶¯²¹È«¶ÔÏóÊôĞÔ£©
+     * åŠ¨æ€æ›´æ–°å¯¹è±¡ï¼ˆé€‚ç”¨äºJBossçš„å¯¹è±¡ä¿®æ”¹å³è‡ªåŠ¨è¡¥å…¨å¯¹è±¡å±æ€§ï¼‰
      *
-     * @param ĞÂ¶ÔÏó
-     * @param ¾É¶ÔÏó
-     * @return ×Ô¶¯²¹È«ºóµÄ¶ÔÏó
+     * @param æ–°å¯¹è±¡
+     * @param æ—§å¯¹è±¡
+     * @return è‡ªåŠ¨è¡¥å…¨åçš„å¯¹è±¡
      */
     static public Object update(Object newObj, Object oriObj) {
         try {

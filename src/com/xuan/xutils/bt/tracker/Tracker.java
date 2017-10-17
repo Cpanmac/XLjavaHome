@@ -1,27 +1,27 @@
 package com.xuan.xutils.bt.tracker;
 
 /**
- * ºÜµõµÄÒ»¸ö¸ú×ÙÆ÷,Ä¿Ç°ÓÃÀ´¸ú×Ù³¤RTµÄÔ­Òò
+ * å¾ˆåŠçš„ä¸€ä¸ªè·Ÿè¸ªå™¨,ç›®å‰ç”¨æ¥è·Ÿè¸ªé•¿RTçš„åŸå› 
  * <p>
  * Created by xuan on 17/7/29.
  */
 public abstract class Tracker {
     /**
-     * ÔÚ´òµã½áÊøÊ±,Èç¹û³¬¹ıÕâ¸öÊ±¼ä,ĞèÒªÈÕÖ¾Êä³ö,¿¼ÂÇ·Åµ½ÅäÖÃÖĞĞÄ
+     * åœ¨æ‰“ç‚¹ç»“æŸæ—¶,å¦‚æœè¶…è¿‡è¿™ä¸ªæ—¶é—´,éœ€è¦æ—¥å¿—è¾“å‡º,è€ƒè™‘æ”¾åˆ°é…ç½®ä¸­å¿ƒ
      */
     private static final Long DEFAULT_LOG_INTERVAL = 500L;
     /**
-     * ÊÇ·ñ¿ªÆô¼ÇÂ¼,¿¼ÂÇ·Åµ½ÅäÖÃÖĞĞÄ
+     * æ˜¯å¦å¼€å¯è®°å½•,è€ƒè™‘æ”¾åˆ°é…ç½®ä¸­å¿ƒ
      */
     private static final boolean TRACE = true;
     //private static final Logger log = LoggerFactory.getLogger(Tracker.class);
     /**
-     * Ã¿¸öÏß³Ì¶¼ÓĞÒ»¸öThreadLocalMap, ¶øÒ»¸öThreadLocalÊµÀı¾ÍÊÇÒ»¸ökeyÖµ
+     * æ¯ä¸ªçº¿ç¨‹éƒ½æœ‰ä¸€ä¸ªThreadLocalMap, è€Œä¸€ä¸ªThreadLocalå®ä¾‹å°±æ˜¯ä¸€ä¸ªkeyå€¼
      */
     private static ThreadLocal<TKPointLine> traceLine = new ThreadLocal<>();
 
     /**
-     * ´òµã¿ªÊ¼,name¹æ·¶,¿ÉÒÔÕâÑù,[ÀàÃû-·½·¨Ãû-·½·¨ÄÚ²¿Âß¼­±àºÅ]
+     * æ‰“ç‚¹å¼€å§‹,nameè§„èŒƒ,å¯ä»¥è¿™æ ·,[ç±»å-æ–¹æ³•å-æ–¹æ³•å†…éƒ¨é€»è¾‘ç¼–å·]
      *
      * @param name
      */
@@ -32,14 +32,14 @@ public abstract class Tracker {
         if (null == name || name.length() == 0) {
             return;
         }
-        //ÉèÖÃÒ»¸öÁ´Â·,²¢³õÊ¼»¯µÚÒ»¸öÈÕÖ¾µã
+        //è®¾ç½®ä¸€ä¸ªé“¾è·¯,å¹¶åˆå§‹åŒ–ç¬¬ä¸€ä¸ªæ—¥å¿—ç‚¹
         TKPointLine tkPointLine = new TKPointLine();
         tkPointLine.addPoint(TKPoint.buildStart(name));
         traceLine.set(tkPointLine);
     }
 
     /**
-     * ´òµã,name¹æ·¶,¿ÉÒÔÕâÑù,[ÀàÃû-·½·¨Ãû-·½·¨ÄÚ²¿Âß¼­±àºÅ]
+     * æ‰“ç‚¹,nameè§„èŒƒ,å¯ä»¥è¿™æ ·,[ç±»å-æ–¹æ³•å-æ–¹æ³•å†…éƒ¨é€»è¾‘ç¼–å·]
      *
      * @param name
      * @param remark
@@ -60,7 +60,7 @@ public abstract class Tracker {
             tkPointLine.addPoint(TKPoint.buildStart(name));
         } else {
             TKPoint on = TKPoint.buildOn(tkPointLine.getPointList().get(size - 1), name);
-            //ÉèÖÃ±¸×¢¿ÉÒÔ¸üºÃµÄ·ÖÎöÈÕÖ¾
+            //è®¾ç½®å¤‡æ³¨å¯ä»¥æ›´å¥½çš„åˆ†ææ—¥å¿—
             if (null == remark || remark.length() == 0) {
                 on.setRemark(remark);
             }
@@ -69,7 +69,7 @@ public abstract class Tracker {
     }
 
     /**
-     * ´òµã½áÊø,name¹æ·¶,¿ÉÒÔÕâÑù,[ÀàÃû-·½·¨Ãû-·½·¨ÄÚ²¿Âß¼­±àºÅ]
+     * æ‰“ç‚¹ç»“æŸ,nameè§„èŒƒ,å¯ä»¥è¿™æ ·,[ç±»å-æ–¹æ³•å-æ–¹æ³•å†…éƒ¨é€»è¾‘ç¼–å·]
      *
      * @param name
      */
@@ -84,18 +84,18 @@ public abstract class Tracker {
         }
         int size = tkPointLine.getPointList().size();
         if (size < 3) {
-            //Èç¹ûÖ»ÓĞÁ½¸öµã,ËµÃ÷Ö»ÓĞ¿ªÊ¼ºÍ½áÊø,·ÀÖ¹±ğµÄ½Ó¿ÚÎÛÈ¾ÈÕÖ¾,ËùÒÔÏÈ²»¼ÇÂ¼,Ö»¼ÇÂ¼´òÁËonµÄ
+            //å¦‚æœåªæœ‰ä¸¤ä¸ªç‚¹,è¯´æ˜åªæœ‰å¼€å§‹å’Œç»“æŸ,é˜²æ­¢åˆ«çš„æ¥å£æ±¡æŸ“æ—¥å¿—,æ‰€ä»¥å…ˆä¸è®°å½•,åªè®°å½•æ‰“äº†onçš„
             return;
         }
-        //´òÓ¡³¬³¤ºÄÊ±
+        //æ‰“å°è¶…é•¿è€—æ—¶
         Long interval = tkPointLine.getPointList().get(size - 1).getTimestamp().longValue() - tkPointLine.getPointList().get(0).getTimestamp().longValue();
         if (interval - DEFAULT_LOG_INTERVAL > 0) {
-            Tracker.on("×ÜºÄÊ±¼ä", String.valueOf(interval));//¶à¼ÓÒ»¸öµã,¼ÇÂ¼×ÜºÄÊ±
-            //ÕâÀï¿ÉÒÔÊäÈëÈÕÖ¾,»òÕßÉÏ±¨µ½ÈÕÖ¾Æ½Ì¨
+            Tracker.on("æ€»è€—æ—¶é—´", String.valueOf(interval));//å¤šåŠ ä¸€ä¸ªç‚¹,è®°å½•æ€»è€—æ—¶
+            //è¿™é‡Œå¯ä»¥è¾“å…¥æ—¥å¿—,æˆ–è€…ä¸ŠæŠ¥åˆ°æ—¥å¿—å¹³å°
             //log.warn("Tracker OPS:" + JSON.toJSONString(tkPointLine.getPointList()));
             System.out.println("Tracker OPS: " + tkPointLine.getPointList().toString());
         }
-        //ÇåÀí
+        //æ¸…ç†
         clear();
     }
 
@@ -108,7 +108,7 @@ public abstract class Tracker {
     }
 
     /**
-     * Ïß³Ì±äÁ¿ÖĞµÄÈÕÖ¾Êı¾İ
+     * çº¿ç¨‹å˜é‡ä¸­çš„æ—¥å¿—æ•°æ®
      */
     public static void clear() {
         Object obj = traceLine.get();
@@ -120,11 +120,11 @@ public abstract class Tracker {
     public static void main(String args[]) {
         try {
             /**
-             * ÔÚµ÷ÓÃ¿ªÊ¼Ç°start
+             * åœ¨è°ƒç”¨å¼€å§‹å‰start
              */
             Tracker.start("[Tracker-main-start]");
             /**
-             * ÖĞ¼äÈÎºÎµØ·½¶¼¿ÉÒÔ¼ÇÂ¼ÈÕÖ¾´òµã
+             * ä¸­é—´ä»»ä½•åœ°æ–¹éƒ½å¯ä»¥è®°å½•æ—¥å¿—æ‰“ç‚¹
              */
             Tracker.on("[Tracker-main-1]", "1");
             Thread.sleep(100);
@@ -132,7 +132,7 @@ public abstract class Tracker {
             Thread.sleep(450);
             Tracker.on("[Tracker-main-3]", "3");
             /**
-             * µÈµ÷ÓÃ½áÊøºóend,½øĞĞÊı¾İ·ÖÎö´¦Àí
+             * ç­‰è°ƒç”¨ç»“æŸåend,è¿›è¡Œæ•°æ®åˆ†æå¤„ç†
              */
             Tracker.end("[Tracker-main-end]");
         } catch (Exception e) {

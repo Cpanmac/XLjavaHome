@@ -9,7 +9,7 @@ public class URLDemo {
     @SuppressWarnings("deprecation")
     @Test
     public void test() throws UnsupportedEncodingException {
-        String s = "dseÖÐ¹úsdf";
+        String s = "dseä¸­å›½sdf";
         String _s = java.net.URLEncoder.encode(s);
         System.out.println(_s);
         _s = java.net.URLEncoder.encode(s, "UTF-8");

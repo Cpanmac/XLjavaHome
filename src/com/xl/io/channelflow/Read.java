@@ -3,7 +3,7 @@ package com.xl.io.channelflow;
 import java.io.IOException;
 import java.io.PipedInputStream;
 
-class Read implements Runnable  //¶ÁÈ¡Ïß³Ì
+class Read implements Runnable  //è¯»å–çº¿ç¨‹
 {
     private PipedInputStream pis;
 
@@ -11,19 +11,19 @@ class Read implements Runnable  //¶ÁÈ¡Ïß³Ì
         this.pis = pis;
     }
 
-    public void run()   //¸²¸Çrun·½·¨²»ÄÜÅ×Ö»ÄÜ´¦Àí
+    public void run()   //è¦†ç›–runæ–¹æ³•ä¸èƒ½æŠ›åªèƒ½å¤„ç†
     {
         try {
             byte[] buf = new byte[1024];
-            //¶ÁÈ¡Ç°Ã»Êı¾İ£¬Ğ´ÈëÊı¾İÒªµÈ6Ãë
-            System.out.println("¶ÁÈ¡Ç°ÇëµÈ´ı...");
-            int len = pis.read(buf);  // ½«¶ÁÈ¡µÄÊı¾İ´æ´¢µ½bufÊı×é£¬²¢¸³Öµ¸ølen
-            String s = new String(buf, 0, len);  //×ª»»³É×Ö·û´®
-            System.out.println("¶ÁÈ¡Êı¾İ..×èÈû½áÊø");
+            //è¯»å–å‰æ²¡æ•°æ®ï¼Œå†™å…¥æ•°æ®è¦ç­‰6ç§’
+            System.out.println("è¯»å–å‰è¯·ç­‰å¾…...");
+            int len = pis.read(buf);  // å°†è¯»å–çš„æ•°æ®å­˜å‚¨åˆ°bufæ•°ç»„ï¼Œå¹¶èµ‹å€¼ç»™len
+            String s = new String(buf, 0, len);  //è½¬æ¢æˆå­—ç¬¦ä¸²
+            System.out.println("è¯»å–æ•°æ®..é˜»å¡ç»“æŸ");
             System.out.println(s);
-            pis.close();  //¹Ø±ÕÁ÷
+            pis.close();  //å…³é—­æµ
         } catch (IOException e) {
-            throw new RuntimeException("¹ÜµÀ¶ÁÈ¡Á÷Ê§°Ü ");
+            throw new RuntimeException("ç®¡é“è¯»å–æµå¤±è´¥ ");
         }
     }
 }

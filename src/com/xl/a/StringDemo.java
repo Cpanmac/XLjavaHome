@@ -8,14 +8,14 @@ import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ĞìÁ¢
+ * User: å¾ç«‹
  * Date: 2017/8/28
  * Time: 9:59
  * To change this template use File | Settings | File Templates.
  */
 public class StringDemo {
     /**
-     * ×ª»»Îªjoin×Ö·û´®
+     * è½¬æ¢ä¸ºjoinå­—ç¬¦ä¸²
      */
     @Test
     public void joinTest() {
@@ -24,13 +24,13 @@ public class StringDemo {
         result.add("bbb");
         result.add("ccc");
         result.add("ddd");
-        String s = org.apache.commons.lang.StringUtils.join(result.iterator(), "¡¢");
+        String s = org.apache.commons.lang.StringUtils.join(result.iterator(), "ã€");
         System.out.println(s);
     }
 
     @Test
     public void spiltTest() {
-        String s = "²âÊÔ";
+        String s = "æµ‹è¯•";
         System.out.println(Arrays.toString(s.split(",")));
     }
 }

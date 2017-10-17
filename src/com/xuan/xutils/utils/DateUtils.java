@@ -7,20 +7,20 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * ´¦ÀíÈÕÆÚÊ±¼äµÄ¹¤¾ßÀà¡£
+ * å¤„ç†æ—¥æœŸæ—¶é—´çš„å·¥å…·ç±»ã€‚
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:46:12 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:46:12 $
  */
 public abstract class DateUtils {
     private static final int[] DAY_OF_MONTH = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     /**
-     * È¡µÃÖ¸¶¨ÌìÊıºóµÄÊ±¼ä
+     * å–å¾—æŒ‡å®šå¤©æ•°åçš„æ—¶é—´
      *
-     * @param date      »ù×¼Ê±¼ä
-     * @param dayAmount Ö¸¶¨ÌìÊı£¬ÔÊĞíÎª¸ºÊı
-     * @return Ö¸¶¨ÌìÊıºóµÄÊ±¼ä
+     * @param date      åŸºå‡†æ—¶é—´
+     * @param dayAmount æŒ‡å®šå¤©æ•°ï¼Œå…è®¸ä¸ºè´Ÿæ•°
+     * @return æŒ‡å®šå¤©æ•°åçš„æ—¶é—´
      */
     public static Date addDay(Date date, int dayAmount) {
         if (date == null) {
@@ -33,11 +33,11 @@ public abstract class DateUtils {
     }
 
     /**
-     * È¡µÃÖ¸¶¨Ğ¡Ê±ÊıºóµÄÊ±¼ä
+     * å–å¾—æŒ‡å®šå°æ—¶æ•°åçš„æ—¶é—´
      *
-     * @param date       »ù×¼Ê±¼ä
-     * @param hourAmount Ö¸¶¨Ğ¡Ê±Êı£¬ÔÊĞíÎª¸ºÊı
-     * @return Ö¸¶¨Ğ¡Ê±ÊıºóµÄÊ±¼ä
+     * @param date       åŸºå‡†æ—¶é—´
+     * @param hourAmount æŒ‡å®šå°æ—¶æ•°ï¼Œå…è®¸ä¸ºè´Ÿæ•°
+     * @return æŒ‡å®šå°æ—¶æ•°åçš„æ—¶é—´
      */
     public static Date addHour(Date date, int hourAmount) {
         if (date == null) {
@@ -50,11 +50,11 @@ public abstract class DateUtils {
     }
 
     /**
-     * È¡µÃÖ¸¶¨·ÖÖÓÊıºóµÄÊ±¼ä
+     * å–å¾—æŒ‡å®šåˆ†é’Ÿæ•°åçš„æ—¶é—´
      *
-     * @param date         »ù×¼Ê±¼ä
-     * @param minuteAmount Ö¸¶¨·ÖÖÓÊı£¬ÔÊĞíÎª¸ºÊı
-     * @return Ö¸¶¨·ÖÖÓÊıºóµÄÊ±¼ä
+     * @param date         åŸºå‡†æ—¶é—´
+     * @param minuteAmount æŒ‡å®šåˆ†é’Ÿæ•°ï¼Œå…è®¸ä¸ºè´Ÿæ•°
+     * @return æŒ‡å®šåˆ†é’Ÿæ•°åçš„æ—¶é—´
      */
     public static Date addMinute(Date date, int minuteAmount) {
         if (date == null) {
@@ -67,11 +67,11 @@ public abstract class DateUtils {
     }
 
     /**
-     * ±È½ÏÁ½ÈÕÆÚ¶ÔÏóÖĞµÄĞ¡Ê±ºÍ·ÖÖÓ²¿·ÖµÄ´óĞ¡.
+     * æ¯”è¾ƒä¸¤æ—¥æœŸå¯¹è±¡ä¸­çš„å°æ—¶å’Œåˆ†é’Ÿéƒ¨åˆ†çš„å¤§å°.
      *
-     * @param date        ÈÕÆÚ¶ÔÏó1, Èç¹ûÎª <code>null</code> »áÒÔµ±Ç°Ê±¼äµÄÈÕÆÚ¶ÔÏó´úÌæ
-     * @param anotherDate ÈÕÆÚ¶ÔÏó2, Èç¹ûÎª <code>null</code> »áÒÔµ±Ç°Ê±¼äµÄÈÕÆÚ¶ÔÏó´úÌæ
-     * @return Èç¹ûÈÕÆÚ¶ÔÏó1´óÓÚÈÕÆÚ¶ÔÏó2, Ôò·µ»Ø´óÓÚ0µÄÊı; ·´Ö®·µ»ØĞ¡ÓÚ0µÄÊı; Èç¹ûÁ½ÈÕÆÚ¶ÔÏóÏàµÈ, Ôò·µ»Ø0.
+     * @param date        æ—¥æœŸå¯¹è±¡1, å¦‚æœä¸º <code>null</code> ä¼šä»¥å½“å‰æ—¶é—´çš„æ—¥æœŸå¯¹è±¡ä»£æ›¿
+     * @param anotherDate æ—¥æœŸå¯¹è±¡2, å¦‚æœä¸º <code>null</code> ä¼šä»¥å½“å‰æ—¶é—´çš„æ—¥æœŸå¯¹è±¡ä»£æ›¿
+     * @return å¦‚æœæ—¥æœŸå¯¹è±¡1å¤§äºæ—¥æœŸå¯¹è±¡2, åˆ™è¿”å›å¤§äº0çš„æ•°; åä¹‹è¿”å›å°äº0çš„æ•°; å¦‚æœä¸¤æ—¥æœŸå¯¹è±¡ç›¸ç­‰, åˆ™è¿”å›0.
      */
     public static int compareHourAndMinute(Date date, Date anotherDate) {
         if (date == null) {
@@ -90,7 +90,7 @@ public abstract class DateUtils {
         if (hourOfDay1 > hourOfDay2) {
             return 1;
         } else if (hourOfDay1 == hourOfDay2) {
-            // Ğ¡Ê±ÏàµÈ¾Í±È½Ï·ÖÖÓ
+            // å°æ—¶ç›¸ç­‰å°±æ¯”è¾ƒåˆ†é’Ÿ
             return minute1 > minute2 ? 1 : (minute1 == minute2 ? 0 : -1);
         } else {
             return -1;
@@ -98,11 +98,11 @@ public abstract class DateUtils {
     }
 
     /**
-     * ±È½ÏÁ½ÈÕÆÚ¶ÔÏóµÄ´óĞ¡, ºöÂÔÃë, Ö»¾«È·µ½·ÖÖÓ.
+     * æ¯”è¾ƒä¸¤æ—¥æœŸå¯¹è±¡çš„å¤§å°, å¿½ç•¥ç§’, åªç²¾ç¡®åˆ°åˆ†é’Ÿ.
      *
-     * @param date        ÈÕÆÚ¶ÔÏó1, Èç¹ûÎª <code>null</code> »áÒÔµ±Ç°Ê±¼äµÄÈÕÆÚ¶ÔÏó´úÌæ
-     * @param anotherDate ÈÕÆÚ¶ÔÏó2, Èç¹ûÎª <code>null</code> »áÒÔµ±Ç°Ê±¼äµÄÈÕÆÚ¶ÔÏó´úÌæ
-     * @return Èç¹ûÈÕÆÚ¶ÔÏó1´óÓÚÈÕÆÚ¶ÔÏó2, Ôò·µ»Ø´óÓÚ0µÄÊı; ·´Ö®·µ»ØĞ¡ÓÚ0µÄÊı; Èç¹ûÁ½ÈÕÆÚ¶ÔÏóÏàµÈ, Ôò·µ»Ø0.
+     * @param date        æ—¥æœŸå¯¹è±¡1, å¦‚æœä¸º <code>null</code> ä¼šä»¥å½“å‰æ—¶é—´çš„æ—¥æœŸå¯¹è±¡ä»£æ›¿
+     * @param anotherDate æ—¥æœŸå¯¹è±¡2, å¦‚æœä¸º <code>null</code> ä¼šä»¥å½“å‰æ—¶é—´çš„æ—¥æœŸå¯¹è±¡ä»£æ›¿
+     * @return å¦‚æœæ—¥æœŸå¯¹è±¡1å¤§äºæ—¥æœŸå¯¹è±¡2, åˆ™è¿”å›å¤§äº0çš„æ•°; åä¹‹è¿”å›å°äº0çš„æ•°; å¦‚æœä¸¤æ—¥æœŸå¯¹è±¡ç›¸ç­‰, åˆ™è¿”å›0.
      */
     public static int compareIgnoreSecond(Date date, Date anotherDate) {
         if (date == null) {
@@ -124,57 +124,57 @@ public abstract class DateUtils {
     }
 
     /**
-     * È¡µÃµ±Ç°Ê±¼äµÄ×Ö·û´®±íÊ¾£¬¸ñÊ½Îª2006-01-10 20:56:30.756
+     * å–å¾—å½“å‰æ—¶é—´çš„å­—ç¬¦ä¸²è¡¨ç¤ºï¼Œæ ¼å¼ä¸º2006-01-10 20:56:30.756
      *
-     * @return µ±Ç°Ê±¼äµÄ×Ö·û´®±íÊ¾
+     * @return å½“å‰æ—¶é—´çš„å­—ç¬¦ä¸²è¡¨ç¤º
      */
     public static String currentDate2String() {
         return date2String(new Date());
     }
 
     /**
-     * È¡µÃµ±Ç°Ê±¼äµÄ×Ö·û´®±íÊ¾£¬¸ñÊ½Îª2006-01-10
+     * å–å¾—å½“å‰æ—¶é—´çš„å­—ç¬¦ä¸²è¡¨ç¤ºï¼Œæ ¼å¼ä¸º2006-01-10
      *
-     * @return µ±Ç°Ê±¼äµÄ×Ö·û´®±íÊ¾
+     * @return å½“å‰æ—¶é—´çš„å­—ç¬¦ä¸²è¡¨ç¤º
      */
     public static String currentDate2StringByDay() {
         return date2StringByDay(new Date());
     }
 
     /**
-     * È¡µÃ½ñÌìµÄ×îºóÒ»¸öÊ±¿Ì
+     * å–å¾—ä»Šå¤©çš„æœ€åä¸€ä¸ªæ—¶åˆ»
      *
-     * @return ½ñÌìµÄ×îºóÒ»¸öÊ±¿Ì
+     * @return ä»Šå¤©çš„æœ€åä¸€ä¸ªæ—¶åˆ»
      */
     public static Date currentEndDate() {
         return getEndDate(new Date());
     }
 
     /**
-     * È¡µÃ½ñÌìµÄµÚÒ»¸öÊ±¿Ì
+     * å–å¾—ä»Šå¤©çš„ç¬¬ä¸€ä¸ªæ—¶åˆ»
      *
-     * @return ½ñÌìµÄµÚÒ»¸öÊ±¿Ì
+     * @return ä»Šå¤©çš„ç¬¬ä¸€ä¸ªæ—¶åˆ»
      */
     public static Date currentStartDate() {
         return getStartDate(new Date());
     }
 
     /**
-     * °ÑÊ±¼ä×ª»»³É×Ö·û´®£¬¸ñÊ½Îª2006-01-10 20:56:30.756
+     * æŠŠæ—¶é—´è½¬æ¢æˆå­—ç¬¦ä¸²ï¼Œæ ¼å¼ä¸º2006-01-10 20:56:30.756
      *
-     * @param date Ê±¼ä
-     * @return Ê±¼ä×Ö·û´®
+     * @param date æ—¶é—´
+     * @return æ—¶é—´å­—ç¬¦ä¸²
      */
     public static String date2String(Date date) {
         return date2String(date, "yyyy-MM-dd HH:mm:ss.SSS");
     }
 
     /**
-     * °´ÕÕÖ¸¶¨¸ñÊ½°ÑÊ±¼ä×ª»»³É×Ö·û´®£¬¸ñÊ½µÄĞ´·¨ÀàËÆyyyy-MM-dd HH:mm:ss.SSS
+     * æŒ‰ç…§æŒ‡å®šæ ¼å¼æŠŠæ—¶é—´è½¬æ¢æˆå­—ç¬¦ä¸²ï¼Œæ ¼å¼çš„å†™æ³•ç±»ä¼¼yyyy-MM-dd HH:mm:ss.SSS
      *
-     * @param date    Ê±¼ä
-     * @param pattern ¸ñÊ½
-     * @return Ê±¼ä×Ö·û´®
+     * @param date    æ—¶é—´
+     * @param pattern æ ¼å¼
+     * @return æ—¶é—´å­—ç¬¦ä¸²
      */
     public static String date2String(Date date, String pattern) {
         if (date == null) {
@@ -184,103 +184,103 @@ public abstract class DateUtils {
     }
 
     /**
-     * °ÑÊ±¼ä×ª»»³É×Ö·û´®£¬¸ñÊ½Îª2006-01-10
+     * æŠŠæ—¶é—´è½¬æ¢æˆå­—ç¬¦ä¸²ï¼Œæ ¼å¼ä¸º2006-01-10
      *
-     * @param date Ê±¼ä
-     * @return Ê±¼ä×Ö·û´®
+     * @param date æ—¶é—´
+     * @return æ—¶é—´å­—ç¬¦ä¸²
      */
     public static String date2StringByDay(Date date) {
         return date2String(date, "yyyy-MM-dd");
     }
 
     /**
-     * °ÑÊ±¼ä×ª»»³É×Ö·û´®£¬¸ñÊ½Îª2006-01-10 20:56
+     * æŠŠæ—¶é—´è½¬æ¢æˆå­—ç¬¦ä¸²ï¼Œæ ¼å¼ä¸º2006-01-10 20:56
      *
-     * @param date Ê±¼ä
-     * @return Ê±¼ä×Ö·û´®
+     * @param date æ—¶é—´
+     * @return æ—¶é—´å­—ç¬¦ä¸²
      */
     public static String date2StringByMinute(Date date) {
         return date2String(date, "yyyy-MM-dd HH:mm");
     }
 
     /**
-     * °ÑÊ±¼ä×ª»»³É×Ö·û´®£¬¸ñÊ½Îª2006-01-10 20:56:30
+     * æŠŠæ—¶é—´è½¬æ¢æˆå­—ç¬¦ä¸²ï¼Œæ ¼å¼ä¸º2006-01-10 20:56:30
      *
-     * @param date Ê±¼ä
-     * @return Ê±¼ä×Ö·û´®
+     * @param date æ—¶é—´
+     * @return æ—¶é—´å­—ç¬¦ä¸²
      */
     public static String date2StringBySecond(Date date) {
         return date2String(date, "yyyy-MM-dd HH:mm:ss");
     }
 
     /**
-     * ¸ù¾İÄ³ĞÇÆÚ¼¸µÄÓ¢ÎÄÃû³ÆÀ´»ñÈ¡¸ÃĞÇÆÚ¼¸µÄÖĞÎÄÊı. <br>
-     * e.g. <li>monday -> Ò»</li> <li>sunday -> ÈÕ</li>
+     * æ ¹æ®æŸæ˜ŸæœŸå‡ çš„è‹±æ–‡åç§°æ¥è·å–è¯¥æ˜ŸæœŸå‡ çš„ä¸­æ–‡æ•°. <br>
+     * e.g. <li>monday -> ä¸€</li> <li>sunday -> æ—¥</li>
      *
-     * @param englishWeekName ĞÇÆÚµÄÓ¢ÎÄÃû³Æ
-     * @return ĞÇÆÚµÄÖĞÎÄÊı
+     * @param englishWeekName æ˜ŸæœŸçš„è‹±æ–‡åç§°
+     * @return æ˜ŸæœŸçš„ä¸­æ–‡æ•°
      */
     public static String getChineseWeekNumber(String englishWeekName) {
         if ("monday".equalsIgnoreCase(englishWeekName)) {
-            return "Ò»";
+            return "ä¸€";
         }
         if ("tuesday".equalsIgnoreCase(englishWeekName)) {
-            return "¶ş";
+            return "äºŒ";
         }
         if ("wednesday".equalsIgnoreCase(englishWeekName)) {
-            return "Èı";
+            return "ä¸‰";
         }
         if ("thursday".equalsIgnoreCase(englishWeekName)) {
-            return "ËÄ";
+            return "å››";
         }
         if ("friday".equalsIgnoreCase(englishWeekName)) {
-            return "Îå";
+            return "äº”";
         }
         if ("saturday".equalsIgnoreCase(englishWeekName)) {
-            return "Áù";
+            return "å…­";
         }
         if ("sunday".equalsIgnoreCase(englishWeekName)) {
-            return "ÈÕ";
+            return "æ—¥";
         }
         return null;
     }
 
     /**
-     * ¸ù¾İÖ¸¶¨µÄÄê, ÔÂ, ÈÕµÈ²ÎÊı»ñÈ¡ÈÕÆÚ¶ÔÏó.
+     * æ ¹æ®æŒ‡å®šçš„å¹´, æœˆ, æ—¥ç­‰å‚æ•°è·å–æ—¥æœŸå¯¹è±¡.
      *
-     * @param year  Äê
-     * @param month ÔÂ
-     * @param date  ÈÕ
-     * @return ¶ÔÓ¦µÄÈÕÆÚ¶ÔÏó
+     * @param year  å¹´
+     * @param month æœˆ
+     * @param date  æ—¥
+     * @return å¯¹åº”çš„æ—¥æœŸå¯¹è±¡
      */
     public static Date getDate(int year, int month, int date) {
         return getDate(year, month, date, 0, 0);
     }
 
     /**
-     * ¸ù¾İÖ¸¶¨µÄÄê, ÔÂ, ÈÕ, Ê±, ·ÖµÈ²ÎÊı»ñÈ¡ÈÕÆÚ¶ÔÏó.
+     * æ ¹æ®æŒ‡å®šçš„å¹´, æœˆ, æ—¥, æ—¶, åˆ†ç­‰å‚æ•°è·å–æ—¥æœŸå¯¹è±¡.
      *
-     * @param year      Äê
-     * @param month     ÔÂ
-     * @param date      ÈÕ
-     * @param hourOfDay Ê±(24Ğ¡Ê±ÖÆ)
-     * @param minute    ·Ö
-     * @return ¶ÔÓ¦µÄÈÕÆÚ¶ÔÏó
+     * @param year      å¹´
+     * @param month     æœˆ
+     * @param date      æ—¥
+     * @param hourOfDay æ—¶(24å°æ—¶åˆ¶)
+     * @param minute    åˆ†
+     * @return å¯¹åº”çš„æ—¥æœŸå¯¹è±¡
      */
     public static Date getDate(int year, int month, int date, int hourOfDay, int minute) {
         return getDate(year, month, date, hourOfDay, minute, 0);
     }
 
     /**
-     * ¸ù¾İÖ¸¶¨µÄÄê, ÔÂ, ÈÕ, Ê±, ·Ö, ÃëµÈ²ÎÊı»ñÈ¡ÈÕÆÚ¶ÔÏó.
+     * æ ¹æ®æŒ‡å®šçš„å¹´, æœˆ, æ—¥, æ—¶, åˆ†, ç§’ç­‰å‚æ•°è·å–æ—¥æœŸå¯¹è±¡.
      *
-     * @param year      Äê
-     * @param month     ÔÂ
-     * @param date      ÈÕ
-     * @param hourOfDay Ê±(24Ğ¡Ê±ÖÆ)
-     * @param minute    ·Ö
-     * @param second    Ãë
-     * @return ¶ÔÓ¦µÄÈÕÆÚ¶ÔÏó
+     * @param year      å¹´
+     * @param month     æœˆ
+     * @param date      æ—¥
+     * @param hourOfDay æ—¶(24å°æ—¶åˆ¶)
+     * @param minute    åˆ†
+     * @param second    ç§’
+     * @return å¯¹åº”çš„æ—¥æœŸå¯¹è±¡
      */
     public static Date getDate(int year, int month, int date, int hourOfDay, int minute, int second) {
         Calendar cal = Calendar.getInstance();
@@ -290,10 +290,10 @@ public abstract class DateUtils {
     }
 
     /**
-     * È¡µÃÄ³¸öÈÕÆÚÊÇĞÇÆÚ¼¸£¬ĞÇÆÚÈÕÊÇ1£¬ÒÀ´ËÀàÍÆ
+     * å–å¾—æŸä¸ªæ—¥æœŸæ˜¯æ˜ŸæœŸå‡ ï¼Œæ˜ŸæœŸæ—¥æ˜¯1ï¼Œä¾æ­¤ç±»æ¨
      *
-     * @param date ÈÕÆÚ
-     * @return ĞÇÆÚ¼¸
+     * @param date æ—¥æœŸ
+     * @return æ˜ŸæœŸå‡ 
      */
     public static int getDayOfWeek(Date date) {
         Calendar cal = Calendar.getInstance();
@@ -302,10 +302,10 @@ public abstract class DateUtils {
     }
 
     /**
-     * »ñÈ¡Ä³ÌìµÄ½áÊøÊ±¼ä, e.g. 2005-10-01 23:59:59.999
+     * è·å–æŸå¤©çš„ç»“æŸæ—¶é—´, e.g. 2005-10-01 23:59:59.999
      *
-     * @param date ÈÕÆÚ¶ÔÏó
-     * @return ¸ÃÌìµÄ½áÊøÊ±¼ä
+     * @param date æ—¥æœŸå¯¹è±¡
+     * @return è¯¥å¤©çš„ç»“æŸæ—¶é—´
      */
     public static Date getEndDate(Date date) {
         if (date == null) {
@@ -321,11 +321,11 @@ public abstract class DateUtils {
     }
 
     /**
-     * È¡µÃÒ»¸öÔÂ×î¶àµÄÌìÊı
+     * å–å¾—ä¸€ä¸ªæœˆæœ€å¤šçš„å¤©æ•°
      *
-     * @param year  Äê·İ
-     * @param month ÔÂ·İ£¬0±íÊ¾1ÔÂ£¬ÒÀ´ËÀàÍÆ
-     * @return ×î¶àµÄÌìÊı
+     * @param year  å¹´ä»½
+     * @param month æœˆä»½ï¼Œ0è¡¨ç¤º1æœˆï¼Œä¾æ­¤ç±»æ¨
+     * @return æœ€å¤šçš„å¤©æ•°
      */
     public static int getMaxDayOfMonth(int year, int month) {
         if (month == 1 && isLeapYear(year)) {
@@ -335,20 +335,20 @@ public abstract class DateUtils {
     }
 
     /**
-     * µÃµ½Ö¸¶¨ÈÕÆÚµÄÏÂÒ»Ìì
+     * å¾—åˆ°æŒ‡å®šæ—¥æœŸçš„ä¸‹ä¸€å¤©
      *
-     * @param date ÈÕÆÚ¶ÔÏó
-     * @return Í¬Ò»Ê±¼äµÄÏÂÒ»ÌìµÄÈÕÆÚ¶ÔÏó
+     * @param date æ—¥æœŸå¯¹è±¡
+     * @return åŒä¸€æ—¶é—´çš„ä¸‹ä¸€å¤©çš„æ—¥æœŸå¯¹è±¡
      */
     public static Date getNextDay(Date date) {
         return addDay(date, 1);
     }
 
     /**
-     * »ñÈ¡Ä³ÌìµÄÆğÊ¼Ê±¼ä, e.g. 2005-10-01 00:00:00.000
+     * è·å–æŸå¤©çš„èµ·å§‹æ—¶é—´, e.g. 2005-10-01 00:00:00.000
      *
-     * @param date ÈÕÆÚ¶ÔÏó
-     * @return ¸ÃÌìµÄÆğÊ¼Ê±¼ä
+     * @param date æ—¥æœŸå¯¹è±¡
+     * @return è¯¥å¤©çš„èµ·å§‹æ—¶é—´
      */
     public static Date getStartDate(Date date) {
         if (date == null) {
@@ -364,10 +364,10 @@ public abstract class DateUtils {
     }
 
     /**
-     * ¸ù¾İÈÕÆÚ¶ÔÏóÀ´»ñÈ¡ÈÕÆÚÖĞµÄÊ±¼ä(HH:mm:ss).
+     * æ ¹æ®æ—¥æœŸå¯¹è±¡æ¥è·å–æ—¥æœŸä¸­çš„æ—¶é—´(HH:mm:ss).
      *
-     * @param date ÈÕÆÚ¶ÔÏó
-     * @return Ê±¼ä×Ö·û´®, ¸ñÊ½Îª: HH:mm:ss
+     * @param date æ—¥æœŸå¯¹è±¡
+     * @return æ—¶é—´å­—ç¬¦ä¸², æ ¼å¼ä¸º: HH:mm:ss
      */
     public static String getTime(Date date) {
         if (date == null) {
@@ -378,10 +378,10 @@ public abstract class DateUtils {
     }
 
     /**
-     * ¸ù¾İÈÕÆÚ¶ÔÏóÀ´»ñÈ¡ÈÕÆÚÖĞµÄÊ±¼ä(HH:mm).
+     * æ ¹æ®æ—¥æœŸå¯¹è±¡æ¥è·å–æ—¥æœŸä¸­çš„æ—¶é—´(HH:mm).
      *
-     * @param date ÈÕÆÚ¶ÔÏó
-     * @return Ê±¼ä×Ö·û´®, ¸ñÊ½Îª: HH:mm
+     * @param date æ—¥æœŸå¯¹è±¡
+     * @return æ—¶é—´å­—ç¬¦ä¸², æ ¼å¼ä¸º: HH:mm
      */
     public static String getTimeIgnoreSecond(Date date) {
         if (date == null) {
@@ -392,10 +392,10 @@ public abstract class DateUtils {
     }
 
     /**
-     * ÅĞ¶ÏÊÇ·ñÊÇÈòÄê
+     * åˆ¤æ–­æ˜¯å¦æ˜¯é—°å¹´
      *
-     * @param year Äê·İ
-     * @return ÊÇtrue£¬·ñÔòfalse
+     * @param year å¹´ä»½
+     * @return æ˜¯trueï¼Œå¦åˆ™false
      */
     public static boolean isLeapYear(int year) {
         Calendar calendar = Calendar.getInstance();
@@ -403,21 +403,21 @@ public abstract class DateUtils {
     }
 
     /**
-     * °Ñ×Ö·û´®×ª»»³ÉÈÕÆÚ£¬¸ñÊ½Îª2006-01-10
+     * æŠŠå­—ç¬¦ä¸²è½¬æ¢æˆæ—¥æœŸï¼Œæ ¼å¼ä¸º2006-01-10
      *
-     * @param str ×Ö·û´®
-     * @return ÈÕÆÚ
+     * @param str å­—ç¬¦ä¸²
+     * @return æ—¥æœŸ
      */
     public static Date string2Date(String str) {
         return string2Date(str, "yyyy-MM-dd");
     }
 
     /**
-     * °´ÕÕÖ¸¶¨µÄ¸ñÊ½°Ñ×Ö·û´®×ª»»³ÉÊ±¼ä£¬¸ñÊ½µÄĞ´·¨ÀàËÆyyyy-MM-dd HH:mm:ss.SSS
+     * æŒ‰ç…§æŒ‡å®šçš„æ ¼å¼æŠŠå­—ç¬¦ä¸²è½¬æ¢æˆæ—¶é—´ï¼Œæ ¼å¼çš„å†™æ³•ç±»ä¼¼yyyy-MM-dd HH:mm:ss.SSS
      *
-     * @param str     ×Ö·û´®
-     * @param pattern ¸ñÊ½
-     * @return Ê±¼ä
+     * @param str     å­—ç¬¦ä¸²
+     * @param pattern æ ¼å¼
+     * @return æ—¶é—´
      */
     public static Date string2Date(String str, String pattern) {
         if (Validators.isEmpty(str)) {
@@ -434,17 +434,17 @@ public abstract class DateUtils {
     }
 
     /**
-     * °Ñ×Ö·û´®×ª»»³ÉÈÕÆÚ£¬¸ñÊ½Îª2006-01-10 20:56:30
+     * æŠŠå­—ç¬¦ä¸²è½¬æ¢æˆæ—¥æœŸï¼Œæ ¼å¼ä¸º2006-01-10 20:56:30
      *
-     * @param str ×Ö·û´®
-     * @return ÈÕÆÚ
+     * @param str å­—ç¬¦ä¸²
+     * @return æ—¥æœŸ
      */
     public static Date string2DateTime(String str) {
         return string2Date(str, "yyyy-MM-dd HH:mm:ss");
     }
 
     /**
-     * È¡µÃÒ»ÄêÖĞµÄµÚ¼¸ÖÜ¡£
+     * å–å¾—ä¸€å¹´ä¸­çš„ç¬¬å‡ å‘¨ã€‚
      *
      * @param date
      * @return
@@ -456,37 +456,37 @@ public abstract class DateUtils {
     }
 
     /**
-     * »ñÈ¡ÉÏÖÜµÄÖ¸¶¨ĞÇÆÚµÄÈÕÆÚ¡£
+     * è·å–ä¸Šå‘¨çš„æŒ‡å®šæ˜ŸæœŸçš„æ—¥æœŸã€‚
      *
-     * @param dayOfWeek ĞÇÆÚ¼¸£¬È¡Öµ·¶Î§ÊÇ {@link Calendar#MONDAY} - {@link Calendar#SUNDAY}
+     * @param dayOfWeek æ˜ŸæœŸå‡ ï¼Œå–å€¼èŒƒå›´æ˜¯ {@link Calendar#MONDAY} - {@link Calendar#SUNDAY}
      */
     public static Date getDateOfPreviousWeek(int dayOfWeek) {
         if (dayOfWeek > 7 || dayOfWeek < 1) {
-            throw new IllegalArgumentException("²ÎÊı±ØĞëÊÇ1-7Ö®¼äµÄÊı×Ö");
+            throw new IllegalArgumentException("å‚æ•°å¿…é¡»æ˜¯1-7ä¹‹é—´çš„æ•°å­—");
         }
         return getDateOfRange(dayOfWeek, -7);
     }
 
     /**
-     * »ñÈ¡±¾ÖÜµÄÖ¸¶¨ĞÇÆÚµÄÈÕÆÚ¡£
+     * è·å–æœ¬å‘¨çš„æŒ‡å®šæ˜ŸæœŸçš„æ—¥æœŸã€‚
      *
-     * @param dayOfWeek ĞÇÆÚ¼¸£¬È¡Öµ·¶Î§ÊÇ {@link Calendar#MONDAY} - {@link Calendar#SUNDAY}
+     * @param dayOfWeek æ˜ŸæœŸå‡ ï¼Œå–å€¼èŒƒå›´æ˜¯ {@link Calendar#MONDAY} - {@link Calendar#SUNDAY}
      */
     public static Date getDateOfCurrentWeek(int dayOfWeek) {
         if (dayOfWeek > 7 || dayOfWeek < 1) {
-            throw new IllegalArgumentException("²ÎÊı±ØĞëÊÇ1-7Ö®¼äµÄÊı×Ö");
+            throw new IllegalArgumentException("å‚æ•°å¿…é¡»æ˜¯1-7ä¹‹é—´çš„æ•°å­—");
         }
         return getDateOfRange(dayOfWeek, 0);
     }
 
     /**
-     * »ñÈ¡ÏÂÖÜµÄÖ¸¶¨ĞÇÆÚµÄÈÕÆÚ¡£
+     * è·å–ä¸‹å‘¨çš„æŒ‡å®šæ˜ŸæœŸçš„æ—¥æœŸã€‚
      *
-     * @param dayOfWeek ĞÇÆÚ¼¸£¬È¡Öµ·¶Î§ÊÇ {@link Calendar#MONDAY} - {@link Calendar#SUNDAY}
+     * @param dayOfWeek æ˜ŸæœŸå‡ ï¼Œå–å€¼èŒƒå›´æ˜¯ {@link Calendar#MONDAY} - {@link Calendar#SUNDAY}
      */
     public static Date getDateOfNextWeek(int dayOfWeek) {
         if (dayOfWeek > 7 || dayOfWeek < 1) {
-            throw new IllegalArgumentException("²ÎÊı±ØĞëÊÇ1-7Ö®¼äµÄÊı×Ö");
+            throw new IllegalArgumentException("å‚æ•°å¿…é¡»æ˜¯1-7ä¹‹é—´çš„æ•°å­—");
         }
         return getDateOfRange(dayOfWeek, 7);
     }

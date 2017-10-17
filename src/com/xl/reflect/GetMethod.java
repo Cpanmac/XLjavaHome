@@ -18,56 +18,56 @@ public class GetMethod {
     }
 
     /*
-     * »ñÈ¡Ö¸¶¨ClassÖĞµÄ¹«ÓĞ·½·¨¡£
+     * è·å–æŒ‡å®šClassä¸­çš„å…¬æœ‰æ–¹æ³•ã€‚
      */
     @Test
     public void getMethodDemo() throws ClassNotFoundException, SecurityException, NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException {
         Class<?> clazz = Class.forName(className);
-        Method[] methods = clazz.getMethods(); // »ñÈ¡µÄ¶¼ÊÇ¹«ÓĞµÄ
-        // µÚÒ»¸ö²ÎÊıÊÇ·½·¨µÄÃû×Ö£¬ºóÃæµÄ²ÎÊıÊÇ·½·¨µÄ²ÎÊıÀàĞÍ
+        Method[] methods = clazz.getMethods(); // è·å–çš„éƒ½æ˜¯å…¬æœ‰çš„
+        // ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯æ–¹æ³•çš„åå­—ï¼Œåé¢çš„å‚æ•°æ˜¯æ–¹æ³•çš„å‚æ•°ç±»å‹
         // Method method = clazz.getMethod("aa1", String.class, int.class);
-        // ÔËĞĞÕâ¸ö·½·¨
+        // è¿è¡Œè¿™ä¸ªæ–¹æ³•
         // method.invoke(p, "sa", 36);
         for (Method amethods : methods) {
-            // ´òÓ¡¹«ÓÃµÄ·½·¨È«Ãû
+            // æ‰“å°å…¬ç”¨çš„æ–¹æ³•å…¨å
             System.out.println(amethods.getName());
         }
-        // Ö»»ñÈ¡Ë½ÓĞµÄ·½·¨
+        // åªè·å–ç§æœ‰çš„æ–¹æ³•
         methods = clazz.getDeclaredMethods();
         for (Method bmethods : methods) {
             System.out.println(bmethods);
         }
     }
 
-    // ÎŞ²ÎµÄ·½·¨
+    // æ— å‚çš„æ–¹æ³•
     @Test
     public void getMethodDemo_2() throws Exception {
         Class<?> clazz = Class.forName("reflect.Person");
-        Method method = clazz.getMethod("show", null); // »ñÈ¡¿Õ²ÎÊıµÄÒ»°ã·½·¨¡£
-        // Object obj=clazz.newInstance(); //½¨Á¢Person¶ÔÏó
-        // method.invoke(obj,null); //Ö±½ÓÔËĞĞÁËshow·½·¨£¬Èç¹ûÊÇË½ÓĞµÄÔËĞĞ²»ÁË
+        Method method = clazz.getMethod("show", null); // è·å–ç©ºå‚æ•°çš„ä¸€èˆ¬æ–¹æ³•ã€‚
+        // Object obj=clazz.newInstance(); //å»ºç«‹Personå¯¹è±¡
+        // method.invoke(obj,null); //ç›´æ¥è¿è¡Œäº†showæ–¹æ³•ï¼Œå¦‚æœæ˜¯ç§æœ‰çš„è¿è¡Œä¸äº†
         Constructor constructor = clazz.getConstructor(String.class, int.class);
-        Object obj = constructor.newInstance("Ğ¡Ã÷", 30);
+        Object obj = constructor.newInstance("å°æ˜", 30);
     }
 
-    // ¾²Ì¬·½·¨
+    // é™æ€æ–¹æ³•
     @Test
     public void getMethodDemo_3() throws Exception {
         Class<?> clazz = Class.forName(className);
-        Method method = clazz.getMethod("aa1", int.class);// ·½·¨Ãû+²ÎÊıÁĞ±í
-        // ÒòÎªÊÇ¾²Ì¬µÄËùÒÔ²»ĞèÒª¶ÔÏó
-        method.invoke(null, 23); // ÔËĞĞ
+        Method method = clazz.getMethod("aa1", int.class);// æ–¹æ³•å+å‚æ•°åˆ—è¡¨
+        // å› ä¸ºæ˜¯é™æ€çš„æ‰€ä»¥ä¸éœ€è¦å¯¹è±¡
+        method.invoke(null, 23); // è¿è¡Œ
     }
 
-    // main·½·¨,Å×³öÒ»¸ö´íÎó²ÎÊıÒì³£
+    // mainæ–¹æ³•,æŠ›å‡ºä¸€ä¸ªé”™è¯¯å‚æ•°å¼‚å¸¸
     @Test
     public void test1() throws IllegalArgumentException, IllegalAccessException, InvocationTargetException, SecurityException, NoSuchMethodException, ClassNotFoundException {
         Class<?> clazz = Class.forName(className);
         Method method = clazz.getMethod("callstored", String[].class);
-        // 1.·½·¨Ò»£º
-        method.invoke(null, new Object[]{new String[]{"aa", "bb"}}); // jdk1.4Ã»ÓĞString[],
-        // ÔÚÕâÁ½¸ö²ÎÊı£¬Éı¼¶¹ı³Ì²»¼æÈİµ¼ÖÂ,ËùÒÔ±ØĞë¼ÓObject
-        // 2.·½·¨¶ş£º²»ÈÃËû²Â¾ÍĞĞ£¬Õâ²»ÊÇÊı×é
+        // 1.æ–¹æ³•ä¸€ï¼š
+        method.invoke(null, new Object[]{new String[]{"aa", "bb"}}); // jdk1.4æ²¡æœ‰String[],
+        // åœ¨è¿™ä¸¤ä¸ªå‚æ•°ï¼Œå‡çº§è¿‡ç¨‹ä¸å…¼å®¹å¯¼è‡´,æ‰€ä»¥å¿…é¡»åŠ Object
+        // 2.æ–¹æ³•äºŒï¼šä¸è®©ä»–çŒœå°±è¡Œï¼Œè¿™ä¸æ˜¯æ•°ç»„
         method.invoke(null, (Object) new String[]{"sasa", "sqd"});
     }
 }

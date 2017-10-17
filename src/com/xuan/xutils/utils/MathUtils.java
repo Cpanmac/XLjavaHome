@@ -3,23 +3,23 @@ package com.xuan.xutils.utils;
 import java.math.BigDecimal;
 
 /**
- * ÓÉÓÚ Java µÄ¼òµ¥ÀàĞÍ²»ÄÜ¹»¾«È·µÄ¶Ô¸¡µãÊı½øĞĞÔËËã£¬´Ë¹¤¾ßÀàÌá¹©¾«È·µÄ¸¡µãÊıÔËËã£¬°üÀ¨¼Ó¼õ³Ë³ıºÍËÄÉáÎåÈë
+ * ç”±äº Java çš„ç®€å•ç±»å‹ä¸èƒ½å¤Ÿç²¾ç¡®çš„å¯¹æµ®ç‚¹æ•°è¿›è¡Œè¿ç®—ï¼Œæ­¤å·¥å…·ç±»æä¾›ç²¾ç¡®çš„æµ®ç‚¹æ•°è¿ç®—ï¼ŒåŒ…æ‹¬åŠ å‡ä¹˜é™¤å’Œå››èˆäº”å…¥
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:53:36 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:53:36 $
  */
 public abstract class MathUtils {
     /**
-     * Ä¬ÈÏ³ı·¨ÔËËã¾«¶È
+     * é»˜è®¤é™¤æ³•è¿ç®—ç²¾åº¦
      */
     private static final int DEFAULT_DIV_SCALE = 10;
 
     /**
-     * Ìá¹©¾«È·µÄ¼Ó·¨ÔËËã¡£
+     * æä¾›ç²¾ç¡®çš„åŠ æ³•è¿ç®—ã€‚
      *
-     * @param v1 ±»¼ÓÊı
-     * @param v2 ¼ÓÊı
-     * @return Á½¸ö²ÎÊıµÄºÍ
+     * @param v1 è¢«åŠ æ•°
+     * @param v2 åŠ æ•°
+     * @return ä¸¤ä¸ªå‚æ•°çš„å’Œ
      */
     public static double add(double v1, double v2) {
         BigDecimal b1 = createBigDecimal(v1);
@@ -28,23 +28,23 @@ public abstract class MathUtils {
     }
 
     /**
-     * Ìá¹©£¨Ïà¶Ô£©¾«È·µÄ³ı·¨ÔËËã£¬µ±·¢Éú³ı²»¾¡µÄÇé¿öÊ±£¬¾«È·µ½Ğ¡ÊıµãÒÔºó10Î»£¬ÒÔºóµÄÊı×ÖËÄÉáÎåÈë¡£
+     * æä¾›ï¼ˆç›¸å¯¹ï¼‰ç²¾ç¡®çš„é™¤æ³•è¿ç®—ï¼Œå½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µæ—¶ï¼Œç²¾ç¡®åˆ°å°æ•°ç‚¹ä»¥å10ä½ï¼Œä»¥åçš„æ•°å­—å››èˆäº”å…¥ã€‚
      *
-     * @param v1 ±»³ıÊı
-     * @param v2 ³ıÊı
-     * @return Á½¸ö²ÎÊıµÄÉÌ
+     * @param v1 è¢«é™¤æ•°
+     * @param v2 é™¤æ•°
+     * @return ä¸¤ä¸ªå‚æ•°çš„å•†
      */
     public static double div(double v1, double v2) {
         return div(v1, v2, DEFAULT_DIV_SCALE);
     }
 
     /**
-     * Ìá¹©£¨Ïà¶Ô£©¾«È·µÄ³ı·¨ÔËËã¡£ µ±·¢Éú³ı²»¾¡µÄÇé¿öÊ±£¬ÓÉscale²ÎÊıÖ¸¶¨¾«¶È£¬ÒÔºóµÄÊı×ÖËÄÉáÎåÈë¡£
+     * æä¾›ï¼ˆç›¸å¯¹ï¼‰ç²¾ç¡®çš„é™¤æ³•è¿ç®—ã€‚ å½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µæ—¶ï¼Œç”±scaleå‚æ•°æŒ‡å®šç²¾åº¦ï¼Œä»¥åçš„æ•°å­—å››èˆäº”å…¥ã€‚
      *
-     * @param v1    ±»³ıÊı
-     * @param v2    ³ıÊı
-     * @param scale ±íÊ¾±íÊ¾ĞèÒª¾«È·µ½Ğ¡ÊıµãÒÔºó¼¸Î»¡£
-     * @return Á½¸ö²ÎÊıµÄÉÌ
+     * @param v1    è¢«é™¤æ•°
+     * @param v2    é™¤æ•°
+     * @param scale è¡¨ç¤ºè¡¨ç¤ºéœ€è¦ç²¾ç¡®åˆ°å°æ•°ç‚¹ä»¥åå‡ ä½ã€‚
+     * @return ä¸¤ä¸ªå‚æ•°çš„å•†
      */
     public static double div(double v1, double v2, int scale) {
         if (scale < 0) {
@@ -56,21 +56,21 @@ public abstract class MathUtils {
     }
 
     /**
-     * ÅĞ¶Ï double ÖµÊÇ·ñ·Ç·¨£¬ÖµÎª Infinite »òÕß NaN ¼´±íÊ¾·Ç·¨¡£
+     * åˆ¤æ–­ double å€¼æ˜¯å¦éæ³•ï¼Œå€¼ä¸º Infinite æˆ–è€… NaN å³è¡¨ç¤ºéæ³•ã€‚
      *
-     * @param v doube Öµ
-     * @return Èç¹ûÖµÎª Infinite »òÕß NaN Ôò·µ»Ø <code>true</code>£¬·ñÔò·µ»Ø <code>false</code>¡£
+     * @param v doube å€¼
+     * @return å¦‚æœå€¼ä¸º Infinite æˆ–è€… NaN åˆ™è¿”å› <code>true</code>ï¼Œå¦åˆ™è¿”å› <code>false</code>ã€‚
      */
     public static boolean isInvalidDouble(double v) {
         return Double.isInfinite(v) || Double.isNaN(v);
     }
 
     /**
-     * Ìá¹©¾«È·µÄ³Ë·¨ÔËËã¡£
+     * æä¾›ç²¾ç¡®çš„ä¹˜æ³•è¿ç®—ã€‚
      *
-     * @param v1 ±»³ËÊı
-     * @param v2 ³ËÊı
-     * @return Á½¸ö²ÎÊıµÄ»ı
+     * @param v1 è¢«ä¹˜æ•°
+     * @param v2 ä¹˜æ•°
+     * @return ä¸¤ä¸ªå‚æ•°çš„ç§¯
      */
     public static double mul(double v1, double v2) {
         BigDecimal b1 = createBigDecimal(v1);
@@ -79,11 +79,11 @@ public abstract class MathUtils {
     }
 
     /**
-     * Ìá¹©¾«È·µÄĞ¡ÊıÎ»ËÄÉáÎåÈë´¦Àí¡£Èç¹û v ÊÇ·Ç·¨µÄ£¬ÔòÔ­Ñù·µ»Ø¡£
+     * æä¾›ç²¾ç¡®çš„å°æ•°ä½å››èˆäº”å…¥å¤„ç†ã€‚å¦‚æœ v æ˜¯éæ³•çš„ï¼Œåˆ™åŸæ ·è¿”å›ã€‚
      *
-     * @param v     ĞèÒªËÄÉáÎåÈëµÄÊı×Ö
-     * @param scale Ğ¡Êıµãºó±£Áô¼¸Î»
-     * @return ËÄÉáÎåÈëºóµÄ½á¹û
+     * @param v     éœ€è¦å››èˆäº”å…¥çš„æ•°å­—
+     * @param scale å°æ•°ç‚¹åä¿ç•™å‡ ä½
+     * @return å››èˆäº”å…¥åçš„ç»“æœ
      */
     public static double round(double v, int scale) {
         if (scale < 0) {
@@ -97,11 +97,11 @@ public abstract class MathUtils {
     }
 
     /**
-     * Ìá¹©¾«È·µÄ¼õ·¨ÔËËã¡£
+     * æä¾›ç²¾ç¡®çš„å‡æ³•è¿ç®—ã€‚
      *
-     * @param v1 ±»¼õÊı
-     * @param v2 ¼õÊı
-     * @return Á½¸ö²ÎÊıµÄ²î
+     * @param v1 è¢«å‡æ•°
+     * @param v2 å‡æ•°
+     * @return ä¸¤ä¸ªå‚æ•°çš„å·®
      */
     public static double sub(double v1, double v2) {
         BigDecimal b1 = createBigDecimal(v1);
@@ -110,10 +110,10 @@ public abstract class MathUtils {
     }
 
     /**
-     * ²ÉÓÃ BigDecimal µÄ×Ö·û´®¹¹ÔìÆ÷½øĞĞ³õÊ¼»¯¡£
+     * é‡‡ç”¨ BigDecimal çš„å­—ç¬¦ä¸²æ„é€ å™¨è¿›è¡Œåˆå§‹åŒ–ã€‚
      *
-     * @param v double Öµ
-     * @return BigDecimal ¶ÔÏó
+     * @param v double å€¼
+     * @return BigDecimal å¯¹è±¡
      */
     private static BigDecimal createBigDecimal(double v) {
         return new BigDecimal(Double.toString(v));

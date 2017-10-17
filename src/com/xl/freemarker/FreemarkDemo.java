@@ -29,26 +29,26 @@ import java.util.Map;
 public class FreemarkDemo {
     private final String imgFile = "freemarker/a.jpg";
     /**
-     * freemarkÄ£°åÅäÖÃ
+     * freemarkæ¨¡æ¿é…ç½®
      */
     private Configuration configuration;
     /**
-     * freemarkÄ£°åµÄÃû×Ö
+     * freemarkæ¨¡æ¿çš„åå­—
      */
     private String templateName;
     /**
-     * Éú³ÉÎÄ¼şÃû
+     * ç”Ÿæˆæ–‡ä»¶å
      */
     private String fileName;
     /**
-     * Éú³ÉÎÄ¼şÂ·¾¶
+     * ç”Ÿæˆæ–‡ä»¶è·¯å¾„
      */
     private String filePath;
 
     /**
-     * freemark³õÊ¼»¯
+     * freemarkåˆå§‹åŒ–
      *
-     * @param templatePath Ä£°åÎÄ¼şÎ»ÖÃ
+     * @param templatePath æ¨¡æ¿æ–‡ä»¶ä½ç½®
      */
     public FreemarkDemo(String templatePath) {
         configuration = new Configuration();
@@ -59,7 +59,7 @@ public class FreemarkDemo {
     public static void main(String[] args) throws IOException {
         FreemarkDemo freemark = new FreemarkDemo("/freemarker/");
         //		freemark.setTemplateName("wordTemplate.ftl");
-        freemark.setTemplateName("¼òÀú-ÖìÀÏÊ¦.ftl");
+        freemark.setTemplateName("ç®€å†-æœ±è€å¸ˆ.ftl");
         freemark.setFileName("doc_" + new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date()) + ".doc");
         freemark.setFilePath("bin/");
         freemark.createWord();
@@ -85,42 +85,42 @@ public class FreemarkDemo {
             e.printStackTrace();
         }
         Map map = new HashMap<String, Object>();
-        map.put("NAME", "ĞìÁ¢");
+        map.put("NAME", "å¾ç«‹");
         map.put("image", getImageStr());
-        map.put("SEX", "ÄĞ");
+        map.put("SEX", "ç”·");
         map.put("BIRTH", "1987-08");
-        map.put("ZZMM", "µ³Ô±");
-        map.put("MZ", "ºº");
-        map.put("JG", "ºÓ±±Ê¡");
-        map.put("JKZK", "Á¼ºÃ");
+        map.put("ZZMM", "å…šå‘˜");
+        map.put("MZ", "æ±‰");
+        map.put("JG", "æ²³åŒ—çœ");
+        map.put("JKZK", "è‰¯å¥½");
         map.put("SG", "173cm");
-        map.put("HYZK", "ÒÑ»é");
-        map.put("XL", "±¾¿Æ");
-        map.put("BYYX", "ºÓ±±¹¤Òµ´óÑ§");
-        map.put("ZY", "Èí¼ş¹¤³Ì");
-        map.put("ZP", "ÕÕÆ¬//todo");
-        map.put("QZYX", "Èí¼ş·½Ïò¹¤×÷Ğ½×Ê1wÉÏÏÂ");
+        map.put("HYZK", "å·²å©š");
+        map.put("XL", "æœ¬ç§‘");
+        map.put("BYYX", "æ²³åŒ—å·¥ä¸šå¤§å­¦");
+        map.put("ZY", "è½¯ä»¶å·¥ç¨‹");
+        map.put("ZP", "ç…§ç‰‡//todo");
+        map.put("QZYX", "è½¯ä»¶æ–¹å‘å·¥ä½œè–ªèµ„1wä¸Šä¸‹");
         map.put("JYSH1", "06-09-01~10-06-20");
-        map.put("JYYZ1", "ºÓ±±¹¤Òµ´óÑ§ Èí¼ş¹¤³Ì");
-        map.put("JYXW1", "Ñ§Ê¿Ñ§Î»");
-        map.put("JYKC1", "Èí¼ş¹¤³Ì¡¢Î¢»ı·Ö¡¢Èí¼ş¹ı³Ì¹ÜÀí¡¢Êı¾İ¿âÔ­ÀíµÈµÈ");
-        map.put("JYSH2", "10-07-01~ÖÁ½ñ");
-        map.put("JYYZ2", "ABCDE´óÑ§");
-        map.put("JYXW2", "XYZÑ§Î»");
-        map.put("JYKC2", "POI¿Î³Ì");
-        map.put("ZYJN", "Èí¼ş¿ª·¢¡¢Èí¼ş¹ÜÀí");
+        map.put("JYYZ1", "æ²³åŒ—å·¥ä¸šå¤§å­¦ è½¯ä»¶å·¥ç¨‹");
+        map.put("JYXW1", "å­¦å£«å­¦ä½");
+        map.put("JYKC1", "è½¯ä»¶å·¥ç¨‹ã€å¾®ç§¯åˆ†ã€è½¯ä»¶è¿‡ç¨‹ç®¡ç†ã€æ•°æ®åº“åŸç†ç­‰ç­‰");
+        map.put("JYSH2", "10-07-01~è‡³ä»Š");
+        map.put("JYYZ2", "ABCDEå¤§å­¦");
+        map.put("JYXW2", "XYZå­¦ä½");
+        map.put("JYKC2", "POIè¯¾ç¨‹");
+        map.put("ZYJN", "è½¯ä»¶å¼€å‘ã€è½¯ä»¶ç®¡ç†");
         map.put("GZSH1", "10-07-01~11-12-09");
-        map.put("GZDZ1", "»ªĞÅÈí¼ş");
-        map.put("GZGY1", "³õ¼¶Èí¼ş¹¤³ÌÊ¦");
+        map.put("GZDZ1", "åä¿¡è½¯ä»¶");
+        map.put("GZGY1", "åˆçº§è½¯ä»¶å·¥ç¨‹å¸ˆ");
         map.put("GZSH2", "11-12-15~14-4-05");
-        map.put("GZDZ2", "±±¾©¾ÃÆä");
-        map.put("GZGY2", "¸ß¼¶Èí¼ş¹¤³ÌÊ¦");
-        map.put("JLQK", "¶şÈıµÈ½±Ñ§½ğ¡¢¸»Ê¿Í¨½±Ñ§½ğµÈ");
-        map.put("ZWPJ", "ĞËÈ¤·á¸»¡¢ºÃÆæĞÄÇ¿¡¢ÓĞÑĞ¾¿¾«Éñ¡£");
+        map.put("GZDZ2", "åŒ—äº¬ä¹…å…¶");
+        map.put("GZGY2", "é«˜çº§è½¯ä»¶å·¥ç¨‹å¸ˆ");
+        map.put("JLQK", "äºŒä¸‰ç­‰å¥–å­¦é‡‘ã€å¯Œå£«é€šå¥–å­¦é‡‘ç­‰");
+        map.put("ZWPJ", "å…´è¶£ä¸°å¯Œã€å¥½å¥‡å¿ƒå¼ºã€æœ‰ç ”ç©¶ç²¾ç¥ã€‚");
         map.put("DH", "0312-3132098");
         map.put("SJ", "15033768387");
         map.put("YJ", "hanmanyifengyi@163.com");
-        map.put("DZ", "ºÓ±±Ê¡±£¶¨ÊĞ");
+        map.put("DZ", "æ²³åŒ—çœä¿å®šå¸‚");
         map.put("YB", "071000");
         try {
             t.process(map, out);

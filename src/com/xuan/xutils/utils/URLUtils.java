@@ -18,10 +18,10 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * URL ¹¤¾ßÀà
+ * URL å·¥å…·ç±»
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:58:48 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:58:48 $
  */
 public abstract class URLUtils {
     private static final char AND_SIGN = '&';
@@ -33,7 +33,7 @@ public abstract class URLUtils {
     private static String charSet = "UTF-8";
 
     /**
-     * ÉèÖÃ×ÖÄ¸¼¯
+     * è®¾ç½®å­—æ¯é›†
      *
      * @param charSet
      */
@@ -42,12 +42,12 @@ public abstract class URLUtils {
     }
 
     /**
-     * Æ´½ÓURL£¬²ÎÊıÖµ´ÓobjÖĞÍ¨¹ı·´ÉäÈ¡µÃ
+     * æ‹¼æ¥URLï¼Œå‚æ•°å€¼ä»objä¸­é€šè¿‡åå°„å–å¾—
      *
      * @param url   URL
-     * @param obj   ¶ÔÏó
-     * @param names ²ÎÊıÃûÊı×é
-     * @return Æ´½ÓºóµÄURL
+     * @param obj   å¯¹è±¡
+     * @param names å‚æ•°åæ•°ç»„
+     * @return æ‹¼æ¥åçš„URL
      */
     @SuppressWarnings("rawtypes")
     public static String addInnerQueryString(String url, Object obj, String[] names) {
@@ -66,11 +66,11 @@ public abstract class URLUtils {
     }
 
     /**
-     * Æ´½ÓURL
+     * æ‹¼æ¥URL
      *
      * @param url         URL
-     * @param queryString ²éÑ¯×Ö·û´®£¬±ÈÈç£ºid=1
-     * @return Æ´½ÓºóµÄURL
+     * @param queryString æŸ¥è¯¢å­—ç¬¦ä¸²ï¼Œæ¯”å¦‚ï¼šid=1
+     * @return æ‹¼æ¥åçš„URL
      */
     public static String addQueryString(String url, String queryString) {
         if (Validators.isEmpty(queryString)) {
@@ -85,24 +85,24 @@ public abstract class URLUtils {
     }
 
     /**
-     * Æ´½ÓURL
+     * æ‹¼æ¥URL
      *
      * @param url   URL
-     * @param name  ²ÎÊıµÄÃû³Æ
-     * @param value ²ÎÊıµÄÖµ
-     * @return Æ´½ÓºóµÄURL
+     * @param name  å‚æ•°çš„åç§°
+     * @param value å‚æ•°çš„å€¼
+     * @return æ‹¼æ¥åçš„URL
      */
     public static String addQueryString(String url, String name, Object value) {
         return addQueryString(url, new String[]{name}, new Object[]{value});
     }
 
     /**
-     * Æ´½Ó URL¡£
+     * æ‹¼æ¥ URLã€‚
      *
      * @param url    URL
-     * @param names  ²ÎÊıµÄÃû³ÆÊı×é
-     * @param values ²ÎÊıµÄÖµÊı×é
-     * @return Æ´½ÓºóµÄURL
+     * @param names  å‚æ•°çš„åç§°æ•°ç»„
+     * @param values å‚æ•°çš„å€¼æ•°ç»„
+     * @return æ‹¼æ¥åçš„URL
      */
     public static String addQueryString(String url, String[] names, Object[] values) {
         if (names.length != values.length) {
@@ -145,7 +145,7 @@ public abstract class URLUtils {
     }
 
     /**
-     * ¶Ô url °´ÕÕÖ¸¶¨±àÂë·½Ê½½âÂë¡£
+     * å¯¹ url æŒ‰ç…§æŒ‡å®šç¼–ç æ–¹å¼è§£ç ã€‚
      *
      * @param url
      * @param encoding
@@ -160,7 +160,7 @@ public abstract class URLUtils {
     }
 
     /**
-     * Ê¹ URL ³ÉÎª¶¯Ì¬ URL£¬Èç¹ûÃ»ÓĞÎÊºÅ¾ÍÔÚ×îºóÌí¼ÓÎÊºÅ¡£
+     * ä½¿ URL æˆä¸ºåŠ¨æ€ URLï¼Œå¦‚æœæ²¡æœ‰é—®å·å°±åœ¨æœ€åæ·»åŠ é—®å·ã€‚
      *
      * @param url
      * @return
@@ -173,7 +173,7 @@ public abstract class URLUtils {
     }
 
     /**
-     * ¶Ô url °´ÕÕÖ¸¶¨±àÂë·½Ê½±àÂë¡£
+     * å¯¹ url æŒ‰ç…§æŒ‡å®šç¼–ç æ–¹å¼ç¼–ç ã€‚
      *
      * @param url
      * @param encoding
@@ -188,7 +188,7 @@ public abstract class URLUtils {
     }
 
     /**
-     * Í¨¹ıservletPathÈ¡µÃactionµÄÃû³Æ
+     * é€šè¿‡servletPathå–å¾—actionçš„åç§°
      *
      * @param servletPath
      * @return
@@ -198,7 +198,7 @@ public abstract class URLUtils {
     }
 
     /**
-     * È¡µÃurlµÄºó×ºÃû
+     * å–å¾—urlçš„åç¼€å
      *
      * @param url
      * @return
@@ -213,7 +213,7 @@ public abstract class URLUtils {
     }
 
     /**
-     * Í¨¹ıservletPath»ñµÃnamespace
+     * é€šè¿‡servletPathè·å¾—namespace
      *
      * @param servletPath
      * @return
@@ -223,16 +223,16 @@ public abstract class URLUtils {
     }
 
     /**
-     * ºöÂÔURLÖĞµÄÄ©Î²µÄ'/'·ûºÅ.
+     * å¿½ç•¥URLä¸­çš„æœ«å°¾çš„'/'ç¬¦å·.
      *
-     * @param url urlµØÖ·×Ö·û´®
-     * @return ºöÂÔÄ©Î²'/'·ûºÅºóµÄurlµØÖ·.
+     * @param url urlåœ°å€å­—ç¬¦ä¸²
+     * @return å¿½ç•¥æœ«å°¾'/'ç¬¦å·åçš„urlåœ°å€.
      */
     public static String ignoreLastRightSlash(String url) {
         if (Validators.isEmpty(url)) {
             return url;
         }
-        // Ä©Î²×Ö·ûÊÇ·ñÎª'/', ÈôÊÇÔòÈ¥³ı
+        // æœ«å°¾å­—ç¬¦æ˜¯å¦ä¸º'/', è‹¥æ˜¯åˆ™å»é™¤
         if (url.charAt(url.length() - 1) == SEPARATOR_SIGN) {
             return url.substring(0, url.length() - 1);
         }
@@ -240,10 +240,10 @@ public abstract class URLUtils {
     }
 
     /**
-     * ·ÃÎÊÒ³ÃæURL£¬»ñµÃÊäÈëÁ÷
+     * è®¿é—®é¡µé¢URLï¼Œè·å¾—è¾“å…¥æµ
      *
-     * @param pageURL Ò³ÃæURL
-     * @return ÊäÈëÁ÷
+     * @param pageURL é¡µé¢URL
+     * @return è¾“å…¥æµ
      * @throws IOException
      */
     public static InputStream visitContent(String pageURL) throws IOException {
@@ -256,10 +256,10 @@ public abstract class URLUtils {
     }
 
     /**
-     * ·ÃÎÊÒ³ÃæURL£¬»ñµÃÒ³ÃæÄÚÈİ
+     * è®¿é—®é¡µé¢URLï¼Œè·å¾—é¡µé¢å†…å®¹
      *
-     * @param pageURL Ò³ÃæURL
-     * @return Ò³ÃæÄÚÈİ
+     * @param pageURL é¡µé¢URL
+     * @return é¡µé¢å†…å®¹
      * @throws IOException
      */
     public static String readContent(String pageURL) throws IOException {
@@ -281,10 +281,10 @@ public abstract class URLUtils {
     }
 
     /**
-     * ´ÓURLÖĞ·ÖÎö×Ö·û´®²ÎÊı£¬·Åµ½Ò»¸ö map Àï¡£
+     * ä»URLä¸­åˆ†æå­—ç¬¦ä¸²å‚æ•°ï¼Œæ”¾åˆ°ä¸€ä¸ª map é‡Œã€‚
      *
      * @param url URL
-     * @return map£¬´æ·ÅµÄ¶¼ÊÇ×Ö·û´®µÄ¼üÖµ¶Ô
+     * @return mapï¼Œå­˜æ”¾çš„éƒ½æ˜¯å­—ç¬¦ä¸²çš„é”®å€¼å¯¹
      */
     public static Map<String, String> getParameters(String url) {
         HashMap<String, String> parameters = new HashMap<String, String>();
@@ -310,7 +310,7 @@ public abstract class URLUtils {
     }
 
     /**
-     * Ëõ¶Ìurl£¬°ÑbaseURL¿ªÍ·µÄ²¿·ÖÈ¥µô£¬Ëõ¶ÌµÄurl¶¼ÊÇÒÔ"/"¿ªÍ·µÄ
+     * ç¼©çŸ­urlï¼ŒæŠŠbaseURLå¼€å¤´çš„éƒ¨åˆ†å»æ‰ï¼Œç¼©çŸ­çš„urléƒ½æ˜¯ä»¥"/"å¼€å¤´çš„
      *
      * @param url
      * @param baseURL
@@ -326,12 +326,12 @@ public abstract class URLUtils {
     }
 
     /**
-     * ²éÑ¯×Ö·û´®ºóÃæÔö¼Ó²ÎÊı
+     * æŸ¥è¯¢å­—ç¬¦ä¸²åé¢å¢åŠ å‚æ•°
      *
-     * @param queryString ²éÑ¯×Ö·û´®£¬±ÈÈç£ºid=1&type=1
-     * @param name        ²ÎÊıµÄÃû³Æ
-     * @param value       ²ÎÊıµÄÖµ
-     * @return Æ´½ÓºóµÄ²éÑ¯×Ö·û´®
+     * @param queryString æŸ¥è¯¢å­—ç¬¦ä¸²ï¼Œæ¯”å¦‚ï¼šid=1&type=1
+     * @param name        å‚æ•°çš„åç§°
+     * @param value       å‚æ•°çš„å€¼
+     * @return æ‹¼æ¥åçš„æŸ¥è¯¢å­—ç¬¦ä¸²
      */
     private static StringBuilder appendParameter(StringBuilder queryString, String name, Object value) {
         queryString.append(name);

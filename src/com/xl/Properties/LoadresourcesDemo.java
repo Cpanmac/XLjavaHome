@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class LoadresourcesDemo {
     /**
-     * Ä¬ÈÏ»ØÈ¥µ±Ç°ÀàµÄclasspathÂ·¾¶ÏÂÈ¥ÕÒ×ÊÔ´
+     * é»˜è®¤å›å»å½“å‰ç±»çš„classpathè·¯å¾„ä¸‹å»æ‰¾èµ„æº
      *
      * @throws IOException
      */
@@ -17,15 +17,15 @@ public class LoadresourcesDemo {
     public void test1() throws IOException {
         Properties p = new Properties();
         String name = "obj.properties";
-        // Ä¬ÈÏ»ØÈ¥µ±Ç°ÀàµÄclasspathÂ·¾¶ÏÂÈ¥ÕÒ×ÊÔ´,µÚÒ»´Î²»»á¼ÓÔØ£¬±¨´í£¬µÚ¶ş´Î³É¹¦£¡,ÅäÖÃÎÄ¼şÔÚ±¾°üÏÂ¡£
-        BufferedInputStream in = (BufferedInputStream) LoadresourcesDemo.class.getResourceAsStream(name); // ClassÀàµÄ·½·¨
+        // é»˜è®¤å›å»å½“å‰ç±»çš„classpathè·¯å¾„ä¸‹å»æ‰¾èµ„æº,ç¬¬ä¸€æ¬¡ä¸ä¼šåŠ è½½ï¼ŒæŠ¥é”™ï¼Œç¬¬äºŒæ¬¡æˆåŠŸï¼,é…ç½®æ–‡ä»¶åœ¨æœ¬åŒ…ä¸‹ã€‚
+        BufferedInputStream in = (BufferedInputStream) LoadresourcesDemo.class.getResourceAsStream(name); // Classç±»çš„æ–¹æ³•
         System.out.println(in);
         p.load(in);
         System.out.println(p);
     }
 
     /**
-     * Ä¬ÈÏÈ¥classpathµÄ¸ùÂ·¾¶È¥ÕÒ
+     * é»˜è®¤å»classpathçš„æ ¹è·¯å¾„å»æ‰¾
      *
      * @throws IOException
      */
@@ -33,9 +33,9 @@ public class LoadresourcesDemo {
     public void testClassLoader() throws IOException {
         Properties p = new Properties();
         String name = "obj.properties";
-        // Õâ¸öÓÃµÃ¶à£¬ÒòÎª¶¼ÊÇ¸ùÂ·¾¶(bin/) HibernateÓÃÉÏÃæÄÇÖÖ·½Ê½
-        InputStream in = LoadresourcesDemo.class.getClassLoader().getResourceAsStream("Properties/" + name); // ClassLoaderÀàµÄ·½·¨¡£
-        // Ä¬ÈÏÈ¥classpathdµÄ¸ùÂ·¾¶È¥ÕÒ×ÊÔ´,·ÅÔÚsrcÄ¿Â¼
+        // è¿™ä¸ªç”¨å¾—å¤šï¼Œå› ä¸ºéƒ½æ˜¯æ ¹è·¯å¾„(bin/) Hibernateç”¨ä¸Šé¢é‚£ç§æ–¹å¼
+        InputStream in = LoadresourcesDemo.class.getClassLoader().getResourceAsStream("Properties/" + name); // ClassLoaderç±»çš„æ–¹æ³•ã€‚
+        // é»˜è®¤å»classpathdçš„æ ¹è·¯å¾„å»æ‰¾èµ„æº,æ”¾åœ¨srcç›®å½•
         System.out.println(in);
         p.load(in);
         System.out.println(p);
@@ -45,7 +45,7 @@ public class LoadresourcesDemo {
     public void test3() throws IOException {
         Properties p = new Properties();
         String name = "obj.properties";
-        // ·½·¨3£ºthread£¬Ò²ÊÇÈ¥¸ùÂ·¾¶È¥ÕÒ×ÊÔ´
+        // æ–¹æ³•3ï¼šthreadï¼Œä¹Ÿæ˜¯å»æ ¹è·¯å¾„å»æ‰¾èµ„æº
         InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(name);
         System.out.println(in);
         p.load(in);

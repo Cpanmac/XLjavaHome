@@ -2,23 +2,23 @@ package com.xl.enumdemo;
 
 import org.junit.Test;
 
-//ÌØÊâµÄjavaÀà£¬Ã¿Ò»¸öÃ¶¾ÙÏàµ±Ò»¸öÃ¶¾ÙÊµÀı¶ÔÏó¡£
-//×¢Òâ£º
-//¹¹Ôìº¯Êı±ØĞëË½ÓĞ
+//ç‰¹æ®Šçš„javaç±»ï¼Œæ¯ä¸€ä¸ªæšä¸¾ç›¸å½“ä¸€ä¸ªæšä¸¾å®ä¾‹å¯¹è±¡ã€‚
+//æ³¨æ„ï¼š
+//æ„é€ å‡½æ•°å¿…é¡»ç§æœ‰
 public class Enumdemo {
     @Test
     public void test() {
-        // 1. »ñÈ¡Ã¶¾ÙµÄÃû³Æ
+        // 1. è·å–æšä¸¾çš„åç§°
         System.out.println(Grade.C.name());
         System.out.println(Grade.D.getValue());
         System.out.println(Grade.D.name());
         System.out.println(Grade.D.localeValue());
-        // 2.½«×Ö·û´®¸Ä³ÉÃ¶¾Ù¡£valueOf
+        // 2.å°†å­—ç¬¦ä¸²æ”¹æˆæšä¸¾ã€‚valueOf
         String str = "B";
         // Grade g=Grade.valueOf(Grade.class,str);
         Grade g = Grade.valueOf(str);
         System.out.println(g);
-        //		3.·µ»ØËùÓĞµÄÃ¶¾ÙÖµ,ÔÚÎÄµµÖĞÃ»ÓĞ¡£
+        //		3.è¿”å›æ‰€æœ‰çš„æšä¸¾å€¼,åœ¨æ–‡æ¡£ä¸­æ²¡æœ‰ã€‚
         Grade[] gs = Grade.values();
         for (Grade g1 : gs) {
             System.out.println(g1);

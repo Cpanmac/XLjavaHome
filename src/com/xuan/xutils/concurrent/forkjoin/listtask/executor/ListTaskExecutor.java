@@ -8,41 +8,41 @@ import com.xuan.xutils.concurrent.forkjoin.listtask.core.ListTaskResult;
 import java.util.List;
 
 /**
- * ´®ĞĞÈÎÎñ²¢ĞĞ»¯Ö´ĞĞÆ÷
- * ÓÃ»§Èë²ÎÒ»¸ölist×÷ÎªÔ­Ê¼Êı¾İ£¬²¢¸ø³öÔ­Ê¼Êı¾İµÄ´¦ÀíÂß¼­»Øµ÷£¬¿ò¼Ü»á¸ù¾İÅäÖÃ£¬½øĞĞÈÎÎñ·Ö½â£¬È»ºó²¢ĞĞÖ´ĞĞ£¬×îÖÕºÏ²¢½á¹û·µ»Ø¸øÓÃ»§
+ * ä¸²è¡Œä»»åŠ¡å¹¶è¡ŒåŒ–æ‰§è¡Œå™¨
+ * ç”¨æˆ·å…¥å‚ä¸€ä¸ªlistä½œä¸ºåŸå§‹æ•°æ®ï¼Œå¹¶ç»™å‡ºåŸå§‹æ•°æ®çš„å¤„ç†é€»è¾‘å›è°ƒï¼Œæ¡†æ¶ä¼šæ ¹æ®é…ç½®ï¼Œè¿›è¡Œä»»åŠ¡åˆ†è§£ï¼Œç„¶åå¹¶è¡Œæ‰§è¡Œï¼Œæœ€ç»ˆåˆå¹¶ç»“æœè¿”å›ç»™ç”¨æˆ·
  * <p>
  * Created by xuan on 17/8/23.
  */
 public interface ListTaskExecutor<T, R> {
     /**
-     * ¸ß¼¶Íæ¼Ò¿ÉÊ¹ÓÃ¸ÃAPI£¬½øĞĞÒ»Ğ©¸ß¼¶ÅäÖÃ£¬Ò²»á·µ»ØÒ»Ğ©¸ü¶àµÄĞÅÏ¢
+     * é«˜çº§ç©å®¶å¯ä½¿ç”¨è¯¥APIï¼Œè¿›è¡Œä¸€äº›é«˜çº§é…ç½®ï¼Œä¹Ÿä¼šè¿”å›ä¸€äº›æ›´å¤šçš„ä¿¡æ¯
      *
-     * @param orignList ĞèÒª²¢ĞĞ´¦ÀíµÄÔ­Ê¼Êı¾İList
-     * @param callable  ¾ßÌå´¦ÀíÔ­Ê¼Êı¾İµÄ»Øµ÷
-     * @param config    Ò»Ğ©¶¨ÖÆÅäÖÃ²ÎÊı£¬¸ß¼¶ÓÃ»§Ê¹ÓÃ£¬Ğ¡°×ÓÃ»§¿ÉÒÔÊ¹ÓÃÏÂÃæÌá¹©µÄ±ã½İ·½·¨
+     * @param orignList éœ€è¦å¹¶è¡Œå¤„ç†çš„åŸå§‹æ•°æ®List
+     * @param callable  å…·ä½“å¤„ç†åŸå§‹æ•°æ®çš„å›è°ƒ
+     * @param config    ä¸€äº›å®šåˆ¶é…ç½®å‚æ•°ï¼Œé«˜çº§ç”¨æˆ·ä½¿ç”¨ï¼Œå°ç™½ç”¨æˆ·å¯ä»¥ä½¿ç”¨ä¸‹é¢æä¾›çš„ä¾¿æ·æ–¹æ³•
      * @return
-     * @throws ListTaskException ÓÃ»§ĞèÒª×Ô¼º´¦ÀíÒì³£
+     * @throws ListTaskException ç”¨æˆ·éœ€è¦è‡ªå·±å¤„ç†å¼‚å¸¸
      */
     ListTaskResult<R> execute(List<T> orignList, ListTaskCallable<T, R> callable, ListTaskConfig config) throws ListTaskException;
 
     /**
-     * Ğ¡°×Íæ¼Ò¿ÉÊ¹ÓÃ¸ÃAPI£¬Ö»ĞèÒªÔ­Ê¼Êı¾İListºÍ´¦Àí»Øµ÷¾Í¿ÉÒÔ
+     * å°ç™½ç©å®¶å¯ä½¿ç”¨è¯¥APIï¼Œåªéœ€è¦åŸå§‹æ•°æ®Listå’Œå¤„ç†å›è°ƒå°±å¯ä»¥
      *
-     * @param orignList ĞèÒª²¢ĞĞ´¦ÀíµÄÔ­Ê¼Êı¾İList
-     * @param callable  ¾ßÌå´¦ÀíÔ­Ê¼Êı¾İµÄ»Øµ÷
+     * @param orignList éœ€è¦å¹¶è¡Œå¤„ç†çš„åŸå§‹æ•°æ®List
+     * @param callable  å…·ä½“å¤„ç†åŸå§‹æ•°æ®çš„å›è°ƒ
      * @return
-     * @throws ListTaskException ÓÃ»§ĞèÒª×Ô¼º´¦ÀíÒì³£
+     * @throws ListTaskException ç”¨æˆ·éœ€è¦è‡ªå·±å¤„ç†å¼‚å¸¸
      */
     List<R> execute(List<T> orignList, ListTaskCallable<T, R> callable) throws ListTaskException;
 
     /**
-     * Ğ¡°×Íæ¼Ò¿ÉÊ¹ÓÃ¸ÃAPI£¬Ö»ĞèÒªÔ­Ê¼Êı¾İListºÍ´¦Àí»Øµ÷¾Í¿ÉÒÔ£¨»¹¿ÉÒÔ¼òµ¥µÄÉè¶¨²ğ·ÖĞ¡ÈÎÎñµÄÁ£¶È£©
+     * å°ç™½ç©å®¶å¯ä½¿ç”¨è¯¥APIï¼Œåªéœ€è¦åŸå§‹æ•°æ®Listå’Œå¤„ç†å›è°ƒå°±å¯ä»¥ï¼ˆè¿˜å¯ä»¥ç®€å•çš„è®¾å®šæ‹†åˆ†å°ä»»åŠ¡çš„ç²’åº¦ï¼‰
      *
-     * @param orignList         ĞèÒª²¢ĞĞ´¦ÀíµÄÔ­Ê¼Êı¾İList£¬²¢ĞĞÖ´ĞĞ
-     * @param callable          ¾ßÌå´¦ÀíÔ­Ê¼Êı¾İµÄ»Øµ÷
-     * @param subOriginListSize Éè¶¨¶àÉÙ¸öÔ­Ê¼Êı¾İÎªÒ»¸ö×ÓÈÎÎñ
+     * @param orignList         éœ€è¦å¹¶è¡Œå¤„ç†çš„åŸå§‹æ•°æ®Listï¼Œå¹¶è¡Œæ‰§è¡Œ
+     * @param callable          å…·ä½“å¤„ç†åŸå§‹æ•°æ®çš„å›è°ƒ
+     * @param subOriginListSize è®¾å®šå¤šå°‘ä¸ªåŸå§‹æ•°æ®ä¸ºä¸€ä¸ªå­ä»»åŠ¡
      * @return
-     * @throws ListTaskException ÓÃ»§ĞèÒª×Ô¼º´¦ÀíÒì³£
+     * @throws ListTaskException ç”¨æˆ·éœ€è¦è‡ªå·±å¤„ç†å¼‚å¸¸
      */
     List<R> execute(List<T> orignList, ListTaskCallable<T, R> callable, int subOriginListSize) throws ListTaskException;
 }

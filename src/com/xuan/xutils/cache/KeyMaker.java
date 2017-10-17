@@ -1,26 +1,26 @@
 package com.xuan.xutils.cache;
 
 /**
- * ¼üµÄÉú³É¹¤¾ß£¬ÓÃÀ´Éú³É·Åµ½»º´æÖĞµÄ¼ü£¬·Ö¸ô·ûÎªTab¼ü
+ * é”®çš„ç”Ÿæˆå·¥å…·ï¼Œç”¨æ¥ç”Ÿæˆæ”¾åˆ°ç¼“å­˜ä¸­çš„é”®ï¼Œåˆ†éš”ç¬¦ä¸ºTabé”®
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:40:30 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:40:30 $
  */
 public class KeyMaker {
     private static final String SEPARATOR = "\t";
 
     /**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      */
     public KeyMaker() {
     }
 
     /**
-     * °ÑÁ½¸ö×Ö·û´®×é³ÉÒ»¸ö¼ü
+     * æŠŠä¸¤ä¸ªå­—ç¬¦ä¸²ç»„æˆä¸€ä¸ªé”®
      *
-     * @param arg1 ×Ö·û´®1
-     * @param arg2 ×Ö·û´®2
-     * @return ¼ü
+     * @param arg1 å­—ç¬¦ä¸²1
+     * @param arg2 å­—ç¬¦ä¸²2
+     * @return é”®
      */
     public static String getKey(String arg1, String arg2) {
         StringBuilder key = new StringBuilder();
@@ -31,12 +31,12 @@ public class KeyMaker {
     }
 
     /**
-     * °ÑÈı¸ö×Ö·û´®×é³ÉÒ»¸ö¼ü
+     * æŠŠä¸‰ä¸ªå­—ç¬¦ä¸²ç»„æˆä¸€ä¸ªé”®
      *
-     * @param arg1 ×Ö·û´®1
-     * @param arg2 ×Ö·û´®2
-     * @param arg3 ×Ö·û´®3
-     * @return ¼ü
+     * @param arg1 å­—ç¬¦ä¸²1
+     * @param arg2 å­—ç¬¦ä¸²2
+     * @param arg3 å­—ç¬¦ä¸²3
+     * @return é”®
      */
     public static String getKey(String arg1, String arg2, String arg3) {
         StringBuilder key = new StringBuilder();
@@ -49,10 +49,10 @@ public class KeyMaker {
     }
 
     /**
-     * °Ñ×Ö·û´®Êı×éµÄÄÚÈİ×é³ÉÒ»¸ö¼ü
+     * æŠŠå­—ç¬¦ä¸²æ•°ç»„çš„å†…å®¹ç»„æˆä¸€ä¸ªé”®
      *
-     * @param args ×Ö·û´®Êı×é
-     * @return ¼ü
+     * @param args å­—ç¬¦ä¸²æ•°ç»„
+     * @return é”®
      */
     public static String getKey(String[] args) {
         StringBuilder key = new StringBuilder();
@@ -66,10 +66,10 @@ public class KeyMaker {
     }
 
     /**
-     * ·Ö¸î¼ü³ÉÎª×Ö·û´®Êı×é
+     * åˆ†å‰²é”®æˆä¸ºå­—ç¬¦ä¸²æ•°ç»„
      *
-     * @param key ¼ü
-     * @return ×Ö·û´®Êı×é
+     * @param key é”®
+     * @return å­—ç¬¦ä¸²æ•°ç»„
      */
     public static String[] splitKey(String key) {
         return key.split(SEPARATOR);

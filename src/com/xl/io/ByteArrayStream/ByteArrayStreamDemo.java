@@ -4,30 +4,30 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 /**
- * ²Ù×÷ÎÄ¼şÒªµ÷ÓÃµ×²ã×ÊÔ´£¬¸ÃÁ÷¶ÔÏó²»µ÷ÓÃµ×²ã×ÊÔ´£¬¹Ø±ÕÁ÷ÎŞĞ§£¬¹Ø±ÕºóÈÔ¿ÉÒÔµ÷ÓÃ,²»»á²úÉúÈÎºÎIOÒì³£
- * ºÃ´¦£º×Ô¶¯Ôö³¤»º³åÇø,ÒÔÇ°½¨Á¢¶¼ÊÇ¶¼ÊÇ1024µÄÕûÊı±¶byteÊı×é
- * Ä¿µÄ£ºÄÚ²¿·â×°ÁË¿É±ä³¤¶ÈµÄbyteÊı×é
- * ÌØµã£ºÔÚ¹¹ÔìµÄÊ±ºò£¬ĞèÒª½ÓÊÜÊı¾İÔ´£¬¶øÇÒÊı¾İÔ´ÊÇÒ»¸ö×Ö½ÚÊı×é
- * ByteArrayOutputStream£º ÔÚ¹¹ÔìµÄÊ±ºò²»ĞèÒª¶¨Òå,ÄÚ²¿·â×°ÁË¿É±ä³¤¶ÈµÄbyteÊı×é¡£Õâ¾ÍÊÇÊı¾İÄ¿µÄµØ
- * Ô´Éè±¸:
- * ¼üÅÌ System.in.  Ó²ÅÌ FileStream  ÄÚ´æ ArrayStream
- * Ä¿µÄÉè±¸£º
- * ¿ØÖÆÌ¨ System.out Ó²ÅÌ FileStream ÄÚ´æ ArrayStream
+ * æ“ä½œæ–‡ä»¶è¦è°ƒç”¨åº•å±‚èµ„æºï¼Œè¯¥æµå¯¹è±¡ä¸è°ƒç”¨åº•å±‚èµ„æºï¼Œå…³é—­æµæ— æ•ˆï¼Œå…³é—­åä»å¯ä»¥è°ƒç”¨,ä¸ä¼šäº§ç”Ÿä»»ä½•IOå¼‚å¸¸
+ * å¥½å¤„ï¼šè‡ªåŠ¨å¢é•¿ç¼“å†²åŒº,ä»¥å‰å»ºç«‹éƒ½æ˜¯éƒ½æ˜¯1024çš„æ•´æ•°å€byteæ•°ç»„
+ * ç›®çš„ï¼šå†…éƒ¨å°è£…äº†å¯å˜é•¿åº¦çš„byteæ•°ç»„
+ * ç‰¹ç‚¹ï¼šåœ¨æ„é€ çš„æ—¶å€™ï¼Œéœ€è¦æ¥å—æ•°æ®æºï¼Œè€Œä¸”æ•°æ®æºæ˜¯ä¸€ä¸ªå­—èŠ‚æ•°ç»„
+ * ByteArrayOutputStreamï¼š åœ¨æ„é€ çš„æ—¶å€™ä¸éœ€è¦å®šä¹‰,å†…éƒ¨å°è£…äº†å¯å˜é•¿åº¦çš„byteæ•°ç»„ã€‚è¿™å°±æ˜¯æ•°æ®ç›®çš„åœ°
+ * æºè®¾å¤‡:
+ * é”®ç›˜ System.in.  ç¡¬ç›˜ FileStream  å†…å­˜ ArrayStream
+ * ç›®çš„è®¾å¤‡ï¼š
+ * æ§åˆ¶å° System.out ç¡¬ç›˜ FileStream å†…å­˜ ArrayStream
  */
 public class ByteArrayStreamDemo {
     public static void main(String[] args) {
-        // Êı¾İÔ´¡£
-        ByteArrayInputStream bis = new ByteArrayInputStream(Messages.getString("ÕÅÈı1").getBytes());
-        // Êı¾İÄ¿µÄ
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();// ²»Ö¸¶¨Ä¿µÄ¡£
-        System.out.println("Ã»ÓĞÊı¾İ:" + bos.size());
-        // ÏÖÔÚ¿ÉÒÔÆµ·±µÄ¶ÁĞ´
+        // æ•°æ®æºã€‚
+        ByteArrayInputStream bis = new ByteArrayInputStream(Messages.getString("å¼ ä¸‰1").getBytes());
+        // æ•°æ®ç›®çš„
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();// ä¸æŒ‡å®šç›®çš„ã€‚
+        System.out.println("æ²¡æœ‰æ•°æ®:" + bos.size());
+        // ç°åœ¨å¯ä»¥é¢‘ç¹çš„è¯»å†™
         int by1 = 0;
         while ((by1 = bis.read()) != -1) {
             System.out.println(by1);
             bos.write(by1);
         }
-        System.out.println("Êä³öÁ÷size:" + bos.size());
+        System.out.println("è¾“å‡ºæµsize:" + bos.size());
         System.out.println(bos.toString()); // abc
     }
 }

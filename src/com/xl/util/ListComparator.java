@@ -13,8 +13,8 @@ import java.util.Map;
  * File Desc:
  * Product Name: SIRM
  * Module Name: com.sinitek.sirm.common.utils
- * Author:      ÅËºç
- * History:     11-7-14 created by ÅËºç
+ * Author:      æ½˜è™¹
+ * History:     11-7-14 created by æ½˜è™¹
  */
 public class ListComparator implements Comparator {
     final static Logger LOGGER = Logger.getLogger(ListComparator.class);

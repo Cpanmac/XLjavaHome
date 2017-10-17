@@ -9,7 +9,7 @@ import java.lang.management.OperatingSystemMXBean;
 import java.lang.reflect.Method;
 
 /**
- * ¸ºÔØ×´Ì¬¼ì²é
+ * è´Ÿè½½çŠ¶æ€æ£€æŸ¥
  * <p>
  * Created by xuan on 17/7/29.
  */

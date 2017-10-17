@@ -7,22 +7,22 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 /**
- * ´øÓĞÃû×ÖĞŞÊÎµÄ¶¨Ê±ÈÎÎñÃèÊöÀà
+ * å¸¦æœ‰åå­—ä¿®é¥°çš„å®šæ—¶ä»»åŠ¡æè¿°ç±»
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:31:00 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:31:00 $
  */
 public class NamedScheduledFuture<V> implements RunnableScheduledFuture<V> {
     /**
-     * ÈÎÎñÃû³Æ
+     * ä»»åŠ¡åç§°
      */
     private final String name;
     /**
-     * ÈÎÎñÀà
+     * ä»»åŠ¡ç±»
      */
     private final AbstractTask task;
     /**
-     * ÔËĞĞ½á¹û
+     * è¿è¡Œç»“æœ
      */
     private final RunnableScheduledFuture<V> future;
 

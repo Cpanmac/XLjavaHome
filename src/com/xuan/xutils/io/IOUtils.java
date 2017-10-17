@@ -7,17 +7,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 
 /**
- * IOÁ÷²Ù×÷¹¤¾ßÀà
+ * IOæµæ“ä½œå·¥å…·ç±»
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2013-9-4 ÏÂÎç7:22:40 $
+ * @version $Revision: 1.0 $, $Date: 2013-9-4 ä¸‹åˆ7:22:40 $
  */
 public abstract class IOUtils {
     private static final int EOF = -1;
     private static final int DEFAULT_BUFFER_SIZE = 1024 * 4;
 
     /**
-     * Ä¬Ä¬µÄ¹Ø±Õ¿É¹Ø±ÕÁ÷
+     * é»˜é»˜çš„å…³é—­å¯å…³é—­æµ
      *
      * @param closeable
      */
@@ -32,11 +32,11 @@ public abstract class IOUtils {
     }
 
     /**
-     * °ÑÊı¾İÒÔÖ¸¶¨±àÂëĞ´ÈëÊä³öÁ÷ÖĞ
+     * æŠŠæ•°æ®ä»¥æŒ‡å®šç¼–ç å†™å…¥è¾“å‡ºæµä¸­
      *
-     * @param data     ×Ö·û´®Êı¾İ
-     * @param output   Êä³öÁ÷
-     * @param encoding ±àÂë
+     * @param data     å­—ç¬¦ä¸²æ•°æ®
+     * @param output   è¾“å‡ºæµ
+     * @param encoding ç¼–ç 
      * @throws IOException
      */
     public static void write(String data, OutputStream output, String encoding) throws IOException {
@@ -46,15 +46,15 @@ public abstract class IOUtils {
     }
 
     /**
-     * °Ñ×Ö½ÚÁ÷°´Ö¸¶¨±àÂë×é³É×Ö·û´®
+     * æŠŠå­—èŠ‚æµæŒ‰æŒ‡å®šç¼–ç ç»„æˆå­—ç¬¦ä¸²
      *
-     * @param input    ÊäÈëÁ÷
-     * @param encoding ±àÂë
+     * @param input    è¾“å…¥æµ
+     * @param encoding ç¼–ç 
      * @return
      * @throws IOException
      */
     public static String toString(InputStream input, String encoding) throws IOException {
-        // °Ñ×Ö½ÚÁ÷×ª³É×Ö·ûÁ÷
+        // æŠŠå­—èŠ‚æµè½¬æˆå­—ç¬¦æµ
         InputStreamReader in = new InputStreamReader(input, Charsets.toCharset(encoding));
         int n = 0;
         StringBuilder builder = new StringBuilder();
@@ -68,20 +68,20 @@ public abstract class IOUtils {
     }
 
     /**
-     * ´ÓÁ÷ÖĞ×¼È·µÄ¶Á³öÖ¸¶¨×Ö½Ú£¬¶ÁÈ¡ºó»áÑÏ¸ñÓÃ¶ÁÈ¡ºóµÄ×Ö½ÚÊıºÍ´«ÈëµÄlongSize½øĞĞ±È½Ï£¬Ö»ÒªÏàµÈÁË²Å·µ»ØÊı¾İ£¬·ñÔòÅ×³öÒì³£
+     * ä»æµä¸­å‡†ç¡®çš„è¯»å‡ºæŒ‡å®šå­—èŠ‚ï¼Œè¯»å–åä¼šä¸¥æ ¼ç”¨è¯»å–åçš„å­—èŠ‚æ•°å’Œä¼ å…¥çš„longSizeè¿›è¡Œæ¯”è¾ƒï¼Œåªè¦ç›¸ç­‰äº†æ‰è¿”å›æ•°æ®ï¼Œå¦åˆ™æŠ›å‡ºå¼‚å¸¸
      *
-     * @param input    ÊäÈëÁ÷
-     * @param longSize ¸ÃÊäÈëÁ÷µÄÆÚÍû³¤¶È
+     * @param input    è¾“å…¥æµ
+     * @param longSize è¯¥è¾“å…¥æµçš„æœŸæœ›é•¿åº¦
      * @return
      * @throws IOException
      */
     public static byte[] toByteArray(InputStream input, long longSize) throws IOException {
         if (longSize > Integer.MAX_VALUE) {
-            throw new IllegalArgumentException("Á÷µÄÆÚÍû³¤¶È²»ÄÜ³¬¹ıintÄÜ±íÊ¾µÄ·¶Î§£¬µ±Ç°³¤¶È£º " + longSize);
+            throw new IllegalArgumentException("æµçš„æœŸæœ›é•¿åº¦ä¸èƒ½è¶…è¿‡intèƒ½è¡¨ç¤ºçš„èŒƒå›´ï¼Œå½“å‰é•¿åº¦ï¼š " + longSize);
         }
-        int size = (int) longSize;// ×ª³Éint
+        int size = (int) longSize;// è½¬æˆint
         if (size < 0) {
-            throw new IllegalArgumentException("Á÷µÄÆÚÍû³¤¶È±ØĞë´óÓÚµÈÓÚ0£¬µ±Ç°³¤¶È£º " + size);
+            throw new IllegalArgumentException("æµçš„æœŸæœ›é•¿åº¦å¿…é¡»å¤§äºç­‰äº0ï¼Œå½“å‰é•¿åº¦ï¼š " + size);
         }
         if (size == 0) {
             return new byte[0];
@@ -93,7 +93,7 @@ public abstract class IOUtils {
             offset += readed;
         }
         if (offset != size) {
-            throw new IOException("Êµ¼Ê¶ÁÈ¡µÄÁ÷µÄ³¤¶ÈºÍÆÚÍûµÄ³¤¶È²»Ò»ÖÂ£¬Êµ¼Ê¶ÁÈ¡³¤¶È£º" + offset + ", ÆÚÍû³¤¶È: " + size);
+            throw new IOException("å®é™…è¯»å–çš„æµçš„é•¿åº¦å’ŒæœŸæœ›çš„é•¿åº¦ä¸ä¸€è‡´ï¼Œå®é™…è¯»å–é•¿åº¦ï¼š" + offset + ", æœŸæœ›é•¿åº¦: " + size);
         }
         return data;
     }

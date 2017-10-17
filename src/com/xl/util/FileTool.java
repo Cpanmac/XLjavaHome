@@ -30,36 +30,36 @@ import java.util.List;
 
 public class FileTool {
     /**
-     * ÀûÓÃµÚÈı·½¿ªÔ´°ücpdetector»ñÈ¡ÎÄ¼ş±àÂë¸ñÊ½
+     * åˆ©ç”¨ç¬¬ä¸‰æ–¹å¼€æºåŒ…cpdetectorè·å–æ–‡ä»¶ç¼–ç æ ¼å¼
      *
-     * @param path ÒªÅĞ¶ÏÎÄ¼ş±àÂë¸ñÊ½µÄÔ´ÎÄ¼şµÄÂ·¾¶
+     * @param path è¦åˆ¤æ–­æ–‡ä»¶ç¼–ç æ ¼å¼çš„æºæ–‡ä»¶çš„è·¯å¾„
      * @author huanglei
      * @version 2012-7-12 14:05
      */
     public static String getFileEncode(String path) {
     /*
-     * detectorÊÇÌ½²âÆ÷£¬Ëü°ÑÌ½²âÈÎÎñ½»¸ø¾ßÌåµÄÌ½²âÊµÏÖÀàµÄÊµÀıÍê³É¡£
-     * cpDetectorÄÚÖÃÁËÒ»Ğ©³£ÓÃµÄÌ½²âÊµÏÖÀà£¬ÕâĞ©Ì½²âÊµÏÖÀàµÄÊµÀı¿ÉÒÔÍ¨¹ıadd·½·¨ ¼Ó½øÀ´£¬ÈçParsingDetector¡¢
-     * JChardetFacade¡¢ASCIIDetector¡¢UnicodeDetector¡£
-     * detector°´ÕÕ¡°Ë­×îÏÈ·µ»Ø·Ç¿ÕµÄÌ½²â½á¹û£¬¾ÍÒÔ¸Ã½á¹ûÎª×¼¡±µÄÔ­Ôò·µ»ØÌ½²âµ½µÄ
-     * ×Ö·û¼¯±àÂë¡£Ê¹ÓÃĞèÒªÓÃµ½Èı¸öµÚÈı·½JAR°ü£ºantlr.jar¡¢chardet.jarºÍcpdetector.jar
-     * cpDetectorÊÇ»ùÓÚÍ³¼ÆÑ§Ô­ÀíµÄ£¬²»±£Ö¤ÍêÈ«ÕıÈ·¡£
+     * detectoræ˜¯æ¢æµ‹å™¨ï¼Œå®ƒæŠŠæ¢æµ‹ä»»åŠ¡äº¤ç»™å…·ä½“çš„æ¢æµ‹å®ç°ç±»çš„å®ä¾‹å®Œæˆã€‚
+     * cpDetectorå†…ç½®äº†ä¸€äº›å¸¸ç”¨çš„æ¢æµ‹å®ç°ç±»ï¼Œè¿™äº›æ¢æµ‹å®ç°ç±»çš„å®ä¾‹å¯ä»¥é€šè¿‡addæ–¹æ³• åŠ è¿›æ¥ï¼Œå¦‚ParsingDetectorã€
+     * JChardetFacadeã€ASCIIDetectorã€UnicodeDetectorã€‚
+     * detectoræŒ‰ç…§â€œè°æœ€å…ˆè¿”å›éç©ºçš„æ¢æµ‹ç»“æœï¼Œå°±ä»¥è¯¥ç»“æœä¸ºå‡†â€çš„åŸåˆ™è¿”å›æ¢æµ‹åˆ°çš„
+     * å­—ç¬¦é›†ç¼–ç ã€‚ä½¿ç”¨éœ€è¦ç”¨åˆ°ä¸‰ä¸ªç¬¬ä¸‰æ–¹JARåŒ…ï¼šantlr.jarã€chardet.jarå’Œcpdetector.jar
+     * cpDetectoræ˜¯åŸºäºç»Ÿè®¡å­¦åŸç†çš„ï¼Œä¸ä¿è¯å®Œå…¨æ­£ç¡®ã€‚
      */
         CodepageDetectorProxy detector = CodepageDetectorProxy.getInstance();
     /*
-     * ParsingDetector¿ÉÓÃÓÚ¼ì²éHTML¡¢XMLµÈÎÄ¼ş»ò×Ö·ûÁ÷µÄ±àÂë,¹¹Ôì·½·¨ÖĞµÄ²ÎÊıÓÃÓÚ
-     * Ö¸Ê¾ÊÇ·ñÏÔÊ¾Ì½²â¹ı³ÌµÄÏêÏ¸ĞÅÏ¢£¬Îªfalse²»ÏÔÊ¾¡£
+     * ParsingDetectorå¯ç”¨äºæ£€æŸ¥HTMLã€XMLç­‰æ–‡ä»¶æˆ–å­—ç¬¦æµçš„ç¼–ç ,æ„é€ æ–¹æ³•ä¸­çš„å‚æ•°ç”¨äº
+     * æŒ‡ç¤ºæ˜¯å¦æ˜¾ç¤ºæ¢æµ‹è¿‡ç¨‹çš„è¯¦ç»†ä¿¡æ¯ï¼Œä¸ºfalseä¸æ˜¾ç¤ºã€‚
      */
         detector.add(new ParsingDetector(false));
     /*
-     * JChardetFacade·â×°ÁËÓÉMozilla×éÖ¯Ìá¹©µÄJChardet£¬Ëü¿ÉÒÔÍê³É´ó¶àÊıÎÄ¼şµÄ±àÂë
-     * ²â¶¨¡£ËùÒÔ£¬Ò»°ãÓĞÁËÕâ¸öÌ½²âÆ÷¾Í¿ÉÂú×ã´ó¶àÊıÏîÄ¿µÄÒªÇó£¬Èç¹ûÄã»¹²»·ÅĞÄ£¬¿ÉÒÔ
-     * ÔÙ¶à¼Ó¼¸¸öÌ½²âÆ÷£¬±ÈÈçÏÂÃæµÄASCIIDetector¡¢UnicodeDetectorµÈ¡£
+     * JChardetFacadeå°è£…äº†ç”±Mozillaç»„ç»‡æä¾›çš„JChardetï¼Œå®ƒå¯ä»¥å®Œæˆå¤§å¤šæ•°æ–‡ä»¶çš„ç¼–ç 
+     * æµ‹å®šã€‚æ‰€ä»¥ï¼Œä¸€èˆ¬æœ‰äº†è¿™ä¸ªæ¢æµ‹å™¨å°±å¯æ»¡è¶³å¤§å¤šæ•°é¡¹ç›®çš„è¦æ±‚ï¼Œå¦‚æœä½ è¿˜ä¸æ”¾å¿ƒï¼Œå¯ä»¥
+     * å†å¤šåŠ å‡ ä¸ªæ¢æµ‹å™¨ï¼Œæ¯”å¦‚ä¸‹é¢çš„ASCIIDetectorã€UnicodeDetectorç­‰ã€‚
      */
-        detector.add(JChardetFacade.getInstance());// ÓÃµ½antlr.jar¡¢chardet.jar
-        // ASCIIDetectorÓÃÓÚASCII±àÂë²â¶¨
+        detector.add(JChardetFacade.getInstance());// ç”¨åˆ°antlr.jarã€chardet.jar
+        // ASCIIDetectorç”¨äºASCIIç¼–ç æµ‹å®š
         detector.add(ASCIIDetector.getInstance());
-        // UnicodeDetectorÓÃÓÚUnicode¼Ò×å±àÂëµÄ²â¶¨
+        // UnicodeDetectorç”¨äºUnicodeå®¶æ—ç¼–ç çš„æµ‹å®š
         detector.add(UnicodeDetector.getInstance());
         java.nio.charset.Charset charset = null;
         File f = new File(path);
@@ -76,7 +76,7 @@ public class FileTool {
     }
 
     /**
-     * »ñÈ¡×ÊÔ´Ä¿Â¼ÏÂµÄÎÄ¼ş
+     * è·å–èµ„æºç›®å½•ä¸‹çš„æ–‡ä»¶
      *
      * @param path
      * @return
@@ -86,7 +86,7 @@ public class FileTool {
     }
 
     /**
-     * »ñÈ¡×ÊÔ´Ä¿Â¼ÏÂµÄÊäÈëÁ÷
+     * è·å–èµ„æºç›®å½•ä¸‹çš„è¾“å…¥æµ
      *
      * @param path
      * @return
@@ -96,7 +96,7 @@ public class FileTool {
     }
 
     /**
-     * ÀûÓÃµÚÈı·½¿ªÔ´°ücpdetector»ñÈ¡ÎÄ¼ş±àÂë¸ñÊ½
+     * åˆ©ç”¨ç¬¬ä¸‰æ–¹å¼€æºåŒ…cpdetectorè·å–æ–‡ä»¶ç¼–ç æ ¼å¼
      *
      * @param file
      * @return
@@ -110,10 +110,10 @@ public class FileTool {
     }
 
     /**
-     * »ñÈ¡µ±Ç°ÀàµÄÂ·¾¶<br/>
-     * Ë¼Â·£º¹¤³ÌÂ·¾¶+src+ÀàÃû
+     * è·å–å½“å‰ç±»çš„è·¯å¾„<br/>
+     * æ€è·¯ï¼šå·¥ç¨‹è·¯å¾„+src+ç±»å
      *
-     * @param clazz µÃµ½ÀàµÄÈ«Ãû
+     * @param clazz å¾—åˆ°ç±»çš„å…¨å
      * @return
      * @throws UnsupportedEncodingException
      */
@@ -129,7 +129,7 @@ public class FileTool {
     }
 
     /**
-     * ¸´ÖÆÎÄ¼ş
+     * å¤åˆ¶æ–‡ä»¶
      *
      * @param src
      * @param target void
@@ -149,12 +149,12 @@ public class FileTool {
     }
 
     /**
-     * ¶ÔÎÄ¼ş´óĞ¡½øĞĞ¸ñÊ½»¯
+     * å¯¹æ–‡ä»¶å¤§å°è¿›è¡Œæ ¼å¼åŒ–
      *
      * @param fileS
      * @return String
      */
-    public static String FormetFileSize(long fileS) {// ×ª»»ÎÄ¼ş´óĞ¡
+    public static String FormetFileSize(long fileS) {// è½¬æ¢æ–‡ä»¶å¤§å°
         DecimalFormat df = new DecimalFormat("#.00");
         String fileSizeString = "";
         if (fileS < 1024) {
@@ -170,7 +170,7 @@ public class FileTool {
     }
 
     /**
-     * µÃµ½µ±Ç°¹¤³ÌµÄ¾ø¶ÔÂ·¾¶
+     * å¾—åˆ°å½“å‰å·¥ç¨‹çš„ç»å¯¹è·¯å¾„
      *
      * @return String
      */
@@ -179,7 +179,7 @@ public class FileTool {
     }
 
     /**
-     * ·µ»Ø¸ÃÎÄ¼ş´óĞ¡,leng¾Í¿ÉÒÔ»ñµÃ´óĞ¡ÁË
+     * è¿”å›è¯¥æ–‡ä»¶å¤§å°,lengå°±å¯ä»¥è·å¾—å¤§å°äº†
      *
      * @param file
      * @return
@@ -192,7 +192,7 @@ public class FileTool {
     }
 
     /**
-     * ´òÓ¡¼¯ºÏ
+     * æ‰“å°é›†åˆ
      *
      * @param con void
      */
@@ -204,7 +204,7 @@ public class FileTool {
     }
 
     /**
-     * ±éÀú¸ÃÄ¿Â¼ÏÂËùÓĞÎÄ¼ş
+     * éå†è¯¥ç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶
      *
      * @param file
      * @return List<File>
@@ -226,7 +226,7 @@ public class FileTool {
     }
 
     /**
-     * ±éÀú¸ÃÄ¿Â¼ÏÂËùÓĞÎÄ¼ş
+     * éå†è¯¥ç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶
      *
      * @param file
      * @return List<File>
@@ -236,7 +236,7 @@ public class FileTool {
     }
 
     /**
-     * ±éÀú¸ÃÄ¿Â¼ÏÂËùÓĞÎÄ¼ş
+     * éå†è¯¥ç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶
      *
      * @param filePath
      * @return List<File>
@@ -248,7 +248,7 @@ public class FileTool {
     }
 
     /**
-     * ±éÀú¸ÃÄ¿Â¼ÏÂËùÓĞÎÄ¼ş
+     * éå†è¯¥ç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶
      *
      * @param filePath
      * @return List<File>
@@ -278,7 +278,7 @@ public class FileTool {
     }
 
     /**
-     * ÍùÄ¿±êĞ´Èë
+     * å¾€ç›®æ ‡å†™å…¥
      *
      * @param file
      * @param is   void
@@ -301,7 +301,7 @@ public class FileTool {
     }
 
     /**
-     * ÏòÖ¸¶¨ÎÄ¼şÊäÈëÄÚÈİ
+     * å‘æŒ‡å®šæ–‡ä»¶è¾“å…¥å†…å®¹
      *
      * @param file
      * @param content

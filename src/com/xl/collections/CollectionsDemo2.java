@@ -12,7 +12,7 @@ class CollectionsDemo2 {
     }
 
     public static void orderDemo() {
-        TreeSet<String> ts = new TreeSet<String>(Collections.reverseOrder(new StrLenComparator())); // Ö±½ÓÄæÏòÊä³ö£¬ÓÉ³¤µ½¶Ì
+        TreeSet<String> ts = new TreeSet<String>(Collections.reverseOrder(new StrLenComparator())); // ç›´æ¥é€†å‘è¾“å‡ºï¼Œç”±é•¿åˆ°çŸ­
         ts.add("abcds");
         ts.add("aaa");
         ts.add("kk");
@@ -35,7 +35,7 @@ class CollectionsDemo2 {
     }
 
     /*
-     * Á·Ï°£ºfill·½·¨¿ÉÒÔ½«list¼¯ºÏÖĞËùÓĞÔªËØÌæ»»³ÉÖ¸¶¨ÔªËØ¡£ ½«list¼¯ºÏÖĞ²¿·ÖÔªËØÌæ»»³ÉÖ¸¶¨ÔªËØ¡£
+     * ç»ƒä¹ ï¼šfillæ–¹æ³•å¯ä»¥å°†listé›†åˆä¸­æ‰€æœ‰å…ƒç´ æ›¿æ¢æˆæŒ‡å®šå…ƒç´ ã€‚ å°†listé›†åˆä¸­éƒ¨åˆ†å…ƒç´ æ›¿æ¢æˆæŒ‡å®šå…ƒç´ ã€‚
      */
     public static void replaceAllDemo() {
         List<String> list = new ArrayList<String>();
@@ -45,7 +45,7 @@ class CollectionsDemo2 {
         list.add("aa");
         list.add("asdfg");
         sop(list);
-        Collections.replaceAll(list, "aa", "qq"); // ½«listÖĞµÄaaÌæ»»³Éqq
+        Collections.replaceAll(list, "aa", "qq"); // å°†listä¸­çš„aaæ›¿æ¢æˆqq
         sop(list);
         Collections.reverse(list);
     }
@@ -60,7 +60,7 @@ class CollectionsDemo2 {
         list.add("asdfg");
         list.add("asdfg");
         sop(list);
-        Collections.fill(list, "qq"); // ½«list¼¯ºÏËùÓĞµÄÔªËØÌæ»»³Éqq
+        Collections.fill(list, "qq"); // å°†listé›†åˆæ‰€æœ‰çš„å…ƒç´ æ›¿æ¢æˆqq
         sop(list);
     }
 

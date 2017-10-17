@@ -2,35 +2,35 @@ package com.xl.base;
 
 public class TestPrintf {
     public static void main(String[] args) {
-        // ¶¨ÒåÒ»Ğ©±äÁ¿£¬ÓÃÀ´¸ñÊ½»¯Êä³ö¡£
+        // å®šä¹‰ä¸€äº›å˜é‡ï¼Œç”¨æ¥æ ¼å¼åŒ–è¾“å‡ºã€‚
         double d = 345.678;
-        String s = "ÄãºÃ£¡";
+        String s = "ä½ å¥½ï¼";
         int i = 1234;
-        // "%"±íÊ¾½øĞĞ¸ñÊ½»¯Êä³ö£¬"%"Ö®ºóµÄÄÚÈİÎª¸ñÊ½µÄ¶¨Òå¡£
-        System.out.printf("%f", d); // "f"±íÊ¾¸ñÊ½»¯Êä³ö¸¡µãÊı¡£
+        // "%"è¡¨ç¤ºè¿›è¡Œæ ¼å¼åŒ–è¾“å‡ºï¼Œ"%"ä¹‹åçš„å†…å®¹ä¸ºæ ¼å¼çš„å®šä¹‰ã€‚
+        System.out.printf("%f", d); // "f"è¡¨ç¤ºæ ¼å¼åŒ–è¾“å‡ºæµ®ç‚¹æ•°ã€‚
         System.out.println();
-        System.out.printf("%9.2f", d); // "9.2"ÖĞµÄ9±íÊ¾Êä³öµÄ³¤¶È£¬2±íÊ¾Ğ¡ÊıµãºóµÄÎ»Êı¡£
+        System.out.printf("%9.2f", d); // "9.2"ä¸­çš„9è¡¨ç¤ºè¾“å‡ºçš„é•¿åº¦ï¼Œ2è¡¨ç¤ºå°æ•°ç‚¹åçš„ä½æ•°ã€‚
         System.out.println();
-        System.out.printf("%+9.2f", d); // "+"±íÊ¾Êä³öµÄÊı´øÕı¸ººÅ¡£
+        System.out.printf("%+9.2f", d); // "+"è¡¨ç¤ºè¾“å‡ºçš„æ•°å¸¦æ­£è´Ÿå·ã€‚
         System.out.println();
-        System.out.printf("%-9.4f", d); // "-"±íÊ¾Êä³öµÄÊı×ó¶ÔÆë£¨Ä¬ÈÏÎªÓÒ¶ÔÆë£©¡£
+        System.out.printf("%-9.4f", d); // "-"è¡¨ç¤ºè¾“å‡ºçš„æ•°å·¦å¯¹é½ï¼ˆé»˜è®¤ä¸ºå³å¯¹é½ï¼‰ã€‚
         System.out.println();
-        System.out.printf("%+-9.3f", d); // "+-"±íÊ¾Êä³öµÄÊı´øÕı¸ººÅÇÒ×ó¶ÔÆë¡£
+        System.out.printf("%+-9.3f", d); // "+-"è¡¨ç¤ºè¾“å‡ºçš„æ•°å¸¦æ­£è´Ÿå·ä¸”å·¦å¯¹é½ã€‚
         System.out.println();
-        System.out.printf("%d", i); // "d"±íÊ¾Êä³öÊ®½øÖÆÕûÊı¡£
+        System.out.printf("%d", i); // "d"è¡¨ç¤ºè¾“å‡ºåè¿›åˆ¶æ•´æ•°ã€‚
         System.out.println();
-        System.out.printf("%o", i); // "o"±íÊ¾Êä³ö°Ë½øÖÆÕûÊı¡£
+        System.out.printf("%o", i); // "o"è¡¨ç¤ºè¾“å‡ºå…«è¿›åˆ¶æ•´æ•°ã€‚
         System.out.println();
-        System.out.printf("%x", i); // "x"±íÊ¾Êä³öÊ®Áù½øÖÆÕûÊı¡£
+        System.out.printf("%x", i); // "x"è¡¨ç¤ºè¾“å‡ºåå…­è¿›åˆ¶æ•´æ•°ã€‚
         System.out.println();
-        System.out.printf("%#x", i); // "#x"±íÊ¾Êä³ö´øÓĞÊ®Áù½øÖÆ±êÖ¾µÄÕûÊı¡£
+        System.out.printf("%#x", i); // "#x"è¡¨ç¤ºè¾“å‡ºå¸¦æœ‰åå…­è¿›åˆ¶æ ‡å¿—çš„æ•´æ•°ã€‚
         System.out.println();
-        System.out.printf("%s", s); // "d"±íÊ¾Êä³ö×Ö·û´®¡£
+        System.out.printf("%s", s); // "d"è¡¨ç¤ºè¾“å‡ºå­—ç¬¦ä¸²ã€‚
         System.out.println();
-        System.out.printf("Êä³öÒ»¸ö¸¡µãÊı£º%f£¬Ò»¸öÕûÊı£º%d£¬Ò»¸ö×Ö·û´®£º%s", d, i, s);
-        // ¿ÉÒÔÊä³ö¶à¸ö±äÁ¿£¬×¢ÒâË³Ğò¡£
+        System.out.printf("è¾“å‡ºä¸€ä¸ªæµ®ç‚¹æ•°ï¼š%fï¼Œä¸€ä¸ªæ•´æ•°ï¼š%dï¼Œä¸€ä¸ªå­—ç¬¦ä¸²ï¼š%s", d, i, s);
+        // å¯ä»¥è¾“å‡ºå¤šä¸ªå˜é‡ï¼Œæ³¨æ„é¡ºåºã€‚
         System.out.println();
-        System.out.printf(" ×Ö·û´®£º%2$s£¬%1$dµÄÊ®Áù½øÖÆÊı£º%1$#x", i, s);
-        // "X$"±íÊ¾µÚ¼¸¸ö±äÁ¿¡£
+        System.out.printf(" å­—ç¬¦ä¸²ï¼š%2$sï¼Œ%1$dçš„åå…­è¿›åˆ¶æ•°ï¼š%1$#x", i, s);
+        // "X$"è¡¨ç¤ºç¬¬å‡ ä¸ªå˜é‡ã€‚
     }
 }

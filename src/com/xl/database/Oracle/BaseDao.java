@@ -5,15 +5,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class BaseDao {
-    //4¸ö ¾²Ì¬³£Á¿
+    //4ä¸ª é™æ€å¸¸é‡
     private final static String DRIVER = "oracle.jdbc.driver.OracleDriver";
     private final static String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
     private final static String USERNAME = "xl";
 
-    //Á¬½Ó·½·¨
+    //è¿æ¥æ–¹æ³•
     public Connection getConnection() {
         Connection conn = null;
-        //¼ÓÔØÇı¶¯
+        //åŠ è½½é©±åŠ¨
         try {
             Class.forName(DRIVER);
             conn = DriverManager.getConnection(URL, USERNAME, "xl");

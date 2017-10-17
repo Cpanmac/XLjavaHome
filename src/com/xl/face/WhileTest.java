@@ -3,8 +3,8 @@ package com.xl.face;
 import org.junit.Test;
 
 /**
- * @author ĞìÁ¢
- * @Decription ÕûÊı±ß½çµÄÎÊÌâ:
+ * @author å¾ç«‹
+ * @Decription æ•´æ•°è¾¹ç•Œçš„é—®é¢˜:
  * @date 2014-5-15
  */
 public class WhileTest {

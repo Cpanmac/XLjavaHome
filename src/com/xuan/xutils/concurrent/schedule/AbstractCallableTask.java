@@ -3,10 +3,10 @@ package com.xuan.xutils.concurrent.schedule;
 import java.util.concurrent.Callable;
 
 /**
- * ÃèÊöÄ³¸öÏµÍ³ÈÎÎñµÄ³éÏó»ùÀà.ºÍ <code>AbstractRunnableTask</code> µÄÇø±ğÊÇ´ËÈÎÎñ´øÓĞÖ´ĞĞµÄ½á¹û
+ * æè¿°æŸä¸ªç³»ç»Ÿä»»åŠ¡çš„æŠ½è±¡åŸºç±».å’Œ <code>AbstractRunnableTask</code> çš„åŒºåˆ«æ˜¯æ­¤ä»»åŠ¡å¸¦æœ‰æ‰§è¡Œçš„ç»“æœ
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:29:22 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:29:22 $
  */
 public abstract class AbstractCallableTask<V> extends AbstractTask implements Callable<V> {
     public AbstractCallableTask(String name) {
@@ -14,15 +14,15 @@ public abstract class AbstractCallableTask<V> extends AbstractTask implements Ca
     }
 
     /**
-     * ´¦ÀíÈÎÎñÖ´ĞĞµÄ·½·¨.
+     * å¤„ç†ä»»åŠ¡æ‰§è¡Œçš„æ–¹æ³•.
      *
-     * @return ÈÎÎñÖ´ĞĞ½á¹û
-     * @throws Exception Ö´ĞĞÒì³£Ê±Å×³ö
+     * @return ä»»åŠ¡æ‰§è¡Œç»“æœ
+     * @throws Exception æ‰§è¡Œå¼‚å¸¸æ—¶æŠ›å‡º
      */
     public abstract V processTask() throws Exception;
 
     /**
-     * ÈÎÎñÏß³ÌÖ´ĞĞµÄ·½·¨, Ö±½Óµ÷ÓÃÈÎÎñ´¦Àí·½·¨.
+     * ä»»åŠ¡çº¿ç¨‹æ‰§è¡Œçš„æ–¹æ³•, ç›´æ¥è°ƒç”¨ä»»åŠ¡å¤„ç†æ–¹æ³•.
      */
     @Override
     public V call() {
@@ -45,13 +45,13 @@ public abstract class AbstractCallableTask<V> extends AbstractTask implements Ca
     }
 
     /**
-     * ÈÎÎñÖ´ĞĞÇ°²Ù×÷,×ÓÀà¸ù¾İ×Ô¼ºÒªÇó¿É¸´Ğ´
+     * ä»»åŠ¡æ‰§è¡Œå‰æ“ä½œ,å­ç±»æ ¹æ®è‡ªå·±è¦æ±‚å¯å¤å†™
      */
     protected void beforeProcessTask() {
     }
 
     /**
-     * ÈÎÎñÖ´ĞĞºó²Ù×÷,×ÓÀà¸ù¾İ×Ô¼ºÒªÇó¿É¸´Ğ´
+     * ä»»åŠ¡æ‰§è¡Œåæ“ä½œ,å­ç±»æ ¹æ®è‡ªå·±è¦æ±‚å¯å¤å†™
      */
     protected void afterProcessTask() {
     }

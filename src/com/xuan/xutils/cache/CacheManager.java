@@ -3,63 +3,63 @@ package com.xuan.xutils.cache;
 import java.util.Set;
 
 /**
- * ¸ºÔğ¶Ô»º´æ½øĞĞ¹ÜÀíµÄ½Ó¿Ú
+ * è´Ÿè´£å¯¹ç¼“å­˜è¿›è¡Œç®¡ç†çš„æ¥å£
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:40:02 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:40:02 $
  */
 public interface CacheManager<T extends Cache<?, ?>> {
     /**
-     * ¸ù¾İ»º´æÃûÀ´»ñÈ¡»º´æ¡£
+     * æ ¹æ®ç¼“å­˜åæ¥è·å–ç¼“å­˜ã€‚
      *
-     * @param cacheName »º´æÃû
-     * @return ·µ»ØºÍ»º´æÃû³ÆÏëÆ¥ÅäµÄ»º´æ£¬Èç¹ûÃ»ÓĞÆ¥ÅäÏîÔò·µ»Ø <code>null</code>¡£
+     * @param cacheName ç¼“å­˜å
+     * @return è¿”å›å’Œç¼“å­˜åç§°æƒ³åŒ¹é…çš„ç¼“å­˜ï¼Œå¦‚æœæ²¡æœ‰åŒ¹é…é¡¹åˆ™è¿”å› <code>null</code>ã€‚
      */
     T getCache(String cacheName);
 
     /**
-     * Ìí¼ÓĞÂµÄ»º´æ¡£
+     * æ·»åŠ æ–°çš„ç¼“å­˜ã€‚
      *
-     * @param cacheName ĞèÒªÌí¼ÓµÄ»º´æÃû
-     * @param cache     ĞèÒªÌí¼ÓµÄ»º´æ
+     * @param cacheName éœ€è¦æ·»åŠ çš„ç¼“å­˜å
+     * @param cache     éœ€è¦æ·»åŠ çš„ç¼“å­˜
      */
     void addCache(String cacheName, T cache);
 
     /**
-     * É¾³ıÒÑ¾­Ìí¼ÓµÄ»º´æ¡£
+     * åˆ é™¤å·²ç»æ·»åŠ çš„ç¼“å­˜ã€‚
      *
-     * @param cacheName ĞèÒªÉ¾³ıµÄ»º´æÃû
+     * @param cacheName éœ€è¦åˆ é™¤çš„ç¼“å­˜å
      */
     void removeCache(String cacheName);
 
     /**
-     * ·µ»ØÏÖÓĞ»º´æÃûµÄ¼¯ºÏ¡£
+     * è¿”å›ç°æœ‰ç¼“å­˜åçš„é›†åˆã€‚
      *
-     * @return »º´æÃûµÄ¼¯ºÏ
+     * @return ç¼“å­˜åçš„é›†åˆ
      */
     Set<String> getCacheNames();
 
     /**
-     * Ë¢ĞÂÄ³¸ö»º´æ¡£
+     * åˆ·æ–°æŸä¸ªç¼“å­˜ã€‚
      *
-     * @param cacheName ĞèÒªË¢ĞÂµÄ»º´æÃû
+     * @param cacheName éœ€è¦åˆ·æ–°çš„ç¼“å­˜å
      */
     void flush(String cacheName);
 
     /**
-     * Ë¢ĞÂËùÓĞ»º´æ¡£
+     * åˆ·æ–°æ‰€æœ‰ç¼“å­˜ã€‚
      */
     void flushAll();
 
     /**
-     * ¹Ø±Õ»º´æ¹ÜÀíÆ÷²¢¶ÔÆäÖĞµÄ»º´æ½øĞĞÏú»Ù´¦Àí¡£
+     * å…³é—­ç¼“å­˜ç®¡ç†å™¨å¹¶å¯¹å…¶ä¸­çš„ç¼“å­˜è¿›è¡Œé”€æ¯å¤„ç†ã€‚
      */
     void shutdown();
 
     /**
-     * ÅĞ¶Ï»º´æ¹ÜÀíÆ÷ÊÇ·ñÒÑ¾­¹Ø±Õ¡£
+     * åˆ¤æ–­ç¼“å­˜ç®¡ç†å™¨æ˜¯å¦å·²ç»å…³é—­ã€‚
      *
-     * @return Èç¹û»º´æ¹ÜÀíÆ÷ÒÑ¾­¹Ø±ÕÔò·µ»Ø <code>true</code>£¬·ñÔò·µ»Ø <code>false</code>¡£
+     * @return å¦‚æœç¼“å­˜ç®¡ç†å™¨å·²ç»å…³é—­åˆ™è¿”å› <code>true</code>ï¼Œå¦åˆ™è¿”å› <code>false</code>ã€‚
      */
     boolean isShutdown();
 }

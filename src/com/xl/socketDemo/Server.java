@@ -8,7 +8,7 @@ public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket ss = null;
         ss = new ServerSocket(9900);
-        System.out.println("服务器启动中...");
+        System.out.println("鏈嶅姟鍣ㄥ惎鍔ㄤ腑...");
         while (true) {
             Socket s = ss.accept();
             Thread t = new Thread(new MyThread(s));

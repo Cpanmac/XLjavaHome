@@ -1,10 +1,10 @@
 package com.xuan.xutils.cache;
 
 /**
- * 表示操作缓存发生异常的异常类
+ * 琛ㄧず鎿嶄綔缂撳瓨鍙戠敓寮傚父鐨勫紓甯哥被
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 上午10:39:10 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 涓婂崍10:39:10 $
  */
 public class CacheException extends RuntimeException {
     private static final long serialVersionUID = 1L;

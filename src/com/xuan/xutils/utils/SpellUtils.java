@@ -10,10 +10,10 @@ import java.util.LinkedHashMap;
 import java.util.Set;
 
 /**
- * Æ´Òô¹¤¾ßÀà
+ * æ‹¼éŸ³å·¥å…·ç±»
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç9:56:17 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ9:56:17 $
  */
 public abstract class SpellUtils {
     public final static HashMap<String, String> surnameMap = new HashMap<String, String>(415);
@@ -428,439 +428,439 @@ public abstract class SpellUtils {
         spellPut("zui", -10260);
         spellPut("zun", -10256);
         spellPut("zuo", -10254);
-        surnamePut("Úó", "y");
-        surnamePut("ÄÁ", "m");
-        surnamePut("Ñî", "y");
-        surnamePut("ìè", "h");
-        surnamePut("¹ú", "g");
-        surnamePut("Ã×", "m");
-        surnamePut("×ó", "z");
-        surnamePut("èï", "l");
-        surnamePut("Íò", "w");
-        surnamePut("ÃÏ", "m");
-        surnamePut("Óí", "y");
-        surnamePut("Îä", "w");
-        surnamePut("×æ", "z");
-        surnamePut("Û­", "x");
-        surnamePut("â×", "y");
-        surnamePut("Çï", "q");
-        surnamePut("¹¬", "g");
-        surnamePut("Äş", "n");
-        surnamePut("ÍÀ", "t");
-        surnamePut("ÖÜ", "z");
-        surnamePut("Ôø", "z");
-        surnamePut("ºâ", "h");
-        surnamePut("Ö£", "z");
-        surnamePut("¹Ë", "g");
-        surnamePut("¿Õ", "k");
-        surnamePut("Óî", "y");
-        surnamePut("ãÚ", "q");
-        surnamePut("¼§", "j");
-        surnamePut("Ëï", "s");
-        surnamePut("Áî", "l");
-        surnamePut("¹ğ", "g");
-        surnamePut("Çú", "q");
-        surnamePut("ºë", "h");
-        surnamePut("ËÕ", "s");
-        surnamePut("Âæ", "l");
-        surnamePut("ÓÈ", "y");
-        surnamePut("ŞÉ", "x");
-        surnamePut("Óº", "y");
-        surnamePut("Â½", "l");
-        surnamePut("ÊÙ", "s");
-        surnamePut("Â¡", "l");
-        surnamePut("ÑÕ", "y");
-        surnamePut("ĞÏ", "x");
-        surnamePut("±ğ", "b");
-        surnamePut("Å·", "o");
-        surnamePut("ĞÜ", "x");
-        surnamePut("È´", "q");
-        surnamePut("¹Ø", "g");
-        surnamePut("µÒ", "d");
-        surnamePut("·¿", "f");
-        surnamePut("ÕÅ", "z");
-        surnamePut("Áº", "l");
-        surnamePut("ÎÖ", "w");
-        surnamePut("Ğí", "x");
-        surnamePut("Âí", "m");
-        surnamePut("³Â", "c");
-        surnamePut("Ñö", "y");
-        surnamePut("ºÍ", "h");
-        surnamePut("Áú", "l");
-        surnamePut("À¶", "l");
-        surnamePut("¼Í", "j");
-        surnamePut("Û¢", "t");
-        surnamePut("»ª", "h");
-        surnamePut("ëø", "t");
-        surnamePut("³ğ", "q");
-        surnamePut("Æ½", "p");
-        surnamePut("Àä", "l");
-        surnamePut("Á¬", "l");
-        surnamePut("¶­", "d");
-        surnamePut("·ë", "f");
-        surnamePut("Îé", "w");
-        surnamePut("¾°", "j");
-        surnamePut("³²", "c");
-        surnamePut("Ñò", "y");
-        surnamePut("ÄÂ", "m");
-        surnamePut("·ü", "f");
-        surnamePut("Å¥", "n");
-        surnamePut("Éê", "s");
-        surnamePut("ĞÁ", "x");
-        surnamePut("Õ¿", "z");
-        surnamePut("¸ß", "g");
-        surnamePut("Ó÷", "y");
-        surnamePut("Æ¤", "p");
-        surnamePut("Ë®", "s");
-        surnamePut("±Ï", "b");
-        surnamePut("ÂŞ", "l");
-        surnamePut("¼Æ", "j");
-        surnamePut("Óã", "y");
-        surnamePut("ÏÄ", "x");
-        surnamePut("¶õ", "e");
-        surnamePut("Â·", "l");
-        surnamePut("Åá", "p");
-        surnamePut("ÅÓ", "p");
-        surnamePut("¼»", "j");
-        surnamePut("°½", "a");
-        surnamePut("Àµ", "l");
-        surnamePut("Çü", "q");
-        surnamePut("Úù", "w");
-        surnamePut("°Í", "b");
-        surnamePut("Ì¸", "t");
-        surnamePut("»¬", "h");
-        surnamePut("²Ô", "c");
-        surnamePut("»Ê", "h");
-        surnamePut("ÖÕ", "z");
-        surnamePut("Ã«", "m");
-        surnamePut("ôß", "j");
-        surnamePut("Êø", "s");
-        surnamePut("ÃÓ", "m");
-        surnamePut("¼½", "j");
-        surnamePut("Ó¦", "y");
-        surnamePut("³£", "c");
-        surnamePut("¹¢", "g");
-        surnamePut("Áø", "l");
-        surnamePut("¿ï", "k");
-        surnamePut("çÑ", "m");
-        surnamePut("À×", "l");
-        surnamePut("ºú", "h");
-        surnamePut("Óá", "y");
-        surnamePut("İ·", "s");
-        surnamePut("°¬", "a");
-        surnamePut("Ë«", "s");
-        surnamePut("Îµ", "w");
-        surnamePut("Íô", "w");
-        surnamePut("½ğ", "j");
-        surnamePut("Ç¿", "q");
-        surnamePut("Ê·", "s");
-        surnamePut("Ğû", "x");
-        surnamePut("ÌÀ", "t");
-        surnamePut("×¯", "z");
-        surnamePut("ÀÖ", "l");
-        surnamePut("»İ", "h");
-        surnamePut("´¾", "c");
-        surnamePut("ØÇ", "s");
-        surnamePut("Ñà", "y");
-        surnamePut("¸»", "f");
-        surnamePut("Ò¦", "y");
-        surnamePut("Áõ", "l");
-        surnamePut("Âú", "m");
-        surnamePut("Õ²", "z");
-        surnamePut("ÈÄ", "r");
-        surnamePut("ÆÑ", "p");
-        surnamePut("Ë¾", "s");
-        surnamePut("×£", "z");
-        surnamePut("Í¨", "t");
-        surnamePut("Î¤", "w");
-        surnamePut("è³", "q");
-        surnamePut("ñÒ", "c");
-        surnamePut("³Ø", "c");
-        surnamePut("Ò¶", "y");
-        surnamePut("ÉĞ", "s");
-        surnamePut("´÷", "d");
-        surnamePut("Ì«", "t");
-        surnamePut("¹ù", "g");
-        surnamePut("¸Ê", "g");
-        surnamePut("ºÕ", "h");
-        surnamePut("ñã", "x");
-        surnamePut("Û¬", "g");
-        surnamePut("³µ", "c");
-        surnamePut("Ó¡", "y");
-        surnamePut("µÔ", "d");
-        surnamePut("Óô", "y");
-        surnamePut("ñ¼", "d");
-        surnamePut("Òæ", "y");
-        surnamePut("Îº", "w");
-        surnamePut("Óİ", "y");
-        surnamePut("ÇØ", "q");
-        surnamePut("ÈÎ", "r");
-        surnamePut("·Ñ", "f");
-        surnamePut("ÃÉ", "m");
-        surnamePut("´ş", "d");
-        surnamePut("²·", "b");
-        surnamePut("¹ã", "g");
-        surnamePut("ÄÇ", "n");
-        surnamePut("Úû", "b");
-        surnamePut("¹­", "g");
-        surnamePut("ºó", "h");
-        surnamePut("Ğ»", "x");
-        surnamePut("Æİ", "q");
-        surnamePut("Ö§", "z");
-        surnamePut("ÓÎ", "y");
-        surnamePut("½ª", "j");
-        surnamePut("ºì", "h");
-        surnamePut("ÉØ", "s");
-        surnamePut("ÆÖ", "p");
-        surnamePut("º¼", "h");
-        surnamePut("Í¯", "t");
-        surnamePut("´Ó", "c");
-        surnamePut("¹Å", "g");
-        surnamePut("É£", "s");
-        surnamePut("×Ú", "z");
-        surnamePut("Ê¯", "s");
-        surnamePut("µó", "d");
-        surnamePut("·û", "f");
-        surnamePut("Â¬", "l");
-        surnamePut("¶¡", "d");
-        surnamePut("Éò", "s");
-        surnamePut("ÖÓ", "z");
-        surnamePut("ËÎ", "s");
-        surnamePut("ºî", "h");
-        surnamePut("É³", "s");
-        surnamePut("¿×", "k");
-        surnamePut("µ³", "d");
-        surnamePut("°ü", "b");
-        surnamePut("¼®", "j");
-        surnamePut("°²", "a");
-        surnamePut("°à", "b");
-        surnamePut("Ğë", "x");
-        surnamePut("Öî", "z");
-        surnamePut("ÕÔ", "z");
-        surnamePut("ôÃ", "q");
-        surnamePut("¿µ", "k");
-        surnamePut("½¹", "j");
-        surnamePut("Èã", "r");
-        surnamePut("Àè", "l");
-        surnamePut("·á", "f");
-        surnamePut("Íõ", "w");
-        surnamePut("ôà", "y");
-        surnamePut("²½", "b");
-        surnamePut("·¶", "f");
-        surnamePut("³¤", "z");
-        surnamePut("Ôª", "y");
-        surnamePut("ÀÍ", "l");
-        surnamePut("Â³", "l");
-        surnamePut("²é", "c");
-        surnamePut("İş", "l");
-        surnamePut("Ã©", "m");
-        surnamePut("ºé", "h");
-        surnamePut("¼Ö", "j");
-        surnamePut("½â", "j");
-        surnamePut("¹´", "g");
-        surnamePut("Ìï", "t");
-        surnamePut("²Ü", "c");
-        surnamePut("åµ", "m");
-        surnamePut("½¯", "j");
-        surnamePut("Èî", "r");
-        surnamePut("»¸", "h");
-        surnamePut("±«", "b");
-        surnamePut("Î£", "w");
-        surnamePut("ÁÖ", "l");
-        surnamePut("Äß", "n");
-        surnamePut("µË", "d");
-        surnamePut("ÌÕ", "t");
-        surnamePut("ºØ", "h");
-        surnamePut("Î×", "w");
-        surnamePut("±©", "b");
-        surnamePut("±ß", "b");
-        surnamePut("³Ì", "c");
-        surnamePut("»³", "h");
-        surnamePut("±å", "b");
-        surnamePut("ê°", "z");
-        surnamePut("ÔÆ", "y");
-        surnamePut("¸µ", "f");
-        surnamePut("Ô×", "z");
-        surnamePut("¶«", "d");
-        surnamePut("ö¤", "z");
-        surnamePut("êÚ", "b");
-        surnamePut("ãÛ", "y");
-        surnamePut("Àú", "l");
-        surnamePut("Åí", "p");
-        surnamePut("Ûº", "f");
-        surnamePut("ÈÙ", "r");
-        surnamePut("ĞÒ", "x");
-        surnamePut("Îâ", "w");
-        surnamePut("°×", "b");
-        surnamePut("Êæ", "s");
-        surnamePut("¿Â", "k");
-        surnamePut("Èİ", "r");
-        surnamePut("Æî", "q");
-        surnamePut("ÎÚ", "w");
-        surnamePut("ÌÆ", "t");
-        surnamePut("Õç", "z");
-        surnamePut("»Æ", "h");
-        surnamePut("Àî", "l");
-        surnamePut("ÎÂ", "w");
-        surnamePut("ÅË", "p");
-        surnamePut("Ñ¦", "x");
-        surnamePut("äß", "p");
-        surnamePut("åÌ", "p");
-        surnamePut("ïú", "j");
-        surnamePut("ÎÌ", "w");
-        surnamePut("Ûª", "l");
-        surnamePut("¼³", "j");
-        surnamePut("É÷", "s");
-        surnamePut("Àû", "l");
-        surnamePut("Ïî", "x");
-        surnamePut("È¨", "q");
-        surnamePut("ÕÂ", "z");
-        surnamePut("ËŞ", "s");
-        surnamePut("¾Ï", "j");
-        surnamePut("¹®", "g");
-        surnamePut("Äª", "m");
-        surnamePut("Ï¯", "x");
-        surnamePut("Öì", "z");
-        surnamePut("ÒÁ", "y");
-        surnamePut("êË", "c");
-        surnamePut("öÄ", "q");
-        surnamePut("³ä", "c");
-        surnamePut("ÑÏ", "y");
-        surnamePut("Ï°", "x");
-        surnamePut("¸É", "g");
-        surnamePut("Ä½", "m");
-        surnamePut("¾®", "j");
-        surnamePut("É½", "s");
-        surnamePut("ÏÌ", "x");
-        surnamePut("ÜÇ", "r");
-        surnamePut("Â¦", "l");
-        surnamePut("ÑÖ", "y");
-        surnamePut("¼Ò", "j");
-        surnamePut("¶¼", "d");
-        surnamePut("Ç®", "q");
-        surnamePut("Òü", "y");
-        surnamePut("Åî", "p");
-        surnamePut("¸ê", "g");
-        surnamePut("»ô", "h");
-        surnamePut("Ø¿", "n");
-        surnamePut("¶Â", "d");
-        surnamePut("ÂÀ", "l");
-        surnamePut("ÉÛ", "s");
-        surnamePut("Á®", "l");
-        surnamePut("Ê¢", "s");
-        surnamePut("²Ì", "c");
-        surnamePut("ÎÄ", "w");
-        surnamePut("±´", "b");
-        surnamePut("×Ş", "z");
-        surnamePut("ì¯", "s");
-        surnamePut("½ù", "j");
-        surnamePut("Ê¦", "s");
-        surnamePut("Â»", "l");
-        surnamePut("î×", "d");
-        surnamePut("å§", "p");
-        surnamePut("Ïà", "x");
-        surnamePut("²ı", "c");
-        surnamePut("¾Ó", "j");
-        surnamePut("¼¾", "j");
-        surnamePut("²ñ", "c");
-        surnamePut("Äô", "n");
-        surnamePut("Ñø", "y");
-        surnamePut("´¢", "c");
-        surnamePut("êÃ", "z");
-        surnamePut("¹¨", "g");
-        surnamePut("¿Ü", "k");
-        surnamePut("»¨", "h");
-        surnamePut("µ¥", "s");
-        surnamePut("·â", "f");
-        surnamePut("È«", "q");
-        surnamePut("·®", "f");
-        surnamePut("Áè", "l");
-        surnamePut("Óà", "y");
-        surnamePut("¶Î", "d");
-        surnamePut("Ñô", "y");
-        surnamePut("Òó", "y");
-        surnamePut("×¿", "z");
-        surnamePut("½­", "j");
-        surnamePut("Îã", "w");
-        surnamePut("Âé", "m");
-        surnamePut("ÀÉ", "l");
-        surnamePut("Å©", "n");
-        surnamePut("º«", "h");
-        surnamePut("Ê±", "s");
-        surnamePut("¶Å", "d");
-        surnamePut("Ğì", "x");
-        surnamePut("ÓÚ", "y");
-        surnamePut("Ê©", "s");
-        surnamePut("°Ø", "b");
-        surnamePut("¹È", "g");
-        surnamePut("Ã·", "m");
-        surnamePut("Ùç", "k");
-        surnamePut("¾£", "j");
-        surnamePut("Ô½", "y");
-        surnamePut("Î¾", "w");
-        surnamePut("ÈÖ", "r");
-        surnamePut("¹±", "g");
-        surnamePut("Å£", "n");
-        surnamePut("Ğù", "x");
-        surnamePut("ÎÀ", "w");
-        surnamePut("ÁÎ", "l");
-        surnamePut("Æë", "q");
-        surnamePut("Ã÷", "m");
-        surnamePut("·ö", "f");
-        surnamePut("Ì·", "t");
-        surnamePut("¹«", "g");
-        surnamePut("Ë÷", "s");
-        surnamePut("êÌ", "y");
-        surnamePut("óÃ", "z");
-        surnamePut("¼ò", "j");
-        surnamePut("ÎÅ", "w");
-        surnamePut("Ïò", "x");
-        surnamePut("Øá", "k");
-        surnamePut("îÁ", "h");
-        surnamePut("ËÉ", "s");
-        surnamePut("ÖÙ", "z");
-        surnamePut("ÉÏ", "s");
-        surnamePut("¸ğ", "g");
-        surnamePut("³É", "c");
-        surnamePut("ÄÜ", "n");
-        surnamePut("å£", "t");
-        surnamePut("ÇÇ", "q");
-        surnamePut("´Ş", "c");
-        surnamePut("ÈÚ", "r");
-        surnamePut("Ü÷", "x");
-        surnamePut("á¯", "c");
-        surnamePut("·½", "f");
-        surnamePut("»Â", "h");
-        surnamePut("ºÂ", "h");
-        surnamePut("¼ª", "j");
-        surnamePut("Ò×", "y");
-        surnamePut("ãÉ", "m");
-        surnamePut("·ï", "f");
-        surnamePut("Ïô", "x");
-        surnamePut("ºÎ", "h");
-        surnamePut("Ô¬", "y");
-        surnamePut("Ãç", "m");
-        surnamePut("¹Ü", "g");
-        surnamePut("Çñ", "q");
-        surnamePut("È½", "r");
-        surnamePut("¹¶", "g");
-        surnamePut("À´", "l");
-        surnamePut("ÖÖ", "z");
-        surnamePut("°¢", "a");
-        surnamePut("À¼", "l");
-        surnamePut("¶û", "e");
-        surnamePut("ÄÉ", "n");
-        surnamePut("Åô", "p");
-        surnamePut("Â¥", "l");
-        surnamePut("Ä²", "m");
-        surnamePut("şŸ", "y");
+        surnamePut("éš—", "y");
+        surnamePut("ç‰§", "m");
+        surnamePut("æ¨", "y");
+        surnamePut("æ‰ˆ", "h");
+        surnamePut("å›½", "g");
+        surnamePut("ç±³", "m");
+        surnamePut("å·¦", "z");
+        surnamePut("æ ¾", "l");
+        surnamePut("ä¸‡", "w");
+        surnamePut("å­Ÿ", "m");
+        surnamePut("ç¦¹", "y");
+        surnamePut("æ­¦", "w");
+        surnamePut("ç¥–", "z");
+        surnamePut("éƒ—", "x");
+        surnamePut("åº¾", "y");
+        surnamePut("ç§‹", "q");
+        surnamePut("å®«", "g");
+        surnamePut("å®", "n");
+        surnamePut("å± ", "t");
+        surnamePut("å‘¨", "z");
+        surnamePut("æ›¾", "z");
+        surnamePut("è¡¡", "h");
+        surnamePut("éƒ‘", "z");
+        surnamePut("é¡¾", "g");
+        surnamePut("ç©º", "k");
+        surnamePut("å®‡", "y");
+        surnamePut("é˜™", "q");
+        surnamePut("å§¬", "j");
+        surnamePut("å­™", "s");
+        surnamePut("ä»¤", "l");
+        surnamePut("æ¡‚", "g");
+        surnamePut("æ›²", "q");
+        surnamePut("å¼˜", "h");
+        surnamePut("è‹", "s");
+        surnamePut("éª†", "l");
+        surnamePut("å°¤", "y");
+        surnamePut("å¥š", "x");
+        surnamePut("é›", "y");
+        surnamePut("é™†", "l");
+        surnamePut("å¯¿", "s");
+        surnamePut("éš†", "l");
+        surnamePut("é¢œ", "y");
+        surnamePut("é‚¢", "x");
+        surnamePut("åˆ«", "b");
+        surnamePut("æ¬§", "o");
+        surnamePut("ç†Š", "x");
+        surnamePut("å´", "q");
+        surnamePut("å…³", "g");
+        surnamePut("ç‹„", "d");
+        surnamePut("æˆ¿", "f");
+        surnamePut("å¼ ", "z");
+        surnamePut("æ¢", "l");
+        surnamePut("æ²ƒ", "w");
+        surnamePut("è®¸", "x");
+        surnamePut("é©¬", "m");
+        surnamePut("é™ˆ", "c");
+        surnamePut("ä»°", "y");
+        surnamePut("å’Œ", "h");
+        surnamePut("é¾™", "l");
+        surnamePut("è“", "l");
+        surnamePut("çºª", "j");
+        surnamePut("é‚°", "t");
+        surnamePut("å", "h");
+        surnamePut("æ»•", "t");
+        surnamePut("ä»‡", "q");
+        surnamePut("å¹³", "p");
+        surnamePut("å†·", "l");
+        surnamePut("è¿", "l");
+        surnamePut("è‘£", "d");
+        surnamePut("å†¯", "f");
+        surnamePut("ä¼", "w");
+        surnamePut("æ™¯", "j");
+        surnamePut("å·¢", "c");
+        surnamePut("ç¾Š", "y");
+        surnamePut("ç©†", "m");
+        surnamePut("ä¼", "f");
+        surnamePut("é’®", "n");
+        surnamePut("ç”³", "s");
+        surnamePut("è¾›", "x");
+        surnamePut("æ¹›", "z");
+        surnamePut("é«˜", "g");
+        surnamePut("å–»", "y");
+        surnamePut("çš®", "p");
+        surnamePut("æ°´", "s");
+        surnamePut("æ¯•", "b");
+        surnamePut("ç½—", "l");
+        surnamePut("è®¡", "j");
+        surnamePut("é±¼", "y");
+        surnamePut("å¤", "x");
+        surnamePut("é„‚", "e");
+        surnamePut("è·¯", "l");
+        surnamePut("è£´", "p");
+        surnamePut("åº", "p");
+        surnamePut("è“Ÿ", "j");
+        surnamePut("æ•–", "a");
+        surnamePut("èµ–", "l");
+        surnamePut("å±ˆ", "q");
+        surnamePut("é‚¬", "w");
+        surnamePut("å·´", "b");
+        surnamePut("è°ˆ", "t");
+        surnamePut("æ»‘", "h");
+        surnamePut("è‹", "c");
+        surnamePut("çš‡", "h");
+        surnamePut("ç»ˆ", "z");
+        surnamePut("æ¯›", "m");
+        surnamePut("æš¨", "j");
+        surnamePut("æŸ", "s");
+        surnamePut("ç³œ", "m");
+        surnamePut("å†€", "j");
+        surnamePut("åº”", "y");
+        surnamePut("å¸¸", "c");
+        surnamePut("è€¿", "g");
+        surnamePut("æŸ³", "l");
+        surnamePut("åŒ¡", "k");
+        surnamePut("ç¼ª", "m");
+        surnamePut("é›·", "l");
+        surnamePut("èƒ¡", "h");
+        surnamePut("ä¿", "y");
+        surnamePut("è˜", "s");
+        surnamePut("è‰¾", "a");
+        surnamePut("åŒ", "s");
+        surnamePut("è”š", "w");
+        surnamePut("æ±ª", "w");
+        surnamePut("é‡‘", "j");
+        surnamePut("å¼º", "q");
+        surnamePut("å²", "s");
+        surnamePut("å®£", "x");
+        surnamePut("æ±¤", "t");
+        surnamePut("åº„", "z");
+        surnamePut("ä¹", "l");
+        surnamePut("æƒ ", "h");
+        surnamePut("æ·³", "c");
+        surnamePut("å", "s");
+        surnamePut("ç‡•", "y");
+        surnamePut("å¯Œ", "f");
+        surnamePut("å§š", "y");
+        surnamePut("åˆ˜", "l");
+        surnamePut("æ»¡", "m");
+        surnamePut("è©¹", "z");
+        surnamePut("é¥¶", "r");
+        surnamePut("è’²", "p");
+        surnamePut("å¸", "s");
+        surnamePut("ç¥", "z");
+        surnamePut("é€š", "t");
+        surnamePut("éŸ¦", "w");
+        surnamePut("ç’©", "q");
+        surnamePut("è¤š", "c");
+        surnamePut("æ± ", "c");
+        surnamePut("å¶", "y");
+        surnamePut("å°š", "s");
+        surnamePut("æˆ´", "d");
+        surnamePut("å¤ª", "t");
+        surnamePut("éƒ­", "g");
+        surnamePut("ç”˜", "g");
+        surnamePut("èµ«", "h");
+        surnamePut("èƒ¥", "x");
+        surnamePut("éƒœ", "g");
+        surnamePut("è½¦", "c");
+        surnamePut("å°", "y");
+        surnamePut("ç¿Ÿ", "d");
+        surnamePut("éƒ", "y");
+        surnamePut("çª¦", "d");
+        surnamePut("ç›Š", "y");
+        surnamePut("é­", "w");
+        surnamePut("è™", "y");
+        surnamePut("ç§¦", "q");
+        surnamePut("ä»»", "r");
+        surnamePut("è´¹", "f");
+        surnamePut("è’™", "m");
+        surnamePut("é€®", "d");
+        surnamePut("åœ", "b");
+        surnamePut("å¹¿", "g");
+        surnamePut("é‚£", "n");
+        surnamePut("é‚´", "b");
+        surnamePut("å¼“", "g");
+        surnamePut("å", "h");
+        surnamePut("è°¢", "x");
+        surnamePut("æˆš", "q");
+        surnamePut("æ”¯", "z");
+        surnamePut("æ¸¸", "y");
+        surnamePut("å§œ", "j");
+        surnamePut("çº¢", "h");
+        surnamePut("éŸ¶", "s");
+        surnamePut("æµ¦", "p");
+        surnamePut("æ­", "h");
+        surnamePut("ç«¥", "t");
+        surnamePut("ä»", "c");
+        surnamePut("å¤", "g");
+        surnamePut("æ¡‘", "s");
+        surnamePut("å®—", "z");
+        surnamePut("çŸ³", "s");
+        surnamePut("åˆ", "d");
+        surnamePut("ç¬¦", "f");
+        surnamePut("å¢", "l");
+        surnamePut("ä¸", "d");
+        surnamePut("æ²ˆ", "s");
+        surnamePut("é’Ÿ", "z");
+        surnamePut("å®‹", "s");
+        surnamePut("ä¾¯", "h");
+        surnamePut("æ²™", "s");
+        surnamePut("å­”", "k");
+        surnamePut("å…š", "d");
+        surnamePut("åŒ…", "b");
+        surnamePut("ç±", "j");
+        surnamePut("å®‰", "a");
+        surnamePut("ç­", "b");
+        surnamePut("é¡»", "x");
+        surnamePut("è¯¸", "z");
+        surnamePut("èµµ", "z");
+        surnamePut("è£˜", "q");
+        surnamePut("åº·", "k");
+        surnamePut("ç„¦", "j");
+        surnamePut("èŒ¹", "r");
+        surnamePut("é»", "l");
+        surnamePut("ä¸°", "f");
+        surnamePut("ç‹", "w");
+        surnamePut("ç¾¿", "y");
+        surnamePut("æ­¥", "b");
+        surnamePut("èŒƒ", "f");
+        surnamePut("é•¿", "z");
+        surnamePut("å…ƒ", "y");
+        surnamePut("åŠ³", "l");
+        surnamePut("é²", "l");
+        surnamePut("æŸ¥", "c");
+        surnamePut("è”º", "l");
+        surnamePut("èŒ…", "m");
+        surnamePut("æ´ª", "h");
+        surnamePut("è´¾", "j");
+        surnamePut("è§£", "j");
+        surnamePut("å‹¾", "g");
+        surnamePut("ç”°", "t");
+        surnamePut("æ›¹", "c");
+        surnamePut("å®“", "m");
+        surnamePut("è’‹", "j");
+        surnamePut("é˜®", "r");
+        surnamePut("æ¡“", "h");
+        surnamePut("é²", "b");
+        surnamePut("å±", "w");
+        surnamePut("æ—", "l");
+        surnamePut("å€ª", "n");
+        surnamePut("é‚“", "d");
+        surnamePut("é™¶", "t");
+        surnamePut("è´º", "h");
+        surnamePut("å·«", "w");
+        surnamePut("æš´", "b");
+        surnamePut("è¾¹", "b");
+        surnamePut("ç¨‹", "c");
+        surnamePut("æ€€", "h");
+        surnamePut("å", "b");
+        surnamePut("è‡§", "z");
+        surnamePut("äº‘", "y");
+        surnamePut("å‚…", "f");
+        surnamePut("å®°", "z");
+        surnamePut("ä¸œ", "d");
+        surnamePut("è¨¾", "z");
+        surnamePut("è´²", "b");
+        surnamePut("é˜š", "y");
+        surnamePut("å†", "l");
+        surnamePut("å½­", "p");
+        surnamePut("é…†", "f");
+        surnamePut("è£", "r");
+        surnamePut("å¹¸", "x");
+        surnamePut("å´", "w");
+        surnamePut("ç™½", "b");
+        surnamePut("èˆ’", "s");
+        surnamePut("æŸ¯", "k");
+        surnamePut("å®¹", "r");
+        surnamePut("ç¥", "q");
+        surnamePut("ä¹Œ", "w");
+        surnamePut("å”", "t");
+        surnamePut("ç”„", "z");
+        surnamePut("é»„", "h");
+        surnamePut("æ", "l");
+        surnamePut("æ¸©", "w");
+        surnamePut("æ½˜", "p");
+        surnamePut("è–›", "x");
+        surnamePut("æº¥", "p");
+        surnamePut("é€„", "p");
+        surnamePut("åµ‡", "j");
+        surnamePut("ç¿", "w");
+        surnamePut("éƒ¦", "l");
+        surnamePut("æ±²", "j");
+        surnamePut("æ…", "s");
+        surnamePut("åˆ©", "l");
+        surnamePut("é¡¹", "x");
+        surnamePut("æƒ", "q");
+        surnamePut("ç« ", "z");
+        surnamePut("å®¿", "s");
+        surnamePut("é ", "j");
+        surnamePut("å·©", "g");
+        surnamePut("è«", "m");
+        surnamePut("å¸­", "x");
+        surnamePut("æœ±", "z");
+        surnamePut("ä¼Š", "y");
+        surnamePut("æ™", "c");
+        surnamePut("ç¿", "q");
+        surnamePut("å……", "c");
+        surnamePut("ä¸¥", "y");
+        surnamePut("ä¹ ", "x");
+        surnamePut("å¹²", "g");
+        surnamePut("æ…•", "m");
+        surnamePut("äº•", "j");
+        surnamePut("å±±", "s");
+        surnamePut("å’¸", "x");
+        surnamePut("èŠ®", "r");
+        surnamePut("å¨„", "l");
+        surnamePut("é˜", "y");
+        surnamePut("å®¶", "j");
+        surnamePut("éƒ½", "d");
+        surnamePut("é’±", "q");
+        surnamePut("å°¹", "y");
+        surnamePut("è“¬", "p");
+        surnamePut("æˆˆ", "g");
+        surnamePut("éœ", "h");
+        surnamePut("ä¹œ", "n");
+        surnamePut("å µ", "d");
+        surnamePut("å•", "l");
+        surnamePut("é‚µ", "s");
+        surnamePut("å»‰", "l");
+        surnamePut("ç››", "s");
+        surnamePut("è”¡", "c");
+        surnamePut("æ–‡", "w");
+        surnamePut("è´", "b");
+        surnamePut("é‚¹", "z");
+        surnamePut("æ®³", "s");
+        surnamePut("é³", "j");
+        surnamePut("å¸ˆ", "s");
+        surnamePut("ç¦„", "l");
+        surnamePut("é’­", "d");
+        surnamePut("æ¿®", "p");
+        surnamePut("ç›¸", "x");
+        surnamePut("æ˜Œ", "c");
+        surnamePut("å±…", "j");
+        surnamePut("å­£", "j");
+        surnamePut("æŸ´", "c");
+        surnamePut("è‚", "n");
+        surnamePut("å…»", "y");
+        surnamePut("å‚¨", "c");
+        surnamePut("æ˜", "z");
+        surnamePut("é¾š", "g");
+        surnamePut("å¯‡", "k");
+        surnamePut("èŠ±", "h");
+        surnamePut("å•", "s");
+        surnamePut("å°", "f");
+        surnamePut("å…¨", "q");
+        surnamePut("æ¨Š", "f");
+        surnamePut("å‡Œ", "l");
+        surnamePut("ä½™", "y");
+        surnamePut("æ®µ", "d");
+        surnamePut("é˜³", "y");
+        surnamePut("æ®·", "y");
+        surnamePut("å“", "z");
+        surnamePut("æ±Ÿ", "j");
+        surnamePut("æ¯‹", "w");
+        surnamePut("éº»", "m");
+        surnamePut("éƒ", "l");
+        surnamePut("å†œ", "n");
+        surnamePut("éŸ©", "h");
+        surnamePut("æ—¶", "s");
+        surnamePut("æœ", "d");
+        surnamePut("å¾", "x");
+        surnamePut("äº", "y");
+        surnamePut("æ–½", "s");
+        surnamePut("æŸ", "b");
+        surnamePut("è°·", "g");
+        surnamePut("æ¢…", "m");
+        surnamePut("å¤”", "k");
+        surnamePut("è†", "j");
+        surnamePut("è¶Š", "y");
+        surnamePut("å°‰", "w");
+        surnamePut("æˆ", "r");
+        surnamePut("è´¡", "g");
+        surnamePut("ç‰›", "n");
+        surnamePut("è½©", "x");
+        surnamePut("å«", "w");
+        surnamePut("å»–", "l");
+        surnamePut("é½", "q");
+        surnamePut("æ˜", "m");
+        surnamePut("æ‰¶", "f");
+        surnamePut("è°­", "t");
+        surnamePut("å…¬", "g");
+        surnamePut("ç´¢", "s");
+        surnamePut("æ™", "y");
+        surnamePut("ç«º", "z");
+        surnamePut("ç®€", "j");
+        surnamePut("é—»", "w");
+        surnamePut("å‘", "x");
+        surnamePut("è’¯", "k");
+        surnamePut("ç›", "h");
+        surnamePut("æ¾", "s");
+        surnamePut("ä»²", "z");
+        surnamePut("ä¸Š", "s");
+        surnamePut("è‘›", "g");
+        surnamePut("æˆ", "c");
+        surnamePut("èƒ½", "n");
+        surnamePut("æ¾¹", "t");
+        surnamePut("ä¹”", "q");
+        surnamePut("å´”", "c");
+        surnamePut("è", "r");
+        surnamePut("è€", "x");
+        surnamePut("å²‘", "c");
+        surnamePut("æ–¹", "f");
+        surnamePut("å®¦", "h");
+        surnamePut("éƒ", "h");
+        surnamePut("å‰", "j");
+        surnamePut("æ˜“", "y");
+        surnamePut("é—µ", "m");
+        surnamePut("å‡¤", "f");
+        surnamePut("è§", "x");
+        surnamePut("ä½•", "h");
+        surnamePut("è¢", "y");
+        surnamePut("è‹—", "m");
+        surnamePut("ç®¡", "g");
+        surnamePut("é‚±", "q");
+        surnamePut("å†‰", "r");
+        surnamePut("è‹Ÿ", "g");
+        surnamePut("æ¥", "l");
+        surnamePut("ç§", "z");
+        surnamePut("é˜¿", "a");
+        surnamePut("å…°", "l");
+        surnamePut("å°”", "e");
+        surnamePut("çº³", "n");
+        surnamePut("é¹", "p");
+        surnamePut("æ¥¼", "l");
+        surnamePut("ç‰Ÿ", "m");
+        surnamePut("î¡£", "y");
     }
 
     /**
-     * »ñµÃµ¥¸öºº×ÖµÄAscii.
+     * è·å¾—å•ä¸ªæ±‰å­—çš„Ascii.
      *
-     * @param cn char ºº×Ö×Ö·û
-     * @return int ´íÎó·µ»Ø 0,·ñÔò·µ»Øascii
+     * @param cn char æ±‰å­—å­—ç¬¦
+     * @return int é”™è¯¯è¿”å› 0,å¦åˆ™è¿”å›ascii
      */
     public static int getCnAscii(char cn) {
         byte[] bytes = null;
@@ -869,34 +869,34 @@ public abstract class SpellUtils {
         } catch (UnsupportedEncodingException e) {
             return 0;
         }
-        if (bytes == null || bytes.length > 2 || bytes.length <= 0) { // ´íÎó
+        if (bytes == null || bytes.length > 2 || bytes.length <= 0) { // é”™è¯¯
             return 0;
         }
-        if (bytes.length == 1) { // Ó¢ÎÄ×Ö·û
+        if (bytes.length == 1) { // è‹±æ–‡å­—ç¬¦
             return bytes[0];
         }
-        if (bytes.length == 2) { // ÖĞÎÄ×Ö·û
+        if (bytes.length == 2) { // ä¸­æ–‡å­—ç¬¦
             int hightByte = 256 + bytes[0];
             int lowByte = 256 + bytes[1];
             int ascii = (256 * hightByte + lowByte) - 256 * 256;
             return ascii;
         }
-        return 0; // ´íÎó
+        return 0; // é”™è¯¯
     }
 
     /**
-     * ¸ù¾İASCIIÂëµ½SpellMapÖĞ²éÕÒ¶ÔÓ¦µÄÆ´Òô
+     * æ ¹æ®ASCIIç åˆ°SpellMapä¸­æŸ¥æ‰¾å¯¹åº”çš„æ‹¼éŸ³
      *
-     * @param ascii int ×Ö·û¶ÔÓ¦µÄASCII
-     * @return String Æ´Òô,Ê×ÏÈÅĞ¶ÏASCIIÊÇ·ñ>0& <160,Èç¹ûÊÇ·µ»Ø¶ÔÓ¦µÄ×Ö·û,
+     * @param ascii int å­—ç¬¦å¯¹åº”çš„ASCII
+     * @return String æ‹¼éŸ³,é¦–å…ˆåˆ¤æ–­ASCIIæ˜¯å¦>0& <160,å¦‚æœæ˜¯è¿”å›å¯¹åº”çš„å­—ç¬¦,
      * <p>
-     * ·ñÔòµ½SpellMapÖĞ²éÕÒ,Èç¹ûÃ»ÓĞÕÒµ½Æ´Òô,Ôò·µ»Ønull,Èç¹ûÕÒµ½Ôò·µ»ØÆ´Òô.
+     * å¦åˆ™åˆ°SpellMapä¸­æŸ¥æ‰¾,å¦‚æœæ²¡æœ‰æ‰¾åˆ°æ‹¼éŸ³,åˆ™è¿”å›null,å¦‚æœæ‰¾åˆ°åˆ™è¿”å›æ‹¼éŸ³.
      */
     public static String getSpellByAscii(int ascii) {
-        if (ascii > 0 && ascii < 160) { // µ¥×Ö·û
+        if (ascii > 0 && ascii < 160) { // å•å­—ç¬¦
             return String.valueOf((char) ascii);
         }
-        if (ascii < -20319 || ascii > -10247) { // ²»ÖªµÀµÄ×Ö·û
+        if (ascii < -20319 || ascii > -10247) { // ä¸çŸ¥é“çš„å­—ç¬¦
             return null;
         }
         Set<String> keySet = spellMap.keySet();
@@ -910,7 +910,7 @@ public abstract class SpellUtils {
             Object valObj = spellMap.get(spell);
             if (valObj instanceof Integer) {
                 asciiRang = ((Integer) valObj).intValue();
-                if (ascii >= asciiRang0 && ascii < asciiRang) { // Çø¼äÕÒµ½
+                if (ascii >= asciiRang0 && ascii < asciiRang) { // åŒºé—´æ‰¾åˆ°
                     return (spell0 == null) ? spell : spell0;
                 } else {
                     spell0 = spell;
@@ -922,10 +922,10 @@ public abstract class SpellUtils {
     }
 
     /**
-     * ·µ»Ø×Ö·û´®µÄÈ«Æ´,ÊÇºº×Ö×ª»¯ÎªÈ«Æ´,ÆäËü×Ö·û²»½øĞĞ×ª»»
+     * è¿”å›å­—ç¬¦ä¸²çš„å…¨æ‹¼,æ˜¯æ±‰å­—è½¬åŒ–ä¸ºå…¨æ‹¼,å…¶å®ƒå­—ç¬¦ä¸è¿›è¡Œè½¬æ¢
      *
-     * @param cnStr String ×Ö·û´®
-     * @return String ×ª»»³ÉÈ«Æ´ºóµÄ×Ö·û´®
+     * @param cnStr String å­—ç¬¦ä¸²
+     * @return String è½¬æ¢æˆå…¨æ‹¼åçš„å­—ç¬¦ä¸²
      */
     public static String getFullSpell(String cnStr) {
         if (Validators.isEmpty(cnStr)) {
@@ -935,7 +935,7 @@ public abstract class SpellUtils {
         StringBuilder retuBuf = new StringBuilder();
         for (int i = 0, Len = chars.length; i < Len; i++) {
             int ascii = getCnAscii(chars[i]);
-            if (ascii == 0) { // È¡asciiÊ±³ö´í
+            if (ascii == 0) { // å–asciiæ—¶å‡ºé”™
                 retuBuf.append(chars[i]);
             } else {
                 String spell = getSpellByAscii(ascii);
@@ -950,20 +950,20 @@ public abstract class SpellUtils {
     }
 
     /**
-     * È¡µÃ×Ö·ûµÄÖĞÎÄÆ´Òô
+     * å–å¾—å­—ç¬¦çš„ä¸­æ–‡æ‹¼éŸ³
      *
      * @param cnChar
-     * @return ×Ö·ûµÄÖĞÎÄÆ´Òô
+     * @return å­—ç¬¦çš„ä¸­æ–‡æ‹¼éŸ³
      */
     public static String getFullSpell(char cnChar) {
         return getFullSpell(new String(new char[]{cnChar}));
     }
 
     /**
-     * È¡µÃ×Ö·ûµÄÖĞÎÄÆ´ÒôÊ××ÖÄ¸
+     * å–å¾—å­—ç¬¦çš„ä¸­æ–‡æ‹¼éŸ³é¦–å­—æ¯
      *
      * @param cnChar
-     * @return ×Ö·ûµÄÖĞÎÄÆ´ÒôÊ××ÖÄ¸
+     * @return å­—ç¬¦çš„ä¸­æ–‡æ‹¼éŸ³é¦–å­—æ¯
      */
     public static String getFirstSpell(char cnChar) {
         String str = getFullSpell(cnChar);
@@ -974,10 +974,10 @@ public abstract class SpellUtils {
     }
 
     /**
-     * È¡µÃÖĞÎÄÆ´ÒôÊ××ÖÄ¸
+     * å–å¾—ä¸­æ–‡æ‹¼éŸ³é¦–å­—æ¯
      *
      * @param cnStr
-     * @return ÖĞÎÄÆ´ÒôÊ××ÖÄ¸
+     * @return ä¸­æ–‡æ‹¼éŸ³é¦–å­—æ¯
      */
     public static String getFirstSpell(String cnStr) {
         if (Validators.isEmpty(cnStr)) {
@@ -991,10 +991,10 @@ public abstract class SpellUtils {
     }
 
     /**
-     * È¡µÃÖĞÎÄµÄÆ´ÒôËõĞ´£¬ÆäÖĞµÚÒ»¸öÎªÈ«Æ´£¬ºóÃæÎªÊ××ÖÄ¸
+     * å–å¾—ä¸­æ–‡çš„æ‹¼éŸ³ç¼©å†™ï¼Œå…¶ä¸­ç¬¬ä¸€ä¸ªä¸ºå…¨æ‹¼ï¼Œåé¢ä¸ºé¦–å­—æ¯
      *
      * @param cnStr
-     * @return Æ´ÒôËõĞ´
+     * @return æ‹¼éŸ³ç¼©å†™
      */
     public static String getAbbreviateSpell(String cnStr) {
         if (Validators.isEmpty(cnStr)) {
@@ -1012,10 +1012,10 @@ public abstract class SpellUtils {
     }
 
     /**
-     * È¡µÃĞÕµÄÆ´ÒôÊ××ÖÄ¸
+     * å–å¾—å§“çš„æ‹¼éŸ³é¦–å­—æ¯
      *
-     * @param cnName ĞÕÃû
-     * @return ĞÕµÄÆ´ÒôÊ××ÖÄ¸
+     * @param cnName å§“å
+     * @return å§“çš„æ‹¼éŸ³é¦–å­—æ¯
      */
     public static String getSurnameFirstSpell(String cnName) {
         if (Validators.isEmpty(cnName)) {
@@ -1026,10 +1026,10 @@ public abstract class SpellUtils {
     }
 
     /**
-     * È¡µÃÒ»ÅúĞÕÃûµÄĞÕµÄÊ××ÖÄ¸×Ö·û´®Êı×é
+     * å–å¾—ä¸€æ‰¹å§“åçš„å§“çš„é¦–å­—æ¯å­—ç¬¦ä¸²æ•°ç»„
      *
-     * @param cnNames ĞÕÃû×Ö·û´®Êı×é
-     * @return Ê××ÖÄ¸×Ö·û´®Êı×é
+     * @param cnNames å§“åå­—ç¬¦ä¸²æ•°ç»„
+     * @return é¦–å­—æ¯å­—ç¬¦ä¸²æ•°ç»„
      */
     public static String[] getSurnameFirstSpellRange(String[] cnNames) {
         HashSet<String> surnameFirstSpellSet = new HashSet<String>();

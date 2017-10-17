@@ -7,16 +7,16 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
 
-//JDBC¹¤¾ßÀà£º¹Ø±ÕÁ÷ºÍÈ¡µÃÁ¬½Ó
+//JDBCå·¥å…·ç±»ï¼šå…³é—­æµå’Œå–å¾—è¿æ¥
 public final class JdbcUtil {
     private static String driver;
     private static String url;
     private static String user;
     private static String password;
-    // ¾²Ì¬¿é£º¼ÓÔØÎÄ¼ş
+    // é™æ€å—ï¼šåŠ è½½æ–‡ä»¶
     static {
         Properties props = new Properties();
-        // »ñµÃ¹¤³ÌÄ¿Â¼
+        // è·å¾—å·¥ç¨‹ç›®å½•
         try {
             InputStream is = JdbcUtil.class.getClassLoader().getResourceAsStream("mysql/db.properties");
             is = JdbcUtil.class.getResourceAsStream("db.properties");
@@ -30,7 +30,7 @@ public final class JdbcUtil {
         password = props.getProperty("password");
     }
 
-    // ¾²Ì¬¿é£º×¢²áÇı¶¯
+    // é™æ€å—ï¼šæ³¨å†Œé©±åŠ¨
     static {
         try {
             Class.forName(driver);
@@ -38,7 +38,7 @@ public final class JdbcUtil {
             e.printStackTrace();
         }
     }
-    // È¡µÃÁ¬½Ó
+    // å–å¾—è¿æ¥
     public static Connection getMySqlConnection() {
         Connection conn = null;
         try {
@@ -49,7 +49,7 @@ public final class JdbcUtil {
         return conn;
     }
 
-    // ¹Ø±ÕÁ¬½Ó
+    // å…³é—­è¿æ¥
     public static void close(ResultSet rs) {
         if (rs != null) {
             try {

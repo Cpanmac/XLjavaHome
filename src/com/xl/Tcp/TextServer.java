@@ -14,18 +14,18 @@ class TextServer {
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
         System.out.println(ip);
-        //ÏÈ¶ÁÒ»¸ölongÀàĞÍµÄ½áÊø±ê¼Ç
+        //å…ˆè¯»ä¸€ä¸ªlongç±»å‹çš„ç»“æŸæ ‡è®°
         //		DataInputStream dis =new DataInputStream(s.getInputStream());
-        //		long l=dis.readLong();//ÏÈ°ÑÊ±¼ä´Á¶Á¹ıÀ´
+        //		long l=dis.readLong();//å…ˆæŠŠæ—¶é—´æˆ³è¯»è¿‡æ¥
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
-        // ÕæÊÇµÄÓ¦¸Ã°ÑÃû×ÖÈ¡Ò»Ñù¡£Èç¹ûÓĞÍ¬ÃûÅĞ¶ÏÒ»ÏÂ
-        PrintWriter out = new PrintWriter(new FileWriter("C:\\Documents and Settings\\All Users\\×ÀÃæ\\server.txt"), true);
+        // çœŸæ˜¯çš„åº”è¯¥æŠŠåå­—å–ä¸€æ ·ã€‚å¦‚æœæœ‰åŒååˆ¤æ–­ä¸€ä¸‹
+        PrintWriter out = new PrintWriter(new FileWriter("C:\\Documents and Settings\\All Users\\æ¡Œé¢\\server.txt"), true);
         String line = null;
         while ((line = bufIn.readLine()) != null) {
             out.println(line);
         }
         PrintWriter pw = new PrintWriter(s.getOutputStream(), true);
-        pw.println("ÉÏ´«³É¹¦£¡");
+        pw.println("ä¸Šä¼ æˆåŠŸï¼");
         out.close();
         s.close();
         ss.close();

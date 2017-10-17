@@ -5,7 +5,7 @@ import org.junit.Test;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ĞìÁ¢
+ * User: å¾ç«‹
  * Date: 2017/10/9
  * Time: 13:57
  * To change this template use File | Settings | File Templates.
@@ -15,6 +15,6 @@ public class LogDemo {
 
     @Test
     public void logTest() {
-        LOGGER.info("²âÊÔ");
+        LOGGER.info("æµ‹è¯•");
     }
 }

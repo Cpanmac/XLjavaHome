@@ -7,19 +7,19 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * ¶ÔÎÄ±¾ÄÚÈİ½øĞĞÃô¸Ğ´Ê»ã¹ıÂËµÄ¹¤¾ßÀà¡£
+ * å¯¹æ–‡æœ¬å†…å®¹è¿›è¡Œæ•æ„Ÿè¯æ±‡è¿‡æ»¤çš„å·¥å…·ç±»ã€‚
  *
  * @author xuan
- * @version $Revision: 1.0 $, $Date: 2012-11-22 ÉÏÎç10:24:01 $
+ * @version $Revision: 1.0 $, $Date: 2012-11-22 ä¸Šåˆ10:24:01 $
  */
 public abstract class TabooedUtils {
     private static final TabooedTools tabooedTools = TabooedTools.getInstance();
 
     /**
-     * ¶ÔÎÄ±¾ÄÚÈİ½øĞĞ¹ıÂË£¬»ñÈ¡ËùÓĞ´æÔÚµÄÃô¸Ğ´Ê»ã¡£
+     * å¯¹æ–‡æœ¬å†…å®¹è¿›è¡Œè¿‡æ»¤ï¼Œè·å–æ‰€æœ‰å­˜åœ¨çš„æ•æ„Ÿè¯æ±‡ã€‚
      *
-     * @param content ĞèÒª½øĞĞ¹ıÂËµÄÄÚÈİ
-     * @return ¹ıÂËµÄÃô¸Ğ´Ê»ãÁĞ±í
+     * @param content éœ€è¦è¿›è¡Œè¿‡æ»¤çš„å†…å®¹
+     * @return è¿‡æ»¤çš„æ•æ„Ÿè¯æ±‡åˆ—è¡¨
      */
     public static List<String> getTabooedWords(String content) {
         if (Validators.isEmpty(content)) {
@@ -29,24 +29,24 @@ public abstract class TabooedUtils {
     }
 
     /**
-     * ¶ÔÎÄ±¾ÄÚÈİ½øĞĞ¼ì²é£¬ÑéÖ¤ÊÇ·ñ´æÔÚÃô¸Ğ´Ê»ã¡£
+     * å¯¹æ–‡æœ¬å†…å®¹è¿›è¡Œæ£€æŸ¥ï¼ŒéªŒè¯æ˜¯å¦å­˜åœ¨æ•æ„Ÿè¯æ±‡ã€‚
      *
-     * @param content ĞèÒª½øĞĞ¼ì²éµÄÄÚÈİ
-     * @return Èç¹û´æÔÚÃô¸Ğ´Ê»ã·µ»Ø <code>true</code>£¬·ñÔò·µ»Ø <code>false</code>¡£
+     * @param content éœ€è¦è¿›è¡Œæ£€æŸ¥çš„å†…å®¹
+     * @return å¦‚æœå­˜åœ¨æ•æ„Ÿè¯æ±‡è¿”å› <code>true</code>ï¼Œå¦åˆ™è¿”å› <code>false</code>ã€‚
      */
     public static boolean isTabooed(String content) {
         return !getTabooedWords(content).isEmpty();
     }
 
     /**
-     * ´Ë·½·¨¿ÉÒÔÊµÏÖÔÚ²»ÖØÆôJVMµÄÇé¿öÏÂÖØĞÂ¼ÓÔØ´æ·ÅÃô¸Ğ´Ê»ãµÄ×ÊÔ´ÎÄ¼ş¡£
+     * æ­¤æ–¹æ³•å¯ä»¥å®ç°åœ¨ä¸é‡å¯JVMçš„æƒ…å†µä¸‹é‡æ–°åŠ è½½å­˜æ”¾æ•æ„Ÿè¯æ±‡çš„èµ„æºæ–‡ä»¶ã€‚
      */
     public static void reloadTabooedWords() {
         tabooedTools.initialize();
     }
 
     /**
-     * ´Ë·½·¨ÓÃÓÚ¼ÓÔØÓ¦ÓÃ³ÌĞòÍâ²¿µÄÃô¸Ğ´Ê»ã¿â£¬±ÈÈçÊı¾İ¿âÀï´æ´¢µÄ´Ê¿â£¨Ê¹ÓÃ¸Ã·½·¨ºótabooed.wordsÀïÃæµÄ´Ê»ãÎŞĞ§£©
+     * æ­¤æ–¹æ³•ç”¨äºåŠ è½½åº”ç”¨ç¨‹åºå¤–éƒ¨çš„æ•æ„Ÿè¯æ±‡åº“ï¼Œæ¯”å¦‚æ•°æ®åº“é‡Œå­˜å‚¨çš„è¯åº“ï¼ˆä½¿ç”¨è¯¥æ–¹æ³•åtabooed.wordsé‡Œé¢çš„è¯æ±‡æ— æ•ˆï¼‰
      *
      * @param tabooedWords
      */

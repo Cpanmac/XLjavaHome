@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: 徐立
+ * User: 寰愮珛
  * Date: 2017-08-14
  * Time: 12:38
  * To change this template use File | Settings | File Templates.
@@ -27,7 +27,7 @@ public class EncoderDemo {
         System.out.println(utfFile.getAbsolutePath());
     }
     /**
-     * 将指定目录下其他格式文件为UTF-8文件
+     * 灏嗘寚瀹氱洰褰曚笅鍏朵粬鏍煎紡鏂囦欢涓篣TF-8鏂囦欢
      *
      * @throws IOException
      */
@@ -43,12 +43,12 @@ public class EncoderDemo {
                 try {
                     String content = FileTool.getContent(file);
                     if (StringUtil.isEmpty(content)) {
-                        System.out.println(file.getAbsolutePath() + "为空");
+                        System.out.println(file.getAbsolutePath() + "涓虹┖");
                     } else {
                         w1 = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
                         w1.write(content);
                         w1.flush();
-                        System.out.println(file.getAbsolutePath() + "转换完成:" + content);
+                        System.out.println(file.getAbsolutePath() + "杞崲瀹屾垚:" + content);
                     }
                 } finally {
                     if (w1 != null) {
@@ -60,7 +60,7 @@ public class EncoderDemo {
     }
 
     /**
-     * 将指定目录下其他格式文件为GBK文件
+     * 灏嗘寚瀹氱洰褰曚笅鍏朵粬鏍煎紡鏂囦欢涓篏BK鏂囦欢
      *
      * @throws IOException
      */
@@ -76,12 +76,12 @@ public class EncoderDemo {
                 try {
                     String content = FileTool.getContent(file);
                     if (StringUtil.isEmpty(content)) {
-                        System.out.println(file.getAbsolutePath() + "为空");
+                        System.out.println(file.getAbsolutePath() + "涓虹┖");
                     } else {
                         w1 = new OutputStreamWriter(new FileOutputStream(file), "GBK");
                         w1.write(content);
                         w1.flush();
-                        System.out.println(file.getAbsolutePath() + "转换完成:" + content);
+                        System.out.println(file.getAbsolutePath() + "杞崲瀹屾垚:" + content);
                     }
                 } finally {
                     if (w1 != null) {

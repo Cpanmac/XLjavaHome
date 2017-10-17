@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 任务执行结果对象
- * 注意：子任务执行成功后生成的结果对象也会使用他，最后结果汇总也使用的他
+ * 浠诲姟鎵ц缁撴灉瀵硅薄
+ * 娉ㄦ剰锛氬瓙浠诲姟鎵ц鎴愬姛鍚庣敓鎴愮殑缁撴灉瀵硅薄涔熶細浣跨敤浠栵紝鏈�鍚庣粨鏋滄眹鎬讳篃浣跨敤鐨勪粬
  * <p>
  * Created by xuan on 17/8/23.
  */
 public class ListTaskResult<R> {
     /**
-     * 结果对象
+     * 缁撴灉瀵硅薄
      */
     private List<R> list;
 
     /**
-     * 把from的结果对象数据合并到this
+     * 鎶奻rom鐨勭粨鏋滃璞℃暟鎹悎骞跺埌this
      *
      * @param from
      * @return

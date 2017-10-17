@@ -1,12 +1,12 @@
 package com.xuan.xutils.domain.enums;
 
 /**
- * ĞÔ±ğÃ¶¾Ù
+ * æ€§åˆ«æšä¸¾
  * <p>
  * Created by xuan on 17/8/2.
  */
 public enum SexEnum {
-    MAN(1, "ÄĞ"), WOMAN(2, "Å®");
+    MAN(1, "ç”·"), WOMAN(2, "å¥³");
     private int code;
     private String msg;
 
@@ -16,7 +16,7 @@ public enum SexEnum {
     }
 
     /**
-     * ¸ù¾İcode»ñÈ¡µ½SexEnum,È¡²»µ½·µ»Ønull
+     * æ ¹æ®codeè·å–åˆ°SexEnum,å–ä¸åˆ°è¿”å›null
      *
      * @param code
      * @return
@@ -31,7 +31,7 @@ public enum SexEnum {
     }
 
     /**
-     * ÅĞ¶ÏÈë²ÎcodeÊÇ·ñ°üº¬
+     * åˆ¤æ–­å…¥å‚codeæ˜¯å¦åŒ…å«
      *
      * @param code
      * @return
@@ -46,7 +46,7 @@ public enum SexEnum {
     }
 
     /**
-     * isContainÈ¡·´
+     * isContainå–å
      *
      * @param code
      * @return
@@ -56,7 +56,7 @@ public enum SexEnum {
     }
 
     /**
-     * ÅĞ¶ÏÀàĞÍÊÇ·ñÏàÍ¬
+     * åˆ¤æ–­ç±»å‹æ˜¯å¦ç›¸åŒ
      *
      * @param code
      * @return
@@ -66,7 +66,7 @@ public enum SexEnum {
     }
 
     /**
-     * isEqÈ¡·´
+     * isEqå–å
      *
      * @param code
      * @return

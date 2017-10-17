@@ -94,7 +94,7 @@ public class KeyGen {
     }
 
     public static void main(String[] args) {
-        System.out.println("请输入用户名:");
+        System.out.println("璇疯緭鍏ョ敤鎴峰悕:");
         Scanner scanner = new Scanner(System.in);
         String username = scanner.next();
         Random r = new Random();

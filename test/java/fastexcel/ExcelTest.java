@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: 徐立
+ * User: 寰愮珛
  * Date: 2017-10-17
  * Time: 13:56
  * To change this template use File | Settings | File Templates.
@@ -26,19 +26,19 @@ public class ExcelTest {
     @Test
     public void test() throws IOException, InvalidFormatException {
         FastExcel fastExcel = new FastExcel(is);
-        fastExcel.setSheetName("活动信息数据");
+        fastExcel.setSheetName("娲诲姩淇℃伅鏁版嵁");
         List<MyTest> tests = fastExcel.parse(MyTest.class);
         if (null != tests && !tests.isEmpty()) {
             for (MyTest myTest : tests) {
-                LOG.debug("记录:{}", myTest.toString());
+                LOG.debug("璁板綍:{}", myTest.toString());
             }
             FastExcel create = new FastExcel(FileTool.getResourceFile("excel.xls").getAbsolutePath());
-            create.setSheetName("活动信息数据");
+            create.setSheetName("娲诲姩淇℃伅鏁版嵁");
             boolean result = create.createExcel(tests);
-            LOG.debug("结果:{}", result);
+            LOG.debug("缁撴灉:{}", result);
             create.close();
         } else {
-            LOG.debug("没有结果");
+            LOG.debug("娌℃湁缁撴灉");
         }
         fastExcel.close();
     }
