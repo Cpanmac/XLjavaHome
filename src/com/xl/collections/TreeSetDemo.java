@@ -1,7 +1,7 @@
 package com.xl.collections;
 
 /*
- * å¾€TreeSeté›†åˆä¸­å­˜å‚¨è‡ªå®šä¹‰å¯¹è±¡å­¦ç”Ÿ. æƒ³æŒ‰ç…§å­¦ç”Ÿçš„å¹´é¾„è¿›è¡Œæ’åº
+ * ÍùTreeSet¼¯ºÏÖĞ´æ´¢×Ô¶¨Òå¶ÔÏóÑ§Éú. Ïë°´ÕÕÑ§ÉúµÄÄêÁä½øĞĞÅÅĞò
  */
 
 import com.xl.entity.Student;
@@ -31,7 +31,7 @@ public class TreeSetDemo {
         ts.add(new Student("lisi09", 19));
         Iterator<Student> it = ts.iterator();
         while (it.hasNext()) {
-            Student stu = it.next(); // å¦‚æœæƒ³æ‰“å°å¯¹è±¡çš„è¯
+            Student stu = it.next(); // Èç¹ûÏë´òÓ¡¶ÔÏóµÄ»°
             System.out.println(stu.getName() + "..." + stu.getAge());
         }
     }

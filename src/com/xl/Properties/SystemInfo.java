@@ -6,11 +6,11 @@ import java.util.Properties;
 
 public class SystemInfo {
     public static void main(String[] args) throws FileNotFoundException {
-        Properties pro = System.getProperties(); // ç³»ç»Ÿä¿¡æ¯
-        System.out.println(pro); // æ‰“å°å‡ºæ¥åœ¨ä¸€è¡Œ
-        // åˆ†è¡Œæ‰“å°
+        Properties pro = System.getProperties(); // ÏµÍ³ĞÅÏ¢
+        System.out.println(pro); // ´òÓ¡³öÀ´ÔÚÒ»ĞĞ
+        // ·ÖĞĞ´òÓ¡
         test1(pro);
-        // ä¿å­˜èµ·æ¥
+        // ±£´æÆğÀ´
         test2(pro);
     }
 

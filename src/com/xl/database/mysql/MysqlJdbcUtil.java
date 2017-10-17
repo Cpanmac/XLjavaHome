@@ -7,16 +7,16 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
 
-//JDBCå·¥å…·ç±»ï¼šå…³é—­æµå’Œå–å¾—è¿æ¥
+//JDBC¹¤¾ßÀà£º¹Ø±ÕÁ÷ºÍÈ¡µÃÁ¬½Ó
 public final class MysqlJdbcUtil {
     private static String driver;
     private static String url;
     private static String user;
     private static String password;
-    // é™æ€å—ï¼šåŠ è½½æ–‡ä»¶
+    // ¾²Ì¬¿é£º¼ÓÔØÎÄ¼ş
     static {
         Properties props = new Properties();
-        // è·å¾—å·¥ç¨‹ç›®å½•
+        // »ñµÃ¹¤³ÌÄ¿Â¼
         try {
             InputStream is = MysqlJdbcUtil.class.getResourceAsStream("/mysql/db.properties");
             props.load(is);
@@ -29,7 +29,7 @@ public final class MysqlJdbcUtil {
             e.printStackTrace();
         }
     }
-    // å–å¾—è¿æ¥
+    // È¡µÃÁ¬½Ó
     public static Connection getMySqlConnection() {
         Connection conn = null;
         try {
@@ -40,7 +40,7 @@ public final class MysqlJdbcUtil {
         return conn;
     }
 
-    // å…³é—­è¿æ¥
+    // ¹Ø±ÕÁ¬½Ó
     public static void close(ResultSet rs) {
         if (rs != null) {
             try {

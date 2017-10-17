@@ -9,13 +9,13 @@ public class PipedStreamDemo {
         PipedInputStream in = new PipedInputStream();
         PipedOutputStream out = new PipedOutputStream();
         try {
-            in.connect(out); // è¿æ¥
+            in.connect(out); // Á¬½Ó
             Read r = new Read(in);
             Write w = new Write(out);
             new Thread(r).start();
             new Thread(w).start();
         } catch (IOException e) {
-            throw new RuntimeException("è¿æ¥å¤±è´¥ï¼");
+            throw new RuntimeException("Á¬½ÓÊ§°Ü£¡");
         }
     }
 }

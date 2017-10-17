@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class MainClass {
     public static void main(String[] args) {
-        //1.æ¥å—æ§åˆ¶å°è¾“å…¥
-        System.out.println("---è®¡ç®—å™¨ç¨‹åº---");
-        System.out.println("è¾“å…¥ç¬¬ä¸€ä¸ªæ“ä½œæ•°");
+        //1.½ÓÊÜ¿ØÖÆÌ¨ÊäÈë
+        System.out.println("---¼ÆËãÆ÷³ÌĞò---");
+        System.out.println("ÊäÈëµÚÒ»¸ö²Ù×÷Êı");
         Scanner scanner = new Scanner(System.in);
         String strNum1 = scanner.nextLine();
-        System.out.println("è¾“å…¥è¿ç®—ç¬¦");
+        System.out.println("ÊäÈëÔËËã·û");
         String oper = scanner.nextLine();
-        System.out.println("è¾“å…¥ç¬¬äºŒä¸ªæ“ä½œæ•°");
+        System.out.println("ÊäÈëµÚ¶ş¸ö²Ù×÷Êı");
         String strNum2 = scanner.nextLine();
         double result = 0;
         double num1 = Double.parseDouble(strNum1);
         double num2 = Double.parseDouble(strNum2);
-        //2.è¿›è¡Œè¿ç®—
+        //2.½øĞĞÔËËã
         if ("+".equals(oper)) {
             OperationFactory factory = new AddOperationFactory();
             Operation operation = factory.getOperation();
@@ -24,7 +24,7 @@ public class MainClass {
             operation.setNum2(num2);
             result = operation.getResult();
         }
-        //3.è¿”å›ç»“æœ
+        //3.·µ»Ø½á¹û
         System.out.println(strNum1 + oper + strNum2 + "=" + result);
     }
 }

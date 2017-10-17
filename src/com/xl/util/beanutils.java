@@ -15,19 +15,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
- * ä½¿ç”¨beanUtilsæ“ä½œbeançš„å±æ€§ï¼ˆç¬¬ä¸‰æ–¹jaråŒ…ï¼‰commons-beanutils-1.8.0.jarã€‚è¿˜éœ€è¦æ”¯æŒæ¶ commons-logging.jar æ‹†åˆ†çš„ä¸¤ä¸ªï¼šåå­—æ¯”è¿™ä¸ªé•¿
+ * Ê¹ÓÃbeanUtils²Ù×÷beanµÄÊôĞÔ£¨µÚÈı·½jar°ü£©commons-beanutils-1.8.0.jar¡£»¹ĞèÒªÖ§³Ö¼Ü commons-logging.jar ²ğ·ÖµÄÁ½¸ö£ºÃû×Ö±ÈÕâ¸ö³¤
  */
 public class beanutils {
     @Test
     public void setProperty() throws IllegalAccessException, InvocationTargetException {
         Person p = new Person();
-        // è®¾ç½®å±æ€§
-        BeanUtils.setProperty(p, "name", "èµ‹å€¼çš„å§“å1");
+        // ÉèÖÃÊôĞÔ
+        BeanUtils.setProperty(p, "name", "¸³ÖµµÄĞÕÃû1");
         System.out.println(p.getName());
     }
 
     /*
-     * å¥½å¤„ï¼šç›´æ¥å°†æ•´å‹123ï¼Œèµ‹å€¼ç»™äº†int ageï¼Œæ”¯æŒ8ç§åŸºæœ¬æ•°æ®ç±»å‹ã€‚ä¸æ”¯æŒæ—¥æœŸ
+     * ºÃ´¦£ºÖ±½Ó½«ÕûĞÍ123£¬¸³Öµ¸øÁËint age£¬Ö§³Ö8ÖÖ»ù±¾Êı¾İÀàĞÍ¡£²»Ö§³ÖÈÕÆÚ
      */
     @Test
     public void Test2() throws IllegalAccessException, InvocationTargetException {
@@ -53,15 +53,15 @@ public class beanutils {
         String age = "34";
         String birhday = "1980-09-09";
         Person p = new Person();
-        // ä¸ºäº†è®©æ—¥æœŸåˆ°beançš„birhdayå±æ€§ä¸Šï¼Œæˆ‘ä»¬ç»™beanUtilsæ³¨å†Œä¸€ä¸ªæ—¥æœŸè½¬æ¢å™¨
-        // æ¥å£ä¸èƒ½newçš„åŸå› æ˜¯é‡Œé¢æœ‰æ²¡æœ‰å®ç°çš„æ–¹æ³•ï¼Œåªè¦æŠŠæ–¹æ³•å®ç°äº†å°±èƒ½newäº†
+        // ÎªÁËÈÃÈÕÆÚµ½beanµÄbirhdayÊôĞÔÉÏ£¬ÎÒÃÇ¸øbeanUtils×¢²áÒ»¸öÈÕÆÚ×ª»»Æ÷
+        // ½Ó¿Ú²»ÄÜnewµÄÔ­ÒòÊÇÀïÃæÓĞÃ»ÓĞÊµÏÖµÄ·½·¨£¬Ö»Òª°Ñ·½·¨ÊµÏÖÁË¾ÍÄÜnewÁË
         ConvertUtils.register(new Converter() {
             public Object convert(Class type, Object value) {
                 if (value == null) {
                     return null;
                 }
                 if (!(value instanceof String)) {
-                    // throw new CoversionException("åªæ”¯æŒStringç±»å‹è½¬æ¢ï¼ï¼");
+                    // throw new CoversionException("Ö»Ö§³ÖStringÀàĞÍ×ª»»£¡£¡");
                 }
                 String str = (String) value;
                 if (str.trim().equals("")) {
@@ -90,7 +90,7 @@ public class beanutils {
     }
 
     /*
-     * åˆ©ç”¨Mapé›†åˆ
+     * ÀûÓÃMap¼¯ºÏ
      */
     @Test
     public void test5() {
@@ -99,7 +99,7 @@ public class beanutils {
         map.put("password", "123");
         map.put("age", "23");
         map.put("birthday", "1980-09-09");
-        // æ³¨å†Œè½¬æ¢å™¨
+        // ×¢²á×ª»»Æ÷
         ConvertUtils.register(new DateLocaleConverter(), Date.class);
         Person bean = new Person();
         try {

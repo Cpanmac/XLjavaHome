@@ -10,8 +10,8 @@ import java.io.RandomAccessFile;
 import java.io.UnsupportedEncodingException;
 
 /**
- * @author å¾ç«‹
- * @Decription éšæœºæ–‡ä»¶è¯»å–Demo
+ * @author ĞìÁ¢
+ * @Decription Ëæ»úÎÄ¼ş¶ÁÈ¡Demo
  * @date 2014-2-22
  */
 public class RandomAccessFileDemo {
@@ -22,34 +22,34 @@ public class RandomAccessFileDemo {
         file = new File(FileTool.getCurrentPath(this), "1.txt");
     }
 
-    public void read() throws IOException // è¯»å–
+    public void read() throws IOException // ¶ÁÈ¡
     {
-        RandomAccessFile raf = new RandomAccessFile("1.txt", "r"); // åªè¯»çš„è¯ï¼Œå¯ä»¥å±è”½æ‰åªè¯»
+        RandomAccessFile raf = new RandomAccessFile("1.txt", "r"); // Ö»¶ÁµÄ»°£¬¿ÉÒÔÆÁ±ÎµôÖ»¶Á
         System.out.println(raf.read());
-        // System.out.println(raf.read()); //å–å‡ºçš„æ•°å­—192
-        // è¦æƒ³è¯»å–æå››,æå››æ˜¯å››ä¸ªå­—èŠ‚ï¼Œå°±å¾—å»ºç«‹æ•°ç»„
+        // System.out.println(raf.read()); //È¡³öµÄÊı×Ö192
+        // ÒªÏë¶ÁÈ¡ÀîËÄ,ÀîËÄÊÇËÄ¸ö×Ö½Ú£¬¾ÍµÃ½¨Á¢Êı×é
         byte[] buf = new byte[4];
-        raf.read(buf); // è¯»å­˜bufçš„é•¿åº¦ï¼Œå¹¶å­˜å‚¨åˆ°bufæ•°ç»„
-        // è½¬æ¢æˆå­—ç¬¦ä¸²
+        raf.read(buf); // ¶Á´æbufµÄ³¤¶È£¬²¢´æ´¢µ½bufÊı×é
+        // ×ª»»³É×Ö·û´®
         String name = new String(buf);
-        System.out.println("å§“åï¼š" + name);
-        System.out.println("å¹´é¾„: " + raf.readInt());
+        System.out.println("ĞÕÃû£º" + name);
+        System.out.println("ÄêÁä: " + raf.readInt());
     }
 
-    public void read_2() throws IOException // è¯»å–ç‹äº”
+    public void read_2() throws IOException // ¶ÁÈ¡ÍõÎå
     {
-        // æƒ³è¦ç›´æ¥è¯»å–ä¸­é—´çš„ç‹äº”,å› ä¸ºç‹äº”åœ¨4 æå›› 15 çš„åé¢å­—èŠ‚æ•°å°±æ˜¯
+        // ÏëÒªÖ±½Ó¶ÁÈ¡ÖĞ¼äµÄÍõÎå,ÒòÎªÍõÎåÔÚ4 ÀîËÄ 15 µÄºóÃæ×Ö½ÚÊı¾ÍÊÇ
         RandomAccessFile raf = new RandomAccessFile("1.txt", "r");
-        raf.seek(9); // writeå†™å…¥çš„æ˜¯ä¸€ä¸ªå­—èŠ‚ï¼Œä¸€ä¸ªæ±‰å­—æ˜¯ä¸¤ä¸ªå­—èŠ‚ï¼ŒreadIntè¯»å–4ä¸ªå­—èŠ‚
+        raf.seek(9); // writeĞ´ÈëµÄÊÇÒ»¸ö×Ö½Ú£¬Ò»¸öºº×ÖÊÇÁ½¸ö×Ö½Ú£¬readInt¶ÁÈ¡4¸ö×Ö½Ú
         byte[] buf = new byte[4];
         raf.read(buf);
         String name = new String(buf);
-        System.out.println("å§“åï¼š" + name);
+        System.out.println("ĞÕÃû£º" + name);
     }
 
     @Test
     public void read_3() throws IOException // skipBytes
-    // è·³è¿‡æŒ‡å®šå­—èŠ‚ï¼Œåªèƒ½å¾€ä¸‹è·³ï¼Œä¸èƒ½å¾€å›è·³
+    // Ìø¹ıÖ¸¶¨×Ö½Ú£¬Ö»ÄÜÍùÏÂÌø£¬²»ÄÜÍù»ØÌø
     {
         RandomAccessFile raf = new RandomAccessFile(file, "r");
         int a = raf.skipBytes(3);
@@ -57,7 +57,7 @@ public class RandomAccessFileDemo {
     }
 
     /**
-     * æ·»åŠ å…ƒç´ ,å¸Œæœ›åœ¨ç¬¬å››ä¸ªä½ç½®æ·»åŠ å‘¨ä¸ƒ,ç›´æ¥å†™åˆ°æŒ‡å®šä½ç½®ï¼Œä¸è¦†ç›–æ–‡ä»¶
+     * Ìí¼ÓÔªËØ,Ï£ÍûÔÚµÚËÄ¸öÎ»ÖÃÌí¼ÓÖÜÆß,Ö±½ÓĞ´µ½Ö¸¶¨Î»ÖÃ£¬²»¸²¸ÇÎÄ¼ş
      *
      * @throws IOException
      */
@@ -65,19 +65,19 @@ public class RandomAccessFileDemo {
     public void write() throws IOException {
         RandomAccessFile raf = new RandomAccessFile(file, "rw");
         raf.seek(13);
-        raf.write("å‘¨ä¸ƒ".getBytes());
+        raf.write("ÖÜÆß".getBytes());
         raf.writeInt(103);
         raf.close();
     }
 
     @Test
-    public void write2() throws IOException // å†™å…¥
+    public void write2() throws IOException // Ğ´Èë
     {
         RandomAccessFile raf = new RandomAccessFile(file, "rws");
-        raf.write(4); // åªä¼šè¦†ç›–æ–‡ä»¶
-        raf.write("æå››".getBytes()); // æå››æ˜¯4ä¸ªå­—èŠ‚
-        raf.writeInt(15); // å†™å…¥age
-        raf.write("ç‹äº”".getBytes()); // æå››æ˜¯4ä¸ªå­—èŠ‚
-        raf.writeInt(16); // å†™å…¥age
+        raf.write(4); // Ö»»á¸²¸ÇÎÄ¼ş
+        raf.write("ÀîËÄ".getBytes()); // ÀîËÄÊÇ4¸ö×Ö½Ú
+        raf.writeInt(15); // Ğ´Èëage
+        raf.write("ÍõÎå".getBytes()); // ÀîËÄÊÇ4¸ö×Ö½Ú
+        raf.writeInt(16); // Ğ´Èëage
     }
 }

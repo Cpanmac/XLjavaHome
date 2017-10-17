@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * @author å¾ç«‹
- * @Decription è¦å®ç°å…±äº«é™æ€æ•°æ®çš„æ•ˆæœï¼Œåœ¨çº¿ç¨‹å†…å…±äº«ï¼Œåœ¨çº¿ç¨‹å¤–ç‹¬ç«‹
- * @date 2014å¹´3æœˆ5æ—¥
+ * @author ĞìÁ¢
+ * @Decription ÒªÊµÏÖ¹²Ïí¾²Ì¬Êı¾İµÄĞ§¹û£¬ÔÚÏß³ÌÄÚ¹²Ïí£¬ÔÚÏß³ÌÍâ¶ÀÁ¢
+ * @date 2014Äê3ÔÂ5ÈÕ
  */
 public class ThreadShareData {
     private static int data = 0;

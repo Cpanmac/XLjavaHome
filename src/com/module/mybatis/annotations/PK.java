@@ -11,7 +11,8 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface PK {
-
-	/** 数据库自增 **/
-	boolean auto() default false;
+    /**
+     * 数据库自增
+     **/
+    boolean auto() default false;
 }

@@ -2,6 +2,6 @@ package com.xl.design.abstractfactory;
 
 public class NorthBanana extends Banana {
     public void get() {
-        System.out.println("閲囬泦鍖楁柟棣欒晧");
+        System.out.println("采集北方香蕉");
     }
 }

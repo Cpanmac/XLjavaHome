@@ -4,8 +4,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class FileReaderDemo {
-    public static void main(String[] args) throws IOException { // ä¸ºäº†æ¼”ç¤ºç®€ä¾¿
-        // åˆ›å»ºä¸€ä¸ªè¯»å–æµå¯¹è±¡å’Œåˆ¶å®šåç§°çš„æ–‡ä»¶ç›¸å…³è”ã€‚è¦ä¿è¯æ–‡ä»¶æ˜¯å·²ç»å­˜åœ¨çš„ï¼Œå¦‚æœä¸å­˜åœ¨ä¼šå‘ç”ŸFileNotFoundException
+    public static void main(String[] args) throws IOException { // ÎªÁËÑİÊ¾¼ò±ã
+        // ´´½¨Ò»¸ö¶ÁÈ¡Á÷¶ÔÏóºÍÖÆ¶¨Ãû³ÆµÄÎÄ¼şÏà¹ØÁª¡£Òª±£Ö¤ÎÄ¼şÊÇÒÑ¾­´æÔÚµÄ£¬Èç¹û²»´æÔÚ»á·¢ÉúFileNotFoundException
         FileReader fr = new FileReader("demo.txt");
         char c;
         int ch = 0;

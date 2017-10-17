@@ -8,7 +8,7 @@ import java.io.Reader;
 
 public class StreamTool {
     /**
-     * å°†è¾“å…¥æµè½¬åŒ–ä¸ºæ•°ç»„
+     * ½«ÊäÈëÁ÷×ª»¯ÎªÊı×é
      *
      * @param is
      * @return
@@ -20,18 +20,18 @@ public class StreamTool {
             byte[] buf = new byte[1024];
             int len = 0;
             while ((len = is.read(buf)) != -1) {
-                bos.write(buf, 0, len); // å†™åˆ°bosä¸­å»
+                bos.write(buf, 0, len); // Ğ´µ½bosÖĞÈ¥
             }
             is.close();
             bos.flush();
             return bos.toByteArray();
         } catch (IOException e) {
-            throw new RuntimeException("getBytesè·å–å¤±è´¥");
+            throw new RuntimeException("getBytes»ñÈ¡Ê§°Ü");
         }
     }
 
     /**
-     * å¾—åˆ°æµä¸­çš„ä¿¡æ¯
+     * µÃµ½Á÷ÖĞµÄĞÅÏ¢
      *
      * @param is
      * @return String
@@ -41,7 +41,7 @@ public class StreamTool {
     }
 
     /**
-     * è½¬æ¢å­—ç¬¦ç¼–ç è¯´éœ€è¦çš„charæ•°ç»„
+     * ×ª»»×Ö·û±àÂëËµĞèÒªµÄcharÊı×é
      *
      * @param is
      * @return char[]

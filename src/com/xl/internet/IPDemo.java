@@ -3,23 +3,23 @@ package com.xl.internet;
 import java.net.InetAddress;
 
 /*
-UDPçš„ç‰¹ç‚¹
-1.å°†æ•°æ®æºå’Œç›®çš„å°è£…æˆæ•°æ®åŒ…ä¸­ï¼Œä¸éœ€è¦å»ºç«‹è¿æ¥
-2.æ¯ä¸ªæ•°æ®æŠ¥çš„å¤§å°åœ¨é™åˆ¶åœ¨64kå†…
-3.å› æ— è¿æ¥ï¼Œæ˜¯ä¸å¯é åè®®
-4.ä¸éœ€è¦å»ºç«‹è¿æ¥ï¼Œé€Ÿåº¦å¿«
+UDPµÄÌØµã
+1.½«Êı¾İÔ´ºÍÄ¿µÄ·â×°³ÉÊı¾İ°üÖĞ£¬²»ĞèÒª½¨Á¢Á¬½Ó
+2.Ã¿¸öÊı¾İ±¨µÄ´óĞ¡ÔÚÏŞÖÆÔÚ64kÄÚ
+3.ÒòÎŞÁ¬½Ó£¬ÊÇ²»¿É¿¿Ğ­Òé
+4.²»ĞèÒª½¨Á¢Á¬½Ó£¬ËÙ¶È¿ì
 */
 public class IPDemo {
     public static void main(String[] args) throws Exception {
-        InetAddress i = InetAddress.getLocalHost(); // æœªçŸ¥ä¸»æœºå¼‚å¸¸
+        InetAddress i = InetAddress.getLocalHost(); // Î´ÖªÖ÷»úÒì³£
         // System.out.println(i.toString());
-        // System.out.println("ä¸»æœºåï¼š"+i.getHostName());
-        // è·å–ä»»æ„ä¸€å°ä¸»æœºçš„IPåœ°å€å¯¹è±¡
+        // System.out.println("Ö÷»úÃû£º"+i.getHostName());
+        // »ñÈ¡ÈÎÒâÒ»Ì¨Ö÷»úµÄIPµØÖ·¶ÔÏó
         InetAddress ia = InetAddress.getByName("www.baidu.com");
         byte[] buf = ia.getAddress();
-        System.out.println("åœ°å€;" + ia.getHostAddress());
-        System.out.println("ä¸»æœºåï¼š" + ia.getHostName());// éœ€è¦è§£æè¿‡ç¨‹
-        // å¦‚æœIPåœ°å€æ²¡æœ‰åœ¨ç½‘ç»œä¸Šï¼Œè§£æä¸æˆåŠŸï¼Œå°±åªèƒ½è¿”å›è¿™ä¸ªIPåœ°å€
+        System.out.println("µØÖ·;" + ia.getHostAddress());
+        System.out.println("Ö÷»úÃû£º" + ia.getHostName());// ĞèÒª½âÎö¹ı³Ì
+        // Èç¹ûIPµØÖ·Ã»ÓĞÔÚÍøÂçÉÏ£¬½âÎö²»³É¹¦£¬¾ÍÖ»ÄÜ·µ»ØÕâ¸öIPµØÖ·
         // byte[] buf = InetAddress.getAllByName("www.baidu.com");
         for (byte b : buf) {
             System.out.print(b + " ");

@@ -8,39 +8,39 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /*
- éœ€æ±‚ï¼šå»ºç«‹ä¸€ä¸ªæ–‡æœ¬è½¬æ¢æœåŠ¡å™¨ã€‚
- å®¢æˆ·ç«¯ç»™æœåŠ¡ç«¯å‘é€æ–‡æœ¬ï¼ŒæœåŠ¡ç«¯ä¼šå°†æ–‡æœ¬è½¬æ¢æˆå¤§å†™è¿”å›ç»™å®¢æˆ·ç«¯
- è€Œä¸”å®¢æˆ·ç«¯å¯ä»¥ä¸ç«¯çš„è¿›è¡Œæ–‡æœ¬è½¬æ¢ã€‚å½“å®¢æˆ·ç«¯è¾“å…¥overï¼Œè½¬æ¢ç»“æŸ
+ ĞèÇó£º½¨Á¢Ò»¸öÎÄ±¾×ª»»·şÎñÆ÷¡£
+ ¿Í»§¶Ë¸ø·şÎñ¶Ë·¢ËÍÎÄ±¾£¬·şÎñ¶Ë»á½«ÎÄ±¾×ª»»³É´óĞ´·µ»Ø¸ø¿Í»§¶Ë
+ ¶øÇÒ¿Í»§¶Ë¿ÉÒÔ²»¶ËµÄ½øĞĞÎÄ±¾×ª»»¡£µ±¿Í»§¶ËÊäÈëover£¬×ª»»½áÊø
 
- åˆ†æï¼š
- å®¢æˆ·ç«¯ï¼š
- æ—¢ç„¶æ˜¯æ“ä½œè®¾å¤‡ä¸Šçš„æ•°æ®ï¼Œé‚£ä¹ˆå¯ä»¥ä½¿ç”¨IOæŠ€æœ¯ï¼Œå¹¶å®‰è£…ioæµæ¥æ€è€ƒ
- æºï¼šé”®ç›˜å½•å…¥
- ç›®çš„ï¼šç½‘ç»œè®¾å¤‡ï¼Œç½‘ç»œè¾“å‡ºæµã€‚
- è€Œä¸”æ“ä½œçš„æ˜¯ç½‘ç»œæ–‡æœ¬æ•°æ®ã€‚å¯ä»¥é€‰æ‹©å­—ç¬¦æµã€‚
- æ­¥éª¤
- 1.å»ºç«‹æœåŠ¡ã€‚
- 2.è·å–é”®ç›˜å½•å…¥
- 3.å°†æ•°æ®å‘ç»™æœåŠ¡ç«¯ã€‚
- 4.è·å–æœåŠ¡ç«¯è¿”å›çš„å¤§å†™æ•°æ®ã€‚
- 5.ç»“æŸï¼Œå…³èµ„æºã€‚
- éƒ½æ˜¯æ–‡æœ¬æ•°æ®ï¼Œå¯ä»¥ä½¿ç”¨å­—ç¬¦æµè¿›è¡Œæ“ä½œï¼ŒåŒæ—¶æé«˜æ•ˆç‡åŠ å…¥ç¼“å†²
+ ·ÖÎö£º
+ ¿Í»§¶Ë£º
+ ¼ÈÈ»ÊÇ²Ù×÷Éè±¸ÉÏµÄÊı¾İ£¬ÄÇÃ´¿ÉÒÔÊ¹ÓÃIO¼¼Êõ£¬²¢°²×°ioÁ÷À´Ë¼¿¼
+ Ô´£º¼üÅÌÂ¼Èë
+ Ä¿µÄ£ºÍøÂçÉè±¸£¬ÍøÂçÊä³öÁ÷¡£
+ ¶øÇÒ²Ù×÷µÄÊÇÍøÂçÎÄ±¾Êı¾İ¡£¿ÉÒÔÑ¡Ôñ×Ö·ûÁ÷¡£
+ ²½Öè
+ 1.½¨Á¢·şÎñ¡£
+ 2.»ñÈ¡¼üÅÌÂ¼Èë
+ 3.½«Êı¾İ·¢¸ø·şÎñ¶Ë¡£
+ 4.»ñÈ¡·şÎñ¶Ë·µ»ØµÄ´óĞ´Êı¾İ¡£
+ 5.½áÊø£¬¹Ø×ÊÔ´¡£
+ ¶¼ÊÇÎÄ±¾Êı¾İ£¬¿ÉÒÔÊ¹ÓÃ×Ö·ûÁ÷½øĞĞ²Ù×÷£¬Í¬Ê±Ìá¸ßĞ§ÂÊ¼ÓÈë»º³å
 
  */
 class TransClient {
     public static void main(String[] args) throws Exception {
         Socket s = new Socket("127.0.0.1", 10005);
-        // æœ€æ–¹ä¾¿çš„å°±æ˜¯ç”¨è½¬æ¢ç”¨çš„ç‹‚è¯»ç‹‚å†™
-        BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in)); // æºï¼Œå®šä¹‰è¯»å–é”®ç›˜è¾“å…¥çš„æµå¯¹è±¡
-        BufferedWriter bufOut = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));// å®šä¹‰ç›®çš„æ˜¯è¾“å‡ºæµã€‚å‘ç»™æœåŠ¡ç«¯
-        // å®šä¹‰ä¸€ä¸ªsocketåº¦æ›²æµï¼Œè¯»å–æœåŠ¡ç«¯è¿”å›çš„å¤§å†™ä¿¡æ¯
+        // ×î·½±ãµÄ¾ÍÊÇÓÃ×ª»»ÓÃµÄ¿ñ¶Á¿ñĞ´
+        BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in)); // Ô´£¬¶¨Òå¶ÁÈ¡¼üÅÌÊäÈëµÄÁ÷¶ÔÏó
+        BufferedWriter bufOut = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));// ¶¨ÒåÄ¿µÄÊÇÊä³öÁ÷¡£·¢¸ø·şÎñ¶Ë
+        // ¶¨ÒåÒ»¸ösocket¶ÈÇúÁ÷£¬¶ÁÈ¡·şÎñ¶Ë·µ»ØµÄ´óĞ´ĞÅÏ¢
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
         String line = null;
-        while ((line = bufr.readLine()) != null) { // è¯»çš„é”®ç›˜
+        while ((line = bufr.readLine()) != null) { // ¶ÁµÄ¼üÅÌ
             bufOut.write(line);
-            if ("over".equals(line)) // å†™ä¸‹é¢å°±ä¼šæŠŠoverå‘è¿‡å»
+            if ("over".equals(line)) // Ğ´ÏÂÃæ¾Í»á°Ñover·¢¹ıÈ¥
                 break;
-            String str = bufIn.readLine(); // è¯»çš„æ˜¯æœåŠ¡å™¨å‘è¿‡æ¥çš„ä¿¡æ¯
+            String str = bufIn.readLine(); // ¶ÁµÄÊÇ·şÎñÆ÷·¢¹ıÀ´µÄĞÅÏ¢
             System.out.println("server:" + str);
         }
         bufr.close();
@@ -49,20 +49,20 @@ class TransClient {
 }
 
 /*
- * å®¢æˆ·ç«¯ æºï¼šsocketè¯»å–æµ ç›®çš„ï¼šsocketè¾“å‡ºæµ éƒ½æ˜¯æ–‡æœ¬ï¼Œè£…é¥°ä¸€ä¸‹ã€‚
+ * ¿Í»§¶Ë Ô´£ºsocket¶ÁÈ¡Á÷ Ä¿µÄ£ºsocketÊä³öÁ÷ ¶¼ÊÇÎÄ±¾£¬×°ÊÎÒ»ÏÂ¡£
  */
 class TransServer {
     public static void main(String[] args) throws Exception {
         ServerSocket ss = new ServerSocket(10005);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println("å®¢æˆ·ç«¯Ip" + ip);// å¯ä»¥æ£€éªŒè¿æ²¡è¿ä¸Š
+        System.out.println("¿Í»§¶ËIp" + ip);// ¿ÉÒÔ¼ìÑéÁ¬Ã»Á¬ÉÏ
         // OutputStream os=s.getOutputStream();
         // InputStream is =s.getInputStream();
-        // è¦ä¸€è¡Œè¡Œçš„è¯»æ‰æ–¹ä¾¿
-        // è¯»å–socketè¯»å–æµä¸­çš„æ•°æ®
+        // ÒªÒ»ĞĞĞĞµÄ¶Á²Å·½±ã
+        // ¶ÁÈ¡socket¶ÁÈ¡Á÷ÖĞµÄÊı¾İ
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
-        // ç›®çš„ã€‚socketè¾“å‡ºæµï¼Œå°†å¤§å†™æ•°æ®å†™å…¥åˆ°socketè¾“å‡ºæµï¼Œå¹¶å‘é€ç»™å®¢æˆ·ç«¯
+        // Ä¿µÄ¡£socketÊä³öÁ÷£¬½«´óĞ´Êı¾İĞ´Èëµ½socketÊä³öÁ÷£¬²¢·¢ËÍ¸ø¿Í»§¶Ë
         BufferedWriter bufOut = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
         String line = null;
         while ((line = bufIn.readLine()) != null) {
@@ -74,8 +74,8 @@ class TransServer {
 }
 
 /*
- * è¯¥ä¾‹å­å‡ºç°çš„é—®é¢˜. ç°è±¡ï¼šå®¢æˆ·ç«¯å’ŒæœåŠ¡ç«¯éƒ½åœ¨è«åçš„ç­‰ç­‰ã€‚ ä¸ºä»€ä¹ˆå‘¢ï¼Ÿ å› ä¸ºå®¢æˆ·ç«¯å’ŒæœåŠ¡ç«¯éƒ½æœ‰é˜»å¡å¼æ–¹æ³•ï¼Œè¿™äº›æ–¹æ³•æ²¡æœ‰è¯»åˆ°ç»“æŸæ ‡è®°ã€‚é‚£ä¹ˆå°±ä¸€ç›´ç­‰
- * è€Œå¯¼è‡´ä¸¤ç«¯ï¼Œéƒ½åœ¨ç­‰å¾…
+ * ¸ÃÀı×Ó³öÏÖµÄÎÊÌâ. ÏÖÏó£º¿Í»§¶ËºÍ·şÎñ¶Ë¶¼ÔÚÄªÃûµÄµÈµÈ¡£ ÎªÊ²Ã´ÄØ£¿ ÒòÎª¿Í»§¶ËºÍ·şÎñ¶Ë¶¼ÓĞ×èÈûÊ½·½·¨£¬ÕâĞ©·½·¨Ã»ÓĞ¶Áµ½½áÊø±ê¼Ç¡£ÄÇÃ´¾ÍÒ»Ö±µÈ
+ * ¶øµ¼ÖÂÁ½¶Ë£¬¶¼ÔÚµÈ´ı
  */
 public class TcpDemo2 {
 }

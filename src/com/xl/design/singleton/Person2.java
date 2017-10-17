@@ -4,11 +4,11 @@ public class Person2 {
     private static Person2 person;
     private String name;
 
-    //æ„é€ å‡½æ•°ç§æœ‰åŒ–
+    //¹¹Ôìº¯ÊıË½ÓĞ»¯
     private Person2() {
     }
 
-    //æä¾›ä¸€ä¸ªå…¨å±€çš„é™æ€æ–¹æ³•
+    //Ìá¹©Ò»¸öÈ«¾ÖµÄ¾²Ì¬·½·¨
     public static Person2 getPerson() {
         if (person == null) {
             person = new Person2();

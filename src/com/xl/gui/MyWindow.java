@@ -1,7 +1,7 @@
 package com.xl.gui;
 
 /*
- ç»ƒä¹ -åˆ—å‡ºæŒ‡å®šç›®å½•å†…å®¹
+ Á·Ï°-ÁĞ³öÖ¸¶¨Ä¿Â¼ÄÚÈİ
 
  */
 
@@ -15,11 +15,11 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 
 public class MyWindow {
-    private Frame f; // å¯ä»¥ç›´æ¥ç»§æ‰¿Frame,å°±å¯ä»¥ç›´æ¥è°ƒç”¨é‡Œé¢çš„æ–¹æ³•äº†
-    private TextField tf; // æ–‡æœ¬æ¡†
-    private Button but; // æŒ‰é’®
-    private TextArea ta; // æ˜¯æ˜¾ç¤ºæ–‡æœ¬çš„å¤šè¡ŒåŒºåŸŸ
-    private Dialog d; // Dialogæœ‰ä¸¤ä¸ªï¼Œä¸€ä¸ªæ–‡æœ¬æç¤ºï¼Œä¸€ä¸ªç¡®å®šæŒ‰é’®
+    private Frame f; // ¿ÉÒÔÖ±½Ó¼Ì³ĞFrame,¾Í¿ÉÒÔÖ±½Óµ÷ÓÃÀïÃæµÄ·½·¨ÁË
+    private TextField tf; // ÎÄ±¾¿ò
+    private Button but; // °´Å¥
+    private TextArea ta; // ÊÇÏÔÊ¾ÎÄ±¾µÄ¶àĞĞÇøÓò
+    private Dialog d; // DialogÓĞÁ½¸ö£¬Ò»¸öÎÄ±¾ÌáÊ¾£¬Ò»¸öÈ·¶¨°´Å¥
     private Label lab;
     private Button okBut;
 
@@ -31,30 +31,30 @@ public class MyWindow {
         new MyWindow();
     }
 
-    public void init() // èµ·ä½¿
+    public void init() // ÆğÊ¹
     {
-        f = new Frame("æ˜¾ç¤ºæŒ‡å®šè·¯å¾„ä¸‹çš„æ–‡ä»¶");
-        f.setBounds(300, 100, 600, 500); // å‡ºç°è¯¥Frameè·ç¦»å±å¹•å·¦è¾¹çš„è·ç¦»ï¼Œè·ç¦»ä¸Šè¾¹çš„è·ç¦»ã€‚æ–‡æœ¬æ¨ªåæ ‡é•¿åº¦ï¼Œçºµåæ ‡é•¿åº¦
-        f.setLayout(new FlowLayout()); // è®¾ç½®å¸ƒå±€ç®¡ç†ï¼Œæµå¸ƒå±€ï¼Œé»˜è®¤æ˜¯è¾¹ç•Œå¸ƒå±€ï¼Œå¦‚æœä¸æŒ‡è®¤ä¸œå—è¥¿åŒ—å°±å…¨å¡«å……
-        // tf = new TextField(30); //æ–‡æœ¬é•¿åº¦
-        // è§‰å¾—ä¸Šé¢çŸ­äº†
+        f = new Frame("ÏÔÊ¾Ö¸¶¨Â·¾¶ÏÂµÄÎÄ¼ş");
+        f.setBounds(300, 100, 600, 500); // ³öÏÖ¸ÃFrame¾àÀëÆÁÄ»×ó±ßµÄ¾àÀë£¬¾àÀëÉÏ±ßµÄ¾àÀë¡£ÎÄ±¾ºá×ø±ê³¤¶È£¬×İ×ø±ê³¤¶È
+        f.setLayout(new FlowLayout()); // ÉèÖÃ²¼¾Ö¹ÜÀí£¬Á÷²¼¾Ö£¬Ä¬ÈÏÊÇ±ß½ç²¼¾Ö£¬Èç¹û²»Ö¸ÈÏ¶«ÄÏÎ÷±±¾ÍÈ«Ìî³ä
+        // tf = new TextField(30); //ÎÄ±¾³¤¶È
+        // ¾õµÃÉÏÃæ¶ÌÁË
         tf = new TextField(60);
-        but = new Button("è½¬åˆ°"); // æŒ‰é’®çš„åç§°
-        // ta = new TextArea(15,40); //æ–‡æœ¬åŒºåŸŸ
+        but = new Button("×ªµ½"); // °´Å¥µÄÃû³Æ
+        // ta = new TextArea(15,40); //ÎÄ±¾ÇøÓò
         ta = new TextArea(25, 70);
-        d = new Dialog(f, "æç¤ºä¿¡æ¯-self", true); // æ¨¡å¼true
-        // ä¸èƒ½æ·»åŠ åˆ°Frameçª—ä½“ä¸­,å¦‚æœä¸ºfalseï¼Œå¯ä»¥ç»•è¿‡å¯¹è¯æ¡†ï¼Œç»§ç»­æ“ä½œçª—ä½“
-        d.setBounds(400, 200, 200, 150); // å¯¹è¯æ¡†çš„ä½ç½®
+        d = new Dialog(f, "ÌáÊ¾ĞÅÏ¢-self", true); // Ä£Ê½true
+        // ²»ÄÜÌí¼Óµ½Frame´°ÌåÖĞ,Èç¹ûÎªfalse£¬¿ÉÒÔÈÆ¹ı¶Ô»°¿ò£¬¼ÌĞø²Ù×÷´°Ìå
+        d.setBounds(400, 200, 200, 150); // ¶Ô»°¿òµÄÎ»ÖÃ
         d.setLayout(new FlowLayout());
-        lab = new Label(); // åˆå§‹åŒ–è¿˜ä¸çŸ¥é“å•¥ä¿¡æ¯
-        okBut = new Button("ç¡®å®š"); // æ·»åŠ ç¡®å®šæŒ‰é’®
+        lab = new Label(); // ³õÊ¼»¯»¹²»ÖªµÀÉ¶ĞÅÏ¢
+        okBut = new Button("È·¶¨"); // Ìí¼ÓÈ·¶¨°´Å¥
         d.add(lab);
         d.add(okBut);
         f.add(tf);
         f.add(but);
         f.add(ta);
-        myEvent();// äº‹ä»¶
-        f.setVisible(true); // æ˜¾ç¤ºå‡ºæ¥
+        myEvent();// ÊÂ¼ş
+        f.setVisible(true); // ÏÔÊ¾³öÀ´
     }
 
     private void myEvent() {
@@ -63,30 +63,30 @@ public class MyWindow {
                 d.setVisible(false);
             }
         });
-        d.addWindowListener(new WindowAdapter() // ç‚¹å‡»å…³é—­è§¦å‘çš„äº‹ä»¶
+        d.addWindowListener(new WindowAdapter() // µã»÷¹Ø±Õ´¥·¢µÄÊÂ¼ş
         {
-            public void windowClosing(WindowEvent e) // è®¾ç½®å…³é—­äº‹ä»¶
+            public void windowClosing(WindowEvent e) // ÉèÖÃ¹Ø±ÕÊÂ¼ş
             {
-                d.setVisible(false); // å…³Ã—ä¸èƒ½å…³æ‰ï¼Œå°±æŠŠå¯¹è¯æ¡†å–æ¶ˆ
+                d.setVisible(false); // ¹Ø¡Á²»ÄÜ¹Øµô£¬¾Í°Ñ¶Ô»°¿òÈ¡Ïû
             }
         });
-        f.addWindowListener(new WindowAdapter() // ç‚¹å‡»å…³é—­è§¦å‘çš„äº‹ä»¶
+        f.addWindowListener(new WindowAdapter() // µã»÷¹Ø±Õ´¥·¢µÄÊÂ¼ş
         {
-            public void windowClosing(WindowEvent e) // è®¾ç½®å…³é—­äº‹ä»¶
+            public void windowClosing(WindowEvent e) // ÉèÖÃ¹Ø±ÕÊÂ¼ş
             {
                 System.exit(0);
             }
         });
-        // ç¡®å®šäº‹ä»¶æºæ˜¯æ–‡æœ¬æ¡†
-        but.addActionListener(new ActionListener() // ç‚¹å‡»è½¬åˆ°æŒ‰é’®è§¦å‘çš„äº‹ä»¶
+        // È·¶¨ÊÂ¼şÔ´ÊÇÎÄ±¾¿ò
+        but.addActionListener(new ActionListener() // µã»÷×ªµ½°´Å¥´¥·¢µÄÊÂ¼ş
         {
-            // è·å–æ–‡æœ¬åŒºåŸŸ
+            // »ñÈ¡ÎÄ±¾ÇøÓò
             public void actionPerformed(ActionEvent e) {
-                // è¾“å…¥ç›®å½•
+                // ÊäÈëÄ¿Â¼
                 showDir();
             }
         });
-        // ä¸æƒ³ç‚¹å‡»æŒ‰é’®ï¼ŒæŒ‰å›è½¦å°±è¡Œ tfæ–‡æœ¬æ¡†
+        // ²»Ïëµã»÷°´Å¥£¬°´»Ø³µ¾ÍĞĞ tfÎÄ±¾¿ò
         tf.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER)
@@ -94,28 +94,28 @@ public class MyWindow {
             }
         });
         /*
-         * //æ¼”ç¤º String text = tf.getText(); tf.setText(""); //å°†ä¸Šé¢æ¸…ç©ºã€‚ //è®¾ç½®æ–‡æœ¬åŒºåŸŸçš„å†…å®¹
-		 * ta.setText(text); //å°†å­—ç¬¦ä¸²åœ¨æ–‡æœ¬åŒºåŸŸä¸­æ˜¾ç¤º // System.out.print(text);
+         * //ÑİÊ¾ String text = tf.getText(); tf.setText(""); //½«ÉÏÃæÇå¿Õ¡£ //ÉèÖÃÎÄ±¾ÇøÓòµÄÄÚÈİ
+		 * ta.setText(text); //½«×Ö·û´®ÔÚÎÄ±¾ÇøÓòÖĞÏÔÊ¾ // System.out.print(text);
 		 */
-        // å°è£…ä¸€ä¸‹åŠŸèƒ½
+        // ·â×°Ò»ÏÂ¹¦ÄÜ
     }
 
     private void showDir() {
         String dirPath = tf.getText();
-        File dir = new File(dirPath); // å°è£…æˆå¯¹è±¡
-        if (dir.exists() && dir.isDirectory()) // å¦‚æœæ˜¯ç›®å½•å¹¶ä¸”å­˜åœ¨
+        File dir = new File(dirPath); // ·â×°³É¶ÔÏó
+        if (dir.exists() && dir.isDirectory()) // Èç¹ûÊÇÄ¿Â¼²¢ÇÒ´æÔÚ
         {
-            ta.setText(""); // æŠŠä»¥å‰çš„æ¸…ç©º
+            ta.setText(""); // °ÑÒÔÇ°µÄÇå¿Õ
             String[] names = dir.list();
             for (String name : names) {
-                // ta.setText(name+"\r\n"); //è¾“å‡ºï¼Œä½†æ˜¯è¿™æ ·ä¼šè¦†ç›–ï¼
-                ta.append(name + "\r\n"); // è¿½åŠ æ–‡æœ¬
+                // ta.setText(name+"\r\n"); //Êä³ö£¬µ«ÊÇÕâÑù»á¸²¸Ç£¡
+                ta.append(name + "\r\n"); // ×·¼ÓÎÄ±¾
             }
         } else {
-            // çª—å£æç¤ºçš„é”™è¯¯ä¿¡æ¯å†…å®¹
-            String info = "æ‚¨è¾“å…¥çš„ä¿¡æ¯ï¼š" + dirPath + "æ˜¯é”™è¯¯çš„ã€‚è¯·é‡æ–°è¾“å…¥";
-            lab.setText(info); // è®²ä¿¡æ¯ä¼ å…¥åˆ°æ–‡æœ¬æ¡†
-            d.setVisible(true); // è®©å¯¹è¯æ¡†æ˜¾ç¤º
+            // ´°¿ÚÌáÊ¾µÄ´íÎóĞÅÏ¢ÄÚÈİ
+            String info = "ÄúÊäÈëµÄĞÅÏ¢£º" + dirPath + "ÊÇ´íÎóµÄ¡£ÇëÖØĞÂÊäÈë";
+            lab.setText(info); // ½²ĞÅÏ¢´«Èëµ½ÎÄ±¾¿ò
+            d.setVisible(true); // ÈÃ¶Ô»°¿òÏÔÊ¾
         }
     }
 }

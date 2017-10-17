@@ -1,8 +1,8 @@
 package com.xl.face;
 
 /**
- * @author å¾ç«‹
- * @Decription ä¼˜æŸ”å¯¡æ–­çš„è¿”å›å€¼
+ * @author ĞìÁ¢
+ * @Decription ÓÅÈá¹Ñ¶ÏµÄ·µ»ØÖµ
  * @date 2014-5-15
  */
 public class ReturnValue {

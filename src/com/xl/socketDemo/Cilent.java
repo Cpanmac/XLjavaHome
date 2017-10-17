@@ -15,15 +15,15 @@ public class Cilent {
         PrintWriter pw = new PrintWriter(s.getOutputStream());
         BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
         Scanner sr = new Scanner(System.in);
-        System.out.print("璇疯緭鍏ヤ汉鐨勫鍚嶏細");
+        System.out.print("请输入人的姓名：");
         String name = sr.next();
-        System.out.print("璇疯緭鍏ヤ汉鐨勫勾榫勶細");
+        System.out.print("请输入人的年龄：");
         int age = sr.nextInt();
         User p = new User();
         p.setName(name);
         ObjectOutputStream oos = new ObjectOutputStream(s.getOutputStream());
         oos.writeObject(p);
-        System.out.println("浼犺緭鎴愬姛");
+        System.out.println("传输成功");
         pw.flush();
         pw.close();
         s.close();

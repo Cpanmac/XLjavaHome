@@ -11,9 +11,9 @@ public class ArraysDemo {
     private int[] intArray = new int[]{3, 56, 1, 4, 76721, 343, 1};
 
     /**
-     * @param pData æ•°ç»„
-     * @param left  æ’åºçš„å¼€å§‹ä½ç½®ä»0å¼€å§‹
-     * @param right æ’åºçš„ç»“æŸä½ç½®
+     * @param pData Êı×é
+     * @param left  ÅÅĞòµÄ¿ªÊ¼Î»ÖÃ´Ó0¿ªÊ¼
+     * @param right ÅÅĞòµÄ½áÊøÎ»ÖÃ
      */
     public static void QuickSort(int[] pData, int left, int right) {
         int i, j;
@@ -23,23 +23,23 @@ public class ArraysDemo {
         middle = pData[left];
         while (true) {
             while ((++i) < right - 1 && pData[i] < middle)
-                ; // ä»å·¦è¾¹ç¬¬äºŒä¸ªå…ƒç´ å¼€å§‹ï¼Œæ‰¾å‡ºæ¯”middleå¤§çš„å…ƒç´ 
+                ; // ´Ó×ó±ßµÚ¶ş¸öÔªËØ¿ªÊ¼£¬ÕÒ³ö±Èmiddle´óµÄÔªËØ
             while ((--j) > left && pData[j] > middle)
-                ; // ä»å³è¾¹ç¬¬ä¸€ä¸ªå…ƒç´ å¼€å§‹ï¼Œæ‰¾å‡ºæ¯”middleå°çš„å…ƒç´ 
-            if (i >= j) // å½“ i å°äº j çš„æ—¶å€™ï¼Œäº¤æ¢ä¸¤ä¸ªå…ƒç´ çš„ä½ç½®
+                ; // ´ÓÓÒ±ßµÚÒ»¸öÔªËØ¿ªÊ¼£¬ÕÒ³ö±ÈmiddleĞ¡µÄÔªËØ
+            if (i >= j) // µ± i Ğ¡ÓÚ j µÄÊ±ºò£¬½»»»Á½¸öÔªËØµÄÎ»ÖÃ
                 break;
             temp = pData[i];
             pData[i] = pData[j];
             pData[j] = temp;
         }
-        // ä¸‹é¢ä¸¤å¥çš„æ„æ€ï¼špData[left] å’Œ pData[j] è¿›è¡Œäº¤æ¢ï¼Œè¿™æ ·å°±å½¢æˆäº†ä»¥pData[j]ä¸ºä¸­å¿ƒçš„æ•°ç»„ï¼Œä¸‹æ ‡å°äº
-        // jçš„å…ƒç´ æ¯”pData[j]å°ï¼Œä¸‹æ ‡å¤§äºjçš„å…ƒç´ æ¯”pData[j]å¤§ã€‚
+        // ÏÂÃæÁ½¾äµÄÒâË¼£ºpData[left] ºÍ pData[j] ½øĞĞ½»»»£¬ÕâÑù¾ÍĞÎ³ÉÁËÒÔpData[j]ÎªÖĞĞÄµÄÊı×é£¬ÏÂ±êĞ¡ÓÚ
+        // jµÄÔªËØ±ÈpData[j]Ğ¡£¬ÏÂ±ê´óÓÚjµÄÔªËØ±ÈpData[j]´ó¡£
         pData[left] = pData[j];
         pData[j] = middle;
-        // å¯¹pData[j]å·¦è¾¹çš„å…ƒç´ ï¼Œè°ƒç”¨é€’å½’
+        // ¶ÔpData[j]×ó±ßµÄÔªËØ£¬µ÷ÓÃµİ¹é
         if (left < j)
             QuickSort(pData, left, j);
-        // å¯¹pData[j]å³è¾¹çš„å…ƒç´ ï¼Œè°ƒç”¨é€’å½’
+        // ¶ÔpData[j]ÓÒ±ßµÄÔªËØ£¬µ÷ÓÃµİ¹é
         if (right > i)
             QuickSort(pData, i, right);
     }
@@ -48,7 +48,7 @@ public class ArraysDemo {
         // int[] arr = {2,4,5};
         // System.out.println(Arrays.toString(arr));
         Integer[] arr = {1123, 12, 11, 13, 1};
-        // List<int[]> list = Arrays.asList(arr); // è¾“å‡ºçš„æ˜¯åœ°å€ å†™intä¼šå‡ºé”™
+        // List<int[]> list = Arrays.asList(arr); // Êä³öµÄÊÇµØÖ· Ğ´int»á³ö´í
         Arrays.sort(arr, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -57,7 +57,7 @@ public class ArraysDemo {
         });
         System.out.println(Arrays.toString(arr));
         // System.out.println(list);
-        // Integer[] nums = { 2, 4, 5, 3, 0, 9 }; // è‡ªåŠ¨è£…ç®±
+        // Integer[] nums = { 2, 4, 5, 3, 0, 9 }; // ×Ô¶¯×°Ïä
         // List<Integer> li = Arrays.asList(nums);
         // System.out.println(li);
         // Collections.reverse(li);
@@ -77,7 +77,7 @@ public class ArraysDemo {
     }
 
     /**
-     * æ‰©å¤§æ•°ç»„é•¿åº¦10%+10
+     * À©´óÊı×é³¤¶È10%+10
      */
     @Test
     public void length() {

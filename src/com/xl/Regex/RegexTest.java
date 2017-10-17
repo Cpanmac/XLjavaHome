@@ -21,8 +21,8 @@ public class RegexTest {
                                                                          * Pattern.
 																		 * CASE_INSENSITIVE
 																		 * :
-																		 * å¸¸é‡è§„åˆ™ï¼š
-																		 * å¿½å¤§å°å†™
+																		 * ³£Á¿¹æÔò£º
+																		 * ºö´óĞ¡Ğ´
 																		 */
         Matcher m = p.matcher("java Java JAVa JaVa IloveJAVA you hateJava afasdfasdf");
         while (m.find()) {
@@ -36,14 +36,14 @@ public class RegexTest {
         Matcher m = p.matcher("java Java JAVa JaVa IloveJAVA you hateJava afasdfasdf");
         StringBuffer buf = new StringBuffer();
         while (m.find()) {
-            m.appendReplacement(buf, "888"); /* å°†å½“å‰æ‰¾åˆ°çš„è¿›è¡Œæ›¿æ¢å¹¶ä¸”æ¢å¥½åæ”¾åˆ°bufä¸­å» */
+            m.appendReplacement(buf, "888"); /* ½«µ±Ç°ÕÒµ½µÄ½øĞĞÌæ»»²¢ÇÒ»»ºÃºó·Åµ½bufÖĞÈ¥ */
         }
         m.appendTail(buf);
         System.out.println(buf);
     }
 
     /**
-     * åˆ†ç»„æµ‹è¯•
+     * ·Ö×é²âÊÔ
      */
     @Test
     public void group1() {
@@ -52,16 +52,16 @@ public class RegexTest {
         String s = "123aa-34345bb-234cc-00";
         Matcher m = p.matcher(s);
         while (m.find()) {
-            System.out.println("ç¬¬0ç»„å³æ˜¯æ‰€åŒ¹é…çš„å­—ç¬¦ä¸²:" + m.group(0));
-            System.out.println("ç¬¬1ç»„å³æ˜¯ç¬¬1ä¸ª()å†…å­—ç¬¦ä¸²:" + m.group(1));
-            System.out.println("ç¬¬2ç»„å³æ˜¯ç¬¬2ä¸ª()å†…å­—ç¬¦ä¸²:" + m.group(2));
+            System.out.println("µÚ0×é¼´ÊÇËùÆ¥ÅäµÄ×Ö·û´®:" + m.group(0));
+            System.out.println("µÚ1×é¼´ÊÇµÚ1¸ö()ÄÚ×Ö·û´®:" + m.group(1));
+            System.out.println("µÚ2×é¼´ÊÇµÚ2¸ö()ÄÚ×Ö·û´®:" + m.group(2));
         }
     }
 
-    /* å¸¸ç”¨è¿™ä¸ª */
+    /* ³£ÓÃÕâ¸ö */
     @Test
     public void fun1() {
-        // 3åˆ°10ä¸ªå­—ç¬¦åé¢è·Ÿç€ä¸€ä½æ•°å­—:æ²¡æœ‰é—®å·ï¼šä¸€æ¬¡åƒ10ä¸ªå­—ç¬¦å‘ç°ä¸åŒ¹é…äºæ˜¯åå‡ºä¸€ä¸ªå­—ç¬¦å†å»åŒ¹é…
+        // 3µ½10¸ö×Ö·ûºóÃæ¸ú×ÅÒ»Î»Êı×Ö:Ã»ÓĞÎÊºÅ£ºÒ»´Î³Ô10¸ö×Ö·û·¢ÏÖ²»Æ¥ÅäÓÚÊÇÍÂ³öÒ»¸ö×Ö·ûÔÙÈ¥Æ¥Åä
         Pattern p = Pattern.compile("[a-z]{3,10}[0-9]");
         String s = "aaaa5bbbb6";
         Matcher m = p.matcher(s);
@@ -72,11 +72,11 @@ public class RegexTest {
         }
     }
 
-    /* å‹‰å¼ºæ¨¡å¼ */
+    /* ÃãÇ¿Ä£Ê½ */
     @Test
     public void fun2() {
         Pattern p = Pattern.compile(".{3,10}?[0-9]");
-        /* ç¬¬ä¸€æ¬¡åƒ3ä¸ªå­—ç¬¦çœ‹ç¬¦åˆä¸ï¼Ÿæ­¤æ—¶ç¬¬å››ä¸ªè¡¨ç¤ºæ•°å­ï¼Œå› æ­¤ä¸ç¬¦åˆ ï¼Œå†åƒè¿›ä¸€ä½ï¼šæ­¤æ—¶ç¬¦åˆ */
+        /* µÚÒ»´Î³Ô3¸ö×Ö·û¿´·ûºÏ²»£¿´ËÊ±µÚËÄ¸ö±íÊ¾Êı×Ó£¬Òò´Ë²»·ûºÏ £¬ÔÙ³Ô½øÒ»Î»£º´ËÊ±·ûºÏ */
         String s = "aaaa5bbbb68";
         Matcher m = p.matcher(s);
         if (m.find())
@@ -85,10 +85,10 @@ public class RegexTest {
             System.out.println("not match!");
     }
 
-    /* ä¸€èˆ¬ä¸ç”¨:å æœ‰æ¨¡å¼ */
+    /* Ò»°ã²»ÓÃ:Õ¼ÓĞÄ£Ê½ */
     @Test
     public void fun3() {
-        Pattern p = Pattern.compile(".{3,10}+[0-9]");/* ä¸€æ¬¡åƒ10ä¸ªå­—ç¬¦å¹¶ä¸”ä¸å¾€å¤–å */
+        Pattern p = Pattern.compile(".{3,10}+[0-9]");/* Ò»´Î³Ô10¸ö×Ö·û²¢ÇÒ²»ÍùÍâÍÂ */
         String s = "aaaa5bbbb6";
         Matcher m = p.matcher(s);
         if (m.find())
@@ -99,7 +99,7 @@ public class RegexTest {
 
     @Test
     public void fun4() {
-        Pattern p = Pattern.compile(".{3}"); // åŒ¹é…3ä¸ªå­—ç¬¦ä¸²
+        Pattern p = Pattern.compile(".{3}"); // Æ¥Åä3¸ö×Ö·û´®
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
@@ -109,7 +109,7 @@ public class RegexTest {
 
     @Test
     public void fun5() {
-        Pattern p = Pattern.compile(".{2,8}(?=a)"); // (?=a)ï¼šè¡¨ç¤ºéæ•è·ç»„(ä¸æ•è·a)ï¼šè¡¨ç¤ºç»“æŸçš„å­—ç¬¦æ˜¯a
+        Pattern p = Pattern.compile(".{2,8}(?=a)"); // (?=a)£º±íÊ¾·Ç²¶»ñ×é(²»²¶»ña)£º±íÊ¾½áÊøµÄ×Ö·ûÊÇa
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
@@ -120,7 +120,7 @@ public class RegexTest {
     @Test
     public void fun6() {
         Pattern p = Pattern.compile("(?=a).{3}");
-        // (?=a)ï¼šè¡¨ç¤ºéæ•è·ç»„(ä¸æ•è·a)ï¼šè¡¨ç¤ºä»¥aæ‰“å¤´åé¢ä¸‰ä¸ªå­—ç¬¦ ,åŒ…æ‹¬a
+        // (?=a)£º±íÊ¾·Ç²¶»ñ×é(²»²¶»ña)£º±íÊ¾ÒÔa´òÍ·ºóÃæÈı¸ö×Ö·û ,°üÀ¨a
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
@@ -140,7 +140,7 @@ public class RegexTest {
 
     @Test
     public void fun8() {
-        Pattern p = Pattern.compile(".{3}(?<=a)"); /* ä»åå¾€å‰æ•°è¿˜åŒ…å«açš„ */
+        Pattern p = Pattern.compile(".{3}(?<=a)"); /* ´ÓºóÍùÇ°Êı»¹°üº¬aµÄ */
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
@@ -149,23 +149,23 @@ public class RegexTest {
     }
 
     /**
-     * å‘å‰å¼•ç”¨
+     * ÏòÇ°ÒıÓÃ
      */
     @Test
     public void fun9() {
-        Pattern p = Pattern.compile("(\\d\\d)\\1");/* 1:è¡¨ç¤ºåé¢æ‰¾åˆ°çš„ç»“æœå¿…é¡»å’Œå‰é¢æ‰¾åˆ°çš„ä¸€æ¨¡ä¸€æ · */
+        Pattern p = Pattern.compile("(\\d\\d)\\1");/* 1:±íÊ¾ºóÃæÕÒµ½µÄ½á¹û±ØĞëºÍÇ°ÃæÕÒµ½µÄÒ»Ä£Ò»Ñù */
         String s = "232312";
         Matcher m = p.matcher(s);
         System.out.println(m.matches());
     }
 
     /**
-     * å‘å‰å¼•ç”¨
+     * ÏòÇ°ÒıÓÃ
      */
     @Test
     public void fun10() {
         Pattern p = Pattern.compile("(\\d(\\d))\\2");
-        // (\\d(\\d)):è¿™é‡Œæ˜¯ä¸¤ä¸ªç»„ï¼šç¬¬äºŒä¸ªç»„æŠ“åˆ°çš„æ˜¯2 åé¢çš„\\2:è¡¨ç¤ºåé¢çš„è¦å’Œç¬¬äºŒä¸ªæŠ“åˆ°æ•°å­—ä¸€æ ·
+        // (\\d(\\d)):ÕâÀïÊÇÁ½¸ö×é£ºµÚ¶ş¸ö×é×¥µ½µÄÊÇ2 ºóÃæµÄ\\2:±íÊ¾ºóÃæµÄÒªºÍµÚ¶ş¸ö×¥µ½Êı×ÖÒ»Ñù
         String s = "122";
         Matcher m = p.matcher(s);
         System.out.println(m.matches() + ":" + m.group(2));
@@ -174,29 +174,29 @@ public class RegexTest {
     @Test
     public void fun11() {
         Pattern p = Pattern.compile("java", Pattern.CASE_INSENSITIVE);
-        System.out.println("Java".matches("(?i)(java)")); /* (?i)éæ•è·ç»„:æ˜¯ä¸Šé¢çš„ç®€å†™ */
+        System.out.println("Java".matches("(?i)(java)")); /* (?i)·Ç²¶»ñ×é:ÊÇÉÏÃæµÄ¼òĞ´ */
     }
 
 	/*
-     * åœ¨ä½¿ç”¨Pattern.compileå‡½æ•°æ—¶ï¼Œå¯ä»¥åŠ å…¥æ§åˆ¶æ­£åˆ™è¡¨è¾¾å¼çš„åŒ¹é…è¡Œä¸ºçš„å‚æ•°ï¼š Pattern Pattern.compile(String
+     * ÔÚÊ¹ÓÃPattern.compileº¯ÊıÊ±£¬¿ÉÒÔ¼ÓÈë¿ØÖÆÕıÔò±í´ïÊ½µÄÆ¥ÅäĞĞÎªµÄ²ÎÊı£º Pattern Pattern.compile(String
 	 * regex, int flag)
 	 * 
-	 * flagçš„å–å€¼èŒƒå›´å¦‚ä¸‹ï¼š Pattern.CANON_EQ
-	 * å½“ä¸”ä»…å½“ä¸¤ä¸ªå­—ç¬¦çš„"æ­£è§„åˆ†è§£(canonical decomposition)"éƒ½å®Œå…¨ç›¸åŒçš„æƒ…å†µä¸‹
-	 * ï¼Œæ‰è®¤å®šåŒ¹é…ã€‚æ¯”å¦‚ç”¨äº†è¿™ä¸ªæ ‡å¿—ä¹‹åï¼Œè¡¨è¾¾å¼"a\u030A"
-	 * ä¼šåŒ¹é…"?"ã€‚é»˜è®¤æƒ…å†µä¸‹ï¼Œä¸è€ƒè™‘"è§„èŒƒç›¸ç­‰æ€§(canonical equivalence)"ã€‚
+	 * flagµÄÈ¡Öµ·¶Î§ÈçÏÂ£º Pattern.CANON_EQ
+	 * µ±ÇÒ½öµ±Á½¸ö×Ö·ûµÄ"Õı¹æ·Ö½â(canonical decomposition)"¶¼ÍêÈ«ÏàÍ¬µÄÇé¿öÏÂ
+	 * £¬²ÅÈÏ¶¨Æ¥Åä¡£±ÈÈçÓÃÁËÕâ¸ö±êÖ¾Ö®ºó£¬±í´ïÊ½"a\u030A"
+	 * »áÆ¥Åä"?"¡£Ä¬ÈÏÇé¿öÏÂ£¬²»¿¼ÂÇ"¹æ·¶ÏàµÈĞÔ(canonical equivalence)"¡£
 	 * Pattern.CASE_INSENSITIVE(?i)
-	 * é»˜è®¤æƒ…å†µä¸‹ï¼Œå¤§å°å†™ä¸æ˜æ„Ÿçš„åŒ¹é…åªé€‚ç”¨äºUS-ASCIIå­—ç¬¦é›†ã€‚è¿™ä¸ªæ ‡å¿—èƒ½è®©è¡¨è¾¾å¼å¿½ç•¥å¤§å°å†™è¿›è¡ŒåŒ¹é…
-	 * ã€‚è¦æƒ³å¯¹Unicodeå­—ç¬¦è¿›è¡Œå¤§å°ä¸æ˜æ„Ÿçš„åŒ¹é…ï¼Œåªè¦å°†UNICODE_CASEä¸è¿™ä¸ªæ ‡å¿—åˆèµ·æ¥å°±è¡Œäº†ã€‚ Pattern.COMMENTS(?x)
-	 * åœ¨è¿™ç§æ¨¡å¼ä¸‹
-	 * ï¼ŒåŒ¹é…æ—¶ä¼šå¿½ç•¥(æ­£åˆ™è¡¨è¾¾å¼é‡Œçš„)ç©ºæ ¼å­—ç¬¦(è¯‘è€…æ³¨ï¼šä¸æ˜¯æŒ‡è¡¨è¾¾å¼é‡Œçš„"\\s"ï¼Œè€Œæ˜¯æŒ‡è¡¨è¾¾å¼é‡Œçš„ç©ºæ ¼ï¼Œtabï¼Œå›è½¦ä¹‹ç±»)ã€‚æ³¨é‡Šä»#å¼€å§‹ï¼Œ
-	 * ä¸€ç›´åˆ°è¿™è¡Œç»“æŸ ã€‚å¯ä»¥é€šè¿‡åµŒå…¥å¼çš„æ ‡å¿—æ¥å¯ç”¨Unixè¡Œæ¨¡å¼ã€‚ Pattern.DOTALL(?s)
-	 * åœ¨è¿™ç§æ¨¡å¼ä¸‹ï¼Œè¡¨è¾¾å¼''.''å¯ä»¥åŒ¹é…ä»»æ„å­—ç¬¦ï¼ŒåŒ…æ‹¬è¡¨ç¤ºä¸€è¡Œçš„ç»“æŸç¬¦ã€‚é»˜è®¤æƒ…å†µä¸‹ï¼Œè¡¨è¾¾å¼''.''ä¸åŒ¹é…è¡Œçš„ç»“æŸç¬¦ã€‚
-	 * Pattern.MULTILINE (?m) åœ¨è¿™ç§æ¨¡å¼ä¸‹ï¼Œ
-	 * ''^''å’Œ''$''åˆ†åˆ«åŒ¹é…ä¸€è¡Œçš„å¼€å§‹å’Œç»“æŸã€‚æ­¤å¤–ï¼Œ''^''ä»ç„¶åŒ¹é…å­—ç¬¦ä¸²çš„å¼€å§‹ï¼Œ''$''ä¹ŸåŒ¹é…å­—ç¬¦ä¸²çš„ç»“æŸã€‚é»˜è®¤æƒ…å†µä¸‹ï¼Œè¿™ä¸¤ä¸ªè¡¨è¾¾å¼ä»…ä»…åŒ¹é…å­—ç¬¦ä¸²çš„å¼€å§‹å’Œç»“æŸã€‚
+	 * Ä¬ÈÏÇé¿öÏÂ£¬´óĞ¡Ğ´²»Ã÷¸ĞµÄÆ¥ÅäÖ»ÊÊÓÃÓÚUS-ASCII×Ö·û¼¯¡£Õâ¸ö±êÖ¾ÄÜÈÃ±í´ïÊ½ºöÂÔ´óĞ¡Ğ´½øĞĞÆ¥Åä
+	 * ¡£ÒªÏë¶ÔUnicode×Ö·û½øĞĞ´óĞ¡²»Ã÷¸ĞµÄÆ¥Åä£¬Ö»Òª½«UNICODE_CASEÓëÕâ¸ö±êÖ¾ºÏÆğÀ´¾ÍĞĞÁË¡£ Pattern.COMMENTS(?x)
+	 * ÔÚÕâÖÖÄ£Ê½ÏÂ
+	 * £¬Æ¥ÅäÊ±»áºöÂÔ(ÕıÔò±í´ïÊ½ÀïµÄ)¿Õ¸ñ×Ö·û(ÒëÕß×¢£º²»ÊÇÖ¸±í´ïÊ½ÀïµÄ"\\s"£¬¶øÊÇÖ¸±í´ïÊ½ÀïµÄ¿Õ¸ñ£¬tab£¬»Ø³µÖ®Àà)¡£×¢ÊÍ´Ó#¿ªÊ¼£¬
+	 * Ò»Ö±µ½ÕâĞĞ½áÊø ¡£¿ÉÒÔÍ¨¹ıÇ¶ÈëÊ½µÄ±êÖ¾À´ÆôÓÃUnixĞĞÄ£Ê½¡£ Pattern.DOTALL(?s)
+	 * ÔÚÕâÖÖÄ£Ê½ÏÂ£¬±í´ïÊ½''.''¿ÉÒÔÆ¥ÅäÈÎÒâ×Ö·û£¬°üÀ¨±íÊ¾Ò»ĞĞµÄ½áÊø·û¡£Ä¬ÈÏÇé¿öÏÂ£¬±í´ïÊ½''.''²»Æ¥ÅäĞĞµÄ½áÊø·û¡£
+	 * Pattern.MULTILINE (?m) ÔÚÕâÖÖÄ£Ê½ÏÂ£¬
+	 * ''^''ºÍ''$''·Ö±ğÆ¥ÅäÒ»ĞĞµÄ¿ªÊ¼ºÍ½áÊø¡£´ËÍâ£¬''^''ÈÔÈ»Æ¥Åä×Ö·û´®µÄ¿ªÊ¼£¬''$''Ò²Æ¥Åä×Ö·û´®µÄ½áÊø¡£Ä¬ÈÏÇé¿öÏÂ£¬ÕâÁ½¸ö±í´ïÊ½½ö½öÆ¥Åä×Ö·û´®µÄ¿ªÊ¼ºÍ½áÊø¡£
 	 * Pattern.UNICODE_CASE (?u)
-	 * åœ¨è¿™ä¸ªæ¨¡å¼ä¸‹ï¼Œå¦‚æœä½ è¿˜å¯ç”¨äº†CASE_INSENSITIVEæ ‡å¿—ï¼Œé‚£ä¹ˆå®ƒä¼šå¯¹Unicodeå­—ç¬¦è¿›è¡Œå¤§å°å†™ä¸æ˜æ„Ÿçš„åŒ¹é…
-	 * ã€‚é»˜è®¤æƒ…å†µä¸‹ï¼Œå¤§å°å†™ä¸æ•æ„Ÿçš„åŒ¹é…åªé€‚ç”¨äºUS-ASCIIå­—ç¬¦é›†ã€‚ Pattern.UNIX_LINES(?d)
-	 * åœ¨è¿™ä¸ªæ¨¡å¼ä¸‹ï¼Œåªæœ‰''\n''æ‰è¢«è®¤ä½œä¸€è¡Œçš„ä¸­æ­¢ï¼Œå¹¶ä¸”ä¸''.''ï¼Œ''^''ï¼Œä»¥åŠ''$''è¿›è¡ŒåŒ¹é…ã€‚
+	 * ÔÚÕâ¸öÄ£Ê½ÏÂ£¬Èç¹ûÄã»¹ÆôÓÃÁËCASE_INSENSITIVE±êÖ¾£¬ÄÇÃ´Ëü»á¶ÔUnicode×Ö·û½øĞĞ´óĞ¡Ğ´²»Ã÷¸ĞµÄÆ¥Åä
+	 * ¡£Ä¬ÈÏÇé¿öÏÂ£¬´óĞ¡Ğ´²»Ãô¸ĞµÄÆ¥ÅäÖ»ÊÊÓÃÓÚUS-ASCII×Ö·û¼¯¡£ Pattern.UNIX_LINES(?d)
+	 * ÔÚÕâ¸öÄ£Ê½ÏÂ£¬Ö»ÓĞ''\n''²Å±»ÈÏ×÷Ò»ĞĞµÄÖĞÖ¹£¬²¢ÇÒÓë''.''£¬''^''£¬ÒÔ¼°''$''½øĞĞÆ¥Åä¡£
 	 */
 }

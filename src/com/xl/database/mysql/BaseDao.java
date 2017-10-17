@@ -4,28 +4,28 @@ import java.util.List;
 
 public interface BaseDao<T> {
     /**
-     * ä¿å­˜å®ä½“
+     * ±£´æÊµÌå
      *
      * @param entity
      */
     void save(T entity);
 
     /**
-     * åˆ é™¤å®ä½“
+     * É¾³ıÊµÌå
      *
      * @param id
      */
     void delete(Long id);
 
     /**
-     * æ›´æ–°å®ä½“
+     * ¸üĞÂÊµÌå
      *
      * @param entity
      */
     void update(T entity);
 
     /**
-     * æŸ¥è¯¢å®ä½“,å¦‚æœidä¸ºnull,åˆ™è¿”å›null,å¹¶ä¸ä¼šæŠ›å¼‚å¸¸
+     * ²éÑ¯ÊµÌå,Èç¹ûidÎªnull,Ôò·µ»Ønull,²¢²»»áÅ×Òì³£
      *
      * @param id
      * @return
@@ -33,7 +33,7 @@ public interface BaseDao<T> {
     T getById(Long id);
 
     /**
-     * æŸ¥è¯¢å®ä½“
+     * ²éÑ¯ÊµÌå
      *
      * @param ids
      * @return
@@ -41,7 +41,7 @@ public interface BaseDao<T> {
     List<T> getByIds(Long[] ids);
 
     /**
-     * æŸ¥è¯¢æ‰€æœ‰
+     * ²éÑ¯ËùÓĞ
      *
      * @return
      */

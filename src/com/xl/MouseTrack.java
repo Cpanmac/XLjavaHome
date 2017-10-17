@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.awt.*;
 
 public class MouseTrack extends java.applet.Applet {
-    //å˜é‡å£°æ˜
+    //±äÁ¿ÉùÃ÷
     int mx, my;
     int onaroll;
 
@@ -15,14 +15,14 @@ public class MouseTrack extends java.applet.Applet {
         init();
     }
 
-    //åˆå§‹åŒ–å°ç¨‹åº
+    //³õÊ¼»¯Ğ¡³ÌĞò
     public void init() {
         onaroll = 0;
         resize(500, 500);
         setBackground(Color.black);
     }
 
-    //ç”»å±å‡½æ•°
+    //»­ÆÁº¯Êı
     public void paint(Graphics g) {
         g.setColor(Color.red);
         g.drawRect(0, 0, size().width - 1, size().height - 1);
@@ -31,7 +31,7 @@ public class MouseTrack extends java.applet.Applet {
         g.drawRect(mx, my, (size().width / 10) - 1, (size().height / 10) - 1);
     }
 
-    //å“åº”æŒ‰ä¸‹é¼ æ ‡
+    //ÏìÓ¦°´ÏÂÊó±ê
     public boolean mouseDown(java.awt.Event evt, int x, int y) {
         requestFocus();
         if ((mx < x && x < mx + size().width / 10 - 1) && (my < y && y < my + size().height / 10 - 1)) {
@@ -63,25 +63,25 @@ public class MouseTrack extends java.applet.Applet {
         return true;
     }
 
-    //å“åº”ç§»åŠ¨é¼ æ ‡
+    //ÏìÓ¦ÒÆ¶¯Êó±ê
     public boolean mouseMove(java.awt.Event evt, int x, int y) {
         if ((x % 3 == 0) && (y % 3 == 0))
             repaint();
         return true;
     }
 
-    //å“åº”é¼ æ ‡è¿›å…¥
+    //ÏìÓ¦Êó±ê½øÈë
     public void mouseEnter() {
         repaint();
     }
 
-    //å“åº”é¼ æ ‡é€€å‡º
+    //ÏìÓ¦Êó±êÍË³ö
     public void mouseExit() {
         onaroll = 0;
         repaint();
     }
 
-    //å“åº”æŒ‰ä¸‹é”®ç›˜
+    //ÏìÓ¦°´ÏÂ¼üÅÌ
     public void keyDown(int key) {
         requestFocus();
         onaroll = 0;

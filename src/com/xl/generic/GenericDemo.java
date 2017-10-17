@@ -9,7 +9,7 @@ class GenericDemo {
         a1.add("abc01");
         a1.add("abc0991");
         a1.add("abc014");
-        //	a1.add(new Integer(4));   ä¼šå‡ºClassCastExceptionå¼‚å¸¸ï¼Œç¼–è¯‘æ²¡é—®é¢˜ï¼Œè¿è¡Œå¼‚å¸¸
+        //	a1.add(new Integer(4));   »á³öClassCastExceptionÒì³££¬±àÒëÃ»ÎÊÌâ£¬ÔËĞĞÒì³£
         Iterator<String> it = a1.iterator();
         while (it.hasNext()) {
             String s = it.next();

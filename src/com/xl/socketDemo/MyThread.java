@@ -28,10 +28,10 @@ public class MyThread implements Runnable {
             String psw = p.getPsw();
             Scanner sr = new Scanner(System.in);
             if (name.equals("admin")) {
-                System.out.println("ç”¨æˆ·åæ­£ç¡®ï¼");
+                System.out.println("ÓÃ»§ÃûÕıÈ·£¡");
                 pw.write("over");
             } else {
-                System.out.println("å§“åæ˜¯admin,å¹´çºªè¦å¤§äº0");
+                System.out.println("ĞÕÃûÊÇadmin,Äê¼ÍÒª´óÓÚ0");
             }
             ois.close();
             br.close();

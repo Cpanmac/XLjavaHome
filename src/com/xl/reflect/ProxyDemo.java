@@ -1,5 +1,6 @@
 package com.xl.reflect;
 
+import com.xl.entity.Person;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationHandler;

@@ -9,10 +9,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class JunitDemo {
-    // ä½¿ç”¨Junitæµ‹è¯•åŠ @Testå°±å¯ä»¥ è¦ç›´æ¥æµ‹è¯•æ‰€æœ‰çš„æ–¹æ³•å°±ç‚¹å‡»ç±»åï¼Œç„¶årun as
+    // Ê¹ÓÃJunit²âÊÔ¼Ó@Test¾Í¿ÉÒÔ ÒªÖ±½Ó²âÊÔËùÓĞµÄ·½·¨¾Íµã»÷ÀàÃû£¬È»ºórun as
     private Person p;
 
-    // è¿™ä¸ªè¦æ¯”Beforeè¿˜æœ‰å…ˆåŠ è½½ï¼Œç±»åŠ è½½çš„æ—¶å€™è¿è¡Œ
+    // Õâ¸öÒª±ÈBefore»¹ÓĞÏÈ¼ÓÔØ£¬Àà¼ÓÔØµÄÊ±ºòÔËĞĞ
     @BeforeClass
     public static void beforeClass() {
         System.out.println("beforeClass");
@@ -23,8 +23,8 @@ public class JunitDemo {
         System.out.println("AfterClass");
     }
 
-    // Beforeæ˜¯åœ¨æµ‹è¯•ä¹‹å‰å¿…å®šè¿è¡Œï¼Œæ‰€ä»¥å¯ä»¥æŠŠåˆå§‹åŒ–Personäº¤ç»™Before
-    // ç‰¹ç‚¹ï¼šæ¯ä¸ªæµ‹è¯•æ–¹æ³•éƒ½è¿è¡Œ
+    // BeforeÊÇÔÚ²âÊÔÖ®Ç°±Ø¶¨ÔËĞĞ£¬ËùÒÔ¿ÉÒÔ°Ñ³õÊ¼»¯Person½»¸øBefore
+    // ÌØµã£ºÃ¿¸ö²âÊÔ·½·¨¶¼ÔËĞĞ
     @Before
     public void before() {
         System.out.println("before");
@@ -34,14 +34,14 @@ public class JunitDemo {
     @Test
     public void testRun() {
         // Person p = new Person();
-        // æ–­è¨€.é‡Œé¢å¾ˆå¤šæ–¹æ³•
-        // ä¸€ä¸ªæœŸæœ›å€¼ï¼Œä¸€ä¸ªè¿”å›å€¼
+        // ¶ÏÑÔ.ÀïÃæºÜ¶à·½·¨
+        // Ò»¸öÆÚÍûÖµ£¬Ò»¸ö·µ»ØÖµ
         // Assert.assertEquals("2",p.run());
-        // æœŸæœ›è¿”å›çš„æ•°ç»„æ˜¯1ï¼Œ1. å®é™…çš„è¿”å›çš„æ•°ç»„æ˜¯1ï¼Œ2
+        // ÆÚÍû·µ»ØµÄÊı×éÊÇ1£¬1. Êµ¼ÊµÄ·µ»ØµÄÊı×éÊÇ1£¬2
         Assert.assertArrayEquals(new int[]{1, 1}, new int[]{1, 2});
     }
 
-    // Afterå¯ä»¥ç”¨æ¥å…³é—­èµ„æº
+    // After¿ÉÒÔÓÃÀ´¹Ø±Õ×ÊÔ´
     @After
     public void after() {
         // System.out.println("after");

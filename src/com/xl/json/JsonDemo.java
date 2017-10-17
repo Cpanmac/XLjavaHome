@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author å¾ç«‹
+ * @author ĞìÁ¢
  * @Decription
- * @date 2014å¹´4æœˆ13æ—¥
+ * @date 2014Äê4ÔÂ13ÈÕ
  */
 public class JsonDemo {
     @Test
@@ -29,7 +29,7 @@ public class JsonDemo {
     }
 
     /**
-     * è¿™ä¸ªéœ€è¦ä¸‹åˆ—5ä¸ªjaråŒ…æ‰å¯ä»¥
+     * Õâ¸öĞèÒªÏÂÁĞ5¸öjar°ü²Å¿ÉÒÔ
      * commons-beanutils-1.8.3.jar
      * commons-collections.jar
      * commons-lang.jar
@@ -60,8 +60,8 @@ public class JsonDemo {
     }
 
     /**
-     * FIXME å¿˜è®°åœ¨å“ªå„¿äº†
-     * åªéœ€è¦gjson.jar
+     * FIXME Íü¼ÇÔÚÄÄ¶ùÁË
+     * Ö»ĞèÒªgjson.jar
      *
      * @throws IOException
      */

@@ -17,10 +17,10 @@ public class CopyTextByBuf {
             while ((line = br.readLine()) != null) {
                 bw.write(line);
                 bw.newLine();
-                bw.flush(); // åˆ«å¿˜è®°åˆ·æ–°ä¸‹æµï¼Œæ€•åœç”µ
+                bw.flush(); // ±ğÍü¼ÇË¢ĞÂÏÂÁ÷£¬ÅÂÍ£µç
             }
         } catch (IOException e) {
-            throw new RuntimeException("å†™å…¥å¤±è´¥ï¼");
+            throw new RuntimeException("Ğ´ÈëÊ§°Ü£¡");
         } finally {
             try {
                 if (bw != null && bw != null) {
@@ -28,7 +28,7 @@ public class CopyTextByBuf {
                     bw.close();
                 }
             } catch (IOException e) {
-                throw new RuntimeException("è¯»å–å…³é—­å¤±è´¥");
+                throw new RuntimeException("¶ÁÈ¡¹Ø±ÕÊ§°Ü");
             }
         }
     }

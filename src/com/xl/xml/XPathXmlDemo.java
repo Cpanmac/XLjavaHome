@@ -8,43 +8,43 @@ import org.junit.Test;
 
 import java.io.File;
 
-//å¦‚æœxmlæ–‡æ¡£å¾ˆå¤§.å¿«é€Ÿå®šä½æƒ³è¦çš„æ•°æ®
+//Èç¹ûxmlÎÄµµºÜ´ó.¿ìËÙ¶¨Î»ÏëÒªµÄÊı¾İ
 /*
- "/"è¡¨ç¤ºç»å¯¹è·¯å¾„
- "//"è¡¨ç¤ºç›¸å¯¹è·¯å¾„
- "*"è¡¨ç¤ºæ‰€æœ‰ç”±*ä¹‹å‰çš„è·¯å¾„æ‰€å®šä½çš„å…ƒç´ 
+ "/"±íÊ¾¾ø¶ÔÂ·¾¶
+ "//"±íÊ¾Ïà¶ÔÂ·¾¶
+ "*"±íÊ¾ËùÓĞÓÉ*Ö®Ç°µÄÂ·¾¶Ëù¶¨Î»µÄÔªËØ
 
  */
 public class XPathXmlDemo {
     /*
-     * "//foo/bar"è·å–åˆ°æ‰€æœ‰çš„barèŠ‚ç‚¹"//foo/bar/author" å¾—åˆ°ç¬¬ä¸€ä¸ªèŠ‚ç‚¹
-	 */ File f = new File("xml/book.xml"); // è¦åŠ è½½çš„xmlæ–‡ä»¶
+     * "//foo/bar"»ñÈ¡µ½ËùÓĞµÄbar½Úµã"//foo/bar/author" µÃµ½µÚÒ»¸ö½Úµã
+	 */ File f = new File("xml/book.xml"); // Òª¼ÓÔØµÄxmlÎÄ¼ş
 
     @Test
     public void test() throws DocumentException {
         SAXReader reader = new SAXReader();
         Document document = reader.read(f);
-        // selectæ–¹æ³•è°ƒç”¨xpathè¡¨è¾¾å¼
-        String value = document.selectSingleNode("//ä½œè€…").getText(); // è·å–ç¬¬ä¸€ä¸ªä½œè€…çš„å€¼
+        // select·½·¨µ÷ÓÃxpath±í´ïÊ½
+        String value = document.selectSingleNode("//×÷Õß").getText(); // »ñÈ¡µÚÒ»¸ö×÷ÕßµÄÖµ
         System.out.println(value);
     }
 
-    // æŸ¥æ‰¾users.xmlæ˜¯å¦æœ‰ä½•ç”¨æˆ·åŒ¹é…çš„ç”¨æˆ·åå’Œå¯†ç 
+    // ²éÕÒusers.xmlÊÇ·ñÓĞºÎÓÃ»§Æ¥ÅäµÄÓÃ»§ÃûºÍÃÜÂë
     @Test
     public void find() throws DocumentException {
         String username = "aaa";
         String password = "123";
-        // æ£€æµ‹xmlæ–‡æ¡£æ˜¯å¦æœ‰åŒ¹é…
+        // ¼ì²âxmlÎÄµµÊÇ·ñÓĞÆ¥Åä
         SAXReader reader = new SAXReader();
         f = new File("xml/User.xml");
         Document document = reader.read(f);
-        // 1:è¿™ä¸ªbå˜é‡è¦å•å¼•å·å¼•èµ·æ¥,å¦åˆ™æ‰¾ä¸åˆ°
-        // æ‰¾å‡ºæ‰€æœ‰çš„userèŠ‚ç‚¹
-        Node node = document.selectSingleNode("//user[@username='" + username + "' and @password='" + password + "']"); // æˆªæ–­å­—ç¬¦ä¸²
+        // 1:Õâ¸öb±äÁ¿Òªµ¥ÒıºÅÒıÆğÀ´,·ñÔòÕÒ²»µ½
+        // ÕÒ³öËùÓĞµÄuser½Úµã
+        Node node = document.selectSingleNode("//user[@username='" + username + "' and @password='" + password + "']"); // ½Ø¶Ï×Ö·û´®
         if (node == null) {
-            System.out.println("ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯");
+            System.out.println("ÓÃ»§Ãû»òÃÜÂë´íÎó");
         } else {
-            System.out.println("ç™»é™†æˆåŠŸ");
+            System.out.println("µÇÂ½³É¹¦");
         }
     }
 }

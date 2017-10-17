@@ -7,7 +7,7 @@ import org.junit.Test;
 public class Book {
     private String name;
     private String author;
-    private String price; //鍥犱负鏈夊厓,鎵�浠ョ洿鎺ヨ缃垚String
+    private String price; //因为有元,所以直接设置成String
 
     @Test
     public void sysoTest() {

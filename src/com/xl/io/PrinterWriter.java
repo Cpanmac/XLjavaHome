@@ -9,11 +9,11 @@ import java.io.PrintWriter;
 public class PrinterWriter {
     public static void main(String[] args) throws IOException {
         BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
-        // PrintWriter out = new PrintWriter(System.out); //å¯ä»¥å†™å…¥åˆ°æ§åˆ¶å°
+        // PrintWriter out = new PrintWriter(System.out); //¿ÉÒÔĞ´Èëµ½¿ØÖÆÌ¨
         // PrintWriter out = new PrintWriter(System.out,true);
-        // //å¦‚æœå†™true,ä¸‹é¢å°±å¯ä»¥ä¸å†™flush, æœ‰lnæ ‡è®°å°±è‡ªåŠ¨åˆ·æ–°
-        // PrintWriter out = new PrintWriter(new FileWriter("a.txt")); //åˆ·æ–°é’ˆå¯¹æµçš„
-        PrintWriter out = new PrintWriter(new FileWriter("a.txt"), true); // ä¸å†™åˆ·æ–°lnå°±æ˜¯åˆ·æ–°
+        // //Èç¹ûĞ´true,ÏÂÃæ¾Í¿ÉÒÔ²»Ğ´flush, ÓĞln±ê¼Ç¾Í×Ô¶¯Ë¢ĞÂ
+        // PrintWriter out = new PrintWriter(new FileWriter("a.txt")); //Ë¢ĞÂÕë¶ÔÁ÷µÄ
+        PrintWriter out = new PrintWriter(new FileWriter("a.txt"), true); // ²»Ğ´Ë¢ĞÂln¾ÍÊÇË¢ĞÂ
         String line = null;
         while ((line = bufr.readLine()) != null) {
             if ("over".equals(line))

@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * æ³¨æ„ï¼šå¦‚æœç”¨writeUIF(String str)å†™çš„è¯ï¼Œç”¨è½¬æ¢æµè¯»ä¸å‡ºæ¥ï¼Œåªèƒ½ç”¨å¯¹åº”çš„è¯»å–æ–¹å¼è¯»å–,è‹±æ–‡ä¸æ¶‰åŠç¼–ç 
+ * ×¢Òâ£ºÈç¹ûÓÃwriteUIF(String str)Ğ´µÄ»°£¬ÓÃ×ª»»Á÷¶Á²»³öÀ´£¬Ö»ÄÜÓÃ¶ÔÓ¦µÄ¶ÁÈ¡·½Ê½¶ÁÈ¡,Ó¢ÎÄ²»Éæ¼°±àÂë
  *
  * @author Administrator
  */
@@ -18,7 +18,7 @@ public class DataStreamDemo {
     private File file = new File("D:/data");
 
     /**
-     * å†™å…¥
+     * Ğ´Èë
      *
      * @throws IOException
      */
@@ -31,18 +31,18 @@ public class DataStreamDemo {
         dos.write(123);
         dos.writeInt(2);
         dos.close();
-        System.out.println("D:/dataå†™å…¥æˆåŠŸ");
+        System.out.println("D:/dataĞ´Èë³É¹¦");
     }
 
     /**
-     * è¯»å–
+     * ¶ÁÈ¡
      *
      * @throws IOException
      */
     @Test
     public void readData() throws IOException {
         DataInputStream dis = new DataInputStream(new FileInputStream(file));
-        // è¯»åçš„è¯ä¼ å‡ºæ¥çš„æ•°æ®æ˜¯é”™è¯¯çš„, å…ˆè¯»doubleçš„è¯ å°±æ˜¯è¯»å…«ä¸ªå­—èŠ‚
+        // ¶Á·´µÄ»°´«³öÀ´µÄÊı¾İÊÇ´íÎóµÄ, ÏÈ¶ÁdoubleµÄ»° ¾ÍÊÇ¶Á°Ë¸ö×Ö½Ú
         int num = dis.readInt();
         boolean b = dis.readBoolean();
         double d = dis.readDouble();
@@ -67,8 +67,8 @@ public class DataStreamDemo {
     @Test
     public void writeUTFDemo() throws IOException {
         DataOutputStream dos = new DataOutputStream(new FileOutputStream(file));
-        dos.writeUTF("hello"); // è¿™æ ·æ˜¯æ²¡é—®é¢˜çš„
-        dos.writeUTF("ä½ å¥½");
+        dos.writeUTF("hello"); // ÕâÑùÊÇÃ»ÎÊÌâµÄ
+        dos.writeUTF("ÄãºÃ");
         dos.close();
     }
 }

@@ -9,14 +9,14 @@ public class TcpServer2 {
         ServerSocket ss = new ServerSocket(10004);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println("å®¢æˆ·ç«¯çš„IPåœ°å€æ˜¯ï¼š" + ip);
+        System.out.println("¿Í»§¶ËµÄIPµØÖ·ÊÇ£º" + ip);
         InputStream in = s.getInputStream();
         byte[] buf = new byte[1024];
         int len = in.read(buf);
         System.out.println(new String(buf, 0, len));
         java.io.OutputStream out = s.getOutputStream();
-        Thread.sleep(5000);//é˜»å¡å¼æ–¹æ³•
-        out.write("å“¥ä»¬æ”¶åˆ°ï¼Œä½ ä¹Ÿå¥½ï¼Œå®¢æˆ·ç«¯å‘é€".getBytes());
+        Thread.sleep(5000);//×èÈûÊ½·½·¨
+        out.write("¸çÃÇÊÕµ½£¬ÄãÒ²ºÃ£¬¿Í»§¶Ë·¢ËÍ".getBytes());
         s.close();
         ss.close();
     }

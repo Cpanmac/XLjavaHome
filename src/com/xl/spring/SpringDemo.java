@@ -4,7 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created with IntelliJ IDEA.
- * User: å¾ç«‹
+ * User: ĞìÁ¢
  * Date: 2017/9/5
  * Time: 17:25
  * To change this template use File | Settings | File Templates.
@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringDemo {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationContext.xml");
-        System.out.println("æµ‹è¯•æˆåŠŸ");
+        System.out.println("²âÊÔ³É¹¦");
         context.close();
     }
 }

@@ -10,12 +10,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * é›†åˆå·¥å…·ç±»
- * Created by ç«‹ on 3/25 0025.
+ * ¼¯ºÏ¹¤¾ßÀà
+ * Created by Á¢ on 3/25 0025.
  */
 public class CollectionUtil {
     /**
-     * å°†listMapè½¬åŒ–ä¸ºä¸åŒºåˆ«å¤§å°å†™çš„listMap
+     * ½«listMap×ª»¯Îª²»Çø±ğ´óĞ¡Ğ´µÄlistMap
      *
      * @param listMap
      */
@@ -32,7 +32,7 @@ public class CollectionUtil {
     }
 
     /**
-     * å°†Objectè½¬ä¸ºmap
+     * ½«Object×ªÎªmap
      *
      * @param object
      * @return
@@ -62,10 +62,10 @@ public class CollectionUtil {
     }
 
     /**
-     * å°†listé›†åˆè½¬åŒ–mapé›†åˆ
+     * ½«list¼¯ºÏ×ª»¯map¼¯ºÏ
      *
      * @param keyPropName
-     * @param list        mapä¸­çš„key
+     * @param list        mapÖĞµÄkey
      * @return
      */
     public static Map toMap(String keyPropName, List<Map> list) {

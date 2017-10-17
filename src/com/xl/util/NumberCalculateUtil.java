@@ -5,23 +5,23 @@ import java.text.DecimalFormat;
 
 /**
  * Created with IntelliJ IDEA.
- * User: å¾ç«‹
+ * User: ĞìÁ¢
  * Date: 13-12-26
- * Time: ä¸‹åˆ4:21
+ * Time: ÏÂÎç4:21
  * To change this template use File | Settings | File Templates.
  */
 public class NumberCalculateUtil {
-    //ä¸‡
+    //Íò
     public static final Integer UNIT_W = 10000;
-    //ç™¾ä¸‡
+    //°ÙÍò
     public static final Integer UNIT_BW = 1000000;
-    //äº¿
+    //ÒÚ
     public static final Integer UNIT_Y = 100000000;
-    //å•ä½
-    public static final String[] UNIT = {"ä¸‡å…ƒ", "ç™¾ä¸‡å…ƒ", "äº¿å…ƒ"};
+    //µ¥Î»
+    public static final String[] UNIT = {"ÍòÔª", "°ÙÍòÔª", "ÒÚÔª"};
 
     /**
-     * å¤§æ•°æ®ç®€å•åŠ æ³•è¿ç®—
+     * ´óÊı¾İ¼òµ¥¼Ó·¨ÔËËã
      *
      * @param numbers
      * @return
@@ -37,7 +37,7 @@ public class NumberCalculateUtil {
     }
 
     /**
-     * ä¹˜ä½
+     * ³ËÎ»
      *
      * @param numbers
      * @param unit
@@ -49,10 +49,10 @@ public class NumberCalculateUtil {
     }
 
     /**
-     * å¤§æ•°æ®ç®€å•å‡æ³•è¿ç®—
+     * ´óÊı¾İ¼òµ¥¼õ·¨ÔËËã
      *
-     * @param number  å‡æ•°
-     * @param numbers è¢«å‡æ•°
+     * @param number  ¼õÊı
+     * @param numbers ±»¼õÊı
      * @return
      */
     public static BigDecimal subtractCalculate(String number, String[] numbers) {
@@ -66,7 +66,7 @@ public class NumberCalculateUtil {
     }
 
     /**
-     * å¤§æ•°æ®ç®€å•ä¹˜æ³•è¿ç®—
+     * ´óÊı¾İ¼òµ¥³Ë·¨ÔËËã
      *
      * @param numbers
      * @return
@@ -82,10 +82,10 @@ public class NumberCalculateUtil {
     }
 
     /**
-     * å¤§æ•°æ®ç®€å•é™¤æ³•è¿ç®—
+     * ´óÊı¾İ¼òµ¥³ı·¨ÔËËã
      *
-     * @param number  é™¤æ•°
-     * @param numbers è¢«é™¤æ•°
+     * @param number  ³ıÊı
+     * @param numbers ±»³ıÊı
      * @return
      */
     public static BigDecimal divideCalculate(String number, String[] numbers) {
@@ -99,7 +99,7 @@ public class NumberCalculateUtil {
     }
 
     /**
-     * é™¤ä½
+     * ³ıÎ»
      *
      * @param number
      * @param unit
@@ -111,7 +111,7 @@ public class NumberCalculateUtil {
     }
 
     /**
-     * æ ¼å¼å•ä½
+     * ¸ñÊ½µ¥Î»
      *
      * @param number
      * @return
@@ -120,7 +120,7 @@ public class NumberCalculateUtil {
         BigDecimal decimal = divideCalculate(number, UNIT_W);
         DecimalFormat format = null;
         if (decimal.intValue() <= 0) {
-            return NumberTool.formateNumber(decimal.doubleValue(), "#,##0.00") + "å…ƒ";
+            return NumberTool.formateNumber(decimal.doubleValue(), "#,##0.00") + "Ôª";
         }
         if (decimal.intValue() < 100) {
             return NumberTool.formateNumber(decimal.doubleValue(), "#,###.#####") + UNIT[0];
@@ -134,7 +134,7 @@ public class NumberCalculateUtil {
     }
 
     /**
-     * æ ¼å¼åŒ–numberæ•°å­—
+     * ¸ñÊ½»¯numberÊı×Ö
      *
      * @param num
      * @return
