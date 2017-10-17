@@ -17,26 +17,26 @@ import java.io.FileOutputStream;
 import java.io.UnsupportedEncodingException;
 
 /**
- * @author ĞìÁ¢
- * @Decription Ò»¡¢Ç°ÑÔ
+ * @author å¾ç«‹
+ * @Decription ä¸€ã€å‰è¨€
  * <p>
- * ¡¡¡¡ÔÚÆóÒµµÄĞÅÏ¢ÏµÍ³ÖĞ£¬±¨±í´¦ÀíÒ»Ö±Õ¼±È½ÏÖØÒªµÄ×÷ÓÃ£¬±¾ÎÄ½«½éÉÜÒ»ÖÖÉú³ÉPDF±¨±íµÄJava×é¼ş--iText¡£
- * Í¨¹ıÔÚ·şÎñÆ÷¶ËÊ¹ÓÃJsp»òJavaBeanÉú³ÉPDF±¨±í
- * £¬¿Í»§¶Ë²ÉÓÃ³¬¼¶Á¬½ÓÏÔÊ¾»òÏÂÔØµÃµ½Éú³ÉµÄ±¨±í£¬ÕâÑù¾ÍºÜºÃµÄ½â¾öÁËB/SÏµÍ³µÄ±¨±í´¦ÀíÎÊÌâ¡£
+ * ã€€ã€€åœ¨ä¼ä¸šçš„ä¿¡æ¯ç³»ç»Ÿä¸­ï¼ŒæŠ¥è¡¨å¤„ç†ä¸€ç›´å æ¯”è¾ƒé‡è¦çš„ä½œç”¨ï¼Œæœ¬æ–‡å°†ä»‹ç»ä¸€ç§ç”ŸæˆPDFæŠ¥è¡¨çš„Javaç»„ä»¶--iTextã€‚
+ * é€šè¿‡åœ¨æœåŠ¡å™¨ç«¯ä½¿ç”¨Jspæˆ–JavaBeanç”ŸæˆPDFæŠ¥è¡¨
+ * ï¼Œå®¢æˆ·ç«¯é‡‡ç”¨è¶…çº§è¿æ¥æ˜¾ç¤ºæˆ–ä¸‹è½½å¾—åˆ°ç”Ÿæˆçš„æŠ¥è¡¨ï¼Œè¿™æ ·å°±å¾ˆå¥½çš„è§£å†³äº†B/Sç³»ç»Ÿçš„æŠ¥è¡¨å¤„ç†é—®é¢˜ã€‚
  * <p>
- * ¡¡¡¡¶ş¡¢iText¼ò½é
+ * ã€€ã€€äºŒã€iTextç®€ä»‹
  * <p>
- * ¡¡¡¡iTextÊÇÖøÃûµÄ¿ª·ÅÔ´ÂëµÄÕ¾µãsourceforgeÒ»¸öÏîÄ¿£¬ÊÇÓÃÓÚÉú³ÉPDFÎÄµµµÄÒ»¸öjavaÀà¿â¡£
- * Í¨¹ıiText²»½ö¿ÉÒÔÉú³ÉPDF»òrtfµÄÎÄµµ£¬¶øÇÒ¿ÉÒÔ½«XML¡¢HtmlÎÄ¼ş×ª»¯ÎªPDFÎÄ¼ş¡£
+ * ã€€ã€€iTextæ˜¯è‘—åçš„å¼€æ”¾æºç çš„ç«™ç‚¹sourceforgeä¸€ä¸ªé¡¹ç›®ï¼Œæ˜¯ç”¨äºç”ŸæˆPDFæ–‡æ¡£çš„ä¸€ä¸ªjavaç±»åº“ã€‚
+ * é€šè¿‡iTextä¸ä»…å¯ä»¥ç”ŸæˆPDFæˆ–rtfçš„æ–‡æ¡£ï¼Œè€Œä¸”å¯ä»¥å°†XMLã€Htmlæ–‡ä»¶è½¬åŒ–ä¸ºPDFæ–‡ä»¶ã€‚
  * <p>
- * ¡¡¡¡iTextµÄ°²×°·Ç³£·½±ã£¬ÔÚhttp://www.lowagie.com/iText/download.html -
- * download ÍøÕ¾ÉÏÏÂÔØiText.jarÎÄ¼şºó£¬Ö»ĞèÒªÔÚÏµÍ³µÄCLASSPATHÖĞ¼ÓÈëiText.jarµÄÂ·¾¶£¬
- * ÔÚ³ÌĞòÖĞ¾Í¿ÉÒÔÊ¹ÓÃiTextÀà¿âÁË¡£
- * @date 2014Äê3ÔÂ25ÈÕ
+ * ã€€ã€€iTextçš„å®‰è£…éå¸¸æ–¹ä¾¿ï¼Œåœ¨http://www.lowagie.com/iText/download.html -
+ * download ç½‘ç«™ä¸Šä¸‹è½½iText.jaræ–‡ä»¶åï¼Œåªéœ€è¦åœ¨ç³»ç»Ÿçš„CLASSPATHä¸­åŠ å…¥iText.jarçš„è·¯å¾„ï¼Œ
+ * åœ¨ç¨‹åºä¸­å°±å¯ä»¥ä½¿ç”¨iTextç±»åº“äº†ã€‚
+ * @date 2014å¹´3æœˆ25æ—¥
  */
 public class PdfDemo {
     /**
-     * ÎÄ¼ş
+     * æ–‡ä»¶
      */
     File file;
 
@@ -47,27 +47,27 @@ public class PdfDemo {
 
     @Test
     public void write() throws FileNotFoundException, DocumentException {
-        // ¢Ù½¨Á¢com.lowagie.text.Document¶ÔÏóµÄÊµÀı¡£
+        // â‘ å»ºç«‹com.lowagie.text.Documentå¯¹è±¡çš„å®ä¾‹ã€‚
         Document document = new Document(PageSize.A4);
-        // ¢Ú½¨Á¢Ò»¸öÊéĞ´Æ÷(Writer)Óëdocument¶ÔÏó¹ØÁª£¬Í¨¹ıÊéĞ´Æ÷(Writer)¿ÉÒÔ½«ÎÄµµĞ´Èëµ½´ÅÅÌÖĞ¡£
+        // â‘¡å»ºç«‹ä¸€ä¸ªä¹¦å†™å™¨(Writer)ä¸documentå¯¹è±¡å…³è”ï¼Œé€šè¿‡ä¹¦å†™å™¨(Writer)å¯ä»¥å°†æ–‡æ¡£å†™å…¥åˆ°ç£ç›˜ä¸­ã€‚
         PdfWriter.getInstance(document, new FileOutputStream(file));
-        // ¢Û´ò¿ªÎÄµµ¡£
+        // â‘¢æ‰“å¼€æ–‡æ¡£ã€‚
         document.open();
-        // ¢ÜÏòÎÄµµÖĞÌí¼ÓÄÚÈİ¡£
-        document.addTitle("ÕâÊÇ±êÌâ");
-        document.add(new Paragraph("ÎÒµÄµÚÒ»¸öPdf", new Font()));
-        // ¢İ¹Ø±ÕÎÄµµ¡£
+        // â‘£å‘æ–‡æ¡£ä¸­æ·»åŠ å†…å®¹ã€‚
+        document.addTitle("è¿™æ˜¯æ ‡é¢˜");
+        document.add(new Paragraph("æˆ‘çš„ç¬¬ä¸€ä¸ªPdf", new Font()));
+        // â‘¤å…³é—­æ–‡æ¡£ã€‚
         document.close();
     }
 
     @Test
     public void pdf() throws FileNotFoundException, DocumentException {
-        Rectangle r = new Rectangle(144, 720); //´´½¨Ö¸¶¨»­²¼
+        Rectangle r = new Rectangle(144, 720); //åˆ›å»ºæŒ‡å®šç”»å¸ƒ
         Document document = new Document(r);
         PdfWriter.getInstance(document, new FileOutputStream(file));
         document.open();
-        document.addTitle("ÕâÊÇ±êÌâ");
-        document.add(new Paragraph("ÎÒµÄµÚÒ»¸öPdf", new Font()));
+        document.addTitle("è¿™æ˜¯æ ‡é¢˜");
+        document.add(new Paragraph("æˆ‘çš„ç¬¬ä¸€ä¸ªPdf", new Font()));
         document.close();
     }
 }

@@ -1,8 +1,8 @@
 package com.xl.util;
 
 /**
- * @author ĞìÁ¢
- * @Decription Æ¥Åä¸´ÔÓµÄÕıÔò
+ * @author å¾ç«‹
+ * @Decription åŒ¹é…å¤æ‚çš„æ­£åˆ™
  * @date 2014-1-25
  */
 public class RegHelper {

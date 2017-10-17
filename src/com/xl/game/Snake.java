@@ -13,15 +13,15 @@ public class Snake extends JFrame {
 
     public Snake() {
         mp = new MyPaint();
-        Thread t1 = new Thread(mp);// Æô¶¯mpÏß³Ì
+        Thread t1 = new Thread(mp);// å¯åŠ¨mpçº¿ç¨‹
         t1.start();
-        this.add(mp);// ¼ÓÔØÃæ°å
-        this.addKeyListener(mp);// ¼ÓÔØ°´¼ü¼àÌı
-        this.setSize(300, 320);// ´°¿Ú´óĞ¡
-        this.setLocationRelativeTo(null); // ¾ÓÖĞ
-        this.setTitle("Ì°³ÔÉßV1.0");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// µã»÷¹Ø±ÕÊ±£¬¹Ø±Õ³ÌĞò
-        this.setVisible(true);// ¿É¼û
+        this.add(mp);// åŠ è½½é¢æ¿
+        this.addKeyListener(mp);// åŠ è½½æŒ‰é”®ç›‘å¬
+        this.setSize(300, 320);// çª—å£å¤§å°
+        this.setLocationRelativeTo(null); // å±…ä¸­
+        this.setTitle("è´ªåƒè›‡V1.0");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// ç‚¹å‡»å…³é—­æ—¶ï¼Œå…³é—­ç¨‹åº
+        this.setVisible(true);// å¯è§
     }
 
     @SuppressWarnings("unused")
@@ -42,24 +42,24 @@ class MyPaint extends JPanel implements KeyListener, Runnable {
         g.setColor(Color.yellow);
         g.fillOval(yd.swx, yd.swy, 20, 20);
         g.setColor(Color.red);
-        g.fillOval(yd.x[0], yd.y[0], 20, 20);// ÉßÍ·ÏÔÊ¾
+        g.fillOval(yd.x[0], yd.y[0], 20, 20);// è›‡å¤´æ˜¾ç¤º
         g.setColor(Color.blue);
-        for (int i = 1; i < yd.sum - 1; i++) {// ÉßÉíÌåÏÔÊ¾
+        for (int i = 1; i < yd.sum - 1; i++) {// è›‡èº«ä½“æ˜¾ç¤º
             g.fillOval(yd.x[i], yd.y[i], 20, 20);
         }
-        g.drawString("µ±Ç°·ÖÊı: " + yd.fenshu, 190, 275);
-        g.drawString("ËÙ¶ÈµÈ¼¶: " + yd.lv, 10, 275);
+        g.drawString("å½“å‰åˆ†æ•°: " + yd.fenshu, 190, 275);
+        g.drawString("é€Ÿåº¦ç­‰çº§: " + yd.lv, 10, 275);
         g.setColor(Color.ORANGE);
-        if (yd.kaishi == 0) { // µ±ÓÎÏ·½áÊøÊ±ÏÔÊ¾
-            g.setFont(new Font("ºÚÌå", 1, 20));
+        if (yd.kaishi == 0) { // å½“æ¸¸æˆç»“æŸæ—¶æ˜¾ç¤º
+            g.setFont(new Font("é»‘ä½“", 1, 20));
             g.drawString("Game over", 90, 100);
-            g.setFont(new Font("Ó×Ìå", 1, 15));
-            g.drawString("°´Z¼ü  ¼ÌĞøÓÎÏ·£¡", 80, 120);
+            g.setFont(new Font("å¹¼ä½“", 1, 15));
+            g.drawString("æŒ‰Zé”®  ç»§ç»­æ¸¸æˆï¼", 80, 120);
         }
     }
 
     public void keyPressed(KeyEvent e) {
-        if (yd.kaishi == 1) {// µ±ÓÎÏ·½øĞĞÊ± ¿É¿ØÖÆ
+        if (yd.kaishi == 1) {// å½“æ¸¸æˆè¿›è¡Œæ—¶ å¯æ§åˆ¶
             if (e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_W) {
                 if (yd.fx != 2) {
                     yd.fx = 8;
@@ -77,7 +77,7 @@ class MyPaint extends JPanel implements KeyListener, Runnable {
                     yd.fx = 6;
                 }
             }
-        } else {// µ±ÓÎÏ·½áÊøÊ± °´Z »Ö¸´ÓÎÏ·
+        } else {// å½“æ¸¸æˆç»“æŸæ—¶ æŒ‰Z æ¢å¤æ¸¸æˆ
             if (e.getKeyCode() == KeyEvent.VK_Z) {
                 yd.sum = 4;
                 yd.x[0] = 100;
@@ -101,7 +101,7 @@ class MyPaint extends JPanel implements KeyListener, Runnable {
     public void keyTyped(KeyEvent arg0) {
     }
 
-    public void run() { // Ë¢ĞÂÃæ°åÏß³Ì
+    public void run() { // åˆ·æ–°é¢æ¿çº¿ç¨‹
         Thread t2 = new Thread(yd);
         t2.start();
         while (true) {
@@ -115,38 +115,38 @@ class MyPaint extends JPanel implements KeyListener, Runnable {
     }
 }
 
-class yidong implements Runnable { // ÉßÒÆ¶¯Ïß³Ì
+class yidong implements Runnable { // è›‡ç§»åŠ¨çº¿ç¨‹
     /**
-     * ÉßµÄ×î´ó³¤¶È
+     * è›‡çš„æœ€å¤§é•¿åº¦
      */
     int maxsum = 128;
     /**
-     * ÉßµÄ³õÊ¼³¤¶È
+     * è›‡çš„åˆå§‹é•¿åº¦
      */
     int sum = 3, x[] = new int[maxsum], y[] = new int[maxsum];
     /**
-     * 1:¿ªÊ¼;0:½áÊø
+     * 1:å¼€å§‹;0:ç»“æŸ
      */
-    int kaishi = 1; // sum£º´ú±íÉßµÄ×Ü¹²³¤¶ÈÊÇsum-1
+    int kaishi = 1; // sumï¼šä»£è¡¨è›‡çš„æ€»å…±é•¿åº¦æ˜¯sum-1
     /**
-     * ·½Ïò fx£º4=¡û 6=¡ú 8=¡ü 2=¡ı ÆäÓà£ºÎŞÒÆ¶¯
+     * æ–¹å‘ fxï¼š4=â† 6=â†’ 8=â†‘ 2=â†“ å…¶ä½™ï¼šæ— ç§»åŠ¨
      */
     int fx = 1;
     int nfx, sp = 20, i = 0;
     /**
-     * ÑÓ³Ù
+     * å»¶è¿Ÿ
      */
     int yanchi = 200;
     /**
-     * ·ÖÊı
+     * åˆ†æ•°
      */
     int fenshu;
     /**
-     * Ê³ÎïµÄ×ø±ê
+     * é£Ÿç‰©çš„åæ ‡
      */
     int swx = 0, swy = 0;
     /**
-     * Ê³Îï
+     * é£Ÿç‰©
      */
     int shiwu = 0;
     String lv = "1";
@@ -155,29 +155,29 @@ class yidong implements Runnable { // ÉßÒÆ¶¯Ïß³Ì
     @Override
     public void run() {
         x[0] = 100;
-        y[0] = 100;// ³õÊ¼»¯Éß×ø±ê
+        y[0] = 100;// åˆå§‹åŒ–è›‡åæ ‡
         while (true) {
             try {
                 Thread.sleep(yanchi);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            if (shiwu == 0) {// Ëæ»ú²úÉúÊ³Îï
-                swx = (sj.nextInt(10) + 1) * 20;// Ëæ»ú0-20
+            if (shiwu == 0) {// éšæœºäº§ç”Ÿé£Ÿç‰©
+                swx = (sj.nextInt(10) + 1) * 20;// éšæœº0-20
                 swy = (sj.nextInt(10) + 1) * 20;
                 shiwu = 1;
             }
             if (kaishi == 1) {
-                // Èç¹ûÊÇ¿ªÊ¼,»òÕß³ÔÁËÊ³Îï·ÖÊıÎªÊ³Îï³¤¶È¼õÈ¥³õÊ¼³¤¶È
+                // å¦‚æœæ˜¯å¼€å§‹,æˆ–è€…åƒäº†é£Ÿç‰©åˆ†æ•°ä¸ºé£Ÿç‰©é•¿åº¦å‡å»åˆå§‹é•¿åº¦
                 fenshu = sum * 100 - 400;
             }
-            // ·ÖÊı¼ÆËã
-            for (int i = sum - 1; i > 0; i--) {// ÉíÌå×ø±êË¢ĞÂ
+            // åˆ†æ•°è®¡ç®—
+            for (int i = sum - 1; i > 0; i--) {// èº«ä½“åæ ‡åˆ·æ–°
                 x[i] = x[i - 1];
                 y[i] = y[i - 1];
             }
-            if (fx == 6 && nfx != 4) {// ·½ÏòÅĞ¶Ï
-                x[0] += sp;// ÒÆ¶¯
+            if (fx == 6 && nfx != 4) {// æ–¹å‘åˆ¤æ–­
+                x[0] += sp;// ç§»åŠ¨
                 nfx = 6;
             } else if (fx == 4 && nfx != 6) {
                 x[0] -= sp;
@@ -215,12 +215,12 @@ class yidong implements Runnable { // ÉßÒÆ¶¯Ïß³Ì
                 y[0] += sp;
             }
             if (x[0] > swx - 5 && x[0] < swx + 5 && y[0] > swy - 5 && y[0] < swy + 5) {
-                sum++;// Ôö¼Ó³¤¶È
+                sum++;// å¢åŠ é•¿åº¦
                 shiwu = 0;
                 if (sum == 10) {
                     yanchi = 180;
                     lv = "2";
-                }// ¼ÓËÙ
+                }// åŠ é€Ÿ
                 if (sum == 20) {
                     yanchi = 160;
                     lv = "3";
@@ -238,7 +238,7 @@ class yidong implements Runnable { // ÉßÒÆ¶¯Ïß³Ì
                     lv = "max";
                 }
             }
-            for (int i = sum - 1; i > 0; i--) {// ÅĞ¶ÏÉßÊÇ·ñ³Ôµ½×Ô¼º
+            for (int i = sum - 1; i > 0; i--) {// åˆ¤æ–­è›‡æ˜¯å¦åƒåˆ°è‡ªå·±
                 if (x[0] > x[i] - 5 && x[0] < x[i] + 5 && y[0] > y[i] - 5 && y[0] < y[i] + 5) {
                     sp = 0;
                     yanchi = 500;

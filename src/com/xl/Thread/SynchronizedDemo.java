@@ -1,12 +1,12 @@
 package com.xl.thread;
 
 /**
- * @author ĞìÁ¢
- * @Decription ´«Í³Ïß³Ì»¥³â¼¼Êõ¡£synchronized<br/>
- * ³öÏÖÁËÔËĞĞÃ»ÔËĞĞÍêÕûµÄĞ¡¸ÅÂÊÊÂ¼ş<br/>
- * synchronized£º×îºÃÖ»ÓÃÒ»´Î£¬³öÏÖ2´ÎÈİÒ×³öÏÖËÀËø <br/>
- * Èç¹û²»ÓÃsynchronized£ºÈİÒ×³öÏÖÕâ¶Î´úÂëÃ»Ö´ĞĞÍê¾ÍÈ¥Ö´ĞĞÆäËû´úÂë
- * @date 2014Äê3ÔÂ3ÈÕ
+ * @author å¾ç«‹
+ * @Decription ä¼ ç»Ÿçº¿ç¨‹äº’æ–¥æŠ€æœ¯ã€‚synchronized<br/>
+ * å‡ºç°äº†è¿è¡Œæ²¡è¿è¡Œå®Œæ•´çš„å°æ¦‚ç‡äº‹ä»¶<br/>
+ * synchronizedï¼šæœ€å¥½åªç”¨ä¸€æ¬¡ï¼Œå‡ºç°2æ¬¡å®¹æ˜“å‡ºç°æ­»é” <br/>
+ * å¦‚æœä¸ç”¨synchronizedï¼šå®¹æ˜“å‡ºç°è¿™æ®µä»£ç æ²¡æ‰§è¡Œå®Œå°±å»æ‰§è¡Œå…¶ä»–ä»£ç 
+ * @date 2014å¹´3æœˆ3æ—¥
  */
 public class SynchronizedDemo {
     /**
@@ -49,14 +49,14 @@ public class SynchronizedDemo {
     }
 
     /**
-     * @author ĞìÁ¢
-     * @Decription 1.ouputºÍouput2ÊÇÃ»ÓĞÔÚclassÉÏ¼Ó¾²Ì¬·½·¨<br/>
-     * 2.ÔÚclassÉÏ¼Ó¾²Ì¬£¬ÄÇÃ´output3Õâ¸ö¾²Ì¬·½·¨ÄÜÍ¬²½Âğ£¿
-     * @date 2014Äê3ÔÂ4ÈÕ
+     * @author å¾ç«‹
+     * @Decription 1.ouputå’Œouput2æ˜¯æ²¡æœ‰åœ¨classä¸ŠåŠ é™æ€æ–¹æ³•<br/>
+     * 2.åœ¨classä¸ŠåŠ é™æ€ï¼Œé‚£ä¹ˆoutput3è¿™ä¸ªé™æ€æ–¹æ³•èƒ½åŒæ­¥å—ï¼Ÿ
+     * @date 2014å¹´3æœˆ4æ—¥
      */
     static class Outputer {
         /**
-         * ¾²Ì¬·½·¨ÊÇÓÃ×Ö½ÚÂë?
+         * é™æ€æ–¹æ³•æ˜¯ç”¨å­—èŠ‚ç ?
          *
          * @param name
          */
@@ -69,14 +69,14 @@ public class SynchronizedDemo {
         }
 
         /**
-         * ±£»¤Ò»¿éÇøÓò
+         * ä¿æŠ¤ä¸€å—åŒºåŸŸ
          *
          * @param name
          */
         public void output(String name) {
             int len = name.length();
-            // synchronized ÀïÃæ·ÅÈÎÒâ¶ÔÏó£¬±£»¤´úÂë,thisÊÇÓëoutput2Í¬²½
-            // Ouput.class ÊÇÓë¾²Ì¬·½·¨Í¬²½
+            // synchronized é‡Œé¢æ”¾ä»»æ„å¯¹è±¡ï¼Œä¿æŠ¤ä»£ç ,thisæ˜¯ä¸output2åŒæ­¥
+            // Ouput.class æ˜¯ä¸é™æ€æ–¹æ³•åŒæ­¥
             synchronized (this) {
                 for (int i = 0; i < len; i++) {
                     System.out.print(name.charAt(i));
@@ -86,7 +86,7 @@ public class SynchronizedDemo {
         }
 
         /**
-         * ±£»¤Õû¸ö·½·¨£¬µÈÓÚthis£¬ÉÏÃæsynchronizedÈç¹ûÓÃthis²ÅÄÜÓë±¾·½·¨½øĞĞ»¥³â
+         * ä¿æŠ¤æ•´ä¸ªæ–¹æ³•ï¼Œç­‰äºthisï¼Œä¸Šé¢synchronizedå¦‚æœç”¨thisæ‰èƒ½ä¸æœ¬æ–¹æ³•è¿›è¡Œäº’æ–¥
          *
          * @param name
          */

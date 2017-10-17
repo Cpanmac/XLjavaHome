@@ -4,11 +4,11 @@ public class Person3 {
     private static Person3 person;
     private String name;
 
-    //���캯��˽�л�
+    //构造函数私有化
     private Person3() {
     }
 
-    //�ṩһ��ȫ�ֵľ�̬������ʹ��ͬ������
+    //提供一个全局的静态方法，使用同步方法
     public static synchronized Person3 getPerson() {
         if (person == null) {
             person = new Person3();

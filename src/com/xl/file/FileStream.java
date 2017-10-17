@@ -12,18 +12,18 @@ public class FileStream {
     @Test
     public void readFile_3() throws IOException {
         FileInputStream fis = new FileInputStream(f);
-        int num = fis.available(); // ¼ÆËã×Ö½Ú¸öÊı£¬»Ø³µ»»ĞĞËã\r\nËãÁ½¸ö£¡
-        byte[] buf = new byte[num]; // ¶¨ÒåÒ»¸ö¸Õ¸ÕºÃµÄ»º³åÇø£¬²»ÓÃÔÙÑ­»·
+        int num = fis.available(); // è®¡ç®—å­—èŠ‚ä¸ªæ•°ï¼Œå›è½¦æ¢è¡Œç®—\r\nç®—ä¸¤ä¸ªï¼
+        byte[] buf = new byte[num]; // å®šä¹‰ä¸€ä¸ªåˆšåˆšå¥½çš„ç¼“å†²åŒºï¼Œä¸ç”¨å†å¾ªç¯
         fis.read(buf);
         System.out.println(num);
         System.out.println(new String(buf));
         fis.close();
     }
 
-    public void readFile_1() throws IOException { // Ò»´Î¶ÁÒ»¸ö×Ö½Ú
+    public void readFile_1() throws IOException { // ä¸€æ¬¡è¯»ä¸€ä¸ªå­—èŠ‚
         FileInputStream fis = new FileInputStream("fos.txt");
         int ch = 0;
-        while ((ch = fis.read()) != -1) { // Ò»´Î¶Á Ò»¸ö
+        while ((ch = fis.read()) != -1) { // ä¸€æ¬¡è¯» ä¸€ä¸ª
             System.out.println((char) ch);
         }
         fis.close();
@@ -35,7 +35,7 @@ public class FileStream {
         FileInputStream fis = new FileInputStream(f);
         byte[] buf = new byte[1024];
         int len = 0;
-        while ((len = fis.read(buf)) != -1) { // ¼ÇµÃÒª°Ñ×Ö½ÚÊı×é´«Èë
+        while ((len = fis.read(buf)) != -1) { // è®°å¾—è¦æŠŠå­—èŠ‚æ•°ç»„ä¼ å…¥
             System.out.println(new String(buf, 0, len));
         }
         fis.close();

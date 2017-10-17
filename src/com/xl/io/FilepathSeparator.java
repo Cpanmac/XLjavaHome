@@ -4,9 +4,9 @@ import java.io.File;
 
 public class FilepathSeparator {
     public static void main(String args[]) {
-        System.out.println("pathSeparator£º" + File.pathSeparator); // µ÷ÓÃ¾²Ì¬³£Á¿
+        System.out.println("pathSeparatorï¼š" + File.pathSeparator); // è°ƒç”¨é™æ€å¸¸é‡
         System.out.println("pathSeparatorChar" + File.pathSeparatorChar);
-        System.out.println("separator£º" + File.separator); // µ÷ÓÃ¾²Ì¬³£Á¿
+        System.out.println("separatorï¼š" + File.separator); // è°ƒç”¨é™æ€å¸¸é‡
         System.out.println("separatorChar:" + File.separatorChar);
         System.out.println(";");
     }

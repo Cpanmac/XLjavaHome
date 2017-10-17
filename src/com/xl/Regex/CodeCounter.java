@@ -9,18 +9,18 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CodeCounter {
-    static long normalLines = 0; // Õı³£ĞĞÊı
-    static long commentLines = 0; // ÓĞÄÚÈİµÄĞĞÊı
-    static long whiteLines = 0; // ¿Õ°×ĞĞÊı
+    static long normalLines = 0; // æ­£å¸¸è¡Œæ•°
+    static long commentLines = 0; // æœ‰å†…å®¹çš„è¡Œæ•°
+    static long whiteLines = 0; // ç©ºç™½è¡Œæ•°
 
     public static void main(String[] args) {
-        String path = StringUtil.getClassPath() + "\\src"; // »ñÈ¡µ±Ç°¹¤³ÌµÄµÄÄ¿Â¼
+        String path = StringUtil.getClassPath() + "\\src"; // è·å–å½“å‰å·¥ç¨‹çš„çš„ç›®å½•
         System.out.println("path========" + path);
         File f = new File(path);
-        File[] codeFiles = f.listFiles(); // »ñÈ¡¸ÃÄ¿Â¼ÏÂµÄËùÓĞÎÄ¼ş
+        File[] codeFiles = f.listFiles(); // è·å–è¯¥ç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
         for (File child : codeFiles) {
             // System.out.println("child.getName()========"+child.getName());
-            if (child.getName().matches(".+java")) { // Æ¥ÅäÒÔjava½áÎ²µÄÎÄ¼ş
+            if (child.getName().matches(".+java")) { // åŒ¹é…ä»¥javaç»“å°¾çš„æ–‡ä»¶
                 // System.out.println("child========"+child);
                 parse(child);
             }
@@ -37,8 +37,8 @@ public class CodeCounter {
             br = new BufferedReader(new FileReader(f));
             String line = "";
             while ((line = br.readLine()) != null) {
-                line = line.trim(); // È¥µôÁ½¶ËµÄ¿Õ¸ñ
-                if (line.matches("^[\\s&&[^\\n]]*$")) { // Èç¹ûÒÔ¿Õ¸ñ¿ªÍ·
+                line = line.trim(); // å»æ‰ä¸¤ç«¯çš„ç©ºæ ¼
+                if (line.matches("^[\\s&&[^\\n]]*$")) { // å¦‚æœä»¥ç©ºæ ¼å¼€å¤´
                     whiteLines++;
                 } else if (line.startsWith("/*") && !line.endsWith("*/")) {
                     commentLines++;

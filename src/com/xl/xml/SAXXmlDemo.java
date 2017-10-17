@@ -11,32 +11,32 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 /*
- * ÊÂ¼ş´¦ÀíµÄ·½Ê½½âÎöXML,ÊÂ¼ş´¦ÀíÆ÷ÓĞ³ÌĞòÔ±±àĞ´
+ * äº‹ä»¶å¤„ç†çš„æ–¹å¼è§£æXML,äº‹ä»¶å¤„ç†å™¨æœ‰ç¨‹åºå‘˜ç¼–å†™
  */
 public class SAXXmlDemo {
-    //ÊµÏÖContentHandler½Ó¿Ú´¦ÀíÆ÷
+    //å®ç°ContentHandleræ¥å£å¤„ç†å™¨
     @Test
     public void read() throws Exception {
-        // 1.´´½¨½âÎö¹¤³§
+        // 1.åˆ›å»ºè§£æå·¥å‚
         SAXParserFactory factory = SAXParserFactory.newInstance();
-        // 2.µÃµ½½âÎöÆ÷
+        // 2.å¾—åˆ°è§£æå™¨
         SAXParser sp = factory.newSAXParser();
-        // 3.µÃµ½¶ÁÈ¡Æ÷
+        // 3.å¾—åˆ°è¯»å–å™¨
         XMLReader reader = sp.getXMLReader();
-        // 4.ÉèÖÃÄÚÈİ´¦ÀíÆ÷
+        // 4.è®¾ç½®å†…å®¹å¤„ç†å™¨
         TagValueHandler handler = new TagValueHandler();
         reader.setContentHandler(handler);
-        // 5.¶ÁÈ¡xmlÎÄµµÄÚÈİ
+        // 5.è¯»å–xmlæ–‡æ¡£å†…å®¹
         reader.parse("book.xml");
     }
 }
 
-// ÄÚÈİ´¦ÀíÆ÷,µÃµ½xmlÎÄµµÄÚÈİ,½Ó¿Ú
+// å†…å®¹å¤„ç†å™¨,å¾—åˆ°xmlæ–‡æ¡£å†…å®¹,æ¥å£
 class TagValueHandler implements ContentHandler {
-    // ¶ÁÈ¡
+    // è¯»å–
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        // ´òÓ¡ËùÓĞµÄÎÄµµÄÚÈİ
+        // æ‰“å°æ‰€æœ‰çš„æ–‡æ¡£å†…å®¹
         System.out.println(new String(ch));
     }
 
@@ -46,7 +46,7 @@ class TagValueHandler implements ContentHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        System.out.println("½áÊøÁË!");
+        System.out.println("ç»“æŸäº†!");
     }
 
     @Override
@@ -69,16 +69,16 @@ class TagValueHandler implements ContentHandler {
     public void skippedEntity(String name) throws SAXException {
     }
 
-    // ¿ªÊ¼¶ÁÈ¡
+    // å¼€å§‹è¯»å–
     @Override
     public void startDocument() throws SAXException {
-        System.out.println("¿ªÊ¼¶ÁÈ¡");
+        System.out.println("å¼€å§‹è¯»å–");
     }
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes atts) throws SAXException {
         System.out.println("<" + qName + ">");
-        // ÓĞ¿ÉÄÜÅ×³ö¿ÕÖ¸ÕëÒì³£
+        // æœ‰å¯èƒ½æŠ›å‡ºç©ºæŒ‡é’ˆå¼‚å¸¸
         for (int i = 0; atts != null && i < atts.getLength(); i++) {
             String attName = atts.getQName(i);
             String attValue = atts.getValue(i);

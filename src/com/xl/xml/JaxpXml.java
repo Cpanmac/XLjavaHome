@@ -20,103 +20,103 @@ public class JaxpXml {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse("xml/book.xml");
-        NodeList list = document.getElementsByTagName("ÊéÃû");
-        // getLength»ñÈ¡ÁĞ±í½ÚµãÊı
+        NodeList list = document.getElementsByTagName("ä¹¦å");
+        // getLengthè·å–åˆ—è¡¨èŠ‚ç‚¹æ•°
         System.out.println(list.getLength());
-        // »ñÈ¡½Úµã
+        // è·å–èŠ‚ç‚¹
         Node node = list.item(1);
-        // »ñÈ¡½ÚµãÖĞµÄÄÚÈİ
+        // è·å–èŠ‚ç‚¹ä¸­çš„å†…å®¹
         String content = node.getTextContent();
         System.out.println(content);
     }
 
-    // µÃµ½ËùÓĞµÄ±êÇ©
+    // å¾—åˆ°æ‰€æœ‰çš„æ ‡ç­¾
     @Test
     public void read2() throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse("xml/book.xml");
-        // µÃµ½¸ù½Úµã
-        Node root = document.getElementsByTagName("Êé¼Ü").item(0);
+        // å¾—åˆ°æ ¹èŠ‚ç‚¹
+        Node root = document.getElementsByTagName("ä¹¦æ¶").item(0);
         list(root);
     }
 
-    // µÃµ½xmlÖĞ±êÇ©µÄÊôĞÔÖµ:<ÊéÃû name="xxx">
+    // å¾—åˆ°xmlä¸­æ ‡ç­¾çš„å±æ€§å€¼:<ä¹¦å name="xxx">
     @Test
     public void read3() throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse("xml/book.xml");
-        // ElementÊÇNodeµÄ×ÓÀà,Ç¿×ª
-        Element bookName = (Element) document.getElementsByTagName("ÊéÃû").item(0);
+        // Elementæ˜¯Nodeçš„å­ç±»,å¼ºè½¬
+        Element bookName = (Element) document.getElementsByTagName("ä¹¦å").item(0);
         String value = bookName.getAttribute("name");
         System.out.println(value);
     }
 
-    // ÏòxmlÎÄµµÌí¼Ó½Úµã:<ÊÛ¼Û>59.00Ôª</ÊÛ¼Û>
+    // å‘xmlæ–‡æ¡£æ·»åŠ èŠ‚ç‚¹:<å”®ä»·>59.00å…ƒ</å”®ä»·>
     @Test
     public void add() throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse("xml/book.xml");
-        // ´´½¨½Úµã
-        Element price = document.createElement("ÊÛ¼Û");
-        price.setTextContent("59.00Ôª");
-        // °Ñ´´½¨µÄ½Úµã¹Òµ½µÚÒ»±¾ÊéÉÏ
-        Element book = (Element) document.getElementsByTagName("Êé").item(0);
+        // åˆ›å»ºèŠ‚ç‚¹
+        Element price = document.createElement("å”®ä»·");
+        price.setTextContent("59.00å…ƒ");
+        // æŠŠåˆ›å»ºçš„èŠ‚ç‚¹æŒ‚åˆ°ç¬¬ä¸€æœ¬ä¹¦ä¸Š
+        Element book = (Element) document.getElementsByTagName("ä¹¦").item(0);
         //		book.appendChild(price);
-        // °Ñ¸üĞÂºóÄÚ´æĞ´µ½xmlÎÄµµ
+        // æŠŠæ›´æ–°åå†…å­˜å†™åˆ°xmlæ–‡æ¡£
         TransformerFactory tsf = TransformerFactory.newInstance();
         Transformer tf = tsf.newTransformer();
         //		tf.transform(new DOMSource(document), new StreamResult(
         //				new FileOutputStream("xml/book.xml")));
-        // ÏòÖ¸¶¨Î»ÖÃÌí¼Ó½Úµã,ÏòÊÛ¼Û½ÚµãÖ®Ç°²å
-        // µÃµ½²Î¿¼½ÚµãrefChild
-        Element refNode = (Element) document.getElementsByTagName("ÊÛ¼Û").item(0);
-        // µÃÒª¹ÒÔØµÄ½Úµã(¸¸½Úµã)book
-        // Íùbook½ÚµãµÄÖ¸¶¨Î»ÖÃ²åÈë
+        // å‘æŒ‡å®šä½ç½®æ·»åŠ èŠ‚ç‚¹,å‘å”®ä»·èŠ‚ç‚¹ä¹‹å‰æ’
+        // å¾—åˆ°å‚è€ƒèŠ‚ç‚¹refChild
+        Element refNode = (Element) document.getElementsByTagName("å”®ä»·").item(0);
+        // å¾—è¦æŒ‚è½½çš„èŠ‚ç‚¹(çˆ¶èŠ‚ç‚¹)book
+        // å¾€bookèŠ‚ç‚¹çš„æŒ‡å®šä½ç½®æ’å…¥
         book.insertBefore(price, refNode);
         tf.transform(new DOMSource(document), new StreamResult(new FileOutputStream("xml/book.xml")));
-        System.out.println("ÎÄ¼ş¸üĞÂ³É¹¦!");
+        System.out.println("æ–‡ä»¶æ›´æ–°æˆåŠŸ!");
     }
 
-    // ÏòxmlÎÄµµÌí¼ÓnameÊôĞÔ:<ÊéÃû name="xxx">59.00Ôª</ÊéÃû>
+    // å‘xmlæ–‡æ¡£æ·»åŠ nameå±æ€§:<ä¹¦å name="xxx">59.00å…ƒ</ä¹¦å>
     @Test
     public void add2() throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse("xml/book.xml");
-        Element bookname = (Element) document.getElementsByTagName("ÊéÃû").item(0);
+        Element bookname = (Element) document.getElementsByTagName("ä¹¦å").item(0);
         bookname.setAttribute("name", "xxxx");
         TransformerFactory tsf = TransformerFactory.newInstance();
         Transformer tf = tsf.newTransformer();
         tf.transform(new DOMSource(document), new StreamResult(new FileOutputStream("xml/book.xml")));
-        System.out.println("ÎÄ¼ş¸üĞÂ³É¹¦!");
+        System.out.println("æ–‡ä»¶æ›´æ–°æˆåŠŸ!");
     }
 
-    //É¾³ı½Úµã
+    //åˆ é™¤èŠ‚ç‚¹
     @Test
     public void delete() throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse("xml/book.xml");
-        //µÃµ½É¾³ıµÄ½Úµã
-        Element e = (Element) document.getElementsByTagName("ÊÛ¼Û").item(0);
-        //		µÃµ½ÒªÉ¾³ı½ÚµãµÄ°Ö°Ö
-        //		1.ÓÃµÃµ½¸¸½Úµã
+        //å¾—åˆ°åˆ é™¤çš„èŠ‚ç‚¹
+        Element e = (Element) document.getElementsByTagName("å”®ä»·").item(0);
+        //		å¾—åˆ°è¦åˆ é™¤èŠ‚ç‚¹çš„çˆ¸çˆ¸
+        //		1.ç”¨å¾—åˆ°çˆ¶èŠ‚ç‚¹
         Element book = (Element) e.getParentNode();
         book.removeChild(e);
         TransformerFactory tsf = TransformerFactory.newInstance();
         Transformer tf = tsf.newTransformer();
         tf.transform(new DOMSource(document), new StreamResult(new FileOutputStream("xml/book.xml")));
-        System.out.println("ÎÄ¼ş¸üĞÂ³É¹¦!");
-        //¼òĞ´:   e.getParentNode().removeChild(e);
-        //É¾³ı¸¸½Úµã e.getParentNode().getParentNode().removeChild(e.getParentNode());
+        System.out.println("æ–‡ä»¶æ›´æ–°æˆåŠŸ!");
+        //ç®€å†™:   e.getParentNode().removeChild(e);
+        //åˆ é™¤çˆ¶èŠ‚ç‚¹ e.getParentNode().getParentNode().removeChild(e.getParentNode());
     }
 
-    // ´òÓ¡½Úµã
+    // æ‰“å°èŠ‚ç‚¹
     private void list(Node node) {
-        // ÅĞ¶ÏÈç¹ûnodeÊÇ±êÇ©.¾Í´òÓ¡ÊÇÎÄ±¾¾ÍÊ²Ã´Ò²²»´í
+        // åˆ¤æ–­å¦‚æœnodeæ˜¯æ ‡ç­¾.å°±æ‰“å°æ˜¯æ–‡æœ¬å°±ä»€ä¹ˆä¹Ÿä¸é”™
         if (node instanceof Element) {
             System.out.println(node.getNodeName());
         }

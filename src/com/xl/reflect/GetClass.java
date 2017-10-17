@@ -4,15 +4,15 @@ import com.xl.entity.Person;
 import org.junit.Test;
 
 public class GetClass {
-    // 1.»ñÈ¡×Ö½ÚÂë¶ÔÏóµÄ·½Ê½:
+    // 1.è·å–å­—èŠ‚ç å¯¹è±¡çš„æ–¹å¼:
     @Test
     public void getClassObject_1() throws ClassNotFoundException {
         Person p = new Person();
     }
 
-    // ·½Ê½¶ş£º
-    // 2.ÈÎºÎÊı¾İÀàĞÍ¶¼¾ß±¸Ò»¸ö¾²Ì¬µÄÊôĞÔ.classÀ´»ñÈ¡¶ÔÓ¦µÄClass¶ÔÏó¡£
-    // ÌØµã£ºÏà¶Ô¼òµ¥£¬µ«ÊÇ»¹ÊÇÒªÃ÷È·ÓÃµ½ÀàÖĞµÄ¾²Ì¬³ÉÔ±¡£»¹ÊÇ²»¹»À©Õ¹
+    // æ–¹å¼äºŒï¼š
+    // 2.ä»»ä½•æ•°æ®ç±»å‹éƒ½å…·å¤‡ä¸€ä¸ªé™æ€çš„å±æ€§.classæ¥è·å–å¯¹åº”çš„Classå¯¹è±¡ã€‚
+    // ç‰¹ç‚¹ï¼šç›¸å¯¹ç®€å•ï¼Œä½†æ˜¯è¿˜æ˜¯è¦æ˜ç¡®ç”¨åˆ°ç±»ä¸­çš„é™æ€æˆå‘˜ã€‚è¿˜æ˜¯ä¸å¤Ÿæ‰©å±•
     @Test
     public void getClassObject_2() {
         Class clazz = Person.class;
@@ -23,14 +23,14 @@ public class GetClass {
         System.out.println(clazz == clazz1);
     }
 
-    // ·½Ê½Èı£º
-    // Ö»ÒªÍ¨¹ı¸ø¶¨ÀàµÄ×Ö·û´®Ãû³Æ¾Í¿ÉÒÔ»ñÈ¡¸ÃÀà£¬¸üÎªÀ©Õ¹¡£
-    // ¿ÉÒÔÓÃClassÀàÖĞµÄ·½·¨Íê³É¡£ ¸Ã·½·¨¾ÍÊÇforName
+    // æ–¹å¼ä¸‰ï¼š
+    // åªè¦é€šè¿‡ç»™å®šç±»çš„å­—ç¬¦ä¸²åç§°å°±å¯ä»¥è·å–è¯¥ç±»ï¼Œæ›´ä¸ºæ‰©å±•ã€‚
+    // å¯ä»¥ç”¨Classç±»ä¸­çš„æ–¹æ³•å®Œæˆã€‚ è¯¥æ–¹æ³•å°±æ˜¯forName
     @Test
     public void getClassObject_3() throws ClassNotFoundException {
-        String className = "java.lang.Class"; // ±ØĞë´ø°üÃû
-        String className1 = "reflect.GetClass"; // ÕâÑù²Å¶Ô
-        String className2 = "Person"; // ÕâÑùÊÇ´íÎóµÄ
+        String className = "java.lang.Class"; // å¿…é¡»å¸¦åŒ…å
+        String className1 = "reflect.GetClass"; // è¿™æ ·æ‰å¯¹
+        String className2 = "Person"; // è¿™æ ·æ˜¯é”™è¯¯çš„
         Class clazz = Class.forName(className);
         // Class clazz2=Class.forName(className2);
         System.out.println(clazz);

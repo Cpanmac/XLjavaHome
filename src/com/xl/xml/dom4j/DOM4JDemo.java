@@ -18,25 +18,25 @@ import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Iterator;
 import java.util.List;
-//ÂÒÂë²úÉúÔ­Òò:ioÁ÷
-//±¾ÉíÊÇ°´utf-8À´µÄ
+//ä¹±ç äº§ç”ŸåŸå› :ioæµ
+//æœ¬èº«æ˜¯æŒ‰utf-8æ¥çš„
 
 /**
- * @author ĞìÁ¢
- * @Decription 1.´´½¨½âÎöÆ÷¡£<br/>2.
+ * @author å¾ç«‹
+ * @Decription 1.åˆ›å»ºè§£æå™¨ã€‚<br/>2.
  * @date 2014-5-11
  */
 public class DOM4JDemo {
     /**
-     * Òª½âÎöµÄxml
+     * è¦è§£æçš„xml
      */
     private File file;
     /**
-     * ½âÎöÆ÷
+     * è§£æå™¨
      */
     private SAXReader saxReader;
     /**
-     * ÎÄµµ¶ÔÏó
+     * æ–‡æ¡£å¯¹è±¡
      */
     private Document document;
 
@@ -48,13 +48,13 @@ public class DOM4JDemo {
         //writer.close();
     }
 
-    // ·½·¨¶ş,½â¾ö±àÂëÎÊÌâ:FileOutputStream
+    // æ–¹æ³•äºŒ,è§£å†³ç¼–ç é—®é¢˜:FileOutputStream
     @Test
     public void add() throws DocumentException, IOException {
         SAXReader reader = new SAXReader();
         Document document = reader.read(file);
         Element book = document.getRootElement();
-        book.addElement("ÊÛ¼Û").setText("208");
+        book.addElement("å”®ä»·").setText("208");
         OutputFormat format = OutputFormat.createPrettyPrint();
         format.setEncoding("utf-8");
         XMLWriter writer = new XMLWriter(new FileOutputStream(file), format);
@@ -62,25 +62,25 @@ public class DOM4JDemo {
         writer.close();
     }
 
-    // Ôö:ÔÚµÚÒ»±¾Ö¸¶¨µÄÎ»ÖÃÌí¼ÓÒ»¸öĞÂµÄÊÛ¼Û:<ÊÛ¼Û>305Ôª</ÊÛ¼Û>,ÓÃlist.addÌí¼Ó
+    // å¢:åœ¨ç¬¬ä¸€æœ¬æŒ‡å®šçš„ä½ç½®æ·»åŠ ä¸€ä¸ªæ–°çš„å”®ä»·:<å”®ä»·>305å…ƒ</å”®ä»·>,ç”¨list.addæ·»åŠ 
     @Test
     public void add2() throws DocumentException, IOException {
         SAXReader reader = new SAXReader();
         Document document = reader.read(file);
         Element books = document.getRootElement();
-        // µÃµ½Êé
-        Element book = books.element("Êé");
+        // å¾—åˆ°ä¹¦
+        Element book = books.element("ä¹¦");
         System.out.println(book.getName());
-        // µÃµ½ÊéµÄËùÓĞ×Ó½Úµã
+        // å¾—åˆ°ä¹¦çš„æ‰€æœ‰å­èŠ‚ç‚¹
         List list = book.elements();
-        // ´´½¨½Úµã
-        Element price = DocumentHelper.createElement("ÊÛ¼Û");
-        price.setText("305Ôª");
-        // ÔÚµÚ¶ş¸öÎ»ÖÃÌí¼Ó
+        // åˆ›å»ºèŠ‚ç‚¹
+        Element price = DocumentHelper.createElement("å”®ä»·");
+        price.setText("305å…ƒ");
+        // åœ¨ç¬¬äºŒä¸ªä½ç½®æ·»åŠ 
         list.add(2, price);
         Iterator it = list.iterator();
         while (it.hasNext()) {
-            // ´òÓ¡list¼¯ºÏÀïÃæµÄÄÚÈİ
+            // æ‰“å°listé›†åˆé‡Œé¢çš„å†…å®¹
             System.out.println(it.next());
         }
         OutputFormat format = OutputFormat.createPrettyPrint();
@@ -90,12 +90,12 @@ public class DOM4JDemo {
         writer.close();
     }
 
-    // É¾:É¾³ı¸Õ²Å¼ÓµÄ½Úµã,µÃµ½¸¸½ÚµãÉ¾³ı×Ô¼º
+    // åˆ :åˆ é™¤åˆšæ‰åŠ çš„èŠ‚ç‚¹,å¾—åˆ°çˆ¶èŠ‚ç‚¹åˆ é™¤è‡ªå·±
     @Test
     public void delete() throws DocumentException, IOException {
         SAXReader reader = new SAXReader();
         Document document = reader.read(file);
-        Element price = document.getRootElement().element("Êé").element("ÊÛ¼Û");
+        Element price = document.getRootElement().element("ä¹¦").element("å”®ä»·");
         price.getParent().remove(price);
         OutputFormat format = OutputFormat.createPrettyPrint();
         format.setEncoding("utf-8");
@@ -142,26 +142,26 @@ public class DOM4JDemo {
     public void read() throws DocumentException {
         SAXReader reader = new SAXReader();
         Document document = reader.read(file);
-        // ÏÈµÃ¸ù½Úµã,²»ÄÜÖ±½Ó°´½ÚµãÃûµÃ
+        // å…ˆå¾—æ ¹èŠ‚ç‚¹,ä¸èƒ½ç›´æ¥æŒ‰èŠ‚ç‚¹åå¾—
         Element root = document.getRootElement();
-        // Element book=root.element("Êé");
-        // ÒªµÃµ½µÚ¶ş±¾ÊéµÄÎÄ±¾
-        Element book = (Element) root.elements("Êé").get(1);
-        String value = book.element("ÊéÃû").getText();
+        // Element book=root.element("ä¹¦");
+        // è¦å¾—åˆ°ç¬¬äºŒæœ¬ä¹¦çš„æ–‡æœ¬
+        Element book = (Element) root.elements("ä¹¦").get(1);
+        String value = book.element("ä¹¦å").getText();
         System.out.println(value);
-        // µÃµ½µÚ¶ş±¾ÊéµÄÊôĞÔÖµ
-        value = book.element("ÊéÃû").attributeValue("name");
+        // å¾—åˆ°ç¬¬äºŒæœ¬ä¹¦çš„å±æ€§å€¼
+        value = book.element("ä¹¦å").attributeValue("name");
         System.out.println(value);
     }
 
-    // ¸Ä:µÃµ½½ÚµãsetText·½·¨
+    // æ”¹:å¾—åˆ°èŠ‚ç‚¹setTextæ–¹æ³•
     @Test
     public void update() throws Exception {
         SAXReader reader = new SAXReader();
         Document document = reader.read(file);
-        // µÃµ½µÚ¶ş±¾Êé
-        Element book = (Element) document.getRootElement().elements("Êé").get(1);
-        book.element("×÷Õß").setText("¹şà¶");
+        // å¾—åˆ°ç¬¬äºŒæœ¬ä¹¦
+        Element book = (Element) document.getRootElement().elements("ä¹¦").get(1);
+        book.element("ä½œè€…").setText("å“ˆå–½");
         OutputFormat format = OutputFormat.createPrettyPrint();
         format.setEncoding("utf-8");
         XMLWriter writer = new XMLWriter(new FileOutputStream(file), format);
@@ -169,19 +169,19 @@ public class DOM4JDemo {
         writer.close();
     }
 
-    // Ğ´:ÔÚµÚÒ»±¾ÊéÌí¼ÓÒ»¸öĞÂµÄÊÛ¼Û,OutputStreamWriter
+    // å†™:åœ¨ç¬¬ä¸€æœ¬ä¹¦æ·»åŠ ä¸€ä¸ªæ–°çš„å”®ä»·,OutputStreamWriter
     @Test
     public void write() throws DocumentException, IOException {
         SAXReader reader = new SAXReader();
         Document document = reader.read(file);
         Element book = document.getRootElement();
-        book.addElement("ÊÛ¼Û").setText("209Ôª");
-        // OutputStreamWriter¿ÉÒÔÖ¸¶¨Âë±í
+        book.addElement("å”®ä»·").setText("209å…ƒ");
+        // OutputStreamWriterå¯ä»¥æŒ‡å®šç è¡¨
         XMLWriter writer = new XMLWriter(new OutputStreamWriter(new FileOutputStream(file, true), "utf-8"));
-        // ´´½¨¸ñÊ½»¯Êä³öÆ÷
+        // åˆ›å»ºæ ¼å¼åŒ–è¾“å‡ºå™¨
         OutputFormat format = OutputFormat.createPrettyPrint();
         format.setEncoding("gb2312");
-        // Á½¸ö±àÂëÒªÒ»ÖÂ¾Í²»»á³öÏÖÂÒÂë
+        // ä¸¤ä¸ªç¼–ç è¦ä¸€è‡´å°±ä¸ä¼šå‡ºç°ä¹±ç 
         writer = new XMLWriter(new OutputStreamWriter(new FileOutputStream(file), "gb2312"), format);
         writer.write(document);
         writer.close();

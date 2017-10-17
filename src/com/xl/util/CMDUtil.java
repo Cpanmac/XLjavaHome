@@ -4,14 +4,14 @@ import java.io.IOException;
 
 /**
  * Created with IntelliJ IDEA.
- * User: 徐立
+ * User: 寰愮珛
  * Date: 2017/10/11
  * Time: 13:25
  * To change this template use File | Settings | File Templates.
  */
 public class CMDUtil {
     /**
-     * 关闭java进程
+     * 鍏抽棴java杩涚▼
      *
      * @throws IOException
      */

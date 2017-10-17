@@ -7,22 +7,22 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-//GUI±à³Ì
+//GUIç¼–ç¨‹
 public class Demo1 {
     @Test
     public void test1() {
-        // ´´½¨Ò»¸ö²»¿É¼û´°Ìå
+        // åˆ›å»ºä¸€ä¸ªä¸å¯è§çª—ä½“
         Frame f = new Frame();
-        // ÉèÖÃ´°ÌåµÄ´óĞ¡
+        // è®¾ç½®çª—ä½“çš„å¤§å°
         f.setSize(200, 250);
-        // ÉèÖÃÏÔÊ¾µÄÎ»ÖÃ
+        // è®¾ç½®æ˜¾ç¤ºçš„ä½ç½®
         f.setLocation(300, 200);
-        // ½«´°ÌåÏÔÊ¾³öÀ´
+        // å°†çª—ä½“æ˜¾ç¤ºå‡ºæ¥
         f.setVisible(true);
-        // Îª´°ÌåÌí¼ÓÊÂ¼ş£¨ÊÂ¼ş¼àÌıÆ÷¼àÌıÊÂ¼şÔ´
+        // ä¸ºçª—ä½“æ·»åŠ äº‹ä»¶ï¼ˆäº‹ä»¶ç›‘å¬å™¨ç›‘å¬äº‹ä»¶æº
         f.addWindowListener(new MyWindowListener());
         try {
-            Thread.sleep(10000); // ÈÃÏß³ÌµÈ´ı
+            Thread.sleep(10000); // è®©çº¿ç¨‹ç­‰å¾…
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -30,17 +30,17 @@ public class Demo1 {
     }
 }
 
-// ÊÊÅäÆ÷Ä£Ê½
+// é€‚é…å™¨æ¨¡å¼
 class MyWindowListener extends WindowAdapter {
     public void windowClosing(WindowEvent e) {
-        // È¡µÃÊÂ¼şÔ´
+        // å–å¾—äº‹ä»¶æº
         Frame frame = (Frame) e.getSource();
         frame.setVisible(false);
         System.exit(0);
     }
 }
 
-// 1.ÊÂ¼ş¼àÌıÆ÷,ÕâÑùÌ«Âé·³ÁË¿ÉÒÔÑ¡ÔñÊÊÅäÆ÷Ä£Ê½
+// 1.äº‹ä»¶ç›‘å¬å™¨,è¿™æ ·å¤ªéº»çƒ¦äº†å¯ä»¥é€‰æ‹©é€‚é…å™¨æ¨¡å¼
 class MyWindowListener1 implements WindowListener {
     @Override
     public void windowActivated(WindowEvent e) {
@@ -54,8 +54,8 @@ class MyWindowListener1 implements WindowListener {
 
     @Override
     public void windowClosing(WindowEvent e) {
-        System.out.println("ºÇºÇ");
-        // È¡µÃÊÂ¼şÔ´
+        System.out.println("å‘µå‘µ");
+        // å–å¾—äº‹ä»¶æº
         Frame frame = (Frame) e.getSource();
         frame.setVisible(false);
         System.exit(0);

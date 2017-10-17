@@ -19,13 +19,13 @@ public class InvokeSetAndGet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        setter(obj, "name", "ÄĞ", String.class);
+        setter(obj, "name", "ç”·", String.class);
         getter(obj, "name");
     }
 
     /**
-     * @param obj ²Ù×÷µÄ¶ÔÏó
-     * @param att ²Ù×÷µÄÊôĞÔ
+     * @param obj æ“ä½œçš„å¯¹è±¡
+     * @param att æ“ä½œçš„å±æ€§
      */
     public void getter(Object obj, String att) {
         try {
@@ -38,10 +38,10 @@ public class InvokeSetAndGet {
     }
 
     /**
-     * @param obj   ²Ù×÷µÄ¶ÔÏó
-     * @param att   ²Ù×÷µÄÊôĞÔ
-     * @param value ÉèÖÃµÄÖµ
-     * @param type  ²ÎÊıµÄÊôĞÔ
+     * @param obj   æ“ä½œçš„å¯¹è±¡
+     * @param att   æ“ä½œçš„å±æ€§
+     * @param value è®¾ç½®çš„å€¼
+     * @param type  å‚æ•°çš„å±æ€§
      */
     public void setter(Object obj, String att, Object value, Class<?> type) {
         try {
@@ -54,7 +54,7 @@ public class InvokeSetAndGet {
     }
 
     /**
-     * ½«µÚÒ»¸ö×ÖÄ¸¸Ä³É´óĞ´
+     * å°†ç¬¬ä¸€ä¸ªå­—æ¯æ”¹æˆå¤§å†™
      *
      * @param content
      */

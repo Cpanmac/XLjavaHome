@@ -5,29 +5,29 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class ExecutorDemo {
-    private static Integer pages = 1; // ÍøÒ³Êý
-    private static boolean exeFlag = true; // Ö´ÐÐ±êÊ¶
+    private static Integer pages = 1; // ç½‘é¡µæ•°
+    private static boolean exeFlag = true; // æ‰§è¡Œæ ‡è¯†
 
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(10); // ´´½¨ExecutorService Á¬½Ó³ØÄ¬ÈÏÁ¬½Ó10¸ö
+        ExecutorService executorService = Executors.newFixedThreadPool(10); // åˆ›å»ºExecutorService è¿žæŽ¥æ± é»˜è®¤è¿žæŽ¥10ä¸ª
         while (exeFlag) {
             if (pages <= 100) {
                 executorService.execute(new Runnable() {
                     @Override
                     public void run() {
-                        System.out.println("ÅÀÈ¡ÁËµÚ" + pages + "ÍøÒ³...");
+                        System.out.println("çˆ¬å–äº†ç¬¬" + pages + "ç½‘é¡µ...");
                         pages++;
                     }
                 });
             } else {
-                if (((ThreadPoolExecutor) executorService).getActiveCount() == 0) { // »î¶¯Ïß³Ì¸öÊýÊÇ0
-                    executorService.shutdown(); // ½áÊøËùÓÐÏß³Ì
+                if (((ThreadPoolExecutor) executorService).getActiveCount() == 0) { // æ´»åŠ¨çº¿ç¨‹ä¸ªæ•°æ˜¯0
+                    executorService.shutdown(); // ç»“æŸæ‰€æœ‰çº¿ç¨‹
                     exeFlag = false;
-                    System.out.println("ÅÀ³æÈÎÎñÒÑ¾­Íê³É");
+                    System.out.println("çˆ¬è™«ä»»åŠ¡å·²ç»å®Œæˆ");
                 }
             }
             try {
-                Thread.sleep(100); // Ïß³ÌÐÝÏ¢0.1Ãë
+                Thread.sleep(100); // çº¿ç¨‹ä¼‘æ¯0.1ç§’
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

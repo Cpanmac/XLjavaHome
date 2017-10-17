@@ -15,14 +15,14 @@ import java.net.URL;
 import java.util.Arrays;
 
 /**
- * @author ĞìÁ¢
- * @Decription ÀûÓÃJsoup½âÎöhtml
- * @date 2014Äê3ÔÂ19ÈÕ
+ * @author å¾ç«‹
+ * @Decription åˆ©ç”¨Jsoupè§£æhtml
+ * @date 2014å¹´3æœˆ19æ—¥
  */
 public class HtmlDemo {
     org.jsoup.nodes.Document doc;
     /**
-     * Òª½âÎöµÄhtml
+     * è¦è§£æçš„html
      */
     private File file;
     private URL url;
@@ -30,14 +30,14 @@ public class HtmlDemo {
 
     @Before
     public void init() throws IOException {
-        file = new File(FileTool.getCurrentPath(this), "¸öÈË¿ª¹«Ë¾µÄÁ÷³Ì£¬ÒÔºóÓÃµÃ×Å£¨¾­µä£©.html");
+        file = new File(FileTool.getCurrentPath(this), "ä¸ªäººå¼€å…¬å¸çš„æµç¨‹ï¼Œä»¥åç”¨å¾—ç€ï¼ˆç»å…¸ï¼‰.html");
         doc = Jsoup.parse(file, "UTF-8");
         url = new URL("http://www.baidu.com/baidu?word=%E9%A3%8E%E6%99%AF&ie=utf-8&tn=98012088_2_dg&1402964659639");
         url = new URL("http://bbs.goumin.com/thread-2939853-1-1.html");
     }
 
     /**
-     * ´óĞ´Ğ¡Ğ´¶¼¿ÉÒÔ
+     * å¤§å†™å°å†™éƒ½å¯ä»¥
      *
      * @throws DocumentException
      * @throws IOException

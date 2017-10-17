@@ -2,6 +2,6 @@ package com.xl.design.abstractfactory;
 
 public class WenshiBanana extends Banana {
     public void get() {
-        System.out.println("²É¼¯ÎÂÊÒÏã½¶");
+        System.out.println("é‡‡é›†æ¸©å®¤é¦™è•‰");
     }
 }

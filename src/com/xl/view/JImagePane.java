@@ -8,44 +8,44 @@ import java.io.IOException;
 @SuppressWarnings("serial")
 public class JImagePane extends JPanel {
     /**
-     * ±³¾°Í¼Æ¬
+     * èƒŒæ™¯å›¾ç‰‡
      */
     private Image image = null;
     /**
-     * ÊÇ·ñ×ÔÊÊÓ¦
+     * æ˜¯å¦è‡ªé€‚åº”
      */
     private boolean autoResize = false;
 
     /**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      */
     public JImagePane() {
         this(null, false);
     }
 
     /**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      *
-     * @param autoResize - Í¼ĞÎÊÇ·ñ¸ù¾İÃæ´ó´óĞ¡×ÔÊÊÓ¦
+     * @param autoResize - å›¾å½¢æ˜¯å¦æ ¹æ®é¢å¤§å¤§å°è‡ªé€‚åº”
      */
     public JImagePane(boolean autoResize) {
         this(null, autoResize);
     }
 
     /**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      *
-     * @param image - Í¼Æ¬
+     * @param image - å›¾ç‰‡
      */
     public JImagePane(Image image) {
         this(image, false);
     }
 
     /**
-     * ¹¹Ôì·½·¨
+     * æ„é€ æ–¹æ³•
      *
-     * @param image      - Í¼Æ¬
-     * @param autoResize - ÊÇ·ñ×ÔÊÊÓ¦
+     * @param image      - å›¾ç‰‡
+     * @param autoResize - æ˜¯å¦è‡ªé€‚åº”
      */
     public JImagePane(Image image, boolean autoResize) {
         super();
@@ -54,7 +54,7 @@ public class JImagePane extends JPanel {
         repaint();
     }
 
-    // --------------ÒÔÏÂÎª²âÊÔÓÃÀı£¬¿ÉÒÔ½«Í¼Æ¬¸ÄÎªÄã×Ô¼ºµÄÍ¼Æ¬½øĞĞ²âÊÔ-------------
+    // --------------ä»¥ä¸‹ä¸ºæµ‹è¯•ç”¨ä¾‹ï¼Œå¯ä»¥å°†å›¾ç‰‡æ”¹ä¸ºä½ è‡ªå·±çš„å›¾ç‰‡è¿›è¡Œæµ‹è¯•-------------
     private static void initGUI() {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,7 +91,7 @@ public class JImagePane extends JPanel {
     }
 
     /**
-     * ·µ»Ø±³¾°Í¼Æ¬
+     * è¿”å›èƒŒæ™¯å›¾ç‰‡
      *
      * @return
      */
@@ -100,9 +100,9 @@ public class JImagePane extends JPanel {
     }
 
     /**
-     * ÉèÖÃ±³¾°Í¼Æ¬
+     * è®¾ç½®èƒŒæ™¯å›¾ç‰‡
      *
-     * @param image - ±³¾°Í¼Æ¬
+     * @param image - èƒŒæ™¯å›¾ç‰‡
      */
     public void setImage(Image image) {
         this.image = image;
@@ -110,7 +110,7 @@ public class JImagePane extends JPanel {
     }
 
     /**
-     * ·µ»ØÍ¼Æ¬ÊÇ·ñ×ÔÊÊÓ¦
+     * è¿”å›å›¾ç‰‡æ˜¯å¦è‡ªé€‚åº”
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class JImagePane extends JPanel {
     }
 
     /**
-     * ÉèÖÃÍ¼Æ¬ÊÇ·ñ×ÔÊÊÓ¦
+     * è®¾ç½®å›¾ç‰‡æ˜¯å¦è‡ªé€‚åº”
      *
      * @param autoResize
      */
@@ -127,5 +127,5 @@ public class JImagePane extends JPanel {
         this.autoResize = autoResize;
         repaint();
     }
-    // -------------------------²âÊÔÓÃÀı½áÊø-------------------------
+    // -------------------------æµ‹è¯•ç”¨ä¾‹ç»“æŸ-------------------------
 }

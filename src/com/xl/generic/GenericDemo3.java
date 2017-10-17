@@ -3,11 +3,11 @@ package com.xl.generic;
 import javafx.concurrent.Worker;
 
 /*
- * ·ºĞÍÇ°×ö·¨ class Tool { private Object obj; publlic void setWoker(Object obj) {
+ * æ³›å‹å‰åšæ³• class Tool { private Object obj; publlic void setWoker(Object obj) {
  * this.object=object; } public Object getObject() { return object; } }
  */
-// ·ºĞÍÀà
-class Utils<QQ> // ÓÉ¶Ô·½Ö¸¶¨²Ù×÷Ê²Ã´ÀàĞÍµÄ¶ÔÏó
+// æ³›å‹ç±»
+class Utils<QQ> // ç”±å¯¹æ–¹æŒ‡å®šæ“ä½œä»€ä¹ˆç±»å‹çš„å¯¹è±¡
 {
     private QQ q;
 

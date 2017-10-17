@@ -4,14 +4,14 @@ import java.io.File;
 import java.net.URISyntaxException;
 
 /**
- * Title: StringUtil Description: ×Ö·û´®´¦Àí¹«¹²×é¼ş
+ * Title: StringUtil Description: å­—ç¬¦ä¸²å¤„ç†å…¬å…±ç»„ä»¶
  *
- * @author ĞìÁ¢
+ * @author å¾ç«‹
  * @version 1.0
  */
 public class StringUtil {
     /**
-     * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
+     * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º
      *
      * @param str
      * @return boolean
@@ -21,7 +21,7 @@ public class StringUtil {
     }
 
     /**
-     * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
+     * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º
      *
      * @param str
      * @return boolean
@@ -31,7 +31,7 @@ public class StringUtil {
     }
 
     /**
-     * ¿Õ¶ÔÏó´¦Àí
+     * ç©ºå¯¹è±¡å¤„ç†
      *
      * @param ob
      * @return
@@ -49,7 +49,7 @@ public class StringUtil {
      * @param outInfo
      */
     public static void logToControl(String outMode, Object outInfo) {
-        // ´«ÈëERRÔò´òÓ¡ºìÉ«×ÖÌåµ÷ÊÔĞÅÏ¢
+        // ä¼ å…¥ERRåˆ™æ‰“å°çº¢è‰²å­—ä½“è°ƒè¯•ä¿¡æ¯
         if ("err".equals(outMode)) {
             System.err.println(outInfo);
         } else {
@@ -58,7 +58,7 @@ public class StringUtil {
     }
 
     /**
-     * µÃµ½µ±Ç°¹¤³ÌÂ·¾¶
+     * å¾—åˆ°å½“å‰å·¥ç¨‹è·¯å¾„
      *
      * @return
      */
@@ -74,7 +74,7 @@ public class StringUtil {
     }
 
     /**
-     * µÃµ½ClassPathµÄ¾ø¶ÔÂ·¾¶:web ¹¤³ÌclassesÂ·¾¶
+     * å¾—åˆ°ClassPathçš„ç»å¯¹è·¯å¾„:web å·¥ç¨‹classesè·¯å¾„
      *
      * @return
      */
@@ -90,7 +90,7 @@ public class StringUtil {
     }
 
     /**
-     * »ñÈ¡web¹¤³ÌÂ·¾¶£º
+     * è·å–webå·¥ç¨‹è·¯å¾„ï¼š
      *
      * @return
      */
@@ -101,7 +101,7 @@ public class StringUtil {
     }
 
     /**
-     * ÖĞÎÄ×ª»»
+     * ä¸­æ–‡è½¬æ¢
      *
      * @param strvalue string
      * @return string
@@ -120,12 +120,12 @@ public class StringUtil {
     }
 
 	/*
-     * ×Ö·û´®Ìæ»»·½·¨£ºÇø·Ö´óĞ¡Ğ´
+     * å­—ç¬¦ä¸²æ›¿æ¢æ–¹æ³•ï¼šåŒºåˆ†å¤§å°å†™
 	 * 
-	 * @param sourceStr String Ô­Ê¼×Ö·û´®
+	 * @param sourceStr String åŸå§‹å­—ç¬¦ä¸²
 	 * 
-	 * @param oldString String Òª±»Ìæ»»µÄ×Ö·û´® @param newString String Ìæ»»µÄ×Ö·û´® @return
-	 * String ·µ»ØÌæ»»ºóµÄ×Ö·û´® replaceStr("1234K5678","K","8888");123488885678
+	 * @param oldString String è¦è¢«æ›¿æ¢çš„å­—ç¬¦ä¸² @param newString String æ›¿æ¢çš„å­—ç¬¦ä¸² @return
+	 * String è¿”å›æ›¿æ¢åçš„å­—ç¬¦ä¸² replaceStr("1234K5678","K","8888");123488885678
 	 */
 
     public static final String replaceStr1(String sourceStr, String oldString, String newString) {
@@ -153,9 +153,9 @@ public class StringUtil {
     }
 
     /*
-     * ´ÓÓÒ±ßÏò×óÈ¡·Ö¸ô·û×ó±ßµÄÖµ
+     * ä»å³è¾¹å‘å·¦å–åˆ†éš”ç¬¦å·¦è¾¹çš„å€¼
      *
-     * @param sourceÔ­Ê¼ÎÄ±¾ @param sep·Ö¸ô·û rLeft("1234K5678","K");1234
+     * @param sourceåŸå§‹æ–‡æœ¬ @param sepåˆ†éš”ç¬¦ rLeft("1234K5678","K");1234
      */
     public static String rLeft(String source, String sep) {
         source = source.toLowerCase();
@@ -174,9 +174,9 @@ public class StringUtil {
     }
 
     /*
-     * ´ÓÓÒ±ßÏò×óÈ¡·Ö¸ô·ûÓÒ±ßµÄÖµ
+     * ä»å³è¾¹å‘å·¦å–åˆ†éš”ç¬¦å³è¾¹çš„å€¼
      *
-     * @param sourceÔ­Ê¼ÎÄ±¾ @param sep·Ö¸ô·û
+     * @param sourceåŸå§‹æ–‡æœ¬ @param sepåˆ†éš”ç¬¦
      *
      * rRight("1234K5678","K");5678
      */
@@ -204,7 +204,7 @@ public class StringUtil {
     }
 
     /**
-     * ½ØÈ¡×Ö·û´®
+     * æˆªå–å­—ç¬¦ä¸²
      *
      * @param str
      * @param start
@@ -220,7 +220,7 @@ public class StringUtil {
     }
 
     /**
-     * ½ØÈ¡×Ö·û´®
+     * æˆªå–å­—ç¬¦ä¸²
      *
      * @param str
      * @param start
@@ -232,7 +232,7 @@ public class StringUtil {
     }
 
     /**
-     * ÅĞ¶ÏÁ½¸ö×Ö·û´®ÊÇ·ñequals,Èç¹û×Ö·û´®ÊÇnull,¾ÍÖ±½Ó·µ»Øfalse
+     * åˆ¤æ–­ä¸¤ä¸ªå­—ç¬¦ä¸²æ˜¯å¦equals,å¦‚æœå­—ç¬¦ä¸²æ˜¯null,å°±ç›´æ¥è¿”å›false
      *
      * @param str1
      * @param str2

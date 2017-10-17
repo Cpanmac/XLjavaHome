@@ -3,17 +3,17 @@ package com.xl;
 import com.xl.util.SystemUtil;
 
 /**
- * @author ĞìÁ¢
- * @Decription µ¼Èëµ½ÊÖ»ú 1.Ô´: 2.Ä¿µÄ:
+ * @author å¾ç«‹
+ * @Decription å¯¼å…¥åˆ°æ‰‹æœº 1.æº: 2.ç›®çš„:
  * @date 2013-12-20
  */
 public class AdbCommand {
     /**
-     * Ô´Ä¿±ê¾ø¶ÔÂ·¾¶
+     * æºç›®æ ‡ç»å¯¹è·¯å¾„
      */
     private String srcPath;
     /**
-     * Ä¿±êµÄ¾ø¶ÔÂ·¾¶
+     * ç›®æ ‡çš„ç»å¯¹è·¯å¾„
      */
     private String targetPath = "/mnt/sdcard/1/";
 
