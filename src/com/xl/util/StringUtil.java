@@ -21,6 +21,20 @@ public class StringUtil {
     }
 
     /**
+     * 把字符串第一个字符转大写
+     *
+     * @param str 字符串
+     * @return 一个新的字符串
+     */
+    public static String getMethodName(String str) throws Exception {
+        char[] cs = str.toCharArray();
+        if (cs[0] >= 'a' && cs[0] <= 'z') {
+            cs[0] -= 32;
+        }
+        return String.valueOf(cs);
+    }
+
+    /**
      * 判断字符串是否为空
      *
      * @param str
