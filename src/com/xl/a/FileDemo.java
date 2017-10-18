@@ -17,9 +17,9 @@ public class FileDemo {
 
     @Test
     public void spTest() {
-        LOGGER.info(File.separator);
-        LOGGER.info(File.separatorChar);
-        LOGGER.info(File.pathSeparator);
-        LOGGER.info(File.pathSeparatorChar);
+        LOGGER.info(File.separator);           //\
+        LOGGER.info(File.separatorChar);       //\
+        LOGGER.info(File.pathSeparator);       //;
+        LOGGER.info(File.pathSeparatorChar);   //;
     }
 }

@@ -1,5 +1,8 @@
 package com.xl.database.mysql;
 
+import com.xl.util.FileTool;
+import org.junit.Test;
+
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -24,7 +27,7 @@ public final class MysqlJdbcUtil {
         Properties props = new Properties();
         // 获得工程目录
         try {
-            InputStream is = MysqlJdbcUtil.class.getResourceAsStream("/mysql/db.properties");
+            InputStream is = FileTool.getResourceInputStream("mysql/mysql.properties");
             props.load(is);
             driver = props.getProperty("driver");
             url = props.getProperty("url");
@@ -35,6 +38,12 @@ public final class MysqlJdbcUtil {
             e.printStackTrace();
         }
     }
+    @Test
+    public void connectionTest() {
+        Connection c = getMySqlConnection();
+        System.out.println(c);
+    }
+
     // 取得连接
     public static Connection getMySqlConnection() {
         Connection conn = null;

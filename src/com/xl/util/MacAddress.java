@@ -1,4 +1,4 @@
-package com.xl.a;// Downloads By http://www.veryhuo.com
+package com.xl.util;// Downloads By http://www.veryhuo.com
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 /**
  * 根据ip获取mac地址
  */
-public class GetMacAddress {
+public class MacAddress {
     public static String callCmd(String[] cmd) {
         String result = "";
         String line = "";
@@ -106,12 +106,5 @@ public class GetMacAddress {
             macAddress = getMacInLinux(ip).trim();
         }
         return macAddress;
-    }
-
-    /**
-     * test1
-     */
-    public static void main(String[] args) {
-        System.out.println(getMacAddress("127.0.0.1"));
     }
 }

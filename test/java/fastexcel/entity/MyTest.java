@@ -1,10 +1,12 @@
 package fastexcel.entity;
 
 import com.github.sd4324530.fastexcel.annotation.MapperCell;
+import lombok.Data;
 
 /**
  * @author peiyu
  */
+@Data
 public class MyTest {
     @MapperCell(cellName = "名称", order = 0)
     private String name;
@@ -16,9 +18,4 @@ public class MyTest {
     private int type;
     @MapperCell(cellName = "经度", order = 4)
     private double lat;
-
-    @Override
-    public String toString() {
-        return "MyTest{" + "name='" + name + '\'' + ", phone='" + phone + '\'' + ", address='" + address + '\'' + ", type=" + type + ", lat=" + lat + '}';
-    }
 }

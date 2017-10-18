@@ -1,4 +1,4 @@
-package com.xl.a;
+package com.xl.util;
 
 import java.lang.reflect.Array;
 

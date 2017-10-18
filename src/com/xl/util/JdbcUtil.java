@@ -18,8 +18,8 @@ public final class JdbcUtil {
         Properties props = new Properties();
         // 获得工程目录
         try {
-            InputStream is = JdbcUtil.class.getClassLoader().getResourceAsStream("mysql/db.properties");
-            is = JdbcUtil.class.getResourceAsStream("db.properties");
+            InputStream is = JdbcUtil.class.getClassLoader().getResourceAsStream("mysql/mysql.properties");
+            is = JdbcUtil.class.getResourceAsStream("mysql.properties");
             props.load(is);
         } catch (Exception e) {
             e.printStackTrace();

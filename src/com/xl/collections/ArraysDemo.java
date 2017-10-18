@@ -1,6 +1,6 @@
 package com.xl.collections;
 
-import com.xl.a.ArrayUtil;
+import com.xl.util.ArrayUtil;
 import org.junit.Test;
 
 import java.util.Arrays;

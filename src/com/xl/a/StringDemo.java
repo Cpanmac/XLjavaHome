@@ -1,5 +1,6 @@
 package com.xl.a;
 
+import com.xl.util.StringUtil;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class StringDemo {
         result.add("bbb");
         result.add("ccc");
         result.add("ddd");
-        String s = org.apache.commons.lang.StringUtils.join(result.iterator(), "、");
+        String s = StringUtil.join(result, ",");
         System.out.println(s);
     }
 

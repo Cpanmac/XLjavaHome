@@ -3,7 +3,7 @@ package com.xl.a;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ShutDown {
+public class ShutDownDemo {
     public static void main(String[] args) throws IOException {
         Runtime ce = Runtime.getRuntime();
         ce.exec("Shutdown.exe -s -t 600"); //设置自动关机还剩下多长时间

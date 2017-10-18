@@ -1,7 +1,11 @@
 package com.xl.util;
 
+import org.apache.commons.lang.ObjectUtils;
+
 import java.io.File;
 import java.net.URISyntaxException;
+import java.util.Collection;
+import java.util.Iterator;
 
 /**
  * Title: StringUtil Description: 字符串处理公共组件
@@ -133,15 +137,14 @@ public class StringUtil {
         }
     }
 
-	/*
+    /*
      * 字符串替换方法：区分大小写
-	 * 
-	 * @param sourceStr String 原始字符串
-	 * 
-	 * @param oldString String 要被替换的字符串 @param newString String 替换的字符串 @return
-	 * String 返回替换后的字符串 replaceStr("1234K5678","K","8888");123488885678
-	 */
-
+     *
+     * @param sourceStr String 原始字符串
+     * @param oldString String 要被替换的字符串
+     * @param newString String 替换的字符串
+     * @return String 返回替换后的字符串 replaceStr("1234K5678","K","8888");123488885678
+     */
     public static final String replaceStr1(String sourceStr, String oldString, String newString) {
         if (null == sourceStr) {
             return null;
@@ -257,5 +260,39 @@ public class StringUtil {
             return false;
         }
         return str1.equals(str2);
+    }
+
+    public static String join(Collection collection, String separator) {
+        if (collection == null) {
+            return null;
+        }
+        return join(collection.iterator(), separator);
+    }
+
+    public static String join(Iterator iterator, String separator) {
+        // handle null, zero and one elements before building a buffer
+        if (iterator == null) {
+            return null;
+        }
+        if (!iterator.hasNext()) {
+            return "";
+        }
+        Object first = iterator.next();
+        if (!iterator.hasNext()) {
+            return ObjectUtils.toString(first);
+        }
+        // two or more elements
+        StringBuffer buf = new StringBuffer(256); // Java default is 16, probably too small
+        if (first != null) {
+            buf.append(first);
+        }
+        while (iterator.hasNext()) {
+            buf.append(separator);
+            Object obj = iterator.next();
+            if (obj != null) {
+                buf.append(obj);
+            }
+        }
+        return buf.toString();
     }
 }
