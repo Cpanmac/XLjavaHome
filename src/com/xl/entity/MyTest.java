@@ -1,4 +1,4 @@
-package fastexcel.entity;
+package com.xl.entity;
 
 import com.github.sd4324530.fastexcel.annotation.MapperCell;
 
