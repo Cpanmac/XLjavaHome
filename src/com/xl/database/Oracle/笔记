@@ -1,6 +1,0 @@
-Driver驱动
-Connection负责链接数据库并传送数据
-Statement由上面产生并负责执行
-ResultSet保存所产生的查询结果集
-在左下角点击other-->DB Browser.里面可以进行测试
-PreparedStatement高效
