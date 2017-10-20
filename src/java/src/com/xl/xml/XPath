@@ -1,0 +1,8 @@
+/AAA/BBB[1]  选择AAA的第一个BBB   /AAA/BBB[last()]  最后一个
+//@id  找出所有的id属性   //@BBB[@id]  选择有id属性的BBB //@BBB[@name]  找出name属性的BBB
+//BBB[not(@*]  找出没有属性的BBB
+<AAA>
+	<BBB id="b1"/>
+	<BBB id="b2"/>
+	<BBB name="bbb"/>
+</AAA>
