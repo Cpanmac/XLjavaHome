@@ -15,6 +15,5 @@ public class XLDemo {
     public void demoTest() {
         System.out.println(new Student("1", 2));
         System.out.println("中文测试");
-        System.out.println(new Student("1", "1", 1, "2"));
     }
 }
