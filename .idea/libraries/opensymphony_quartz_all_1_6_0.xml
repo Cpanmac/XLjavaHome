@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="opensymphony:quartz-all:1.6.0" type="repository">
+    <properties maven-id="opensymphony:quartz-all:1.6.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/opensymphony/quartz-all/1.6.0/quartz-all-1.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
