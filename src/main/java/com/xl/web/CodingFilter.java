@@ -1,4 +1,4 @@
-package javaWeb.com.xl;
+package com.xl.web;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;

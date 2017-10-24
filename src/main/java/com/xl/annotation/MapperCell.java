@@ -1,4 +1,4 @@
-package fastexcel.annotation;
+package com.xl.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -3,8 +3,8 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.sinitek.sirm.sinitekpm</groupId>
-    <artifactId>sinitekpm</artifactId>
+    <groupId>com.xl</groupId>
+    <artifactId>xl</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <parent>
@@ -78,7 +78,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.test.skip>true</maven.test.skip>
         <maven.test.failure.ignore>true</maven.test.failure.ignore>
-        <jdk.version>1.7</jdk.version>
+        <jdk.version>1.8</jdk.version>
         <version.compiler-plugin>3.1</version.compiler-plugin>
         <version.source-plugin>2.3</version.source-plugin>
         <version.javadoc-plugin>2.9.1</version.javadoc-plugin>
