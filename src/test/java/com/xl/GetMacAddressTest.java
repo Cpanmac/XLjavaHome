@@ -1,4 +1,4 @@
-package com.xl.a;
+package com.xl;
 
 import com.xl.util.MacAddress;
 import org.junit.Test;

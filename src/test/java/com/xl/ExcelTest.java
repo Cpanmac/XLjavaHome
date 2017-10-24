@@ -1,4 +1,4 @@
-package fastexcel;
+package com.xl;
 
 import com.github.sd4324530.fastexcel.FastExcel;
 import com.xl.entity.MyTest;
@@ -24,7 +24,7 @@ public class ExcelTest {
     InputStream is = FileTool.getResourceInputStream("data.xlsx");
 
     @Test
-    public void test() throws IOException, InvalidFormatException {
+    public void excelTest() throws IOException, InvalidFormatException {
         FastExcel fastExcel = new FastExcel(is);
         fastExcel.setSheetName("活动信息数据");
         List<MyTest> tests = fastExcel.parse(MyTest.class);
