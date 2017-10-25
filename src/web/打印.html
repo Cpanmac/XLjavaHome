@@ -1,12 +1,13 @@
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
         $(function () {
         })
         /**
-         * Created by ĞìÁ¢ on 2016/5/11.
-         * ´òÓ¡
+         * Created by å¾ç«‹ on 2016/5/11.
+         * æ‰“å°
          */
         function printRightFrame() {
             var printHtml = $(".clearfix").not(".tk-step").html();
@@ -17,8 +18,8 @@
                 window.document.body.innerHTML = lastHtml;
                 // window.close();
             } else {
-                var newwin = window.open("", $(document).attr("title") + "´òÓ¡", "height=" + window.screen.height + ",width=" + window.screen.width + ",toolbar=no,scrollbars=auto,menubar=no");//µÚÒ»´ÎÏÈ¼ÓÔØ³öÀ´¡£
-                newwin = window.open("", $(document).attr("title") + "´òÓ¡", "height=" + window.screen.height + ",width=" + window.screen.width + ",toolbar=no,scrollbars=auto,menubar=no");
+                var newwin = window.open("", $(document).attr("title") + "æ‰“å°", "height=" + window.screen.height + ",width=" + window.screen.width + ",toolbar=no,scrollbars=auto,menubar=no");//ç¬¬ä¸€æ¬¡å…ˆåŠ è½½å‡ºæ¥ã€‚
+                newwin = window.open("", $(document).attr("title") + "æ‰“å°", "height=" + window.screen.height + ",width=" + window.screen.width + ",toolbar=no,scrollbars=auto,menubar=no");
                 newwin.document.body.innerHTML = printHtml;
                 newwin.window.print();
                 newwin.window.close();
@@ -41,8 +42,8 @@
     </script>
 </head>
 <body>
-ÕâÊÇ´òÓ¡ÄÚÈİ<br/>
-<input type="button" onclick="print()" value="´òÓ¡"/>
-<input type="button" onclick="printRightFrame()" value="´òÓ¡2"/>
+è¿™æ˜¯æ‰“å°å†…å®¹<br/>
+<input type="button" onclick="print()" value="æ‰“å°"/>
+<input type="button" onclick="printRightFrame()" value="æ‰“å°2"/>
 </body>
 </html>

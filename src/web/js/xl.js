@@ -1,11 +1,11 @@
 function isIe() {
     if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0)) {
-        alert('ÄãÊÇÊ¹ÓÃIE')
+        alert('ä½ æ˜¯ä½¿ç”¨IE')
     } else if (navigator.userAgent.indexOf('Firefox') >= 0) {
-        alert('ÄãÊÇÊ¹ÓÃFirefox')
+        alert('ä½ æ˜¯ä½¿ç”¨Firefox')
     } else if (navigator.userAgent.indexOf('Opera') >= 0) {
-        alert('ÄãÊÇÊ¹ÓÃOpera')
+        alert('ä½ æ˜¯ä½¿ç”¨Opera')
     } else {
-        alert('ÄãÊÇÊ¹ÓÃÆäËûµÄä¯ÀÀÆ÷ä¯ÀÀÍøÒ³£¡')
+        alert('ä½ æ˜¯ä½¿ç”¨å…¶ä»–çš„æµè§ˆå™¨æµè§ˆç½‘é¡µï¼')
     }
 }

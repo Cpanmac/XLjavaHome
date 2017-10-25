@@ -1,0 +1,16 @@
+regex="^\d+(\.\d{0,2})?$" regexText="工作时长必须为非负数且最多为2位小数"
+必须为非负数且最多为2位小数
+        var workloadReg=new RegExp(/^\d+(\.\d{0,2})?$/);
+            if (!workloadReg.test(workload)) {
+                return "开发负责人的预计工作量必须为非负数且最多为2位小数";
+            }           task
+                        addassignuitask.jsp
+                        addtask.jsp
+                        savetask.jsp
+                        updateassigntask.jsp
+                        updatetask.jsptask
+                                      addassignuitask.jsp
+                                      addtask.jsp
+                                      savetask.jsp
+                                      updateassigntask.jsp
+                                      updatetask.jsp

@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegexTest {
+public class RegexDemo {
     @Test
     public void search1() {
         Pattern p = Pattern.compile("java");
@@ -15,15 +15,16 @@ public class RegexTest {
         }
     }
 
+    /*
+    * Pattern.
+    * CASE_INSENSITIVE
+    * :
+    * 常量规则：
+    * 忽大小写
+    */
     @Test
     public void search2() {
-        Pattern p = Pattern.compile("java", Pattern.CASE_INSENSITIVE); /*
-                                                                         * Pattern.
-																		 * CASE_INSENSITIVE
-																		 * :
-																		 * 常量规则：
-																		 * 忽大小写
-																		 */
+        Pattern p = Pattern.compile("java", Pattern.CASE_INSENSITIVE);
         Matcher m = p.matcher("java Java JAVa JaVa IloveJAVA you hateJava afasdfasdf");
         while (m.find()) {
             System.out.println(m.group());
@@ -175,6 +176,11 @@ public class RegexTest {
     public void fun11() {
         Pattern p = Pattern.compile("java", Pattern.CASE_INSENSITIVE);
         System.out.println("Java".matches("(?i)(java)")); /* (?i)非捕获组:是上面的简写 */
+    }
+
+    @Test
+    public void numberTest() {
+        String nun = "1.111";
     }
 
 	/*
