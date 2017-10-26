@@ -15,7 +15,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface MapperCell {
-
     /**
      * 在excel文件中某列数据的名称
      *

@@ -16,6 +16,7 @@ import java.util.Map;
 public class SpringWithJdbcTest {
     @Resource(name = "testService")
     private ITestService testService;
+
     @Test
     public void init() {
         for (int i = 0; i < 5; i++) {
@@ -24,14 +25,15 @@ public class SpringWithJdbcTest {
             account.setName("zhonglin");
         }
     }
+
     @Test
     public void testTransation() {
         boolean b;
         try {
             b = testService.transfer(200, 1, 2);
-            if(b){
+            if (b) {
                 System.out.println("转账成功");
-            }else{
+            } else {
                 System.out.println("转账失败");
             }
         } catch (Exception e) {
@@ -39,6 +41,7 @@ public class SpringWithJdbcTest {
             System.out.println("转账失败");
         }
     }
+
     @Test
     public void testFind() {
         try {

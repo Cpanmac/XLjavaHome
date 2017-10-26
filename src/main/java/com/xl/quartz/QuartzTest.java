@@ -34,7 +34,7 @@ public class QuartzTest {
         }
     }
 
-    public static String formatDateByPattern(Date date, String dateFormat){
+    public static String formatDateByPattern(Date date, String dateFormat) {
         SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
         String formatTimeStr = null;
         if (date != null) {
@@ -42,8 +42,9 @@ public class QuartzTest {
         }
         return formatTimeStr;
     }
-    public static String getCron(java.util.Date  date){
-        String dateFormat="ss mm HH dd MM ? yyyy";
+
+    public static String getCron(java.util.Date date) {
+        String dateFormat = "ss mm HH dd MM ? yyyy";
         return formatDateByPattern(date, dateFormat);
     }
 }

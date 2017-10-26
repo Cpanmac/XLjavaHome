@@ -33,21 +33,20 @@ public class SpringWithMybatisTest {
 		}
 		
 	}*/
-	
-	/*@Test
-	public void testInsert(){
-		
-		Account account = new Account();
-		account.setMoney(1000);
-		account.setName("xiaozhongzhong");
-		try {
-			testService.insertAccount(account);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}*/
-	
+
+    @Test
+    public void testInsert() {
+        Account account = new Account();
+        account.setMoney(1000);
+        account.setName("xiaozhongzhong");
+        try {
+            testService.insertAccount(account);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
 	/*@Test
 	public void testFind(){
 		

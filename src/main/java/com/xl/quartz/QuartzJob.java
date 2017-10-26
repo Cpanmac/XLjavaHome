@@ -1,5 +1,4 @@
 package com.xl.quartz;
-
 /**
  * Created with IntelliJ IDEA.
  * User: 徐立
@@ -20,13 +19,12 @@ import java.util.Date;
  * 任务执行类
  */
 public class QuartzJob implements Job {
-
     @Override
     public void execute(JobExecutionContext content) throws JobExecutionException {
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+ "★★★★★★★★★★★");
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "★★★★★★★★★★★");
         String jobName = content.getJobDetail().getName();
         JobDataMap dataMap = content.getJobDetail().getJobDataMap();
         String param = dataMap.getString("param");
-        System.out.println("传递的参数是="+param +"任务名字是="+jobName);
+        System.out.println("传递的参数是=" + param + "任务名字是=" + jobName);
     }
 }

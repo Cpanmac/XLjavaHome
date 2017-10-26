@@ -17,6 +17,9 @@ public class Student {
     private int age;
     private String phone;
 
+    public Student() {
+    }
+
     public Student(int id, String name, String address) {
         this.id = id;
         this.name = name;

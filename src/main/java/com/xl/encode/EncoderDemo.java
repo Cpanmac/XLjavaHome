@@ -26,6 +26,7 @@ public class EncoderDemo {
         System.out.println(gbkFile.getAbsolutePath());
         System.out.println(utfFile.getAbsolutePath());
     }
+
     /**
      * 将指定目录下其他格式文件为UTF-8文件
      *

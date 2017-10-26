@@ -42,5 +42,4 @@ public class ExcelTest {
         }
         fastExcel.close();
     }
-
 }

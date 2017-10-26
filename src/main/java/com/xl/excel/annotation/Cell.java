@@ -1,4 +1,5 @@
 package com.xl.excel.annotation;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
@@ -12,7 +13,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-public @interface Cell
-{
+public @interface Cell {
     public abstract String title();
 }

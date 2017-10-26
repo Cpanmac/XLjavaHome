@@ -22,7 +22,6 @@ public class UUIDUtils {
         }
         IP = ipadd;
     }
-
     /**
      * ���췽��
      */
