@@ -5,7 +5,7 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
     <display-name>xlDemo</display-name>
-    <context-param>
+ <!--   <context-param>
         <param-name>log4jConfigLocation</param-name>
         <param-value>classpath:log4j.properties</param-value>
     </context-param>
@@ -16,7 +16,7 @@
     <listener>
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
-    <!-- spring configuration -->
+    &lt;!&ndash; spring configuration &ndash;&gt;
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring/applicationContext.xml</param-value>
@@ -24,7 +24,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    <!-- struts2 configuration -->
+    &lt;!&ndash; struts2 configuration &ndash;&gt;
     <filter>
         <filter-name>struts2</filter-name>
         <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
@@ -36,7 +36,7 @@
     <filter-mapping>
         <filter-name>struts2</filter-name>
         <url-pattern>*.action</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
     <!--encodingFilter配置-->
     <!-- <filter>
          <filter-name>encodingFilter</filter-name>
