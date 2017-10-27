@@ -1,4 +1,4 @@
-package moudles;
+package com.xl.entity;
 
 import com.github.annotation.ExcelField;
 

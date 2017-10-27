@@ -2,8 +2,8 @@ package base;
 
 import com.github.ExcelUtils;
 import com.xl.util.FileTool;
-import moudles.Student1;
-import moudles.Student2;
+import com.xl.entity.Student1;
+import com.xl.entity.Student2;
 import org.junit.Test;
 
 import java.io.File;

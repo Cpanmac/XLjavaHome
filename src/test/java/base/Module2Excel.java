@@ -1,7 +1,7 @@
 package base;
 
 import com.github.ExcelUtils;
-import moudles.Student1;
+import com.xl.entity.Student1;
 import org.junit.Test;
 
 import java.util.ArrayList;
