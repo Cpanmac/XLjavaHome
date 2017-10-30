@@ -1,7 +1,7 @@
 package com.xl;
 
 import com.github.sd4324530.fastexcel.FastExcel;
-import com.xl.entity.MyTest;
+import com.xl.entity.ExcelEntity;
 import com.xl.util.FileTool;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.Test;
@@ -27,9 +27,9 @@ public class ExcelTest {
     public void excelTest() throws IOException, InvalidFormatException {
         FastExcel fastExcel = new FastExcel(is);
         fastExcel.setSheetName("活动信息数据");
-        List<MyTest> tests = fastExcel.parse(MyTest.class);
+        List<ExcelEntity> tests = fastExcel.parse(ExcelEntity.class);
         if (null != tests && !tests.isEmpty()) {
-            for (MyTest myTest : tests) {
+            for (ExcelEntity myTest : tests) {
                 LOG.debug("记录:{}", myTest.toString());
             }
             FastExcel create = new FastExcel(FileTool.getResourceFile("excel.xls").getAbsolutePath());

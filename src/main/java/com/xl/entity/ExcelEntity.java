@@ -7,7 +7,7 @@ import lombok.Data;
  * @author peiyu
  */
 @Data
-public class MyTest {
+public class ExcelEntity {
     @MapperCell(cellName = "名称", order = 0)
     private String name;
     @MapperCell(cellName = "联系电话", order = 1)
