@@ -7,34 +7,34 @@ import java.awt.event.ActionListener;
 
 public class ChatGUI extends JFrame implements ActionListener {
     private final Container container;
-    private final JButton send; // ·¢ËÍ°´Å¥
-    private final JTextArea chatContent; // ÁÄÌìÄÚÈİÇø
-    private final JTextField sentence; // ÁÄÌìĞÅÏ¢À¸
+    private final JButton send; // å‘é€æŒ‰é’®
+    private final JTextArea chatContent; // èŠå¤©å†…å®¹åŒº
+    private final JTextField sentence; // èŠå¤©ä¿¡æ¯æ 
 
     private ChatGUI() {
         setLocation(300, 200);
-        super.setTitle("ÁÄÌì´°¿Ú");// ÉèÖÃ´°¿Ú±êÌâ
-        this.setSize(400, 300); // ÉèÖÃ´°¿Ú´óĞ¡
-        container = this.getContentPane(); // »ñµÃÖ÷´°¿ÚµÄÄÚÈİÃæ°å
-        container.setLayout(new BorderLayout()); // ÉèÖÃ²¼¾Ö·½Ê½ÎªBorderLayout
-        JScrollPane centerPanel = new JScrollPane(); // ´´½¨ÓÃÓÚ´æ·ÅÁÄÌì¼ÇÂ¼µÄ¹ö¶¯Ãæ°å
-        chatContent = new JTextArea(); // ´´½¨´æ·ÅÁÄÌìÄÚÈİµÄ¶àĞĞÎÄ±¾ÊäÈëÇø¶ÔÏó
-        centerPanel.setViewportView(chatContent); // ½«ÎÄ±¾Çø·ÅÈë¹ö¶¯Ãæ°å
-        // ½«¹ö¶¯Ãæ°å·Åµ½Ö÷´°¿ÚÄÚÈİÃæ°åÖĞÑë
+        super.setTitle("èŠå¤©çª—å£");// è®¾ç½®çª—å£æ ‡é¢˜
+        this.setSize(400, 300); // è®¾ç½®çª—å£å¤§å°
+        container = this.getContentPane(); // è·å¾—ä¸»çª—å£çš„å†…å®¹é¢æ¿
+        container.setLayout(new BorderLayout()); // è®¾ç½®å¸ƒå±€æ–¹å¼ä¸ºBorderLayout
+        JScrollPane centerPanel = new JScrollPane(); // åˆ›å»ºç”¨äºå­˜æ”¾èŠå¤©è®°å½•çš„æ»šåŠ¨é¢æ¿
+        chatContent = new JTextArea(); // åˆ›å»ºå­˜æ”¾èŠå¤©å†…å®¹çš„å¤šè¡Œæ–‡æœ¬è¾“å…¥åŒºå¯¹è±¡
+        centerPanel.setViewportView(chatContent); // å°†æ–‡æœ¬åŒºæ”¾å…¥æ»šåŠ¨é¢æ¿
+        // å°†æ»šåŠ¨é¢æ¿æ”¾åˆ°ä¸»çª—å£å†…å®¹é¢æ¿ä¸­å¤®
         container.add(centerPanel, BorderLayout.CENTER);
-        chatContent.setEditable(false); // ½«ÎÄ±¾ÇøÖÃÎª²»¿É±à¼­×´Ì¬
-        // ´´½¨µ×²¿Ãæ°å¶ÔÏó£¬´æ·ÅÁÄÌì±êÇ©¡¢ÁÄÌìÀ¸¡¢·¢ËÍ°´Å¥
+        chatContent.setEditable(false); // å°†æ–‡æœ¬åŒºç½®ä¸ºä¸å¯ç¼–è¾‘çŠ¶æ€
+        // åˆ›å»ºåº•éƒ¨é¢æ¿å¯¹è±¡ï¼Œå­˜æ”¾èŠå¤©æ ‡ç­¾ã€èŠå¤©æ ã€å‘é€æŒ‰é’®
         JPanel bottomPanel = new JPanel();
-        sentence = new JTextField(20); // ´´½¨ÎÄ±¾ÊäÈëĞĞ¶ÔÏó£¬´æ·ÅÃ¿´ÎµÄÁÄÌìÄÚÈİ
-        send = new JButton("·¢ËÍ"); // ´´½¨°´Å¥¶ÔÏó
-        bottomPanel.add(new JLabel("ÁÄÌìĞÅÏ¢")); // ½«±êÇ©Ìí¼Óµ½µ×²¿Ãæ°å
-        bottomPanel.add(sentence); // °ÑÁÄÌìÄÚÈİÀ¸Ìí¼Óµ½µ×²¿Ãæ°åÉÏ
-        bottomPanel.add(send); // °Ñ·¢ËÍ°´Å¥Ìí¼Óµ½µ×²¿Ãæ°åÉÏ
-        container.add(bottomPanel, BorderLayout.SOUTH);// ½«µ×²¿Ãæ°å·ÅÔÚÖ÷´°¿ÚµÄµ×²¿
-        send.addActionListener(this); // ×¢²á·¢ËÍ°´Å¥µÄ¶¯×÷ÊÂ¼ş
-        sentence.addActionListener(this); // ×¢²áÁÄÌìÀ¸µÄ¶¯×÷ÊÂ¼ş
-        this.setVisible(true); // ÏÔÊ¾Ö÷´°¿Ú
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// ¹Ø±Õ´°¿ÚÊ±ÍË³öÏµÍ³
+        sentence = new JTextField(20); // åˆ›å»ºæ–‡æœ¬è¾“å…¥è¡Œå¯¹è±¡ï¼Œå­˜æ”¾æ¯æ¬¡çš„èŠå¤©å†…å®¹
+        send = new JButton("å‘é€"); // åˆ›å»ºæŒ‰é’®å¯¹è±¡
+        bottomPanel.add(new JLabel("èŠå¤©ä¿¡æ¯")); // å°†æ ‡ç­¾æ·»åŠ åˆ°åº•éƒ¨é¢æ¿
+        bottomPanel.add(sentence); // æŠŠèŠå¤©å†…å®¹æ æ·»åŠ åˆ°åº•éƒ¨é¢æ¿ä¸Š
+        bottomPanel.add(send); // æŠŠå‘é€æŒ‰é’®æ·»åŠ åˆ°åº•éƒ¨é¢æ¿ä¸Š
+        container.add(bottomPanel, BorderLayout.SOUTH);// å°†åº•éƒ¨é¢æ¿æ”¾åœ¨ä¸»çª—å£çš„åº•éƒ¨
+        send.addActionListener(this); // æ³¨å†Œå‘é€æŒ‰é’®çš„åŠ¨ä½œäº‹ä»¶
+        sentence.addActionListener(this); // æ³¨å†ŒèŠå¤©æ çš„åŠ¨ä½œäº‹ä»¶
+        this.setVisible(true); // æ˜¾ç¤ºä¸»çª—å£
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// å…³é—­çª—å£æ—¶é€€å‡ºç³»ç»Ÿ
     }
 
     public static void main(String[] arg) {
@@ -42,11 +42,11 @@ public class ChatGUI extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        String str = sentence.getText(); // »ñÈ¡ÁÄÌìÀ¸ÀïµÄÁÄÌìĞÅÏ¢
-        if (str != null && !str.equals("")) // Èç¹ûÁÄÌìÄÚÈİ²»Îª¿Õ£¬Ôò·¢ËÍĞÅÏ¢
-            chatContent.append("±¾ÈË:  " + str + "\n");// ½«±¾ÈË·¢ËÍµÄÁÄÌìĞÅÏ¢×·¼Óµ½ÁÄÌìÄÚÈİÇø
+        String str = sentence.getText(); // è·å–èŠå¤©æ é‡Œçš„èŠå¤©ä¿¡æ¯
+        if (str != null && !str.equals("")) // å¦‚æœèŠå¤©å†…å®¹ä¸ä¸ºç©ºï¼Œåˆ™å‘é€ä¿¡æ¯
+            chatContent.append("æœ¬äºº:  " + str + "\n");// å°†æœ¬äººå‘é€çš„èŠå¤©ä¿¡æ¯è¿½åŠ åˆ°èŠå¤©å†…å®¹åŒº
         else
-            chatContent.append("ÁÄÌìĞÅÏ¢²»ÄÜÎª¿Õ\n");
-        sentence.setText(""); // Çå¿ÕÁÄÌìÀ¸ÀïµÄÄÚÈİ
+            chatContent.append("èŠå¤©ä¿¡æ¯ä¸èƒ½ä¸ºç©º\n");
+        sentence.setText(""); // æ¸…ç©ºèŠå¤©æ é‡Œçš„å†…å®¹
     }
 }

@@ -10,73 +10,73 @@ public class MainFrame extends JFrame {
     Container container;
 
     public MainFrame() {
-        this.setTitle("»¶Ó­Ê¹ÓÃÍ¼Êé¹ÜÀíÏµÍ³ ");// ÉèÖÃ±êÌâ
-        container = this.getContentPane(); // »ñÈ¡Ä¬ÈÏµÄÄÚÈİ´°¸ñ
-        container.setLayout(new BorderLayout()); // ÉèÖÃ²¼¾Ö¸ñÊ½
-        JMenuBar menuBar = new JMenuBar(); // ´´½¨²Ëµ¥À¸
-        buildMainMenu(menuBar); // ×î¶¨Òå×é½¨²Ëµ¥µÄ·½·¨
-        this.setJMenuBar(menuBar); // °Ñ²Ëµ¥À¸¹Òµ½¸Ã´°¿ÚÉÏ
-        this.show(true); // ÏÔÊ¾´°¿Ú
-        this.setSize(600, 450); // ÉèÖÃ´°¿Ú´óĞ¡
+        this.setTitle("æ¬¢è¿ä½¿ç”¨å›¾ä¹¦ç®¡ç†ç³»ç»Ÿ ");// è®¾ç½®æ ‡é¢˜
+        container = this.getContentPane(); // è·å–é»˜è®¤çš„å†…å®¹çª—æ ¼
+        container.setLayout(new BorderLayout()); // è®¾ç½®å¸ƒå±€æ ¼å¼
+        JMenuBar menuBar = new JMenuBar(); // åˆ›å»ºèœå•æ 
+        buildMainMenu(menuBar); // æœ€å®šä¹‰ç»„å»ºèœå•çš„æ–¹æ³•
+        this.setJMenuBar(menuBar); // æŠŠèœå•æ æŒ‚åˆ°è¯¥çª—å£ä¸Š
+        this.show(true); // æ˜¾ç¤ºçª—å£
+        this.setSize(600, 450); // è®¾ç½®çª—å£å¤§å°
     }
 
     public static void main(String[] args) {
         new MainFrame();
     }
 
-    /* ¹¹½¨²Ëµ¥£¬ÓÉÓÚÆª·ùÓĞÏŞ£¬´´½¨Èı¸ö²Ëµ¥ÎÄ¼ş¡¢Í¼ÊéĞÅÏ¢²éÑ¯ºÍ°ïÖú²Ëµ¥ */
+    /* æ„å»ºèœå•ï¼Œç”±äºç¯‡å¹…æœ‰é™ï¼Œåˆ›å»ºä¸‰ä¸ªèœå•æ–‡ä»¶ã€å›¾ä¹¦ä¿¡æ¯æŸ¥è¯¢å’Œå¸®åŠ©èœå• */
     protected void buildMainMenu(JMenuBar menuBar) {
-        JMenu fileMenu = new JMenu("ÎÄ¼ş(F)"); // ÎÄ¼ş²Ëµ¥µÄ´´½¨
-        JMenuItem exitMenuItem = new JMenuItem("ÍË³ö");
-        /* ÎªÊÂ¼ş×¢²á£¬¶ÔActionEventÊÂ¼ş×÷³ö´¦Àí */
+        JMenu fileMenu = new JMenu("æ–‡ä»¶(F)"); // æ–‡ä»¶èœå•çš„åˆ›å»º
+        JMenuItem exitMenuItem = new JMenuItem("é€€å‡º");
+        /* ä¸ºäº‹ä»¶æ³¨å†Œï¼Œå¯¹ActionEventäº‹ä»¶ä½œå‡ºå¤„ç† */
         exitMenuItem.addActionListener(new ExitActionListener());
-        fileMenu.add(exitMenuItem); // °ÑÍË³ö²Ëµ¥ÏîÌí¼Óµ½²Ëµ¥ÉÏ
-        menuBar.add(fileMenu);// ÎÄ¼ş²Ëµ¥Ìí¼Óµ½²Ëµ¥À¸ÉÏ
-        /* ½¨Á¢Í¼ÊéĞÅÏ¢²éÑ¯²Ëµ¥* */
-        JMenu libMenu = new JMenu("¹İ²Ø¼ìË÷(B)");
-        libMenu.setMnemonic(KeyEvent.VK_B);// ¸øÍ¼Êé¼ìË÷²Ëµ¥¶¨ÒåÖú¼Ç¼ü
-        JMenuItem libMenuItem = new JMenuItem("ÊéÄ¿¼ìË÷");
-        JMenuItem myBorrowMenuItem = new JMenuItem("ÎÒµÄ½èÔÄ");
-        libMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.CTRL_MASK));// Éè¶¨¿ì½İ¼ü
-        // ÎªÊÂ¼ş×¢²á£¬BookInLibraryActionListenerÎªÄÚ²¿Àà
+        fileMenu.add(exitMenuItem); // æŠŠé€€å‡ºèœå•é¡¹æ·»åŠ åˆ°èœå•ä¸Š
+        menuBar.add(fileMenu);// æ–‡ä»¶èœå•æ·»åŠ åˆ°èœå•æ ä¸Š
+        /* å»ºç«‹å›¾ä¹¦ä¿¡æ¯æŸ¥è¯¢èœå•* */
+        JMenu libMenu = new JMenu("é¦†è—æ£€ç´¢(B)");
+        libMenu.setMnemonic(KeyEvent.VK_B);// ç»™å›¾ä¹¦æ£€ç´¢èœå•å®šä¹‰åŠ©è®°é”®
+        JMenuItem libMenuItem = new JMenuItem("ä¹¦ç›®æ£€ç´¢");
+        JMenuItem myBorrowMenuItem = new JMenuItem("æˆ‘çš„å€Ÿé˜…");
+        libMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.CTRL_MASK));// è®¾å®šå¿«æ·é”®
+        // ä¸ºäº‹ä»¶æ³¨å†Œï¼ŒBookInLibraryActionListenerä¸ºå†…éƒ¨ç±»
         libMenuItem.addActionListener(new BookInLibraryActionListener());
-        myBorrowMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, ActionEvent.CTRL_MASK));// Éè¶¨¿ì½İ¼ü
+        myBorrowMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, ActionEvent.CTRL_MASK));// è®¾å®šå¿«æ·é”®
         myBorrowMenuItem.addActionListener(new MyBorrowActionListener());
-        libMenu.add(libMenuItem); // °Ñ²Ëµ¥ÏîÌí¼Óµ½²éÑ¯²Ëµ¥ÉÏ
+        libMenu.add(libMenuItem); // æŠŠèœå•é¡¹æ·»åŠ åˆ°æŸ¥è¯¢èœå•ä¸Š
         libMenu.add(myBorrowMenuItem);
-        menuBar.add(libMenu); // ²éÑ¯²Ëµ¥Ìí¼Óµ½²Ëµ¥À¸ÉÏ
-        /* °ïÖú²Ëµ¥µÄ´´½¨ */
-        JMenu helpMenu = new JMenu("°ïÖú(H)");
-        helpMenu.setMnemonic(KeyEvent.VK_H);//¸ø°ïÖú²Ëµ¥¶¨ÒåÖú¼Ç¼ü
-        JMenuItem aboutMenuItem = new JMenuItem("¹ØÓÚ");
+        menuBar.add(libMenu); // æŸ¥è¯¢èœå•æ·»åŠ åˆ°èœå•æ ä¸Š
+        /* å¸®åŠ©èœå•çš„åˆ›å»º */
+        JMenu helpMenu = new JMenu("å¸®åŠ©(H)");
+        helpMenu.setMnemonic(KeyEvent.VK_H);//ç»™å¸®åŠ©èœå•å®šä¹‰åŠ©è®°é”®
+        JMenuItem aboutMenuItem = new JMenuItem("å…³äº");
         aboutMenuItem.setMnemonic(KeyEvent.VK_A);
-        aboutMenuItem.addActionListener(new AboutActionListener());// ÎªÊÂ¼ş×¢²á
-        helpMenu.add(aboutMenuItem); // °Ñ¹ØÓÚ²Ëµ¥ÏîÌí¼Óµ½°ïÖú²Ëµ¥ÉÏ
-        menuBar.add(helpMenu); // °ïÖú²Ëµ¥Ìí¼Óµ½²Ëµ¥À¸ÉÏ
+        aboutMenuItem.addActionListener(new AboutActionListener());// ä¸ºäº‹ä»¶æ³¨å†Œ
+        helpMenu.add(aboutMenuItem); // æŠŠå…³äºèœå•é¡¹æ·»åŠ åˆ°å¸®åŠ©èœå•ä¸Š
+        menuBar.add(helpMenu); // å¸®åŠ©èœå•æ·»åŠ åˆ°èœå•æ ä¸Š
     }
 
-    /* libMenuItemÊÂ¼şÔ´µÄÊÂ¼ş¼àÌıÆ÷£¬´ò¿ªÀı8-16Ìí¼ÓJlistºóµÄ´°¿Ú */
+    /* libMenuItemäº‹ä»¶æºçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œæ‰“å¼€ä¾‹8-16æ·»åŠ Jliståçš„çª—å£ */
     class BookInLibraryActionListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
             new JComboBoxDemo();
         }
     }
 
-    /* ÎÒµÄ½èÔÄµÄÊÂ¼ş¼àÌıÆ÷£¬´ò¿ªÀı8-16Ìí¼ÓJTableºóµÄ´°¿Ú */
+    /* æˆ‘çš„å€Ÿé˜…çš„äº‹ä»¶ç›‘å¬å™¨ï¼Œæ‰“å¼€ä¾‹8-16æ·»åŠ JTableåçš„çª—å£ */
     class MyBorrowActionListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
             new JRadioButtonDemo();
         }
     }
 
-    /* °ïÖú²Ëµ¥ÖĞ¹ØÓÚ²Ëµ¥ÏîµÄÊÂ¼ş¼àÌıÕß */
+    /* å¸®åŠ©èœå•ä¸­å…³äºèœå•é¡¹çš„äº‹ä»¶ç›‘å¬è€… */
     class AboutActionListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-			/* ÔİÊ±Îª¿Õºó¼Ó¶Ô»°¿ò */
+			/* æš‚æ—¶ä¸ºç©ºååŠ å¯¹è¯æ¡† */
         }
     }
 
-    /* ÎÄ¼ş²Ëµ¥ÖĞÍË³ö²Ëµ¥ÏîµÄÊÂ¼ş¼àÌıÕß */
+    /* æ–‡ä»¶èœå•ä¸­é€€å‡ºèœå•é¡¹çš„äº‹ä»¶ç›‘å¬è€… */
     class ExitActionListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
             dispose();

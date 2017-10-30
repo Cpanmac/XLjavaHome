@@ -16,25 +16,25 @@ public class JComboBoxDemo extends JFrame {
     protected JButton retrievalButton;
     protected JTextField keywordText;
     protected String fieldSelected;
-    protected JList bookListBox; //ÏÔÊ¾¼ìË÷µ½µÄÍ¼ÊéĞÅÏ¢
-    protected JButton detailsButton;//²é¿´Ä³±¾Í¼Êé¸üÏêÏ¸ĞÅÏ¢µÄ°´Å¥
-    protected JScrollPane bookScrollPane; // °ÑJList·ÅÈëJScrollPane³öÏÖ¹ö¶¯²Ëµ¥Ğ§¹û
-    protected JPanel bottomPanel;//ÖĞ¼äÈİÆ÷
+    protected JList bookListBox; //æ˜¾ç¤ºæ£€ç´¢åˆ°çš„å›¾ä¹¦ä¿¡æ¯
+    protected JButton detailsButton;//æŸ¥çœ‹æŸæœ¬å›¾ä¹¦æ›´è¯¦ç»†ä¿¡æ¯çš„æŒ‰é’®
+    protected JScrollPane bookScrollPane; // æŠŠJListæ”¾å…¥JScrollPaneå‡ºç°æ»šåŠ¨èœå•æ•ˆæœ
+    protected JPanel bottomPanel;//ä¸­é—´å®¹å™¨
     private Container container;
 
     public JComboBoxDemo() {
         container = this.getContentPane();
-        selectionLabel = new JLabel("¼ìË÷·½Ê½"); // ±êÇ©
-        fieldComboBox = new JComboBox(); // ·ÖÀà¼ìË÷ÏÂÀ­ÁĞ±í
-        fieldComboBox.addItem("ÇëÑ¡Ôñ...");
-        fieldComboBox.addItem("ÊéÃû");
-        fieldComboBox.addItem("ISBNºÅ");
-        fieldComboBox.addItem("×÷Õß");
-        fieldComboBox.addItem("³ö°æ");
-        //×¢²áÊÂ¼ş¼àÌıÕßFieldSelectedListenerÎªÄÚ²¿Àà
+        selectionLabel = new JLabel("æ£€ç´¢æ–¹å¼"); // æ ‡ç­¾
+        fieldComboBox = new JComboBox(); // åˆ†ç±»æ£€ç´¢ä¸‹æ‹‰åˆ—è¡¨
+        fieldComboBox.addItem("è¯·é€‰æ‹©...");
+        fieldComboBox.addItem("ä¹¦å");
+        fieldComboBox.addItem("ISBNå·");
+        fieldComboBox.addItem("ä½œè€…");
+        fieldComboBox.addItem("å‡ºç‰ˆ");
+        //æ³¨å†Œäº‹ä»¶ç›‘å¬è€…FieldSelectedListenerä¸ºå†…éƒ¨ç±»
         fieldComboBox.addItemListener(new FieldSelectedListener());
-        keywordText = new JTextField("java", 20); // ÏÔÊ¾¼ìË÷¹Ø¼ü×ÖµÄÎÄ±¾¿ò
-        retrievalButton = new JButton("¼ìË÷"); //Ìá½»ÃüÁî°´Å¥
+        keywordText = new JTextField("java", 20); // æ˜¾ç¤ºæ£€ç´¢å…³é”®å­—çš„æ–‡æœ¬æ¡†
+        retrievalButton = new JButton("æ£€ç´¢"); //æäº¤å‘½ä»¤æŒ‰é’®
         topPanel = new JPanel();
         topPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
         keywordText.setSize(topPanel.getWidth() / 2, topPanel.getWidth());
@@ -42,24 +42,24 @@ public class JComboBoxDemo extends JFrame {
         topPanel.add(fieldComboBox);
         topPanel.add(keywordText);
         topPanel.add(retrievalButton);
-        //Ìí¼ÓºóÃæµÄ´úÂëJListÏÔÊ¾¼ìË÷ÄÚÈİ
+        //æ·»åŠ åé¢çš„ä»£ç JListæ˜¾ç¤ºæ£€ç´¢å†…å®¹
         this.add(BorderLayout.NORTH, topPanel);
-        this.setTitle("Í¼Êé¹ÜÀíÏµÍ³Í¼Êé²éÑ¯");
+        this.setTitle("å›¾ä¹¦ç®¡ç†ç³»ç»Ÿå›¾ä¹¦æŸ¥è¯¢");
         this.setSize(600, 450);
         this.setVisible(true);
-        //Îª¼ìË÷°´Å¥Ìí¼ÓÊÂ¼ş¼àÌıÕß
+        //ä¸ºæ£€ç´¢æŒ‰é’®æ·»åŠ äº‹ä»¶ç›‘å¬è€…
         retrievalButton.addActionListener(new RetrievalActionListener());
         bookListBox = new JList();
-        //ÉèÖÃÁĞ±íÒ»´ÎÖ»ÄÜÑ¡ÔñÒ»¸ö£¬²»ÔÊĞí¶àÑ¡
+        //è®¾ç½®åˆ—è¡¨ä¸€æ¬¡åªèƒ½é€‰æ‹©ä¸€ä¸ªï¼Œä¸å…è®¸å¤šé€‰
         bookListBox.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        //ÎªÁĞ±í×¢²áÊÂ¼ş¼àÌıÕß£¬¶ÔÓÃ»§Ñ¡Ôñ¸Ä±ä½øĞĞ´¦Àí
+        //ä¸ºåˆ—è¡¨æ³¨å†Œäº‹ä»¶ç›‘å¬è€…ï¼Œå¯¹ç”¨æˆ·é€‰æ‹©æ”¹å˜è¿›è¡Œå¤„ç†
         bookListBox.addListSelectionListener(new BookSelectionListener());
         bookScrollPane = new JScrollPane(bookListBox);
         this.add(BorderLayout.CENTER, bookScrollPane);
-        //Ìí¼ÓÏÔÊ¾Ä³Ò»±¾ÊéÏêÇéµÄÃüÁî°´Å¥
-        detailsButton = new JButton("ÏêÏ¸...");
+        //æ·»åŠ æ˜¾ç¤ºæŸä¸€æœ¬ä¹¦è¯¦æƒ…çš„å‘½ä»¤æŒ‰é’®
+        detailsButton = new JButton("è¯¦ç»†...");
         //detailsButton.addActionListener(new DetailsActionListener());
-        detailsButton.setEnabled(false); //³õÊ¼²»¿ÉÓÃ£¬Ñ¡ÔñÊéºó±äÎª¿ÉÓÃ
+        detailsButton.setEnabled(false); //åˆå§‹ä¸å¯ç”¨ï¼Œé€‰æ‹©ä¹¦åå˜ä¸ºå¯ç”¨
         bottomPanel = new JPanel();
         bottomPanel.add(detailsButton);
         this.add(BorderLayout.SOUTH, bottomPanel);
@@ -79,19 +79,19 @@ public class JComboBoxDemo extends JFrame {
 
     class RetrievalActionListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-            //´Ë´¦ÊµÏÖÊı¾İ¿âÊı¾İµÄ¼ìË÷£¬ÕâÀïÓÃÌØ¶¨ĞÅÏ¢´úÌæÏà¼û13ÕÂ
-            Object data[] = {"Java¹¢ÏéÒåÇå»ª´óÑ§", "ÃæÏò¶ÔÏóJava ÕÅ°×Ò» Î÷°²µç×Ó"};
+            //æ­¤å¤„å®ç°æ•°æ®åº“æ•°æ®çš„æ£€ç´¢ï¼Œè¿™é‡Œç”¨ç‰¹å®šä¿¡æ¯ä»£æ›¿ç›¸è§13ç« 
+            Object data[] = {"Javaè€¿ç¥¥ä¹‰æ¸…åå¤§å­¦", "é¢å‘å¯¹è±¡Java å¼ ç™½ä¸€ è¥¿å®‰ç”µå­"};
             bookListBox.setListData(data);
         }
     }
 
     class BookSelectionListener implements ListSelectionListener {
-        //µ±ÁĞ±íµÄÑ¡Ôñ·¢Éú±ä»¯Ê±£¬Ö´ĞĞ¸Ã·½·¨ÀïµÄÄÚÈİ
+        //å½“åˆ—è¡¨çš„é€‰æ‹©å‘ç”Ÿå˜åŒ–æ—¶ï¼Œæ‰§è¡Œè¯¥æ–¹æ³•é‡Œçš„å†…å®¹
         public void valueChanged(ListSelectionEvent event) {
-            if (bookListBox.isSelectionEmpty()) { //ÅĞ¶ÏÊÇ·ñÑ¡ÔñÁËÄÚÈİ
+            if (bookListBox.isSelectionEmpty()) { //åˆ¤æ–­æ˜¯å¦é€‰æ‹©äº†å†…å®¹
                 detailsButton.setEnabled(false);
             } else {
-                detailsButton.setEnabled(true); //Ê¹¡±ÏêÏ¸¡±°´Å¥¿ÉÓÃ£¬ÒÔ¼ìË÷ÊéµÄÏêÏ¸ĞÅÏ¢
+                detailsButton.setEnabled(true); //ä½¿â€è¯¦ç»†â€æŒ‰é’®å¯ç”¨ï¼Œä»¥æ£€ç´¢ä¹¦çš„è¯¦ç»†ä¿¡æ¯
             }
         }
     }

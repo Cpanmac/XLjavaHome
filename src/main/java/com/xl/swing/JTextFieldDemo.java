@@ -7,43 +7,43 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-//¸ÃÀà×÷ÎªÊÂ¼ş¼àÌıÕß£¬ĞèÒªÊµÏÖ¶ÔÓ¦µÄ½Ó¿Ú
+//è¯¥ç±»ä½œä¸ºäº‹ä»¶ç›‘å¬è€…ï¼Œéœ€è¦å®ç°å¯¹åº”çš„æ¥å£
 public class JTextFieldDemo extends JFrame implements ActionListener {
     private JLabel lb2;
     private JTextField t1, t2;
 
     public JTextFieldDemo() {
-        this.setLayout(new FlowLayout()); //ÉèÖÃ²¼¾Ö¹ÜÀí
-        JLabel lb1 = new JLabel("ÇëÊäÈëÒ»¸öÕıÕûÊı£º");
-        lb2 = new JLabel("1µ½¸ÃÊıµÄºÍÎª£º");// ´´½¨±êÇ©¶ÔÏó×Ö·û´®ÎªÌáÊ¾ĞÅÏ¢
-        t1 = new JTextField(10);// ´´½¨ÊäÈëÎÄ±¾¿ò£¬×î¶àÏÔÊ¾10¸ö×Ö·û
+        this.setLayout(new FlowLayout()); //è®¾ç½®å¸ƒå±€ç®¡ç†
+        JLabel lb1 = new JLabel("è¯·è¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°ï¼š");
+        lb2 = new JLabel("1åˆ°è¯¥æ•°çš„å’Œä¸ºï¼š");// åˆ›å»ºæ ‡ç­¾å¯¹è±¡å­—ç¬¦ä¸²ä¸ºæç¤ºä¿¡æ¯
+        t1 = new JTextField(10);// åˆ›å»ºè¾“å…¥æ–‡æœ¬æ¡†ï¼Œæœ€å¤šæ˜¾ç¤º10ä¸ªå­—ç¬¦
         t2 = new JTextField(10);
-        this.add(lb1); // ½«×é¼şÌí¼Óµ½´°¿ÚÉÏ
+        this.add(lb1); // å°†ç»„ä»¶æ·»åŠ åˆ°çª—å£ä¸Š
         this.add(t1);
         this.add(lb2);
         this.add(t2);
-        t1.addActionListener(this);// ÎªÎÄ±¾¿ò×¢²áActionEventÊÂ¼ş¼àÌıÆ÷
-        // Îª´°¿Ú×¢²á´°¿ÚÊÂ¼ş¼àÌı³ÌĞò£¬¼àÌıÆ÷ÒÔÄäÃûÀàµÄĞÎÊ½½øĞĞ
-        this.addWindowListener(new WindowAdapter() {// ÄäÃûÀà¿ªÊ¼
+        t1.addActionListener(this);// ä¸ºæ–‡æœ¬æ¡†æ³¨å†ŒActionEventäº‹ä»¶ç›‘å¬å™¨
+        // ä¸ºçª—å£æ³¨å†Œçª—å£äº‹ä»¶ç›‘å¬ç¨‹åºï¼Œç›‘å¬å™¨ä»¥åŒ¿åç±»çš„å½¢å¼è¿›è¡Œ
+        this.addWindowListener(new WindowAdapter() {// åŒ¿åç±»å¼€å§‹
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
-            } // ´°¿Ú¹Ø±Õ
-        });// ÄäÃûÀà½áÊø
-        this.setTitle("Í¼Êé¹ÜÀíÏµÍ³JTextFieldÊ¾Àı");//ÉèÖÃ´°Ìå±êÌâ
-        this.setSize(600, 450);//ÉèÖÃ´°¿Ú´óĞ¡
-        this.setVisible(true);//ÉèÖÃ´°ÌåµÄ¿É¼ûĞÔ
+            } // çª—å£å…³é—­
+        });// åŒ¿åç±»ç»“æŸ
+        this.setTitle("å›¾ä¹¦ç®¡ç†ç³»ç»ŸJTextFieldç¤ºä¾‹");//è®¾ç½®çª—ä½“æ ‡é¢˜
+        this.setSize(600, 450);//è®¾ç½®çª—å£å¤§å°
+        this.setVisible(true);//è®¾ç½®çª—ä½“çš„å¯è§æ€§
     }
 
     public static void main(String[] arg) {
         new JTextFieldDemo();
     }
 
-    public void actionPerformed(ActionEvent e) { // ActionListener½Ó¿ÚÖĞ·½·¨µÄÊµÏÖ
-        // getText()»ñÈ¡ÎÄ±¾¿òÊäÈëµÄÄÚÈİ£¬×ª»»ÎªÕûĞÍÊıÖµ
+    public void actionPerformed(ActionEvent e) { // ActionListeneræ¥å£ä¸­æ–¹æ³•çš„å®ç°
+        // getText()è·å–æ–‡æœ¬æ¡†è¾“å…¥çš„å†…å®¹ï¼Œè½¬æ¢ä¸ºæ•´å‹æ•°å€¼
         int n = Integer.parseInt(t1.getText());
         int sum = 0;
         for (int i = 1; i <= n; i++)
             sum = sum + i;
-        t2.setText(String.valueOf(sum)); // ĞŞ¸ÄÎÄ±¾¿òÊä³öÄÚÈİ
+        t2.setText(String.valueOf(sum)); // ä¿®æ”¹æ–‡æœ¬æ¡†è¾“å‡ºå†…å®¹
     }
 }

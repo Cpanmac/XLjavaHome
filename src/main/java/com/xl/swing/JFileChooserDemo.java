@@ -7,18 +7,18 @@ import java.awt.event.ActionListener;
 import java.io.File;
 
 public class JFileChooserDemo extends JFrame implements ActionListener {
-    JFileChooser fc = new JFileChooser(); // ´´½¨ÎÄ¼ş¶Ô»°¿ò¶ÔÏó
+    JFileChooser fc = new JFileChooser(); // åˆ›å»ºæ–‡ä»¶å¯¹è¯æ¡†å¯¹è±¡
     JButton open, save;
 
     public JFileChooserDemo() {
         Container container = this.getContentPane();
         container.setLayout(new FlowLayout());
-        this.setTitle("ÎÄ¼ş¶Ô»°¿òÑİÊ¾³ÌĞò");
-        open = new JButton("´ò¿ªÎÄ¼ş"); // ¶¨ÒåÃüÁî°´Å¥
-        save = new JButton("±£´æÎÄ¼ş");
-        open.addActionListener(this);// ÎªÊÂ¼ş×¢²á
+        this.setTitle("æ–‡ä»¶å¯¹è¯æ¡†æ¼”ç¤ºç¨‹åº");
+        open = new JButton("æ‰“å¼€æ–‡ä»¶"); // å®šä¹‰å‘½ä»¤æŒ‰é’®
+        save = new JButton("ä¿å­˜æ–‡ä»¶");
+        open.addActionListener(this);// ä¸ºäº‹ä»¶æ³¨å†Œ
         save.addActionListener(this);
-        container.add(open); // Ìí¼Óµ½ÄÚÈİ´°¸ñÉÏ
+        container.add(open); // æ·»åŠ åˆ°å†…å®¹çª—æ ¼ä¸Š
         container.add(save);
         this.show(true);
         this.setSize(600, 450);
@@ -29,23 +29,23 @@ public class JFileChooserDemo extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        JButton button = (JButton) e.getSource(); // µÃµ½ÊÂ¼şÔ´
-        if (button == open) {// Ñ¡ÔñµÄÊÇ¡°´ò¿ª¡±°´Å¥
-            int select = fc.showOpenDialog(this); // ÏÔÊ¾´ò¿ªÎÄ¼ş¶Ô»°¿ò
-            if (select == JFileChooser.APPROVE_OPTION) { // Ñ¡ÔñµÄÊÇ·ñÎªÈ·ÈÏ
-                File file = fc.getSelectedFile(); // ¸ù¾İÑ¡Ôñ´´½¨ÎÄ¼ş¶ÔÏó
-                // ÔÚÆÁÄ»ÉÏÏÔÊ¾´ò¿ªÎÄ¼şµÄÎÄ¼şÃû
-                System.out.println("ÎÄ¼ş" + file.getName() + "±»´ò¿ª");
+        JButton button = (JButton) e.getSource(); // å¾—åˆ°äº‹ä»¶æº
+        if (button == open) {// é€‰æ‹©çš„æ˜¯â€œæ‰“å¼€â€æŒ‰é’®
+            int select = fc.showOpenDialog(this); // æ˜¾ç¤ºæ‰“å¼€æ–‡ä»¶å¯¹è¯æ¡†
+            if (select == JFileChooser.APPROVE_OPTION) { // é€‰æ‹©çš„æ˜¯å¦ä¸ºç¡®è®¤
+                File file = fc.getSelectedFile(); // æ ¹æ®é€‰æ‹©åˆ›å»ºæ–‡ä»¶å¯¹è±¡
+                // åœ¨å±å¹•ä¸Šæ˜¾ç¤ºæ‰“å¼€æ–‡ä»¶çš„æ–‡ä»¶å
+                System.out.println("æ–‡ä»¶" + file.getName() + "è¢«æ‰“å¼€");
             } else
-                System.out.println("´ò¿ª²Ù×÷±»È¡Ïû");
+                System.out.println("æ‰“å¼€æ“ä½œè¢«å–æ¶ˆ");
         }
-        if (button == save) {//Ñ¡ÔñµÄÊÇ¡°±£´æ¡±°´Å¥
-            int select = fc.showSaveDialog(this); //ÏÔÊ¾¡°±£´æ¡±ÎÄ¼ş¶Ô»°¿ò
+        if (button == save) {//é€‰æ‹©çš„æ˜¯â€œä¿å­˜â€æŒ‰é’®
+            int select = fc.showSaveDialog(this); //æ˜¾ç¤ºâ€œä¿å­˜â€æ–‡ä»¶å¯¹è¯æ¡†
             if (select == JFileChooser.APPROVE_OPTION) {
                 File file = fc.getSelectedFile();
-                System.out.println("ÎÄ¼ş" + file.getName() + "±»±£´æ");
+                System.out.println("æ–‡ä»¶" + file.getName() + "è¢«ä¿å­˜");
             } else
-                System.out.println("±£´æ²Ù×÷±»È¡Ïû");
+                System.out.println("ä¿å­˜æ“ä½œè¢«å–æ¶ˆ");
         }
     }
 }

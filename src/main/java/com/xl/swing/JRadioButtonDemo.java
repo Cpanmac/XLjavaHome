@@ -8,31 +8,31 @@ import java.util.Vector;
 
 public class JRadioButtonDemo extends JFrame {
     protected JPanel topPanel;
-    protected JScrollPane bookInLibScrollPane;// ´æ·Å½èÔÄĞÅÏ¢µÄÃæ°å
-    protected JTable borrowInfoTable; //ÏÔÊ¾½èÔÄĞÅÏ¢µÄ±í¸ñ
+    protected JScrollPane bookInLibScrollPane;// å­˜æ”¾å€Ÿé˜…ä¿¡æ¯çš„é¢æ¿
+    protected JTable borrowInfoTable; //æ˜¾ç¤ºå€Ÿé˜…ä¿¡æ¯çš„è¡¨æ ¼
     private Container container;
 
     public JRadioButtonDemo() {
-        container = this.getContentPane();//»ñÈ¡ÄÚÈİ´°¸ñ
+        container = this.getContentPane();//è·å–å†…å®¹çª—æ ¼
         topPanel = new JPanel();
         topPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-        // ÉèÖÃ±ß¿òÎÄ±¾ÌáÊ¾ĞÅÏ¢
-        topPanel.setBorder(BorderFactory.createTitledBorder("½èÔÄ²éÑ¯Ñ¡Ïî"));
-        JRadioButton currBorrowButton = new JRadioButton("µ±Ç°½èÔÄ");
-        JRadioButton oldBorrowButton = new JRadioButton("ÀúÊ·½èÔÄ");
-        topPanel.add(currBorrowButton); //Ìí¼Ó×é¼şµ½Ãæ°åÈİÆ÷
-        topPanel.add(oldBorrowButton); //Ìí¼Ó×é¼şµ½Ãæ°åÈİÆ÷
-        // ×¢²áÊÂ¼ş¼àÌı³ÌĞò£¬¶ÔActionEventÊÂ¼ş×÷³ö´¦Àí
+        // è®¾ç½®è¾¹æ¡†æ–‡æœ¬æç¤ºä¿¡æ¯
+        topPanel.setBorder(BorderFactory.createTitledBorder("å€Ÿé˜…æŸ¥è¯¢é€‰é¡¹"));
+        JRadioButton currBorrowButton = new JRadioButton("å½“å‰å€Ÿé˜…");
+        JRadioButton oldBorrowButton = new JRadioButton("å†å²å€Ÿé˜…");
+        topPanel.add(currBorrowButton); //æ·»åŠ ç»„ä»¶åˆ°é¢æ¿å®¹å™¨
+        topPanel.add(oldBorrowButton); //æ·»åŠ ç»„ä»¶åˆ°é¢æ¿å®¹å™¨
+        // æ³¨å†Œäº‹ä»¶ç›‘å¬ç¨‹åºï¼Œå¯¹ActionEventäº‹ä»¶ä½œå‡ºå¤„ç†
         currBorrowButton.addActionListener(new CurrentBorrowInfoListener());
         oldBorrowButton.addActionListener(new OldBorrowInfoListener());
-        /** ½«2¸öRadioButton¶ÔÏó·Å½øButtonGroupÖĞ£¬ÒÔÊµÏÖ¶şÑ¡Ò» */
+        /** å°†2ä¸ªRadioButtonå¯¹è±¡æ”¾è¿›ButtonGroupä¸­ï¼Œä»¥å®ç°äºŒé€‰ä¸€ */
         ButtonGroup buttonGroup1 = new ButtonGroup();
         buttonGroup1.add(currBorrowButton);
         buttonGroup1.add(oldBorrowButton);
-        this.add(BorderLayout.NORTH, topPanel); //°ÑÃæ°åÈİÆ÷Ìí¼Óµ½ÄÚÈİ´°¸ñÉÏ
-        this.setTitle("Í¼Êé¹ÜÀíÏµÍ³ÎÒµÄ½èÔÄ"); //ÉèÖÃ±êÌâ
-        this.setSize(600, 450);//ÉèÖÃ´óĞ¡
-        this.setVisible(true);//ÉèÖÃ¿É¼ûĞÔ
+        this.add(BorderLayout.NORTH, topPanel); //æŠŠé¢æ¿å®¹å™¨æ·»åŠ åˆ°å†…å®¹çª—æ ¼ä¸Š
+        this.setTitle("å›¾ä¹¦ç®¡ç†ç³»ç»Ÿæˆ‘çš„å€Ÿé˜…"); //è®¾ç½®æ ‡é¢˜
+        this.setSize(600, 450);//è®¾ç½®å¤§å°
+        this.setVisible(true);//è®¾ç½®å¯è§æ€§
     }
 
     public static void main(String[] arg) {
@@ -41,59 +41,59 @@ public class JRadioButtonDemo extends JFrame {
 
     class CurrentBorrowInfoListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-            // °Ñµ±Ç°½èÔÄĞÅÏ¢´ÓÊı¾İ¿âÈ¡³ö£¬ÒÔ±í¸ñµÄĞÎÊ½ÏÔÊ¾³öÀ´£¬´úÂëÊµÏÖ¼û13ÕÂ
-            Vector allBorrowInfoVector = new Vector();// ´æ·ÅËùÓĞµÄĞĞµÄÄÚÈİÏòÁ¿
-            Vector rowVector1 = new Vector();// ´æ·ÅµÚÒ»ĞĞÄÚÈİµÄÏòÁ¿
-            //ÎªµÚÒ»ĞĞµÄÄÚÈİÏòÁ¿Éè¶¨Öµ£¬Êµ¼ÊÓ¦´ÓÊı¾İ¿â¶ÁÈ¡ĞÅÏ¢·ÅÈëÏòÁ¿£¬ÕâÀïÎª²âÊÔÊı¾İ
-            rowVector1.add("java³ÌĞòÉè¼Æ");
-            rowVector1.add("¹¢ÏéÒå");
-            rowVector1.add("Çå»ª´óÑ§³ö°æÉç");
+            // æŠŠå½“å‰å€Ÿé˜…ä¿¡æ¯ä»æ•°æ®åº“å–å‡ºï¼Œä»¥è¡¨æ ¼çš„å½¢å¼æ˜¾ç¤ºå‡ºæ¥ï¼Œä»£ç å®ç°è§13ç« 
+            Vector allBorrowInfoVector = new Vector();// å­˜æ”¾æ‰€æœ‰çš„è¡Œçš„å†…å®¹å‘é‡
+            Vector rowVector1 = new Vector();// å­˜æ”¾ç¬¬ä¸€è¡Œå†…å®¹çš„å‘é‡
+            //ä¸ºç¬¬ä¸€è¡Œçš„å†…å®¹å‘é‡è®¾å®šå€¼ï¼Œå®é™…åº”ä»æ•°æ®åº“è¯»å–ä¿¡æ¯æ”¾å…¥å‘é‡ï¼Œè¿™é‡Œä¸ºæµ‹è¯•æ•°æ®
+            rowVector1.add("javaç¨‹åºè®¾è®¡");
+            rowVector1.add("è€¿ç¥¥ä¹‰");
+            rowVector1.add("æ¸…åå¤§å­¦å‡ºç‰ˆç¤¾");
             rowVector1.add("09-09-08");
             rowVector1.add("09-12-08");
             rowVector1.add("");
             rowVector1.add("0");
             rowVector1.add("0");
-            allBorrowInfoVector.add(rowVector1);//°ÑµÚÒ»ĞĞÏòÁ¿Ìí¼Ó
-            rowVector1 = new Vector();// ´æ·ÅµÚ¶şĞĞÏòÁ¿
+            allBorrowInfoVector.add(rowVector1);//æŠŠç¬¬ä¸€è¡Œå‘é‡æ·»åŠ 
+            rowVector1 = new Vector();// å­˜æ”¾ç¬¬äºŒè¡Œå‘é‡
             rowVector1.add("java");
-            rowVector1.add("ÕÅ°×Ò»");
-            rowVector1.add("Çå»ª´óÑ§³ö°æÉç");
+            rowVector1.add("å¼ ç™½ä¸€");
+            rowVector1.add("æ¸…åå¤§å­¦å‡ºç‰ˆç¤¾");
             rowVector1.add("09-10-10");
             rowVector1.add("10-01-10");
             rowVector1.add("");
             rowVector1.add("0");
             rowVector1.add("0");
             allBorrowInfoVector.add(rowVector1);
-            /*¾²Ì¬Êı¾İÒÔÉÏÏòÁ¿¿ÉÒÔÍ¨¹ı¶şÎ¬Êı×é´úÌæ*/
-            /*Object borrowinf[][]={{"java³ÌĞòÉè¼Æ","¹¢ÏéÒå","Çå»ª´óÑ§³ö°æÉç", "09-09-08", "09-12-08", "","0","0"},{"java","ÕÅ°×Ò»","Çå»ª´óÑ§³ö°æÉç","09-10-10","10-01-10","","0","0"}};*/
-            Vector borrowHead = new Vector(); // ´æ´¢±íÍ·ĞÅÏ¢µÄÏòÁ¿
-            borrowHead.add("ÊéÃû");
-            borrowHead.add("×÷Õß");
-            borrowHead.add("³ö°æ");
-            borrowHead.add("½èÔÄÈÕÆÚ");
-            borrowHead.add("Ó¦»¹ÈÕÆÚ");
-            borrowHead.add("¹é»¹ÈÕÆÚ");
-            borrowHead.add("³¬ÆÚÌìÊı");
-            borrowHead.add("·£¿î½ğ¶î");
-			/*¾²Ì¬Êı¾İÒÔÉÏÏòÁ¿¿ÉÒÔÍ¨¹ıÒ»Î¬Êı×é´úÌæ*/
-			/* Object tableHead[]={"ÊéÃû","×÷Õß","³ö°æ","½èÔÄÈÕÆÚ","Ó¦»¹ÈÕÆÚ","¹é»¹ÈÕÆÚ","³¬ÆÚÌìÊı", "·£¿î½ğ¶î"};*/
-            // Éú³É¾ßÓĞÄÚÈİºÍ±íÍ·µÄ±í¸ñ
-            // borrowInfoTable = new JTable(borrowinf, tableHead); //ÒÔÊı×éÊı¾İÉú³É±í¸ñ
-            borrowInfoTable = new JTable(allBorrowInfoVector, borrowHead);//ÒÔÏòÁ¿Êı¾İÉú³É±í¸ñ
-            borrowInfoTable.setEnabled(false);//ÉèÖÃ±í¸ñÊÇ²»¿É±à¼­µÄ£¬Ö»ÏÔÊ¾ĞÅÏ¢
+            /*é™æ€æ•°æ®ä»¥ä¸Šå‘é‡å¯ä»¥é€šè¿‡äºŒç»´æ•°ç»„ä»£æ›¿*/
+            /*Object borrowinf[][]={{"javaç¨‹åºè®¾è®¡","è€¿ç¥¥ä¹‰","æ¸…åå¤§å­¦å‡ºç‰ˆç¤¾", "09-09-08", "09-12-08", "","0","0"},{"java","å¼ ç™½ä¸€","æ¸…åå¤§å­¦å‡ºç‰ˆç¤¾","09-10-10","10-01-10","","0","0"}};*/
+            Vector borrowHead = new Vector(); // å­˜å‚¨è¡¨å¤´ä¿¡æ¯çš„å‘é‡
+            borrowHead.add("ä¹¦å");
+            borrowHead.add("ä½œè€…");
+            borrowHead.add("å‡ºç‰ˆ");
+            borrowHead.add("å€Ÿé˜…æ—¥æœŸ");
+            borrowHead.add("åº”è¿˜æ—¥æœŸ");
+            borrowHead.add("å½’è¿˜æ—¥æœŸ");
+            borrowHead.add("è¶…æœŸå¤©æ•°");
+            borrowHead.add("ç½šæ¬¾é‡‘é¢");
+			/*é™æ€æ•°æ®ä»¥ä¸Šå‘é‡å¯ä»¥é€šè¿‡ä¸€ç»´æ•°ç»„ä»£æ›¿*/
+			/* Object tableHead[]={"ä¹¦å","ä½œè€…","å‡ºç‰ˆ","å€Ÿé˜…æ—¥æœŸ","åº”è¿˜æ—¥æœŸ","å½’è¿˜æ—¥æœŸ","è¶…æœŸå¤©æ•°", "ç½šæ¬¾é‡‘é¢"};*/
+            // ç”Ÿæˆå…·æœ‰å†…å®¹å’Œè¡¨å¤´çš„è¡¨æ ¼
+            // borrowInfoTable = new JTable(borrowinf, tableHead); //ä»¥æ•°ç»„æ•°æ®ç”Ÿæˆè¡¨æ ¼
+            borrowInfoTable = new JTable(allBorrowInfoVector, borrowHead);//ä»¥å‘é‡æ•°æ®ç”Ÿæˆè¡¨æ ¼
+            borrowInfoTable.setEnabled(false);//è®¾ç½®è¡¨æ ¼æ˜¯ä¸å¯ç¼–è¾‘çš„ï¼Œåªæ˜¾ç¤ºä¿¡æ¯
             borrowInfoTable.setPreferredScrollableViewportSize(new Dimension(0, 120));
             bookInLibScrollPane = new JScrollPane();
-            bookInLibScrollPane.setViewportView(borrowInfoTable); //·ÅÖÃµ½¹ö¶¯Ãæ°å
-            //ÉèÖÃÌáÊ¾ĞÅÏ¢
-            bookInLibScrollPane.setBorder(BorderFactory.createTitledBorder("½èÔÄĞÅÏ¢"));
-            add(BorderLayout.CENTER, bookInLibScrollPane); //Ìí¼Óµ½ÄÚÈİ´°¸ñÉÏ
-            validate();//Ë¢ĞÂ´°¿Ú
+            bookInLibScrollPane.setViewportView(borrowInfoTable); //æ”¾ç½®åˆ°æ»šåŠ¨é¢æ¿
+            //è®¾ç½®æç¤ºä¿¡æ¯
+            bookInLibScrollPane.setBorder(BorderFactory.createTitledBorder("å€Ÿé˜…ä¿¡æ¯"));
+            add(BorderLayout.CENTER, bookInLibScrollPane); //æ·»åŠ åˆ°å†…å®¹çª—æ ¼ä¸Š
+            validate();//åˆ·æ–°çª—å£
         }
     }
 
     class OldBorrowInfoListener implements ActionListener {
         public void actionPerformed(ActionEvent event) {
-            // °ÑÀúÊ·½èÔÄĞÅÏ¢´ÓÊı¾İ¿âÈ¡³ö£¬ÒÔ±í¸ñµÄĞÎÊ½ÏÔÊ¾³öÀ´£¬´úÂëÊµÏÖ¼û13ÕÂ
+            // æŠŠå†å²å€Ÿé˜…ä¿¡æ¯ä»æ•°æ®åº“å–å‡ºï¼Œä»¥è¡¨æ ¼çš„å½¢å¼æ˜¾ç¤ºå‡ºæ¥ï¼Œä»£ç å®ç°è§13ç« 
         }
     }
 }

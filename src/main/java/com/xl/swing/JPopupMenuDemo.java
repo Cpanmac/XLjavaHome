@@ -11,7 +11,7 @@ public class JPopupMenuDemo extends JFrame {
     public JPopupMenuDemo() {
         Container container = this.getContentPane();
         this.addMouseListener(new mouseLis());
-        /* ´´½¨4¸ö²Ëµ¥Ïî£¬²¢Ìí¼Óµ½µ¯³öÊ½²Ëµ¥ÉÏ */
+        /* åˆ›å»º4ä¸ªèœå•é¡¹ï¼Œå¹¶æ·»åŠ åˆ°å¼¹å‡ºå¼èœå•ä¸Š */
         JMenuItem save = new JMenuItem("Save");
         JMenuItem cut = new JMenuItem("Cut");
         JMenuItem copy = new JMenuItem("Copy");
@@ -19,7 +19,7 @@ public class JPopupMenuDemo extends JFrame {
         popMenu.add(save);
         popMenu.add(cut);
         popMenu.add(copy);
-        popMenu.addSeparator(); // Ìí¼ÓÒ»¸ö·Ö¸ôÏß
+        popMenu.addSeparator(); // æ·»åŠ ä¸€ä¸ªåˆ†éš”çº¿
         popMenu.add(exit);
         this.show(true);
         this.setSize(600, 450);
@@ -31,8 +31,8 @@ public class JPopupMenuDemo extends JFrame {
 
     class mouseLis extends MouseAdapter {
         public void mouseClicked(MouseEvent e) {
-            if (e.getButton() == MouseEvent.BUTTON3) // ÅĞ¶ÏÊÇ·ñµã»÷µÄÊÇÊó±êÓÒ¼ü
-                popMenu.show(e.getComponent(), e.getX(), e.getY()); // ÔÚµ±Ç°Î»ÖÃÏÔÊ¾
+            if (e.getButton() == MouseEvent.BUTTON3) // åˆ¤æ–­æ˜¯å¦ç‚¹å‡»çš„æ˜¯é¼ æ ‡å³é”®
+                popMenu.show(e.getComponent(), e.getX(), e.getY()); // åœ¨å½“å‰ä½ç½®æ˜¾ç¤º
         }
     }
 }

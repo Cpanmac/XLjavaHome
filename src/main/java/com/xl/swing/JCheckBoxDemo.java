@@ -5,26 +5,26 @@ import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
-//¸ÃÀà×÷ÎªÊÂ¼ş¼àÌıÕß£¬ĞèÒªÊµÏÖ¶ÔÓ¦µÄItemListener½Ó¿Ú
+//è¯¥ç±»ä½œä¸ºäº‹ä»¶ç›‘å¬è€…ï¼Œéœ€è¦å®ç°å¯¹åº”çš„ItemListeneræ¥å£
 public class JCheckBoxDemo extends JFrame implements ItemListener {
-    int red = 0, green = 0, blue = 0; // ÈıÖÖÑÕÉ«·ÖÁ¿µÄÖµ
-    private JLabel lb1; // ×÷Îªµ÷É«°å£¬¸ù¾İËùÑ¡ÑÕÉ«²»Í¬ËüµÄÑÕÉ«ËæÖ®±ä»¯
-    private JCheckBox ckb1, ckb2, ckb3; // ´ú±íºì¡¢ÂÌ¡¢À¶ÈıÉ«ÊÇ·ñÑ¡ÖĞµÄ¸´Ñ¡¿ò
+    int red = 0, green = 0, blue = 0; // ä¸‰ç§é¢œè‰²åˆ†é‡çš„å€¼
+    private JLabel lb1; // ä½œä¸ºè°ƒè‰²æ¿ï¼Œæ ¹æ®æ‰€é€‰é¢œè‰²ä¸åŒå®ƒçš„é¢œè‰²éšä¹‹å˜åŒ–
+    private JCheckBox ckb1, ckb2, ckb3; // ä»£è¡¨çº¢ã€ç»¿ã€è“ä¸‰è‰²æ˜¯å¦é€‰ä¸­çš„å¤é€‰æ¡†
     private Container container;
 
     public JCheckBoxDemo() {
         container = this.getContentPane();
-        ckb1 = new JCheckBox("ºìÉ«"); // ´´½¨¸´Ñ¡¿ò¶ÔÏó£¬×Ö·û´®ÎªÌáÊ¾ĞÅÏ¢
-        ckb2 = new JCheckBox("ÂÌÉ«");
-        ckb3 = new JCheckBox("À¶É«");
-        lb1 = new JLabel(); // ´´½¨¿Õ±êÇ©×÷Îªµ÷É«°å
-        lb1.setMaximumSize(new Dimension(150, 200)); // ÉèÖÃ³ß´ç
-        container.add(lb1, BorderLayout.CENTER); // °Ñ×é¼şÌí¼Óµ½´°¿ÚÉÏ
+        ckb1 = new JCheckBox("çº¢è‰²"); // åˆ›å»ºå¤é€‰æ¡†å¯¹è±¡ï¼Œå­—ç¬¦ä¸²ä¸ºæç¤ºä¿¡æ¯
+        ckb2 = new JCheckBox("ç»¿è‰²");
+        ckb3 = new JCheckBox("è“è‰²");
+        lb1 = new JLabel(); // åˆ›å»ºç©ºæ ‡ç­¾ä½œä¸ºè°ƒè‰²æ¿
+        lb1.setMaximumSize(new Dimension(150, 200)); // è®¾ç½®å°ºå¯¸
+        container.add(lb1, BorderLayout.CENTER); // æŠŠç»„ä»¶æ·»åŠ åˆ°çª—å£ä¸Š
         JPanel p1 = new JPanel();
         p1.add(ckb1);
         p1.add(ckb2);
         p1.add(ckb3);
-        // Îª×é¼ş×¢²áÊÂ¼ş¼àÌı³ÌĞò£¬¶ÔItemEventÊÂ¼ş½øĞĞ´¦Àí
+        // ä¸ºç»„ä»¶æ³¨å†Œäº‹ä»¶ç›‘å¬ç¨‹åºï¼Œå¯¹ItemEventäº‹ä»¶è¿›è¡Œå¤„ç†
         ckb1.addItemListener(this);
         ckb2.addItemListener(this);
         ckb3.addItemListener(this);
@@ -32,9 +32,9 @@ public class JCheckBoxDemo extends JFrame implements ItemListener {
             System.out.println("111");
         }
         container.add(p1, BorderLayout.SOUTH);
-        // Îª´°¿Ú×¢²á´°¿ÚÊÂ¼ş¼àÌı³ÌĞò£¬¼àÌıÆ÷ÒÔÄäÃûÀàµÄĞÎÊ½½øĞĞ
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// ¹Ø±Õ´°¿ÚÊ±ÍË³öÏµÍ³
-        this.setTitle("Í¼Êé¹ÜÀíÏµÍ³JCheckBoxÊ¾Àı");
+        // ä¸ºçª—å£æ³¨å†Œçª—å£äº‹ä»¶ç›‘å¬ç¨‹åºï¼Œç›‘å¬å™¨ä»¥åŒ¿åç±»çš„å½¢å¼è¿›è¡Œ
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// å…³é—­çª—å£æ—¶é€€å‡ºç³»ç»Ÿ
+        this.setTitle("å›¾ä¹¦ç®¡ç†ç³»ç»ŸJCheckBoxç¤ºä¾‹");
         this.setSize(600, 450);
         this.setVisible(true);
     }
@@ -43,15 +43,15 @@ public class JCheckBoxDemo extends JFrame implements ItemListener {
         new JCheckBoxDemo();
     }
 
-    // ItemListener½Ó¿ÚÖĞ·½·¨µÄÊµÏÖ°´Å¥µÄ×´Ì¬·¢Éú¸Ä±äÊ±¸Ã·½·¨½«»á±»µ÷ÓÃ
+    // ItemListeneræ¥å£ä¸­æ–¹æ³•çš„å®ç°æŒ‰é’®çš„çŠ¶æ€å‘ç”Ÿæ”¹å˜æ—¶è¯¥æ–¹æ³•å°†ä¼šè¢«è°ƒç”¨
     public void itemStateChanged(ItemEvent e) {
-        if (e.getItem() == ckb1) // ÅĞ¶ÏÊÂ¼şÔ´
-            if (e.getStateChange() == ItemEvent.SELECTED) // ÅĞ¶Ï×é¼şµ½µ×ÓĞÃ»ÓĞ±»Ñ¡ÖĞ
+        if (e.getItem() == ckb1) // åˆ¤æ–­äº‹ä»¶æº
+            if (e.getStateChange() == ItemEvent.SELECTED) // åˆ¤æ–­ç»„ä»¶åˆ°åº•æœ‰æ²¡æœ‰è¢«é€‰ä¸­
                 red = 255;
             else
                 red = 0;
         if (e.getItem() == ckb2)
-            if (ckb2.isSelected()) //ÅĞ¶Ï×é¼şÊÇ·ñÑ¡ÖĞ£¬Ñ¡ÖĞÎªtrue·ñÔòÎªfalse
+            if (ckb2.isSelected()) //åˆ¤æ–­ç»„ä»¶æ˜¯å¦é€‰ä¸­ï¼Œé€‰ä¸­ä¸ºtrueå¦åˆ™ä¸ºfalse
                 green = 255;
             else
                 green = 0;
@@ -60,7 +60,7 @@ public class JCheckBoxDemo extends JFrame implements ItemListener {
                 blue = 255;
             else
                 blue = 0;
-        lb1.setOpaque(true);// ÉèÖÃ±êÇ©Îª²»Í¸Ã÷£¬Ê¹±êÇ©µÄÑÕÉ«ÏÔÊ¾³öÀ´
-        lb1.setBackground(new Color(red, green, blue));// ÉèÖÃ±êÇ©µÄ±³¾°ÑÕÉ«
+        lb1.setOpaque(true);// è®¾ç½®æ ‡ç­¾ä¸ºä¸é€æ˜ï¼Œä½¿æ ‡ç­¾çš„é¢œè‰²æ˜¾ç¤ºå‡ºæ¥
+        lb1.setBackground(new Color(red, green, blue));// è®¾ç½®æ ‡ç­¾çš„èƒŒæ™¯é¢œè‰²
     }
 }
