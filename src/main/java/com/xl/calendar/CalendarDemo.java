@@ -1,6 +1,6 @@
 package com.xl.calendar;
 
-import com.sinitek.sirm.common.utils.TimeUtil;
+import com.xl.util.DateUtil;
 import org.junit.Test;
 
 import java.util.Calendar;
@@ -27,9 +27,9 @@ public class CalendarDemo {
         System.out.println("MINUTE:" + c.get(Calendar.MINUTE));
         System.out.println("MILLISECOND:" + c.get(Calendar.MILLISECOND));
         c.set(Calendar.DATE, 1);
-        System.out.println(TimeUtil.formatDate(c.getTime(), "yyyy-MM-dd"));
+        System.out.println(DateUtil.formatDate(c.getTime()));
         c.set(Calendar.MONTH, 0);
-        System.out.println(TimeUtil.formatDate(c.getTime(), "yyyy-MM-dd"));
+        System.out.println(DateUtil.formatDate(c.getTime()));
     }
 
     @Test
@@ -47,7 +47,7 @@ public class CalendarDemo {
         c.set(Calendar.HOUR_OF_DAY, 0);
         c.set(Calendar.MINUTE, 0);
         c.set(Calendar.SECOND, 0);
-        System.out.println(TimeUtil.formatDate(c.getTime(), "yyyy-MM-dd HH:ss:mm"));
-        System.out.println(TimeUtil.formatDate(c.getTime(), "yyyy-MM-dd HH:ss:mm"));
+        System.out.println(DateUtil.formatTime(c.getTime()));
+        System.out.println(DateUtil.formatTime(c.getTime()));
     }
 }

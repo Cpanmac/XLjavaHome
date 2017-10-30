@@ -4,7 +4,7 @@
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/web/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/src/web" relative="/" />
@@ -51,14 +51,7 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.5" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.weixin:weixin-java-cp:1.1.4.jdk6" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.weixin:weixin-java-common:1.1.4.jdk6" level="project" />
-    <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream:1.4.7" level="project" />
-    <orderEntry type="library" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
-    <orderEntry type="library" name="Maven: xpp3:xpp3_min:1.1.4c" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.10" level="project" />
-    <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant:1.8.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant-launcher:1.8.0" level="project" />
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.6" level="project" />
@@ -66,12 +59,11 @@
     <orderEntry type="library" name="Maven: axis:axis-jaxrpc:1.3" level="project" />
     <orderEntry type="library" name="Maven: axis:axis-saaj:1.3" level="project" />
     <orderEntry type="library" name="Maven: wsdl4j:wsdl4j:1.5.1" level="project" />
-    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.6" level="project" />
-    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.3" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.3" level="project" />
     <orderEntry type="library" name="Maven: commons-discovery:commons-discovery:0.2" level="project" />
-    <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.1" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:1.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-jexl:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.2" level="project" />
@@ -123,6 +115,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:servlet-api:6.0.44" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.12" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring:2.5.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc-struts:2.5.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.struts:struts-core:1.3.5" level="project" />
@@ -139,48 +132,7 @@
     <orderEntry type="library" name="Maven: org.openoffice:jurt:4.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.openoffice:ridl:4.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.openoffice:unoil:4.1.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:Sinitek.DS.ServiceFramework:0.9.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:spirit-businlogger:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:spirit-logger:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: net.sf.jxls:jxls-core:1.0.5" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:org-client:0.0.8" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:org-core:0.0.8" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:org-server:0.0.8" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:right-client:0.0.6b" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:right-core:0.0.6b" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:right-server:0.0.6b" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:um-client:0.1.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:um-core:0.0.12" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:Sinitek.MetaDB2:2.0.0" level="project" />
-    <orderEntry type="library" name="Maven: c3p0:c3p0:0.9.1" level="project" />
-    <orderEntry type="library" name="Maven: com.whalin:Memcached-Java-Client:3.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-mongodb:1.3.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.6.1.RELEASE" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:jcl-over-slf4j:1.7.1" level="project" />
-    <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:2.10.1" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.7.6" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.7.6" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:um-server:0.1.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek:session:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek:util:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:Sinitek.Spirit.WebControl:3.0.4" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.spirit:Sinitek.Spirit.WebFramework:1.3.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_basedataapi:2.0.15" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_basedataapp:2.0.51" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_basedataimpl:2.0.15" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_brokermarkapi:1.1.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_brokermarkimpl:1.0.1" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_commoncore:2.2.8" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_crmsendclient:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_industryresearchapi:2.1.6" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_industryresearchimpl:2.1.5" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_investpoolapi:2.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_investpoolimpl:2.0.5" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_rschreportapi:2.0.16" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_rschreportimpl:2.0.16" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_sirmappcore:2.2.20" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_stockresearchapi:2.1.10" level="project" />
-    <orderEntry type="library" name="Maven: com.sinitek.sirm:sinitek_stockresearchimpl:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.5" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.10" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.7.2" level="project" />
@@ -212,6 +164,6 @@
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache-core:2.6.11" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:0.2.10" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.21" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.1" level="project" />
   </component>
 </module>
