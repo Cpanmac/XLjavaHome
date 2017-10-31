@@ -2,3 +2,4 @@
 bin
 /javaSE.iml
 target/
+.idea/artifacts/
