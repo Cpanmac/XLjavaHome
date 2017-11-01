@@ -1,5 +1,7 @@
 package com.xl.base;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -12,9 +14,10 @@ import org.junit.Test;
  */
 public class LogDemo {
     private final static Logger LOGGER = Logger.getLogger(LogDemo.class);
-
+     private static final Log log = LogFactory.getLog(LogDemo.class);
     @Test
     public void logTest() {
         LOGGER.info("测试");
+        log.info("测试");
     }
 }
