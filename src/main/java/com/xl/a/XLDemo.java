@@ -1,6 +1,6 @@
 package com.xl.a;
 
-import com.xl.entity.Student;
+import com.xl.annotation.Igore;
 import org.junit.Test;
 
 /**
@@ -10,10 +10,14 @@ import org.junit.Test;
  * Time: 9:48
  * To change this template use File | Settings | File Templates.
  */
+@Igore
 public class XLDemo {
+    public void say() {
+        System.out.println("说话");
+    }
     @Test
     public void demoTest() {
-        System.out.println(new Student("1", 2));
-        System.out.println("中文测试");
+        XLDemo xlDemo = new XLDemo();
+        xlDemo.say();
     }
 }
