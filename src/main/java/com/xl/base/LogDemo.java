@@ -14,7 +14,8 @@ import org.junit.Test;
  */
 public class LogDemo {
     private final static Logger LOGGER = Logger.getLogger(LogDemo.class);
-     private static final Log log = LogFactory.getLog(LogDemo.class);
+    private static final Log log = LogFactory.getLog(LogDemo.class);
+
     @Test
     public void logTest() {
         LOGGER.info("测试");

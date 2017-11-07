@@ -3,6 +3,7 @@ package com.xl.annotation;
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.ProcessingEnvironment;
 import javax.annotation.processing.RoundEnvironment;
+import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
@@ -10,9 +11,9 @@ import javax.lang.model.element.TypeElement;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+@SupportedAnnotationTypes("com.xl.annotation.Igore")
 @SupportedSourceVersion(SourceVersion.RELEASE_8) // 源码级别, 这里的环境是 jdk 1.8
 //@SupportedAnnotationTypes("com.xl.annotation.Igore") // 处理的注解类型, 这里需要处理的是 apt 包下的 User 注解(这里也可以不用注解, 改成重写父类中对应的两个方法)
-class myProcessor {
     public class HelloProcessor extends AbstractProcessor {
         // 计数器, 用于计算 process() 方法运行了几次
         private int count = 1;
@@ -46,7 +47,7 @@ class myProcessor {
                 // 产生的动态类的名字
                 String newClassName = className + "_New";
             }
-            return false;
+            return true;
         }
 
         /**
@@ -70,5 +71,4 @@ class myProcessor {
             annotataions.add(HelloProcessor.class.getCanonicalName());
             return annotataions;
         }
-    }
 }
