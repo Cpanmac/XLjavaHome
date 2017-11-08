@@ -590,7 +590,7 @@ public abstract class FileUtils {
             in = new FileInputStream(file);
             properties.load(in);
         } catch (IOException e) {
-            throw new RuntimeException("Could not read Properties[" + path + "]", e);
+            throw new RuntimeException("Could not read properties[" + path + "]", e);
         } finally {
             IOUtils.closeQuietly(in);
         }
@@ -608,7 +608,7 @@ public abstract class FileUtils {
         try {
             properties.load(in);
         } catch (IOException e) {
-            throw new RuntimeException("Could not read Properties", e);
+            throw new RuntimeException("Could not read properties", e);
         } finally {
             IOUtils.closeQuietly(in);
         }
@@ -627,7 +627,7 @@ public abstract class FileUtils {
             out = new FileOutputStream(path);
             properties.store(out, null);
         } catch (IOException e) {
-            throw new RuntimeException("Could not write Properties[" + path + "]", e);
+            throw new RuntimeException("Could not write properties[" + path + "]", e);
         } finally {
             IOUtils.closeQuietly(out);
         }

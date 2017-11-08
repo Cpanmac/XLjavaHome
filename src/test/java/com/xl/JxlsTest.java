@@ -27,7 +27,8 @@ public class JxlsTest {
         long l1 = System.currentTimeMillis();
         int pagesize = 100;
         //获取模板
-        InputStream is = FileTool.getResourceInputStream("jxls/jxlsExcel.xls");
+        String path = "jxls/jxlsExcel.xls";
+        InputStream is = FileTool.getResourceInputStream(path);
         //总的数据
         Map<String, Object> map = new HashMap<String, Object>();
         //listmap
@@ -55,7 +56,7 @@ public class JxlsTest {
         XLSTransformer transformer = new XLSTransformer();
         Workbook workbook = transformer.transformMultipleSheetsList(is, objects, listSheetNames, "list", new HashMap(), 0);
         long l = System.currentTimeMillis();
-        workbook.write(new FileOutputStream(FileTool.getResourceFile("jxls/out.xls")));
+        workbook.write(new FileOutputStream(FileTool.createResourceFile("jxls/out.xls")));
         workbook.close();
         long l2 = System.currentTimeMillis();
         long l3 = l2 - l1;

@@ -1,4 +1,4 @@
-package com.xl.Properties;
+package com.xl.properties;
 
 import org.junit.Test;
 
@@ -34,7 +34,7 @@ public class LoadresourcesDemo {
         Properties p = new Properties();
         String name = "obj.properties";
         // 这个用得多，因为都是根路径(bin/) Hibernate用上面那种方式
-        InputStream in = LoadresourcesDemo.class.getClassLoader().getResourceAsStream("Properties/" + name); // ClassLoader类的方法。
+        InputStream in = LoadresourcesDemo.class.getClassLoader().getResourceAsStream("properties/" + name); // ClassLoader类的方法。
         // 默认去classpathd的根路径去找资源,放在src目录
         System.out.println(in);
         p.load(in);

@@ -1,0 +1,4 @@
+用户名	地址	性别	年龄
+<jx:forEach items="${list}" var="b">			
+${b.name}	${b.address}	${b.sex}	${b.age}
+</jx:forEach>			

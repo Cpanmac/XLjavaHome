@@ -1,4 +1,4 @@
-package com.xl.Properties;
+package com.xl.properties;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
