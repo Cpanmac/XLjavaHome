@@ -69,15 +69,15 @@ public class FreemarkDemo {
     }
 
     @Test
-    public void demo2Test() throws IOException, TemplateException {
+    public void listTest() throws IOException, TemplateException {
         Freemark freemark = new Freemark("/freemarker/");
         freemark.setTempletName("list.ftl");
         freemark.setOutFile(FileTool.createResourceFile("1.doc"));
         Map map = new HashMap();
-        List<User> list=new ArrayList<User>();
-        for(int i=0;i<3;i++) {
+        List<User> list = new ArrayList<User>();
+        for (int i = 0; i < 3; i++) {
             User u = new User();
-            u.setName("测试"+i);
+            u.setName("测试" + i);
             list.add(u);
         }
         map.put("userlist", list);

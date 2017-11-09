@@ -185,7 +185,6 @@ public class Medicine implements Serializable {
     }
 
     public Medicine() {
-        // TODO Auto-generated constructor stub
     }
 
     public Medicine(String name, String ark, String barCode, double buyPrice, double stockpile, String efficacy, double rebate, double sellPrice) {
