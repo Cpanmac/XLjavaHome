@@ -1,23 +1,16 @@
 package com.xl.freemarker;
 
+import com.xl.entity.Freemark;
+import com.xl.entity.User;
 import com.xl.util.FileTool;
-import freemarker.template.Configuration;
-import freemarker.template.Template;
+import com.xl.util.FreemarkUtil;
 import freemarker.template.TemplateException;
-import sun.misc.BASE64Encoder;
+import org.junit.Test;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -27,66 +20,14 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class FreemarkDemo {
-    private final String imgFile = "freemarker/a.jpg";
-    /**
-     * freemark模板配置
-     */
-    private Configuration configuration;
-    /**
-     * freemark模板的名字
-     */
-    private String templateName;
-    /**
-     * 生成文件名
-     */
-    private String fileName;
-    /**
-     * 生成文件路径
-     */
-    private String filePath;
-
-    /**
-     * freemark初始化
-     *
-     * @param templatePath 模板文件位置
-     */
-    public FreemarkDemo(String templatePath) {
-        configuration = new Configuration();
-        configuration.setDefaultEncoding("utf-8");
-        configuration.setClassForTemplateLoading(this.getClass(), templatePath);
-    }
-
-    public static void main(String[] args) throws IOException {
-        FreemarkDemo freemark = new FreemarkDemo("/freemarker/");
-        //		freemark.setTemplateName("wordTemplate.ftl");
-        freemark.setTemplateName("简历-朱老师.ftl");
-        freemark.setFileName("doc_" + new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date()) + ".doc");
-        freemark.setFilePath("bin/");
-        freemark.createWord();
-    }
-
-    private void createWord() throws IOException {
-        Template t = null;
-        try {
-            t = configuration.getTemplate(templateName);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        File outFile = new File(filePath + fileName);
-        if (!outFile.exists()) {
-            outFile.getParentFile().mkdirs();
-        }
-        Writer out = null;
-        try {
-            out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile), "UTF-8"));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+    @Test
+    public void demoTest() throws IOException, TemplateException {
+        Freemark freemark = new Freemark("/freemarker/");
+        freemark.setTempletName("简历-朱老师.ftl");
+        freemark.setOutFile(FileTool.createResourceFile("2.doc"));
         Map map = new HashMap<String, Object>();
         map.put("NAME", "徐立");
-        map.put("image", getImageStr());
+        map.put("image", FreemarkUtil.getImage(FileTool.getResourceFile("freemarker/a.jpg")));
         map.put("SEX", "男");
         map.put("BIRTH", "1987-08");
         map.put("ZZMM", "党员");
@@ -122,54 +63,26 @@ public class FreemarkDemo {
         map.put("YJ", "hanmanyifengyi@163.com");
         map.put("DZ", "河北省保定市");
         map.put("YB", "071000");
-        try {
-            t.process(map, out);
-            out.close();
-        } catch (TemplateException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            FileTool.open(outFile);
+        freemark.setParam(map);
+        FreemarkUtil.createWord(freemark);
+        FileTool.open(freemark.getOutFile());
+    }
+
+    @Test
+    public void demo2Test() throws IOException, TemplateException {
+        Freemark freemark = new Freemark("/freemarker/");
+        freemark.setTempletName("list.ftl");
+        freemark.setOutFile(FileTool.createResourceFile("1.doc"));
+        Map map = new HashMap();
+        List<User> list=new ArrayList<User>();
+        for(int i=0;i<3;i++) {
+            User u = new User();
+            u.setName("测试"+i);
+            list.add(u);
         }
-    }
-
-    private String getImageStr() {
-        InputStream in = null;
-        byte[] data = null;
-        try {
-            in = getClass().getClassLoader().getResourceAsStream(imgFile);
-            data = new byte[in.available()];
-            in.read(data);
-            in.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        BASE64Encoder encoder = new BASE64Encoder();
-        return encoder.encode(data);
-    }
-
-    public String getFileName() {
-        return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
-    public String getFilePath() {
-        return filePath;
-    }
-
-    public void setFilePath(String filePath) {
-        this.filePath = filePath;
-    }
-
-    public String getTemplateName() {
-        return templateName;
-    }
-
-    public void setTemplateName(String templateName) {
-        this.templateName = templateName;
+        map.put("userlist", list);
+        freemark.setParam(map);
+        FreemarkUtil.createWord(freemark);
+        FileTool.open(freemark.getOutFile());
     }
 }
