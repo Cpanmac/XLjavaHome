@@ -3,10 +3,11 @@ package com.xl.freemarker;
 import com.xl.entity.Freemark;
 import com.xl.entity.User;
 import com.xl.util.FileTool;
-import com.xl.util.FreemarkUtil;
+import com.xl.util.FreemarkerUtil;
 import freemarker.template.TemplateException;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,7 +28,7 @@ public class FreemarkDemo {
         freemark.setOutFile(FileTool.createResourceFile("2.doc"));
         Map map = new HashMap<String, Object>();
         map.put("NAME", "徐立");
-        map.put("image", FreemarkUtil.getImage(FileTool.getResourceFile("freemarker/a.jpg")));
+        map.put("image", FreemarkerUtil.getImage(FileTool.getResourceFile("freemarker/a.jpg")));
         map.put("SEX", "男");
         map.put("BIRTH", "1987-08");
         map.put("ZZMM", "党员");
@@ -64,7 +65,7 @@ public class FreemarkDemo {
         map.put("DZ", "河北省保定市");
         map.put("YB", "071000");
         freemark.setParam(map);
-        FreemarkUtil.createWord(freemark);
+        FreemarkerUtil.createWord(freemark);
         FileTool.open(freemark.getOutFile());
     }
 
@@ -82,7 +83,22 @@ public class FreemarkDemo {
         }
         map.put("userlist", list);
         freemark.setParam(map);
-        FreemarkUtil.createWord(freemark);
+        FreemarkerUtil.createWord(freemark);
         FileTool.open(freemark.getOutFile());
+    }
+
+    @Test
+    public void list2Test() throws IOException, TemplateException {
+        Map map = new HashMap();
+        List<User> list = new ArrayList<User>();
+        for (int i = 0; i < 300; i++) {
+            User u = new User();
+            u.setName("测试" + i);
+            list.add(u);
+        }
+        map.put("userlist", list);
+        File f = FileTool.createResourceFile("1.doc");
+        FreemarkerUtil.analysisTemplate("freemarker/list.ftl", f.getPath(), map);
+        FileTool.open(f);
     }
 }
