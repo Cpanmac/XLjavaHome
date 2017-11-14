@@ -1,12 +1,17 @@
 package com.xl.collections;
 
+import lombok.extern.log4j.Log4j;
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+@Log4j
 public class MapDemo {
-    public static void main(String[] args) {
+    @Test
+    public void mapTest() {
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("02", "zhangsan2");
         map.put("03", "zhangsan3");
@@ -22,5 +27,11 @@ public class MapDemo {
             String value = me.getValue();
             System.out.println("key:" + key + ",value:" + value);
         }
+    }
+
+    @Test
+    public void emptyTest() {
+        Map map = new HashMap();
+        log.info(map.get("1") == null); //空
     }
 }
