@@ -30,9 +30,12 @@ public class JPopupMenuDemo extends JFrame {
     }
 
     class mouseLis extends MouseAdapter {
+        @Override
         public void mouseClicked(MouseEvent e) {
             if (e.getButton() == MouseEvent.BUTTON3) // 判断是否点击的是鼠标右键
+            {
                 popMenu.show(e.getComponent(), e.getX(), e.getY()); // 在当前位置显示
+            }
         }
     }
 }

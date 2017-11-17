@@ -40,8 +40,9 @@ class TextServer {
         PrintWriter out = new PrintWriter(new FileWriter("C:\\Documents and Settings\\All Users\\桌面\\server.txt"), true);
         String line = null;
         while ((line = bufIn.readLine()) != null) {
-            if ("over".equals(line))
+            if ("over".equals(line)) {
                 break;
+            }
             out.println(line);
         }
         PrintWriter pw = new PrintWriter(s.getOutputStream(), true);

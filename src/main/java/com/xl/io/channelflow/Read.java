@@ -11,6 +11,7 @@ class Read implements Runnable  //读取线程
         this.pis = pis;
     }
 
+    @Override
     public void run()   //覆盖run方法不能抛只能处理
     {
         try {

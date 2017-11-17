@@ -57,6 +57,7 @@ public class MainFrame extends JFrame {
 
     /* libMenuItem事件源的事件监听器，打开例8-16添加Jlist后的窗口 */
     class BookInLibraryActionListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent event) {
             new JComboBoxDemo();
         }
@@ -64,6 +65,7 @@ public class MainFrame extends JFrame {
 
     /* 我的借阅的事件监听器，打开例8-16添加JTable后的窗口 */
     class MyBorrowActionListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent event) {
             new JRadioButtonDemo();
         }
@@ -71,6 +73,7 @@ public class MainFrame extends JFrame {
 
     /* 帮助菜单中关于菜单项的事件监听者 */
     class AboutActionListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent event) {
 			/* 暂时为空后加对话框 */
         }
@@ -78,6 +81,7 @@ public class MainFrame extends JFrame {
 
     /* 文件菜单中退出菜单项的事件监听者 */
     class ExitActionListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent event) {
             dispose();
             System.exit(0);

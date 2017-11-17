@@ -59,12 +59,14 @@ public class MyWindow {
 
     private void myEvent() {
         okBut.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 d.setVisible(false);
             }
         });
         d.addWindowListener(new WindowAdapter() // 点击关闭触发的事件
         {
+            @Override
             public void windowClosing(WindowEvent e) // 设置关闭事件
             {
                 d.setVisible(false); // 关×不能关掉，就把对话框取消
@@ -72,6 +74,7 @@ public class MyWindow {
         });
         f.addWindowListener(new WindowAdapter() // 点击关闭触发的事件
         {
+            @Override
             public void windowClosing(WindowEvent e) // 设置关闭事件
             {
                 System.exit(0);
@@ -81,6 +84,7 @@ public class MyWindow {
         but.addActionListener(new ActionListener() // 点击转到按钮触发的事件
         {
             // 获取文本区域
+            @Override
             public void actionPerformed(ActionEvent e) {
                 // 输入目录
                 showDir();
@@ -88,9 +92,11 @@ public class MyWindow {
         });
         // 不想点击按钮，按回车就行 tf文本框
         tf.addKeyListener(new KeyAdapter() {
+            @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyCode() == KeyEvent.VK_ENTER)
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     showDir();
+                }
             }
         });
         /*

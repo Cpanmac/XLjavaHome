@@ -75,8 +75,9 @@ public class ExcelUtils {
         Row row = sheet.getRow(0);
         List<T> list = new ArrayList<>();
         Map<Integer, ExcelHeader> maps = Utils.getHeaderMap(row, clazz);
-        if (maps == null || maps.size() <= 0)
+        if (maps == null || maps.size() <= 0) {
             throw new RuntimeException("要读取的Excel的格式不正确，检查是否设定了合适的行");
+        }
         int maxLine = sheet.getLastRowNum() > (offsetLine + limitLine) ? (offsetLine + limitLine) : sheet.getLastRowNum();
         for (int i = offsetLine; i <= maxLine; i++) {
             row = sheet.getRow(i);
@@ -84,8 +85,9 @@ public class ExcelUtils {
             for (Cell cell : row) {
                 int ci = cell.getColumnIndex();
                 ExcelHeader header = maps.get(ci);
-                if (null == header)
+                if (null == header) {
                     continue;
+                }
                 String filed = header.getFiled();
                 String val = Utils.getCellValue(cell);
                 Object value = Utils.str2TargetClass(val, header.getFiledClazz());

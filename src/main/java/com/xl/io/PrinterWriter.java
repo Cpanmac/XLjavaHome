@@ -16,8 +16,9 @@ public class PrinterWriter {
         PrintWriter out = new PrintWriter(new FileWriter("a.txt"), true); // 不写刷新ln就是刷新
         String line = null;
         while ((line = bufr.readLine()) != null) {
-            if ("over".equals(line))
+            if ("over".equals(line)) {
                 break;
+            }
             out.write(line.toUpperCase());
             out.println();
             // out.flush();

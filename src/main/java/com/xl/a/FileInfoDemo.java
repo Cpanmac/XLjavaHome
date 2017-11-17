@@ -10,12 +10,19 @@ import java.util.Date;
 
 public class FileInfoDemo extends JFrame {
     public static final int HEIGHT = 600;
-    JTextField jtfPath;    //文件路径输入框
-    JTextArea jtaInfo;    //显示文件属性文本框
+    /**
+     * 文件路径输入框
+     */
+    JTextField jtfPath;
+    /**
+     * 显示文件属性文本框
+     */
+    JTextArea jtaInfo;
     private int width = 800;
 
     public FileInfoDemo() {
-        super("取得目录/文件信息");    //调用父类构造函数
+        //调用父类构造函数
+        super("取得目录/文件信息");
         //        setLayout(new ScrollPaneLayout());
         jtfPath = new JTextField(16);    //实例化文件输入框
         JButton jbSelectedFile = new JButton("选择");    //实例化文件选择按钮
@@ -31,6 +38,7 @@ public class FileInfoDemo extends JFrame {
         jsp.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));    //设置边界
         container.add(jsp, BorderLayout.CENTER);
         jbSelectedFile.addActionListener(new ActionListener() {    //选择文件按钮事件处理
+            @Override
             public void actionPerformed(ActionEvent event) {
                 JFileChooser fileChooser = new JFileChooser();        //实例化文件选择器
                 fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);  //设置文件选择模式,此处为文件和目录均可
@@ -42,6 +50,7 @@ public class FileInfoDemo extends JFrame {
             }
         });
         jtfPath.addActionListener(new ActionListener() {    //文件路径输入框事件处理
+            @Override
             public void actionPerformed(ActionEvent event) {
                 showFileInfo(jtfPath.getText());    //显示文件信息
             }

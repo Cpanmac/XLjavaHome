@@ -30,17 +30,20 @@ class AwtDemo {
         });
         // 匿名内部类
         f.addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) // 关的动作
             {
                 System.out.println("我关");
                 System.exit(0);
             }
 
+            @Override
             public void windowActivated(WindowEvent e) // 前置时触发此行为
             {
                 System.out.println("active");
             }
 
+            @Override
             public void windowOpened(WindowEvent e) // 打开时显示的
             {
                 System.out.println("我被打开了");

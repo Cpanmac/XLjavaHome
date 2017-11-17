@@ -2,8 +2,6 @@ package com.xuan.xutils.domain.result;
 
 import com.xuan.xutils.domain.BaseDO;
 
-import java.util.Date;
-
 /**
  * 一般RPC调用或者HTTP接口返回,我们会统一封装类似下面的Result对象
  * <p>
@@ -19,7 +17,7 @@ public class BaseResult extends BaseDO {
     /**
      * 时间戳
      */
-    private long serverTime = new Date().getTime();
+    private long serverTime = System.currentTimeMillis();
     /**
      * 当返回一种错误结果时,不光要设置message错误信息,最好再设置一个bizCode,调用方可以根据这个bizCode来做响应的业务处理
      * 参看枚举: BizCodeEnum

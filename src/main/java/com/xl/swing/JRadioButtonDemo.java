@@ -40,6 +40,7 @@ public class JRadioButtonDemo extends JFrame {
     }
 
     class CurrentBorrowInfoListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent event) {
             // 把当前借阅信息从数据库取出，以表格的形式显示出来，代码实现见13章
             Vector allBorrowInfoVector = new Vector();// 存放所有的行的内容向量
@@ -92,6 +93,7 @@ public class JRadioButtonDemo extends JFrame {
     }
 
     class OldBorrowInfoListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent event) {
             // 把历史借阅信息从数据库取出，以表格的形式显示出来，代码实现见13章
         }

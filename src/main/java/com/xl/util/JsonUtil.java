@@ -18,10 +18,12 @@ public class JsonUtil implements JsonValueProcessor {
         this.datePattern = format;
     }
 
+    @Override
     public Object processArrayValue(Object value, JsonConfig jsonConfig) {
         return process(value);
     }
 
+    @Override
     public Object processObjectValue(String key, Object value, JsonConfig jsonConfig) {
         return process(value);
     }

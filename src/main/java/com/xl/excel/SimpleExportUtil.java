@@ -155,40 +155,42 @@ public class SimpleExportUtil {
                 HSSFCell cell = row.createCell(colNum);
                 cell.setCellStyle(cellStyle);
                 Object obj = null;
-                if (("boolean".equals(type)) || (type.equals("java.lang.Boolean")))
+                if (("boolean".equals(type)) || ("java.lang.Boolean".equals(type))) {
                     obj = MethodTool.executeMethod(list.get(i), MethodTool.returnIsBooleanMethodName(name));
-                else {
+                } else {
                     obj = MethodTool.executeMethod(list.get(i), MethodTool.returnGetMethodName(name));
                 }
-                if (obj != null)
-                    if (type.endsWith("String"))
+                if (obj != null) {
+                    if (type.endsWith("String")) {
                         cell.setCellValue((String) obj);
-                    else if (("int".equals(type)) || (type.equals("java.lang.Integer")))
+                    } else if (("int".equals(type)) || ("java.lang.Integer".equals(type))) {
                         cell.setCellValue(((Integer) obj).intValue());
-                    else if (("double".equals(type)) || (type.equals("java.lang.Double"))) {
+                    } else if (("double".equals(type)) || ("java.lang.Double".equals(type))) {
                         bigDecimal = new BigDecimal(((Double) obj).doubleValue(), mathContext);
                         cell.setCellValue(bigDecimal.doubleValue());
-                    } else if (("boolean".equals(type)) || (type.equals("java.lang.Boolean")))
+                    } else if (("boolean".equals(type)) || ("java.lang.Boolean".equals(type))) {
                         cell.setCellValue(((Boolean) MethodTool.executeMethod(list.get(i), MethodTool.returnIsBooleanMethodName(name))).booleanValue());
-                    else if (("float".equals(type)) || (type.equals("java.lang.Float"))) {
+                    } else if (("float".equals(type)) || ("java.lang.Float".equals(type))) {
                         bigDecimal = new BigDecimal(((Float) obj).floatValue(), mathContext);
                         cell.setCellValue(bigDecimal.doubleValue());
-                    } else if ((type.equals("java.util.Date")) || (type.endsWith("Date")))
+                    } else if (("java.util.Date".equals(type)) || (type.endsWith("Date"))) {
                         cell.setCellValue((Date) obj);
-                    else if (type.equals("java.util.Calendar"))
+                    } else if ("java.util.Calendar".equals(type)) {
                         cell.setCellValue((Calendar) obj);
-                    else if (("char".equals(type)) || (type.equals("java.lang.Character")))
+                    } else if (("char".equals(type)) || ("java.lang.Character".equals(type))) {
                         cell.setCellValue(obj.toString());
-                    else if (("long".equals(type)) || (type.equals("java.lang.Long")))
+                    } else if (("long".equals(type)) || ("java.lang.Long".equals(type))) {
                         cell.setCellValue(((Long) obj).longValue());
-                    else if (("short".equals(type)) || (type.equals("java.lang.Short")))
+                    } else if (("short".equals(type)) || ("java.lang.Short".equals(type))) {
                         cell.setCellValue(((Short) obj).shortValue());
-                    else if (type.equals("java.math.BigDecimal")) {
+                    } else if ("java.math.BigDecimal".equals(type)) {
                         bigDecimal = (BigDecimal) obj;
                         bigDecimal = new BigDecimal(bigDecimal.doubleValue(), mathContext);
                         cell.setCellValue(bigDecimal.doubleValue());
-                    } else
+                    } else {
                         throw new Exception("data type errored!");
+                    }
+                }
                 ++colNum;
             }
         }

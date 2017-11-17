@@ -44,7 +44,9 @@ class TransClient1 {
             // bufOut.newLine();
             // bufOut.flush(); //写缓冲区里面去了
             if ("over".equals(line)) // 写下面就会把over发过去
+            {
                 break;
+            }
             out.println(line);
             String str = bufIn.readLine(); // 读的是服务器发过来的信息
             System.out.println("server:" + str);

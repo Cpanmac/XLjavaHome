@@ -16,6 +16,7 @@ public class MouseTrack extends java.applet.Applet {
     }
 
     //初始化小程序
+    @Override
     public void init() {
         onaroll = 0;
         resize(500, 500);
@@ -23,6 +24,7 @@ public class MouseTrack extends java.applet.Applet {
     }
 
     //画屏函数
+    @Override
     public void paint(Graphics g) {
         g.setColor(Color.red);
         g.drawRect(0, 0, size().width - 1, size().height - 1);
@@ -32,6 +34,7 @@ public class MouseTrack extends java.applet.Applet {
     }
 
     //响应按下鼠标
+    @Override
     public boolean mouseDown(java.awt.Event evt, int x, int y) {
         requestFocus();
         if ((mx < x && x < mx + size().width / 10 - 1) && (my < y && y < my + size().height / 10 - 1)) {
@@ -47,10 +50,11 @@ public class MouseTrack extends java.applet.Applet {
                         break;
                 }
                 onaroll++;
-                if (onaroll > 5)
+                if (onaroll > 5) {
                     getAppletContext().showStatus("You're on your way to THE HALL OF FAME:" + onaroll + "Hits!");
-                else
+                } else {
                     getAppletContext().showStatus("YOU'RE ON A ROLL:" + onaroll + "Hits!");
+                }
             } else {
                 getAppletContext().showStatus("HIT IT AGAIN! AGAIN!");
                 onaroll = 1;
@@ -64,9 +68,11 @@ public class MouseTrack extends java.applet.Applet {
     }
 
     //响应移动鼠标
+    @Override
     public boolean mouseMove(java.awt.Event evt, int x, int y) {
-        if ((x % 3 == 0) && (y % 3 == 0))
+        if ((x % 3 == 0) && (y % 3 == 0)) {
             repaint();
+        }
         return true;
     }
 

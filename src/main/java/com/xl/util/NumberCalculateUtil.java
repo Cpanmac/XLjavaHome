@@ -140,8 +140,9 @@ public class NumberCalculateUtil {
      * @return
      */
     public static String formatNumber(String num, String dev) {
-        if (StringUtil.isNotEmpty(num))
+        if (StringUtil.isNotEmpty(num)) {
             return dev;
+        }
         return num.replaceAll(",", "").trim();
     }
 

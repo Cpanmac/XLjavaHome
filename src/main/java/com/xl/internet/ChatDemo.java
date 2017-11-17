@@ -38,13 +38,15 @@ class Send implements Runnable {
         this.ds = ds;
     }
 
+    @Override
     public void run() {  //发送要try
         try {
             BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));//用到转换流
             String line = null;
             while ((line = bufr.readLine()) != null) {
-                if ("886".equals(line))
+                if ("886".equals(line)) {
                     break;
+                }
                 byte[] buf = line.getBytes();
                 DatagramPacket dp = new DatagramPacket(buf, buf.length, InetAddress.getByName("192.168.1.255"), 10002);//给所有的发广播
                 ds.send(dp);
@@ -62,6 +64,7 @@ class Rece implements Runnable {
         this.ds = ds;
     }
 
+    @Override
     public void run() {
         try {
             while (true) {

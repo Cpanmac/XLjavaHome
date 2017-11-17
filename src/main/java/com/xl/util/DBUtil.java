@@ -26,23 +26,26 @@ public class DBUtil {
 
     public static void close(ResultSet rs, Statement st, Connection conn) {
         try {
-            if (rs != null)
+            if (rs != null) {
                 rs.close();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {
-                if (st != null)
+                if (st != null) {
                     st.close();
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
-                if (conn != null)
+                if (conn != null) {
                     try {
                         conn.close();
                     } catch (Exception e) {
                         conn = null;
                     }
+                }
             }
         }
     }

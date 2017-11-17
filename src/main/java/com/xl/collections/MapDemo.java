@@ -28,10 +28,9 @@ public class MapDemo {
             System.out.println("key:" + key + ",value:" + value);
         }
     }
-
     @Test
     public void emptyTest() {
-        Map map = new HashMap();
+        Map map = new HashMap(2);
         log.info(map.get("1") == null); //空
     }
 }

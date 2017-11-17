@@ -76,8 +76,9 @@ public class Utils {
             e.printStackTrace();
         } finally {
             try {
-                if (fos != null)
+                if (fos != null) {
                     fos.close();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -122,8 +123,9 @@ public class Utils {
     }
 
     static public Object str2TargetClass(String strField, Class<?> clazz) {
-        if (null == strField || "".equals(strField))
+        if (null == strField || "".equals(strField)) {
             return null;
+        }
         if ((Long.class == clazz) || (long.class == clazz)) {
             strField = matchDoneBigDecimal(strField);
             strField = RegularUtils.converNumByReg(strField);

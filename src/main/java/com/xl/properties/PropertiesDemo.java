@@ -62,7 +62,8 @@ public class PropertiesDemo {
         System.out.println(value);
         // 打印键
         Set<String> names = prop.stringPropertyNames();
-        for (String s : names)
+        for (String s : names) {
             System.out.println(s + ":" + prop.getProperty(s));
+        }
     }
 }

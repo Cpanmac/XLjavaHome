@@ -22,8 +22,9 @@ public class ArrayUtil {
      */
     public static Object arrayAddLength(Object oldArray, int addLength) {
         Class c = oldArray.getClass();
-        if (!c.isArray())
+        if (!c.isArray()) {
             return null;
+        }
         Class componentType = c.getComponentType();
         int length = Array.getLength(oldArray);
         int newLength = length + addLength;
@@ -41,8 +42,9 @@ public class ArrayUtil {
      */
     public static Object arrayReduceLength(Object oldArray, int reduceLength) {
         Class c = oldArray.getClass();
-        if (!c.isArray())
+        if (!c.isArray()) {
             return null;
+        }
         Class componentType = c.getComponentType();
         int length = Array.getLength(oldArray);
         int newLength = length - reduceLength;
@@ -60,8 +62,9 @@ public class ArrayUtil {
     public int getMin(int[] arr) {
         int min = 0;
         for (int x = 1; x < arr.length; x++) {
-            if (arr[x] < arr[min])
+            if (arr[x] < arr[min]) {
                 min = x;
+            }
         }
         return arr[min];
     }

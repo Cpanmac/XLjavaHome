@@ -37,6 +37,7 @@ public class Demo extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Demo().setVisible(true);
             }
@@ -59,6 +60,7 @@ public class Demo extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextArea1KeyPressed(evt);
             }
@@ -66,6 +68,7 @@ public class Demo extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
         jButton1.setText("\u786e\u5b9a");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }

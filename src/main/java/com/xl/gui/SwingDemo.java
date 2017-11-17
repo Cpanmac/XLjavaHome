@@ -7,6 +7,7 @@ import java.awt.*;
  * Created by 立 on 7/25 0025.
  */
 class SwingDemo extends JApplet {
+    @Override
     public void init() {
         Container contentPane = getContentPane();
          /*原文

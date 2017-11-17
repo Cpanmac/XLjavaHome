@@ -80,10 +80,11 @@ public class RegexDemo {
         /* 第一次吃3个字符看符合不？此时第四个表示数子，因此不符合 ，再吃进一位：此时符合 */
         String s = "aaaa5bbbb68";
         Matcher m = p.matcher(s);
-        if (m.find())
+        if (m.find()) {
             System.out.println(m.start() + "-" + m.end());
-        else
+        } else {
             System.out.println("not match!");
+        }
     }
 
     /* 一般不用:占有模式 */
@@ -92,10 +93,11 @@ public class RegexDemo {
         Pattern p = Pattern.compile(".{3,10}+[0-9]");/* 一次吃10个字符并且不往外吐 */
         String s = "aaaa5bbbb6";
         Matcher m = p.matcher(s);
-        if (m.find())
+        if (m.find()) {
             System.out.println(m.start() + "-" + m.end());
-        else
+        } else {
             System.out.println("not match!");
+        }
     }
 
     @Test

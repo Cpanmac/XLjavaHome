@@ -35,6 +35,7 @@ class MyPaint extends JPanel implements KeyListener, Runnable {
     private static final long serialVersionUID = 1L;
     yidong yd = new yidong();
 
+    @Override
     public void paint(Graphics g) {
         super.paint(g);
         g.setColor(Color.ORANGE);
@@ -58,6 +59,7 @@ class MyPaint extends JPanel implements KeyListener, Runnable {
         }
     }
 
+    @Override
     public void keyPressed(KeyEvent e) {
         if (yd.kaishi == 1) {// 当游戏进行时 可控制
             if (e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_W) {
@@ -95,12 +97,15 @@ class MyPaint extends JPanel implements KeyListener, Runnable {
         }
     }
 
+    @Override
     public void keyReleased(KeyEvent arg0) {
     }
 
+    @Override
     public void keyTyped(KeyEvent arg0) {
     }
 
+    @Override
     public void run() { // 刷新面板线程
         Thread t2 = new Thread(yd);
         t2.start();

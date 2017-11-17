@@ -70,6 +70,7 @@ public class JComboBoxDemo extends JFrame {
     }
 
     class FieldSelectedListener implements ItemListener {
+        @Override
         public void itemStateChanged(ItemEvent event) {
             if (event.getStateChange() == ItemEvent.SELECTED) {
                 fieldSelected = (String) fieldComboBox.getSelectedItem();
@@ -78,6 +79,7 @@ public class JComboBoxDemo extends JFrame {
     }
 
     class RetrievalActionListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent event) {
             //此处实现数据库数据的检索，这里用特定信息代替相见13章
             Object data[] = {"Java耿祥义清华大学", "面向对象Java 张白一 西安电子"};
@@ -87,6 +89,7 @@ public class JComboBoxDemo extends JFrame {
 
     class BookSelectionListener implements ListSelectionListener {
         //当列表的选择发生变化时，执行该方法里的内容
+        @Override
         public void valueChanged(ListSelectionEvent event) {
             if (bookListBox.isSelectionEmpty()) { //判断是否选择了内容
                 detailsButton.setEnabled(false);

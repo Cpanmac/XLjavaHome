@@ -12,12 +12,14 @@ public class FactoryDemo {
 }
 
 class Apple implements fruit {
+    @Override
     public void eat() {
         System.out.println("Apple");
     }
 }
 
 class Orange implements fruit {
+    @Override
     public void eat() {
         System.out.println("Orange");
     }

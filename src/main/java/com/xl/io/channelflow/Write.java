@@ -10,6 +10,7 @@ public class Write implements Runnable  //写入线程
         this.pos = pos;
     }
 
+    @Override
     public void run()   //覆盖run方法不能抛只能处理
     {
         try {

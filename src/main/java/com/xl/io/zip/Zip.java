@@ -134,8 +134,9 @@ public class Zip {
     private String getEntryName(String base, File file) {
         File baseFile = new File(base);
         String filename = file.getPath();
-        if (baseFile.getParentFile().getParentFile() == null)
+        if (baseFile.getParentFile().getParentFile() == null) {
             return filename.substring(baseFile.getParent().length());
+        }
         return filename.substring(baseFile.getParent().length() + 1);
     }
 

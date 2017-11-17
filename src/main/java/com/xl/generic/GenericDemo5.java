@@ -11,6 +11,7 @@ interface Inter<T> // 这个接口只定义个参数
  */
 
 class InterImpl<T> implements Inter<T> {
+    @Override
     public void show(T t) {
         System.out.println("show：" + t);
     }

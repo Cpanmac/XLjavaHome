@@ -126,9 +126,9 @@ public class StringUtil {
      */
     public static String toChinese(String strvalue) {
         try {
-            if (null == strvalue)
+            if (null == strvalue) {
                 return "";
-            else {
+            } else {
                 strvalue = new String(strvalue.getBytes("ISO8859-1"), "gbk");
                 return strvalue;
             }
@@ -229,10 +229,12 @@ public class StringUtil {
      * @return
      */
     public static String subString(String str, int start, int end, String patten) {
-        if (isEmpty(str))
+        if (isEmpty(str)) {
             return "";
-        if (str.length() <= end)
+        }
+        if (str.length() <= end) {
             return str;
+        }
         return str.substring(start, end) + patten;
     }
 

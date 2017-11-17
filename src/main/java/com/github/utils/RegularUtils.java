@@ -44,8 +44,9 @@ public class RegularUtils {
         List<String> matchGroups = new ArrayList<>();
         Pattern compile = Pattern.compile(reg);
         Matcher matcher = compile.matcher(pattern);
-        if (group > matcher.groupCount() || group < 0)
+        if (group > matcher.groupCount() || group < 0) {
             throw new IllegalGroupIndexException("Illegal match group :" + group);
+        }
         while (matcher.find()) {
             matchGroups.add(matcher.group(group));
         }

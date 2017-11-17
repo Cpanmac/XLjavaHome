@@ -47,7 +47,7 @@ class ListHandler2 extends DefaultHandler {
         // 将标签名赋值给currentTag
         currentTag = name;
         // 当解析到第一个作者的时候currentNumber++
-        if (currentTag.equals("作者")) {
+        if ("作者".equals(currentTag)) {
             currentNumber++;
         }
     }

@@ -243,11 +243,12 @@ public class NumberTool {
      * @return
      */
     public static String convertIntArrayToString(int[] intArray) {
-        if (intArray.length <= 0)
+        if (intArray.length <= 0) {
             return "";
+        }
         String _string = "";
         for (int _int : intArray) {
-            _string += _string.equals("") ? new Integer(_int).toString() : "," + new Integer(_int).toString();
+            _string += "".equals(_string) ? new Integer(_int).toString() : "," + new Integer(_int).toString();
         }
         return _string;
     }

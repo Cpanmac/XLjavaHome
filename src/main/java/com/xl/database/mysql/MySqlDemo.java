@@ -1,5 +1,6 @@
 package com.xl.database.mysql;
 
+import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -11,6 +12,7 @@ import java.sql.Connection;
  * Time: 17:17
  * To change this template use File | Settings | File Templates.
  */
+@Log4j
 public class MySqlDemo {
     @Test
     public void getConnectTest() {

@@ -39,7 +39,7 @@ public class EncoderDemo {
         for (int i = 0; i < fileList.size(); i++) {
             File file = fileList.get(i);
             String encode = FileTool.getFileEncode(file);
-            if (encode != null && !encode.equals("UTF-8")) {
+            if (encode != null && !"UTF-8".equals(encode)) {
                 OutputStreamWriter w1 = null;
                 try {
                     String content = FileTool.getContent(file);

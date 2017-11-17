@@ -75,16 +75,19 @@ public class download {
 
     private void myEvent() {
         f.addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
         });
         d.addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 d.setVisible(false);
             }
         });
         but.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 long s = System.currentTimeMillis();
                 down2(tfd.getText());
@@ -93,17 +96,21 @@ public class download {
             }
         });
         okbut.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 d.setVisible(false);
             }
         });
         tfd.addKeyListener(new KeyListener() {
+            @Override
             public void keyTyped(KeyEvent e) {
             }
 
+            @Override
             public void keyReleased(KeyEvent e) {
             }
 
+            @Override
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     long s = System.currentTimeMillis();

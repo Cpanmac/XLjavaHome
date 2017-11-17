@@ -56,7 +56,7 @@ public class MoneyUtil {
         if (x.length() > 16) {
             return "";
         }
-        if (x.equals("0")) {
+        if ("0".equals(x)) {
             return "零";
         }
         //去除字符串首部的0，例如：0010->10
@@ -127,7 +127,7 @@ public class MoneyUtil {
         // 去掉分隔符
         amount = amount.replace(",", "");
         // 验证金额正确性
-        if (amount.equals("0.00")) {
+        if ("0.00".equals(amount)) {
             return "零元整";
         }
         Matcher matcher = AMOUNT_PATTERN.matcher(amount);
@@ -139,12 +139,12 @@ public class MoneyUtil {
         String integer = matcher.group(1); // 整数部分
         String fraction = matcher.group(2); // 小数部分
         String result = "";
-        if (!integer.equals("0")) {
+        if (!"0".equals(integer)) {
             result += integer2rmb(integer) + UNITS[0]; // 整数部分
         }
-        if (fraction.equals("00")) {
+        if ("00".equals(fraction)) {
             result += UNITS[3]; // 添加[整]
-        } else if (fraction.startsWith("0") && integer.equals("0")) {
+        } else if (fraction.startsWith("0") && "0".equals(integer)) {
             result += fraction2rmb(fraction).substring(1); // 去掉分前面的[零]
         } else {
             result += fraction2rmb(fraction); // 小数部分
@@ -231,12 +231,12 @@ public class MoneyUtil {
         System.out.println("叁佰贰拾伍元零肆分".equals(convert("325.04")));
         System.out.println("肆仟叁佰贰拾壹元整".equals(convert("4,321.00")));
         System.out.println("壹分".equals(convert("0.01")));
-        System.out.println(convert("1234,5678,9012.34").equals("壹仟贰佰叁拾肆亿伍仟陆佰柒拾捌万玖仟零壹拾贰元叁角肆分"));
-        System.out.println(convert("1000,1000,1000.10").equals("壹仟亿零壹仟万零壹仟元壹角"));
-        System.out.println(convert("9009,9009,9009.99").equals("玖仟零玖亿玖仟零玖万玖仟零玖元玖角玖分"));
-        System.out.println(convert("5432,0001,0001.01").equals("伍仟肆佰叁拾贰亿零壹万零壹元零壹分"));
-        System.out.println(convert("1000,0000,1110.00").equals("壹仟亿零壹仟壹佰壹拾元整"));
-        System.out.println(convert("1010,0000,0001.11").equals("壹仟零壹拾亿零壹元壹角壹分"));
-        System.out.println(convert("1000,0000,0000.01").equals("壹仟亿元零壹分"));
+        System.out.println("壹仟贰佰叁拾肆亿伍仟陆佰柒拾捌万玖仟零壹拾贰元叁角肆分".equals(convert("1234,5678,9012.34")));
+        System.out.println("壹仟亿零壹仟万零壹仟元壹角".equals(convert("1000,1000,1000.10")));
+        System.out.println("玖仟零玖亿玖仟零玖万玖仟零玖元玖角玖分".equals(convert("9009,9009,9009.99")));
+        System.out.println("伍仟肆佰叁拾贰亿零壹万零壹元零壹分".equals(convert("5432,0001,0001.01")));
+        System.out.println("壹仟亿零壹仟壹佰壹拾元整".equals(convert("1000,0000,1110.00")));
+        System.out.println("壹仟零壹拾亿零壹元壹角壹分".equals(convert("1010,0000,0001.11")));
+        System.out.println("壹仟亿元零壹分".equals(convert("1000,0000,0000.01")));
     }
 }

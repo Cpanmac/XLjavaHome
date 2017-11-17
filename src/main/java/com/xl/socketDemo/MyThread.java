@@ -27,7 +27,7 @@ public class MyThread implements Runnable {
             String name = p.getName();
             String psw = p.getPsw();
             Scanner sr = new Scanner(System.in);
-            if (name.equals("admin")) {
+            if ("admin".equals(name)) {
                 System.out.println("用户名正确！");
                 pw.write("over");
             } else {

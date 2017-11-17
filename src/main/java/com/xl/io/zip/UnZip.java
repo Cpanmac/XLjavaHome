@@ -57,14 +57,15 @@ public class UnZip {
         String dir[];
         File fl = new File(directory);
         try {
-            if (subDirectory == "" && fl.exists() != true)
+            if (subDirectory == "" && fl.exists() != true) {
                 fl.mkdir();
-            else if (subDirectory != "") {
+            } else if (subDirectory != "") {
                 dir = subDirectory.replace('\\', '/').split("/");
                 for (int i = 0; i < dir.length; i++) {
                     File subFile = new File(directory + File.separator + dir[i]);
-                    if (subFile.exists() == false)
+                    if (subFile.exists() == false) {
                         subFile.mkdir();
+                    }
                     directory += File.separator + dir[i];
                 }
             }

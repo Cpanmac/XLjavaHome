@@ -56,6 +56,7 @@ public class beanutils {
         // 为了让日期到bean的birhday属性上，我们给beanUtils注册一个日期转换器
         // 接口不能new的原因是里面有没有实现的方法，只要把方法实现了就能new了
         ConvertUtils.register(new Converter() {
+            @Override
             public Object convert(Class type, Object value) {
                 if (value == null) {
                     return null;
@@ -64,7 +65,7 @@ public class beanutils {
                     // throw new CoversionException("只支持String类型转换！！");
                 }
                 String str = (String) value;
-                if (str.trim().equals("")) {
+                if ("".equals(str.trim())) {
                     return null;
                 }
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");

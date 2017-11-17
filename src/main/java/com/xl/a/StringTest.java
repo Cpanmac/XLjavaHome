@@ -1,6 +1,7 @@
 package com.xl.a;
 
 import com.xl.util.StringUtil;
+import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,7 +15,8 @@ import java.util.List;
  * Time: 9:59
  * To change this template use File | Settings | File Templates.
  */
-public class StringDemo {
+@Log4j
+public class StringTest {
     /**
      * 转换为join字符串
      */
@@ -33,5 +35,20 @@ public class StringDemo {
     public void spiltTest() {
         String s = "测试";
         System.out.println(Arrays.toString(s.split(",")));
+    }
+
+    @Test
+    public void bufferAndBuilderTest() {
+        StringBuilder sb = new StringBuilder();
+        StringBuffer sb2 = new StringBuffer();
+    }
+
+    @Test
+    public void deleteTest() {
+        StringBuffer sql = new StringBuffer();
+        sql.append("12e13,3232,aa");
+        log.info(sql);
+        sql.delete(sql.length() - 2, sql.length());
+        log.info(sql);
     }
 }

@@ -51,10 +51,11 @@ class CollectionsDemo {
             int num = cmp.compare(key, str); // 加了比较器怎么比
             if (num > 0) {
                 max = mid - 1;
-            } else if (num < 0)
+            } else if (num < 0) {
                 min = mid + 1;
-            else
+            } else {
                 return mid; // 中间值
+            }
         }
         return -min - 1; // 插入点就是min
     }
@@ -62,11 +63,14 @@ class CollectionsDemo {
 
 class StrLenComparator implements Comparator<String> // 字符串长度比较器
 {
+    @Override
     public int compare(String s1, String s2) {
-        if (s1.length() > s2.length())
+        if (s1.length() > s2.length()) {
             return 1;
-        if (s1.length() < s2.length())
+        }
+        if (s1.length() < s2.length()) {
             return -1;
+        }
         return s1.compareTo(s2);
     }
 }

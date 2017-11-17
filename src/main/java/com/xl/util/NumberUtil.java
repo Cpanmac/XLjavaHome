@@ -412,10 +412,11 @@ public class NumberUtil {
      * @return 是否为整数
      */
     public static boolean isInteger(String s) {
-        if (StringUtil.isNotEmpty(s))
+        if (StringUtil.isNotEmpty(s)) {
             return s.matches("^\\d+$");
-        else
+        } else {
             return false;
+        }
     }
 
     /**
@@ -427,8 +428,9 @@ public class NumberUtil {
     public static boolean isDouble(String s) {
         try {
             Double.parseDouble(s);
-            if (s.contains("."))
+            if (s.contains(".")) {
                 return true;
+            }
             return false;
         } catch (NumberFormatException e) {
             return false;

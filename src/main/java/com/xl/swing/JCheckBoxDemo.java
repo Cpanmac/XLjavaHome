@@ -44,22 +44,32 @@ public class JCheckBoxDemo extends JFrame implements ItemListener {
     }
 
     // ItemListener接口中方法的实现按钮的状态发生改变时该方法将会被调用
+    @Override
     public void itemStateChanged(ItemEvent e) {
         if (e.getItem() == ckb1) // 判断事件源
+        {
             if (e.getStateChange() == ItemEvent.SELECTED) // 判断组件到底有没有被选中
+            {
                 red = 255;
-            else
+            } else {
                 red = 0;
-        if (e.getItem() == ckb2)
+            }
+        }
+        if (e.getItem() == ckb2) {
             if (ckb2.isSelected()) //判断组件是否选中，选中为true否则为false
+            {
                 green = 255;
-            else
+            } else {
                 green = 0;
-        if (e.getSource() == ckb3)
-            if (e.getStateChange() == ItemEvent.SELECTED)
+            }
+        }
+        if (e.getSource() == ckb3) {
+            if (e.getStateChange() == ItemEvent.SELECTED) {
                 blue = 255;
-            else
+            } else {
                 blue = 0;
+            }
+        }
         lb1.setOpaque(true);// 设置标签为不透明，使标签的颜色显示出来
         lb1.setBackground(new Color(red, green, blue));// 设置标签的背景颜色
     }

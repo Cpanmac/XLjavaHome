@@ -41,12 +41,15 @@ public class ChatGUI extends JFrame implements ActionListener {
         new ChatGUI();
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
         String str = sentence.getText(); // 获取聊天栏里的聊天信息
-        if (str != null && !str.equals("")) // 如果聊天内容不为空，则发送信息
+        if (str != null && !"".equals(str)) // 如果聊天内容不为空，则发送信息
+        {
             chatContent.append("本人:  " + str + "\n");// 将本人发送的聊天信息追加到聊天内容区
-        else
+        } else {
             chatContent.append("聊天信息不能为空\n");
+        }
         sentence.setText(""); // 清空聊天栏里的内容
     }
 }

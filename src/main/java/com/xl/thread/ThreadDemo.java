@@ -7,7 +7,10 @@ public class ThreadDemo implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(num);
+        for (int i = 0; i < 3; i++) {
+            num = i;
+            System.out.println(num);
+        }
     }
 
     @Test

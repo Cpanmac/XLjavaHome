@@ -12,6 +12,7 @@ public enum Grade {
     // A("100-90"),B("89-80"),C("70-79"),D("60-69"),E("0-59");
     // 3.带抽象方法的枚举.希望调用就得到对应的等级（优、良..)
     A("100-90") {
+        @Override
         public String localeValue() {
             return "优";
         }

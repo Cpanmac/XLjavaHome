@@ -32,6 +32,7 @@ public class Demo1 {
 
 // 适配器模式
 class MyWindowListener extends WindowAdapter {
+    @Override
     public void windowClosing(WindowEvent e) {
         // 取得事件源
         Frame frame = (Frame) e.getSource();

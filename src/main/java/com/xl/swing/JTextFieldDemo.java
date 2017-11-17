@@ -25,6 +25,7 @@ public class JTextFieldDemo extends JFrame implements ActionListener {
         t1.addActionListener(this);// 为文本框注册ActionEvent事件监听器
         // 为窗口注册窗口事件监听程序，监听器以匿名类的形式进行
         this.addWindowListener(new WindowAdapter() {// 匿名类开始
+            @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             } // 窗口关闭
@@ -38,12 +39,14 @@ public class JTextFieldDemo extends JFrame implements ActionListener {
         new JTextFieldDemo();
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) { // ActionListener接口中方法的实现
         // getText()获取文本框输入的内容，转换为整型数值
         int n = Integer.parseInt(t1.getText());
         int sum = 0;
-        for (int i = 1; i <= n; i++)
+        for (int i = 1; i <= n; i++) {
             sum = sum + i;
+        }
         t2.setText(String.valueOf(sum)); // 修改文本框输出内容
     }
 }

@@ -61,13 +61,15 @@ public class MyMenuDemo {
 
     private void myEvent() {
         saveItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (file == null) {
                     saveDia.setVisible(true); // 显示保存,可以不显示，当文件不存在时显示
                     String dirPath = saveDia.getDirectory();// 获取存储的路径
                     String fileName = saveDia.getFile();// 获取存储的文件名
-                    if (dirPath == null || fileName == null)
+                    if (dirPath == null || fileName == null) {
                         return;
+                    }
                     file = new File(dirPath, fileName);
                 }
                 try {
@@ -83,14 +85,16 @@ public class MyMenuDemo {
         });
         openItem.addActionListener(new ActionListener() // 点击打开的事件
         {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 openDia.setVisible(true);
                 String dirPath = openDia.getDirectory();// 获得打开文件的路径
                 String fileName = openDia.getFile();
                 System.out.println(dirPath + "  " + fileName);
                 // 如果没选择文件就会出空指针异常，目录有，文件没有。所以得判断
-                if (dirPath == null || fileName == null)
+                if (dirPath == null || fileName == null) {
                     return;
+                }
                 ta.setText(""); // 每次打开都清空之前的文本
                 file = new File(dirPath, fileName);
                 try {

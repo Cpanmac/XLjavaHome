@@ -69,7 +69,7 @@ class BeanListHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         // 当结束标签为书的时候说明全部存到了book对象,这个时候存进List
-        if (qName.equals("书")) {
+        if ("书".equals(qName)) {
             list.add(book);
             // book=null; //这个可以去掉
         }

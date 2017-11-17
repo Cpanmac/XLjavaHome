@@ -120,8 +120,9 @@ public class ExcelTemplate {
     private void initModuleConfig() {
         for (Row row : sheet) {
             for (Cell c : row) {
-                if (c.getCellType() != Cell.CELL_TYPE_STRING)
+                if (c.getCellType() != Cell.CELL_TYPE_STRING) {
                     continue;
+                }
                 String str = c.getStringCellValue().trim();
                 // 寻找序号列
                 if (str.equals(HandlerConstant.SERIAL_NUMBER)) {
@@ -177,12 +178,14 @@ public class ExcelTemplate {
      * @param data 替换映射
      */
     public void extendData(Map<String, String> data) {
-        if (data == null)
+        if (data == null) {
             return;
+        }
         for (Row row : this.sheet) {
             for (Cell c : row) {
-                if (c.getCellType() != Cell.CELL_TYPE_STRING)
+                if (c.getCellType() != Cell.CELL_TYPE_STRING) {
                     continue;
+                }
                 String str = c.getStringCellValue().trim();
                 if (str.startsWith("#")) {
                     if (data.containsKey(str.substring(1))) {
@@ -211,8 +214,9 @@ public class ExcelTemplate {
      * 插入序号，会自动找相应的序号标示的位置完成插入
      */
     public void insertSerial(String styleKey) {
-        if (this.serialNumberColumnIndex < 0)
+        if (this.serialNumberColumnIndex < 0) {
             return;
+        }
         this.serialNumber++;
         Cell c = this.currentRow.createCell(this.serialNumberColumnIndex);
         setCellStyle(c, styleKey);
@@ -299,8 +303,9 @@ public class ExcelTemplate {
             cell.setCellStyle(this.doubleLineStyle);
             return;
         }
-        if (null != this.defaultStyle)
+        if (null != this.defaultStyle) {
             cell.setCellStyle(this.defaultStyle);
+        }
     }
     /*************************************数据填充结束***********************************/
     /*************************************写出数据开始***********************************/

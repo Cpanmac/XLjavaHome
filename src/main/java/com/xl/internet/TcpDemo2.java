@@ -39,7 +39,9 @@ class TransClient {
         while ((line = bufr.readLine()) != null) { // 读的键盘
             bufOut.write(line);
             if ("over".equals(line)) // 写下面就会把over发过去
+            {
                 break;
+            }
             String str = bufIn.readLine(); // 读的是服务器发过来的信息
             System.out.println("server:" + str);
         }

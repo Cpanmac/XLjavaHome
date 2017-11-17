@@ -10,8 +10,9 @@ public class ShutDownDemo {
         System.out.print("是否取消y/n");
         Scanner sr = new Scanner(System.in);
         String n = sr.next();
-        if ("y".equals(n))
+        if ("y".equals(n)) {
             ce.exec("shutdown -a");
+        }
         System.out.println(ce.exec("shutdown -i"));
     }
 }

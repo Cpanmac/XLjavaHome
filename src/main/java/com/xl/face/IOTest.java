@@ -28,14 +28,17 @@ public class IOTest {
             out = new FileOutputStream(dest);
             byte[] buf = new byte[1024];
             int n;
-            while ((n = in.read(buf)) > 0)
+            while ((n = in.read(buf)) > 0) {
                 out.write(buf, 0, n);
+            }
         } finally {
             // 这是不好的做法
-            if (in != null)
+            if (in != null) {
                 in.close();
-            if (out != null)
+            }
+            if (out != null) {
                 out.close();
+            }
         }
     }
 
@@ -47,22 +50,25 @@ public class IOTest {
             out = new FileOutputStream(dest);
             byte[] buf = new byte[1024];
             int n;
-            while ((n = in.read(buf)) > 0)
+            while ((n = in.read(buf)) > 0) {
                 out.write(buf, 0, n);
+            }
         } finally {
             // 建议
-            if (in != null)
+            if (in != null) {
                 try {
                     in.close();
                 } finally {
                     in = null;
                 }
-            if (out != null)
+            }
+            if (out != null) {
                 try {
                     out.close();
                 } finally {
                     out = null;
                 }
+            }
         }
     }
 }
