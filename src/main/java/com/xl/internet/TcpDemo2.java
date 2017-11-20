@@ -1,5 +1,7 @@
 package com.xl.internet;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -43,7 +45,7 @@ class TransClient {
                 break;
             }
             String str = bufIn.readLine(); // 读的是服务器发过来的信息
-            System.out.println("server:" + str);
+            Print.println("server:" + str);
         }
         bufr.close();
         s.close();
@@ -58,7 +60,7 @@ class TransServer {
         ServerSocket ss = new ServerSocket(10005);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println("客户端Ip" + ip);// 可以检验连没连上
+        Print.println("客户端Ip" + ip);// 可以检验连没连上
         // OutputStream os=s.getOutputStream();
         // InputStream is =s.getInputStream();
         // 要一行行的读才方便

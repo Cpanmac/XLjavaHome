@@ -1,5 +1,7 @@
 package com.xl.socketDemo;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,10 +30,10 @@ public class MyThread implements Runnable {
             String psw = p.getPsw();
             Scanner sr = new Scanner(System.in);
             if ("admin".equals(name)) {
-                System.out.println("用户名正确！");
+                Print.println("用户名正确！");
                 pw.write("over");
             } else {
-                System.out.println("姓名是admin,年纪要大于0");
+                Print.println("姓名是admin,年纪要大于0");
             }
             ois.close();
             br.close();

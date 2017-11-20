@@ -1,5 +1,6 @@
 package com.xl.spring;
 
+import com.xl.util.Print;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -12,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringDemo {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/applicationContext.xml");
-        System.out.println("测试成功");
+        Print.println("测试成功");
         context.close();
     }
 }

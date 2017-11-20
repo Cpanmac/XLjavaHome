@@ -1,5 +1,7 @@
 package com.xl.thread;
 
+import com.xl.util.Print;
+
 import java.util.Random;
 
 /**
@@ -17,7 +19,7 @@ public class ThreadLocalDemo {
                 @Override
                 public void run() {
                     int data = new Random().nextInt();
-                    System.out.println(Thread.currentThread().getName() + " has put data :" + data);
+                    Print.println(Thread.currentThread().getName() + " has put data :" + data);
                     x.set(data);
                     /*
                      * MyThreadScopeData myData = new MyThreadScopeData();
@@ -36,23 +38,23 @@ public class ThreadLocalDemo {
     static class A {
         public void get() {
             int data = x.get();
-            System.out.println("A from " + Thread.currentThread().getName() + " get data :" + data);
+            Print.println("A from " + Thread.currentThread().getName() + " get data :" + data);
             /*
              * MyThreadScopeData myData = myThreadScopeData.get();;
-			 * System.out.println("A from " + thread.currentThread().getName() +
+			 * Print.print("A from " + thread.currentThread().getName() +
 			 * " getMyData: " + myData.getName() + "," + myData.getAge());
 			 */
             MyThreadScopeData myData = MyThreadScopeData.getThreadInstance();
-            System.out.println("A from " + Thread.currentThread().getName() + " getMyData: " + myData.getName() + "," + myData.getAge());
+            Print.println("A from " + Thread.currentThread().getName() + " getMyData: " + myData.getName() + "," + myData.getAge());
         }
     }
 
     static class B {
         public void get() {
             int data = x.get();
-            System.out.println("B from " + Thread.currentThread().getName() + " get data :" + data);
+            Print.println("B from " + Thread.currentThread().getName() + " get data :" + data);
             MyThreadScopeData myData = MyThreadScopeData.getThreadInstance();
-            System.out.println("B from " + Thread.currentThread().getName() + " getMyData: " + myData.getName() + "," + myData.getAge());
+            Print.println("B from " + Thread.currentThread().getName() + " getMyData: " + myData.getName() + "," + myData.getAge());
         }
     }
 }

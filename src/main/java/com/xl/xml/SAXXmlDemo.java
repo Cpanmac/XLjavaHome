@@ -1,5 +1,6 @@
 package com.xl.xml;
 
+import com.xl.util.Print;
 import org.junit.Test;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
@@ -37,7 +38,7 @@ class TagValueHandler implements ContentHandler {
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         // 打印所有的文档内容
-        System.out.println(new String(ch));
+        Print.println(new String(ch));
     }
 
     @Override
@@ -46,7 +47,7 @@ class TagValueHandler implements ContentHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        System.out.println("结束了!");
+        Print.println("结束了!");
     }
 
     @Override
@@ -72,17 +73,17 @@ class TagValueHandler implements ContentHandler {
     // 开始读取
     @Override
     public void startDocument() throws SAXException {
-        System.out.println("开始读取");
+        Print.println("开始读取");
     }
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes atts) throws SAXException {
-        System.out.println("<" + qName + ">");
+        Print.println("<" + qName + ">");
         // 有可能抛出空指针异常
         for (int i = 0; atts != null && i < atts.getLength(); i++) {
             String attName = atts.getQName(i);
             String attValue = atts.getValue(i);
-            System.out.println(attName + "=" + attValue);
+            Print.println(attName + "=" + attValue);
         }
     }
 

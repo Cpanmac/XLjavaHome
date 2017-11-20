@@ -1,12 +1,14 @@
 package com.xl.gui;
 
+import com.xl.util.Print;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-class AwtDemo {
+public class AwtDemo {
     public static void main(String[] args) {
         // 无法关闭的原因：没有添加效果，事件监听机制
         Frame f = new Frame("标题栏"); // 构造一个最初不可见的 Frame
@@ -25,7 +27,7 @@ class AwtDemo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int i = 1;
-                System.out.println(i);
+                Print.println(i);
             }
         });
         // 匿名内部类
@@ -33,25 +35,25 @@ class AwtDemo {
             @Override
             public void windowClosing(WindowEvent e) // 关的动作
             {
-                System.out.println("我关");
+                Print.println("我关");
                 System.exit(0);
             }
 
             @Override
             public void windowActivated(WindowEvent e) // 前置时触发此行为
             {
-                System.out.println("active");
+                Print.println("active");
             }
 
             @Override
             public void windowOpened(WindowEvent e) // 打开时显示的
             {
-                System.out.println("我被打开了");
+                Print.println("我被打开了");
             }
         });
         f.setVisible(true); // public void setVisible(boolean b)如为 true，则使Window 可见，否则隐藏 Window。
         // 主线程没关闭，只要开启图形化界面，就会多一个线程。
-        // System.out.println("Hello World!");
+        // Print.print("Hello World!");
     }
 }
 

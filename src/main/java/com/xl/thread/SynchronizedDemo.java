@@ -65,7 +65,6 @@ public class SynchronizedDemo {
             for (int i = 0; i < len; i++) {
                 System.out.print(name.charAt(i));
             }
-            System.out.println();
         }
 
         /**
@@ -81,7 +80,6 @@ public class SynchronizedDemo {
                 for (int i = 0; i < len; i++) {
                     System.out.print(name.charAt(i));
                 }
-                System.out.println();
             }
         }
 
@@ -95,7 +93,6 @@ public class SynchronizedDemo {
             for (int i = 0; i < len; i++) {
                 System.out.print(name.charAt(i));
             }
-            System.out.println();
         }
     }
 }

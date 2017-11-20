@@ -75,7 +75,7 @@ public class MainFrame extends JFrame {
     class AboutActionListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent event) {
-			/* 暂时为空后加对话框 */
+            /* 暂时为空后加对话框 */
         }
     }
 

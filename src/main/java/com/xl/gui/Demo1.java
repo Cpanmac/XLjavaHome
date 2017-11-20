@@ -1,5 +1,6 @@
 package com.xl.gui;
 
+import com.xl.util.Print;
 import org.junit.Test;
 
 import java.awt.*;
@@ -55,7 +56,7 @@ class MyWindowListener1 implements WindowListener {
 
     @Override
     public void windowClosing(WindowEvent e) {
-        System.out.println("呵呵");
+        Print.println("呵呵");
         // 取得事件源
         Frame frame = (Frame) e.getSource();
         frame.setVisible(false);

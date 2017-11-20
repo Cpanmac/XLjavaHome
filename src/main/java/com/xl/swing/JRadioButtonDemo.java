@@ -76,8 +76,8 @@ public class JRadioButtonDemo extends JFrame {
             borrowHead.add("归还日期");
             borrowHead.add("超期天数");
             borrowHead.add("罚款金额");
-			/*静态数据以上向量可以通过一维数组代替*/
-			/* Object tableHead[]={"书名","作者","出版","借阅日期","应还日期","归还日期","超期天数", "罚款金额"};*/
+            /*静态数据以上向量可以通过一维数组代替*/
+            /* Object tableHead[]={"书名","作者","出版","借阅日期","应还日期","归还日期","超期天数", "罚款金额"};*/
             // 生成具有内容和表头的表格
             // borrowInfoTable = new JTable(borrowinf, tableHead); //以数组数据生成表格
             borrowInfoTable = new JTable(allBorrowInfoVector, borrowHead);//以向量数据生成表格

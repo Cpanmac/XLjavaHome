@@ -1,16 +1,17 @@
 package com.xl.socketDemo;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class Cilent {
-    public static void main(String[] args) throws UnknownHostException, IOException {
+    public static void main(String[] args) throws IOException {
         Socket s = new Socket("127.0.0.1", 9900);
         PrintWriter pw = new PrintWriter(s.getOutputStream());
         BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
@@ -23,7 +24,7 @@ public class Cilent {
         p.setName(name);
         ObjectOutputStream oos = new ObjectOutputStream(s.getOutputStream());
         oos.writeObject(p);
-        System.out.println("传输成功");
+        Print.println("传输成功");
         pw.flush();
         pw.close();
         s.close();

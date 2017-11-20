@@ -1,5 +1,7 @@
 package com.xl.gui;
 
+import com.xl.util.Print;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,7 +38,7 @@ public class MyMenuDemo {
         f = new Frame("myWindow");
         f.setBounds(300, 100, 600, 600);
         // f.setLayout(new FlowLayout()); // 流式布局,添加文本框的话很难看，用默认的
-        // System.out.println(f.getExtendeState()); //返回int类型获取此窗体的状态。0
+        // Print.print(f.getExtendeState()); //返回int类型获取此窗体的状态。0
         bar = new MenuBar();// 初始化菜单条
         // m = new Menu("文件");
         ta = new TextArea();
@@ -55,8 +57,8 @@ public class MyMenuDemo {
         myEvent();
         f.setVisible(true);
         // 自己测试
-        // System.out.println(closeItem.isEnabled());// 是否启用了菜单项
-        // System.out.println(closeItem.paramString()); // 返回此状态的字符串
+        // Print.print(closeItem.isEnabled());// 是否启用了菜单项
+        // Print.print(closeItem.paramString()); // 返回此状态的字符串
     }
 
     private void myEvent() {
@@ -90,7 +92,7 @@ public class MyMenuDemo {
                 openDia.setVisible(true);
                 String dirPath = openDia.getDirectory();// 获得打开文件的路径
                 String fileName = openDia.getFile();
-                System.out.println(dirPath + "  " + fileName);
+                Print.println(dirPath + "  " + fileName);
                 // 如果没选择文件就会出空指针异常，目录有，文件没有。所以得判断
                 if (dirPath == null || fileName == null) {
                     return;

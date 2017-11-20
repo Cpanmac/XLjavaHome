@@ -1,5 +1,7 @@
 package com.xl.properties;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -22,7 +24,7 @@ public class PropertiesDemo {
         FileInputStream fis = new FileInputStream("info.txt");
         InputStreamReader isr = new InputStreamReader(fis); // 没有这的话，文字将是乱码
         prop.load(isr);
-        // System.out.println(prop);
+        // Print.print(prop);
         // 修改了下属性
         prop.setProperty("wangwu", "39");
         prop.list(System.out); // 列出集合目录
@@ -47,23 +49,23 @@ public class PropertiesDemo {
         while ((line = br.readLine()) != null) {
             String[] arr = line.split("=");
             prop.setProperty(arr[0], arr[1]); // 将数据存储到Properties数据
-            // System.out.println(line);
+            // Print.print(line);
         }
         br.close();
-        System.out.println(prop);
+        Print.println(prop);
     }
 
     public static void setAndGet() {
         Properties prop = new Properties();
         prop.setProperty("张三", "30");
         prop.setProperty("lisi", "39");
-        System.out.println(prop); // {张三=30, lisi=39}
+        Print.println(prop); // {张三=30, lisi=39}
         String value = prop.getProperty("lisi"); // 获取值
-        System.out.println(value);
+        Print.println(value);
         // 打印键
         Set<String> names = prop.stringPropertyNames();
         for (String s : names) {
-            System.out.println(s + ":" + prop.getProperty(s));
+            Print.println(s + ":" + prop.getProperty(s));
         }
     }
 }

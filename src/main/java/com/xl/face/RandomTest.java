@@ -1,5 +1,7 @@
 package com.xl.face;
 
+import com.xl.util.Print;
+
 import java.util.Random;
 
 public class RandomTest {
@@ -20,6 +22,6 @@ public class RandomTest {
         word.append('a');
         word.append('i');
         word.append('n');
-        System.out.println(word);
+        Print.println(word);
     }
 }

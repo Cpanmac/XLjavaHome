@@ -1,5 +1,7 @@
 package com.xl.properties;
 
+import com.xl.util.Print;
+
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Properties;
@@ -7,7 +9,7 @@ import java.util.Properties;
 public class SystemInfo {
     public static void main(String[] args) throws FileNotFoundException {
         Properties pro = System.getProperties(); // 系统信息
-        System.out.println(pro); // 打印出来在一行
+        Print.println(pro); // 打印出来在一行
         // 分行打印
         test1(pro);
         // 保存起来

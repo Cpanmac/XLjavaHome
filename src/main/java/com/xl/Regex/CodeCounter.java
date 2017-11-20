@@ -1,5 +1,6 @@
 package com.xl.Regex;
 
+import com.xl.util.Print;
 import com.xl.util.StringUtil;
 
 import java.io.BufferedReader;
@@ -15,19 +16,19 @@ public class CodeCounter {
 
     public static void main(String[] args) {
         String path = StringUtil.getClassPath() + "\\src"; // 获取当前工程的的目录
-        System.out.println("path========" + path);
+        Print.println("path========" + path);
         File f = new File(path);
         File[] codeFiles = f.listFiles(); // 获取该目录下的所有文件
         for (File child : codeFiles) {
-            // System.out.println("child.getName()========"+child.getName());
+            // Print.print("child.getName()========"+child.getName());
             if (child.getName().matches(".+java")) { // 匹配以java结尾的文件
-                // System.out.println("child========"+child);
+                // Print.print("child========"+child);
                 parse(child);
             }
         }
-        System.out.println("normalLines:" + normalLines);
-        System.out.println("commentLines:" + commentLines);
-        System.out.println("whiteLines:" + whiteLines);
+        Print.println("normalLines:" + normalLines);
+        Print.println("commentLines:" + commentLines);
+        Print.println("whiteLines:" + whiteLines);
     }
 
     private static void parse(File f) {
@@ -45,7 +46,7 @@ public class CodeCounter {
                     comment = true;
                 } else if (line.startsWith("/*") && line.endsWith("*/")) {
                     commentLines++;
-                    System.out.println(line);
+                    Print.println(line);
                 } else if (true == comment) {
                     commentLines++;
                     if (line.endsWith("*/")) {

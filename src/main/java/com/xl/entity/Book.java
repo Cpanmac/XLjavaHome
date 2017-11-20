@@ -1,5 +1,6 @@
 package com.xl.entity;
 
+import com.xl.util.Print;
 import lombok.Data;
 import org.junit.Test;
 
@@ -17,9 +18,9 @@ public class Book {
     public void sysoTest() {
         Book b = new Book();
         b.setAuthor("111");
-        System.out.println(b);
-        System.out.println(b.isHasRight());
+        Print.println(b);
+        Print.println(b.isHasRight());
         b.setHasRight(true);
-        System.out.println(b.isHasRight());
+        Print.println(b.isHasRight());
     }
 }

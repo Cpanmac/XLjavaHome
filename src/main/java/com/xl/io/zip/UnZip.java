@@ -1,5 +1,7 @@
 package com.xl.io.zip;
 
+import com.xl.util.Print;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -21,7 +23,7 @@ public class UnZip {
             createDirectory(outputDirectory, "");
             while (e.hasMoreElements()) {
                 zipEntry = (ZipEntry) e.nextElement();
-                System.out.println("unziping " + zipEntry.getName());
+                Print.println("unziping " + zipEntry.getName());
                 if (zipEntry.isDirectory()) {
                     String name = zipEntry.getName();
                     name = name.substring(0, name.length() - 1);
@@ -46,9 +48,9 @@ public class UnZip {
                     in.close();
                 }
             }
-            System.out.println("done!");
+            Print.println("done!");
         } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+            Print.println(ex.getMessage());
             ex.printStackTrace();
         }
     }
@@ -70,7 +72,7 @@ public class UnZip {
                 }
             }
         } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+            Print.println(ex.getMessage());
         }
     }
 }

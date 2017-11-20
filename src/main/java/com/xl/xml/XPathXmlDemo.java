@@ -1,5 +1,6 @@
 package com.xl.xml;
 
+import com.xl.util.Print;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Node;
@@ -26,7 +27,7 @@ public class XPathXmlDemo {
         Document document = reader.read(f);
         // select方法调用xpath表达式
         String value = document.selectSingleNode("//作者").getText(); // 获取第一个作者的值
-        System.out.println(value);
+        Print.println(value);
     }
 
     // 查找users.xml是否有何用户匹配的用户名和密码
@@ -42,9 +43,9 @@ public class XPathXmlDemo {
         // 找出所有的user节点
         Node node = document.selectSingleNode("//user[@username='" + username + "' and @password='" + password + "']"); // 截断字符串
         if (node == null) {
-            System.out.println("用户名或密码错误");
+            Print.println("用户名或密码错误");
         } else {
-            System.out.println("登陆成功");
+            Print.println("登陆成功");
         }
     }
 }

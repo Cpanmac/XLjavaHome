@@ -1,6 +1,7 @@
 package com.xl.reflect;
 
 import com.xl.entity.Person;
+import com.xl.util.Print;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationHandler;
@@ -25,7 +26,7 @@ public class ProxyDemo {
     @Test
     public void classLoad() {
         Person p = new Person();
-        System.out.println("classLoad  " + p.getClass().getClassLoader().getClass().getName());
+        Print.println("classLoad  " + p.getClass().getClassLoader().getClass().getName());
     }
 
     @Test
@@ -33,7 +34,7 @@ public class ProxyDemo {
         MyInvocationHandler demo = new MyInvocationHandler();
         Subject sub = (Subject) demo.bind(new RealSubject());
         String info = sub.say("Rollen", 20);
-        System.out.println(info);
+        Print.println(info);
     }
 }
 
@@ -50,13 +51,13 @@ class MyInvocationHandler implements InvocationHandler {
 
     public Object bind(Object obj) {
         this.obj = obj;
-        System.out.println("bind");
+        Print.println("bind");
         return java.lang.reflect.Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), this);
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("invoke");
+        Print.println("invoke");
         Object temp = method.invoke(this.obj, args);
         return temp;
     }

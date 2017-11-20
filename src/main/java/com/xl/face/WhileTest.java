@@ -1,5 +1,6 @@
 package com.xl.face;
 
+import com.xl.util.Print;
 import org.junit.Test;
 
 /**
@@ -16,8 +17,8 @@ public class WhileTest {
         int count = 0;
         for (int i = START; i <= END; i++) {
             count++;
-            System.out.println(i);
+            Print.println(i);
         }
-        System.out.println(count);
+        Print.println(count);
     }
 }

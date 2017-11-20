@@ -23,7 +23,7 @@ public class beanutils {
         Person p = new Person();
         // 设置属性
         BeanUtils.setProperty(p, "name", "赋值的姓名1");
-        System.out.println(p.getName());
+        Print.println(p.getName());
     }
 
     /*
@@ -40,7 +40,7 @@ public class beanutils {
         BeanUtils.setProperty(p, "password", password);
         BeanUtils.setProperty(p, "age", age);
         BeanUtils.setProperty(p, "birthday", birthday);
-        System.out.println(p.getName() + "" + p.getPassword() + ".." + p.getAge() + ".." + p.getBirthday());
+        Print.println(p.getName() + "" + p.getPassword() + ".." + p.getAge() + ".." + p.getBirthday());
     }
 
     /*
@@ -81,8 +81,8 @@ public class beanutils {
             BeanUtils.setProperty(p, "password", password);
             BeanUtils.setProperty(p, "age", age);
             BeanUtils.setProperty(p, "birthday", birhday);
-            System.out.println(p.getName() + "" + p.getPassword() + ".." + p.getAge());
-            System.out.println(p.getBirthday());
+            Print.println(p.getName() + "" + p.getPassword() + ".." + p.getAge());
+            Print.println(p.getBirthday());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -95,7 +95,7 @@ public class beanutils {
      */
     @Test
     public void test5() {
-        Map<String, String> map = new HashMap<String, String>();
+        Map<String, String> map = new HashMap<String, String>(0);
         map.put("name", "asda");
         map.put("password", "123");
         map.put("age", "23");
@@ -105,7 +105,7 @@ public class beanutils {
         Person bean = new Person();
         try {
             BeanUtils.populate(bean, map);
-            System.out.println(bean.getName() + bean.getPassword() + bean.getBirthday());
+            Print.println(bean.getName() + bean.getPassword() + bean.getBirthday());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {

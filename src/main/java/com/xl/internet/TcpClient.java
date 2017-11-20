@@ -1,5 +1,7 @@
 package com.xl.internet;
 
+import com.xl.util.Print;
+
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
@@ -44,12 +46,12 @@ class TcpServer {
         // 通过accept方法连接过来的客户端对象。
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println("ip地址是：" + ip);
+        Print.println("ip地址是：" + ip);
         // 获取客户端发送过来的数据，那么要用客户端的对象读取流读取对象
         InputStream in = s.getInputStream();
         byte[] buf = new byte[1024];
         int len = in.read(buf);
-        System.out.println(new String(buf, 0, len));
+        Print.println(new String(buf, 0, len));
         // udp通过数据包获取对方IP
         s.close(); // 关对方,
         ss.close();// 可选操作

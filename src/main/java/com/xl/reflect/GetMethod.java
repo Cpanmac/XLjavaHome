@@ -1,6 +1,7 @@
 package com.xl.reflect;
 
 import com.xl.entity.Person;
+import com.xl.util.Print;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,12 +31,12 @@ public class GetMethod {
         // method.invoke(p, "sa", 36);
         for (Method amethods : methods) {
             // 打印公用的方法全名
-            System.out.println(amethods.getName());
+            Print.println(amethods.getName());
         }
         // 只获取私有的方法
         methods = clazz.getDeclaredMethods();
         for (Method bmethods : methods) {
-            System.out.println(bmethods);
+            Print.println(bmethods);
         }
     }
 

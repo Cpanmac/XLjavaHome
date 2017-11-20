@@ -1,5 +1,7 @@
 package com.xl.io.zip;
 
+import com.xl.util.Print;
+
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,7 +38,7 @@ public class ZipUtil {
             for (int i = 0; i < fileList.size(); i++) {
                 InputStream in = new FileInputStream((String) fileList.get(i));
                 String fileName = ((String) (fileList.get(i))).replace(File.separatorChar, '/');
-                System.out.println("ziping " + fileName);
+                Print.println("ziping " + fileName);
                 fileName = fileName.substring(fileName.indexOf("/") + 1);
                 ZipEntry e = new ZipEntry(fileName);
                 out.putNextEntry(e);
@@ -47,7 +49,7 @@ public class ZipUtil {
                 out.closeEntry();
             }
             out.close();
-            System.out.println("done!");
+            Print.println("done!");
         } catch (Exception e) {
             e.printStackTrace();
         }

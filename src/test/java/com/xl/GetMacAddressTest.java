@@ -1,6 +1,7 @@
 package com.xl;
 
 import com.xl.util.MacAddress;
+import com.xl.util.Print;
 import org.junit.Test;
 
 /**
@@ -13,6 +14,6 @@ import org.junit.Test;
 public class GetMacAddressTest {
     @Test
     public void getMacAddress() throws Exception {
-        System.out.println(MacAddress.getMacAddress("127.0.0.1"));
+        Print.println(MacAddress.getMacAddress("127.0.0.1"));
     }
 }

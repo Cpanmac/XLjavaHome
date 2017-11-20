@@ -1,5 +1,7 @@
 package com.xl.internet;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -74,7 +76,7 @@ class Rece implements Runnable {
                 //接数据之前看看ip
                 String ip = dp.getAddress().getHostAddress();
                 String data = new String(dp.getData(), 0, dp.getLength());
-                System.out.println(ip + ":" + data);
+                Print.println(ip + ":" + data);
             }
         } catch (IOException e) {
             throw new RuntimeException("接受失败");

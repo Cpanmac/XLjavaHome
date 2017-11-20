@@ -1,5 +1,7 @@
 package com.xl.io.DataStream;
 
+import com.xl.util.Print;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -19,10 +21,10 @@ class DataStreamDemo {
         boolean b = dis.readBoolean();
         double d = dis.readDouble();
         String s = dis.readUTF();
-        System.out.println("num=" + num);
-        System.out.println("b=" + b);
-        System.out.println("d=" + d);
-        System.out.println("s=" + s);
+        Print.println("num=" + num);
+        Print.println("b=" + b);
+        Print.println("d=" + d);
+        Print.println("s=" + s);
         dis.close();
     }
 

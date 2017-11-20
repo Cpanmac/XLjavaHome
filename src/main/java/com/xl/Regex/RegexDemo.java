@@ -1,5 +1,6 @@
 package com.xl.Regex;
 
+import com.xl.util.Print;
 import org.junit.Test;
 
 import java.util.regex.Matcher;
@@ -11,7 +12,7 @@ public class RegexDemo {
         Pattern p = Pattern.compile("java");
         Matcher m = p.matcher("java Java JAVa qjaval JaVa IloveJAVA you hateJava afasdfasdf");
         while (m.find()) {
-            System.out.println(m.group());
+            Print.println(m.group());
         }
     }
 
@@ -27,7 +28,7 @@ public class RegexDemo {
         Pattern p = Pattern.compile("java", Pattern.CASE_INSENSITIVE);
         Matcher m = p.matcher("java Java JAVa JaVa IloveJAVA you hateJava afasdfasdf");
         while (m.find()) {
-            System.out.println(m.group());
+            Print.println(m.group());
         }
     }
 
@@ -40,7 +41,7 @@ public class RegexDemo {
             m.appendReplacement(buf, "888"); /* 将当前找到的进行替换并且换好后放到buf中去 */
         }
         m.appendTail(buf);
-        System.out.println(buf);
+        Print.println(buf);
     }
 
     /**
@@ -53,9 +54,9 @@ public class RegexDemo {
         String s = "123aa-34345bb-234cc-00";
         Matcher m = p.matcher(s);
         while (m.find()) {
-            System.out.println("第0组即是所匹配的字符串:" + m.group(0));
-            System.out.println("第1组即是第1个()内字符串:" + m.group(1));
-            System.out.println("第2组即是第2个()内字符串:" + m.group(2));
+            Print.println("第0组即是所匹配的字符串:" + m.group(0));
+            Print.println("第1组即是第1个()内字符串:" + m.group(1));
+            Print.println("第2组即是第2个()内字符串:" + m.group(2));
         }
     }
 
@@ -67,9 +68,9 @@ public class RegexDemo {
         String s = "aaaa5bbbb6";
         Matcher m = p.matcher(s);
         if (m.find()) {
-            System.out.println(m.start() + "-" + m.end());
+            Print.println(m.start() + "-" + m.end());
         } else {
-            System.out.println("not match!");
+            Print.println("not match!");
         }
     }
 
@@ -81,9 +82,9 @@ public class RegexDemo {
         String s = "aaaa5bbbb68";
         Matcher m = p.matcher(s);
         if (m.find()) {
-            System.out.println(m.start() + "-" + m.end());
+            Print.println(m.start() + "-" + m.end());
         } else {
-            System.out.println("not match!");
+            Print.println("not match!");
         }
     }
 
@@ -94,9 +95,9 @@ public class RegexDemo {
         String s = "aaaa5bbbb6";
         Matcher m = p.matcher(s);
         if (m.find()) {
-            System.out.println(m.start() + "-" + m.end());
+            Print.println(m.start() + "-" + m.end());
         } else {
-            System.out.println("not match!");
+            Print.println("not match!");
         }
     }
 
@@ -106,7 +107,7 @@ public class RegexDemo {
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
-            System.out.println(m.group());
+            Print.println(m.group());
         }
     }
 
@@ -116,7 +117,7 @@ public class RegexDemo {
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
-            System.out.println(m.group());
+            Print.println(m.group());
         }
     }
 
@@ -127,7 +128,7 @@ public class RegexDemo {
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
-            System.out.println(m.group());
+            Print.println(m.group());
         }
     }
 
@@ -137,7 +138,7 @@ public class RegexDemo {
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
-            System.out.println(m.group());
+            Print.println(m.group());
         }
     }
 
@@ -147,7 +148,7 @@ public class RegexDemo {
         String s = "444a66b";
         Matcher m = p.matcher(s);
         while (m.find()) {
-            System.out.println(m.group());
+            Print.println(m.group());
         }
     }
 
@@ -159,7 +160,7 @@ public class RegexDemo {
         Pattern p = Pattern.compile("(\\d\\d)\\1");/* 1:表示后面找到的结果必须和前面找到的一模一样 */
         String s = "232312";
         Matcher m = p.matcher(s);
-        System.out.println(m.matches());
+        Print.println(m.matches());
     }
 
     /**
@@ -171,13 +172,13 @@ public class RegexDemo {
         // (\\d(\\d)):这里是两个组：第二个组抓到的是2 后面的\\2:表示后面的要和第二个抓到数字一样
         String s = "122";
         Matcher m = p.matcher(s);
-        System.out.println(m.matches() + ":" + m.group(2));
+        Print.println(m.matches() + ":" + m.group(2));
     }
 
     @Test
     public void fun11() {
         Pattern p = Pattern.compile("java", Pattern.CASE_INSENSITIVE);
-        System.out.println("Java".matches("(?i)(java)")); /* (?i)非捕获组:是上面的简写 */
+        Print.println("Java".matches("(?i)(java)")); /* (?i)非捕获组:是上面的简写 */
     }
 
     @Test

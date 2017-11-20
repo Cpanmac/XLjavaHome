@@ -1,5 +1,7 @@
 package com.xl.face;
 
+import com.xl.util.Print;
+
 /**
  * @author 徐立
  * @Decription 无情的增量操作
@@ -11,7 +13,7 @@ public class ForTest {
         for (int i = 0; i < 100; i++) {
             j = j++;
         }
-        System.out.println(j);
+        Print.println(j);
     }
 }
 

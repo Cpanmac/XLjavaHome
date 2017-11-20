@@ -1,7 +1,9 @@
 package com.xl;
 
+import com.xl.util.Print;
+
 /**
- * Created with IntelliJ IDEA.
+ * Created with IntelliJ IDEA.  pom生成jar包使用
  * User: 徐立
  * Date: 2017-10-30
  * Time: 17:16
@@ -9,6 +11,6 @@ package com.xl;
  */
 public class XLMain {
     public static void main(String args) {
-        System.out.println("这是主函数");
+        Print.println("这是主函数");
     }
 }

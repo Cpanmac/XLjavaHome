@@ -1,5 +1,7 @@
 package com.xl.database.mysql;
 
+import com.xl.util.MysqlJdbcUtil;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;

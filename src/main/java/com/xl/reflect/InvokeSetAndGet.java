@@ -1,5 +1,6 @@
 package com.xl.reflect;
 
+import com.xl.util.Print;
 import org.junit.Test;
 
 import java.lang.reflect.Method;
@@ -31,7 +32,7 @@ public class InvokeSetAndGet {
         try {
             att = toUp(att);
             Method method = obj.getClass().getMethod("get" + att);
-            System.out.println(method.invoke(obj));
+            Print.println(method.invoke(obj));
         } catch (Exception e) {
             e.printStackTrace();
         }

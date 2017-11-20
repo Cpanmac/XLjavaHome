@@ -1,6 +1,7 @@
 package com.xl.reflect;
 
 import com.xl.entity.Person;
+import com.xl.util.Print;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
@@ -17,26 +18,26 @@ public class GetField {
         Class clazz = Class.forName(className);
         Field field = clazz.getField("name"); // 传属性名
         String name = (String) field.get(p);
-        System.out.println(name);
+        Print.println(name);
         //得到属性的值
-        //System.out.println(f.get(f));
+        //Print.print(f.get(f));
         /*
          * 如果不知道字段类型
 		 */
         Class type = field.getType();
-        System.out.println(type); // class java.lang.String
+        Print.println(type); // class java.lang.String
         Object value = field.get(p);
         Object obj = field.get(p);
         if (type.equals(String.class)) {
             String svalue = (String) value;
-            System.out.println(svalue);
+            Print.println(svalue);
         }
 
 		/*
          * 设置字段的值
 		 */
         field.set(p, "xxx");
-        System.out.println(p.name);
+        Print.println(p.name);
     }
 
     /*
@@ -48,7 +49,7 @@ public class GetField {
         Class clazz = Class.forName(className);
         Field f = clazz.getDeclaredField("password");
         f.setAccessible(true);
-        System.out.println(f.get(p));
+        Print.println(f.get(p));
     }
     /*
      * 获取静态的字段:和上面一样，不能省略对象。

@@ -1,5 +1,7 @@
 package com.xl.thread;
 
+import com.xl.util.Print;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -20,7 +22,7 @@ public class ThreadShareData {
                 public void run() {
                     data = new Random().nextInt();
                     threadData.put(Thread.currentThread(), data);
-                    System.out.println(Thread.currentThread().getName() + ":" + data);
+                    Print.println(Thread.currentThread().getName() + ":" + data);
                     new A().get();
                     new B().get();
                 }
@@ -30,13 +32,13 @@ public class ThreadShareData {
 
     static class A {
         public void get() {
-            System.out.println("A from" + Thread.currentThread().getName() + ":" + data);
+            Print.println("A from" + Thread.currentThread().getName() + ":" + data);
         }
     }
 
     static class B {
         public void get() {
-            System.out.println("B from" + Thread.currentThread().getName() + ":" + data);
+            Print.println("B from" + Thread.currentThread().getName() + ":" + data);
         }
     }
 }

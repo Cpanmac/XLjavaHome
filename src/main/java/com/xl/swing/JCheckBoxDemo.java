@@ -1,5 +1,7 @@
 package com.xl.swing;
 
+import com.xl.util.Print;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
@@ -29,7 +31,7 @@ public class JCheckBoxDemo extends JFrame implements ItemListener {
         ckb2.addItemListener(this);
         ckb3.addItemListener(this);
         if (1 == 1) {
-            System.out.println("111");
+            Print.println("111");
         }
         container.add(p1, BorderLayout.SOUTH);
         // 为窗口注册窗口事件监听程序，监听器以匿名类的形式进行

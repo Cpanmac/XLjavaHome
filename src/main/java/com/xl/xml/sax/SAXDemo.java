@@ -1,6 +1,7 @@
 package com.xl.xml.sax;
 
 import com.xl.util.FileTool;
+import com.xl.util.Print;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.Attributes;
@@ -17,7 +18,7 @@ public class SAXDemo {
     @Before
     public void init() throws UnsupportedEncodingException {
         xmlPath = FileTool.getCurrentPath(this) + "\\book.xml";
-        System.out.println(xmlPath);
+        Print.println(xmlPath);
     }
 
     @Test
@@ -56,7 +57,7 @@ class ListHandler2 extends DefaultHandler {
     public void characters(char[] ch, int start, int length) {
         if ("作者".equals(currentTag) && currentNumber == needNumber) {
             // 这就是标签里面的内容
-            System.out.println(new String(ch, start, length));
+            Print.println(new String(ch, start, length));
         }
     }
 

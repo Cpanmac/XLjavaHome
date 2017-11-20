@@ -199,7 +199,7 @@ public class FileTool {
     public static <T> void print(Collection<T> con) {
         Iterator<T> i = con.iterator();
         while (i.hasNext()) {
-            System.out.println(i.next());
+            Print.println(i.next());
         }
     }
 
@@ -370,10 +370,18 @@ public class FileTool {
         Desktop.getDesktop().open(file);
     }
 
+    public static File createResourceFile(String path) throws IOException {
+        File f = new File(getResourceFile(""), path);
+        if (!f.exists()) {
+            f.createNewFile();
+        }
+        return f;
+    }
+
     @Test
     public void testGetCurrentPath() {
         String path = getCurrentPath(this);
-        System.out.println(path);
+        Print.println(path);
     }
 
     @Test
@@ -381,18 +389,10 @@ public class FileTool {
         File file = new File(getProjectPath());
         List<File> fileList = new ArrayList<File>();
         queryAll(file, fileList);
-        System.out.println(fileList.size());
+        Print.println(fileList.size());
         for (File f : fileList) {
-            System.out.println(f.getName());
+            Print.println(f.getName());
         }
-    }
-
-    public static File createResourceFile(String path) throws IOException {
-        File f = new File(getResourceFile(""), path);
-        if (!f.exists()) {
-            f.createNewFile();
-        }
-        return f;
     }
 
     @Test

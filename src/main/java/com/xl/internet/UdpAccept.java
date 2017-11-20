@@ -13,6 +13,8 @@ package com.xl.internet;
  5.关闭资源
  */
 
+import com.xl.util.Print;
+
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
@@ -24,7 +26,7 @@ public class UdpAccept {
         // 1.定义udpsocket服务，建立端点
         DatagramSocket ds = new DatagramSocket(1666); // 监听端口，不能写在while里面,要不两个服务写在一个端口，会出现绑定异常
         // 2.定义一个数据包。因为要存储接受到的字节数据。因为数据包对象中有更多功能可以提取字节数据中的不同数据信息
-        System.out.println("服务器启动..");
+        Print.println("服务器启动..");
         while (true) {
             byte[] buf = new byte[1024];
             DatagramPacket dp = new DatagramPacket(buf, buf.length);
@@ -34,7 +36,7 @@ public class UdpAccept {
             String ip = dp.getAddress().getHostAddress();
             String data = new String(dp.getData(), 0, dp.getLength()); // 因为数据就一部分，不需要1024
             int port = dp.getPort();
-            System.out.println(ip + "" + data + ".." + port);
+            Print.println(ip + "" + data + ".." + port);
             // 5.关闭资源
             ds.close();
         }

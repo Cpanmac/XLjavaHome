@@ -1,5 +1,7 @@
 package com.xl.Tcp;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
@@ -26,7 +28,7 @@ class TextClient {
         s.shutdownOutput();//关闭客户端的输出流，相当于给流中加入了结束标记
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
         String str = bufIn.readLine();
-        System.out.println(str);
+        Print.println(str);
         bufr.close();
         s.close();
     }

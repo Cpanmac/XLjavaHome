@@ -1,8 +1,10 @@
 package com.xl.face;
 
+import com.xl.util.Print;
+
 public class CharAndString {
     public static void main(String[] args) {
-        System.out.println("H" + "a");
-        System.out.println('H' + 'a');
+        Print.println("H" + "a");
+        Print.println('H' + 'a');
     }
 }

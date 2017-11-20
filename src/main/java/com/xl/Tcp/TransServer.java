@@ -1,5 +1,7 @@
 package com.xl.Tcp;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -11,7 +13,7 @@ public class TransServer {
         ServerSocket ss = new ServerSocket(10005);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println("客户端Ip" + ip);// 可以检验连没连上
+        Print.println("客户端Ip" + ip);// 可以检验连没连上
         // OutputStream os=s.getOutputStream();
         // InputStream is =s.getInputStream();
         // 要一行行的读才方便
@@ -24,7 +26,7 @@ public class TransServer {
         String line = null;
         while ((line = bufIn.readLine()) != null) // readLine读到回车符才算结束，所以客户端那边写入的时候只能写入回车符之前的数据
         {
-            System.out.println(line);
+            Print.println(line);
             //			bufOut.write(line.toUpperCase()); // 写缓冲区里去了
             //			bufOut.newLine();
             //			bufOut.flush(); // 所以要刷新！

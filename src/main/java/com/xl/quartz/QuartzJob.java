@@ -7,6 +7,7 @@ package com.xl.quartz;
  * To change this template use File | Settings | File Templates.
  */
 
+import com.xl.util.Print;
 import org.quartz.Job;
 import org.quartz.JobDataMap;
 import org.quartz.JobExecutionContext;
@@ -21,10 +22,10 @@ import java.util.Date;
 public class QuartzJob implements Job {
     @Override
     public void execute(JobExecutionContext content) throws JobExecutionException {
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "★★★★★★★★★★★");
+        Print.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "★★★★★★★★★★★");
         String jobName = content.getJobDetail().getName();
         JobDataMap dataMap = content.getJobDetail().getJobDataMap();
         String param = dataMap.getString("param");
-        System.out.println("传递的参数是=" + param + "任务名字是=" + jobName);
+        Print.println("传递的参数是=" + param + "任务名字是=" + jobName);
     }
 }

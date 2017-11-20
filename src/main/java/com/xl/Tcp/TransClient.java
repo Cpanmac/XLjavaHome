@@ -1,5 +1,7 @@
 package com.xl.Tcp;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -36,7 +38,7 @@ public class TransClient {
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream())); //
         String line = null;
         while ((line = bufr.readLine()) != null) {  //读的键盘
-            System.out.println(line); //查看服务器发过来的数据
+            Print.println(line); //查看服务器发过来的数据
             //			bufOut.write(line);
             //			//由于写入的时候只能读取回车符号之前的数据
             //			bufOut.newLine();
@@ -47,7 +49,7 @@ public class TransClient {
             }
             out.println(line);
             String str = bufIn.readLine(); //读的是服务器发过来的信息
-            System.out.println("server:" + str);
+            Print.println("server:" + str);
         }
         bufr.close();
         s.close();

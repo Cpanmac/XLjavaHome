@@ -1,8 +1,10 @@
 package com.xl.design.abstractfactory;
 
+import com.xl.util.Print;
+
 public class SouthApple extends Apple {
     @Override
     public void get() {
-        System.out.println("采集南方苹果");
+        Print.println("采集南方苹果");
     }
 }

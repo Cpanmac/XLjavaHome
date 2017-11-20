@@ -1,6 +1,7 @@
 package com.xl;
 
 import com.xl.collections.CaseInsensitiveMap;
+import com.xl.util.Print;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
 
@@ -23,6 +24,6 @@ public class XLTest {
         map.put("aAA", "测试");
         map.put("aA1A", "测试");
         map.put("aA1A", "测试2");
-        System.out.println(map);
+        Print.println(map);
     }
 }

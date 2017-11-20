@@ -144,6 +144,6 @@ public class RegTool {
     public void testGetEmail() {
         String s = "潍坊1239s我仿佛dfs0812093@qq.com";
         String[] strs = getEmail(s);
-        System.out.println(Arrays.toString(strs));
+        Print.println(Arrays.toString(strs));
     }
 }

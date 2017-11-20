@@ -1,6 +1,7 @@
 package com.xl.reflect.generic;
 
 import com.xl.entity.Person;
+import com.xl.util.Print;
 import org.junit.Test;
 
 import java.lang.reflect.ParameterizedType;
@@ -11,16 +12,16 @@ public class GenericDemo extends A<Person, String> {
     public void getGeneric() throws InstantiationException, IllegalAccessException {
         // 得到泛型的真实信息
         Class<? extends GenericDemo> clazz = this.getClass(); // 得到当前new的对象
-        System.out.println(clazz.getName());
+        Print.println(clazz.getName());
         Type[] parent = clazz.getGenericInterfaces();
-        System.out.println(parent[0]);
+        Print.println(parent[0]);
         Class<?> inter = clazz.getInterfaces()[0];
-        System.out.println(inter.getName());
+        Print.println(inter.getName());
         // ParameterizedType pt = (ParameterizedType)
         // clazz.getGenericSuperclass(); // 得到泛型的父类
-        // System.out.println(pt);
+        // Print.print(pt);
         // clazz = (Class) pt.getActualTypeArguments()[0];
-        // System.out.println(clazz);
+        // Print.print(clazz);
     }
 
     /**
@@ -40,7 +41,7 @@ class A<T, E> {
     public A() {
         java.lang.reflect.Type t = this.getClass().getGenericSuperclass();
         boolean b = ParameterizedType.class.isInstance(t);
-        System.out.println("是否是这个类型的" + b);
+        Print.println("是否是这个类型的" + b);
         ParameterizedType pt = (ParameterizedType) t;
         pt.getRawType();
         pt.getOwnerType();
@@ -56,7 +57,7 @@ class A<T, E> {
     }
 
     void run() {
-        System.out.println(entity.getClass().getName());
-        System.out.println(domain.getClass().getName());
+        Print.println(entity.getClass().getName());
+        Print.println(domain.getClass().getName());
     }
 }

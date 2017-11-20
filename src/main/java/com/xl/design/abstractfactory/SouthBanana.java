@@ -1,8 +1,10 @@
 package com.xl.design.abstractfactory;
 
+import com.xl.util.Print;
+
 public class SouthBanana extends Banana {
     @Override
     public void get() {
-        System.out.println("采集南方香蕉");
+        Print.println("采集南方香蕉");
     }
 }

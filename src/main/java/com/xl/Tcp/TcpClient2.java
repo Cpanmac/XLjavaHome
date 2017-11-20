@@ -1,5 +1,7 @@
 package com.xl.Tcp;
 
+import com.xl.util.Print;
+
 import java.io.InputStream;
 import java.net.Socket;
 
@@ -13,7 +15,7 @@ public class TcpClient2 {
         //建立缓冲区
         byte[] buf = new byte[1024];
         int len = in.read(buf);
-        System.out.println(new String(buf, 0, len));
+        Print.println(new String(buf, 0, len));
         s.close();
     }
 }

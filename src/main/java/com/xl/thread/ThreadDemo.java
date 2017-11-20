@@ -1,5 +1,6 @@
 package com.xl.thread;
 
+import com.xl.util.Print;
 import org.junit.Test;
 
 public class ThreadDemo implements Runnable {
@@ -9,17 +10,17 @@ public class ThreadDemo implements Runnable {
     public void run() {
         for (int i = 0; i < 3; i++) {
             num = i;
-            System.out.println(num);
+            Print.println(num);
         }
     }
 
     @Test
     public void test1() {
-        System.out.println(1);
+        Print.println(1);
         num = 2;
         new Thread(this).run();
         num = 3;
         new Thread(this).run();
-        System.out.println(4);
+        Print.println(4);
     }
 }

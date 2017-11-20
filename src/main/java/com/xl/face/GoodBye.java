@@ -1,12 +1,14 @@
 package com.xl.face;
 
+import com.xl.util.Print;
+
 public class GoodBye {
     public static void main(String[] args) {
         try {
-            System.out.println("Hello world");
+            Print.println("Hello world");
             System.exit(0);
         } finally {
-            System.out.println("Goodbye world");
+            Print.println("Goodbye world");
         }
     }
 }

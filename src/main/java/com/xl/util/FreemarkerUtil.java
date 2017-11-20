@@ -69,7 +69,6 @@ public class FreemarkerUtil {
     }
 
     /**
-     *
      * @param templatePath 资源下的文件，不用"/"开头
      * @param filePath
      * @param param

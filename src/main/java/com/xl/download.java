@@ -1,5 +1,7 @@
 package com.xl;
 
+import com.xl.util.Print;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -60,7 +62,7 @@ public class download {
 	 * OutputStreamWriter(new FileOutputStream(f)); int len = -1; char[] b = new
 	 * char[1024]; while ((len = in.read(b)) != -1) { out.write(b, 0, b.length);
 	 * String str = new String(b); // tar.append(str); int i = 0, j; String ss[]
-	 * = str.split("\""); System.out.println("5336479.html".length()); while (i
+	 * = str.split("\""); Print.print("5336479.html".length()); while (i
 	 * < ss.length) { if (ss[i].length() == 12 && ss[i].endsWith("html")) {
 	 * tar.append(ss[i] + "\r\n"); list.add(ss[i]); } i++; } } in.close(); }
 	 * catch (MalformedURLException e1) { e1.printStackTrace(); } catch
@@ -92,7 +94,7 @@ public class download {
                 long s = System.currentTimeMillis();
                 down2(tfd.getText());
                 long s1 = System.currentTimeMillis();
-                System.out.println("spend的时间" + (s - s1));
+                Print.println("spend的时间" + (s - s1));
             }
         });
         okbut.addActionListener(new ActionListener() {
@@ -116,7 +118,7 @@ public class download {
                     long s = System.currentTimeMillis();
                     down2(tfd.getText());
                     long s1 = System.currentTimeMillis();
-                    System.out.println("spend的时间" + (s - s1));
+                    Print.println("spend的时间" + (s - s1));
                 }
             }
         });

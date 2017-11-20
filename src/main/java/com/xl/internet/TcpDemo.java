@@ -1,5 +1,7 @@
 package com.xl.internet;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -38,7 +40,7 @@ class TransClient1 {
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream())); //
         String line = null;
         while ((line = bufr.readLine()) != null) { // 读的键盘
-            System.out.println(line); // 查看服务器发过来的数据
+            Print.println(line); // 查看服务器发过来的数据
             // bufOut.write(line);
             // //由于写入的时候只能读取回车符号之前的数据
             // bufOut.newLine();
@@ -49,7 +51,7 @@ class TransClient1 {
             }
             out.println(line);
             String str = bufIn.readLine(); // 读的是服务器发过来的信息
-            System.out.println("server:" + str);
+            Print.println("server:" + str);
         }
         bufr.close();
         s.close();
@@ -61,7 +63,7 @@ class TransServer1 {
         ServerSocket ss = new ServerSocket(10005);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println("客户端Ip" + ip);// 可以检验连没连上
+        Print.println("客户端Ip" + ip);// 可以检验连没连上
         // OutputStream os=s.getOutputStream();
         // InputStream is =s.getInputStream();
         // 要一行行的读才方便
@@ -75,7 +77,7 @@ class TransServer1 {
         String line = null;
         while ((line = bufIn.readLine()) != null) // readLine读到回车符才算结束，所以客户端那边写入的时候只能写入回车符之前的数据
         {
-            System.out.println(line);
+            Print.println(line);
             // bufOut.write(line.toUpperCase()); // 写缓冲区里去了
             // bufOut.newLine();
             // bufOut.flush(); // 所以要刷新！

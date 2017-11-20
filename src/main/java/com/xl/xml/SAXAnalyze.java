@@ -1,6 +1,7 @@
 package com.xl.xml;
 
 import com.xl.entity.Book;
+import com.xl.util.Print;
 import org.junit.Test;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -31,7 +32,7 @@ public class SAXAnalyze {
         Iterator iterator = list.iterator();
         while (iterator.hasNext()) {
             Book book = (Book) iterator.next();
-            System.out.println(book.getName() + "" + book.getAuthor() + ".." + book.getPrice());
+            Print.println(book.getName() + "" + book.getAuthor() + ".." + book.getPrice());
         }
     }
 }

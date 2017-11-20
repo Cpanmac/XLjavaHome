@@ -2,8 +2,8 @@ package com.xl;
 
 import com.xl.entity.Medicine;
 import com.xl.entity.Student;
-import com.xl.excel.SimpleExportUtil;
 import com.xl.util.FileTool;
+import com.xl.util.excel.SimpleExportUtil;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFRow;

@@ -1,5 +1,6 @@
 package com.xl.xml;
 
+import com.xl.util.Print;
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -22,12 +23,12 @@ public class JaxpXml {
         Document document = builder.parse("xml/book.xml");
         NodeList list = document.getElementsByTagName("书名");
         // getLength获取列表节点数
-        System.out.println(list.getLength());
+        Print.println(list.getLength());
         // 获取节点
         Node node = list.item(1);
         // 获取节点中的内容
         String content = node.getTextContent();
-        System.out.println(content);
+        Print.println(content);
     }
 
     // 得到所有的标签
@@ -50,7 +51,7 @@ public class JaxpXml {
         // Element是Node的子类,强转
         Element bookName = (Element) document.getElementsByTagName("书名").item(0);
         String value = bookName.getAttribute("name");
-        System.out.println(value);
+        Print.println(value);
     }
 
     // 向xml文档添加节点:<售价>59.00元</售价>
@@ -77,7 +78,7 @@ public class JaxpXml {
         // 往book节点的指定位置插入
         book.insertBefore(price, refNode);
         tf.transform(new DOMSource(document), new StreamResult(new FileOutputStream("xml/book.xml")));
-        System.out.println("文件更新成功!");
+        Print.println("文件更新成功!");
     }
 
     // 向xml文档添加name属性:<书名 name="xxx">59.00元</书名>
@@ -91,7 +92,7 @@ public class JaxpXml {
         TransformerFactory tsf = TransformerFactory.newInstance();
         Transformer tf = tsf.newTransformer();
         tf.transform(new DOMSource(document), new StreamResult(new FileOutputStream("xml/book.xml")));
-        System.out.println("文件更新成功!");
+        Print.println("文件更新成功!");
     }
 
     //删除节点
@@ -109,7 +110,7 @@ public class JaxpXml {
         TransformerFactory tsf = TransformerFactory.newInstance();
         Transformer tf = tsf.newTransformer();
         tf.transform(new DOMSource(document), new StreamResult(new FileOutputStream("xml/book.xml")));
-        System.out.println("文件更新成功!");
+        Print.println("文件更新成功!");
         //简写:   e.getParentNode().removeChild(e);
         //删除父节点 e.getParentNode().getParentNode().removeChild(e.getParentNode());
     }
@@ -118,7 +119,7 @@ public class JaxpXml {
     private void list(Node node) {
         // 判断如果node是标签.就打印是文本就什么也不错
         if (node instanceof Element) {
-            System.out.println(node.getNodeName());
+            Print.println(node.getNodeName());
         }
         NodeList list = node.getChildNodes();
         for (int i = 0; i < list.getLength(); i++) {

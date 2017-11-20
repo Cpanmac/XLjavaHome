@@ -1,5 +1,7 @@
 package com.xl.face;
 
+import com.xl.util.Print;
+
 /**
  * @author 徐立
  * @Decription 优柔寡断的返回值
@@ -7,7 +9,7 @@ package com.xl.face;
  */
 public class ReturnValue {
     public static void main(String[] args) {
-        System.out.println(decision());
+        Print.println(decision());
     }
 
     @SuppressWarnings("finally")

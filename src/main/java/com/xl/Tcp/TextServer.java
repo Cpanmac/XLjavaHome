@@ -1,5 +1,7 @@
 package com.xl.Tcp;
 
+import com.xl.util.Print;
+
 import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,7 +15,7 @@ class TextServer {
         ServerSocket ss = new ServerSocket(10006);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        System.out.println(ip);
+        Print.println(ip);
         //先读一个long类型的结束标记
         //		DataInputStream dis =new DataInputStream(s.getInputStream());
         //		long l=dis.readLong();//先把时间戳读过来

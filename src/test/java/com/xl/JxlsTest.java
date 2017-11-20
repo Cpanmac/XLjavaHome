@@ -1,6 +1,7 @@
 package com.xl;
 
 import com.xl.util.FileTool;
+import com.xl.util.Print;
 import net.sf.jxls.transformer.XLSTransformer;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -60,7 +61,7 @@ public class JxlsTest {
         workbook.close();
         long l2 = System.currentTimeMillis();
         long l3 = l2 - l1;
-        System.out.println("使用时间" + l3 + "毫秒");
+        Print.println("使用时间" + l3 + "毫秒");
     }
 
     private List getpagingdata(List<Map<String, String>> list, int page, int pagesize) {

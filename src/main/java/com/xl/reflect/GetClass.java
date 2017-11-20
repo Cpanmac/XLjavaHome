@@ -1,6 +1,7 @@
 package com.xl.reflect;
 
 import com.xl.entity.Person;
+import com.xl.util.Print;
 import org.junit.Test;
 
 public class GetClass {
@@ -18,9 +19,9 @@ public class GetClass {
         Class clazz = Person.class;
         Class clazz1 = Person.class;
         Class clazz2 = new Person().getClass();
-        System.out.println(clazz);
-        System.out.println(clazz2);
-        System.out.println(clazz == clazz1);
+        Print.println(clazz);
+        Print.println(clazz2);
+        Print.println(clazz == clazz1);
     }
 
     // 方式三：
@@ -33,7 +34,7 @@ public class GetClass {
         String className2 = "Person"; // 这样是错误的
         Class clazz = Class.forName(className);
         // Class clazz2=Class.forName(className2);
-        System.out.println(clazz);
-        // System.out.println(clazz2);
+        Print.println(clazz);
+        // Print.print(clazz2);
     }
 }

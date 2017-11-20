@@ -1,5 +1,6 @@
 package com.xl.internet;
 
+import com.xl.util.Print;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
@@ -11,12 +12,12 @@ public class URLDemo {
     public void test() throws UnsupportedEncodingException {
         String s = "dse中国sdf";
         String _s = java.net.URLEncoder.encode(s);
-        System.out.println(_s);
+        Print.println(_s);
         _s = java.net.URLEncoder.encode(s, "UTF-8");
-        System.out.println(_s);
+        Print.println(_s);
         _s = java.net.URLEncoder.encode(s, "GBK");
-        System.out.println(_s);
+        Print.println(_s);
         s = URLDecoder.decode(s);
-        System.out.println(s);
+        Print.println(s);
     }
 }

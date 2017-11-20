@@ -1,5 +1,6 @@
 package com.xl.face;
 
+import com.xl.util.Print;
 import org.junit.Test;
 
 /**
@@ -16,7 +17,7 @@ public class Clock {
                 minutes++;
             }
         }
-        System.out.println(minutes);
+        Print.println(minutes);
     }
 
     @Test
@@ -27,7 +28,7 @@ public class Clock {
                 minutes++;
             }
         }
-        System.out.println(minutes);
+        Print.println(minutes);
     }
 
     @Test
@@ -38,6 +39,6 @@ public class Clock {
                 minutes++;
             }
         }
-        System.out.println(minutes);
+        Print.println(minutes);
     }
 }

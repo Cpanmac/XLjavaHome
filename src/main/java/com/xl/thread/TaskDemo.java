@@ -1,5 +1,7 @@
 package com.xl.thread;
 
+import com.xl.util.Print;
+
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -27,7 +29,7 @@ public class TaskDemo {
         new Timer().schedule(new MyTimeTask(), 2000);
         while (true) {
             Thread.sleep(2000);
-            System.out.println(System.currentTimeMillis());
+            Print.println(System.currentTimeMillis());
         }
     }
 
@@ -37,7 +39,7 @@ public class TaskDemo {
         new java.util.Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("这是定时器里面的内容");
+                Print.println("这是定时器里面的内容");
             }
         }, 10, 3000); // schedule:时刻表，进度表； 清单，明细表； 预定计划； 目录
         while (true) {
@@ -62,7 +64,7 @@ class MyTimeTask extends TimerTask {
 
     @Override
     public void run() {
-        System.out.println(i);
+        Print.println(i);
         new Timer().schedule(new MyTimeTask(), i = i * 2);
     }
 }

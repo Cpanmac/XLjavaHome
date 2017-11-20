@@ -71,7 +71,7 @@ public class StringUtil {
         if ("err".equals(outMode)) {
             System.err.println(outInfo);
         } else {
-            System.out.println(outInfo);
+            Print.println(outInfo);
         }
     }
 

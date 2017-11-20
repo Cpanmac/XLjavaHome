@@ -1,5 +1,7 @@
 package com.xl.io.zip;
 
+import com.xl.util.Print;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -18,7 +20,7 @@ public class Zip {
 
     public static void main(String[] args) {
         //    	if (args.length != 2) {
-        // 			System.out.println("Usage: java ZipCompress zip/unzip E:/java/apps/zip/text");
+        // 			Print.print("Usage: java ZipCompress zip/unzip E:/java/apps/zip/text");
         // 			return ;
         // 		}
         // 		Zip zip = new Zip();
@@ -27,7 +29,7 @@ public class Zip {
         // 		} else if(args[0].equals("unzip")) {
         // 			zip.uncompress(args[1]);
         // 		} else {
-        // 			System.out.println("Error");
+        // 			Print.print("Error");
         // 		}
         Zip zip = new Zip();
         zip.compress("D:/ziptest");
@@ -54,7 +56,7 @@ public class Zip {
             ZipOutputStream zipos = new ZipOutputStream(bos);
             byte data[] = new byte[BUFFER];
             for (int i = 0; i < vector.size(); i++) {
-                File file = (File) vector.get(i);
+                File file = vector.get(i);
                 zipos.putNextEntry(new ZipEntry(getEntryName(fileName, file)));
                 bis = new BufferedInputStream(new FileInputStream(file));
                 int count;
@@ -149,9 +151,9 @@ public class Zip {
     private void showDetail(File sourceFile, File targetFile) {
         long sourceFileLength = getDirectoryLength(sourceFile);
         long targetFileLength = targetFile.length();
-        System.out.println("The uncompress file's size is " + sourceFileLength + " bytes.");
-        System.out.println("The compress file's size is " + targetFileLength + " bytes.");
-        System.out.println("The compress rate is " + ((double) (sourceFileLength - targetFileLength) / (double) sourceFileLength) * 100 + "%");
+        Print.println("The uncompress file's size is " + sourceFileLength + " bytes.");
+        Print.println("The compress file's size is " + targetFileLength + " bytes.");
+        Print.println("The compress rate is " + ((double) (sourceFileLength - targetFileLength) / (double) sourceFileLength) * 100 + "%");
     }
 
     /**

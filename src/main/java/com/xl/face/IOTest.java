@@ -1,6 +1,7 @@
 package com.xl.face;
 
 import com.xl.util.FileTool;
+import com.xl.util.Print;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -17,7 +18,7 @@ import java.io.UnsupportedEncodingException;
 public class IOTest {
     public static void main(String[] args) throws UnsupportedEncodingException {
         String src = FileTool.getCurrentPath(IOTest.class) + "\\1";
-        System.out.println(src);
+        Print.println(src);
     }
 
     public static void copy(String src, String dest) throws IOException {

@@ -1,6 +1,7 @@
 package com.xl.xml.dom4j;
 
 import com.xl.util.FileTool;
+import com.xl.util.Print;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
@@ -70,7 +71,7 @@ public class DOM4JDemo {
         Element books = document.getRootElement();
         // 得到书
         Element book = books.element("书");
-        System.out.println(book.getName());
+        Print.println(book.getName());
         // 得到书的所有子节点
         List list = book.elements();
         // 创建节点
@@ -81,7 +82,7 @@ public class DOM4JDemo {
         Iterator it = list.iterator();
         while (it.hasNext()) {
             // 打印list集合里面的内容
-            System.out.println(it.next());
+            Print.println(it.next());
         }
         OutputFormat format = OutputFormat.createPrettyPrint();
         format.setEncoding("utf-8");
@@ -134,8 +135,8 @@ public class DOM4JDemo {
 
     @Test
     public void getEncoding() {
-        System.out.println(document.getXMLEncoding());
-        System.out.println(document.getName());
+        Print.println(document.getXMLEncoding());
+        Print.println(document.getName());
     }
 
     @Test
@@ -148,10 +149,10 @@ public class DOM4JDemo {
         // 要得到第二本书的文本
         Element book = (Element) root.elements("书").get(1);
         String value = book.element("书名").getText();
-        System.out.println(value);
+        Print.println(value);
         // 得到第二本书的属性值
         value = book.element("书名").attributeValue("name");
-        System.out.println(value);
+        Print.println(value);
     }
 
     // 改:得到节点setText方法
