@@ -3,6 +3,7 @@ package com.xl.excel;
 import com.xl.excel.annotation.Cell;
 import com.xl.excel.annotation.Entity;
 import com.xl.reflect.MethodTool;
+import com.xl.util.FileTool;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
@@ -14,7 +15,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.File;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -94,9 +94,8 @@ public class SimpleExportUtil {
 
     private List<Entity> parseXML(Class<? extends Object> clazz) throws Exception {
         String classPath = clazz.getName();
-        String xmlPath = File.separator + classPath.replace(".", File.separator) + ".ete.xml";
         List list = new ArrayList();
-        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(super.getClass().getClassLoader().getResourceAsStream(xmlPath));
+        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(FileTool.getResourceInputStream("excel/Medicine.ete.xml"));
         NodeList nodeList = doc.getElementsByTagName("property");
         for (int i = 0; i < nodeList.getLength(); ++i) {
             Element element = (Element) nodeList.item(i);

@@ -101,17 +101,14 @@ public class TestExporToExcel {
      * 数据分析部分根据具体的业务生产
      */
     @Test
-    public void testExportToExcelOfXMl() {
-        try {
-            File outputFile = new File("E:\\medicines.xls");
+    public void testExportToExcelOfXMl() throws Exception {
+        File outputFile = FileTool.createResourceFile("excel/medicines.xls");
             OutputStream fOut = new PrintStream(outputFile);
             // 把相应的Excel 工作簿存盘
             SimpleExportUtil.exportToExcel(medicines, "药品信息表").write(fOut);
             fOut.flush();
             // 操作结束，关闭文件
             fOut.close();
-        } catch (Exception e) {
-            e.getStackTrace();
-        }
+        FileTool.open(outputFile);
     }
 }
