@@ -27,7 +27,7 @@ public class AwtDemo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int i = 1;
-                Print.println(i);
+                Print.info(i);
             }
         });
         // 匿名内部类
@@ -35,20 +35,20 @@ public class AwtDemo {
             @Override
             public void windowClosing(WindowEvent e) // 关的动作
             {
-                Print.println("我关");
+                Print.info("我关");
                 System.exit(0);
             }
 
             @Override
             public void windowActivated(WindowEvent e) // 前置时触发此行为
             {
-                Print.println("active");
+                Print.info("active");
             }
 
             @Override
             public void windowOpened(WindowEvent e) // 打开时显示的
             {
-                Print.println("我被打开了");
+                Print.info("我被打开了");
             }
         });
         f.setVisible(true); // public void setVisible(boolean b)如为 true，则使Window 可见，否则隐藏 Window。

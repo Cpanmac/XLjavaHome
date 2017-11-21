@@ -28,7 +28,7 @@ class TextClient {
         s.shutdownOutput();//关闭客户端的输出流，相当于给流中加入了结束标记
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
         String str = bufIn.readLine();
-        Print.println(str);
+        Print.info(str);
         bufr.close();
         s.close();
     }

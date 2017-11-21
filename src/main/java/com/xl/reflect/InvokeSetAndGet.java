@@ -32,7 +32,7 @@ public class InvokeSetAndGet {
         try {
             att = toUp(att);
             Method method = obj.getClass().getMethod("get" + att);
-            Print.println(method.invoke(obj));
+            Print.info(method.invoke(obj));
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -26,25 +26,25 @@ public class HelloProcessor extends AbstractProcessor {
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {
         super.init(processingEnv);
-        Print.println("注解初始化");
+        Print.info("注解初始化");
     }
 
     // 处理编译时注解的方法
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-        Print.println("start process, count = " + count++);
+        Print.info("start process, count = " + count++);
         // 获得所有类
         Set<? extends Element> rootElements = roundEnv.getRootElements();
-        Print.println("all class:");
+        Print.info("all class:");
         for (Element rootElement : rootElements) {
-            Print.println("  " + rootElement.getSimpleName());
+            Print.info("  " + rootElement.getSimpleName());
         }
         // 获得有注解的元素, 这里 User 只能修饰类, 所以只有类
         Set<? extends Element> elementsAnnotatedWith = roundEnv.getElementsAnnotatedWith(Igore.class);
-        Print.println("annotated class:");
+        Print.info("annotated class:");
         for (Element element : elementsAnnotatedWith) {
             String className = element.getSimpleName().toString();
-            Print.println("  " + className);
+            Print.info("  " + className);
             String output = element.getAnnotation(Igore.class).name();
             // 产生的动态类的名字
             String newClassName = className + "_New";

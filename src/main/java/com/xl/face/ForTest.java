@@ -13,7 +13,7 @@ public class ForTest {
         for (int i = 0; i < 100; i++) {
             j = j++;
         }
-        Print.println(j);
+        Print.info(j);
     }
 }
 

@@ -17,6 +17,6 @@ public class MySqlTest {
     @Test
     public void getConnectTest() {
         Connection c = MysqlJdbcUtil.getMySqlConnection();
-        Print.println(c);
+        Print.info(c);
     }
 }

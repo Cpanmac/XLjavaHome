@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 /**
  * 注意：如果用writeUIF(String str)写的话，用转换流读不出来，只能用对应的读取方式读取,英文不涉及编码
@@ -18,6 +19,9 @@ import java.io.IOException;
  */
 public class DataStreamTest {
     private File file = FileTool.getResourceFile("1.txt");
+
+    public DataStreamTest() throws UnsupportedEncodingException {
+    }
 
     /**
      * 写入
@@ -33,7 +37,7 @@ public class DataStreamTest {
         dos.write(123);
         dos.writeInt(2);
         dos.close();
-        Print.println("写入成功");
+        Print.info("写入成功");
         FileTool.open(file);
     }
 
@@ -50,10 +54,10 @@ public class DataStreamTest {
         boolean b = dis.readBoolean();
         double d = dis.readDouble();
         int num2 = dis.readInt();
-        Print.println("num=" + num);
-        Print.println("b=" + b);
-        Print.println("d=" + d);
-        Print.println("num2=" + num2);
+        Print.info("num=" + num);
+        Print.info("b=" + b);
+        Print.info("d=" + d);
+        Print.info("num2=" + num2);
         dis.close();
     }
 
@@ -61,10 +65,10 @@ public class DataStreamTest {
     public void readUTFDemo() throws Exception {
         DataInputStream dis = new DataInputStream(new FileInputStream(file));
         String s = dis.readUTF();
-        Print.println(s);
-        Print.println(dis.available());
+        Print.info(s);
+        Print.info(dis.available());
         s = dis.readUTF();
-        Print.println(s);
+        Print.info(s);
     }
 
     @Test

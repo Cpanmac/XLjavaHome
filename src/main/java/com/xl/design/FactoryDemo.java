@@ -16,14 +16,14 @@ public class FactoryDemo {
 class Apple implements fruit {
     @Override
     public void eat() {
-        Print.println("Apple");
+        Print.info("Apple");
     }
 }
 
 class Orange implements fruit {
     @Override
     public void eat() {
-        Print.println("Orange");
+        Print.info("Orange");
     }
 }
 

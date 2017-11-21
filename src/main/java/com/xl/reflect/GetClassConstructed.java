@@ -30,7 +30,7 @@ public class GetClassConstructed {
         // 该类中只有一个获取空参数的方法newInstance
         Object obj = clazz.newInstance(); // 调用了空参数的构造函数，
         Person p = (Person) obj;
-        Print.println(p.name);
+        Print.info(p.name);
         // 异常：
         // 1.如果没有空参的构造函数会报一个java.lang.InstantiationException初始化异常
         // 2.如果构造函数被private修饰java.lang.IllegalAccessException无效访问异常
@@ -43,7 +43,7 @@ public class GetClassConstructed {
         // 1.拿到该类的所有公有的构造函数getConstructors()
         Constructor c = clazz.getConstructor(String.class);
         Person p = (Person) c.newInstance("xxx");
-        Print.println(p.name);
+        Print.info(p.name);
     }
 
     // 私有的构造函数
@@ -53,6 +53,6 @@ public class GetClassConstructed {
         Constructor c = clazz.getDeclaredConstructor(List.class);
         c.setAccessible(true);
         Person p = (Person) c.newInstance(new ArrayList());
-        Print.println(p.name);
+        Print.info(p.name);
     }
 }

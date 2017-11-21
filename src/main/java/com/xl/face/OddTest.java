@@ -9,7 +9,7 @@ public class OddTest {
 
     public static void main(String[] args) {
         for (int i = -10; i <= 10; i++) {
-            Print.println(isOdd(i));
+            Print.info(isOdd(i));
         }
     }
 }

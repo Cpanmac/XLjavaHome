@@ -31,12 +31,12 @@ public class GetMethod {
         // method.invoke(p, "sa", 36);
         for (Method amethods : methods) {
             // 打印公用的方法全名
-            Print.println(amethods.getName());
+            Print.info(amethods.getName());
         }
         // 只获取私有的方法
         methods = clazz.getDeclaredMethods();
         for (Method bmethods : methods) {
-            Print.println(bmethods);
+            Print.info(bmethods);
         }
     }
 

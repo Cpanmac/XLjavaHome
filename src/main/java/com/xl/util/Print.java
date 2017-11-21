@@ -26,8 +26,8 @@ public class Print {
      *
      * @param obj
      */
-    public static void println(Object obj) {
-        //System.out.println(obj);
-        log.info(obj);
+    public static void info(Object obj) {
+        System.out.println(obj);
+        //log.info(obj);
     }
 }

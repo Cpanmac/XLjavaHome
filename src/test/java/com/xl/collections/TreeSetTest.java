@@ -33,7 +33,7 @@ public class TreeSetTest {
         Iterator<Student> it = ts.iterator();
         while (it.hasNext()) {
             Student stu = it.next(); // 如果想打印对象的话
-            Print.println(stu.getName() + "..." + stu.getAge());
+            Print.info(stu.getName() + "..." + stu.getAge());
         }
     }
 }

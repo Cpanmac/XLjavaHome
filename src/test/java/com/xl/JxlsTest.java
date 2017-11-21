@@ -61,7 +61,7 @@ public class JxlsTest {
         workbook.close();
         long l2 = System.currentTimeMillis();
         long l3 = l2 - l1;
-        Print.println("使用时间" + l3 + "毫秒");
+        Print.info("使用时间" + l3 + "毫秒");
     }
 
     private List getpagingdata(List<Map<String, String>> list, int page, int pagesize) {

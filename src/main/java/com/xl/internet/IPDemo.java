@@ -19,12 +19,12 @@ public class IPDemo {
         // 获取任意一台主机的IP地址对象
         InetAddress ia = InetAddress.getByName("www.baidu.com");
         byte[] buf = ia.getAddress();
-        Print.println("地址;" + ia.getHostAddress());
-        Print.println("主机名：" + ia.getHostName());// 需要解析过程
+        Print.info("地址;" + ia.getHostAddress());
+        Print.info("主机名：" + ia.getHostName());// 需要解析过程
         // 如果IP地址没有在网络上，解析不成功，就只能返回这个IP地址
         // byte[] buf = InetAddress.getAllByName("www.baidu.com");
         for (byte b : buf) {
-            Print.println(b + " ");
+            Print.info(b + " ");
         }
     }
 }

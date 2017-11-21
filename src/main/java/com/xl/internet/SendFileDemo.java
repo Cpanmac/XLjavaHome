@@ -25,7 +25,7 @@ class TextClient {
         out.println("over");
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
         String str = bufIn.readLine();
-        Print.println(str);
+        Print.info(str);
         bufr.close();
         s.close();
     }
@@ -36,7 +36,7 @@ class TextServer {
         ServerSocket ss = new ServerSocket(10006);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        Print.println(ip);
+        Print.info(ip);
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
         // 真是的应该把名字取一样。如果有同名判断一下
         PrintWriter out = new PrintWriter(new FileWriter("C:\\Documents and Settings\\All Users\\桌面\\server.txt"), true);

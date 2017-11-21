@@ -11,6 +11,6 @@ import com.xl.util.Print;
  */
 public class XLMain {
     public static void main(String args) {
-        Print.println("这是主函数");
+        Print.info("这是主函数");
     }
 }

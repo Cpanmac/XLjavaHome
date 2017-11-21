@@ -15,7 +15,7 @@ class TextServer {
         ServerSocket ss = new ServerSocket(10006);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        Print.println(ip);
+        Print.info(ip);
         //先读一个long类型的结束标记
         //		DataInputStream dis =new DataInputStream(s.getInputStream());
         //		long l=dis.readLong();//先把时间戳读过来

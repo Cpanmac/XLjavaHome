@@ -32,7 +32,7 @@ public class MapTest {
             Map.Entry<String, String> me = it.next();
             String key = me.getKey();
             String value = me.getValue();
-            Print.println("key:" + key + ",value:" + value);
+            Print.info("key:" + key + ",value:" + value);
         }
     }
 
@@ -40,6 +40,6 @@ public class MapTest {
     public void emptyTest() {
         Map map = new HashMap(2);
         //空
-        Print.println(map.get("1") == null);
+        Print.info(map.get("1") == null);
     }
 }

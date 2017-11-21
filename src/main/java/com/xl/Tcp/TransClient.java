@@ -38,7 +38,7 @@ public class TransClient {
         BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream())); //
         String line = null;
         while ((line = bufr.readLine()) != null) {  //读的键盘
-            Print.println(line); //查看服务器发过来的数据
+            Print.info(line); //查看服务器发过来的数据
             //			bufOut.write(line);
             //			//由于写入的时候只能读取回车符号之前的数据
             //			bufOut.newLine();
@@ -49,7 +49,7 @@ public class TransClient {
             }
             out.println(line);
             String str = bufIn.readLine(); //读的是服务器发过来的信息
-            Print.println("server:" + str);
+            Print.info("server:" + str);
         }
         bufr.close();
         s.close();

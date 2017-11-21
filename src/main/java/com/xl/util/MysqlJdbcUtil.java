@@ -83,6 +83,6 @@ public final class MysqlJdbcUtil {
     @Test
     public void connectionTest() {
         Connection c = getMySqlConnection();
-        Print.println(c);
+        Print.info(c);
     }
 }

@@ -9,7 +9,7 @@ import com.xl.util.Print;
  */
 public class ReturnValue {
     public static void main(String[] args) {
-        Print.println(decision());
+        Print.info(decision());
     }
 
     @SuppressWarnings("finally")

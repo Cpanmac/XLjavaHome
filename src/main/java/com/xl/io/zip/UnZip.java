@@ -23,7 +23,7 @@ public class UnZip {
             createDirectory(outputDirectory, "");
             while (e.hasMoreElements()) {
                 zipEntry = (ZipEntry) e.nextElement();
-                Print.println("unziping " + zipEntry.getName());
+                Print.info("unziping " + zipEntry.getName());
                 if (zipEntry.isDirectory()) {
                     String name = zipEntry.getName();
                     name = name.substring(0, name.length() - 1);
@@ -48,9 +48,9 @@ public class UnZip {
                     in.close();
                 }
             }
-            Print.println("done!");
+            Print.info("done!");
         } catch (Exception ex) {
-            Print.println(ex.getMessage());
+            Print.info(ex.getMessage());
             ex.printStackTrace();
         }
     }
@@ -72,7 +72,7 @@ public class UnZip {
                 }
             }
         } catch (Exception ex) {
-            Print.println(ex.getMessage());
+            Print.info(ex.getMessage());
         }
     }
 }

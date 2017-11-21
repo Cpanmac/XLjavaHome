@@ -18,9 +18,9 @@ public class IpSort {
     public static void ipSort() {
         String ip = "192.68.1.254  102.29.23.013  10.10.10.10  2.2.2.2  8.109.90.30";
         ip = ip.replaceAll("(\\d+)", "00$1");   //要重用就封装成组
-        Print.println(ip);
+        Print.info(ip);
         ip = ip.replaceAll("0*(\\d{3})", "$1");  //取右边的3位
-        Print.println(ip);
+        Print.info(ip);
         String[] arr = ip.split(" ");
         /*
 //		方法一：
@@ -35,7 +35,7 @@ public class IpSort {
             ts.add(s);
         }
         for (String s : ts) {
-            Print.println(s.replaceAll("0*(\\d+)", "$1"));//保留几位不知道  0出现一次或多次0*
+            Print.info(s.replaceAll("0*(\\d+)", "$1"));//保留几位不知道  0出现一次或多次0*
         }
     }
 }

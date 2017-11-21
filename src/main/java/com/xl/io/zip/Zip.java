@@ -151,9 +151,9 @@ public class Zip {
     private void showDetail(File sourceFile, File targetFile) {
         long sourceFileLength = getDirectoryLength(sourceFile);
         long targetFileLength = targetFile.length();
-        Print.println("The uncompress file's size is " + sourceFileLength + " bytes.");
-        Print.println("The compress file's size is " + targetFileLength + " bytes.");
-        Print.println("The compress rate is " + ((double) (sourceFileLength - targetFileLength) / (double) sourceFileLength) * 100 + "%");
+        Print.info("The uncompress file's size is " + sourceFileLength + " bytes.");
+        Print.info("The compress file's size is " + targetFileLength + " bytes.");
+        Print.info("The compress rate is " + ((double) (sourceFileLength - targetFileLength) / (double) sourceFileLength) * 100 + "%");
     }
 
     /**

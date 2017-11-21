@@ -91,7 +91,7 @@ public class FreemarkerTest {
     public void list2Test() throws IOException, TemplateException {
         Map map = new HashMap();
         List<User> list = new ArrayList<User>();
-        for (int i = 0; i < 300; i++) {
+        for (int i = 0; i < 100; i++) {
             User u = new User();
             u.setName("测试" + i);
             list.add(u);

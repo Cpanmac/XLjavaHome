@@ -7,6 +7,6 @@ import org.junit.Test;
 public class PrintUtilTest {
     @Test
     public void print() throws Exception {
-        Print.println("测试");
+        Print.info("测试");
     }
 }

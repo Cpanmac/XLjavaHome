@@ -92,7 +92,7 @@ public class MyMenuDemo {
                 openDia.setVisible(true);
                 String dirPath = openDia.getDirectory();// 获得打开文件的路径
                 String fileName = openDia.getFile();
-                Print.println(dirPath + "  " + fileName);
+                Print.info(dirPath + "  " + fileName);
                 // 如果没选择文件就会出空指针异常，目录有，文件没有。所以得判断
                 if (dirPath == null || fileName == null) {
                     return;

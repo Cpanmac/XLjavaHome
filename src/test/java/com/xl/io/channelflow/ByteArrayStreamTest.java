@@ -25,14 +25,14 @@ public class ByteArrayStreamTest {
         ByteArrayInputStream bis = new ByteArrayInputStream(Messages.getString("张三1").getBytes());
         // 数据目的
         ByteArrayOutputStream bos = new ByteArrayOutputStream();// 不指定目的。
-        Print.println("没有数据:" + bos.size());
+        Print.info("没有数据:" + bos.size());
         // 现在可以频繁的读写
         int by1 = 0;
         while ((by1 = bis.read()) != -1) {
-            Print.println(by1);
+            Print.info(by1);
             bos.write(by1);
         }
-        Print.println("输出流size:" + bos.size());
-        Print.println(bos.toString()); // abc
+        Print.info("输出流size:" + bos.size());
+        Print.info(bos.toString()); // abc
     }
 }

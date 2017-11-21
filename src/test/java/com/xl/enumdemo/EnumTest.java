@@ -10,19 +10,19 @@ public class EnumTest {
     @Test
     public void test() {
         // 1. 获取枚举的名称
-        Print.println(Grade.C.name());
-        Print.println(Grade.D.getValue());
-        Print.println(Grade.D.name());
-        Print.println(Grade.D.localeValue());
+        Print.info(Grade.C.name());
+        Print.info(Grade.D.getValue());
+        Print.info(Grade.D.name());
+        Print.info(Grade.D.localeValue());
         // 2.将字符串改成枚举。valueOf
         String str = "B";
         // Grade g=Grade.valueOf(Grade.class,str);
         Grade g = Grade.valueOf(str);
-        Print.println(g);
+        Print.info(g);
         //		3.返回所有的枚举值,在文档中没有。
         Grade[] gs = Grade.values();
         for (Grade g1 : gs) {
-            Print.println(g1);
+            Print.info(g1);
         }
     }
 }

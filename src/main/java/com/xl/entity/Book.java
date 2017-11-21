@@ -18,9 +18,9 @@ public class Book {
     public void sysoTest() {
         Book b = new Book();
         b.setAuthor("111");
-        Print.println(b);
-        Print.println(b.isHasRight());
+        Print.info(b);
+        Print.info(b.isHasRight());
         b.setHasRight(true);
-        Print.println(b.isHasRight());
+        Print.info(b.isHasRight());
     }
 }

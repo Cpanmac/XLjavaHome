@@ -23,10 +23,10 @@ public class ResourceBundleTest {
 
     @Test
     public void demoTest() {
-        Print.println(RESOURCE_BUNDLE.getBaseBundleName());
+        Print.info(RESOURCE_BUNDLE.getBaseBundleName());
         Enumeration<String> enumeration = RESOURCE_BUNDLE.getKeys();
         while (enumeration.hasMoreElements()) {
-            Print.println(enumeration.nextElement());
+            Print.info(enumeration.nextElement());
         }
     }
 }

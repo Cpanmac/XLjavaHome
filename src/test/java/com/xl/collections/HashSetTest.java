@@ -18,17 +18,17 @@ class HashSetTest {
     @Test
     public void demoTest() {
         HashSet hs = new HashSet();
-        Print.println(hs.toString());
+        Print.info(hs.toString());
         hs.add("java01");             //返回值是布尔型,所以无法存储相同的元素。
         hs.add("java01");
         hs.add("java03");
         hs.add("java03");
         hs.add("java02");
-        Print.println(hs.add("java01"));
-        Print.println(hs.toString());
+        Print.info(hs.add("java01"));
+        Print.info(hs.toString());
         Iterator it = hs.iterator();      //取出HashSet
         while (it.hasNext()) {
-            Print.println(it.next());
+            Print.info(it.next());
         }
     }
 }

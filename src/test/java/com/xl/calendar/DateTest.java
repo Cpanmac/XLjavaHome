@@ -18,8 +18,8 @@ public class DateTest {
     public void test() {
         Date d = new Date();
         Date d2 = d;
-        Print.println(d.getMonth());
-        Print.println(d.getDay());
-        Print.println(d2.compareTo(d));//相等就输出
+        Print.info(d.getMonth());
+        Print.info(d.getDay());
+        Print.info(d2.compareTo(d));//相等就输出
     }
 }

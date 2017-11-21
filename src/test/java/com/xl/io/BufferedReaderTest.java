@@ -21,7 +21,7 @@ public class BufferedReaderTest {
         br = new BufferedReader(fr);
         String s = null;
         while ((s = br.readLine()) != null) { // 当内容为空时结束循环
-            Print.println(s);
+            Print.info(s);
         }
         br.close();
     }

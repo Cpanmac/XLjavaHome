@@ -32,7 +32,7 @@ public class HtmlTest {
     @Before
     public void init() throws IOException {
         file = FileTool.getResourceFile("html/1.html");
-        doc = Jsoup.parse(file, "UTF-8");
+        doc = Jsoup.parse(file, com.xl.encode.Encode.UTF);
         url = new URL("http://www.baidu.com/baidu?word=%E9%A3%8E%E6%99%AF&ie=utf-8&tn=98012088_2_dg&1402964659639");
         url = new URL("http://bbs.goumin.com/thread-2939853-1-1.html");
     }
@@ -48,9 +48,9 @@ public class HtmlTest {
         Elements content = doc.getElementsByTag("title");
         Print.print(content.html());
         content = doc.getElementsByTag("TITLE");
-        Print.println(content);
+        Print.info(content);
         Elements body = doc.getElementsByTag("body");
-        Print.println(body.html().replaceAll("[\\s\\r\\n]+", " "));
+        Print.info(body.html().replaceAll("[\\s\\r\\n]+", " "));
     }
 
     @Test
@@ -61,7 +61,7 @@ public class HtmlTest {
         String content = e.toString().replaceAll("\r", " ");
         Print.print(content);
         String[] str = RegTool.getContent(content, "home.php.*?_blank.*?>(.*?)<", 1);
-        Print.println(Arrays.toString(str));
+        Print.info(Arrays.toString(str));
         while (e.hasText()) {
             Print.print(e.attr("href"));
         }
@@ -71,8 +71,8 @@ public class HtmlTest {
     public void a() {
         Elements a = doc.getElementsByTag("a");
         for (Element e : a) {
-            Print.println(e);
-            Print.println(e.attr("href"));
+            Print.info(e);
+            Print.info(e.attr("href"));
         }
     }
 }

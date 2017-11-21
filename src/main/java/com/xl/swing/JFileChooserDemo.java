@@ -38,18 +38,18 @@ public class JFileChooserDemo extends JFrame implements ActionListener {
             if (select == JFileChooser.APPROVE_OPTION) { // 选择的是否为确认
                 File file = fc.getSelectedFile(); // 根据选择创建文件对象
                 // 在屏幕上显示打开文件的文件名
-                Print.println("文件" + file.getName() + "被打开");
+                Print.info("文件" + file.getName() + "被打开");
             } else {
-                Print.println("打开操作被取消");
+                Print.info("打开操作被取消");
             }
         }
         if (button == save) {//选择的是“保存”按钮
             int select = fc.showSaveDialog(this); //显示“保存”文件对话框
             if (select == JFileChooser.APPROVE_OPTION) {
                 File file = fc.getSelectedFile();
-                Print.println("文件" + file.getName() + "被保存");
+                Print.info("文件" + file.getName() + "被保存");
             } else {
-                Print.println("保存操作被取消");
+                Print.info("保存操作被取消");
             }
         }
     }

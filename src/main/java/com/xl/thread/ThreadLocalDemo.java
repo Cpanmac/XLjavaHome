@@ -19,7 +19,7 @@ public class ThreadLocalDemo {
                 @Override
                 public void run() {
                     int data = new Random().nextInt();
-                    Print.println(Thread.currentThread().getName() + " has put data :" + data);
+                    Print.info(Thread.currentThread().getName() + " has put data :" + data);
                     x.set(data);
                     /*
                      * MyThreadScopeData myData = new MyThreadScopeData();
@@ -38,23 +38,23 @@ public class ThreadLocalDemo {
     static class A {
         public void get() {
             int data = x.get();
-            Print.println("A from " + Thread.currentThread().getName() + " get data :" + data);
+            Print.info("A from " + Thread.currentThread().getName() + " get data :" + data);
             /*
              * MyThreadScopeData myData = myThreadScopeData.get();;
 			 * Print.print("A from " + thread.currentThread().getName() +
 			 * " getMyData: " + myData.getName() + "," + myData.getAge());
 			 */
             MyThreadScopeData myData = MyThreadScopeData.getThreadInstance();
-            Print.println("A from " + Thread.currentThread().getName() + " getMyData: " + myData.getName() + "," + myData.getAge());
+            Print.info("A from " + Thread.currentThread().getName() + " getMyData: " + myData.getName() + "," + myData.getAge());
         }
     }
 
     static class B {
         public void get() {
             int data = x.get();
-            Print.println("B from " + Thread.currentThread().getName() + " get data :" + data);
+            Print.info("B from " + Thread.currentThread().getName() + " get data :" + data);
             MyThreadScopeData myData = MyThreadScopeData.getThreadInstance();
-            Print.println("B from " + Thread.currentThread().getName() + " getMyData: " + myData.getName() + "," + myData.getAge());
+            Print.info("B from " + Thread.currentThread().getName() + " getMyData: " + myData.getName() + "," + myData.getAge());
         }
     }
 }

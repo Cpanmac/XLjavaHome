@@ -19,9 +19,9 @@ public class GetClass {
         Class clazz = Person.class;
         Class clazz1 = Person.class;
         Class clazz2 = new Person().getClass();
-        Print.println(clazz);
-        Print.println(clazz2);
-        Print.println(clazz == clazz1);
+        Print.info(clazz);
+        Print.info(clazz2);
+        Print.info(clazz == clazz1);
     }
 
     // 方式三：
@@ -34,7 +34,7 @@ public class GetClass {
         String className2 = "Person"; // 这样是错误的
         Class clazz = Class.forName(className);
         // Class clazz2=Class.forName(className2);
-        Print.println(clazz);
+        Print.info(clazz);
         // Print.print(clazz2);
     }
 }

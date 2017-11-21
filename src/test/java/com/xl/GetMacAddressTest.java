@@ -14,6 +14,6 @@ import org.junit.Test;
 public class GetMacAddressTest {
     @Test
     public void getMacAddress() throws Exception {
-        Print.println(MacAddress.getMacAddress("127.0.0.1"));
+        Print.info(MacAddress.getMacAddress("127.0.0.1"));
     }
 }

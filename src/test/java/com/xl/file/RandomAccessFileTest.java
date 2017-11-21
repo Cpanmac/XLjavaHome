@@ -26,15 +26,15 @@ public class RandomAccessFileTest {
     public void read() throws IOException // 读取
     {
         RandomAccessFile raf = new RandomAccessFile("1.txt", "r"); // 只读的话，可以屏蔽掉只读
-        Print.println(raf.read());
+        Print.info(raf.read());
         // Print.print(raf.read()); //取出的数字192
         // 要想读取李四,李四是四个字节，就得建立数组
         byte[] buf = new byte[4];
         raf.read(buf); // 读存buf的长度，并存储到buf数组
         // 转换成字符串
         String name = new String(buf);
-        Print.println("姓名：" + name);
-        Print.println("年龄: " + raf.readInt());
+        Print.info("姓名：" + name);
+        Print.info("年龄: " + raf.readInt());
     }
 
     public void read_2() throws IOException // 读取王五
@@ -45,7 +45,7 @@ public class RandomAccessFileTest {
         byte[] buf = new byte[4];
         raf.read(buf);
         String name = new String(buf);
-        Print.println("姓名：" + name);
+        Print.info("姓名：" + name);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class RandomAccessFileTest {
     {
         RandomAccessFile raf = new RandomAccessFile(file, "r");
         int a = raf.skipBytes(3);
-        Print.println(a);
+        Print.info(a);
     }
 
     /**

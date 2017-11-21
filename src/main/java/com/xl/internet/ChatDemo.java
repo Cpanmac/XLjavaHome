@@ -76,7 +76,7 @@ class Rece implements Runnable {
                 //接数据之前看看ip
                 String ip = dp.getAddress().getHostAddress();
                 String data = new String(dp.getData(), 0, dp.getLength());
-                Print.println(ip + ":" + data);
+                Print.info(ip + ":" + data);
             }
         } catch (IOException e) {
             throw new RuntimeException("接受失败");

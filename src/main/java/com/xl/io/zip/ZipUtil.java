@@ -38,7 +38,7 @@ public class ZipUtil {
             for (int i = 0; i < fileList.size(); i++) {
                 InputStream in = new FileInputStream((String) fileList.get(i));
                 String fileName = ((String) (fileList.get(i))).replace(File.separatorChar, '/');
-                Print.println("ziping " + fileName);
+                Print.info("ziping " + fileName);
                 fileName = fileName.substring(fileName.indexOf("/") + 1);
                 ZipEntry e = new ZipEntry(fileName);
                 out.putNextEntry(e);
@@ -49,7 +49,7 @@ public class ZipUtil {
                 out.closeEntry();
             }
             out.close();
-            Print.println("done!");
+            Print.info("done!");
         } catch (Exception e) {
             e.printStackTrace();
         }

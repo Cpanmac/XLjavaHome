@@ -102,7 +102,7 @@ class DownLoadTask extends Thread {
             File postionfile = new File(FileTool.getCurrentPath(this), +threadid + ".txt");
             URL url = new URL(urlPath);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            Print.println("线程" + threadid + "正在下载 " + "开始位置 : " + startposition + "结束位置 " + endpositon);
+            Print.info("线程" + threadid + "正在下载 " + "开始位置 : " + startposition + "结束位置 " + endpositon);
             if (postionfile.exists()) {
                 FileInputStream fis = new FileInputStream(postionfile);
                 byte[] result = StreamTool.getBytes(fis);
@@ -137,7 +137,7 @@ class DownLoadTask extends Thread {
                 fos.close();
             }
             file.close();
-            Print.println("线程" + threadid + "下载完毕");
+            Print.info("线程" + threadid + "下载完毕");
             // 当线程下载完毕后 把文件删除掉
             if (postionfile.exists()) {
                 postionfile.delete();

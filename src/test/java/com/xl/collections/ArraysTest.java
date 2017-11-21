@@ -22,13 +22,13 @@ public class ArraysTest {
                 return 1;
             }
         });
-        Print.println(Arrays.toString(arr));
+        Print.info(Arrays.toString(arr));
     }
 
     @Test
     public void testSystemOut() {
-        Print.println(Arrays.toString(intArray));
-        Print.println(Arrays.asList(intArray));
+        Print.info(Arrays.toString(intArray));
+        Print.info(Arrays.asList(intArray));
     }
 
     @Test
@@ -41,7 +41,7 @@ public class ArraysTest {
 
     @Test
     public void testSort() {
-        Print.println(Arrays.toString(intArray));
+        Print.info(Arrays.toString(intArray));
     }
 
     /**
@@ -51,9 +51,9 @@ public class ArraysTest {
     public void length() {
         int length = intArray.length;
         ArrayUtil.arrayAddLength(intArray, 10);
-        Print.println(intArray.length);
+        Print.info(intArray.length);
         ArrayUtil.arrayAddLength(intArray, 2);
-        Print.println(intArray.length);
+        Print.info(intArray.length);
     }
 
     @Test
@@ -66,12 +66,12 @@ public class ArraysTest {
     }
 
     private void p(Object[] obj) {
-        Print.println(obj.getClass().getName());
+        Print.info(obj.getClass().getName());
         int i = 0;
         for (Object o : obj) {
-            Print.println(i);
+            Print.info(i);
             i++;
-            Print.println(o.toString());
+            Print.info(o.toString());
         }
     }
 }

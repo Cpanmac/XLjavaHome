@@ -17,8 +17,8 @@ public class WhileTest {
         int count = 0;
         for (int i = START; i <= END; i++) {
             count++;
-            Print.println(i);
+            Print.info(i);
         }
-        Print.println(count);
+        Print.info(count);
     }
 }

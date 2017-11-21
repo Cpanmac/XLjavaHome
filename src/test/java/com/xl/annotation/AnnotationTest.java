@@ -19,7 +19,7 @@ public class AnnotationTest {
     @Deprecated
     @MethodInfo(comments = "deprecated method", date = "Nov 17 2012")
     public static void oldMethod() {
-        Print.println("过去的方法弃用");
+        Print.info("过去的方法弃用");
     }
 
     @SuppressWarnings({"unchecked", "deprecation"})
@@ -34,11 +34,11 @@ public class AnnotationTest {
         for (Method method : AnnotationTest.class.getClassLoader().loadClass(("com.xl.annotation.AnnotationTest")).getMethods()) {
             if (method.isAnnotationPresent(MethodInfo.class)) {
                 for (Annotation anno : method.getDeclaredAnnotations()) {
-                    Print.println("Annotation in Method '" + method + "' : " + anno);
+                    Print.info("Annotation in Method '" + method + "' : " + anno);
                 }
                 MethodInfo methodAnno = method.getAnnotation(MethodInfo.class);
                 if (methodAnno.revision() == 1) {
-                    Print.println("Method with revision no 1 = " + method);
+                    Print.info("Method with revision no 1 = " + method);
                 }
             }
         }

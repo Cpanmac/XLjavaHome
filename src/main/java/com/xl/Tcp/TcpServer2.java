@@ -11,11 +11,11 @@ public class TcpServer2 {
         ServerSocket ss = new ServerSocket(10004);
         Socket s = ss.accept();
         String ip = s.getInetAddress().getHostAddress();
-        Print.println("客户端的IP地址是：" + ip);
+        Print.info("客户端的IP地址是：" + ip);
         InputStream in = s.getInputStream();
         byte[] buf = new byte[1024];
         int len = in.read(buf);
-        Print.println(new String(buf, 0, len));
+        Print.info(new String(buf, 0, len));
         java.io.OutputStream out = s.getOutputStream();
         Thread.sleep(5000);//阻塞式方法
         out.write("哥们收到，你也好，客户端发送".getBytes());

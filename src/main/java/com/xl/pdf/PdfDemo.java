@@ -12,9 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.UnsupportedEncodingException;
+import java.io.IOException;
 
 /**
  * @author 徐立
@@ -41,12 +40,18 @@ public class PdfDemo {
     File file;
 
     @Before
-    public void init() throws UnsupportedEncodingException {
-        file = new File(FileTool.getCurrentPath(this), "pdf.pdf");
+    public void init() throws IOException {
+        file = FileTool.createResourceFile("pdf\\pdf.pdf");
     }
 
+    /**
+     * todo 并没有写进去
+     *
+     * @throws IOException
+     * @throws DocumentException
+     */
     @Test
-    public void write() throws FileNotFoundException, DocumentException {
+    public void write() throws IOException, DocumentException {
         // ①建立com.lowagie.text.Document对象的实例。
         Document document = new Document(PageSize.A4);
         // ②建立一个书写器(Writer)与document对象关联，通过书写器(Writer)可以将文档写入到磁盘中。
@@ -58,10 +63,11 @@ public class PdfDemo {
         document.add(new Paragraph("我的第一个Pdf", new Font()));
         // ⑤关闭文档。
         document.close();
+        FileTool.open(file);
     }
 
     @Test
-    public void pdf() throws FileNotFoundException, DocumentException {
+    public void pdf() throws IOException, DocumentException {
         Rectangle r = new Rectangle(144, 720); //创建指定画布
         Document document = new Document(r);
         PdfWriter.getInstance(document, new FileOutputStream(file));
@@ -69,5 +75,6 @@ public class PdfDemo {
         document.addTitle("这是标题");
         document.add(new Paragraph("我的第一个Pdf", new Font()));
         document.close();
+        FileTool.open(file);
     }
 }

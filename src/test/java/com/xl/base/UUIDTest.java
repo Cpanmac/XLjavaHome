@@ -9,7 +9,7 @@ public class UUIDTest {
     @Test
     public void demoTest() {
         UUID u = UUID.randomUUID();
-        Print.println(u.toString().length());
-        Print.println(u);
+        Print.info(u.toString().length());
+        Print.info(u);
     }
 }

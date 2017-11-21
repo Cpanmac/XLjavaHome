@@ -12,11 +12,11 @@ public class GenericDemo extends A<Person, String> {
     public void getGeneric() throws InstantiationException, IllegalAccessException {
         // 得到泛型的真实信息
         Class<? extends GenericDemo> clazz = this.getClass(); // 得到当前new的对象
-        Print.println(clazz.getName());
+        Print.info(clazz.getName());
         Type[] parent = clazz.getGenericInterfaces();
-        Print.println(parent[0]);
+        Print.info(parent[0]);
         Class<?> inter = clazz.getInterfaces()[0];
-        Print.println(inter.getName());
+        Print.info(inter.getName());
         // ParameterizedType pt = (ParameterizedType)
         // clazz.getGenericSuperclass(); // 得到泛型的父类
         // Print.print(pt);
@@ -41,7 +41,7 @@ class A<T, E> {
     public A() {
         java.lang.reflect.Type t = this.getClass().getGenericSuperclass();
         boolean b = ParameterizedType.class.isInstance(t);
-        Print.println("是否是这个类型的" + b);
+        Print.info("是否是这个类型的" + b);
         ParameterizedType pt = (ParameterizedType) t;
         pt.getRawType();
         pt.getOwnerType();
@@ -57,7 +57,7 @@ class A<T, E> {
     }
 
     void run() {
-        Print.println(entity.getClass().getName());
-        Print.println(domain.getClass().getName());
+        Print.info(entity.getClass().getName());
+        Print.info(domain.getClass().getName());
     }
 }

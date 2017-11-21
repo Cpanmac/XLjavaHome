@@ -16,7 +16,7 @@ public class AcceptKeyboardEntry    //接受端可以不关，一直开着
             ds.receive(dp);
             String ip = dp.getAddress().getHostAddress();
             String data = new String(dp.getData(), 0, dp.getLength());
-            Print.println(ip + "::" + data);
+            Print.info(ip + "::" + data);
         }
     }
 }

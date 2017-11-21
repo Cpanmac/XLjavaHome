@@ -5,6 +5,6 @@ import com.xl.util.Print;
 public class NorthBanana extends Banana {
     @Override
     public void get() {
-        Print.println("采集北方香蕉");
+        Print.info("采集北方香蕉");
     }
 }

@@ -29,7 +29,7 @@ public class TaskDemo {
         new Timer().schedule(new MyTimeTask(), 2000);
         while (true) {
             Thread.sleep(2000);
-            Print.println(System.currentTimeMillis());
+            Print.info(System.currentTimeMillis());
         }
     }
 
@@ -39,7 +39,7 @@ public class TaskDemo {
         new java.util.Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                Print.println("这是定时器里面的内容");
+                Print.info("这是定时器里面的内容");
             }
         }, 10, 3000); // schedule:时刻表，进度表； 清单，明细表； 预定计划； 目录
         while (true) {
@@ -64,7 +64,7 @@ class MyTimeTask extends TimerTask {
 
     @Override
     public void run() {
-        Print.println(i);
+        Print.info(i);
         new Timer().schedule(new MyTimeTask(), i = i * 2);
     }
 }

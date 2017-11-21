@@ -10,17 +10,17 @@ public class ThreadDemo implements Runnable {
     public void run() {
         for (int i = 0; i < 3; i++) {
             num = i;
-            Print.println(num);
+            Print.info(num);
         }
     }
 
     @Test
     public void test1() {
-        Print.println(1);
+        Print.info(1);
         num = 2;
         new Thread(this).run();
         num = 3;
         new Thread(this).run();
-        Print.println(4);
+        Print.info(4);
     }
 }

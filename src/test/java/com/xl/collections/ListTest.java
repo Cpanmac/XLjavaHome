@@ -32,7 +32,7 @@ public class ListTest {
      */
     @Test
     public void distinctTest() {
-        Print.println(ListUtil.distinct(list));
+        Print.info(ListUtil.distinct(list));
     }
 
     /**
@@ -40,6 +40,6 @@ public class ListTest {
      */
     @Test
     public void arrayTest() {
-        Print.println(Arrays.toString(list.toArray()));
+        Print.info(Arrays.toString(list.toArray()));
     }
 }

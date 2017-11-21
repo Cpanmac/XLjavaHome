@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 /**
@@ -22,10 +23,13 @@ public class EncoderTest {
     private File gbkFile = FileTool.getResourceFile("gbk.txt");
     private File utfFile = FileTool.getResourceFile("utf-8.txt");
 
+    public EncoderTest() throws UnsupportedEncodingException {
+    }
+
     @Test
     public void pathTest() {
-        Print.println(gbkFile.getAbsolutePath());
-        Print.println(utfFile.getAbsolutePath());
+        Print.info(gbkFile.getAbsolutePath());
+        Print.info(utfFile.getAbsolutePath());
     }
 
     /**
@@ -35,22 +39,22 @@ public class EncoderTest {
      */
     @Test
     public void encodeTest() throws IOException, InterruptedException {
-        Print.println(FileTool.getCurrentPath(getClass()));
+        Print.info(FileTool.getCurrentPath(getClass()));
         List<File> fileList = FileTool.queryAll(FileTool.getProjectPath(), "java");
         for (int i = 0; i < fileList.size(); i++) {
             File file = fileList.get(i);
             String encode = FileTool.getFileEncode(file);
-            if (encode != null && !"UTF-8".equals(encode)) {
+            if (encode != null && !com.xl.encode.Encode.UTF.equals(encode)) {
                 OutputStreamWriter w1 = null;
                 try {
                     String content = FileTool.getContent(file);
                     if (StringUtil.isEmpty(content)) {
-                        Print.println(file.getAbsolutePath() + "为空");
+                        Print.info(file.getAbsolutePath() + "为空");
                     } else {
-                        w1 = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
+                        w1 = new OutputStreamWriter(new FileOutputStream(file), com.xl.encode.Encode.UTF);
                         w1.write(content);
                         w1.flush();
-                        Print.println(file.getAbsolutePath() + "转换完成:" + content);
+                        Print.info(file.getAbsolutePath() + "转换完成:" + content);
                     }
                 } finally {
                     if (w1 != null) {
@@ -68,7 +72,7 @@ public class EncoderTest {
      */
     @Test
     public void encodeGBKTest() throws IOException, InterruptedException {
-        Print.println(FileTool.getCurrentPath(getClass()));
+        Print.info(FileTool.getCurrentPath(getClass()));
         List<File> fileList = FileTool.queryAll(FileTool.getProjectPath(), "java");
         for (int i = 0; i < fileList.size(); i++) {
             File file = fileList.get(i);
@@ -78,12 +82,12 @@ public class EncoderTest {
                 try {
                     String content = FileTool.getContent(file);
                     if (StringUtil.isEmpty(content)) {
-                        Print.println(file.getAbsolutePath() + "为空");
+                        Print.info(file.getAbsolutePath() + "为空");
                     } else {
                         w1 = new OutputStreamWriter(new FileOutputStream(file), "GBK");
                         w1.write(content);
                         w1.flush();
-                        Print.println(file.getAbsolutePath() + "转换完成:" + content);
+                        Print.info(file.getAbsolutePath() + "转换完成:" + content);
                     }
                 } finally {
                     if (w1 != null) {

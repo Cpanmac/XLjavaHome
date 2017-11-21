@@ -31,28 +31,28 @@ public class URLTest {
         URL url = new URL(s);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setReadTimeout(5000); // 5秒获取不到就超时
-        Print.println(url.getProtocol() + url.getHost());
+        Print.info(url.getProtocol() + url.getHost());
         conn.setRequestProperty("if-modifyed-since", System.currentTimeMillis() + ""); //  还不清楚这是做啥的
-        Print.println(conn.getHeaderFields());
+        Print.info(conn.getHeaderFields());
         // HTTPURL拥有更多的方法
         int code = conn.getResponseCode();// 200为返回成功,404找不到页面,500服务器出错
-        Print.println("response状态码" + code);
-        Print.println("请求方式:" + conn.getRequestMethod());
-        Print.println("编码方式:" + conn.getHeaderField("Content-Type"));
-        Print.println(conn.getURL());
+        Print.info("response状态码" + code);
+        Print.info("请求方式:" + conn.getRequestMethod());
+        Print.info("编码方式:" + conn.getHeaderField("Content-Type"));
+        Print.info(conn.getURL());
     }
 
     @Test
     public void testGetURL() throws IOException {
         URL u = getURL(FileTool.class, "/");
-        Print.println(u); // file:/D:/mywork/javaSE/bin/util/1
-        Print.println(u.getContent()); // 如果有资源java.io.BufferedInputStream@983d95
-        Print.println(u.getDefaultPort()); // -1
-        Print.println(u.getPath()); // /D:/mywork/javaSE/bin/util/1
-        Print.println(u.getFile()); // /D:/mywork/javaSE/bin/util/1
+        Print.info(u); // file:/D:/mywork/javaSE/bin/util/1
+        Print.info(u.getContent()); // 如果有资源java.io.BufferedInputStream@983d95
+        Print.info(u.getDefaultPort()); // -1
+        Print.info(u.getPath()); // /D:/mywork/javaSE/bin/util/1
+        Print.info(u.getFile()); // /D:/mywork/javaSE/bin/util/1
         File file = new File(u.getFile());
-        Print.println(file.getAbsolutePath());// D:\mywork\javaSE\bin\\util
+        Print.info(file.getAbsolutePath());// D:\mywork\javaSE\bin\\util
         File parent = file.getParentFile().getParentFile();
-        Print.println(parent); // 当前工程的绝对路径D:\mywork\javaSE
+        Print.info(parent); // 当前工程的绝对路径D:\mywork\javaSE
     }
 }

@@ -21,10 +21,10 @@ class DataStreamDemo {
         boolean b = dis.readBoolean();
         double d = dis.readDouble();
         String s = dis.readUTF();
-        Print.println("num=" + num);
-        Print.println("b=" + b);
-        Print.println("d=" + d);
-        Print.println("s=" + s);
+        Print.info("num=" + num);
+        Print.info("b=" + b);
+        Print.info("d=" + d);
+        Print.info("s=" + s);
         dis.close();
     }
 

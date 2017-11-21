@@ -17,7 +17,7 @@ public class ExecutorDemo {
                 executorService.execute(new Runnable() {
                     @Override
                     public void run() {
-                        Print.println("爬取了第" + pages + "网页...");
+                        Print.info("爬取了第" + pages + "网页...");
                         pages++;
                     }
                 });
@@ -25,7 +25,7 @@ public class ExecutorDemo {
                 if (((ThreadPoolExecutor) executorService).getActiveCount() == 0) { // 活动线程个数是0
                     executorService.shutdown(); // 结束所有线程
                     exeFlag = false;
-                    Print.println("爬虫任务已经完成");
+                    Print.info("爬虫任务已经完成");
                 }
             }
             try {

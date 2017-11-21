@@ -27,13 +27,13 @@ public class StringTest {
         result.add("ccc");
         result.add("ddd");
         String s = StringUtil.join(result, ",");
-        Print.println(s);
+        Print.info(s);
     }
 
     @Test
     public void spiltTest() {
         String s = "测试";
-        Print.println(Arrays.toString(s.split(",")));
+        Print.info(Arrays.toString(s.split(",")));
     }
 
     @Test
@@ -46,8 +46,8 @@ public class StringTest {
     public void deleteTest() {
         StringBuffer sql = new StringBuffer();
         sql.append("12e13,3232,aa");
-        Print.println(sql);
+        Print.info(sql);
         sql.delete(sql.length() - 2, sql.length());
-        Print.println(sql);
+        Print.info(sql);
     }
 }

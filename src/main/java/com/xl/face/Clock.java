@@ -17,7 +17,7 @@ public class Clock {
                 minutes++;
             }
         }
-        Print.println(minutes);
+        Print.info(minutes);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class Clock {
                 minutes++;
             }
         }
-        Print.println(minutes);
+        Print.info(minutes);
     }
 
     @Test
@@ -39,6 +39,6 @@ public class Clock {
                 minutes++;
             }
         }
-        Print.println(minutes);
+        Print.info(minutes);
     }
 }

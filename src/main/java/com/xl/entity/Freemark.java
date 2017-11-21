@@ -1,5 +1,6 @@
 package com.xl.entity;
 
+import com.xl.encode.Encode;
 import freemarker.template.Configuration;
 import lombok.Data;
 
@@ -32,7 +33,7 @@ public class Freemark {
      */
     public Freemark(String templatePath) {
         configuration = new Configuration(Configuration.VERSION_2_3_22);
-        configuration.setDefaultEncoding("utf-8");
+        configuration.setDefaultEncoding(Encode.UTF);
         configuration.setClassForTemplateLoading(this.getClass(), templatePath);
     }
 }

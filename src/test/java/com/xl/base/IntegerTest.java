@@ -7,8 +7,8 @@ public class IntegerTest {
     @Test
     public void IntegerDemo() {
         int max = Integer.MAX_VALUE;
-        Print.println(max);
+        Print.info(max);
         int min = Integer.MIN_VALUE;
-        Print.println(min);
+        Print.info(min);
     }
 }

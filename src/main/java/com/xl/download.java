@@ -94,7 +94,7 @@ public class download {
                 long s = System.currentTimeMillis();
                 down2(tfd.getText());
                 long s1 = System.currentTimeMillis();
-                Print.println("spend的时间" + (s - s1));
+                Print.info("spend的时间" + (s - s1));
             }
         });
         okbut.addActionListener(new ActionListener() {
@@ -118,7 +118,7 @@ public class download {
                     long s = System.currentTimeMillis();
                     down2(tfd.getText());
                     long s1 = System.currentTimeMillis();
-                    Print.println("spend的时间" + (s - s1));
+                    Print.info("spend的时间" + (s - s1));
                 }
             }
         });

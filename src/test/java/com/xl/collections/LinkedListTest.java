@@ -25,9 +25,9 @@ public class LinkedListTest {
         link.addFirst("java04");
         link.addFirst("java05");
         link.addFirst("java06");
-        Print.println(link.getFirst());
-        Print.println(link.getLast());
+        Print.info(link.getFirst());
+        Print.info(link.getLast());
         // 不用迭代器清空所有元素
-        Print.println(Arrays.toString(link.toArray()));
+        Print.info(Arrays.toString(link.toArray()));
     }
 }

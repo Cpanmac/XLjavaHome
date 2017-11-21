@@ -1,5 +1,6 @@
 package com.xl.util;
 
+import com.xl.encode.Encode;
 import info.monitorenter.cpdetector.io.ASCIIDetector;
 import info.monitorenter.cpdetector.io.CodepageDetectorProxy;
 import info.monitorenter.cpdetector.io.JChardetFacade;
@@ -22,6 +23,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -81,8 +83,8 @@ public class FileTool {
      * @param path
      * @return
      */
-    public static File getResourceFile(String path) {
-        return new File(FileTool.class.getClassLoader().getResource(path).getFile());
+    public static File getResourceFile(String path) throws UnsupportedEncodingException {
+        return new File(URLDecoder.decode(FileTool.class.getClassLoader().getResource(path).getFile(), Encode.UTF));
     }
 
     /**
@@ -199,7 +201,7 @@ public class FileTool {
     public static <T> void print(Collection<T> con) {
         Iterator<T> i = con.iterator();
         while (i.hasNext()) {
-            Print.println(i.next());
+            Print.info(i.next());
         }
     }
 
@@ -373,6 +375,7 @@ public class FileTool {
     public static File createResourceFile(String path) throws IOException {
         File f = new File(getResourceFile(""), path);
         if (!f.exists()) {
+            f.getParentFile().mkdirs();
             f.createNewFile();
         }
         return f;
@@ -381,7 +384,7 @@ public class FileTool {
     @Test
     public void testGetCurrentPath() {
         String path = getCurrentPath(this);
-        Print.println(path);
+        Print.info(path);
     }
 
     @Test
@@ -389,9 +392,9 @@ public class FileTool {
         File file = new File(getProjectPath());
         List<File> fileList = new ArrayList<File>();
         queryAll(file, fileList);
-        Print.println(fileList.size());
+        Print.info(fileList.size());
         for (File f : fileList) {
-            Print.println(f.getName());
+            Print.info(f.getName());
         }
     }
 

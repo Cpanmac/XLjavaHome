@@ -26,7 +26,7 @@ public class ProxyDemo {
     @Test
     public void classLoad() {
         Person p = new Person();
-        Print.println("classLoad  " + p.getClass().getClassLoader().getClass().getName());
+        Print.info("classLoad  " + p.getClass().getClassLoader().getClass().getName());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class ProxyDemo {
         MyInvocationHandler demo = new MyInvocationHandler();
         Subject sub = (Subject) demo.bind(new RealSubject());
         String info = sub.say("Rollen", 20);
-        Print.println(info);
+        Print.info(info);
     }
 }
 
@@ -51,13 +51,13 @@ class MyInvocationHandler implements InvocationHandler {
 
     public Object bind(Object obj) {
         this.obj = obj;
-        Print.println("bind");
+        Print.info("bind");
         return java.lang.reflect.Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), this);
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        Print.println("invoke");
+        Print.info("invoke");
         Object temp = method.invoke(this.obj, args);
         return temp;
     }

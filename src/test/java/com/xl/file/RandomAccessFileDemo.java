@@ -25,9 +25,9 @@ public class RandomAccessFileDemo {
         byte[] buf = new byte[4]; // 因为int 是4个字节
         raf.read(buf);
         String name = new String(buf);// 将字符数组转换为字符串
-        Print.println("name= " + name); // 取出年龄
+        Print.info("name= " + name); // 取出年龄
         int age = raf.readInt();
-        Print.println("age=" + age);
+        Print.info("age=" + age);
         raf.close();
     }
 

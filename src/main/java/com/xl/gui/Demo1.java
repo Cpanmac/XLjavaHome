@@ -56,7 +56,7 @@ class MyWindowListener1 implements WindowListener {
 
     @Override
     public void windowClosing(WindowEvent e) {
-        Print.println("呵呵");
+        Print.info("呵呵");
         // 取得事件源
         Frame frame = (Frame) e.getSource();
         frame.setVisible(false);

@@ -11,13 +11,13 @@ public class Swap {
         int x = 1984;
         int y = 2001;
         y = (x ^= (y ^= x)) ^ y;
-        Print.println("x= " + x + "; y= " + y);
+        Print.info("x= " + x + "; y= " + y);
     }
 
     @Test
     public void test() {
-        Print.println("1");
+        Print.info("1");
         y = x ^ y;
-        Print.println(y);
+        Print.info(y);
     }
 }

@@ -18,7 +18,7 @@ import java.io.UnsupportedEncodingException;
 public class IOTest {
     public static void main(String[] args) throws UnsupportedEncodingException {
         String src = FileTool.getCurrentPath(IOTest.class) + "\\1";
-        Print.println(src);
+        Print.info(src);
     }
 
     public static void copy(String src, String dest) throws IOException {

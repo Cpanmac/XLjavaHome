@@ -24,6 +24,6 @@ public class XLTest {
         map.put("aAA", "测试");
         map.put("aA1A", "测试");
         map.put("aA1A", "测试2");
-        Print.println(map);
+        Print.info(map);
     }
 }

@@ -3,6 +3,8 @@ package com.xl;
 import com.xl.util.FileTool;
 import org.junit.Test;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: 徐立
@@ -12,7 +14,7 @@ import org.junit.Test;
  */
 public class FileToolTest {
     @Test
-    public void pathTest() {
+    public void pathTest() throws UnsupportedEncodingException {
         FileTool.getResourceFile("1.txt");
     }
 }

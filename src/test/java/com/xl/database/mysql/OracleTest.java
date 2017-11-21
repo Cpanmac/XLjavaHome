@@ -40,7 +40,7 @@ public class OracleTest {
             Statement sm = ct.createStatement();
             ResultSet rs = sm.executeQuery("select '测试' from dual");
             while (rs.next()) {
-                Print.println(rs.getString(1));
+                Print.info(rs.getString(1));
             }
             rs.close();
             sm.close();
@@ -68,14 +68,14 @@ public class OracleTest {
             String name = cs.getString(2);
             double sal = cs.getDouble(3);
             String job = cs.getString(4);
-            Print.println("???????" + name + "��????" + sal + "??????????" + job);
+            Print.info("???????" + name + "��????" + sal + "??????????" + job);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {
                 cs.close();
                 ct.close();
-                Print.println("???????");
+                Print.info("???????");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -89,7 +89,7 @@ public class OracleTest {
             // 1.????????
             Class.forName("oracle.jdbc.driver.OracleDriver");
             ct = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:ORCL", "xl", "xl");
-            Print.println("??????");
+            Print.info("??????");
             // 2.????CallableStatement,?��???????????????
             cs = ct.prepareCall("{call sp_pro9(?,?)}");
             // ?????????setProperty??????10?????
@@ -103,7 +103,7 @@ public class OracleTest {
             // ????????
             ResultSet rs = (ResultSet) cs.getObject(2);
             while (rs.next()) {
-                Print.println(rs.getInt(1) + "  " + rs.getString(2));
+                Print.info(rs.getInt(1) + "  " + rs.getString(2));
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -113,7 +113,7 @@ public class OracleTest {
             try {
                 cs.close();
                 ct.close();
-                Print.println("???????");
+                Print.info("???????");
             } catch (SQLException e2) {
                 e2.printStackTrace();
             }

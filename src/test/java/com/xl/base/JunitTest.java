@@ -16,19 +16,19 @@ public class JunitTest {
     // 这个要比Before还有先加载，类加载的时候运行
     @BeforeClass
     public static void beforeClass() {
-        Print.println("beforeClass");
+        Print.info("beforeClass");
     }
 
     @AfterClass
     public static void aflterClass() {
-        Print.println("AfterClass");
+        Print.info("AfterClass");
     }
 
     // Before是在测试之前必定运行，所以可以把初始化Person交给Before
     // 特点：每个测试方法都运行
     @Before
     public void before() {
-        Print.println("before");
+        Print.info("before");
         p = new Person();
     }
 

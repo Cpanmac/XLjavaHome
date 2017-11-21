@@ -24,8 +24,8 @@ public class Crud {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
-            Print.println(i);
-            Print.println(i > 0 ? "成功" : "失败");
+            Print.info(i);
+            Print.info(i > 0 ? "成功" : "失败");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -48,7 +48,7 @@ public class Crud {
             while (rs.next()) {
                 String name = rs.getString("name");
                 String gender = rs.getString("gender");
-                Print.println(name + ":" + gender);
+                Print.info(name + ":" + gender);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,7 +69,7 @@ public class Crud {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
-            Print.println(i > 0 ? "成功" : "失败");
+            Print.info(i > 0 ? "成功" : "失败");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -89,7 +89,7 @@ public class Crud {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             int i = stmt.executeUpdate(sql);
-            Print.println(i > 0 ? "成功" : "失败");
+            Print.info(i > 0 ? "成功" : "失败");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -104,7 +104,7 @@ public class Crud {
         Statement stmt = null;
         ResultSet rs = null;
         String sql = "select * from user where name='" + name + "'";
-        Print.println("sql=" + sql);
+        Print.info("sql=" + sql);
         try {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
@@ -113,7 +113,7 @@ public class Crud {
                 // while(rs!=null)
                 name = rs.getString("name");
                 String gender = rs.getString("gender");
-                Print.println(name + ":" + gender);
+                Print.info(name + ":" + gender);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -131,11 +131,11 @@ public class Crud {
         try {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
-            Print.println(sql);
+            Print.info(sql);
             // int i= stmt.executeUpdate(sql); //创建表并没有影响结果所以i的值是0
             boolean i = stmt.equals(sql);
-            Print.println(i); // false
-            Print.println("创建成功！");
+            Print.info(i); // false
+            Print.info("创建成功！");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -154,7 +154,7 @@ public class Crud {
             conn = MysqlJdbcUtil.getMySqlConnection();
             stmt = conn.createStatement();
             boolean b = stmt.execute(sql);
-            Print.println(b); // false
+            Print.info(b); // false
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -18,26 +18,26 @@ public class GetField {
         Class clazz = Class.forName(className);
         Field field = clazz.getField("name"); // 传属性名
         String name = (String) field.get(p);
-        Print.println(name);
+        Print.info(name);
         //得到属性的值
         //Print.print(f.get(f));
         /*
          * 如果不知道字段类型
 		 */
         Class type = field.getType();
-        Print.println(type); // class java.lang.String
+        Print.info(type); // class java.lang.String
         Object value = field.get(p);
         Object obj = field.get(p);
         if (type.equals(String.class)) {
             String svalue = (String) value;
-            Print.println(svalue);
+            Print.info(svalue);
         }
 
 		/*
          * 设置字段的值
 		 */
         field.set(p, "xxx");
-        Print.println(p.name);
+        Print.info(p.name);
     }
 
     /*
@@ -49,7 +49,7 @@ public class GetField {
         Class clazz = Class.forName(className);
         Field f = clazz.getDeclaredField("password");
         f.setAccessible(true);
-        Print.println(f.get(p));
+        Print.info(f.get(p));
     }
     /*
      * 获取静态的字段:和上面一样，不能省略对象。

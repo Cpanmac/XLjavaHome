@@ -31,7 +31,7 @@ public class JCheckBoxDemo extends JFrame implements ItemListener {
         ckb2.addItemListener(this);
         ckb3.addItemListener(this);
         if (1 == 1) {
-            Print.println("111");
+            Print.info("111");
         }
         container.add(p1, BorderLayout.SOUTH);
         // 为窗口注册窗口事件监听程序，监听器以匿名类的形式进行

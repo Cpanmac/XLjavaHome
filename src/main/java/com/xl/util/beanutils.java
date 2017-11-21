@@ -23,7 +23,7 @@ public class beanutils {
         Person p = new Person();
         // 设置属性
         BeanUtils.setProperty(p, "name", "赋值的姓名1");
-        Print.println(p.getName());
+        Print.info(p.getName());
     }
 
     /*
@@ -40,7 +40,7 @@ public class beanutils {
         BeanUtils.setProperty(p, "password", password);
         BeanUtils.setProperty(p, "age", age);
         BeanUtils.setProperty(p, "birthday", birthday);
-        Print.println(p.getName() + "" + p.getPassword() + ".." + p.getAge() + ".." + p.getBirthday());
+        Print.info(p.getName() + "" + p.getPassword() + ".." + p.getAge() + ".." + p.getBirthday());
     }
 
     /*
@@ -81,8 +81,8 @@ public class beanutils {
             BeanUtils.setProperty(p, "password", password);
             BeanUtils.setProperty(p, "age", age);
             BeanUtils.setProperty(p, "birthday", birhday);
-            Print.println(p.getName() + "" + p.getPassword() + ".." + p.getAge());
-            Print.println(p.getBirthday());
+            Print.info(p.getName() + "" + p.getPassword() + ".." + p.getAge());
+            Print.info(p.getBirthday());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -105,7 +105,7 @@ public class beanutils {
         Person bean = new Person();
         try {
             BeanUtils.populate(bean, map);
-            Print.println(bean.getName() + bean.getPassword() + bean.getBirthday());
+            Print.info(bean.getName() + bean.getPassword() + bean.getBirthday());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {

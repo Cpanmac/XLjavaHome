@@ -15,7 +15,7 @@ public class TcpClient2 {
         //建立缓冲区
         byte[] buf = new byte[1024];
         int len = in.read(buf);
-        Print.println(new String(buf, 0, len));
+        Print.info(new String(buf, 0, len));
         s.close();
     }
 }

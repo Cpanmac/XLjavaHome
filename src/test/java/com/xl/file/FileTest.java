@@ -16,14 +16,14 @@ import java.io.File;
 public class FileTest {
     @Test
     public void spTest() {
-        Print.println(File.separator);           //\
-        Print.println(File.separatorChar);       //\
-        Print.println(File.pathSeparator);       //;
-        Print.println(File.pathSeparatorChar);   //;
+        Print.info(File.separator);           //\
+        Print.info(File.separatorChar);       //\
+        Print.info(File.pathSeparator);       //;
+        Print.info(File.pathSeparatorChar);   //;
     }
 
     @Test
     public void getDeskTest() {
-        Print.println(FileTool.getDesktopPath());
+        Print.info(FileTool.getDesktopPath());
     }
 }

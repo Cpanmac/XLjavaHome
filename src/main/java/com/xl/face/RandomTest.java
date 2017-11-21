@@ -22,6 +22,6 @@ public class RandomTest {
         word.append('a');
         word.append('i');
         word.append('n');
-        Print.println(word);
+        Print.info(word);
     }
 }

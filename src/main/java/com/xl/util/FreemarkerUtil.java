@@ -1,5 +1,6 @@
 package com.xl.util;
 
+import com.xl.encode.Encode;
 import com.xl.entity.Freemark;
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
@@ -59,7 +60,7 @@ public class FreemarkerUtil {
         Template t = freemark.getConfiguration().getTemplate(freemark.getTempletName());
         Writer out = null;
         try {
-            out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(freemark.getOutFile()), "UTF-8"));
+            out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(freemark.getOutFile()), Encode.UTF));
             t.process(freemark.getParam(), out);
         } finally {
             if (out != null) {
@@ -83,7 +84,7 @@ public class FreemarkerUtil {
         FileOutputStream fos = new FileOutputStream(filePath);
         OutputStreamWriter out = null;
         try {
-            out = new OutputStreamWriter(fos, "UTF-8");
+            out = new OutputStreamWriter(fos, Encode.UTF);
             Template template = configFreemarker(templatePath);
             template.process(param, out);
             out.flush();
@@ -95,13 +96,13 @@ public class FreemarkerUtil {
     }
 
     private static Template configFreemarker(String templatePath) throws IOException {
-        Configuration config = new Configuration();
-        config.setObjectWrapper(new DefaultObjectWrapper());
+        Configuration config = new Configuration(Configuration.VERSION_2_3_22);
+        config.setObjectWrapper(new DefaultObjectWrapper(Configuration.getVersion()));
         int slashIndex = templatePath.lastIndexOf("/");
         String tplPath = templatePath.substring(0, slashIndex);
         config.setClassForTemplateLoading(FreemarkerUtil.class, "/" + tplPath);
         String tplName = templatePath.substring(slashIndex + 1);
-        Template template = config.getTemplate(tplName, "UTF-8");
+        Template template = config.getTemplate(tplName, Encode.UTF);
         return template;
     }
 }

@@ -17,6 +17,6 @@ public class ShutDownTest {
         if ("y".equals(n)) {
             ce.exec("shutdown -a");
         }
-        Print.println(ce.exec("shutdown -i"));
+        Print.info(ce.exec("shutdown -i"));
     }
 }

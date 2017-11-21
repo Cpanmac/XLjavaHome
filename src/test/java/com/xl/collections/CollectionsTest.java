@@ -23,9 +23,9 @@ public class CollectionsTest {
         list.add("aaa");
         list.add("kk");
         list.add("c");
-        Print.println(list);
+        Print.info(list);
         Collections.shuffle(list);
-        Print.println(list);
+        Print.info(list);
     }
 
     /*
@@ -39,9 +39,9 @@ public class CollectionsTest {
         list.add("asdfassafg");
         list.add("aa");
         list.add("asdfg");
-        Print.println(list);
+        Print.info(list);
         Collections.replaceAll(list, "aa", "qq"); // 将list中的aa替换成qq
-        Print.println(list);
+        Print.info(list);
         Collections.reverse(list);
     }
 
@@ -55,8 +55,8 @@ public class CollectionsTest {
         list.add("asdfg");
         list.add("asdfg");
         list.add("asdfg");
-        Print.println(list);
+        Print.info(list);
         Collections.fill(list, "qq"); // 将list集合所有的元素替换成qq
-        Print.println(list);
+        Print.info(list);
     }
 }

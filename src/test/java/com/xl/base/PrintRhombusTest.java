@@ -26,7 +26,7 @@ public class PrintRhombusTest {
                     System.out.print(" ");
                 }
             }
-            Print.println("");
+            Print.info("");
         }
         // 下半个三角形
         for (i = 1; i <= rows - 1; i++) {
@@ -43,7 +43,7 @@ public class PrintRhombusTest {
                     System.out.print(" ");
                 }
             }
-            Print.println("");
+            Print.info("");
         }
     }
 }

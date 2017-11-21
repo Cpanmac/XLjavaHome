@@ -22,10 +22,10 @@ import java.util.Date;
 public class QuartzJob implements Job {
     @Override
     public void execute(JobExecutionContext content) throws JobExecutionException {
-        Print.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "★★★★★★★★★★★");
+        Print.info(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "★★★★★★★★★★★");
         String jobName = content.getJobDetail().getName();
         JobDataMap dataMap = content.getJobDetail().getJobDataMap();
         String param = dataMap.getString("param");
-        Print.println("传递的参数是=" + param + "任务名字是=" + jobName);
+        Print.info("传递的参数是=" + param + "任务名字是=" + jobName);
     }
 }

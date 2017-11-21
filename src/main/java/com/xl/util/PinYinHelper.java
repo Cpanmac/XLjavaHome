@@ -1,5 +1,7 @@
 package com.xl.util;
 
+import com.xl.encode.Encode;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -88,7 +90,7 @@ public class PinYinHelper {
     public void loadPinYin() {
         try {
             InputStream ex = Thread.currentThread().getContextClassLoader().getResourceAsStream("com/sinitek/base/common/pinyin/pinyin.txt");
-            InputStreamReader rdr = new InputStreamReader(ex, "utf-8");
+            InputStreamReader rdr = new InputStreamReader(ex, Encode.UTF);
             BufferedReader brdr = new BufferedReader(rdr);
             while (true) {
                 String[] items;
