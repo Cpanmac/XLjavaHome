@@ -21,4 +21,10 @@ public class NumberTest {
         Print.info(NumberTool.formateNumber(323.1262, "#.00"));
         Print.info(NumberTool.formateNumber(323.1, "#.00"));
     }
+
+    @Test
+    public void longTest() {
+        long a = 1;
+        Print.info(a);
+    }
 }

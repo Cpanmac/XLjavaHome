@@ -6,7 +6,16 @@ import org.junit.Test;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegexDemo {
+public class RegexTest {
+    @Test
+    public void regexTest() {
+        String mystr = "   11?s   342  ";
+        Matcher m = Pattern.compile("^[\\u3000\\s\\t]*(.*?)[\\u3000\\s\\t]*$").matcher(mystr);
+        if (m.find()) {
+            Print.info(m.group(1));
+        }
+    }
+
     @Test
     public void search1() {
         Pattern p = Pattern.compile("java");
