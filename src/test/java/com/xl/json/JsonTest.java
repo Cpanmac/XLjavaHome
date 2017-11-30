@@ -69,8 +69,8 @@ public class JsonTest {
         StringBuffer sb = new StringBuffer();
         while ((fr.read(ch)) != -1) {
             sb.append(ch);
-        }
-        JSONObject json = JSONObject.fromObject(sb.toString());
+ }
+     JSONObject json = JSONObject.fromObject(sb.toString());
         Print.print(sb);
         Print.info(json);
         // JSONObject response = dataJson.getJSONObject("response");
@@ -81,5 +81,11 @@ public class JsonTest {
         // String district = info.getString("district");
         // String address = info.getString("address");
         // Print.print(province + city + district + address);
+    }
+
+    @Test
+    public void nullTest() {
+        //没有报错返回空
+        Print.info(JSONObject.fromObject(null));
     }
 }

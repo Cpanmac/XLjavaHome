@@ -8,8 +8,11 @@ import java.util.UUID;
 public class UUIDTest {
     @Test
     public void demoTest() {
-        UUID u = UUID.randomUUID();
-        Print.info(u.toString().length());
-        Print.info(u);
+        for (int i = 0; i < 1000; i++) {
+            UUID u = UUID.randomUUID();
+            //Print.info(u.toString().length());
+            Print.info(u);
+        }
+
     }
 }

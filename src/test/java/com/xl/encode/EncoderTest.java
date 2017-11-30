@@ -97,4 +97,9 @@ public class EncoderTest {
             }
         }
     }
+
+    @Test
+    public void demoTest() throws UnsupportedEncodingException {
+        Print.info(new String("你好".getBytes(Encode.GBK), Encode.UTF));
+    }
 }

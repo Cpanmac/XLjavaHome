@@ -1,27 +1,32 @@
 package com.xl.util;
 
-import org.apache.log4j.Logger;
-
 import java.io.IOException;
 import java.io.Reader;
 import java.sql.Clob;
-//import com.sinitek.spirit.logger.LoggerFactory;
+import java.sql.SQLException;
 
 /**
- * File Desc:
- * Product Name: SIRM
- * Module Name: BaseDase
- * Author:      刘建
- * History:     11-4-4 created by 刘建
+ * Created with IntelliJ IDEA.Clob工具类
+ *
+ * @author: 徐立
+ * @Date: 2017-11-30
+ * @Time: 18:17
+ * To change this template use File | Settings | File Templates.
  */
 public class ClobUtil {
-    static final Logger LOGGER = Logger.getLogger(ClobUtil.class);
-
-    public static String clobToString(Clob clob) {
-        return clobToString(clob, "");
+    /**
+     * 讲clob转成String
+     *
+     * @param clob
+     * @return
+     * @throws IOException
+     * @throws SQLException
+     */
+    public static String clobToString(Clob clob) throws IOException, SQLException {
+        return clobToString(clob, null);
     }
 
-    public static String clobToString(Clob clob, String sprtStr) {
+    public static String clobToString(Clob clob, String sprtStr) throws IOException, SQLException {
         StringBuffer content = new StringBuffer();
         if (clob != null) {
             Reader in = null;
@@ -32,22 +37,12 @@ public class ClobUtil {
                 while ((p = in.read(buff, 0, 1024)) != -1) {
                     content.append(new String(buff, 0, p));
                 }
-                //                BufferedReader br = new BufferedReader(in);
-                //                String strtemp = br.readLine();
-                //                while (strtemp != null) {
-                //                    content.append(strtemp+"\n");
-                //                    if (!"".equals(sprtStr))
-                //                        content.append(sprtStr);
-                //                    strtemp = br.readLine();
-                //                }
-            } catch (Exception e) {
-                LOGGER.error("read clob failed.", e);
             } finally {
                 if (in != null) {
                     try {
                         in.close();
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        Print.info(e);
                     }
                 }
             }
