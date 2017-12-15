@@ -2,6 +2,8 @@ package com.xl.a;
 
 import com.xl.util.Print;
 import com.xl.util.StringUtil;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -16,6 +18,13 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class StringTest {
+    StringBuffer sql = new StringBuffer();
+
+    @Before
+    public void before() {
+        sql.append("12e13,3232,aa");
+    }
+
     /**
      * 转换为join字符串
      */
@@ -44,10 +53,18 @@ public class StringTest {
 
     @Test
     public void deleteTest() {
-        StringBuffer sql = new StringBuffer();
-        sql.append("12e13,3232,aa");
         Print.info(sql);
         sql.delete(sql.length() - 2, sql.length());
+        Print.info(sql);
+    }
+
+    @Test
+    public void insertTest() {
+        sql.insert(0, "测试插入");
+    }
+
+    @After
+    public void after() {
         Print.info(sql);
     }
 }

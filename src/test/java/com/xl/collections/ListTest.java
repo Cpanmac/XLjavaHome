@@ -1,5 +1,6 @@
 package com.xl.collections;
 
+import com.xl.entity.Student;
 import com.xl.util.ListUtil;
 import com.xl.util.Print;
 import org.junit.Before;
@@ -7,6 +8,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -19,12 +21,20 @@ import java.util.List;
  */
 public class ListTest {
     List<String> list = new ArrayList<String>();
-
+    List<Student> studentList = new ArrayList<Student>();
     @Before
     public void init() {
         list.add("张三");
         list.add("张三");
         list.add("李四");
+        for (int i = 0; i < 3; i++) {
+            Student s = new Student();
+            s.setName("测试"+i);
+            studentList.add(s);
+        }
+        Student s = new Student();
+        s.setName("测试0");
+        studentList.add(s);
     }
 
     /**
@@ -32,6 +42,11 @@ public class ListTest {
      */
     @Test
     public void distinctTest() {
+        Print.info(studentList);
+        //不能去重
+        Print.info(ListUtil.distinct(studentList));
+        Print.info(new ArrayList<>(new HashSet<>(studentList)));
+
         Print.info(ListUtil.distinct(list));
     }
 
